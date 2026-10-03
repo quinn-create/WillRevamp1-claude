@@ -25,7 +25,7 @@ Call [(615) 410-7290](tel:+16154107290) for a free consultation. {fact:F013,F015
 His practice covers criminal defense, family law and personal injury. {fact:F144}
 
 ### Criminal defense
-Charged with DUI, a drug offense, theft, fraud, domestic assault, a violent or sex offense, or a probation violation? {fact:F298} Will Fraley and his staff personally handle criminal cases, big or small. {fact:F058}
+Charged with DUI, a drug offense, theft, fraud, domestic assault, a violent or sex offense, or a probation violation? {fact:F298} Will Fraley and his team personally handle criminal cases, big or small. {fact:F058}
 
 [Criminal defense](/criminal-defense/)
 
@@ -45,7 +45,7 @@ Will Fraley also handles personal injury cases, such as vehicle accidents, slip-
 
 **Criminal court and family court are his focus.** Will dedicates his practice to defending clients in criminal court and advocating for parents and spouses in family court. {fact:F057} If a charge and a family case land at the same time, you can talk to one lawyer about both. {fact:F057}
 
-**Your case gets personal attention.** Will Fraley and his staff personally handle each case, no matter how big or small. {fact:F058,F059}
+**Your case gets personal attention.** Will Fraley and his team personally handle each case, no matter how big or small. {fact:F058,F059}
 
 **He is from here.** Will is a Tennessee native who moved to Murfreesboro in 1992 to attend Middle Tennessee State University. {fact:F050,F053} He made the city his home and built his private practice here. {fact:F051}
 
@@ -85,7 +85,7 @@ Criminal defense, family law and personal injury. {fact:F144} On the criminal si
 Yes. Se habla español, and Spanish-speaking services are available. {fact:F092,F094}
 
 ### Where is the office, and when is it open?
-The office is at 509 W College St, Murfreesboro, TN 37130. {fact:F021} Hours are Monday through Thursday, 9:00 to 5:00, and Friday, 9:00 to 4:00. {fact:F031,F032}
+The office is at 509 W College St, Murfreesboro, TN 37130. {fact:F021} Hours are Monday through Thursday, 9:00 a.m. to 5:00 p.m., and Friday, 9:00 a.m. to 4:00 p.m. {fact:F031,F032}
 
 [cta-band]
 ## Start with one phone call

@@ -21,3 +21,7 @@
 - Gate 2 and Gate 2b passed. 31 pages (24 kept URLs + 7 new), nav: Criminal Defense · Family Law · Personal Injury · About · FAQs · Contact; 66 redirects.
 - **Form fields:** A08 recommends a 4-field form. The kit (A21: "same fields, better labels") and the plan-time decision keep the old site's 7 fields; "best time to reach you" and "new client?" become optional selects to reduce friction. Recorded here; A08's view is noted for the owner.
 - **`/?p=<id>` shortlinks:** Cloudflare Pages `_redirects` cannot match query strings; they are listed for the operator (Pages Function or Redirect Rule) rather than shipped as broken rules.
+
+### Stage 4 — Copy (run in parallel with Stage 3)
+- Because the operator removed the Gate 3 stop, Stage 4 copy ran alongside the mockups (copy does not depend on the design direction). Gate 4 passed: 31 EN + 31 ES copy files, every factual sentence tagged, Spanish cites only English fact IDs.
+- Spanish avoids "certificado" (reads as "certified"): the TACDL certificates are "constancias de finalización".

@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-03T12:51:53.869Z",
+  "pass": true,
+  "failed": 0,
+  "results": [
+    {
+      "name": "tools/check.mjs hash matches plan/CHECK-HASH",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "plan/sitemap.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "every EN and ES page has a copy file",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "0 unsourced facts, 0 banned phrases, frontmatter valid, law rules (EN + ES)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "copy/FACT-CHECK.md",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

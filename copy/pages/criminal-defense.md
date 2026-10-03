@@ -37,7 +37,7 @@ Have their full name ready, and tell us what you know about the charge and any c
 Will Fraley handles DUI, drug, theft, violent crime, sex crime, fraud, probation violation and domestic assault cases. {fact:F298}
 
 ### DUI
-First and second offense DUI, felony DUI and underage DUI. {fact:F153} Also driving while suspended, reckless driving and vehicular homicide. {fact:F159,F160,F161}
+First and second offense DUI, felony DUI and underage DUI. {fact:F153,F158} Also driving while suspended, reckless driving and vehicular homicide. {fact:F159,F160,F161}
 
 [DUI defense](/criminal-defense/dui/)
 
@@ -91,7 +91,7 @@ Prior results do not guarantee a similar outcome.
 ## Questions about criminal charges
 
 ### Does Will Fraley handle my case himself?
-Yes. Will Fraley and his staff personally handle criminal cases, no matter how big or small. {fact:F058}
+Yes. Will Fraley and his team personally handle criminal cases, no matter how big or small. {fact:F058}
 
 ### What kinds of charges do you take?
 State felony and misdemeanor charges, from DUI charges to domestic assault accusations. {fact:F048,F146} The cards above list each type of case. {fact:F298}

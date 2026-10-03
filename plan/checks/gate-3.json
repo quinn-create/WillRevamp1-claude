@@ -1,0 +1,207 @@
+{
+  "at": "2026-10-03T12:50:14.997Z",
+  "pass": false,
+  "failed": 10,
+  "results": [
+    {
+      "name": "tools/check.mjs hash matches plan/CHECK-HASH",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/A/tokens.css",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/A/RATIONALE.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/A/dist index",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/A/dist criminal-defense",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/A/dist contact-us",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/A components.html",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/A screenshots at 390 + 1280",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/A token pairs pass AA (49 declared with @pair)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/A free of forbidden strings",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/B/tokens.css",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/B/RATIONALE.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/B/dist index",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/B/dist criminal-defense",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/B/dist contact-us",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/B components.html",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/B screenshots at 390 + 1280",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/B token pairs pass AA (45 declared with @pair)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/B free of forbidden strings",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/C/tokens.css",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/C/RATIONALE.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/C/dist index",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "mockups/C/dist criminal-defense",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "mockups/C/dist contact-us",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "mockups/C components.html",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "mockups/C screenshots at 390 + 1280",
+      "pass": false,
+      "detail": "index-390, index-1280, criminal-defense-390, criminal-defense-1280, contact-us-390, contact-us-1280"
+    },
+    {
+      "name": "mockups/C token pairs pass AA (67 declared with @pair)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/C free of forbidden strings",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "images/PROMPTS.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "images/GENERATED.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "≥ 3 images logged for direction A",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "≥ 3 images logged for direction B",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "≥ 3 images logged for direction C",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "every generation prompt forbids people/faces",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "every generated image logs model + credits",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mockups/RECOMMENDATION.md",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "mockups/COMPARE.html (self-contained)",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "MOCKUPS-rev1.zip ≤ 25 MB",
+      "pass": false,
+      "detail": "missing"
+    },
+    {
+      "name": "LOGBOOK-ENTRY.md (mockup form)",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "plan/STATE.md says WAITING: mockup decision",
+      "pass": false,
+      "detail": ""
+    }
+  ]
+}

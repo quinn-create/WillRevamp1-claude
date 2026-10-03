@@ -30,6 +30,10 @@ Every call made without asking, with its reason. Newest stage last.
 - **Form fields:** A08 recommends a 4-field form. The kit (A21: "same fields, better labels") and the plan-time decision keep the old site's 7 fields; "best time to reach you" and "new client?" become optional selects to reduce friction. Recorded here; A08's view is noted for the owner.
 - **`/?p=<id>` shortlinks:** Cloudflare Pages `_redirects` cannot match query strings; they are listed for the operator (Pages Function or Redirect Rule) rather than shipped as broken rules.
 
+### Stage 4 — Copy (run in parallel with Stage 3)
+- Because the operator removed the Gate 3 stop, Stage 4 copy ran alongside the mockups (copy does not depend on the design direction). Gate 4 passed: 31 EN + 31 ES copy files, every factual sentence tagged, Spanish cites only English fact IDs.
+- Spanish avoids "certificado" (reads as "certified"): the TACDL certificates are "constancias de finalización".
+
 ## A01
 
 # A01 decisions: old-URL inventory (inventory/old-urls.json)
@@ -261,6 +265,194 @@ Every call made without asking, with its reason. Newest stage last.
 - **One CTA wording site-wide:** "Free consultation" + "Call (615) 410-7290" (ES "Consulta gratuita" + "Llame al (615) 410-7290"), always a `tel:` link; secondary "Send a short message".
 - **Design directions:** all three keep the logo blue #447CB7 as the anchor (large type, fills and UI only) with a darker text-blue per direction; contrast ratios for every proposed pair were computed and recorded in `design/DESIGN-BRIEF.md`. Verdict reserves a signal gold (#F2B544, ink text 10.23:1) for CTAs only, with a brick fallback.
 
+## A12
+
+### A12 — Direction A "Counsel" (Stage 3, step 1: tokens, rationale, image slots)
+
+- **Type pair: Newsreader (display, opsz 6–72, wght 200–800) + Public Sans (text, wght 100–900)**, the design brief's lead option. Both are variable and cover Latin Extended for Spanish. Upright only, with no italic files, so the set stays at four woff2 files (latin + latin-ext of each, about 264 KB on disk, and the latin files are preloaded). They were downloaded once from Google Fonts with a Chrome User-Agent into `mockups/A/public/fonts/`. There are no runtime Google requests.
+- **Fallback metrics:** the Newsreader `size-adjust` (102.3%), ascent and descent were measured from the font file against Times New Roman. The Public Sans ascent and descent were measured. Its `size-adjust` (106%) is an estimate for weight 400, because the file's default instance is Thin and fontkitten could not instance a woff2 variation. Re-measure it at build time.
+- **Palette:** this uses the brief's Counsel proposal unchanged (paper #F7F6F2, ink #16202C, muted #5A6472, link and primary #2E5F96, logo blue #447CB7 for large type and UI only, navy #1D478A for hover). I added a 10-step neutral ramp, brand tints #E8EFF7, #C9DAEC and #9DBEE3, primary hover #376AA2 (about 4% lighter, white text 5.61:1), and input border #737C88 (4.23:1 on white, 3.91:1 on paper).
+- **The one accent is Courthouse Brass, #8C6A2F** (focus ring, 4.60:1 on paper), with #D8B46A on the ink band (8.34:1) and #735623 for step numerals as text (6.30:1). It is never used as a fill or for body text. That keeps "the logo blue is the only hue" true for content and CTAs.
+- **Dark band = ink #16202C, not navy.** The primary button on ink would fail as UI (#2E5F96 on ink is about 2.3:1), so CTAs on the ink band use the inverse button (paper fill, ink label, 15.21:1).
+- **Header glass is 85% paper.** Its worst-case opaque equivalent (85% paper over ink) is #D5D6D4. Header text is always ink (11.27:1) and never muted (muted would be 4.0:1 there). The phone CTA in the header is a solid button.
+- **Logo placement:** the blue wordmark only ever sits on paper. The ink footer sets "Will Fraley, Attorney at Law" in Newsreader instead of recoloring or knocking out the logo. No logo redesign.
+- **Color tokens are opaque #rrggbb.** Alpha appears only in composite tokens (shadows, header glass, the 10% card hairline), built from rgb channel triplets. 45 `@pair` declarations were checked with the same luminance and parsing logic as `tools/check.mjs`: all pass, and the lowest is the input border on paper at 3.91:1 (ui).
+- **Image slots:** A-hero takes cues from IMG08 (civic brick and limestone, not the building itself). A-practice takes cues from IMG08's colonnade brought indoors, and IMG11 (stock handcuffs) is explicitly rejected. A-contact takes cues from IMG09's dark wood and white mullions, with no arched door, facade or street number. Every draft prompt ends "no people, no faces, no text, no signage, no lettering".
+
+### A12 — Direction A "Counsel" (Stage 3, step 2: Astro build of Home, Criminal Defense, Contact, components)
+
+- **Copy is rendered, not retyped.** `mockups/A/src/lib/copy.mjs` reads `copy/pages/<slug>.md` at build time (repo root found by walking up from `import.meta.url`), strips every `{fact:…}` tag, splits sections on the component hints and on un-hinted `##` headings, and converts straight quotes to typographic ones. Each page throws at build if a copy section is left unrendered. Non-breaking spaces are added only inside "a.m. – 5" and "TN 37130" (no change to the words).
+- **Logo = the reused raster IMG01**, optimized with sharp only (CLAUDE.md rule 6), not redrawn. One color correction: the tagline and rules are stored at about 40% alpha (2.2:1), so their alpha was restored to solid; letterforms and hue are unchanged. Below 600 px the header uses a wordmark-only crop (rows 0–41) because the tagline is dropped under 200 px wide. The logo is never shown wider than 200 CSS px (2× its 400 px source).
+- **Attorney photos:** IMG03 is cropped to 5:6 around Will (this also removes the computer monitor and mug), and IMG02 to 4:5 from the top. Saturation was lowered slightly to match the set. Each is shown no wider than its pixel width (596 px and 673 px). IMG04 is not used.
+- **Header:** six nav items come from `plan/sitemap.json` "nav", with CSS-only dropdowns (hover and focus-within, so they work from the keyboard). The phone CTA is a solid tel: button showing "(615) 410-7290". The language toggle links to `/es/` (hreflang and lang es) and reads "ES" between 1216 and 1376 px and on phones. Below 600 px the header shows logo · ES · phone icon · menu, plus the 48 px bottom call bar ("Call (615) 410-7290 · Free consultation"), as the design brief asks. The full nav needs at least 1216 px; below that the menu is a native `<dialog>`. The header hairline appears on scroll through a CSS scroll-driven animation (no JS). Without support it stays on.
+- **"Free consultation" always sits beside a tel: link.** That holds in the hero CTA note, the header micro-label in the menu, the CTA band, the footer, the call bar and the form fallback note. The CTA band drops its secondary "Send a short message" button when the copy paragraph already links to the form, to avoid repeating it.
+- **One full-bleed treatment per page.** On Home it is the A-hero "opening plate" under the hero (21:9 crop on desktop, 4:3 object-position crop on phones). CTA bands are contained ink panels, not full-bleed. Criminal Defense and Contact use framed scenes only.
+- **Plate art direction is done in CSS** (one srcset), not a media-switched `<picture>`. The switched version left the plate blank in the width-by-width screenshots, because the source swap happens after resize. Offscreen images also drop `decoding="async"` so full-page captures paint them.
+- **Contact form (mockup only, not wired).** These are the fields from `inventory/forms.json` gform_1 in plain-language labels. Name and phone are required and everything else is optional, following the copy ("Email and a short note are optional"). The old form required email, best time and message. The 600-character limit is kept from the old form. The phone field is shown in its error state with specific copy. The non-confidentiality notice from the copy sits directly above the disabled submit button, with a fallback note pointing to the tel: link and email. Inline validation on blur and the success state are shown on the components sheet only, because the mockup allows no JS beyond the menu and reveals.
+- **JS:** two small bundled modules, the dialog open/close (with aria-expanded) and the IntersectionObserver reveal (14 px rise, 500 ms, 60 ms stagger, once, skipped under reduced motion). There is also one inline line that adds `.js` to `<html>`. FAQs use native `<details>`.
+- **Four `@pair` declarations were added to `mockups/A/tokens.css`** for pairs the pages use: navy on the tint panel (7.81:1), quiet heading on linen (7.79:1), muted on sunken (4.62:1) and logo blue on tint as UI (3.77:1). 49 pairs now pass.
+- **Eyebrow labels** ("Practice areas", "Case types", "The process", "Questions", "En español") are UI labels, not factual claims.
+
+## A13
+
+# A13 decisions (Direction B "Verdict"), Stage 3 step 1
+
+- **D-A13-01: Spacing base is 4 px.** The kit's Premium Standard (§4, binding in the A13 task) sets a 4 px base;
+  DESIGN-BRIEF says 8 px. The kit wins. Every 8 px step still exists (`--space-2`, `-4`, `-6`, `-8`, ...).
+- **D-A13-02: Type pair is Archivo (display, wdth and wght axes) + Inter (text).** This is the lead option in
+  DESIGN-BRIEF. Display uses wdth 112 on desktop and 100 on phones and for long ES headings, so Spanish H1s fit
+  at 390 px. Two preloads: Archivo latin and Inter latin.
+- **D-A13-03: Focus ring is contextual.** Signal gold fails as a ring on white (1.83:1), so light grounds use
+  navy `--focus-ring` (9.05:1), and night/navy blocks set the ring to gold `--focus-ring-inverse` (10.23:1 /
+  4.94:1). The accent's sparing roles on light grounds are taken by navy (links, focus). Gold stays the one
+  CTA color.
+- **D-A13-04: Gold button gets a 1.5 px darker-gold edge (`--btn-primary-edge` #B7801A, 3.43:1 on white)** so
+  that, on white, it meets the 3:1 UI-boundary rule. On night and navy blocks the fill alone passes.
+- **D-A13-05: Alpha colors are derived.** Every base color token is opaque hex. Hairlines (10% ink), glass
+  header (82% white), shadows and the duotone scrim come from `color-mix()` on those hex tokens.
+- **D-A13-06: One radius, 4 px.** Crisp corners suit the color-block language.
+- **D-A13-07: H1 scale is 38–72 px** (`--step-4`, 1.333 ratio), within the brief's 36–40 mobile and 48–72
+  desktop ranges. Body text is 17–18 px with 1.6 leading and a 68ch measure.
+- **D-A13-08: Brick #8A3F2A stays the documented fallback** if gold reads cheap in review. It is not
+  tokenized yet, to keep the gold unique.
+- **D-A13-09: Image-slot mood cues.** hero ← IMG08 (sky and light only); practice ← IMG08 (stone, steps,
+  light), plus IMG09 for the door tone only; contact ← IMG09 (wood tone, cool sky carried indoors). No slot
+  reproduces either real building. IMG10–IMG29 are rejected as sources.
+- **Contrast verification:** all 45 `@pair` declarations in `mockups/B/tokens.css` were recomputed with a node
+  script that uses WCAG relative luminance and the same first-declaration-wins, `var()`-resolving parse as
+  `tools/check.mjs`. 45/45 pass. The lowest are `--btn-primary-edge` on bg (ui, 3.43), `--color-brand` on bg
+  (ui, 4.36) and `--color-on-dark-muted` on navy (text, 4.85).
+
+## Stage 3, step 2: the Verdict mockup build (mockups/B)
+
+- **D-A13-10: Copy is read at build time, never retyped.** `src/lib/copy.mjs` parses `copy/pages/<slug>.md`
+  (frontmatter via `yaml`), strips every `{fact:…}` tag, and splits sections at the component hints. An H2
+  belongs to the hint it directly follows; any other H2 opens a plain section. Each page renders every
+  section, and a "leftover" renderer catches anything a layout did not place, so nothing in the copy is
+  dropped. Straight quotes become typographic quotes and apostrophes at render time.
+- **D-A13-11: The repo root is found by walking up from `import.meta.url` (`src/lib/root.mjs`).** Astro bundles
+  the page code into `dist/.prerender/`, so a fixed `../../../` path breaks at build time. Nothing depends on
+  `process.cwd()`.
+- **D-A13-12: Header logo = the wordmark only.** IMG01 is cropped to rows 0–39 (WILL FRALEY) for the header
+  and the mobile menu, which render at 136–176 px. The design brief drops the tagline below 200 px wide. The
+  full logo (tagline set solid navy #1D478A, or white on night) appears only in the footer at 208 px. The
+  white knockout is made from the same pixels, with no redraw.
+- **D-A13-13: Gold is limited to the call action and the submit button.** The header phone is a solid navy
+  button with the number and "Free consultation · Se habla español" in it. Gold appears on the hero call
+  button, the CTA band, the mobile call bar, the mobile-menu call button and the (disabled) submit.
+- **D-A13-14: The nav has 6 items and needs ≥ 1240 px (77.5rem).** Below that, the header shows logo + phone
+  + Menu (a native `<dialog>`). Between 1240 and 1439 px, the language toggle shortens to "ES" (`<abbr
+  title="Español">`) so the header never overflows. On phones the language link lives in the menu dialog.
+  It links to `/es/`, as the brief requires, even though the mockup has no Spanish page.
+- **D-A13-15: Contact form follows the copy over the old form.** The copy says "Leave your name and phone
+  number … Email and a short note are optional." So first name, last name, phone and best time are required;
+  email, new-client and message are optional. Option lists come from inventory/forms.json, lightly reworded
+  ("ASAP" → "As soon as possible"; "current existing client" → "current client"). The 600-character limit
+  comes from the old form. Submit is disabled, and a fallback note gives the phone and email. The email
+  field shows the inline error state ("maria@"). There is no validation script: the brief allows JS only for
+  the menu dialog and reveals. Inline-on-blur validation and the success swap are shown as states on
+  /components/.
+- **D-A13-16: The "Please read before you send" paragraph renders inside the form, right above submit.**
+- **D-A13-17: Lazy loading.** Below-the-fold scenes and photos are `loading="lazy"`. The Criminal Defense
+  portrait (IMG02, 27 KB AVIF) loads eagerly at normal priority, so full-page review screenshots show it.
+- **D-A13-18: Photos are never upscaled.** IMG03 is cropped to 880×715 and shown at most about 635 CSS px.
+  IMG02 is cropped to 672×896 and shown at most 352 CSS px. IMG04 is not used. Colour correction is a light
+  saturation and contrast trim only.
+- **D-A13-19: Steps.** Five steps sit in a 3 + 2 bento at desktop, because five columns of 220 px read
+  cramped. Four steps (Contact) sit in one row.
+- **D-A13-20: Header hairline on scroll uses a CSS scroll-driven animation (`animation-timeline: scroll()`)**,
+  with no script. It only changes a 1 px box-shadow, so it is a state change rather than motion. Browsers
+  without support show no hairline.
+
+## A14
+
+# A14 decisions (Direction C "Neighbor"), Stage 3 step 1
+
+- **D-A14-01: The spacing base is 4 px.** The kit's Premium Standard (§4, binding in the A14 task) sets a 4 px
+  base. DESIGN-BRIEF says 8 px. The kit wins, and every 8 px step still exists (`--space-2`, `-4`, `-6`, `-8`
+  and up). This matches D-A13-01.
+- **D-A14-02: The type pair is Fraunces (display; opsz and wght axes) and Figtree (text; wght).** This is the
+  lead option in DESIGN-BRIEF.
+  - `--display-variation` holds SOFT 0 and WONK 0. Only the opsz and wght axes were downloaded, so both stay
+    at their defaults.
+  - The variable WOFF2 files (latin and latin-ext) come from Google Fonts v38 (Fraunces) and v9 (Figtree). They
+    were downloaded once to `mockups/C/public/fonts/`.
+  - Two files are preloaded: `fraunces-latin.woff2` and `figtree-latin.woff2`.
+  - The fallback metric overrides are computed from the files' own metrics with @capsizecss/unpack. The
+    Fraunces-to-Georgia `size-adjust` (110%) is estimated and should be tuned in the build step if CLS shows.
+- **D-A14-03: The palette follows the DESIGN-BRIEF Neighbor table, with two adjustments.**
+  - The brick accent moves from #9C4A32 to **#96452F**, so eyebrows on sand have margin: 5.00:1 instead of
+    4.64:1.
+  - Body links use #2F5F95. #356BA6 is only 4.91:1 on cream.
+- **D-A14-04: Roles of brand and accent.**
+  - The brand hue is the logo blue #447CB7, with three tints (#E3ECF6, #B9CFE8, #7FA5D2) and two shades:
+    #2F5F95 (links, primary fill, call bar) and #1D478A (navy deep band, link hover).
+  - The one accent is brick #96452F, with #F0B9A3 as its on-dark form. It is used sparingly: the focus ring,
+    eyebrows, step numerals and the secondary button.
+  - The kit gives links to the accent. Here that role stays with the brand blue, because blue links are the
+    logo equity and the convention people expect.
+  - The primary button stays a solid brand fill, as the kit requires.
+- **D-A14-05: The focus ring is brick on light grounds (5.00–6.58:1) and #F0B9A3 on navy (5.25) and ink
+  (8.85).** It sits 2 px off the element, so it is measured against the ground it is drawn on.
+  - A ring cannot reach 3:1 against both cream and the blue fill unless it is near-black.
+  - The 2 px offset gap of ground color separates the ring from the button. A13 used the same reasoning.
+- **D-A14-06: There is one radius, 8 px (`--radius`).** It is rounded but not bubbly, per the brief's 6–8 px.
+- **D-A14-07: There are two deep grounds.**
+  - Navy #1D478A is for the brand band and its CTA. On navy, the primary button inverts to a cream fill with
+    navy text.
+  - Warm ink #2B2420 is the footer, which keeps the warmth through to the end of every page.
+- **D-A14-08: Durations are 160/180/200 ms.** This satisfies both the kit's 160–220 ms and the brief's
+  ≤200 ms. Reveals are 520 ms, rise 14 px and stagger 60 ms. Everything is zeroed under
+  `prefers-reduced-motion: reduce`.
+- **D-A14-09: The type scale is fluid at 1.25, for viewports from 360 px to 1280 px.**
+  - Body text is 17–18 px with 1.6 leading and a 68ch measure.
+  - H1 (`--step-5`) runs from 40 px to 56 px, with tracking −0.022em.
+  - `--step-6` (44–68 px) is for short display lines only, never for ES H1s. This keeps ~20% longer Spanish
+    headings intact at 390 px.
+- **D-A14-10: No dark-mode theme for the mockup.** The brief does not ask for one, and a second palette would
+  double the pair surface. This can be revisited at build time.
+- **D-A14-11: Image-slot mood cues.**
+  - hero ← IMG08 (brick with white trim, civic tower, mature trees; re-lit golden).
+  - practice ← IMG08 (street, trees, brick frontage, after rain), plus IMG09 for brick tone and window
+    muntins only.
+  - contact ← IMG09 (brick, white multi-pane windows, dark wood), carried indoors.
+  - All three are graded to match IMG03's warmth, because the hero sits beside that photo.
+  - No slot reproduces either real building or the 509 W College St entrance.
+- **Contrast verification:** all 67 `@pair` declarations in `mockups/C/tokens.css` were recomputed with a node
+  script. It uses WCAG relative luminance and the same first-declaration-wins, `var()`-resolving parse as
+  `tools/check.mjs`. 67/67 pass.
+  - The lowest text pairs are muted on sand (4.75), link on sand (4.99), brick on sand (5.00) and
+    `--color-eyebrow-on-deep` (5.25).
+  - The lowest UI pairs are `--color-brand` on cream (3.88) and `--input-border` on cream (3.94).
+
+## A15
+
+# A15 Image Director — decisions (mockup stage)
+
+- **Model:** Higgsfield `nano_banana_pro`, `resolution: "2k"`, aspect ratios 16:9 (hero), 3:2 (practice), 4:5 (contact).
+  The job API labels the model `nano_banana_2` internally; the transaction log bills it as "Nano Banana Pro". No project or
+  folder created (`auto_create_project=false`); `use_unlim` never passed. Preflight `get_cost` = 2 credits/image.
+- **Masters:** 2752x1536 (16:9), 2528x1696 (3:2), 1856x2304 (4:5); AVIF + WebP variants by `tools/images.mjs`.
+- **Credits:** 13 generations x 2 = **26 credits** spent by A15 (cap 100). Kept 9 (18 credits, the total in
+  `images/GENERATED.json`); rejected 4 (8 credits). Balance 1091.07 before, 1021.07 after. The other 44 credits of the drop
+  were 22 Nano Banana Pro images billed 12:15:41–12:18:32 UTC by another session on the same Higgsfield account, not A15.
+- **Mood references:** IMG08 (`mainstage-v1-img.webp`) for every exterior and the A-practice interior; IMG09
+  (`Screenshot-2025-10-21-at-2.27.41-PM.png`) for the contact still lifes and interiors. Only light, palette and materials
+  were taken. Neither building, nor the "509" number, nor the arched doorway was reproduced.
+- **Rejections (4):**
+  - A-hero, attempt 1 (`2a9190ec…`): the wall plaque had a seal and lines that looked like lettering, and the left third
+    was an artificial blank wall. Regenerated with no plaques or inscriptions and an open sky/tree-line left third. Kept attempt 2.
+  - A-contact, attempt 1 (`59ebf0ac…`): a saturated green banker's-lamp shade broke the brass/ink palette, and the pad
+    rendered as a bound book. Regenerated with an all-brass dome lamp and an open leather padfolio. Kept attempt 2.
+  - C-hero, attempt 1 (`cc101f4e…`): a sign board with pseudo-lettering and a parked car.
+  - C-hero, attempt 2 (`d9b9b39b…`): a diptych seam (an AI artifact), a clock face on the cupola and a red traffic sign.
+    Kept attempt 3 (`6c056fc2…`). Retries for this slot are exhausted. A very soft grey shape far left may be a car roof.
+    It is not legible and has no plate.
+- **Accepted with notes:** B-practice (diagonal shadow bands come from an off-frame source; graphic and on-brief),
+  C-practice (a distant blank sign post seen edge-on; nothing readable), B-contact (the phone is soft and side-on, with no
+  digits showing).
+- No placeholders were needed; Higgsfield was available on the first ToolSearch.
+
 ## A16
 
 ### A16 — copy director (Stage 2b: voice + mockup copy)
@@ -277,3 +469,311 @@ Every call made without asking, with its reason. Newest stage last.
 - **"If someone you love was arrested" (criminal hub)** tells families they can make the first call and what to have ready. It makes no claim about jail visits, bond or timing.
 - **Reading grade:** by Flesch-Kincaid on prose lines, Home is about 7.5, Criminal Defense about 5.7 and Contact about 4.4. These pages are hero/CTA-heavy and written for a stressed phone reader, so we keep them under grade 8 deliberately. Legal-process pages will run at 8–10.
 - **VOICE.md CTA table** fixes the exact EN/ES CTA wording; "free consultation" never appears without the phone number in the same sentence or button.
+
+### A16 — G1 (Stage 4 copy: /legal-services/, /family-law/, /personal-injury/, /about/)
+
+- **/legal-services/ is a `CollectionPage`.** It has one `[cards]` group per practice: 8 criminal, 7 family (adoption and DCS included) and 1 personal injury. Each card is a one-line, fact-tagged summary that links to the new path in `plan/sitemap.json`. No Wills, immigration, military-family or commercial-defense cards (C09, C11). The criminal-meets-family bridge section cites only F057. It says both matters can be raised at one consultation and states no specific legal effect of a charge on custody (brief §6).
+- **Testimonials spread across pages:** legal-services gets Eddie W. (F134), family-law gets Katherine S. (F133, the divorce review), and about gets S.A. (F135, which names Melissa). Each is verbatim and followed by the results disclaimer. Personal injury has no testimonial, because none of the three is about an injury case, and it links to /testimonials/ instead.
+- **Family-law process steps** use only F266 (spouses may settle or use a mediator) and F313 (cooperative negotiation or arguing before the court). The page drops the old page's statute, its 6-month residency rule and its 2–6 month timeline (F263, F264; C18), and states no "best interests" standard.
+- **Personal injury** is kept modest and singular (C12). It uses F245 (what a claim can seek), F288 ("Most personal injury cases are settled directly with the at-fault party's insurance company") and F246 (settlement negotiation, civil litigation), without the old page's "extensive" claims. No fee basis is stated, since the contingency question is open (C12), and no fault-percentage rule is given (F285, C18).
+- **About:** the bio uses F009/F010, F050–F055, F060–F062 and F087. The page states no opening year for the solo practice and no "over 10 years" (F088), per C01. The two TACDL certificates are shown as "completed" training (F063–F066), never "certified". Memberships are only the three shared ones (C08). The DNJ story is described neutrally and links to /in-the-news/ (C16).
+- **Katie Fults on About:** all her facts are kept as published (F116–F122, F293), including her five counties inside her own bio. Two non-factual superlatives were dropped. "One of Murfreesboro's top law firms" became "one of Murfreesboro's law firms" (RPC 7.1 comparison word). "Unwavering dedication to achieving the best possible outcomes" was removed (an outcome claim). Her section is not linked from the family pages (law-firm rule 12).
+- **Builders:** on /about/, the `[cards]` "Training Will has completed" should render each card with its certificate scan: IMG06 (2019, `11.webp`) and IMG07 (2006, `12.webp`), each linking to the full-size file and with descriptive alt text. Katie's IMG05 is a small avatar beside her section.
+
+### A16 — G2 (DUI, Drug Crimes, Theft, Violent Crimes, EN copy)
+
+- **No penalty figures, statutes or BAC numbers on any G2 page (C18).** DUI uses only figure-free ledgered statements, hedged with "can"/"may": penalty types (F281), what drives the outcome (BAC and prior DUIs, F304), drugged driving incl. marijuana (F305), underage zero tolerance (F306). F250–F262, F283, F311 (refusal, record length, fines, jail minimums) are not used.
+- **Refusal of tests is not discussed** (F261 vs F283 conflict, C18). DUI copy only asks the reader to note which tests they "took or declined".
+- **No federal claims** on Drug Crimes or Theft (F168 and F280 mention federal; C06 is open). Theft says "misdemeanor or something more serious" (F168) plus "state felony and misdemeanor charges" (F048).
+- **Shoplifting is not named as a service.** The sitemap intent mentions it, but no fact ledgers it; Theft says "from a store, an employer or a person" inside the theft card only.
+- **Charge glosses are hedged plain-language descriptions, not legal definitions** (robbery "usually claim that force or a threat came with a theft"; burglary "usually claim that someone went into a building, home or vehicle without permission to commit a crime"). The old site's murder/manslaughter definitions (F192/F193 "planned in advance") are not reused because they misdescribe Tennessee law; those facts are cited only for the charge names.
+- **Violent Crimes absorbs the old "Murder" card (C10):** murder/attempted murder is a card and an FAQ; F152 ("from murder to hit and runs") is used as "Will has represented people facing serious allegations"; F272 (death penalty) is not used.
+- **Testimonials on criminal sub-pages:** only Eddie W. (F134) and S.A. (F135) fit a criminal reader (Katherine S. is a divorce review). DUI and Theft carry S.A.; Drug Crimes and Violent Crimes carry Eddie W. Every page carries "Prior results do not guarantee a similar outcome." after the F150 "reduced or dismissed" step, and S.A. pages repeat it under the quote ("would win", "resolved for the better").
+- **Criminal-family bridge:** DUI links to Child Custody, Visitation and Parenting Plan Modifications using F057 only; no legal effect of a DUI on custody is stated.
+- **Related-charge links carry fact tags** for the services they name, so every service claim on the page is sourced.
+- **Sibling de-duplication:** each page has its own opening, "what to do" list, steps wording, family section and FAQ set; 8-word shingle overlap with siblings + the hub is 14–19% (shared lines are the proof-strip phone item, the disclaimer and the testimonials link). Drug Crimes and Theft are now well past 400 unique words (A03).
+
+### A16 — G3 (Stage 4 copy: /criminal-defense/sex-crimes/, /fraud/, /probation-violation/, /domestic-assault/)
+
+- **No legal standards or grading claims beyond the ledger's safest form (C18).** Probation drops the "preponderance of evidence" hearing standard (F271) and states no burden of proof. Sex Crimes drops "first-degree criminal sexual conduct" (F273). Fraud says "Many fraud charges are felonies" (F278 says "almost always"; "many" is true under both readings, and Tennessee grades some fraud-type offenses by value). Forgery-is-a-felony (F277) is left out for the same reason.
+- **Old-page content that never reached the ledger is not used.** This covers the probation page's list of ways to violate, its consequences (extended or stricter probation, prison) and its defense examples (faulty drug test). It also covers the domestic page's custody, job and reputation effects and its definition of aggravated assault ("use of a weapon"), and the sex-crimes page's reputation, housing and job effects. Each page covers that ground with practical, claim-free advice instead: what to gather, what not to do, and bond conditions in general terms.
+- **Fraud card list:** embezzlement, forgery, identity theft and card fraud, insurance fraud, wire, mail and tax fraud, and money laundering, counterfeiting and bribery (F172–F180, F182–F184). **Bankruptcy fraud (F181) and piracy (F176) are omitted.** Bankruptcy fraud is a federal-only offense, and the federal-practice question is open (C06; the hub states no federal claim). Piracy is out of place for the individual reader the sitemap targets. No commercial-organization defense (C11).
+- **Sex Crimes "confidentiality of the consultation" (sitemap intent)** is written as discretion advice only ("call from a place where you can speak freely", "keep the form message short"). The page does not say the consultation is confidential or privileged, because no fact supports that for criminal matters (F106/F107 cover adoption and DCS only). Queued to the owner.
+- **Sex Crimes → DCS bridge:** the child-molestation card tells readers to mention any DCS contact and cites F045 (Will represents parents and guardians in DCS cases). Related pages link to /dcs-case-attorney/.
+- **Criminal ↔ family bridge (brief §6):** Domestic Assault and Probation Violation link to Child Custody, Visitation and Parenting Plan Modifications (Domestic also links to Divorce). Each bridge cites only F057 (and F207 on Domestic). Each says only that the matters "can" overlap and can be raised with one lawyer. No specific legal effect is stated.
+- **Testimonials:** Sex Crimes and Domestic Assault get Eddie W. (F134). Fraud and Probation Violation get S.A. (F135), followed directly by the results disclaimer. Every page also carries the disclaimer under its `[steps]` (F150, "reduced or dismissed").
+- **Page-specific consultation facts** sit beside the general one on the consultation lines: F101 (sex crimes), F102 (fraud) and F100 (probation). Domestic Assault has no page-specific offer fact and uses F090.
+- **Anti-boilerplate:** each page has its own lead section, its own practical block (Sex Crimes "What not to do" + "Keeping it private"; Fraud "The records to gather" + "When the accuser is someone you know"; Probation "Don't wait on a warrant" + "What to gather before you call"; Domestic "Your bond conditions, in plain terms" + "What 'domestic' can mean"), a step list tuned to that charge, and a different CTA-band headline. The proof strips vary their second and third items.
+
+### A16 — G4 (Divorce, Child Custody, Visitation, Parenting Plan Modifications, EN copy)
+
+- **"Best interests" stated on the three child-focused sub-pages only, as tagged ledger facts.** Custody cites F290/F270, Visitation and Modifications cite F270 ("almost always made based on the best interests of the children"). The G1 hub still states no standard. These pages are about how a judge decides, and the standard is needed there. No statute, factor list or age figure is used: the old visitation page's TN Code § 36-6-106 factor list and its "12 years old" preference are not ledgered, and F268 ("until … the child turns 18") is left out (C18).
+- **Divorce keeps one legal statement:** equitable distribution, with fault not considered (F267). It is the only property rule the old page gave, and it is queued for owner approval. The divorce page does not use the residency rule or the timelines (F263, F264).
+- **Temporary vs. permanent parenting plans are not explained.** The only source sentence carries the age-18 figure (F268). Visitation uses F269 (primary residential parent) and F227 (petition for enforcement) instead.
+- **F292 ("favors the parent who takes custody") is not used.** Child Custody says the opposite, cautiously: talk to a lawyer before moving out, moving the children or changing their routine (no fact claim; practical advice).
+- **Consultation fact per page:** Divorce and Custody cite F096 (family-law "free initial consultation"), Visitation F097 (its own meta), Modifications F105 (its own page). Each one sits beside the tel: link.
+- **Testimonials spread to avoid repeats:** Divorce gets Katherine S. (F133, a divorce review), Custody gets S.A. (F135), Visitation gets Eddie W. (F134). Modifications quotes only Katherine S.'s published card headline (F136), verbatim. Every page with a quote carries the results disclaimer, and Divorce also carries it after its process steps (the steps mention settling).
+- **Not used:** "our attorneys" (F131, C05), "earned the respect of the judiciary and our peers" (F132, unverifiable comparison), "for years" and "18 years" (F085/F086, C01), immigration and military families (F208 is cited only for alimony and post-divorce disputes, C11), and "unmatched family law guidance" (RPC 7.1).
+- **Practical "what to gather / what to write down" lists** on all four pages make no firm or legal claims, so they carry no tags. Each list is different so the sibling pages don't repeat one another. 8-word shingle overlap with the siblings and the hub is 7–15%. The repeated lines are the proof strip, the Spanish FAQ and the disclaimer.
+- **schema_type "LegalService"** on all four pages, matching the G2 sub-pages (sitemap.json says "Service"; builders map both to LegalService).
+
+### A16 — G5 (Paternity, Adoption, DCS Cases, Testimonials, EN copy)
+
+- **Consultation wording.** All four pages say "free consultation" next to the tel: link. Paternity cites its own page fact (F104). Adoption, DCS and Testimonials cite the site-wide offer (F090), because the old Adoption and DCS pages say "confidential consultation" and never "free" (C14). The "confidential" claim appears only on Adoption (F106) and DCS (F107), in the FAQ answer to "Is the consultation free and confidential?". It is queued to the owner.
+- **Service area per page.** Paternity uses Rutherford, Coffee and Wilson (F037 covers the Paternity page). DCS uses "Murfreesboro and Rutherford County" (F045). Adoption uses "Murfreesboro and the surrounding counties" (F034). The old adoption line "known throughout Murfreesboro and Rutherford County" (F044) is a reputation claim and is not used.
+- **Paternity legal statement.** The only legal rule on the page is F314: when the father's identity is in question, the court requires proof before custody or support. G4 Custody uses the same fact. The old page's claims are not ledgered and are not used. These are that fathers "rarely receive preferential treatment", that judges defer to "old-fashioned ideas", and the rights listed under "Establishing Paternity" (support, health insurance). F219 (paperwork to prove parenthood) is cited only in the divorce context, where it was published.
+- **Adoption keeps no timelines, consent rules or home-study steps.** None of them is ledgered. Termination of parental rights is described only as "some adoptions involve ending a parent's legal rights" (F231). Katie Fults (F117, adoption focus) is not mentioned, per law-firm rule 12.
+- **DCS page.** Each stage card maps to one ledgered service (F236–F241). Procedure is described only in general terms ("the court holds hearings", "a plan lays out the steps and the goal"). The page states no deadlines or hearing time limits, and makes no claim about outcomes or "chances" (the old "better your chances" line is dropped). The criminal ↔ family bridge cites only F057, plus F186 for the domestic-assault link. The "first steps" list is practical advice with no fact claims: keep papers, write it down, keep every date, read before you sign, talk to a lawyer before the interview. It is queued for owner approval.
+- **Testimonial placement.** Paternity gets S.A. (F135). Adoption gets Eddie W. (F134). DCS gets the Katherine S. card headline only (F136), because her full review is about a divorce. Each page carries "Prior results do not guarantee a similar outcome." under the quote.
+- **Testimonials page.** It shows all three reviews verbatim, typos and the truncated "I highly recommend" included, each with its published card headline as a bold line (F136, F137, F138). There are no stars and no aggregate rating (C15). The results disclaimer sits directly after the three quotes ("fair settlement", "would win"). F294–F296 are not cited on the quote lines, because the check's verbatim test compares each cited testimonial fact's quote. The attributions are in F133–F135's claims. Section headings ("A divorce client", "A referral from another attorney", "A client who found the right direction") describe what each review itself says. Melissa Harris appears only inside the quotes (C04). schema_type is "WebPage", with no Review markup.
+
+### A16 — G6 (Stage 4 copy: /faqs/, /in-the-news/, /blog/ + blog template, EN)
+
+- **FAQ questions recovered from the raw HTML.** `inventory/text/faqs.md` lost the accordion questions, so the questions were read from `inventory/html/faqs.html` (the old FAQPage `"name"` fields). Every answer was rewritten in the new voice. Five `[faq]` groups (Getting started, Criminal charges, DUI stops and charges, Family court, Injury claims) build one FAQPage schema on /faqs/ only. Each `###` heading is a question and the text under it is the answer. The "Find your question" list links to heading anchors (`#getting-started` etc.), so builders must give `##` headings slug ids.
+- **Old FAQ answers dropped or neutralized (C17, C18):**
+  - Theft thresholds (F279) are dropped. The theft question now cites only F168, F165 and F166, with no dollar figures and no grading rule.
+  - DUI/DWI/OWI (F282) is dropped, because "OWI" is not a Tennessee charge. The DUI-charges question uses the ledgered service list instead (F153, F159–F161).
+  - Field sobriety refusal (F283, which conflicts with F261) is not answered. The page gives claim-free advice: note which tests you took or declined.
+  - "Signs an officer looks for" is dropped (not ledgered).
+  - The custody-advice line "favors the parent who takes custody" (F292) is replaced by "talk to a lawyer before you move out", in line with G4.
+  - "Your insurance may cover medical bills…" and "negotiate with an independent appraisal…" are not ledgered. They became claim-free advice (bring your policies, keep your repair estimates).
+- **"Other" legal facts kept on /faqs/, each general and hedged:** F280 (federal trafficking), F281 + F304 (DUI penalty types and what drives them), F284 (you may decline to answer until you've spoken with a lawyer), F285 (partial fault doesn't always end a claim; **the "less than 50%" figure is omitted**), F286, F287, F288, F289, F290, F291. All are queued in one owner question.
+- **No federal-practice claim (C06):** the federal-court FAQ says some drug cases *can* be federal (F280). It does not say Will takes federal cases.
+- **Spanish FAQ** uses F092 + F094 (F093 cited only for "a language barrier should not keep you from calling"). It does not say "full bilingual services" (VOICE do/don't 8, C13).
+- **Results disclaimer** appears twice on /faqs/: after the criminal group ("reduced or dismissed", F150) and after the injury group ("settled", F288).
+- **In the News lists one item only (C16):** the DNJ business story of 2014-10-05 (F140, F142), with outlet, section, date and link. The headline comes from the URL slug, and the page says so ("taken from the story's web address"). No article text is reproduced and the story is not characterized. **"Daily News Journal Article 2" (F141) is omitted.** It linked to a dnj.com site search for "jc meeks", not to an article. The link keeps the ledgered `http://` URL exactly. The page adds a short About bridge (F051, F052, F087) and a press-contact line (F013, F019).
+- **Blog index** (`copy/pages/blog.md`) sets `publish: false` and `noindex: true` and matches sitemap `publish:false`, so gate 4 skips it today. It still passes `validateCopy` on its own. schema_type is `CollectionPage`; builders may map it to sitemap `schemaType: "Blog"`. **Builders inject the post list under "## Latest articles".** The page makes no authorship claim about future posts.
+- **Blog template** (`copy/pages/blog/_template.md`) sets `draft: true` and `schema_type: "BlogPosting"` (a post, not a page; outside the page enum on purpose). It also sets `reviewed_by_attorney: false`, `category`, `related` and `es_twin`. Writer instructions sit in an HTML comment that **builders must strip**. The fixed blocks are the general-information note (F111, F112), the results disclaimer and a phone CTA band (F013, F090, F092). All fixed lines pass `validateCopy`.
+
+### A16 — G7 (Privacy, Accessibility, Cookie Settings, Thank-you, 404, EN copy)
+
+- **All five pages set `policy_page: true` and `schema_type: "WebPage"`.** They describe only the new site, using site.config.json, DECISIONS (A06, A08, A09, A11) and CLAUDE.md rule 5. Firm facts (phone, email, address, hours, free consultation, Se habla español, the attorney-client line F112, the not-legal-advice line F111) are still fact-tagged.
+- **Conditional vendor markup (builder contract).** A marker line on its own line controls what is shown. `[vendor: <key>]` shows its block only when that vendor is configured. `[vendor-off: <key>]` shows its block only when that vendor or category is NOT configured. Keys are `web3forms`, `turnstile`, `ga4`, `clarity`, `meta` and `tiktok` (the `tools/configure.mjs` flag names). Categories are `analytics` (ga4, clarity), `marketing` (meta, tiktok) and `tracking` (all four). A block runs from the marker to the next marker, heading or component hint. Placement differs by page. On Privacy, each vendor is its own `### <Vendor>` section with the marker on the line after the heading. On Cookie Settings, each vendor is one bullet under its category.
+- **Consent storage wording:** the first-party cookie is named `consent`, with a matching localStorage entry. It holds the analytics choice, the marketing choice, the policy version (`consentPolicyVersion`) and a timestamp. Nothing is stored on a server. A version bump re-asks. No cookie lifetime is stated, because none is configured.
+- **GPC = "no" to analytics and marketing.** While the signal is on, neither loads and both switches show as off. This is the simplest form that is true and defensible.
+- **"We do not sell your personal information"** is stated without qualification. Marketing pixels load only after opt-in, and the copy says that disclosure happens to the named services only.
+- **No response time anywhere.** None is ledgered. Thank-you says the office uses the phone number you gave to set up a consultation (F098) and repeats the hours (F031/F032) and the urgent line.
+- **"Last reviewed: {{last_reviewed}}"** is a placeholder line that the builder fills with the review date (EN date format). The check exempts it from the number rule.
+- **Cookie Settings hosts the control** under a new component hint `[consent-controls]`. Its buttons are "Save my choices", "Accept all" and "Reject all".
+- **404 links** go to /criminal-defense/, /family-law/, /personal-injury/, /contact-us/, /, /legal-services/ and /es/. It has no search box, per the brief.
+
+## A17
+
+## G1
+
+- A17/G1: In /legal-services/, /family-law/, /personal-injury/ and /about/, a sentence the ledger supports only in part was rewritten to what the cited fact actually says, and an owner question was queued. The sentence was not deleted. Examples: "Most of his work" became "His practice centers on" (F057). "Most personal injury cases" became "Many injury claims" (F288). "played on the baseball team" became "was a member of the baseball team" (F054).
+- A17/G1: Client comparisons inside verbatim testimonials stay as published (rule 7). An example is S.A.'s "I'm sure you can find cheap service in plenty of places in Murfreesboro" (F135). Each page that carries such a testimonial already has the results disclaimer. Firm copy itself makes no comparisons.
+- A17/G1: The old site's service names are kept verbatim where they differ from current usage. For example, "underage DWI" (F153) was not turned into "underage DUI". The owner decides whether to change it.
+
+## G2
+
+- A17/G2: Untagged sentences that described what Will personally does in a case ("Will reviews the reports…", "He looks for the weak points…") were rewritten. They now either describe what the defense reviews in general terms, as the criminal hub's approved step 3 does, or cite F058 ("Will Fraley and his team will personally handle your case"). Owner question queued.
+- A17/G2: "his staff" was changed to "his team" wherever the cited fact (F058/F059) says "team". The testimonial's own "his staff" (F134) is unchanged.
+- A17/G2: Untagged claims about callers' habits ("Parents often make the first call", "Families are often the first to call") were rewritten as permissions ("A parent can make the first call"). No fact about who calls the firm supports a frequency claim.
+- A17/G2: Every "Probation violation" related-charge link now cites F185, and every other related-charge link cites the facts behind the service it names.
+- A17/G2: The zero-tolerance (F306), drugged-driving (F305) and penalty-type (F281) statements were kept. They contain no figures, and A16's DUI owner question already covers them (C18). F304 was narrowed to jail time, which is all the source says.
+- A17/G2: Gate 4 status after G2 edits: the content check (unsourced facts, banned phrases, frontmatter, law rules) passes. The two remaining FAILs are missing ES copy files and copy/FACT-CHECK.md. Neither concerns these four English files.
+
+## G3
+
+- A17/G3: Legal statements the ledger flags "verify current law" were rewritten to a form that is true under the old site's wording and under current Tennessee law, and an owner question was queued for each. F275 ("any kind of close relationship") became "not limited to romantic relationships … family members and people who live together, including roommates". F187's "may be labeled as … assault and battery" no longer presents assault and battery as a charge label. F278's "almost always" stays "many". F274 is kept as the source says it ("many … required to register").
+- A17/G3: Statements that the old site presents as classification were matched to the source. "Charged as violent crimes" became "often considered violent offenses" (F195), the source's own wording.
+- A17/G3: G2's conventions were applied to /sex-crimes/, /fraud/, /probation-violation/ and /domestic-assault/. Step 3 now describes what "your defense" reviews. F058 sentences say "his team". Each "Probation violation" related link cites F185.
+- A17/G3: Service cards that the old page only lists, without defining, now name the charge and give a practical tip instead of a definition the ledger does not hold (embezzlement, F172; aggravated assault, F187).
+- A17/G3: Promise-like phrasing was softened: "learn exactly what you are accused of" (F099 supports only discussing options), "so nothing you say is used against you", "Who else learns about the accusation is your decision" (court records can be public) and "They rarely are". Frequency words that had no source were lowered to "some", "often" or "may".
+- A17/G3: Gate 4 status after the G3 edits: the content check (unsourced facts, banned phrases, frontmatter, law rules) passes. The only FAILs are the missing ES copy files and copy/FACT-CHECK.md. Neither concerns these four English files.
+
+## G4
+
+- A17/G4: On /family-law/divorce/ the responding-spouse claims were removed, following G1's /family-law/ decision. F205 supports only petitioning. The "Maybe your spouse already has" scenario is kept: it describes the reader, not a service promise.
+- A17/G4: Each verify-law fact (F267, F269, F270, F290, F314) is kept close to the old site's own wording. Changed terms were restored ("agreement", not "order", in F314; "helps create" in F210), untagged glosses about how judges decide were folded into the tagged sentence or reframed as advice, and approval was queued for the owner. This matches G1's handling of F266.
+- A17/G4: Frequency claims about negotiation that had no source ("many", "often") became firm-approach statements: "Will works toward agreement through cooperative negotiation where it can succeed" (F313, F147). F147 is now cited wherever negotiation of divorce disputes or parenting-plan modifications is claimed.
+- A17/G4: "Contesting parenthood" in related links is now sourced to F225, which covers answering a false paternity claim.
+- A17/G4: Gate 4 status after the G4 edits: the content check (unsourced facts, banned phrases, frontmatter, law rules) passes. The only FAILs are the missing ES copy files and copy/FACT-CHECK.md. Neither concerns these four English files.
+
+## G5
+
+- A17/G5: "Our firm has represented…" (F212) is rendered as "The firm has represented…", not "Will has represented…", on /family-law/paternity/. A personal-experience claim needs a personal source. Recommendations and services the old site states in the firm's "we" voice (DNA testing F213, paperwork F219, adoption filings F234, DCS help F242) still name Will, because he is the firm's attorney (C05). Owner question queued.
+- A17/G5: Statements about Tennessee procedure that do not hold in every case were softened to "may" ("the court may hold hearings", "Court hearings may follow"), and the adoption FAQ now says only that an adoption "becomes final through a court order". Owner questions queued. F314 is kept as the old site worded it. A16/G5 and A17/G4 already queued its owner question, so it was not repeated.
+- A17/G5: /testimonials/ no longer says the reviews appear "exactly as the client wrote it". Katherine S.'s review is cut off mid-sentence on the old site (C15), so the page now says they appear "exactly as it was first published". All six testimonial quotes and the three card headlines were machine-compared against F133–F138 and match character for character.
+- A17/G5: The DCS line "You can talk through both with one lawyer" was changed into an invitation that puts the free consultation beside the tel: link. This follows the G1 and G3 pattern.
+- A17/G5: Gate 4 after the G5 edits: the content check (unsourced facts, banned phrases, frontmatter, law rules, EN + ES) passes. The only FAILs are the missing ES copy files and copy/FACT-CHECK.md. Neither concerns these four English files. No fact ID was removed from any page, so later ES mirrors are not affected.
+
+## G6
+
+- A17/G6: /faqs/ keeps the old FAQ's general legal statements (F280, F281, F284–F291, F304), but only in hedged form ("can", "generally", "in general terms"). None is presented as a rule that applies to every case. Approval is queued in one owner item. Theft thresholds (F279), "refuse the test without penalty" (F283) and "take the children" (F292) are still left out, as C17 and C18 direct.
+- A17/G6: "underage DUI" was restored to the source's "underage DWI" (F153), which matches the G1 decision. The owner question about the term is already queued under G1.
+- A17/G6: The fathers line on /faqs/ now cites F212 in the G5 form ("The firm has represented…"). The unsourced claim "that includes fathers" was dropped. "Will negotiates each of these with you" now cites F147 (guiding clients through divorce disputes, including custody negotiations) and no longer leans on the F201 list.
+- A17/G6: The "Who will handle my case?" FAQ (formerly "Will I deal with Will Fraley himself?") now limits the personal-handling promise to criminal matters, which is all F058 supports.
+- A17/G6: /in-the-news/ describes the 2014 DNJ item only as "A story from the Daily News Journal's business section" (F140, F142), as C16 directs. Nothing in the copy characterizes the story.
+- A17/G6: /blog/ needed no changes. Gate 4 after the G6 edits: the content check (unsourced facts, banned phrases, frontmatter, law rules, EN + ES) passes. The only FAILs are the missing ES copy files and copy/FACT-CHECK.md, and neither concerns these three English files. No fact ID was removed from any page. F147 and F212 were added to /faqs/.
+
+## G7
+
+- A17/G7: The five pages describing the new site itself (/privacy-policy/, /accessibility/, /cookie-settings/, /thank-you/, /404/) keep `policy_page: true`. Their statements about how the site works trace to the brief (§5 items 9–12), site.config.json and A16's G7 decisions and operator list, not to the ledger. Every firm fact on them (name, phone, email, address, hours, free consultation, Se habla español, the disclaimer, the certificates, the family-law menu) carries a tag that resolves and supports the sentence.
+- A17/G7: The accessibility statement no longer promises re-testing "whenever it changes". It says the tests exist to be rerun. It no longer names "attorney directories" or "news sites", because no page on the new site links to a directory. The in-person line now matches the Contact page ("call ahead"). The certificates are called "course-completion certificates" (law-firm rule 3).
+- A17/G7: The testimonial limitation now cites F133 (cut off mid-sentence) and F134 (missing word) instead of "original spelling", which no ledger entry describes.
+- A17/G7: No fact ID was removed from any page, so the Spanish twins, when they are written, can cite the same IDs.
+
+## A17 final (consistency pass)
+
+- A17/final: Office hours use one format sitewide: "9:00 a.m. to 5:00 p.m." in prose and "9:00 a.m. – 5:00 p.m." in lists (ES "9:00 a. m. a 5:00 p. m."). `/`, `/about/` and `/es/` were brought into line (F031, F032; C07).
+- A17/final: F058/F059 are rendered "Will Fraley and his team" / "Will Fraley y su equipo" on every page, matching the source. "his staff" survives only inside Eddie W.'s verbatim testimonial (F134).
+- A17/final: The old site uses both "underage DWI" (F153) and "Underage DUI" (F158, F162). Pages disagreed, so every page now says "underage DUI" / "DUI de menores de edad" and cites F153 with F158. This supersedes the G1/G6 choice of "underage DWI": both forms are verbatim from the old site, and the DUI page's own term is used. The G1 owner question about the term stays open.
+- A17/final: Spanish practice names are fixed as: "Modificación del plan de crianza" (not "Cambios al plan de crianza"), "Casos de DCS" (not "Casos del DCS"), "Todo el derecho familiar" for the family-law hub link.
+- A17/final: copy/FACT-CHECK.md rolls up the summary, the C01–C19 resolutions and the G1–G7 group reports.
+
+## A18
+
+## G0 — Spanish mirror: home, criminal defense, contact (A18)
+
+- **Register and terms (binding for every A18 group):** neutral Latin American Spanish, "usted". Court terms keep the
+  English term in parentheses on first use because clients' court papers are in English. Glossary used:
+  DUI = "manejar bajo los efectos del alcohol (DUI)", then "DUI"; felony / misdemeanor = "delito grave (felony)" /
+  "delito menor (misdemeanor)"; probation = "libertad condicional (probation)", matching the sitemap slug
+  `violacion-de-libertad-condicional`; theft / robbery / burglary = "robo (theft)" / "robo con violencia (robbery)" /
+  "allanamiento con intención de delinquir (burglary)"; assault and battery = "agresión y lesiones"; aggravated
+  assault = "agresión agravada"; domestic assault = "agresión doméstica"; manslaughter = "homicidio sin
+  premeditación"; vehicular homicide = "homicidio vehicular"; sexual battery = "agresión sexual"; child molestation
+  = "abuso sexual de menores"; embezzlement = "malversación de fondos"; forgery = "falsificación de documentos";
+  wire / mail / tax fraud = "fraude electrónico / postal / fiscal"; court date = "fecha de corte (court date)";
+  citation = "citación"; bond = "fianza"; criminal / family court = "tribunal penal" / "tribunal de familia";
+  child custody = "custodia de los hijos"; visitation = "régimen de visitas"; parenting plan = "plan de crianza
+  (parenting plan)"; DCS = "Departamento de Servicios para Niños (DCS)"; personal injury = "lesiones personales";
+  cross-examination = "contrainterrogatorio"; trial attorney = "abogado litigante".
+- Firm name "Will Fraley, Attorney at Law", bar-association names and "Middle Tennessee State University" stay in
+  English as proper names (not translated).
+- "Spanish Speaking Services Available" (F094) is rendered "Hay servicios disponibles en español". Nothing implies
+  that the attorney personally speaks Spanish (law-firm rule 10).
+- Home page: the EN section "Se habla español" (which links to /es/) becomes "Atención en español" with a
+  "Read in English" link to `/`.
+- Times use the RAE form "9:00 a. m." on Spanish pages.
+- Testimonials (F133, F134) stay verbatim in English after the lead-in "Testimonio publicado en inglés:".
+
+## G1 — Spanish mirror: legal services, family law, personal injury, about (A18)
+
+- Follows the G0 glossary. Added for these pages: child support = "manutención de los hijos (child support)";
+  spousal support = "manutención del cónyuge (spousal support)"; property division = "división de bienes";
+  sole / shared custody = "custodia exclusiva / compartida"; foster care adoption = "niños en cuidado temporal
+  (foster care)"; removal hearings = "audiencias por retiro de los niños del hogar (removal hearings)"; dependency
+  and neglect = "dependencia y negligencia (dependency and neglect)"; white-collar crime = "delitos de cuello blanco";
+  medical malpractice = "negligencia médica (medical malpractice)"; wrongful death = "muerte por negligencia
+  (wrongful death)"; claim = "reclamo"; insurance adjuster = "ajustador del seguro"; court officer = "oficial de
+  tribunal (court officer)".
+- "Certificate of completion" is rendered "constancia de finalización", never "certificado" (law-firm rule; the
+  gate also blocks the word). Program names (2019 TACDL Advanced Cross Examination Training, 5th Annual Tennessee
+  Criminal Defense College), school and association names stay in English as proper names.
+- About page: Will's philosophy (F055) stays in English as a verbatim quote, followed by a Spanish line marked
+  "En español:" so the translation is never presented as his own words.
+- Underage DWI keeps "DWI" (the fact quotes DWI), unlike G0's "underage DUI".
+- Katie Fults "active member" = "socia activa" (natural for bar associations; avoids "miembro activo/activa").
+
+## G3 — Spanish mirror: sex crimes, fraud, probation violation, domestic assault (A18)
+
+- Follows the G0/G1 glossary. Added: probation officer = "oficial de libertad condicional (probation officer)";
+  violation warrant = "orden de arresto por violación (violation warrant)"; warrant / summons = "orden de arresto
+  (warrant)" / "citatorio (summons)"; hearing = "audiencia"; bond conditions = "condiciones de la fianza"; register as
+  a sex offender = "inscribirse en el registro de delincuentes sexuales"; roommates = "compañeros de casa"; money
+  laundering / counterfeiting / bribery = "lavado de dinero / falsificación de moneda / soborno"; identity theft =
+  "robo de identidad"; insurance fraud = "fraude de seguros"; white-collar = "de cuello blanco".
+- "Dedicated trial attorney" (F056) in proof strips = "Abogado litigante comprometido" (as on /es/sobre-nosotros/).
+- /es/defensa-penal/violacion-de-libertad-condicional/ title is "Violación de libertad condicional en Murfreesboro,
+  TN" (53 chars): the Spanish term plus "| Will Fraley" exceeds the 60-char limit, so the brand suffix is dropped
+  there and the city kept. The builder may append the brand only if the 60-char cap allows.
+- "You have been charged, not convicted" = "A usted lo acusaron; no lo condenaron." Masculine default ("lo") follows G0.
+- Fraud and probation pages repeat the Spanish results disclaimer after the S.A. testimonial, as the EN pages do.
+
+## G2 — Spanish mirror: DUI, drug crimes, theft, violent crimes (A18)
+
+- Follows the G0 glossary. Additions: underage DUI = "DUI de menores de edad"; felony DUI = "DUI como delito grave
+  (felony DUI)"; driving while suspended = "manejar con la licencia suspendida"; reckless driving = "manejo imprudente
+  (reckless driving)"; traffic violations = "infracciones de tránsito"; search warrant = "orden de registro (search
+  warrant)" (neutral form, not the regional "orden de cateo"); paraphernalia = "parafernalia para drogas"; white-collar
+  crime = "delitos de cuello blanco"; murder / attempted murder = "asesinato / intento de asesinato"; hit-and-run =
+  "choque con fuga (hit-and-run)"; spouse = "cónyuge"; "Dedicated Trial Attorney" (F056) = "abogado litigante dedicado";
+  "Native to Tennessee" (F050) = "Originario de Tennessee".
+- The TACDL training (F063, F064) is described as "capacitación avanzada en contrainterrogatorio". The words
+  "certificado"/"certificate" are left out on purpose, because Spanish "certificado" also reads as "certified" (law-firm rule).
+- Titles that would go over 60 characters drop ", TN" (drug crimes, violent crimes). The theft description names only
+  "robo" so it fits 140–155 characters; the body still covers robbery and burglary.
+- Testimonials F134/F135 stay verbatim in English after "Testimonio publicado en inglés:". The Spanish results
+  disclaimer is placed exactly where the English page has its disclaimer.
+
+## G4 — Spanish mirror: divorce, child custody, visitation, parenting plan modifications (A18)
+
+- Follows the G0/G1/G3 glossary. Added: petition for divorce = "demanda de divorcio"; alimony / spousal maintenance
+  stay in English in parentheses after "manutención del cónyuge (spousal support)"; equitable distribution =
+  "distribución equitativa (equitable distribution)"; primary residential parent = "progenitor de residencia
+  principal (primary residential parent)"; petition for enforcement = "petición para que se cumpla la orden
+  (petition for enforcement)"; best interests of the child(ren) = "interés superior del niño / de los hijos (best
+  interests of the child)"; visitation schedule = "calendario de visitas"; religious upbringing = "formación
+  religiosa"; post-divorce disputes = "disputas posteriores al divorcio"; divorce decree = "sentencia"; mediator =
+  "mediador"; cooperative negotiation = "negociación en buenos términos" (as on /es/derecho-familiar/).
+- "DNA testing as the gold standard" (F213) = "la prueba de ADN como el método más confiable" — the idiom has no
+  literal Spanish legal equivalent; the meaning (the firm's recommended, most reliable test) is kept.
+- "Dedicated trial attorney" (F056) in the parenting-plan proof strip = "Abogado litigante comprometido" (G3 rule);
+  "Native to Tennessee" (F050) = "Originario de Tennessee" (as on /es/defensa-penal/robo/).
+- Divorce, custody and visitation pages repeat the Spanish results disclaimer after the testimonial, as the EN pages
+  do; the parenting-plan page has none after its testimonial, matching EN.
+- Descriptions shortened to fit 140–155 chars: the divorce description combines child and spousal support
+  ("manutención de hijos y cónyuge"); the parenting-plan description names the counties without "padres de".
+
+## G5 — Spanish mirror: paternity, adoption, DCS, testimonials (A18)
+
+- Follows the G0/G1 glossary. Added: paternity action = "demanda de paternidad (paternity action)"; DNA test = "prueba
+  de ADN"; "gold standard" (F213) = "el método de referencia"; birth / marriage certificate = "acta de nacimiento" /
+  "acta de matrimonio" (never "certificado", which the law-firm rule blocks); parenting time = "tiempo de crianza";
+  stepparent adoption = "adopción por parte de un padrastro o una madrastra"; relative adoption = "adopción por
+  familiares"; contested adoption = "adopción impugnada (contested adoption)"; termination of parental rights =
+  "terminación de los derechos parentales (termination of parental rights)", used on both /es/adopcion/ and
+  /es/abogado-casos-dcs/; foster parents = "padres de crianza temporal (foster parents)"; placement = "colocación";
+  guardians = "tutores"; caseworker = "trabajador social"; protective custody = "custodia protectora"; permanency plan =
+  "plan de permanencia (permanency plan)"; reunification = "reunificación familiar".
+- /es/testimonios/: each testimonial (blockquote and its bold card headline, F133–F138) stays verbatim in English after
+  the lead-in "Testimonio publicado en inglés:". The hero says the reviews are quoted "en su inglés original".
+  Section heading for S.A. (gender unknown) avoids a gendered noun: "Encontrar el rumbo correcto".
+- /es/adopcion/ description says "Adopción por padrastro, de familiares…" and "lleva el trámite y la audiencia" to fit
+  155 characters; the body carries the full forms.
+
+## G6 — Spanish mirror: FAQs, In the News, blog (A18)
+
+- Follows the G0–G4 glossary. Added: roadside tests = "pruebas en la carretera"; breath / blood tests = "pruebas de
+  aliento o de sangre"; joint custody = "custodia conjunta (joint custody)", with "custodia física conjunta (joint
+  physical custody)", "custodia legal conjunta (joint legal custody)" and "custodia conjunta total (full joint
+  custody)"; duty of care = "deber de cuidado"; totaled = "pérdida total"; repair estimates = "presupuestos de
+  reparación"; press = "medios de comunicación" / "periodistas".
+- /es/preguntas-frecuentes/ in-page jump links use Spanish anchors without accents: #para-empezar, #cargos-penales,
+  #detenciones-y-cargos-por-dui, #tribunal-de-familia, #reclamos-por-lesiones. Each matches its section H2 text
+  slugified; the builder must give those H2s these ids (EN uses #getting-started etc.).
+- FAQ title is exactly 60 chars ("Preguntas frecuentes: penal, familia, lesiones | Will Fraley").
+- /es/en-las-noticias/: the DNJ headline (taken from the story URL) stays in English as a proper title; the card says
+  the story was published in English and the link text reads "(en inglés)". Date written "5 de octubre de 2014".
+- /es/blog/ keeps `publish: false` and `noindex: true` as EN; category links point to the es paths.
+- All three pages link the form as /es/contacto/#form.
+
+## G7 — Spanish mirror: privacy, accessibility, cookie settings, thank-you, 404 (A18)
+
+- Follows the G0 glossary. Policy-page terms: privacy policy = "Política de privacidad"; accessibility statement =
+  "Declaración de accesibilidad"; cookie settings = "Configuración de cookies"; consent banner = "aviso de
+  consentimiento" (short: "el aviso"); first-party cookie = "cookie propia del sitio"; local storage = "almacenamiento
+  local"; switch = "interruptor"; screen reader = "lector de pantalla"; assistive technology = "tecnología de
+  asistencia"; WCAG = "Pautas de Accesibilidad para el Contenido Web (WCAG)"; spam = "mensajes no deseados (spam)".
+  "Mouse" (not "ratón") and "celular" follow Latin American usage. "Cookie", "bot", "Global Privacy Control (GPC)" and
+  vendor/product names (Web3Forms, Cloudflare Turnstile, Google Analytics 4, Microsoft Clarity, Meta Pixel, TikTok
+  Pixel) stay in English.
+- **Consent UI labels for the builder (ES):** categories "Estrictamente necesarias · Siempre activas", "Analítica ·
+  Apagada a menos que usted acepte", "Publicidad · Apagada a menos que usted acepte"; buttons "Guardar mis
+  preferencias", "Aceptar todo", "Rechazar todo"; contact-form submit button "Enviar". The ES copy names these
+  labels, so the Spanish consent component and form must use exactly them.
+- "Marketing" category is rendered "Publicidad" throughout (privacy and cookie pages), matching the button labels.
+- "Certificate scans" (accessibility, F064/F065) = "Documentos escaneados" / "constancias de finalización de cursos",
+  per G1 (never "certificado").
+- "This policy stops at our door" is rendered plainly: "Esta política cubre solo nuestro sitio."
+- "Children" section uses "menores de edad" (the legal sense), not "niños".
+- Thank-you page court-date heading keeps "(court date)" on first use, per the G0 glossary.
+- 404 page: the EN "[Español](/es/)" link becomes "[English](/)"; all other links use sitemap esPaths
+  (/es/, /es/servicios-legales/, /es/defensa-penal/, /es/derecho-familiar/, /es/lesiones-personales/, /es/contacto/,
+  /es/politica-de-privacidad/, /es/configuracion-de-cookies/).
+- "Last reviewed: {{last_reviewed}}" = "Última revisión: {{last_reviewed}}" (the builder fills the same token; the
+  date should render in Spanish format on /es/ pages).
+- Results disclaimer not needed on these pages (no results are mentioned, matching EN).

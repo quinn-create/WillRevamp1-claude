@@ -65,8 +65,76 @@ Things only the operator can do.
 - **Conditional `/blog/` redirect (`_redirects`).** `plan/sitemap.json` has `/blog/ → /` with `conditional: "blog.enabled === false"`. When you turn the blog on with `tools/configure.mjs`, rebuild so the rule is dropped. At the same time, consider pointing `/feed/` and `/category/uncategorized/` at `/blog/`.
 - **Old social previews.** The six old og:image files now 301 to their pages. After launch, re-scrape the home, contact, legal-services, criminal-defense, about and family-law URLs in the Facebook Sharing Debugger and the LinkedIn Post Inspector, so the new preview images replace the old screenshots.
 
+## A12
+
+### A12 — Direction A "Counsel"
+
+- **Font fallback metrics (all pages, `mockups/A/tokens.css`):** the Public Sans fallback `size-adjust: 106%` is an estimate. When the production build runs, re-measure it at weight 400 with a tool that can instance variable woff2 (for example, Astro's font tooling or fontTools), so that CLS from the font swap stays at or below 0.05.
+
+### A12 — Direction A "Counsel" (Stage 3, step 2)
+
+- **Mockup helpers (`mockups/A/scripts/`):** `prep-images.mjs` regenerates `public/img` and `src/lib/images.json` from `images/generated/A` and the reused assets. Run it again if A15 replaces any A scene. `overflow.mjs`, `imgcheck.mjs` and `audit.mjs` are local QA helpers for the built `dist` (no network).
+- **Contact form is not wired** (Contact page): the submit button is disabled in the mockup. In the build, wire it through `tools/configure.mjs` once a form endpoint key exists. Until then, keep the phone and email fallback note.
+
+## A13
+
+# A13 needs-operator
+
+- **Contact form (mockups/B /contact-us/).** The submit button is disabled in the mockup. A form endpoint is
+  wired later with tools/configure.mjs. Until then the page points to (615) 410-7290 and
+  inbox@willfraleylaw.com.
+
+## A14
+
+# A14 → operator (Direction C "Neighbor")
+
+- None at this step. The fonts (Fraunces and Figtree, both SIL Open Font License) are self-hosted from
+  `mockups/C/public/fonts/`, with no runtime Google requests and no keys.
+
 ## A16
 
 ### A16 — copy director
 
 - **Map link (Contact page and footer).** The old footer used `https://goo.gl/maps/5UGDFjKCfam` (F024), which depends on Google's retired goo.gl shortener. The copy uses `https://www.google.com/maps/search/?api=1&query=509+W+College+St+Murfreesboro+TN+37130`. Once the Google Business Profile is claimed, swap in its place URL.
+
+### A16 — G5 (paternity, adoption, DCS, testimonials)
+
+- **Testimonials page rendering (/testimonials/).** Each `[testimonial]` block is one bold card headline line followed by one blockquote. Render the headline as the card title and the quote with its attribution. Show no star graphics and add no Review or AggregateRating schema (C15).
+
+### A16 — G6 (In the News, blog)
+
+- **DNJ link (/in-the-news/).** The page links to the ledgered URL `http://www.dnj.com/story/money/business/2014/10/05/fraley-follows-familys-footsteps-private-practice/16772235/` (F140). Before launch, check that it still resolves (Gannett archive URLs sometimes move). If it redirects, use the final https URL. If it is dead, keep the listing and remove the link.
+- **Blog scaffold.** `copy/pages/blog.md` is `publish: false` and `noindex: true`. Enabling `blog.enabled` must also drop the `/blog/ → /` redirect. Strip the HTML comment from `copy/pages/blog/_template.md` content at build, and never build files whose names start with `_` or that are marked `draft: true`.
+
+### A16 — G7 (privacy, accessibility, cookie settings, thank-you, 404)
+
+- **Vendor markers in policy copy (/privacy-policy/, /cookie-settings/).** Implement `[vendor: <key>]` and `[vendor-off: <key or category>]` as described in A16 decisions (G7), driven by site.config.json `forms.*` and `tracking.*`. Never render the marker lines themselves.
+- **`{{last_reviewed}}`** on /privacy-policy/ and /accessibility/ must be filled at build time. Use the date the copy was last reviewed, not the build date, unless no other date is set.
+- **Cookie Settings (/cookie-settings/) `[consent-controls]`.** Render analytics and marketing switches, plus "Save my choices", "Accept all" and "Reject all". Show a GPC notice when `navigator.globalPrivacyControl` is true, and force both switches off. The strictly necessary row is shown as always on.
+- **Claims the build must make true.** The privacy and accessibility pages state the following. Please confirm each one, or tell A16 to change the copy.
+  - The consent cookie is first-party and named `consent`, mirrored in localStorage with version and timestamp.
+  - No marketing or analytics tool receives contact-form contents.
+  - Clarity, if enabled, masks form input.
+  - Fonts and images are self-hosted.
+  - Each certificate image on About has a text description.
+  - The contact page offers phone and email while the form is off.
+  - Form errors include an error summary.
+  - Keyboard walk-throughs of the menu, contact page and cookie settings are part of QA.
+- **Thank-you page (/thank-you/)** should be the Web3Forms redirect target only after a successful submit, and stay noindex.
+
+## A17
+
+## G7
+
+- **Accessibility Statement (/accessibility/), "Easy to see and read".** The page says text can be enlarged to 200% without losing content. Add a 200% browser-zoom check (desktop width) to the accessibility QA pass alongside the reflow check, or tell A17 to drop the bullet. This extends A16's list of claims the build must make true.
+- **Accessibility Statement, "Our target".** The page now says the same tests "are there to run again whenever a page changes". Keep `tools/axe` and `tools/lighthouse` in the handover package with a one-line rerun instruction, so that sentence stays true after launch.
+
+## A18
+
+## G7 — Spanish mirror: privacy, accessibility, cookie settings, thank-you, 404 (A18)
+
+- **/es/configuracion-de-cookies/, /es/politica-de-privacidad/, /es/contacto/:** the Spanish consent banner, cookie
+  switches and contact form must use the Spanish labels the copy names: "Guardar mis preferencias", "Aceptar todo",
+  "Rechazar todo", categories "Estrictamente necesarias" / "Analítica" / "Publicidad", and the submit button
+  "Enviar". If the form vendor (Web3Forms) is switched on, its Spanish error and success messages should be set too.
+- **/es/gracias/:** the Spanish contact form must redirect to /es/gracias/, not /thank-you/.
