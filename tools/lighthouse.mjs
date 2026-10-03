@@ -36,6 +36,7 @@ function once(url) {
     jsKB: kb((i) => i.resourceType === 'Script'), cssKB: kb((i) => i.resourceType === 'Stylesheet'),
     imageKB: kb((i) => i.resourceType === 'Image'), fontKB: kb((i) => i.resourceType === 'Font'),
     requests: items.length,
+    failedRequests: items.filter((i) => !i.statusCode || i.statusCode < 0 || i.statusCode >= 400).length,
     failedAudits: Object.values(au).filter((x) => x.score !== null && x.score < 0.9 && x.scoreDisplayMode === 'binary').map((x) => x.id),
   };
 }

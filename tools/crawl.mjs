@@ -74,8 +74,11 @@ async function main() {
   ensureDir('inventory/text');
   ensureDir('inventory/html');
   ensureDir('inventory/shots/before');
-  const prev = a.resume ? readJSON('inventory/pages.json', { pages: [] }).pages : [];
-  const done = new Map(prev.map((p) => [p.url, p]));
+  const prevAll = a.resume ? readJSON('inventory/pages.json', { pages: [], redirects: [], broken: [] }) : { pages: [], redirects: [], broken: [] };
+  // Resume keeps only successful captures; errored URLs are retried.
+  const done = new Map(prevAll.pages.filter((p) => p.status === 200 && !p.error).map((p) => [p.url, p]));
+  const redirects = new Map((prevAll.redirects || []).map((r) => [r.url, r]));
+  const broken = new Map((prevAll.broken || []).map((r) => [r.url, r]));
 
   const { urls, robots, sitemaps } = await sitemapUrls();
   const queue = [norm(SITE.href), ...urls];
@@ -89,6 +92,7 @@ async function main() {
     if (seen.has(url)) continue;
     seen.add(url);
     if (done.has(url)) { pages.push(done.get(url)); continue; }
+    if (redirects.has(url) || broken.has(url)) continue;
     const wait = lastFetch + DELAY - Date.now();
     if (wait > 0) await sleep(wait);
     lastFetch = Date.now();
@@ -96,9 +100,30 @@ async function main() {
     const rec = { url, slug: slugFromUrl(url) };
     try {
       await page.setViewportSize({ width: 1280, height: 900 });
-      const res = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 120000 });
+      let res = null;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try { res = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 120000 }); break; }
+        catch (e) { if (attempt === 2) throw e; console.log(`  retry ${attempt + 1} ${url}: ${String(e.message).split('\n')[0]}`); await sleep(20000 * (attempt + 1)); }
+      }
       rec.status = res?.status() ?? 0;
       rec.finalUrl = page.url();
+      // A URL that redirects is an old URL to preserve, not a page.
+      let first = res?.request(); while (first?.redirectedFrom()) first = first.redirectedFrom();
+      const firstStatus = first && first !== res?.request() ? (await first.response())?.status() : null;
+      if (new URL(rec.finalUrl).pathname !== new URL(url).pathname) {
+        redirects.set(url, { url, status: firstStatus || 301, to: rec.finalUrl, finalStatus: rec.status });
+        console.log(`[redirect] ${url} -> ${rec.finalUrl}`);
+        await page.close();
+        writeJSON('inventory/pages.json', { site: SITE.href, crawledAt: new Date().toISOString(), robots, sitemaps, pages, redirects: [...redirects.values()], broken: [...broken.values()] });
+        continue;
+      }
+      if (rec.status >= 400) {
+        broken.set(url, { url, status: rec.status, linkedFrom: [] });
+        console.log(`[broken] ${rec.status} ${url}`);
+        await page.close();
+        writeJSON('inventory/pages.json', { site: SITE.href, crawledAt: new Date().toISOString(), robots, sitemaps, pages, redirects: [...redirects.values()], broken: [...broken.values()] });
+        continue;
+      }
       await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
       await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 120)); } window.scrollTo(0, 0); });
       await page.waitForTimeout(800);
@@ -136,10 +161,12 @@ async function main() {
     }
     await page.close();
     pages.push(rec);
-    writeJSON('inventory/pages.json', { site: SITE.href, crawledAt: new Date().toISOString(), robots, sitemaps, pages });
+    writeJSON('inventory/pages.json', { site: SITE.href, crawledAt: new Date().toISOString(), robots, sitemaps, pages, redirects: [...redirects.values()], broken: [...broken.values()] });
     writeJSON('inventory/forms.json', forms);
   }
   await browser.close();
-  console.log(`done: ${pages.length} pages`);
+  writeJSON('inventory/pages.json', { site: SITE.href, crawledAt: new Date().toISOString(), robots, sitemaps, pages, redirects: [...redirects.values()], broken: [...broken.values()] });
+  writeJSON('inventory/forms.json', forms);
+  console.log(`done: ${pages.length} pages, ${redirects.size} redirects, ${broken.size} broken`);
 }
 main().catch((e) => { console.error(e); process.exit(1); });

@@ -83,9 +83,47 @@ export async function launchBrowser() {
   }
 }
 
-/** Contexts ignore TLS errors because the sandbox proxy re-signs live-site certificates. */
+/**
+ * Contexts ignore TLS errors because the sandbox proxy re-signs live-site certificates, and route every
+ * remote request through Node's fetch: Chromium's own networking through the sandbox proxy randomly fails
+ * requests with ERR_TOO_MANY_RETRIES (pages, CSS, images, fonts). Localhost requests go direct.
+ * Analytics/ad beacons are aborted (they never affect rendering).
+ */
+const BEACONS = /google-analytics\.com|googletagmanager\.com\/(gtag|gtm)|\/g\/collect|doubleclick\.net|connect\.facebook\.net|facebook\.com\/tr|analytics\.tiktok\.com|clarity\.ms|hotjar/;
 export async function newContext(browser, extra = {}) {
-  return browser.newContext({ ignoreHTTPSErrors: true, userAgent: UA, ...extra });
+  const ctx = await browser.newContext({ ignoreHTTPSErrors: true, userAgent: UA, ...extra });
+  await routeViaNode(ctx);
+  return ctx;
+}
+export async function routeViaNode(target, { concurrency = 6 } = {}) {
+  let active = 0;
+  const q = [];
+  const acquire = () => new Promise((r) => { if (active < concurrency) { active++; r(); } else q.push(r); });
+  const release = () => { const n = q.shift(); if (n) n(); else active--; };
+  await target.route(/^https?:\/\/(?!127\.0\.0\.1|localhost)/, async (route) => {
+    const req = route.request();
+    if (BEACONS.test(req.url())) return route.abort('blockedbyclient').catch(() => {});
+    await acquire();
+    try {
+      const headers = { ...req.headers() };
+      delete headers.host;
+      let res = null;
+      for (let i = 0; i < 3 && !res; i++) {
+        try {
+          res = await fetch(req.url(), { method: req.method(), headers, body: req.postDataBuffer() || undefined, redirect: 'manual', signal: AbortSignal.timeout(60000) });
+        } catch { await sleep(1500 * (i + 1)); }
+      }
+      if (!res) return await route.abort('failed');
+      const body = Buffer.from(await res.arrayBuffer());
+      const h = {};
+      res.headers.forEach((v, k) => { if (!['content-encoding', 'content-length', 'transfer-encoding', 'connection', 'set-cookie'].includes(k)) h[k] = v; });
+      await route.fulfill({ status: res.status, headers: h, body });
+    } catch {
+      await route.abort('failed').catch(() => {});
+    } finally {
+      release();
+    }
+  });
 }
 
 const MIME = {
