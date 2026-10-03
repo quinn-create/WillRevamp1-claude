@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T16:48:24.468Z",
+  "generatedAt": "2026-10-03T17:40:25.214Z",
   "minTarget": 44,
   "summary": {
     "pages": 60,
@@ -11,110 +11,9 @@
       1920
     ],
     "overflowPages": [],
-    "smallTargetCount": 250,
-    "smallTargetsBelow24": 210,
-    "smallTargetsByElement": {
-      "a.tel \"(615) 410-7290\" (142x20)@360": 10,
-      "a \"inbox@willfraleylaw.com\" (195x20)@360": 4,
-      "a.tel \"(615) 410-7290\" (142x20)@390": 10,
-      "a \"inbox@willfraleylaw.com\" (195x20)@390": 4,
-      "a.tel \"(615) 410-7290\" (143x21)@768": 10,
-      "a \"inbox@willfraleylaw.com\" (199x21)@768": 4,
-      "a.tel \"(615) 410-7290\" (153x21)@1280": 10,
-      "a \"inbox@willfraleylaw.com\" (204x21)@1280": 4,
-      "a.tel \"(615) 410-7290\" (153x21)@1920": 10,
-      "a \"inbox@willfraleylaw.com\" (204x21)@1920": 4,
-      "a \"Child custody\" (109x20)@360": 3,
-      "a \"Visitation\" (75x20)@360": 3,
-      "a \"Parenting plan modifications\" (229x20)@360": 3,
-      "a \"Divorce\" (61x20)@360": 1,
-      "a \"Child custody\" (109x20)@390": 3,
-      "a \"Visitation\" (75x20)@390": 3,
-      "a \"Parenting plan modifications\" (229x20)@390": 3,
-      "a \"Divorce\" (61x20)@390": 1,
-      "a \"Child custody\" (109x21)@768": 3,
-      "a \"Visitation\" (77x21)@768": 3,
-      "a \"Parenting plan modifications\" (232x21)@768": 3,
-      "a \"Divorce\" (61x21)@768": 1,
-      "a \"Child custody\" (113x21)@1280": 3,
-      "a \"Visitation\" (77x21)@1280": 3,
-      "a \"Parenting plan modifications\" (237x21)@1280": 3,
-      "a \"Divorce\" (62x21)@1280": 1,
-      "a \"Child custody\" (113x21)@1920": 3,
-      "a \"Visitation\" (77x21)@1920": 3,
-      "a \"Parenting plan modifications\" (237x21)@1920": 3,
-      "a \"Divorce\" (62x21)@1920": 1,
-      "a \"DUI\" (29x44)@360": 6,
-      "a \"DUI\" (29x44)@390": 6,
-      "a \"DUI\" (29x44)@768": 6,
-      "a \"DUI\" (31x44)@1280": 6,
-      "a \"DUI\" (31x44)@1920": 6,
-      "a \"Custodia de los hijos\" (164x20)@360": 3,
-      "a \"Régimen de visitas\" (151x20)@360": 3,
-      "a \"Modificación del plan de crianza\" (252x20)@360": 3,
-      "a \"Divorcio\" (65x20)@360": 1,
-      "a \"Custodia de los hijos\" (164x20)@390": 3,
-      "a \"Régimen de visitas\" (151x20)@390": 3,
-      "a \"Modificación del plan de crianza\" (252x20)@390": 3,
-      "a \"Divorcio\" (65x20)@390": 1,
-      "a \"Custodia de los hijos\" (166x21)@768": 3,
-      "a \"Régimen de visitas\" (152x21)@768": 3,
-      "a \"Modificación del plan de crianza\" (256x21)@768": 3,
-      "a \"Divorcio\" (65x21)@768": 1,
-      "a \"Custodia de los hijos\" (168x21)@1280": 3,
-      "a \"Régimen de visitas\" (154x21)@1280": 3,
-      "a \"Modificación del plan de crianza\" (266x21)@1280": 3,
-      "a \"Divorcio\" (66x21)@1280": 1,
-      "a \"Custodia de los hijos\" (168x21)@1920": 3,
-      "a \"Régimen de visitas\" (154x21)@1920": 3,
-      "a \"Modificación del plan de crianza\" (266x21)@1920": 3,
-      "a \"Divorcio\" (66x21)@1920": 1,
-      "a \"Robo\" (42x44)@360": 2,
-      "a \"Robo\" (42x44)@390": 2,
-      "a \"Robo\" (43x44)@768": 2,
-      "a \"Robo\" (43x44)@1280": 2,
-      "a \"Robo\" (43x44)@1920": 2,
-      "a \"Defensa penal\" (115x20)@360": 1,
-      "a \"Derecho familiar\" (132x20)@360": 1,
-      "a \"Lesiones personales\" (165x20)@360": 1,
-      "a \"Sobre Will Fraley\" (136x20)@360": 1,
-      "a \"Defensa penal\" (115x20)@390": 1,
-      "a \"Derecho familiar\" (132x20)@390": 1,
-      "a \"Lesiones personales\" (165x20)@390": 1,
-      "a \"Sobre Will Fraley\" (136x20)@390": 1,
-      "a \"Defensa penal\" (117x21)@768": 1,
-      "a \"Derecho familiar\" (134x21)@768": 1,
-      "a \"Lesiones personales\" (166x21)@768": 1,
-      "a \"Sobre Will Fraley\" (139x21)@768": 1,
-      "a \"Defensa penal\" (118x21)@1280": 1,
-      "a \"Derecho familiar\" (136x21)@1280": 1,
-      "a \"Lesiones personales\" (167x21)@1280": 1,
-      "a \"Sobre Will Fraley\" (142x21)@1280": 1,
-      "a \"Defensa penal\" (118x21)@1920": 1,
-      "a \"Derecho familiar\" (136x21)@1920": 1,
-      "a \"Lesiones personales\" (167x21)@1920": 1,
-      "a \"Sobre Will Fraley\" (142x21)@1920": 1,
-      "a \"Criminal defense\" (136x20)@360": 1,
-      "a \"Family law\" (83x20)@360": 1,
-      "a \"Personal injury\" (119x20)@360": 1,
-      "a \"About Will Fraley\" (137x20)@360": 1,
-      "a \"Criminal defense\" (136x20)@390": 1,
-      "a \"Family law\" (83x20)@390": 1,
-      "a \"Personal injury\" (119x20)@390": 1,
-      "a \"About Will Fraley\" (137x20)@390": 1,
-      "a \"Criminal defense\" (137x21)@768": 1,
-      "a \"Family law\" (86x21)@768": 1,
-      "a \"Personal injury\" (121x21)@768": 1,
-      "a \"About Will Fraley\" (139x21)@768": 1,
-      "a \"Criminal defense\" (139x21)@1280": 1,
-      "a \"Family law\" (89x21)@1280": 1,
-      "a \"Personal injury\" (122x21)@1280": 1,
-      "a \"About Will Fraley\" (143x21)@1280": 1,
-      "a \"Criminal defense\" (139x21)@1920": 1,
-      "a \"Family law\" (89x21)@1920": 1,
-      "a \"Personal injury\" (122x21)@1920": 1,
-      "a \"About Will Fraley\" (143x21)@1920": 1
-    },
+    "smallTargetCount": 0,
+    "smallTargetsBelow24": 0,
+    "smallTargetsByElement": {},
     "focusObscured": {
       "fully": 0,
       "partly": 0,
@@ -376,22 +275,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 195,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 36,
             "issues": []
@@ -406,22 +290,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 195,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 36,
             "issues": []
@@ -436,22 +305,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 199,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 35,
             "issues": []
@@ -466,22 +320,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 204,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 61,
             "issues": []
@@ -496,22 +335,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 204,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 61,
             "issues": []
@@ -771,15 +595,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -794,15 +610,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -817,15 +625,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -840,15 +640,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 78,
             "issues": []
@@ -863,15 +655,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 78,
             "issues": []
@@ -891,36 +675,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Child custody\"",
-              "w": 109,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 75,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 229,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Divorce\"",
-              "w": 61,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -935,36 +690,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Child custody\"",
-              "w": 109,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 75,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 229,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Divorce\"",
-              "w": 61,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -979,36 +705,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Child custody\"",
-              "w": 109,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 77,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 232,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Divorce\"",
-              "w": 61,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -1023,36 +720,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Child custody\"",
-              "w": 113,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 77,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 237,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Divorce\"",
-              "w": 62,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 79,
             "issues": []
@@ -1067,36 +735,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Child custody\"",
-              "w": 113,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 77,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 237,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Divorce\"",
-              "w": 62,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 79,
             "issues": []
@@ -1116,15 +755,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 49,
             "issues": []
@@ -1139,15 +770,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 49,
             "issues": []
@@ -1162,15 +785,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 50,
             "issues": []
@@ -1185,15 +800,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 76,
             "issues": []
@@ -1208,15 +815,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 76,
             "issues": []
@@ -1236,36 +835,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Child custody\"",
-              "w": 109,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 75,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 229,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -1280,36 +850,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Child custody\"",
-              "w": 109,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 75,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 229,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -1324,36 +865,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Child custody\"",
-              "w": 109,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 77,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 232,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 54,
             "issues": []
@@ -1368,36 +880,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Child custody\"",
-              "w": 113,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 77,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 237,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 80,
             "issues": []
@@ -1412,36 +895,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Child custody\"",
-              "w": 113,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 77,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 237,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 80,
             "issues": []
@@ -1541,36 +995,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Child custody\"",
-              "w": 109,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 75,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 229,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 51,
             "issues": []
@@ -1585,36 +1010,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Child custody\"",
-              "w": 109,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 75,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 229,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 51,
             "issues": []
@@ -1629,36 +1025,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Child custody\"",
-              "w": 109,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 77,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 232,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -1673,36 +1040,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Child custody\"",
-              "w": 113,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 77,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 237,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 78,
             "issues": []
@@ -1717,36 +1055,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Child custody\"",
-              "w": 113,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Visitation\"",
-              "w": 77,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Parenting plan modifications\"",
-              "w": 237,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 78,
             "issues": []
@@ -1846,15 +1155,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -1869,15 +1170,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -1892,15 +1185,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -1915,15 +1200,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 79,
             "issues": []
@@ -1938,15 +1215,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 79,
             "issues": []
@@ -1966,15 +1235,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -1989,15 +1250,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -2012,15 +1265,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -2035,15 +1280,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 79,
             "issues": []
@@ -2058,15 +1295,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 79,
             "issues": []
@@ -2406,22 +1635,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 195,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 36,
             "issues": []
@@ -2436,22 +1650,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 195,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 36,
             "issues": []
@@ -2466,22 +1665,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 199,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 35,
             "issues": []
@@ -2496,22 +1680,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 204,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 35,
             "issues": []
@@ -2526,22 +1695,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 204,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 35,
             "issues": []
@@ -2801,15 +1955,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -2824,15 +1970,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -2847,15 +1985,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -2870,15 +2000,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -2893,15 +2015,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -2921,36 +2035,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 164,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 151,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 252,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Divorcio\"",
-              "w": 65,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -2965,36 +2050,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 164,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 151,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 252,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Divorcio\"",
-              "w": 65,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -3009,36 +2065,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 166,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 152,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 256,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Divorcio\"",
-              "w": 65,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3053,36 +2080,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 168,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 154,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 266,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Divorcio\"",
-              "w": 66,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3097,36 +2095,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 168,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 154,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 266,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Divorcio\"",
-              "w": 66,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3146,22 +2115,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            },
-            {
-              "el": "a \"Robo\"",
-              "w": 42,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 49,
             "issues": []
@@ -3176,22 +2130,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            },
-            {
-              "el": "a \"Robo\"",
-              "w": 42,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 49,
             "issues": []
@@ -3206,22 +2145,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            },
-            {
-              "el": "a \"Robo\"",
-              "w": 43,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 50,
             "issues": []
@@ -3236,22 +2160,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            },
-            {
-              "el": "a \"Robo\"",
-              "w": 43,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 50,
             "issues": []
@@ -3266,22 +2175,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            },
-            {
-              "el": "a \"Robo\"",
-              "w": 43,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 50,
             "issues": []
@@ -3381,15 +2275,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -3404,15 +2290,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -3427,15 +2305,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3450,15 +2320,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3473,15 +2335,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3501,36 +2355,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 164,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 151,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 252,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3545,36 +2370,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 164,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 151,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 252,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3589,36 +2385,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 166,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 152,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 256,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 54,
             "issues": []
@@ -3633,36 +2400,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 168,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 154,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 266,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 54,
             "issues": []
@@ -3677,36 +2415,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 168,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 154,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 266,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 54,
             "issues": []
@@ -3726,15 +2435,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Robo\"",
-              "w": 42,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 46,
             "issues": []
@@ -3749,15 +2450,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Robo\"",
-              "w": 42,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 46,
             "issues": []
@@ -3772,15 +2465,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Robo\"",
-              "w": 43,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 47,
             "issues": []
@@ -3795,15 +2480,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Robo\"",
-              "w": 43,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 47,
             "issues": []
@@ -3818,15 +2495,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Robo\"",
-              "w": 43,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 47,
             "issues": []
@@ -3846,15 +2515,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -3869,15 +2530,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -3892,15 +2545,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3915,15 +2560,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3938,15 +2575,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 53,
             "issues": []
@@ -3966,36 +2595,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 164,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 151,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 252,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 51,
             "issues": []
@@ -4010,36 +2610,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 164,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 151,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 252,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 51,
             "issues": []
@@ -4054,36 +2625,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 166,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 152,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 256,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"DUI\"",
-              "w": 29,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -4098,36 +2640,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 168,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 154,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 266,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -4142,36 +2655,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Custodia de los hijos\"",
-              "w": 168,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Régimen de visitas\"",
-              "w": 154,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Modificación del plan de crianza\"",
-              "w": 266,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"DUI\"",
-              "w": 31,
-              "h": 44,
-              "display": "inline-flex",
-              "below24": false
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 52,
             "issues": []
@@ -4911,22 +3395,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 195,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 42,
             "issues": []
@@ -4941,22 +3410,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 195,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 42,
             "issues": []
@@ -4971,22 +3425,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 199,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 41,
             "issues": []
@@ -5001,22 +3440,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 204,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 41,
             "issues": []
@@ -5031,22 +3455,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 204,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 41,
             "issues": []
@@ -5306,36 +3715,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Defensa penal\"",
-              "w": 115,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Derecho familiar\"",
-              "w": 132,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Lesiones personales\"",
-              "w": 165,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Sobre Will Fraley\"",
-              "w": 136,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 38,
             "issues": []
@@ -5350,36 +3730,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Defensa penal\"",
-              "w": 115,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Derecho familiar\"",
-              "w": 132,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Lesiones personales\"",
-              "w": 165,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Sobre Will Fraley\"",
-              "w": 136,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 38,
             "issues": []
@@ -5394,36 +3745,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Defensa penal\"",
-              "w": 117,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Derecho familiar\"",
-              "w": 134,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Lesiones personales\"",
-              "w": 166,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Sobre Will Fraley\"",
-              "w": 139,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 38,
             "issues": []
@@ -5438,36 +3760,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Defensa penal\"",
-              "w": 118,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Derecho familiar\"",
-              "w": 136,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Lesiones personales\"",
-              "w": 167,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Sobre Will Fraley\"",
-              "w": 142,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 38,
             "issues": []
@@ -5482,36 +3775,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Defensa penal\"",
-              "w": 118,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Derecho familiar\"",
-              "w": 136,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Lesiones personales\"",
-              "w": 167,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Sobre Will Fraley\"",
-              "w": 142,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 38,
             "issues": []
@@ -6331,22 +4595,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 195,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 42,
             "issues": []
@@ -6361,22 +4610,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 195,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 142,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 42,
             "issues": []
@@ -6391,22 +4625,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 199,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 41,
             "issues": []
@@ -6421,22 +4640,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 204,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 67,
             "issues": []
@@ -6451,22 +4655,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"inbox@willfraleylaw.com\"",
-              "w": 204,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a.tel \"(615) 410-7290\"",
-              "w": 153,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 67,
             "issues": []
@@ -6486,36 +4675,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Criminal defense\"",
-              "w": 136,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Family law\"",
-              "w": 83,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Personal injury\"",
-              "w": 119,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"About Will Fraley\"",
-              "w": 137,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 38,
             "issues": []
@@ -6530,36 +4690,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Criminal defense\"",
-              "w": 136,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Family law\"",
-              "w": 83,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Personal injury\"",
-              "w": 119,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"About Will Fraley\"",
-              "w": 137,
-              "h": 20,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 38,
             "issues": []
@@ -6574,36 +4705,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Criminal defense\"",
-              "w": 137,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Family law\"",
-              "w": 86,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Personal injury\"",
-              "w": 121,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"About Will Fraley\"",
-              "w": 139,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 38,
             "issues": []
@@ -6618,36 +4720,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Criminal defense\"",
-              "w": 139,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Family law\"",
-              "w": 89,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Personal injury\"",
-              "w": 122,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"About Will Fraley\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 64,
             "issues": []
@@ -6662,36 +4735,7 @@
             "overflowPx": 0,
             "offenders": []
           },
-          "smallTargets": [
-            {
-              "el": "a \"Criminal defense\"",
-              "w": 139,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Family law\"",
-              "w": 89,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"Personal injury\"",
-              "w": 122,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            },
-            {
-              "el": "a \"About Will Fraley\"",
-              "w": 143,
-              "h": 21,
-              "display": "inline",
-              "below24": true
-            }
-          ],
+          "smallTargets": [],
           "focus": {
             "stops": 64,
             "issues": []

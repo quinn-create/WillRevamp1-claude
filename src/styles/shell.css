@@ -88,7 +88,7 @@
 .nav-link {
   display: inline-flex; align-items: center;
   min-height: var(--control-height);
-  padding-inline: var(--space-2);
+  padding-inline: var(--space-3);
   font-size: var(--text-small);
   font-weight: var(--weight-text-medium);
   color: var(--color-text);
@@ -101,22 +101,24 @@
 .nav-link::after {
   content: "";
   position: absolute;
-  left: var(--space-2); right: var(--space-2); bottom: var(--space-2);
+  left: var(--space-3); right: var(--space-3); bottom: var(--space-2);
   height: var(--border-link-hover);
   background: var(--color-link-hover);
   transform: scaleX(0);
   transform-origin: left;
 }
 .has-sub > .nav-link::after { right: 0; }
+.nav-item.has-sub + .nav-item > .nav-link { padding-left: 0; }
+.nav-item.has-sub + .nav-item > .nav-link::after { left: 0; }
 @media (prefers-reduced-motion: no-preference) { .nav-link::after { transition: transform var(--dur) var(--ease); } }
 .nav-link:hover { color: var(--color-link-hover); }
 .nav-link:hover::after { transform: scaleX(1); }
 .nav-link[aria-current] { color: var(--color-heading); font-weight: var(--weight-text-strong); }
 .nav-link[aria-current]::after { transform: scaleX(1); background: var(--color-marker); }
 .nav-chev {
-  display: inline-flex; align-items: center; justify-content: center;
+  display: inline-flex; align-items: center; justify-content: flex-start;
   width: var(--control-height); height: var(--control-height); /* 44 × 44 target (DS 7.5, 12.4) */
-  padding: 0;
+  padding: 0 0 0 var(--space-1); /* glyph sits ~4 px after its label (mockup A) */
   border: 0;
   border-radius: var(--radius);
   background: transparent;
@@ -215,6 +217,7 @@
 .menu-sub a {
   display: inline-flex; align-items: center;
   min-height: var(--control-height);
+  min-width: var(--control-height);
   font-size: var(--text-small);
   color: var(--color-text-muted);
   text-decoration: none;

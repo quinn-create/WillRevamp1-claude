@@ -14,7 +14,7 @@
   padding-block: var(--space-5) calc(var(--space-5) + env(safe-area-inset-bottom));
   background: var(--consent-bg);
   color: var(--consent-text);
-  border-top: 1px solid var(--color-rule);
+  border-top: var(--border-hairline) solid var(--color-rule);
   box-shadow: var(--shadow-consent);
 }
 .consent[hidden] { display: none; }
@@ -41,12 +41,11 @@ html.consent-open body { padding-bottom: var(--consent-h, 10rem); }
 
 /* ---------------------------------------------------------------- category rows */
 .consent-cats { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; }
-.consent-cat { padding-block: var(--space-3); border-top: 1px solid var(--color-rule); }
-.consent-cat:last-child { border-bottom: 1px solid var(--color-rule); }
+.consent-cat { padding-block: var(--space-3); border-top: var(--border-hairline) solid var(--color-rule); }
+.consent-cat:last-child { border-bottom: var(--border-hairline) solid var(--color-rule); }
 .consent-cat__head { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-3); min-height: var(--control-height); margin: 0; }
 .consent-cat__name { font-weight: var(--weight-text-strong); color: var(--color-heading); }
 .consent-cat__state { font-size: var(--text-small); color: var(--color-text-muted); }
-.consent-cat--fixed .consent-cat__head { padding-inline-start: calc(var(--check-size) + var(--space-3)); }
 .consent-cat__desc { font-size: var(--text-small); color: var(--color-text-muted); padding-inline-start: calc(var(--check-size) + var(--space-3)); max-width: 65ch; }
 
 /* ---------------------------------------------------------------- Cookie Settings page */

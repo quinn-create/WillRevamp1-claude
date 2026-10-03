@@ -1,160 +1,187 @@
 # 01-visual
 Result: FAIL
 
-Check 01 (visual fidelity), round 1. Reviewer did not edit site code and did not commit.
+Check 01 (visual fidelity), round 2. The reviewer did not edit site code and did not commit.
 
 ## Evidence
 
-Sources: `REPORT/shots/after/*.jpg` (1280 and 390, 120 files), `mockups/A/shots/*.jpg` (index, criminal-defense and
-contact-us at 1280 and 390), `design/DESIGN-SYSTEM.md`, and `src/styles/{global,components,shell}.css`. I also ran a
-Playwright probe (Chromium, `dist/` served by `tools/lib.mjs#serve`) that tabs through the home page, hovers controls,
-focuses form fields and measures the call bar.
+Sources:
+- `REPORT/shots/after/*.jpg`. These were retaken at 16:58, after the 16:49 `dist/` build from commit 124a4bf
+  ("stage6 qa round 1: fixes").
+- `mockups/A/shots/*.jpg`: index, criminal-defense and contact-us at 1280 and 390.
+- `design/DESIGN-SYSTEM.md`.
+- `src/**`.
+- Three Playwright probes on Chromium, serving `dist/` with `tools/lib.mjs#serve`:
+  - hover and focus-visible computed styles;
+  - nav geometry at 1216, 1280 and 1440, plus a CSS candidate injected at those widths;
+  - call-bar metrics at 320, 360, 390, 410 and 599.
 
-### Pages compared (EN and ES twin at 1280 and 390)
-Home (`index`, `es`), hub (`criminal-defense`, `es__defensa-penal`), practice pages (`criminal-defense__dui`,
-`family-law__divorce` and their ES twins), `about` / `es__sobre-nosotros`, `faqs` / `es__preguntas-frecuentes`,
-`testimonials` / `es__testimonios`, `contact-us` / `es__contacto`, `privacy-policy` / `es__politica-de-privacidad`,
-`404` / `es__404`.
+Pages compared (EN and the ES twin, at 1280 and 390): Home, hub `criminal-defense` (and also `family-law` and
+`legal-services`), practice pages `criminal-defense/dui` and `family-law/divorce`, About, FAQs, Testimonials,
+Contact, Privacy and 404. Cookie Settings was also checked because of its checkbox states.
+
+### Round-1 defects: all 12 verified fixed
+1. **Contact facts link.** "Get directions in Google Maps" and "Cómo llegar con Google Maps" render inside
+   `.contact-facts` (contact-us-1280 and es__contacto-1280).
+2. **Contact facts panel.** One column, an ink rule under the title and no last hairline. Phone, address and hours
+   no longer wrap awkwardly.
+3. **ES call bar.** The icon is 18 px at 320, 360, 390, 410 and 599. At 410 the text runs from x=18 to x=392, so
+   both gutters are at least 16 px. No page overflows horizontally (`sw` equals the viewport at every width).
+4. **Reasons lead-ins.** They now use `--step-2`, `--weight-display-strong` and opsz heading (home and About, EN
+   and ES). They match mockup index-1280 y≈1150–1700.
+5. **Hub paired columns.** EN and ES hubs show paired columns with an ink top rule and a brass dash list, a
+   2-up grid at 60em and above, and stacking on phones. They match mockup criminal-defense-1280 y≈430–600.
+6. **Hub cards on linen.** Done (criminal-defense, family-law and legal-services, EN and ES).
+7. **Policy hero.** The hero now sits in `.container--prose`, so breadcrumb, H1 and summary share the x of the
+   body column (privacy-policy-1280, cookie-settings-1280, and ES).
+8. **Policy "short version" cards.** Stacked one per row in the prose column, with titles on one line.
+9. **Nav chevrons.** They measure 44×44 at 1216, 1280 and 1440 (3 per page). This fix caused a spacing
+   regression; see defect 1 below.
+10. **About Spanish panel.** Present on EN and ES About ("Se habla español" / "Atención en español"), in the same
+    form as the home panel.
+11. **About "Visit the office".** Now info items (Office, Hours) with icons and hairlines. A layout issue remains;
+    see defect 4 below.
+12. **Notices on linen.** They use `--color-surface-card` (contact-us-1280 y≈1780 and y≈2160, ES the same).
 
 ### What matches mockup A and the design system
-- **Header.** Sticky and glass, with a static hairline. Logo, 6-item nav and "ES" toggle. The full-number call button
-  renders at every width: icon-less at 390 per 7.5, icon from 30em. The language strip shows on phones. ES desktop
-  keeps the menu dialog with a visible "Menú", which is a recorded decision.
-- **Type.** Newsreader display and Public Sans text. The home H1 is display size, other H1s are h1 size, eyebrows are
-  uppercase tracked. Home hero 1280: built and mockup are pixel-close (H1 lines, deck, CTA group, portrait 473 px,
-  proof strip).
-- **Color.** Paper ground, ink CTA panel and footer, logo-blue chevrons and quote marks, brass step numerals and
-  active-nav underline.
-- **Components** match 7.x: home practice cards on linen, steps, FAQ, testimonial on linen with disclaimer, Spanish
-  panel (home), CTA band, and footer with legal line.
-- **Byline** placement is correct: home phones only, hubs, practice pages, contact, FAQs and testimonials. It is absent
-  on about, policy pages and 404.
-- **Hover and focus-visible states exist and work.** Measured values:
-  - Buttons: `.btn-primary` hover changes bg #2E5F96 → rgb(55,106,162), lifts −1 px and gets shadow-2;
-    `.btn-inverse` hover goes paper → white with lift; `.btn-ghost` hover goes navy with a 2 px underline; focus is a
-    3 px brass ring at 2 px offset (`.btn:focus-visible`, components.css:38).
-  - Links: hover goes navy with a 2 px underline (global.css:104); focus ring from the global `:focus-visible`
-    (global.css:110); on ink it switches to brass-300 (`.on-ink`).
-  - Cards: hover lifts −2 px with `--shadow-card-hover`; focus puts a brass ring on the whole card via `:has`
-    (measured `solid 3px rgb(140,106,47)`).
-  - Form fields: hover changes the border to `--input-border-hover`; `:focus-visible` gives a 3 px brass ring and an
-    ink border (components.css:563–569). Measured on input, select and textarea after removing `disabled`.
-    Checkbox hover and focus exist (components.css:613, 623).
-  - Nav link, footer link, FAQ summary, lang strip, menu button and call bar all have hover rules. 40 home tab stops
-    were walked; every one showed a visible ring.
+- **Header, type and color.**
+  - Header: glass and hairline. The full-number call button shows at every width. The language strip shows on
+    phones.
+  - Type: Newsreader display and Public Sans text.
+  - Color: paper and linen rhythm, ink CTA band and footer, logo-blue quote marks and FAQ chevrons, brass step
+    numerals and current-nav underline.
+  - Home 1280 is close to the mockup pixel for pixel down to the FAQ (H1, deck, CTA group, portrait, proof
+    strip, plate and cards).
+- **Testimonial quote.** It renders at `--step-2` from 60em. That is DS 7.11, and it overrides the mockup's
+  smaller quote.
+- **CTA band and footer.** The CTA band is contained ink with an inverse button and the note, and it is the last
+  section on every page checked. The footer has 4 columns at 70em and above and 2 on phones, carries the legal line
+  ("not legal advice" / "no constituye asesoramiento legal"), and reserves call-bar room on phones.
+- **Hover and focus-visible exist and work.** Each element below was probed (base → hover, then programmatic
+  focus with `:focus-visible` true):
+  - `.btn-primary`: bg #2E5F96 → rgb(55,106,162), translateY −1 px, shadow-2. Focus: solid outline.
+  - `.btn-inverse`: paper → white, −1 px, shadow-2. Focus: outline.
+  - Ghost and inline links: blue → navy (rgb 29,71,138), underline 1.5 → 2 px. Focus: outline.
+  - `.card`: −2 px and `--shadow-card-hover`. Focus: ring on the card.
+  - `.nav-link`: navy, plus the underline `::after`. Focus: outline.
+  - `.nav-chev`: muted → navy. Focus: outline.
+  - Footer links: paper → sky, underlined. Focus: outline.
+  - FAQ summary: `.faq__q` → navy. Focus-visible ring on the summary.
+  - Form input, select and textarea (`disabled` removed for the probe): border rgb(115,124,136) → rgb(63,73,87).
+    Focus: solid outline.
+  - Cookie checkbox: border darkens on hover. Focus: outline.
+  - CSS sources: `components.css:38`, `global.css:104,110`, `components.css:563–569`, `613–627`, `shell.css:111–125`.
 - **Recorded decisions, so not defects:**
-  - Scenes on practice child pages (DECISIONS "Stage 5 — site-wide image pass, Scope").
-  - Contact fields disabled in the configured-off state (D-A21-2).
-  - On home, the first FAQ item is not opened (DS 7.10 opens the first item only on FAQ hubs).
+  - Scenes on practice child pages.
+  - Contact fields disabled while the form is off (D-A21-2).
+  - ES desktop uses the "Menú" dialog.
+  - On ES pages the Spanish panel is "Atención en español" with "Read in English".
+  - The first FAQ item is closed outside FAQ hubs.
 
-### Defects found (12)
-1. **The contact-facts panel drops the "Get directions in Google Maps" link** on EN and ES. Copy line 24 of
-   `copy/pages/contact-us.md` (ES line 26) has the link, but `dist/contact-us/index.html` has no maps link inside
-   `.contact-facts`. Built text: "Office 509 W College St, Murfreesboro, TN 37130 Hours…". DS section 10 Contact
-   requires "Office + directions link".
-2. **The contact-facts panel is cramped compared with the mockup** (contact-us-1280, es__contacto-1280). A 9rem label
-   column inside the 5fr panel wraps "(615) 410-7290 — free / consultation." and the address over 2 lines. Mockup A
-   used one column inside this panel, with an ink top rule (`mockups/A/src/styles/global.css:754-757`).
-3. **On the ES call bar, the phone icon collapses to 0 px at 390** (measured iconW 0, EN 18). The text runs from
-   x=25 to x=374: flush with the right gutter, and the icon is gone (es-390.jpg, es__contacto-390.jpg; probe
-   screenshot). At 320 and 360 it is fine because the note is hidden.
-4. **Reasons-list lead-ins are smaller and lighter than the mockup** (Home "Why people call", About "How Will
-   practices", EN and ES). They render at `--step-1` with literal weight 460. Mockup A uses `--step-2`,
-   `--weight-display-strong` and opsz (index-1280 y≈2500–3400; index-390 crop). The literal `460` also breaks the
-   tokens-only rule (DS 15.7).
-5. **The criminal-defense hub (EN and ES) has no paired columns** (DS 7.23 "paired columns (ink top rule + brass dash
-   list)"; mockup criminal-defense-1280 y≈430–600, criminal-defense-390). "If you were just charged" and "If someone
-   you love was arrested" render as two stacked editorial splits with blue disc bullets and no ink rule.
-6. **The hub cards section is on paper; in the mockup it is on linen** (criminal-defense-1280: mockup y≈640–1010
-   linen, built paper). This flattens the page rhythm: the paper sections hero → proof → prose → cards → steps → FAQ
-   run together for about 3000 px.
-7. **On policy pages, the hero is not aligned with the prose column** (privacy-policy-1280, accessibility-1280,
-   cookie-settings-1280 and ES twins). Breadcrumb, H1 and summary start at x=40, but the body column starts at x=288.
-   DS section 10 Legal/policy calls for a `--container-prose` single column.
-8. **The policy "short version" cards are squeezed 3-up into the 44rem prose column** (privacy-policy-1280
-   y≈810–1180). Each card is about 218 px wide with about 154 px of text. Titles wrap ("What we / collect") and body
-   lines hold about 16 characters. es__politica-de-privacidad-1280 and the other policy pages are the same.
-9. **The header nav chevron buttons are 32×44 px** (measured, 3 per page at ≥ 76em; also listed in
-   `qa/responsive.json` smallTargets). DS 7.5 calls for "a separate 44 px chevron `<button>`", and DS 12.4 for
-   44×44 targets.
-10. **About (EN and ES) has no Spanish panel.** DS 7.16 says "Home and About only", and DS section 10 About ends
-    "… Visit the office → Spanish panel → [cta-band]". `dist/about/index.html` and
-    `dist/es/sobre-nosotros/index.html` contain 0 `lang-panel`.
-11. **About's "Visit the office" is plain prose.** DS section 10 About asks for "Visit the office (NAP + hours info
-    items)". Built (about-1280 y≈5050–5130) is two sentences of prose.
-12. **Notices in the contact form are invisible as a surface** (contact-us-1280 y≈1780–1830 and y≈2160–2230,
-    contact-us-390). The form section is `tone="linen"` and `.notice` is also `--color-surface` (linen), so the
-    "Online messages are not switched on yet" and "Please read before you send" notices lose their panel. Mockup A
-    shows them as linen boxes on paper.
+### Defects found (4)
+1. **The header nav lost the mockup's rhythm after the 44 px chevron fix** (EN pages, 76em and up; nav-now.png
+   probe at 1280).
+   - Each chevron glyph sits centered in its 44 px button, so it floats 14 px from its own label. It is almost as
+     far from its own label as from the next item: glyph to next label is 21 px.
+   - Plain items are only 16 px apart, because round 1 set `gap: 0` with 8 px link padding. Measured at 1280:
+     "Criminal Defense" text 313–440, glyph 454–471, "Family Law" at 492. "Personal Injury" ends at 741 and
+     "About" starts at 757.
+   - Mockup A (index-1280, criminal-defense-1280): the chevron sits about 4–6 px after its label, and items are
+     24–26 px apart. The chevron no longer reads as part of its label.
+2. **Section eyebrows that mockup A shows are missing.**
+   - **Steps:** mockup hub "THE PROCESS" (criminal-defense-1280 y≈800) and contact "WHAT TO EXPECT"
+     (contact-us-1280 y≈470). Built: no eyebrow on any `[steps]` section, EN or ES (criminal-defense-1280 y≈1200,
+     contact-us-1280 y≈1060, dui and divorce steps).
+   - **Hub cards:** mockup "CASE TYPES" (criminal-defense-1280 y≈700). Built: none on the hub cards, although
+     home cards carry "PRACTICE AREAS".
+   - **Spanish panel:** mockup "EN ESPAÑOL" above "Se habla español" (index-1280 y≈2530, index-390). Built: none.
+     `spanishEyebrow` is defined in `src/pages/_lib/strings.ts:9` but never used.
+   - DS 7.23 defines the section head as eyebrow + H2. These are the components where the port dropped it.
+3. **Cookie Settings: "Strictly necessary" has no checkbox** (cookie-settings-1280 y≈1000; ES the same).
+   - DS 7.9 calls for "disabled ('Strictly necessary · Always on') checked + 0.5 opacity + the words 'Always on'".
+     DS 7.20 calls for "three category rows …, each a 44 px checkbox row (7.9)".
+   - Built: the row is two plain paragraphs indented to the checkbox column, so an empty gap shows where the box
+     should be (`src/components/consent/ConsentCategories.astro:21–24`). No decision records this deviation.
+   - The same file family uses literal `1px` borders (`consent.css:17, 44, 45`). DS 15.7 calls for tokens only.
+4. **About: "Visit the office" breaks the page's editorial grid** (about-1280 y≈5100–5390, es__sobre-nosotros the
+   same).
+   - Every neighbouring section, including "In the news" just above, is a 5fr/7fr split with its H2 in the aside.
+   - "Visit the office" renders as a stacked section head. Its info list runs the full 1216 px container: a 9rem
+     label column and ~1000 px of empty hairline rows.
+   - It reads unfinished next to the split above it and the Spanish panel below it.
 
 ### Observations (not counted)
-- `design/DESIGN-SYSTEM.md` 9.2 still says practice child pages use no generated image. The Stage 5 decision
-  overrides it; the doc should be brought in line by the orchestrator, not by the site fixer.
-- The ES home portrait caption reads "Will Fraley · Attorney at Law", while the ES byline reads "Abogado". This
-  matches the footer convention (`attorneyShort` stays English), so it is left as is.
-- The footer social row (Facebook · LinkedIn · X · AVVO) is not in DS 7.18. Its sourcing is for the facts check.
+- **Hub hero eyebrow.** Mockup hub heroes carry an eyebrow ("CRIMINAL DEFENSE · MURFREESBORO, TENNESSEE"). Built
+  heroes carry the byline (DS 15.3), whose "ATTORNEY AT LAW" line plays that role. Adding both would stack two
+  eyebrows, so this is left as is.
+- **Contact section tones.** Steps are on paper, the form on linen and directions on paper. That is the inverse of
+  the mockup, but the alternation is kept.
+- **DS 9.2 is out of date.** It still says practice child pages use no generated image. The orchestrator should
+  align it with the Stage 5 decision.
 
 ## Fixes
 
-1. **`src/components/CardGrid.astro` (lines 16–22, 34–39).** In the info variant, keep each item's full blocks
-   (including its link) and do not move anything to `after`. Replace the render branch:
-   `<InfoList items={cards.map((c) => ({ title: c.title, blocks: c.blocks }))} lang={lang} />`
-   → `<InfoList items={items.map((it) => ({ title: it.title, blocks: it.blocks }))} lang={lang} />`
-   and change `{after.length > 0 && …}` → `{!asInfo && after.length > 0 && …}`.
-   Rebuild, then confirm `dist/contact-us/index.html` has "Get directions in Google Maps" inside `.contact-facts`, and
-   `dist/es/contacto/index.html` has "Cómo llegar con Google Maps".
-2. **`src/pages/_templates/PageView.astro`, `<style is:global>` after line 398 (`.hero--media:has(.contact-facts)…`).**
-   Add:
-   `.contact-facts .info-list { border-top-color: var(--color-rule-strong); }`
-   `.contact-facts .info-item { grid-template-columns: minmax(0, 1fr); }`
-   `.contact-facts .info-item:last-child { border-bottom: 0; padding-bottom: 0; }`
-3. **`src/styles/shell.css` line 252.** Change `.callbar .icon { width: …; height: …; }` →
-   `.callbar .icon { flex: none; width: var(--icon-size-small); height: var(--icon-size-small); }`.
-   After line 255, add `@media (max-width: 25.49em) { .callbar:lang(es) .callbar__note { display: none; } }`.
-   Verify that `/es/` at 360, 390 and 410 shows the icon, has no overflow, and keeps at least 16 px from each edge.
-4. **`src/pages/_templates/PageView.astro` lines 373–381 (`.reasons > p > strong:first-child`).** Change
-   `font-size: var(--step-1);` → `font-size: var(--step-2);` and `font-weight: 460;` →
-   `font-weight: var(--weight-display-strong);`, then add
-   `font-variation-settings: "opsz" var(--opsz-heading);`.
-5. **`src/pages/_templates/PageView.astro` (paired columns).** On `template === 'hub'`, render the two consecutive
-   prose sections that come before the first `[cards]` section as one section:
-   `<Section labelledby={id(first)}><div class="pair">{[first, second].map((x) => <div><Heading level={2} size="paired" id={id(x)}>…</Heading><Blocks blocks={x.blocks} lang={lang} /></div>)}</div></Section>`.
-   Mark both rendered. Applies to `/criminal-defense/` and `/es/defensa-penal/`, and to any hub with the same shape.
-   Add to the same `<style is:global>`, ported from `mockups/A/src/styles/global.css:762-773` with tokens:
-   `.pair { display: grid; gap: var(--space-12) var(--grid-gap); }`
-   `.pair > div { border-top: var(--border-hairline) solid var(--color-rule-strong); padding-top: var(--space-6); }`
-   `.pair h2 { margin-bottom: var(--space-4); }`
-   `.pair ul { list-style: none; padding-left: 0; }`
-   `.pair li { position: relative; padding-left: var(--space-6); }`
-   `.pair li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 0.75rem; height: var(--border-link); background: var(--color-marker); }`
-   `.pair li + li { margin-top: var(--space-3); }`
-   `@media (min-width: 60em) { .pair { grid-template-columns: repeat(2, minmax(0, 1fr)); } }`
-6. **`src/pages/_templates/PageView.astro` line 115 (`const tone`).** Change
-   `(template === 'home' && x.hint === 'cards')` → `((template === 'home' || template === 'hub') && x.hint === 'cards')`.
-7. **`src/components/PageHero.astro` line 29.** Change `<div class="container">` →
-   `<div class:list={['container', variant === 'policy' && 'container--prose']}>`.
-8. **`src/styles/components.css`, after line 306.** Add
-   `.container--prose .card-grid { grid-template-columns: minmax(0, 1fr); }`.
-   Specificity 0,2,0 beats the media-query 2-up and 3-up rules.
-9. **`src/styles/shell.css` line 118 (`.nav-chev`).** Change
-   `width: calc(var(--control-height) - var(--space-3));` → `width: var(--control-height);`.
-   If the nav row then overflows at 1216 or 1280 px, also add `margin-right: calc(-1 * var(--space-3));` so the row
-   width is unchanged. Re-run `tools/responsive` and confirm the chevrons measure 44×44.
-10. **About Spanish panel.**
-    - Copy: in `copy/pages/about.md`, insert before `[cta-band]` (line 96) a section `## Se habla español`. Its body is
-      the two paragraphs of `copy/pages/index.md` lines 69–73, with the same fact tags (F092, F094, F013, F090). Make
-      the matching insert in `copy/pages/es/about.md` before line 100, copying `copy/pages/es/index.md`'s Spanish-panel
-      section.
-    - Template: in `src/pages/_templates/PageView.astro` line 84, change
-      `const spanishSection = template === 'home' ? prose[1] : undefined;` →
-      `const spanishSection = template === 'home' ? prose[1] : template === 'about' ? prose.find((x) => /^se habla español$/i.test(plain(x.h2 || ''))) : undefined;`
-11. **About "Visit the office" as info items.**
-    - In `copy/pages/about.md` lines 90–94, put the `[cards]` hint above `## Visit the office`. Keep the links sentence
-      as the intro paragraph. Split the facts into `### Office` (`509 W College St, Murfreesboro, TN 37130 {fact:F021}`)
-      and `### Hours` (`- Monday–Thursday: 9:00 a.m. – 5:00 p.m. {fact:F031}`,
-      `- Friday: 9:00 a.m. – 4:00 p.m. {fact:F032}`), worded like `copy/pages/contact-us.md` lines 23–29.
-    - Mirror this in `copy/pages/es/about.md` lines 94–98 (`### Oficina`, `### Horario`).
-    - `CardGrid` auto-detects the info variant (no links in the items).
-12. **`src/styles/components.css`, after line 531 (notices).** Add
-    `.section--linen .notice { background: var(--color-surface-card); }`.
-    The pairings text, error and success on `--color-surface-card` are already in DS 2.4.
+1. **`src/styles/shell.css`, nav rhythm.** All rules affect `.nav-primary` only; `.nav-link` is used only in
+   `Header.astro:30`.
+   - Line 91: `padding-inline: var(--space-2);` → `padding-inline: var(--space-3);`
+   - Line 104: `left: var(--space-2); right: var(--space-2); bottom: var(--space-2);` →
+     `left: var(--space-3); right: var(--space-3); bottom: var(--space-2);`
+   - Line 117 (`.nav-chev`): `display: inline-flex; align-items: center; justify-content: center;` →
+     `display: inline-flex; align-items: center; justify-content: flex-start;`
+   - Line 119: `padding: 0;` → `padding: 0 0 0 var(--space-1);`
+   - After line 110, add:
+     `.nav-item.has-sub + .nav-item > .nav-link { padding-left: 0; }`
+     `.nav-item.has-sub + .nav-item > .nav-link::after { left: 0; }`
+   - Verified by injection at 1216, 1280 and 1440:
+     - label to glyph: 4 px;
+     - glyph to next label: 22 px;
+     - plain to plain: 24 px;
+     - total nav width unchanged (Contact ends at 964 vs 968 at 1280);
+     - chevrons still 44×44, with no overlap between targets;
+     - header `scrollWidth` equals `clientWidth` at 1216;
+     - the hover underline still lines up on "Personal Injury".
+2. **Section eyebrows.**
+   - `src/pages/_lib/strings.ts`, `en` (after line 8): add
+     `processEyebrow: 'The process',` `expectEyebrow: 'What to expect',` `caseTypesEyebrow: 'Case types',`.
+     In `es` (after line 27), add `processEyebrow: 'El proceso',` `expectEyebrow: 'Qué esperar',`
+     `caseTypesEyebrow: 'Tipos de casos',`.
+   - `src/pages/_templates/PageView.astro` line 221: change
+     `eyebrow={template === 'home' ? s.practiceEyebrow : undefined}` →
+     `eyebrow={template === 'home' ? s.practiceEyebrow : template === 'hub' && body.filter((y) => y.hint === 'cards').length === 1 ? s.caseTypesEyebrow : undefined}`.
+     This leaves `/legal-services/`, with its three grouped card sections, without a repeated eyebrow.
+   - Line 225: `<Steps section={x} lang={lang} />` →
+     `<Steps section={x} lang={lang} eyebrow={template === 'contact' ? s.expectEyebrow : s.processEyebrow} />`.
+   - `src/components/SpanishPanel.astro`:
+     - Props: `interface Props { section: Section; lang?: Lang; id?: string; eyebrow?: string }`, and destructure
+       `eyebrow`.
+     - Inside `.lang-panel__head`, before the H2, add `{eyebrow && <p class="eyebrow" lang="es">{eyebrow}</p>}`.
+   - `PageView.astro` line 275: `<SpanishPanel section={x} lang={lang} id={sid} />` →
+     `<SpanishPanel section={x} lang={lang} id={sid} eyebrow={lang === 'en' ? s.spanishEyebrow : undefined} />`.
+     ES pages stay without an eyebrow, because their `spanishEyebrow` is "English".
+3. **Cookie Settings "Strictly necessary" checkbox.**
+   - `src/components/consent/ConsentCategories.astro` lines 21–24: replace the fixed row with:
+     `<div class="consent-cat consent-cat--fixed">`
+     `  <label class="check consent-cat__head" for={`${prefix}-necessary`}>`
+     `    <input type="checkbox" id={`${prefix}-necessary`} checked disabled aria-describedby={`${prefix}-necessary-desc`} />`
+     `    <span class="consent-cat__name">{s.necessary}</span> <span class="consent-cat__state">{s.alwaysOn}</span>`
+     `  </label>`
+     `  <p class="consent-cat__desc" id={`${prefix}-necessary-desc`}>{s.necessaryDesc}</p>`
+     `</div>`
+   - The input has no `name` and no `data-consent-cat`, so `consent.ts:98` (`input[data-consent-cat]`) and form
+     submission ignore it. Its own `disabled` keeps it off when the script enables the fieldset.
+   - Update the header comment on line 3 ("Strictly necessary is a checked, disabled checkbox").
+   - `src/components/consent/consent.css`: delete line 49
+     (`.consent-cat--fixed .consent-cat__head { padding-inline-start: … }`), which is no longer needed.
+   - Same file, lines 17, 44 and 45: `1px solid` → `var(--border-hairline) solid`.
+   - Rebuild, then confirm on `/cookie-settings/`, `/es/configuracion-de-cookies/` and the banner settings panel:
+     a checked box at 0.5 opacity with a white mark, aligned with the Analytics and Marketing boxes.
+4. **About "Visit the office" as an editorial split.**
+   - `src/pages/_templates/PageView.astro`, after line 88 (`trainingSection`), add:
+     `const visitSection = template === 'about' ? body.find((x) => x.hint === 'cards' && x !== trainingSection) : undefined;`
+   - In `case 'cards':`, before the generic `return` at line 219, add:
+     `if (x === visitSection) { return (<Section labelledby={sid}><Split><SectionHead slot="aside" h2={x.h2!} lang={lang} /><CardGrid section={x} lang={lang} variant="info" headless /></Split></Section>); }`
+   - `Split`, `SectionHead` and `CardGrid` are already imported.
+   - Rebuild and confirm on `/about/` and `/es/sobre-nosotros/`:
+     - H2 in the 5fr aside;
+     - intro and info list in the 7fr column, aligned with "In the news";
+     - stacked on phones.

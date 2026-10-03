@@ -1,6 +1,7 @@
 ---
 // A22 P600: the three consent category rows (DESIGN-SYSTEM 7.20), shared by the banner's settings panel and the
-// Cookie Settings page. Strictly necessary is stated, not a checkbox (it cannot be switched off). Analytics and
+// Cookie Settings page. Strictly necessary is a checked, disabled checkbox (DS 7.9;
+// no name and no data-consent-cat, so the script and form submission ignore it — it cannot be switched off). Analytics and
 // Marketing are unchecked 44px checkbox rows — never pre-ticked; the script reflects a choice the visitor saved.
 // A category with no configured vendor still has its switch (the choice is stored and applies if a tool is added
 // later, as the Cookie Settings copy promises) and says that no tool is on.
@@ -19,8 +20,11 @@ const rows = [
 <fieldset class="consent-cats" data-consent="categories">
   <legend class="visually-hidden">{s.legend}</legend>
   <div class="consent-cat consent-cat--fixed">
-    <p class="consent-cat__head"><span class="consent-cat__name">{s.necessary}</span> <span class="consent-cat__state">{s.alwaysOn}</span></p>
-    <p class="consent-cat__desc">{s.necessaryDesc}</p>
+    <label class="check consent-cat__head" for={`${prefix}-necessary`}>
+      <input type="checkbox" id={`${prefix}-necessary`} checked disabled aria-describedby={`${prefix}-necessary-desc`} />
+      <span class="consent-cat__name">{s.necessary}</span> <span class="consent-cat__state">{s.alwaysOn}</span>
+    </label>
+    <p class="consent-cat__desc" id={`${prefix}-necessary-desc`}>{s.necessaryDesc}</p>
   </div>
   {rows.map((r) => (
     <div class="consent-cat">

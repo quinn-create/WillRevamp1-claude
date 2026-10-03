@@ -1,55 +1,30 @@
 # 09-seo
-Result: FAIL
+Result: PASS
 
-Round 1. Source: `dist/` as built (60 HTML files: 58 routed pages plus `dist/404.html` and `dist/es/404/index.html`), parsed with BeautifulSoup. Every `<script type="application/ld+json">` was put through `json.loads`. OG images were measured with PIL. Reference spec: plan/REVAMP-BRIEF.md item 5, plan/DECISIONS.md A04 "Schema", design/DESIGN-SYSTEM.md (FAQ, line 476).
+Round 2. This round re-checks the three round-1 defects after the fixer's rebuild. `dist/` was built at 16:49, after the source changes to `astro.config.mjs` and `src/pages/_lib/pages.ts` at 16:11. That gives 60 HTML documents: 58 routed pages, plus `dist/404.html` and `dist/es/404/index.html`. They were parsed with BeautifulSoup. Every `<script type="application/ld+json">` was put through `json.loads`. OG images were measured with PIL. The sitemap was parsed with ElementTree.
 
 ## Evidence
 
 | Requirement | Result | Detail |
 |---|---|---|
 | Titles ≤ 60 chars, unique (EN+ES) | PASS | All 60 titles are ≤ 60 characters, with 0 duplicates. |
-| Descriptions 140–155, unique | PASS | All 60 descriptions are 140–155 characters, with 0 duplicates. og:description, twitter:description and the JSON-LD page node `description` all match the meta description. |
-| Canonical = `https://willfraleylaw.com/<path>/` | PASS (58/58 routed pages) | Every routed page has exactly one canonical, and it equals the expected URL. og:url and the JSON-LD page `url` match it. The two 404 documents (`/404.html`, `/es/404/`) are `noindex, follow` and have no canonical, by design (DECISIONS A19 "404"). That is accepted and not counted as a defect. |
-| JSON-LD parses | PASS | There is 1 block per page, and 60/60 parse with 0 errors. |
-| No rating markup | PASS | 0 `AggregateRating`, `Review`, `reviewRating` or `ratingValue` nodes on any page. |
-| NAP/hours match footer | PASS | One identical firm node on all 52 non-policy pages: "Will Fraley, Attorney at Law", 509 W College St, Murfreesboro, TN 37130, +1-615-410-7290, inbox@willfraleylaw.com, Mo–Th 09:00–17:00, Fr 09:00–16:00. The EN and ES footers show the same values ("Friday 9:00 a.m. – 4:00 p.m."). areaServed is Murfreesboro + Rutherford/Coffee/Wilson. knowsLanguage is en-US, es-US. |
-| BreadcrumbList | PASS | On every non-home page that shows a visible trail, the JSON-LD names and URLs match `nav.breadcrumbs` item for item (EN and ES). |
-| LegalService **also typed Attorney** | **FAIL** | The firm node is `"@type": "LegalService"` only, on all 52 pages. The brief (item 5: "LegalService plus Attorney") and DECISIONS A04 ("`LegalService` (also typed `Attorney`)") require both types. |
-| FAQPage **on /faqs/ (+ES twin) only** | **FAIL** | 42 pages carry an `FAQPage` node. Only 2 may (`/faqs/`, `/es/preguntas-frecuentes/`). The other 40 are `/`, `/es/`, `/legal-services/`, `/es/servicios-legales/`, all 3 hubs and their ES twins, all practice pages (criminal ×8, family ×5, personal-injury, adoption, dcs-case-attorney) and their ES twins. These break the brief (item 5: "FAQPage on `/faqs/` only"), DECISIONS A04 ("A single `FAQPage`, on /faqs/ only"), DECISIONS A08 (line 620) and DESIGN-SYSTEM line 476 ("FAQPage schema only on `/faqs/` (and its ES twin)"). The A20 note (DECISIONS line 916, "any page with an `[faq]`") contradicts the design and is the cause. The FAQ question and answer text does match the visible accordions. |
-| og:image exists, 1200×630 | PASS | 60/60 pages have a page-specific `/og/<slug>.png` file (no image is reused). Every file exists in `dist/og/` and measures exactly 1200×630, with matching `og:image:width`/`height` and `twitter:image`. The firm `image` `/og/default.jpg` exists (1200×630). |
-| sitemap lists every published page + hreflang | **FAIL** (1 defect) | `dist/sitemap-index.xml` points to `dist/sitemap-0.xml`, which has 56 `<url>`s. All 54 indexable pages are listed, and each carries en/es/x-default alternates that match the page's `<link rel="alternate">` exactly. The 2 extra URLs are `https://willfraleylaw.com/cookie-settings/` and `https://willfraleylaw.com/es/configuracion-de-cookies/`. Both pages carry `<meta name="robots" content="noindex, follow">` (designed noindex: SITEMAP.md row 28, DECISIONS A04 line 272). Submitting noindexed URLs in the sitemap is a conflicting signal (Search Console: "Submitted URL marked 'noindex'"). thank-you, gracias and the 404s are correctly excluded. |
-| robots.txt | PASS | `User-agent: * / Allow: /` and `Sitemap: https://willfraleylaw.com/sitemap-index.xml`. The noindexed pages are not disallowed, so crawlers can read their noindex. `_redirects` sends `/sitemap.xml`, `/sitemap_index.xml`, `/page-sitemap.xml` and `/post-sitemap.xml` to `/sitemap-index.xml`. |
-| hreflang reciprocity | PASS | On all 58 routed pages: `<html lang>` is correct (en/es), there are exactly en + es + x-default, the self link is correct, x-default is the EN URL, and the twin exists and points back. 0 non-reciprocal pairs. |
+| Descriptions 140–155, unique | PASS | All 60 descriptions are 140–155 characters, with 0 duplicates. On each page, the JSON-LD page node `description` equals the meta description. |
+| Canonical = `https://willfraleylaw.com/<path>/` | PASS (58/58) | Each routed page has exactly one canonical, and it equals the expected URL. `og:url` and the page node `url` match it. Both 404 documents are `noindex, follow` and have no canonical, by design (DECISIONS A19). |
+| JSON-LD parses | PASS | 60/60 blocks parse, with 0 errors. |
+| No rating markup | PASS | 0 `AggregateRating`, `Review`, `reviewRating`, `ratingValue` or `reviewCount` on any page. |
+| LegalService + Attorney | PASS (round-1 defect fixed) | The firm node is `"@type": ["LegalService","Attorney"]` on 50 pages. Those are all pages except the 10 policy/utility documents (privacy, accessibility, cookie settings, thank-you and 404, each EN+ES), which emit no firm node by design (`template === 'policy'`). There is a `Person` node on the same 50 pages and a `Service` node on 36 practice and hub pages. |
+| FAQPage on /faqs/ (+ES) only | PASS (round-1 defect fixed) | `FAQPage` appears on exactly 2 pages: `/faqs/` and `/es/preguntas-frecuentes/`. Each has 31 questions, and all 31 question texts are visible on the page. |
+| BreadcrumbList | PASS | There are 54 pages with BreadcrumbList. On each one, names and URLs match the visible `nav.breadcrumbs` item for item. Pages with no trail (home EN/ES, thank-you/gracias, 404 ×2) have neither visible crumbs nor schema. |
+| NAP/hours match footer | PASS | There is 1 firm-node variant across all 50 pages: "Will Fraley, Attorney at Law", 509 W College St, Murfreesboro, TN 37130, +1-615-410-7290, inbox@willfraleylaw.com, Mo–Th 09:00–17:00 and Fr 09:00–16:00. The EN footer matches it ("(615) 410-7290", "Monday–Thursday 9:00 a.m. – 5:00 p.m.", "Friday 9:00 a.m. – 4:00 p.m."), and so does the ES footer ("Lunes a jueves 9:00 a. m. – 5:00 p. m.", "Viernes 9:00 a. m. – 4:00 p. m."). |
+| og:image exists, 1200×630 | PASS | 60/60 pages have an `og:image` that resolves to a file in `dist/og/`. Every file measures exactly 1200×630, with matching `og:image:width`/`height` meta. `twitter:image` equals `og:image`. |
+| Sitemap lists every published page + hreflang | PASS (round-1 defect fixed) | `sitemap-index.xml` points to `sitemap-0.xml`, which holds 54 `<url>`s, matching the 54 indexable routed pages exactly. No URL is missing, and none is extra or noindexed. Cookie settings and configuracion-de-cookies are now excluded, along with thank-you, gracias and the 404s. Each URL's en/es/x-default alternates equal the page's `<link rel="alternate">` set. `plan/sitemap.json` lists 31 pairs. Its only paths absent from `dist/` are `/blog/` and `/es/blog/` (hidden until a first post, CLAUDE.md rule 12) and `/404/` (served as `/404.html`). The footer "Sitemap" link goes to `/sitemap-index.xml`. |
+| robots.txt | PASS | `User-agent: *`, `Allow: /`, `Sitemap: https://willfraleylaw.com/sitemap-index.xml`. Noindex pages stay crawlable. `_redirects` sends `/sitemap.xml`, `/sitemap_index.xml`, `/page-sitemap.xml` and `/post-sitemap.xml` to `/sitemap-index.xml` (301). |
+| hreflang reciprocity | PASS | Checked on all 58 routed pages: `<html lang>` is correct (en/es), the set is exactly en + es + x-default, the self link is correct, x-default equals the EN URL, and the twin exists and points back. There are 0 non-reciprocal pairs. |
 
-Observation, not counted (outside this check's list): DECISIONS A19 "404" asks for `dist/es/404.html` to be copied from `dist/es/404/index.html` in an `astro:build:done` hook, so Cloudflare serves the Spanish 404 for missing `/es/*` URLs. The file is not in `dist/`, so `/es/<missing>` falls back to the English 404.
+Observation, not counted (outside this check's list, carried from round 1): `dist/es/404.html` still does not exist (DECISIONS A19 "404"), so a missing `/es/*` URL on Cloudflare Pages falls back to the English `404.html`.
 
-Defects: 3.
+Defects: 0.
 
 ## Fixes
 
-1. **Sitemap lists noindex pages.** File `astro.config.mjs`, line 36 (`sitemap({ filter })`). Replace
-   `filter: (page) => !/\/_|\/thank-you\/|\/gracias\/|\/404\//.test(page),`
-   with
-   `filter: (page) => !/\/_|\/thank-you\/|\/gracias\/|\/404\/|\/cookie-settings\/|\/configuracion-de-cookies\//.test(page),`
-   After the rebuild, `dist/sitemap-0.xml` should list exactly 54 `<url>`s.
-
-2. **Firm node is not typed Attorney.** File `src/pages/_lib/pages.ts`, line 235 (in `firmNodes()`). Replace
-   `'@type': 'LegalService',`
-   with
-   `'@type': ['LegalService', 'Attorney'],`
-   Keep `name` "Will Fraley, Attorney at Law". Any downstream code or test that compares `@type === 'LegalService'` must accept the array form (check with `Array.isArray(t) ? t.includes('LegalService') : t === 'LegalService'`).
-
-3. **FAQPage emitted on 40 pages besides /faqs/.** File `src/pages/_lib/pages.ts`, lines 289–291 (in `pageJsonLd()`). Replace
-   ```
-   // FAQPage wherever the page has an FAQ section.
-   const faqs = copy.sections.filter((s) => s.hint === 'faq').flatMap((s) => splitH3(s.blocks).items);
-   if (faqs.length) {
-   ```
-   with
-   ```
-   // FAQPage on /faqs/ and its ES twin only (REVAMP-BRIEF 5, DECISIONS A04, DESIGN-SYSTEM FAQ).
-   const FAQ_PATHS = new Set(['/faqs/', '/es/preguntas-frecuentes/']);
-   const faqs = FAQ_PATHS.has(path) ? copy.sections.filter((s) => s.hint === 'faq').flatMap((s) => splitH3(s.blocks).items) : [];
-   if (faqs.length) {
-   ```
-   The visible FAQ accordions on the other pages stay as they are. Only the structured data changes. Also amend the A20 JSON-LD note in `plan/DECISIONS.md` line 916 through the fixer's fragment: change "any page with an `[faq]` adds an `FAQPage` node" to "`/faqs/` and `/es/preguntas-frecuentes/` add an `FAQPage` node". After the rebuild, `grep -l '"FAQPage"' -r dist --include=*.html` should return exactly 2 files.
+None required. Optional, for the observation above: in `astro.config.mjs`, add an `astro:build:done` integration hook that copies `dist/es/404/index.html` to `dist/es/404.html`.

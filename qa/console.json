@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T16:09:08.649Z",
-  "csp": "default-src 'self'; script-src 'self' 'sha256-uTZq1MOj+K6uQUufncqNhKTNdN4aOc8udUqkJE+teeM=' https://challenges.cloudflare.com https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms https://connect.facebook.net https://analytics.tiktok.com; style-src 'self' 'sha256-izFI4sw0ghW+wqrNq8lsFOX40wF/AbV3LCi7grVx1tk='; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.facebook.com https://*.clarity.ms https://analytics.tiktok.com; font-src 'self'; connect-src 'self' https://api.web3forms.com https://challenges.cloudflare.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://www.facebook.com https://connect.facebook.net https://analytics.tiktok.com https://*.tiktokw.us; frame-src https://challenges.cloudflare.com; manifest-src 'self'; worker-src 'self'; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'; frame-ancestors 'none'",
+  "generatedAt": "2026-10-03T16:58:48.750Z",
+  "csp": "default-src 'self'; script-src 'self' 'sha256-uTZq1MOj+K6uQUufncqNhKTNdN4aOc8udUqkJE+teeM=' https://challenges.cloudflare.com https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms https://connect.facebook.net https://analytics.tiktok.com; style-src 'self' 'sha256-GrAnfkP+YzMLnqObi4m7l1NVfIu372K7lSbDmZ7pNb8='; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.facebook.com https://*.clarity.ms https://analytics.tiktok.com; font-src 'self'; connect-src 'self' https://api.web3forms.com https://challenges.cloudflare.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://www.facebook.com https://connect.facebook.net https://analytics.tiktok.com https://*.tiktokw.us; frame-src https://challenges.cloudflare.com; manifest-src 'self'; worker-src 'self'; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'; frame-ancestors 'none'",
   "note": "CSP from dist/_headers applied as a response header; upgrade-insecure-requests dropped for the local http test.",
   "summary": {
     "pages": 60,
@@ -9,7 +9,7 @@
       390
     ],
     "loads": 120,
-    "consoleErrors": 0,
+    "consoleErrors": 2,
     "consoleWarnings": 0,
     "pageErrors": 0,
     "cspViolations": 0,
@@ -30,10 +30,16 @@
       "externalRequests": []
     },
     {
-      "path": "/404.html",
+      "path": "/404/",
       "width": 1280,
-      "status": 200,
-      "consoleErrors": [],
+      "status": 404,
+      "consoleErrors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "loc": "/404/:0"
+        }
+      ],
       "consoleWarnings": [],
       "pageErrors": [],
       "cspViolations": [],
@@ -690,10 +696,16 @@
       "externalRequests": []
     },
     {
-      "path": "/404.html",
+      "path": "/404/",
       "width": 390,
-      "status": 200,
-      "consoleErrors": [],
+      "status": 404,
+      "consoleErrors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "loc": "/404/:0"
+        }
+      ],
       "consoleWarnings": [],
       "pageErrors": [],
       "cspViolations": [],

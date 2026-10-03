@@ -1,68 +1,52 @@
 # 06-copy-proof
-Result: FAIL
+Result: PASS
 
-This is round 1. The reviewer read the text of all 60 built pages in `dist/`: 30 EN (including `404.html`) and 30 ES. Each page was rendered in Chromium (Playwright 1.56.1, local server over `dist/`) and its `document.body.innerText` was captured. The raw HTML was also parsed, including hidden menu and dialog markup and the `alt`, `aria-label`, `placeholder`, `title` and `<meta content>` attributes. In total that is about 23,800 EN words and 27,000 ES words. The spell check used nspell with dictionary-en and dictionary-es, installed in the scratchpad only, and every flagged word was reviewed by hand. All scripts were throwaway and run from the scratchpad. No site code was edited.
+This is round 2. The reviewer re-read all 60 built pages in `dist/` after the round-1 fix commit `124a4bf`: 30 EN (including `404.html`) and 30 ES. `dist/index.html` was built at 16:49, after the last edits to copy, sitemap and templates, so the build is current. For each page the reviewer captured two things:
 
-## Evidence
+- the rendered `document.body.innerText`, using Chromium (Playwright 1.56.1) through `tools/lib.mjs#serve` over `dist/`;
+- the raw HTML, parsed to include hidden menu and dialog markup, `<title>`, and the `alt`, `aria-label`, `placeholder`, `title`, `content` and `data-*` attributes.
+
+The spell check used nspell with dictionary-en and dictionary-es. Every flagged token was reviewed by hand and compared with the round-1 list. All scripts ran from the scratchpad, and no site code was edited.
+
+## Round-1 defects: verified fixed
+
+| # | Round-1 defect | Count in `dist/` now |
+|---|---|---|
+| 1 | "Custodia de menores" vs "Custodia de los hijos" | Old label 0, new label 78. All 73 menu, card and breadcrumb anchors to `/es/derecho-familiar/custodia/` read "Custodia de los hijos". The other anchors are "custodia de los hijos" ×1 and "página de custodia" ×1 (in sentences). |
+| 2 | "Casos del DCS" vs "Casos de DCS" | Old label 0. Anchors: "Casos de DCS" ×65, plus "página de casos de DCS" ×1. |
+| 3 | "Violación de libertad condicional" vs "…de la libertad…" | Old label 0. Anchors: "Violación de la libertad condicional" ×68. The `<title>` now reads "Violación de la libertad condicional en Murfreesboro, TN". |
+| 4 | "Robo y hurto" vs "Robo" | Old label 0. Anchors: "Robo" ×62, "Defensa en casos de robo" ×2, "página de robo" ×1. |
+| 5 | « » on `/es/sobre-nosotros/` | `«` and `»` appear 0 times anywhere. Rendered text uses “ ” 35/35 (balanced) and ’ 203 times, with 0 straight `"` or `'`. |
+
+## Evidence (current build)
 
 | Requirement | Result |
 |---|---|
-| Spelling, EN | 0 errors. The 36 flagged tokens are all proper nouns or acronyms (Fraley, Fults, McFarlin, AVVO, TACDL, MTSU, DNJ, WCAG, GPC, Cloudflare, LinkedIn), Spanish phrases marked `lang="es"`, or valid terms (reflow, walk-throughs, pre-built, "5th Annual", the name of a certificate). |
-| Spelling, ES | 0 errors. The flagged tokens are proper nouns, or valid Spanish the dictionary does not list: contrainterrogatorio, excónyuge, citatorio, bolsitas, and enclitic forms such as asesorarle, responderle, Escríbalo and Pregúntelo. No "?" appears without "¿" and no "!" without "¡" in Spanish text. Interrogatives (qué, cómo, dónde, cuándo, quién) carry accents wherever they ask a question. |
-| Grammar spot checks | 0 hits for doubled words (every candidate was a heading followed by its own body text), space before punctuation, straight quotes or apostrophes (all ’ “ ”), wrong a/an, or common confusables. |
-| Testimonial typos | Kept verbatim on purpose (law-firm rule 7), e.g. "Mr. Fraley is the man you." and "Mr. Fraley!!". English testimonials on ES pages are wrapped in `<figure class="quote" lang="en">`. |
-| Firm name | Consistent: "Will Fraley, Attorney at Law" in prose, copyright, `og:site_name` and logo alt. Two styled lockups are layout, not errors: "Will Fraley · Attorney at Law" on the hero card, and the footer wordmark `Will Fraley<span>Attorney at Law</span>`. The name is kept in English on ES pages as a proper name. Murfreesboro, Rutherford, Tennessee, Fraley, Fults and Wilford have 0 misspelled variants. |
-| Phone format | 781 of 781 visible instances read exactly `(615) 410-7290`. All 631 `tel:` hrefs are `tel:+16154107290`. Email: 78 instances of `inbox@willfraleylaw.com`. Address `509 W College St` is consistent. Hours are consistent: EN `9:00 a.m. – 5:00 p.m.`, ES `9:00 a. m. – 5:00 p. m.` |
-| Practice names, EN | Consistent apart from case: nav and breadcrumbs use Title Case ("Child Custody") and body links use sentence case ("Child custody"), which is one convention per component. |
-| Practice names, ES | **FAIL.** For 4 practice pages, the menu, breadcrumb and page-title label from `plan/sitemap.json` differs from the label used in the body links, cards and H1 from `copy/pages/es/**`. See the table below. |
-| Banned phrases | 0. `BANNED_PHRASES` is empty. |
-| Forbidden strings | 0 in visible text or raw HTML. Checked: Knoxville Web Design, jshwebdesigns, hostingersite.com, Murfreeesboro, and the "online or at to…" sentence variants. |
-| Law-firm words | 0 in non-quote copy (specialist, specialize, expert, certified, guarantee, and the ES equivalents). "Best" appears only in a verbatim testimonial, in "best interests of the child/children" (the legal standard), and in the label "Best time to reach you". "Mejor" appears only in "mejor hora" and in the translated baseball quote. |
-| Warn-list phrases (rule 8) | **0 hits** for all 24 phrases, in visible text, attributes and JSON-LD. A stem search (elevat-, leverag-, aggress-, robust-, holistic-, delv-, passionat-, and so on) also found 0. The nearest match is "Whether you will need to appear in person", which is not the "whether you're" cliché and is not flagged. |
-| Leftover `{fact:}` tags | 0, in visible text and in raw HTML. |
-| Component hints (`[hero]`, `[cards: n]`…) | 0. |
-| Placeholders | 0 for TODO, TBD, FIXME, lorem/ipsum, XXX, `{{ }}`, undefined, null, NaN, `[object Object]` or `[vendor:…]` in `dist/**/*.html`. The `[vendor: …]` and `[vendor-off: …]` markers exist only in `src/` (the documented tracking and form slots) and none reaches the build. The input placeholders `name@example.com` and `nombre@ejemplo.com` are UI hints. |
-| Spanish accents and ñ | All 60 pages declare `<meta charset="utf-8">`. 0 cases of mojibake (Ã, Â, â€, U+FFFD) and 0 double-encoded entities. The fonts' `unicode-range` covers U+00–FF. `document.fonts.check('16px "Newsreader"' / '"Public Sans"', 'ñáéíóú¿¡')` returns true for both. A rendered screenshot of `/es/preguntas-frecuentes/` shows á, ñ and ó correctly in the header, H1 and body. |
-| English leaking onto ES pages | None outside proper names, verbatim testimonials, legal terms in parentheses (e.g. "(reckless driving)"), and lang-tagged links ("Read in English", "View this page in English", both with `lang="en"`). |
-| ES quotation marks | **FAIL (1).** Spanish copy uses “ ” 12 times (privacy, divorce, visitation, accessibility, sex crimes, domestic assault, drug crimes) and « » once (`/es/sobre-nosotros/`). |
+| Spelling, EN | **0 errors.** The flagged-token list matches round 1 exactly (diff is empty). All flags are proper nouns or acronyms: Fraley, Fults, McFarlin, AVVO, TACDL, MTSU, DNJ, WCAG, GPC, Cloudflare, LinkedIn, HTTPS. Others are lang-tagged Spanish, such as "Se habla español" and the new `<span lang="es">Llame al … para una consulta gratuita.</span>` on `/about/`, or valid terms: reflow, walk-throughs, pre-built, autoplaying, 5th. |
+| Spelling, ES | **0 errors.** The token list matches round 1. Flags are proper nouns or valid Spanish missing from the dictionary: contrainterrogatorio, excónyuge, citatorio, bolsitas, asesorarle, responderle, Escríbalo, Pregúntelo, ADN. |
+| Inverted punctuation (ES) | 0 Spanish lines with "?" but no "¿", or "!" but no "¡". The 17 lines flagged are verbatim English testimonials inside `lang="en"` figures. |
+| Grammar spot checks | 0 real doubled words. The 8 candidates are valid Spanish ("día a día", "acompaña a", "se envía a", "reseña a"). 0 cases of a space before punctuation and 0 wrong a/an. |
+| Firm name | "Will Fraley, Attorney at Law" ×114 in rendered text. The styled lockup "Will Fraley · Attorney at Law" ×2 is the hero card, as in round 1. 0 variants such as "Fraley Law", "Law Office of" or "William Fraley". Fraley ×376, Fults ×4, Murfreesboro ×282, Rutherford ×40 and Tennessee ×108 all appear with 0 misspellings. |
+| Phone format | 468 of 468 rendered instances read `(615) 410-7290`, with 0 other formats. 634 of 634 `tel:` hrefs are `tel:+16154107290`. `+1-615-410-7290` appears only inside JSON-LD `telephone`, which is not visible. Email: `inbox@willfraleylaw.com` ×78. |
+| Hours | EN `Monday–Thursday: 9:00 a.m. – 5:00 p.m.` and `Friday: 9:00 a.m. – 4:00 p.m.`. ES `Lunes a jueves: 9:00 a. m. – 5:00 p. m.` and `Viernes: 9:00 a. m. – 4:00 p. m.`. Each appears 4 times outside the footer and is identical everywhere, including the new Office/Hours cards on `/about/` and `/es/sobre-nosotros/`. |
+| Practice names, EN | Consistent. Nav and breadcrumbs use Title Case ("Child Custody" ×60) and body links use sentence case ("Child custody" ×13), which is one convention per component, unchanged from round 1. |
+| Practice names, ES | **Consistent.** The anchor-text tally for each of the 14 ES practice and hub pages shows one label, plus sentence variants such as "Defensa en casos de…" and "página de…". |
+| Banned phrases | 0 (`BANNED_PHRASES: []`). |
+| Forbidden strings | 0 in visible text, attributes or raw HTML: Knoxville Web Design, jshwebdesigns, hostingersite.com, Murfreeesboro, and every variant of "online or at to…". |
+| Law-firm words | 0 in non-quote copy. "Best" appears only in a verbatim testimonial, in "best interests of the child/children" (the legal standard) and in the form label "Best time to reach you". "Mejor" appears only in "Mejor hora", "servirle mejor" and the translated baseball quote. "Guarantee" and "garantizan" appear only in the required results disclaimer (18 EN and 18 ES occurrences). |
+| Warn-list phrases (rule 8) | **0 hits** for all 24 phrases in visible text, `<title>` and attributes. |
+| Leftover `{fact:}` tags | **0**: no `{fact`, `fact:F###` or bare `F###` in rendered text, attributes or raw HTML. |
+| Component hints | 0 (`[hero]`, `[cards…]`, `[faq]`, `[cta-band]`, `[testimonial]`, `[steps]`, `[proof-strip]`). The new `[cards]` hint on the about pages rendered as cards and did not leak. 0 leftover Markdown (`**`, `](`, `#`). The only `__` matches are in OG image URLs, which follow the file-safe slug convention. |
+| Placeholders | **0** for case-sensitive TODO, TBD, FIXME, XXX, lorem, ipsum, PLACEHOLDER, `{{ }}`, `undefined`, `NaN`, `[object Object]`, `[vendor:…]` and `[vendor-off:…]` in `dist/**/*.html`. The vendor markers remain only in `src/`, the documented slots. Case-insensitive hits for "todo" are Spanish words, and hits for "nan" are inside "finances". |
+| Spanish accents and ñ | All 60 pages declare `<meta charset="utf-8">`. 0 cases of mojibake (Ã, Â, â€, U+FFFD) and 0 double-encoded entities. Both fonts load with `unicode-range` U+0-FF. `document.fonts.check('16px "Newsreader"' and '16px "Public Sans"', 'ñáéíóú¿¡')` returns `[true, true]` on `/es/preguntas-frecuentes/`. Accented H1 and title strings render intact, for example "Comuníquese", "Áreas de práctica" and "Régimen de visitas". |
+| New round-1 copy | The new "Se habla español" section on `/about/` has a `lang="es"` H2 and lang-tagged Spanish spans, and the "Leer en español" link has `lang="es"`. On `/es/sobre-nosotros/`, "Atención en español" is in Spanish and the "Read in English" link has `lang="en"`. Each "free consultation" sits next to a `tel:` link. |
 
-### ES practice-name mismatches (counts across 30 ES pages, raw HTML)
+### Advisory (does not count toward the result)
 
-| Page | Label in menu, breadcrumb and title (`plan/sitemap.json`) | Label in body links, cards and H1 (`copy/pages/es`) |
-|---|---|---|
-| `/es/derecho-familiar/custodia/` | "Custodia de menores" ×61 | "Custodia de los hijos" ×15 (11 pages). H1: "Abogado de custodia de los hijos…" |
-| `/es/abogado-casos-dcs/` | "Casos del DCS" ×61 | "Casos de DCS" ×7 (5 pages). H1: "Abogado en casos de DCS…". `copy/FACT-CHECK.md:52` records the decision "Casos del DCS became Casos de DCS", which the sitemap never received. |
-| `/es/defensa-penal/violacion-de-libertad-condicional/` | "Violación de libertad condicional" ×62, plus the page `<title>` | "Violación de la libertad condicional" ×10 (9 pages). H1: "…por violación de la libertad condicional…" |
-| `/es/defensa-penal/robo/` | "Robo y hurto" ×61 | "Robo" ×4 (4 pages). H1: "Abogado de defensa por robo…" |
-
-A Spanish reader sees two different names for the same page in the menu and in the body. The EN counterparts (Child Custody, DCS Cases, Probation Violation, Theft) differ from their body text only in letter case.
-
-### Advisory (does not count toward FAIL)
-
-- `/family-law/visitation/` uses "cancelled" and "cancelling". These are accepted US variants. "Canceled" and "canceling" are the more common US forms, so the fixer may change them, but it is not required.
+- **`/es/defensa-penal/violacion-de-libertad-condicional/`:** the `<title>` "Violación de la libertad condicional en Murfreesboro, TN" (56 chars) is the only ES practice title without the "| Will Fraley" suffix that the other 21 ES practice and hub titles carry. This predates round 1. The firm name is missing, not misspelled. Optional fix: in `copy/pages/es/criminal-defense/probation-violation.md` line 2, change the title to `"Libertad condicional en Murfreesboro, TN | Will Fraley"` (54 chars).
+- **`/about/` "Se habla español" section:** the H2 "Se habla español" is followed at once by "Se habla español." in the body (`copy/pages/about.md`, line 104), which is mildly repetitive. Optional fix: drop the leading `Se habla español. {fact:F092}` from that paragraph, keeping the F092 tag on the "Llame al…" sentence, which already cites it.
+- **`/family-law/visitation/`:** "cancelled" and "cancelling" are accepted US variants. This is unchanged from round 1 and not required.
 
 ## Fixes
 
-Five defects. Rebuild (`npx astro build`) after applying them.
-
-1. **ES label "Custodia de menores" → "Custodia de los hijos"** (menu, breadcrumb, page title fallback)
-   - `plan/sitemap.json` line 276: `"titleEs": "Custodia de menores",` → `"titleEs": "Custodia de los hijos",`
-   - `plan/sitemap.json` line 676: `"labelEs": "Custodia de menores",` → `"labelEs": "Custodia de los hijos",`
-   - Keep the human sitemap in step: `plan/SITEMAP.md` line 43, `Child Custody / Custodia de menores` → `Child Custody / Custodia de los hijos`.
-2. **ES label "Casos del DCS" → "Casos de DCS"** (this applies the decision already recorded in `copy/FACT-CHECK.md:52`)
-   - `plan/sitemap.json` line 370: `"titleEs": "Casos del DCS",` → `"titleEs": "Casos de DCS",`
-   - `plan/sitemap.json` line 706: `"labelEs": "Casos del DCS",` → `"labelEs": "Casos de DCS",`
-   - `plan/SITEMAP.md` line 48: `DCS Cases / Casos del DCS` → `DCS Cases / Casos de DCS`.
-3. **ES label "Violación de libertad condicional" → "Violación de la libertad condicional"**
-   - `plan/sitemap.json` line 198: `"titleEs": "Violación de libertad condicional",` → `"titleEs": "Violación de la libertad condicional",`
-   - `plan/sitemap.json` line 650: `"labelEs": "Violación de libertad condicional",` → `"labelEs": "Violación de la libertad condicional",`
-   - `copy/pages/es/criminal-defense/probation-violation.md` line 2: `title: "Violación de libertad condicional en Murfreesboro, TN"` → `title: "Violación de la libertad condicional en Murfreesboro, TN"` (56 chars, within the 60 limit).
-   - `plan/SITEMAP.md` line 39: `Probation Violation / Violación de libertad condicional` → `Probation Violation / Violación de la libertad condicional`.
-4. **ES label "Robo y hurto" → "Robo"** (matches the body cards, the H1, `copy/pages/es/criminal-defense/theft.md` title "Abogado de casos de robo…" and the EN label "Theft")
-   - `plan/sitemap.json` line 121: `"titleEs": "Robo y hurto",` → `"titleEs": "Robo",`
-   - `plan/sitemap.json` line 626: `"labelEs": "Robo y hurto",` → `"labelEs": "Robo",`
-   - `plan/SITEMAP.md` line 35: `Theft / Robo y hurto` → `Theft / Robo`.
-5. **ES quotation-mark consistency on `/es/sobre-nosotros/`**
-   - `copy/pages/es/about.md` line 30: `En español: «El béisbol es el mejor juego, y la disciplina es la clave de la vida». {fact:F055}` → `En español: “El béisbol es el mejor juego, y la disciplina es la clave de la vida”. {fact:F055}`
-
-After the rebuild, verify with `grep -rhoE ">(Custodia de menores|Casos del DCS|Violación de libertad condicional|Robo y hurto)" dist/es | wc -l`. It must print 0, and `grep -rc "«" dist/es` must find no matches.
+None required. The current build has 0 copy-proof defects. The advisories above are optional.

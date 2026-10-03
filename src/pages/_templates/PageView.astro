@@ -86,6 +86,10 @@ const spanishSection = template === 'home' ? prose[1] : template === 'about' ? p
 const katieSection = template === 'about' ? prose.find((x) => /Katie Fults/.test(x.h2 || '')) : undefined;
 const practiceSection = template === 'about' ? prose[2] : undefined; // "How Will practices" / "Cómo trabaja Will"
 const trainingSection = template === 'about' ? body.find((x) => x.hint === 'cards') : undefined;
+// About "Visit the office": the second [cards] section renders as an editorial split like its neighbours (QA 01 r2).
+const visitSection = template === 'about' ? body.find((x) => x.hint === 'cards' && x !== trainingSection) : undefined;
+// Hubs with a single [cards] section label it "Case types" (mockup A); grouped hubs (legal-services) do not repeat it.
+const hubCardsEyebrow = template === 'hub' && body.filter((y) => y.hint === 'cards').length === 1;
 const newsSection = template === 'news' ? body.find((x) => x.hint === 'cards') : undefined;
 const choicesSection = consentMarker ? prose[0] : undefined;
 const firstFaq = body.find((x) => x.hint === 'faq');
@@ -216,13 +220,23 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
             </Section>
           );
         }
+        if (x === visitSection) {
+          return (
+            <Section labelledby={sid}>
+              <Split>
+                <div slot="aside"><SectionHead h2={x.h2!} lang={lang} /></div>
+                <CardGrid section={x} lang={lang} variant="info" headless />
+              </Split>
+            </Section>
+          );
+        }
         return (
           <Section labelledby={sid} tone={tone(x)} container={container}>
-            <CardGrid section={x} lang={lang} eyebrow={template === 'home' ? s.practiceEyebrow : undefined} />
+            <CardGrid section={x} lang={lang} eyebrow={template === 'home' ? s.practiceEyebrow : hubCardsEyebrow ? s.caseTypesEyebrow : undefined} />
           </Section>
         );
       case 'steps':
-        return <Section labelledby={sid} container={container}><Steps section={x} lang={lang} /></Section>;
+        return <Section labelledby={sid} container={container}><Steps section={x} lang={lang} eyebrow={template === 'contact' ? s.expectEyebrow : s.processEyebrow} /></Section>;
       case 'faq':
         return (
           <Section labelledby={sid} container={container} class={template === 'faqs' ? 'faq-group' : undefined}>
@@ -272,7 +286,7 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
         if (x === spanishSection) {
           return (
             <Section labelledby={sid}>
-              <SpanishPanel section={x} lang={lang} id={sid} />
+              <SpanishPanel section={x} lang={lang} id={sid} eyebrow={lang === 'en' ? s.spanishEyebrow : undefined} />
             </Section>
           );
         }
@@ -293,7 +307,7 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
           return (
             <Section labelledby={sid} tone="linen">
               <Split>
-                <SectionHead slot="aside" h2={x.h2!} lang={lang} />
+                <div slot="aside"><SectionHead h2={x.h2!} lang={lang} /></div>
                 <div class="person person--avatar">
                   <Image src={katie} alt={s.katieAlt} widths={[84, 168]} sizes="84px" class="person__photo" />
                   <Blocks blocks={x.blocks} lang={lang} class="person__text" />
@@ -341,7 +355,7 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
           return (
             <Section labelledby={sid} container={container}>
               <Split>
-                <SectionHead slot="aside" h2={x.h2!} lang={lang} />
+                <div slot="aside"><SectionHead h2={x.h2!} lang={lang} /></div>
                 <ul class="related-links" role="list">
                   {(x.blocks[0] as Extract<Block, { type: 'ul' }>).items.map((it) => <li set:html={inline(it, { lang })} />)}
                 </ul>
@@ -449,7 +463,7 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
   /* Related practice links. */
   .related-links { border-top: var(--border-hairline) solid var(--color-rule-strong); }
   .related-links li { padding-block: var(--space-4); border-bottom: var(--border-hairline) solid var(--color-rule); max-width: var(--measure); }
-  .related-links a { display: inline-flex; align-items: center; min-height: var(--control-height); margin-block: calc(-1 * var(--space-3)); font-weight: var(--weight-text-strong); }
+  .related-links a { display: inline-flex; align-items: center; min-height: var(--control-height); min-width: var(--control-height); margin-block: calc(-1 * var(--space-3)); font-weight: var(--weight-text-strong); }
 
   /* About: certificates. */
   .doc-grid { display: grid; gap: var(--grid-gap); margin-top: var(--space-8); }

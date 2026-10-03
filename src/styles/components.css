@@ -138,6 +138,8 @@
 .list--ol { list-style: decimal; }
 .list li + li { margin-top: var(--space-2); }
 .list li::marker { color: var(--color-brand); }
+/* 44 px hit area for links in body lists without changing the row rhythm (QA 07 r2, WCAG 2.5.5). */
+.list a { display: inline-flex; align-items: center; min-height: var(--control-height); margin-block: calc(-1 * var(--space-3)); }
 
 /* ================================================================== section heads */
 .sec-head { margin-bottom: clamp(var(--space-8), 4vw, var(--space-12)); max-width: var(--sec-head-max); }

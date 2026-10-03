@@ -4,11 +4,13 @@
 import { inline, type Section } from '../lib/copy';
 import type { Lang } from '../lib/site';
 import Blocks from './Blocks.astro';
-interface Props { section: Section; lang?: Lang; id?: string }
-const { section, lang = 'en', id = 'se-habla-espanol' } = Astro.props;
+import Eyebrow from './Eyebrow.astro';
+interface Props { section: Section; lang?: Lang; id?: string; eyebrow?: string }
+const { section, lang = 'en', id = 'se-habla-espanol', eyebrow } = Astro.props;
 ---
 <div class="lang-panel">
   <div class="lang-panel__head">
+    {eyebrow && <Eyebrow lang="es">{eyebrow}</Eyebrow>}
     {section.h2 && <h2 id={id} lang="es" set:html={inline(section.h2, { lang: 'es' })} />}
   </div>
   <Blocks blocks={section.blocks} lang={lang} />

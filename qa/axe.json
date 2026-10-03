@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T15:08:06.511Z",
+  "generatedAt": "2026-10-03T16:51:40.590Z",
   "results": [
     {
       "url": "/",
@@ -453,7 +453,7 @@
         "skipLink": true
       },
       "keyboard": {
-        "stops": 41,
+        "stops": 42,
         "focusNotVisible": 0
       }
     },
@@ -871,7 +871,7 @@
         "skipLink": true
       },
       "keyboard": {
-        "stops": 42,
+        "stops": 44,
         "focusNotVisible": 0
       }
     },
