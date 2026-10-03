@@ -6,9 +6,9 @@ Questions only the owner can answer. Each names the page and placeholder it affe
 
 ## A00-orchestrator
 
-- **All pages — bar standing and memberships:** Verify bar standing (tbpr.org) and that every listed association membership is current before launch.
-- **All `/es/` pages:** Have a Spanish-speaking staff member read the /es/ pages before launch.
-- **Logo:** Please send the logo as a vector file (SVG, AI, EPS or PDF). The site currently uses the 2025 WebP raster.
+- **All pages (About page, footer) — bar standing and memberships:** Is your Tennessee law license in good standing on tbpr.org, and is every association membership listed on the site still current?
+- **All Spanish pages (`/es/`):** Can a Spanish-speaking person at the office read the Spanish pages once before launch?
+- **Logo (header and footer of every page):** Can you send the logo as an original design file (SVG, AI, EPS or PDF)? The site currently uses the small image file from the old site.
 - **Old footer and form lines not carried over (footer on every page; /contact-us/ form).** The old footer read "© 2019-2026 All Rights Reserved." (F089) and credited "Knoxville Web Design" (F115). The new footer reads "© 2026 Will Fraley, Attorney at Law" with no designer credit. The old form's SMS consent sentence ("By submitting, you agree to be contacted about your request & other information using automated technology…", F113) is also gone, because the new form does not sign anyone up for texts. Should the copyright show 2019 as the first year? Does your web-design agreement require a credit? Do you plan to contact form senders by text message?
 
 ## A01
@@ -24,7 +24,7 @@ Questions only the owner can answer. Each names the page and placeholder it affe
 
 - **Katie Fults photo, About page (`/about/`, staff card).** The only published photo, `unnamed-56.jpg`, is 169x224 px. That's fine for a small avatar but blurry at any larger size. Can you send the original or a higher-resolution headshot (1000 px wide or more)? Until then the small version stays.
 - **Logo, all pages (header, footer, favicon slot).** Only a 400x62 px WebP (`Logo-3.webp`) is published. Can you send the vector original (SVG, AI, EPS or PDF) and any square mark or monogram? We'll use it for the favicon and app icons. The old site has no favicon at all.
-- **Attorney portraits, Home and About heroes.** The sharpest published portraits are 673 px and 910 px wide, which is too small for a full-width hero. If you have the original full-resolution files from the photo shoot (the brick-doorway portrait and the desk photo), please send them.
+- **Attorney portraits, Home and About heroes.** The sharpest published portraits are 673 px and 910 px wide, which is too small for a full-width hero. Do you have the original full-size files from the photo shoot (the brick-doorway portrait and the desk photo), and can you send them?
 
 ### From A02 (fact half), from inventory/CONFLICTS.md
 
@@ -34,7 +34,7 @@ Questions only the owner can answer. Each names the page and placeholder it affe
 - **C04, Melissa Harris. Pages: Testimonials, Home and About testimonial sliders.** Is Melissa Harris still with the firm? Is her title paralegal or legal assistant? Does she want to be named? For now she appears only inside verbatim testimonials.
 - **C05, Katie Fults and team size. Pages: About, Family Law pages, Legal Services, Personal Injury, Contact.** Is Katie Fults currently an attorney with your firm, and which matters does she handle? Are there other attorneys? May her bio and photo appear on About and the family-law pages? For now the copy avoids "our attorneys" and "team of lawyers".
 - **C06, service area. Pages: Home, all practice pages, schema areaServed.** Which counties and courts do you regularly appear in? Should Davidson, Williamson, Bedford, Cannon or Grundy be listed? Do you handle federal criminal cases? For now: Murfreesboro, Rutherford County and surrounding counties, with Rutherford, Coffee and Wilson named.
-- **C07, hours. Pages: footer on all pages, Contact, schema.** Please confirm Friday closes at 4:00 pm (the old schema says 5:00 pm), that you're closed weekends, and whether calls are answered after hours.
+- **C07, hours. Pages: footer on all pages, Contact, schema.** Does the office close at 4:00 pm on Fridays (one hidden listing on the old site says 5:00 pm)? Are you closed on weekends? Are calls answered after hours?
 - **C08, memberships. Pages: Home and About "Why" block, About Affiliations.** Which memberships are current? Are you a member of the Tennessee Association for Justice (formerly the Tennessee Trial Lawyers Association)? For now: TBA, Rutherford and Cannon County Bar Association, TACDL.
 - **C09, "Wills" card. Page: Family Law.** Do you draft wills or handle estate or probate matters? For now Wills is not listed.
 - **C10, "Murder" card. Pages: Criminal Defense, Violent Crimes.** Do you want homicide or murder defense named on its own, or is the Violent Crimes page enough? For now there's no separate card.
@@ -46,7 +46,7 @@ Questions only the owner can answer. Each names the page and placeholder it affe
 - **C16, In the News. Page: In the News (new).** What is the exact headline of the October 5, 2014 Daily News Journal article? What was "Daily News Journal Article 2" meant to link to (it currently opens a DNJ search for "jc meeks")?
 - **C17, FAQ theft thresholds. Page: FAQs.** The old FAQ gives contradictory theft values ($50–$1,500 misdemeanor vs $500+ grand theft). Should the new FAQ keep this question? If so, please give the current Tennessee thresholds you want stated.
 - **C18, legal statements. Pages: DUI, Sex Crimes, FAQs.** May we drop the specific DUI penalty figures and the "first-degree criminal sexual conduct" wording (not Tennessee terminology), or do you want to supply current, approved figures?
-- **C19, credentials. Page: About.** Please confirm your Tennessee bar admission year and any federal court admissions, so About can state them next to the 2004 Nashville School of Law degree and the two TACDL certificates.
+- **C19, credentials. Page: About.** What year were you admitted to the Tennessee bar, and are you admitted in any federal courts? The About page can then state them next to the 2004 Nashville School of Law degree and the two TACDL certificates.
 
 ## A03
 
@@ -60,7 +60,7 @@ Questions only the owner can answer. Each names the page and placeholder it affe
 
 ### From A04 (SEO and local)
 
-- **Google Business Profile.** Affects every page (footer map link, schema `sameAs`, Contact). Please send the exact business name, primary category and website URL on your Google Business Profile, plus its full Maps link. The old site links a `goo.gl/maps` short URL. The GBP name should match "Will Fraley, Attorney at Law" exactly. Until you confirm, the new site links a Maps search for the street address.
+- **Google Business Profile.** Affects every page (footer map link, schema `sameAs`, Contact). What are the exact business name, main category and website address on your Google Business Profile, and what is its full Google Maps link? The old site links a `goo.gl/maps` short URL. The GBP name should match "Will Fraley, Attorney at Law" exactly. Until you confirm, the new site links a Maps search for the street address.
 - **Review platform.** Affects Testimonials and the Home testimonial strip. Were the three testimonials posted on Google, Avvo or Facebook? Can we link "Read more reviews on Google" to your profile? Until you answer, there's no link, no stars and no rating markup.
 
 ## A05
@@ -88,14 +88,14 @@ None. Performance decisions need no owner input.
 
 # A09 — owner questions
 
-- Bar standing (About page, footer, schema `Person`): verify bar standing on tbpr.org and confirm that every listed association membership is current before launch. Give your Tennessee bar admission year. Placeholders affected: About "Admissions" line and the memberships list.
+- Bar standing (About page, footer, schema `Person`): is your license in good standing on tbpr.org, is every listed association membership current, and what year were you admitted to the Tennessee bar? Placeholders affected: About "Admissions" line and the memberships list.
 - Memberships (About page, practice-page "Why choose" block): are you a member of the Tennessee Association for Justice (formerly the Tennessee Trial Lawyers Association)? Until you answer, only the TBA, the Rutherford and Cannon County Bar Association and TACDL are listed (C08).
 - SMS texting (contact form on every page, "SMS consent" checkbox): does the firm actually text clients or prospects, and from what service? Does an "Acceptable Use Policy" exist? Until you answer, the SMS consent box is not shown and the form promises no texts.
-- Testimonials (Testimonials page, testimonial strip on practice pages): send the full original text of the Katherine S. review, which currently ends at "I highly recommend". Say where each review was posted, and confirm that Katherine S., Eddie W. and the third reviewer still consent to its use. Typos stay verbatim until you supply corrections. Star graphics are dropped until a source is named.
+- Testimonials (Testimonials page, testimonial strip on practice pages): can you send the full original text of the Katherine S. review, which currently ends at "I highly recommend"? Where was each review posted, and do Katherine S., Eddie W. and the third reviewer still agree to its use? Typos stay verbatim until you supply corrections. Star graphics are dropped until a source is named.
 - Spanish service (footer, Contact, every "Why choose" block, the whole /es/ mirror): who provides Spanish-language service (you, staff or an interpreter), and does "full bilingual Spanish services" still hold for calls, meetings and documents? The site keeps the exact ledgered wording until then.
 - Free consultation (every consultation CTA beside the phone link): is it free for every matter type (criminal, family, DCS, adoption, personal injury), and is it phone, in person or both? The CTA says only "Free consultation" beside the phone number until you answer.
 - Analytics (Cookie Settings page, consent banner): may the new site use Google Analytics (old property G-MN6QWEVWM4) once a visitor consents? It ships OFF.
-- Privacy page (Privacy page, "Data we collect" and "Who receives form submissions"): confirm where form submissions go (email inbox, practice-management system) and how long they are kept. Placeholders stay blank until you answer.
+- Privacy page (Privacy page, "Data we collect" and "Who receives form submissions"): where do form messages go (email inbox, case-management software), and how long are they kept? Placeholders stay blank until you answer.
 
 ## A10
 
@@ -117,13 +117,13 @@ None. Performance decisions need no owner input.
 ### A11 — creative director
 
 - **Spanish page names and copy review (all `/es/` pages).** The Spanish site uses Spanish web addresses, for example `/es/defensa-penal/robo/` for Theft and `/es/derecho-familiar/modificacion-plan-de-crianza/` for Parenting Plan Modifications. Is there someone in your office who reads Spanish and could review the Spanish pages and their names before launch? If not, we launch with professionally written Spanish and flag it for a later review.
-- **Menu grouping (every page, header).** The new menu has six items: Criminal Defense, Family Law, Personal Injury, About, FAQs, Contact. Adoption and DCS Cases appear under Family Law, and Testimonials and In the News appear under About. Their web addresses do not change. Tell us if you'd rather Adoption or DCS have their own top-level menu item.
+- **Menu grouping (every page, header).** The new menu has six items: Criminal Defense, Family Law, Personal Injury, About, FAQs, Contact. Adoption and DCS Cases appear under Family Law, and Testimonials and In the News appear under About. Their web addresses do not change. Would you rather Adoption or DCS Cases have their own item in the main menu?
 
 ## A12
 
 ### A12 — Direction A "Counsel"
 
-- **Footer logo (every page, footer):** Direction A shows the blue wordmark only on light backgrounds and sets the firm name in type on the dark footer. If you would like a one-color white version of the logo for dark backgrounds, please say so. It would be the same letterforms in white, with no redesign.
+- **Footer logo (every page, footer):** Direction A shows the blue wordmark only on light backgrounds and sets the firm name in type on the dark footer. Would you like a one-color white version of the logo for dark backgrounds? It would be the same letterforms in white, with no redesign.
 
 ### A12 — Direction A "Counsel" (Stage 3, step 2)
 
@@ -138,7 +138,7 @@ None. Performance decisions need no owner input.
   should it switch to the recorded fallback brick #8A3F2A with white text? Affects every page's call buttons
   and the mobile call bar (mockups/B, all pages). Judge in mockup review.
 - **Photo of Will at the brick doorway (IMG02).** It is used beside the client testimonial on
-  /criminal-defense/ with the alt text "Will Fraley, Attorney at Law". Please confirm where it was taken. We
+  /criminal-defense/ with the alt text "Will Fraley, Attorney at Law". Where was it taken? We
   never caption it as the office.
 
 ## A14
@@ -147,12 +147,12 @@ None. Performance decisions need no owner input.
 
 - **Home hero photo (page `/`, slot `C-hero`).** Direction C puts a generated, generic courthouse-square
   townscape behind your real photo. The generated scene is never captioned as Murfreesboro's square or as your
-  office. If you have your own high-resolution photo (2400 px wide or more) of the Murfreesboro square or your
-  street that you own the rights to, we would use it instead. Until then, the generated scene stays and is
+  office. Do you have your own large, high-quality photo of the Murfreesboro square or your street that you own the
+  rights to? If so, we would use it instead. Until then, the generated scene stays and is
   labelled nowhere as a real place.
 - **Contact form fields (page `/contact-us/`, the "Send a short message" form).** The old form required email
   and a message. The new copy says only your name and phone number are needed, and email and a note are
-  optional. Direction C follows the new copy. Please confirm which fields you want required. The form stays
+  optional. Direction C follows the new copy. Which fields do you want to be required? The form stays
   off until it is configured.
 
 ## A16
@@ -161,14 +161,14 @@ None. Performance decisions need no owner input.
 
 - **What happens after someone calls (Contact page, "What happens after you reach out").** Right now the page says only that the office sets up an initial consultation to discuss your options. Do you return calls the same day? Are calls answered after hours or on weekends? Is the consultation by phone, in person, or both? We'll add a line once you tell us.
 - **Directions and parking (Contact page, "Finding the office").** Is there client parking at 509 W College St, or a landmark visitors should look for? Right now the page gives only the address and a map link.
-- **Families calling for someone who was arrested (Criminal Defense page, "If someone you love was arrested").** The page tells a parent or spouse they can make the first call. Please confirm the office takes these calls and say whether you visit clients held in the Rutherford County jail.
+- **Families calling for someone who was arrested (Criminal Defense page, "If someone you love was arrested").** The page tells a parent or spouse they can make the first call. Does the office take these calls, and do you visit clients held in the Rutherford County jail?
 
 ### A16 — G1 (practice areas, family law, personal injury, about)
 
-- **How a charge affects a family case (/legal-services/, "When a charge and a family case meet").** The section says only that Will handles both kinds of case and that both can be raised at one consultation. If you want specific effects described (for example, how a domestic assault charge or a probation violation can bear on custody or a parenting plan), please give us the wording you approve.
+- **How a charge affects a family case (/legal-services/, "When a charge and a family case meet").** The section says only that Will handles both kinds of case and that both can be raised at one consultation. Do you want specific effects described (for example, how a domestic assault charge or a probation violation can bear on custody or a parenting plan)? If so, what wording do you approve?
 - **Personal injury fees and process (/personal-injury/).** The page says nothing about fees. Do you take injury cases on a contingency fee? Is there a cost if there is no recovery? Do you want any filing deadline (statute of limitations) mentioned? Each needs your approved wording.
-- **Katie Fults (/about/, "Katie Fults, Attorney at Law").** Her bio keeps every published fact but drops two phrases: "one of Murfreesboro's top law firms" (now "one of Murfreesboro's law firms") and "achieving the best possible outcomes". Please confirm that edit, that Katie is currently with the firm, and that her bio may stay on the new About page.
-- **About the solo practice year (/about/, "From law school to his own practice").** The page says only that Will "later" opened his own full-service practice. If you give us the year, we can state it.
+- **Katie Fults (/about/, "Katie Fults, Attorney at Law").** Her bio keeps every published fact but drops two phrases: "one of Murfreesboro's top law firms" (now "one of Murfreesboro's law firms") and "achieving the best possible outcomes". Is that edit acceptable, is Katie currently with the firm, and may her bio stay on the new About page?
+- **About the solo practice year (/about/, "From law school to his own practice").** The page says only that Will "later" opened his own full-service practice. What year did you open your own practice?
 
 ### A16 — G2 (criminal sub-pages)
 
@@ -177,23 +177,23 @@ None. Performance decisions need no owner input.
 - **Other DUI consequences left out (/criminal-defense/dui/).** Besides the fines, jail minimums and revocation periods (C18), the old DUI page also said that a first offense likely requires an alcohol and drug treatment program (F307), that license restrictions such as probation or work-release permits may continue after a second-offense license is returned (F308), that a judge may order restitution if anyone was harmed (F309), and that consequences are more severe with a passenger under 18 (F310). The new page states none of these. Do you want any of them back, in wording you approve as current law?
 - **Theft page, charge descriptions.** The page describes robbery as a charge that "usually claim[s] that force or a threat came with a theft" and burglary as entering "a building, home or vehicle without permission to commit a crime". Please approve or correct. Do you also want shoplifting named? The old site never mentions it.
 - **Drug Crimes and Theft pages, federal cases.** The old site says you handle federal theft cases and mentions federal drug trafficking. The new pages mention state charges only. Do you take federal drug or theft cases?
-- **Violent Crimes page.** The page names murder, attempted murder, manslaughter (including vehicular), assault and battery, violent sexual offenses and domestic assault, and says you have represented people facing allegations "from murder to hit-and-runs". The old page's death-penalty sentence and its "planned in advance" definition of murder are left out. Please confirm.
+- **Violent Crimes page.** The page names murder, attempted murder, manslaughter (including vehicular), assault and battery, violent sexual offenses and domestic assault, and says you have represented people facing allegations "from murder to hit-and-runs". The old page's death-penalty sentence and its "planned in advance" definition of murder are left out. Is that list and wording correct? Page: /criminal-defense/violent-crimes/.
 - **Testimonials on criminal pages.** DUI and Theft show the S.A. review and Drug Crimes and Violent Crimes show the Eddie W. review. Do you have any reviews from criminal-defense clients that we could use instead?
 
 ### A16 — G3 (sex crimes, fraud, probation violation, domestic assault)
 
 - **Is the consultation confidential? (/criminal-defense/sex-crimes/, "Keeping it private").** The sitemap asks this page to reassure readers that the consultation is confidential. The old site says "confidential consultation" only on the Adoption and DCS pages, so the page now gives discretion advice only. If you approve a line such as "What you tell us in a consultation stays confidential," we will add it in English and Spanish.
-- **Probation violation hearings and consequences (/criminal-defense/probation-violation/, "How a violation case moves").** The old page said prosecutors need only a "preponderance of evidence", and that a violation can lead to longer or stricter probation or to jail. It also listed common ways probation is violated. None of this is on the new page (C18). Give us approved wording if you want any of it stated.
-- **Domestic assault effects (/criminal-defense/domestic-assault/, "One charge, many questions" and "When the charge touches custody or visitation").** The old page said a conviction could cost custody, jobs and relationships, and it defined aggravated assault (for example, use of a weapon). The new page says only that the charge "can" come up in a custody case. Please approve any specific effects or definitions you want stated.
+- **Probation violation hearings and consequences (/criminal-defense/probation-violation/, "How a violation case moves").** The old page said prosecutors need only a "preponderance of evidence", and that a violation can lead to longer or stricter probation or to jail. It also listed common ways probation is violated. None of this is on the new page. Do you want any of it stated, and if so, in what wording?
+- **Domestic assault effects (/criminal-defense/domestic-assault/, "One charge, many questions" and "When the charge touches custody or visitation").** The old page said a conviction could cost custody, jobs and relationships, and it defined aggravated assault (for example, use of a weapon). The new page says only that the charge "can" come up in a custody case. Do you want any specific effects or definitions stated, and in what wording?
 - **Fraud scope (/criminal-defense/fraud/, "Fraud and white-collar charges Will Fraley handles").** Bankruptcy fraud and piracy are left off the list. Do you take federal fraud cases (bankruptcy, mail or wire fraud in federal court)? If yes, we can add them and a line about federal court (C06).
-- **Felony wording (/criminal-defense/fraud/, intro and FAQ).** The old page said fraud crimes are "almost always" felonies and that forgery "is a felony". The new page says "Many fraud charges are felonies." Please confirm that, or give us approved wording.
+- **Felony wording (/criminal-defense/fraud/, intro and FAQ).** The old page said fraud crimes are "almost always" felonies and that forgery "is a felony". The new page says "Many fraud charges are felonies." Is that correct, or what wording do you prefer?
 
 ### A16 — G4 (divorce, custody, visitation, parenting plan modifications)
 
-- **Divorce page, "Division of property" card and FAQ.** The page says: "In Tennessee, a judge divides property under a principle called equitable distribution, and fault is not a consideration." This comes from your old divorce page. Please confirm the wording, or give us wording you approve.
+- **Divorce page, "Division of property" card and FAQ.** The page says: "In Tennessee, a judge divides property under a principle called equitable distribution, and fault is not a consideration." This comes from your old divorce page. Is this still correct, or what wording do you prefer?
 - **"Best interests of the child" (Child Custody, Visitation, Parenting Plan Modifications).** These pages say custody and parenting-plan decisions focus on, or are "almost always made based on", the best interests of the children. The wording comes from your old FAQ and Modifications page. Please confirm. The old Visitation page's statutory factor list (TN Code § 36-6-106) and its "12 years old" preference rule are left out. Do you want them back?
-- **Visitation page, "If your visits are being denied."** The list advises: keep following the order, document missed visits, save messages, and don't hold back support or keep the child past your time, because that "can hurt your own case." Please confirm you are comfortable giving this practical advice.
-- **Child Custody page, "What to write down now."** The page ends with "Before you move out, move the children or change their routine, talk to a lawyer first." It replaces the old FAQ line "Family court often favors the parent who takes custody of the children," which was dropped. Please confirm.
+- **Visitation page, "If your visits are being denied."** The list advises: keep following the order, document missed visits, save messages, and don't hold back support or keep the child past your time, because that "can hurt your own case." Are you comfortable giving this practical advice? Page: /family-law/visitation/.
+- **Child Custody page, "What to write down now."** The page ends with "Before you move out, move the children or change their routine, talk to a lawyer first." It replaces the old FAQ line "Family court often favors the parent who takes custody of the children," which was dropped. Is that change acceptable? Page: /family-law/child-custody/.
 - **Parenting Plan Modifications FAQ, "Do both parents have to agree to a change?"** The answer is "No. Some changes are worked out by agreement; others are argued before the court." Please confirm.
 - **Temporary and permanent parenting plans.** The old Visitation page explained both, including a plan lasting "until … the child turns 18." The new page leaves this out. Would you like an approved sentence?
 - **Divorce rules left out (/family-law/ and /family-law/divorce/).** The old Family Law page stated three Tennessee divorce rules that the new pages leave out: the six-month residency requirement under Tenn. Code Ann. § 36-4-104(a) (F263); that a no-fault divorce generally takes 2–6 months and a contested one months to years (F264); and examples of fault grounds such as adultery, impotence and criminal conduct (F265). Do you want any of these back, in wording you approve as current law?
@@ -202,16 +202,16 @@ None. Performance decisions need no owner input.
 ### A16 — G5 (paternity, adoption, DCS, testimonials)
 
 - **Free consultation for adoption and DCS (/adoption/, /dcs-case-attorney/: hero, FAQ "Is the consultation free and confidential?", CTA band).** Your old Adoption and DCS pages offered a "confidential consultation" but never said "free". The new pages say "free consultation", based on the site-wide offer, and say the consultation is confidential. Please confirm both for adoption and DCS matters (C14).
-- **DCS first steps (/dcs-case-attorney/, "Take a breath. Then take these steps.").** The list advises: keep every paper, write things down, keep every appointment and court date, read before signing any plan or agreement and ask for a copy, and talk to a lawyer before the DCS interview. Please confirm you are comfortable giving this advice.
+- **DCS first steps (/dcs-case-attorney/, "Take a breath. Then take these steps.").** The list advises: keep every paper, write things down, keep every appointment and court date, read before signing any plan or agreement and ask for a copy, and talk to a lawyer before the DCS interview. Are you comfortable giving this advice?
 - **DCS guardians (/dcs-case-attorney/, FAQ "I'm raising a grandchild. Can you help me?").** The answer cites only "parents and guardians". Do you also represent grandparents or relatives who are not legal guardians, such as kinship or relative placements?
-- **Paternity advice (/family-law/paternity/, FAQ "Someone says I'm the father…").** The answer ends with "Talk to a lawyer before you sign anything that names you as the father." Please confirm.
-- **Paternity rule (/family-law/paternity/, "Why paternity comes first").** The page says that when the father's identity is in question, the court will require proof before it moves ahead on custody or support. This comes from your old Child Custody page (F314). Please confirm it is current.
+- **Paternity advice (/family-law/paternity/, FAQ "Someone says I'm the father…").** The answer ends with "Talk to a lawyer before you sign anything that names you as the father." Is that advice acceptable?
+- **Paternity rule (/family-law/paternity/, "Why paternity comes first").** The page says that when the father's identity is in question, the court will require proof before it moves ahead on custody or support. This comes from your old Child Custody page. Is it still correct?
 - **Adoption scope (/adoption/).** The page lists stepparent, relative, private, agency, foster care and contested adoptions, plus termination of parental rights, as published. It gives no timelines, consent rules or home-study steps. Do you also handle adult adoptions or interstate adoptions? Should Katie Fults be named on this page? (law-firm rule 12, C05)
-- **Katherine S. review (/testimonials/ and family pages).** The published text ends mid-sentence ("I highly recommend"), and Eddie W.'s review is missing a word ("the man you."). Both appear exactly as published. Please send the full original texts and say where each review was posted (C15).
+- **Katherine S. review (/testimonials/ and family pages).** The published text ends mid-sentence ("I highly recommend"), and Eddie W.'s review is missing a word ("the man you."). Both appear exactly as published. Can you send the full original texts, and where was each review posted?
 
 ### A16 — G6 (FAQs, In the News, blog)
 
-- **FAQ legal statements to confirm (/faqs/).** Each answer below is reworded from your old FAQ and kept general. Please confirm each one is current and correct for Tennessee, or give us replacement wording:
+- **FAQ legal statements to confirm (/faqs/).** Each answer below is reworded from your old FAQ and kept general. Is each one still current and correct for Tennessee? If not, what wording should replace it?
   1. "Drug trafficking across state or international borders can become a federal offense." (F280)
   2. "Penalties [for DUI] can include fines, license suspension, probation, mandatory DUI classes and jail," and the outcome "can turn on the blood alcohol level and any prior DUIs." (F281, F304)
   3. "You can politely decline to answer [whether you've been drinking] until you have spoken with a lawyer." (F284)
@@ -223,17 +223,17 @@ None. Performance decisions need no owner input.
   9. "Custody decisions [now] focus on the best interests of the child." (F290)
   10. The three joint-custody definitions: physical, legal and full joint. (F291)
 - **FAQ questions left out or answered without a legal rule (/faqs/).** The theft-value thresholds were removed (C17). Field sobriety and chemical test refusal now gets advice to note which tests you took or declined (C18). The "signs an officer looks for" answer was removed, as was "DUI, DWI or OWI". Do you want any of these back, in wording you approve?
-- **Fathers and custody (/faqs/, "Do courts still favor mothers?").** The answer says Will "advocates for parents in family court, and that includes fathers." Please confirm.
+- **Fathers and custody (/faqs/, "Do courts still favor mothers?").** The answer says Will "advocates for parents in family court, and that includes fathers." Is that accurate?
 - **In the News (/in-the-news/).** What is the exact headline of the October 5, 2014 Daily News Journal story? The page uses the wording from its web address. What was "Daily News Journal Article 2" meant to link to (a JC Meeks story?), and may we list it? Is there any other press coverage you'd like listed?
 - **Blog (/blog/, hidden).** Who will write posts, and will you review each one before it goes live? The template holds every post as a draft until it is marked attorney-reviewed.
 
 ### A16 — G7 (privacy, accessibility, cookie settings, thank-you, 404)
 
-- **Privacy Policy (/privacy-policy/): keeping and deleting messages.** The page says website messages stay in the office inbox as long as the office needs them to respond, and client files are kept as a lawyer's professional duties require. Please confirm, or give your retention practice. It also says you will delete information a child sent through the site on request.
-- **Privacy Policy, texting.** The page says sending the form does not sign anyone up for text messages. If you later turn on texting (the optional SMS box), this page must be updated first.
-- **Privacy Policy, marketing tools.** Meta Pixel and TikTok Pixel sections appear only if you turn those tools on. Before you do, consider whether ad tracking suits a criminal-defense and family-law practice. Visitors' interest in these pages can be sensitive.
-- **Accessibility Statement (/accessibility/), "If you need something from the site in another way, ask. The office will work with you to get you the information."** Please confirm the office can provide information another way, for example by reading it over the phone or sending it by email.
-- **Thank-you page (/thank-you/).** The page says the office will use the phone number given to set up a consultation, and tells people with a court date soon to call instead of waiting. No response time is promised. If you want to state one (for example "within one business day"), send it and it will be added.
+- **Privacy Policy (/privacy-policy/): keeping and deleting messages.** The page says website messages stay in the office inbox as long as the office needs them to respond, and client files are kept as a lawyer's professional duties require. Is that accurate, and how long do you actually keep them? It also says you will delete information a child sent through the site on request.
+- **Privacy Policy, texting.** The page says sending the form does not sign anyone up for text messages. Do you plan to text clients through the site? If you do, this page must be updated first.
+- **Privacy Policy, marketing tools.** Meta Pixel and TikTok Pixel sections appear only if you turn those tools on. Do you plan to use either? Before you do, consider whether ad tracking suits a criminal-defense and family-law practice, because visitors' interest in these pages can be sensitive.
+- **Accessibility Statement (/accessibility/), "If you need something from the site in another way, ask. The office will work with you to get you the information."** Can the office provide information another way, for example by reading it over the phone or sending it by email?
+- **Thank-you page (/thank-you/).** The page says the office will use the phone number given to set up a consultation, and tells people with a court date soon to call instead of waiting. No response time is promised. Do you want to state one (for example "within one business day")?
 
 ## A17
 
@@ -249,9 +249,9 @@ None. Performance decisions need no owner input.
 ## G2
 
 - **Case-review steps (/criminal-defense/dui/, /drug-crimes/, /theft/, /violent-crimes/ — `[steps]` step 3).** The drafts said Will personally reviews the police reports, video, witness statements, lab results and the reason for the stop. The old site never describes your review process, so the steps now describe what "your defense" reviews; only DUI says, from your criminal-defense page, that "Will and his team personally handle your case" (F058). May the pages say that you personally review the reports, video, lab results and witness statements?
-- **"Vehicular manslaughter" (/criminal-defense/violent-crimes/, "Manslaughter" card).** The old Violent Crimes page used the term "vehicular manslaughter". Tennessee charges a death caused by a driver as vehicular homicide, a charge your DUI page lists (F160). The card now says "Manslaughter charges, including charges that follow a fatal car crash." Please confirm this wording, or give us the charge names you want listed.
-- **"From murder to hit-and-runs" (/criminal-defense/violent-crimes/, "Steady first. Then a plan.").** The draft said "Will has represented people…". The old site says "we are proud to have served many people…" (F152), so the sentence now credits "Will Fraley, Attorney at Law". Please confirm that you personally handled these matters if you want the sentence to name you instead.
-- **DUI jail time (/criminal-defense/dui/, "What you may be facing").** The draft said that everything a person faces depends on blood alcohol level and prior DUIs. Your old page said this only about jail time (F304), so the sentence now covers jail time only. This adds to the DUI wording question A16 already queued.
+- **"Vehicular manslaughter" (/criminal-defense/violent-crimes/, "Manslaughter" card).** The old Violent Crimes page used the term "vehicular manslaughter". Tennessee charges a death caused by a driver as vehicular homicide, a charge your DUI page lists (F160). The card now says "Manslaughter charges, including charges that follow a fatal car crash." Is this wording acceptable, or which charge names do you want listed?
+- **"From murder to hit-and-runs" (/criminal-defense/violent-crimes/, "Steady first. Then a plan.").** The draft said "Will has represented people…". The old site says "we are proud to have served many people…" (F152), so the sentence now credits "Will Fraley, Attorney at Law". Did you personally handle these matters? If so, the sentence can name you instead.
+- **DUI jail time (/criminal-defense/dui/, "What you may be facing").** The draft said that everything a person faces depends on blood alcohol level and prior DUIs. Your old page said this only about jail time (F304), so the sentence now covers jail time only. Is that correct for Tennessee DUI cases today?
 
 ## G3
 
@@ -276,7 +276,7 @@ None. Performance decisions need no owner input.
 ## G5
 
 - **Who represented paternity clients (/family-law/paternity/: hero, "Where you might be standing", FAQ "I'm not with the mother…").** The draft said "Will has represented fathers… / mothers…". The old site says "Our firm has represented fathers who are trying to prove a child is theirs, as well as mothers who are attempting to establish paternity" (F212), so the new copy now says "The firm has represented…". Question: did you personally handle these cases? If so, may the page say "Will has represented…"?
-- **Criminal charge and DCS case together (/dcs-case-attorney/, "When a criminal charge is part of it").** The draft said "You can talk through both with one lawyer." No ledger fact supports that promise, so the page now invites callers to mention both matters when they call (615) 410-7290 for a free consultation. Question: this joins the G1 and G3 question on whether one free consultation can cover a criminal matter and a related family or DCS matter.
+- **Criminal charge and DCS case together (/dcs-case-attorney/, "When a criminal charge is part of it").** The draft said "You can talk through both with one lawyer." No ledger fact supports that promise, so the page now invites callers to mention both matters when they call (615) 410-7290 for a free consultation. Can one free consultation cover both a criminal matter and a related family or DCS matter?
 - **Hearings after a removal (/dcs-case-attorney/, card "Protective custody and removal hearings" and FAQ "My child was removed from my home. What happens now?").** The draft said "There will be court hearings" and "the court holds hearings about it". Some placements happen without a court order (for example, a voluntary or safety placement with a relative), so the copy now says hearings "may" follow. Question: do you approve this wording? Do you want the page to say when a removal hearing is held in Tennessee?
 - **Going to court to adopt (/adoption/, FAQ "Do I have to go to court to adopt?").** The draft said "An adoption is decided by a judge". The page now says an adoption "becomes final through a court order", says Will represents you before the judge (F234), and points the question of in-person attendance to the consultation. Question: do you approve this wording? Do you want the page to say whether adoptive parents attend the final hearing?
 
@@ -289,41 +289,41 @@ None. Performance decisions need no owner input.
 
 ## G7
 
-- **Privacy Policy (/privacy-policy/), "We do not sell your personal information. We do not trade it or rent it to anyone." and "We use what you send for one purpose: to reply to you about your request."** These are the office's own commitments, not facts from the old site. Please confirm both. Also confirm that form messages are not added to any mailing list or marketing system, and that "We may also disclose it when the law requires it" is acceptable. (A16 already asked about retention, deletion and children's information.)
+- **Privacy Policy (/privacy-policy/), "We do not sell your personal information. We do not trade it or rent it to anyone." and "We use what you send for one purpose: to reply to you about your request."** These are the office's own promises, not facts from the old site. Are both true? Are form messages kept out of any mailing list or marketing system? Is "We may also disclose it when the law requires it" acceptable?
 - **Privacy Policy, "Links to other sites" (F026).** The page links to https://www.facebook.com/WillFraleyLaw/, which the old site listed. No other page on the new site links to Facebook. Is that page still active, and do you want it linked? If not, the link will be removed and Google Maps will be the only example.
 
 ## A17 final (consistency pass)
 
-- **"Underage DUI" vs "underage DWI" (all pages listing DUI services: /criminal-defense/, /criminal-defense/dui/, /legal-services/, /faqs/ and their /es/ twins).** Your old site uses both terms (criminal hub: "underage DWI"; DUI page: "Underage DUI"). The new site now uses "underage DUI" everywhere so the pages agree. This updates the G1 question: please confirm "underage DUI", or tell us the term you prefer.
+- **"Underage DUI" vs "underage DWI" (all pages listing DUI services: /criminal-defense/, /criminal-defense/dui/, /legal-services/, /faqs/ and their /es/ twins).** Your old site uses both terms (criminal hub: "underage DWI"; DUI page: "Underage DUI"). The new site now uses "underage DUI" everywhere so the pages agree. Is "underage DUI" the term you prefer?
 
 ## A18
 
 ## G0 — Spanish mirror: home, criminal defense, contact (A18)
 
-- **All Spanish pages (`/es/`, `/es/defensa-penal/`, `/es/contacto/`):** please have a Spanish speaker at the office
-  read the Spanish pages once before launch, and confirm that a caller who speaks only Spanish can be helped when
-  they call (615) 410-7290. The pages say only "Se habla español" and "Hay servicios disponibles en español", as the
+- **All Spanish pages (`/es/`, `/es/defensa-penal/`, `/es/contacto/`):** can a Spanish speaker at the office
+  read the Spanish pages once before launch? Can a caller who speaks only Spanish be helped when they call
+  (615) 410-7290? The pages say only "Se habla español" and "Hay servicios disponibles en español", as the
   old site did.
 
 ## G1 — Spanish mirror: legal services, family law, personal injury, about (A18)
 
 - **/es/sobre-nosotros/ (Katie Fults section):** the Spanish page keeps the English facts as written (she "es abogada",
-  practice "se concentra en el derecho familiar"). Please confirm whether Katie speaks Spanish; the pages make no
+  practice "se concentra en el derecho familiar"). Does Katie speak Spanish? The pages make no
   such claim for her or for Will.
 
 ## G3 — Spanish mirror: sex crimes, fraud, probation violation, domestic assault (A18)
 
 - **/es/defensa-penal/delitos-sexuales/, /es/defensa-penal/agresion-domestica/:** the Spanish pages repeat the old
   site's legal statements as the English pages do (sex-offender registration after many sex crime convictions, F274;
-  domestic assault covering family members and roommates, F275/F276). Please confirm these still describe current
-  Tennessee law before launch, in both languages.
-- **/es/defensa-penal/fraude/:** repeats "Muchos cargos de fraude son delitos graves (felony)" (F278). Same request.
+  domestic assault covering family members and roommates, F275/F276). Do these still describe current
+  Tennessee law, in both languages?
+- **/es/defensa-penal/fraude/:** repeats "Muchos cargos de fraude son delitos graves (felony)" (F278). Is that still correct?
 
 ## G2 — Spanish mirror: DUI, drug crimes, theft, violent crimes (A18)
 
 - **`/es/defensa-penal/robo/` (theft):** "theft" and "robbery" are both commonly called "robo" in Spanish. The page
-  says "robo (theft)" and "robo con violencia (robbery)" and keeps the English court term in parentheses. Please have
-  a Spanish speaker at the office confirm that callers understand these terms. Some readers say "hurto" for theft.
+  says "robo (theft)" and "robo con violencia (robbery)" and keeps the English court term in parentheses. Would callers
+  understand these terms, or should the page say "hurto" for theft, as some readers do?
 
 ## G4 — Spanish mirror: divorce, child custody, visitation, parenting plan modifications (A18)
 
@@ -331,27 +331,27 @@ None. Performance decisions need no owner input.
   /es/derecho-familiar/modificacion-plan-de-crianza/:** the Spanish pages repeat the old site's statements about
   Tennessee law as the English pages do (equitable distribution with fault not considered, F267; primary residential
   parent, F269; best interests of the child, F270/F290; proof of paternity before custody or support, F314;
-  mediation, F266). Please confirm these still describe current Tennessee law before launch, in both languages.
+  mediation, F266). Do these still describe current Tennessee law, in both languages?
 
 ## G5 — Spanish mirror: paternity, adoption, DCS, testimonials (A18)
 
 - **/es/derecho-familiar/paternidad/:** repeats the old site's legal statement that the court requires proof of
-  paternity before custody or support can move forward (F314), as the English page does. Please confirm it still
-  describes current Tennessee law, in both languages.
-- **/es/testimonios/ and testimonial blocks on /es/ pages:** reviews are shown in English with a Spanish lead-in. If any
-  Spanish-speaking client has left a review the firm may publish, please send it with the client's permission.
+  paternity before custody or support can move forward (F314), as the English page does. Does it still
+  describe current Tennessee law, in both languages?
+- **/es/testimonios/ and testimonial blocks on /es/ pages:** reviews are shown in English with a Spanish lead-in. Has any
+  Spanish-speaking client left a review the firm may publish, with the client's permission?
 
 ## A19
 
 ### A19 — design-system engineer
 
-- **Favicon (all pages, browser tab).** The old site had no favicon, so the new site uses a simple thin-line "W" in the logo blue. If you have an official icon or would prefer a different mark, send it and it will be swapped in.
+- **Favicon (all pages, browser tab).** The old site had no favicon, so the new site uses a simple thin-line "W" in the logo blue. Do you have an official icon, or would you prefer a different mark?
 
 ## A20
 
 ### A20 — page builder
 
-- **Katie Fults (About page, "Katie Fults, Attorney at Law").** Her photo on the old site is 169 × 224 px, so it can only appear as a small 84 px image beside her text. If you have a larger photo of Katie, send it and it will be swapped in.
+- **Katie Fults (About page, "Katie Fults, Attorney at Law").** Her photo on the old site is 169 × 224 px, so it can only appear as a small 84 px image beside her text. Do you have a larger photo of Katie you can send?
 
 ## A21
 
@@ -368,7 +368,7 @@ None. Performance decisions need no owner input.
 
 # A22 owner items (P600)
 
-- **Please read the Privacy Policy, Accessibility Statement and Cookie Settings (EN and ES) before launch.**
+- **Can you read the Privacy Policy, Accessibility Statement and Cookie Settings pages (English and Spanish) before launch?**
   Pages: /privacy-policy/, /accessibility/, /cookie-settings/ and /es/politica-de-privacidad/, /es/accesibilidad/,
   /es/configuracion-de-cookies/. Each shows "Last reviewed: <build date>"; if you want it to show the date you
   actually reviewed them instead, tell the operator the date (placeholder: `POLICY_REVIEWED`).

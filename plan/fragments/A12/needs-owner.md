@@ -1,6 +1,6 @@
 ### A12 — Direction A "Counsel"
 
-- **Footer logo (every page, footer):** Direction A shows the blue wordmark only on light backgrounds and sets the firm name in type on the dark footer. If you would like a one-color white version of the logo for dark backgrounds, please say so. It would be the same letterforms in white, with no redesign.
+- **Footer logo (every page, footer):** Direction A shows the blue wordmark only on light backgrounds and sets the firm name in type on the dark footer. Would you like a one-color white version of the logo for dark backgrounds? It would be the same letterforms in white, with no redesign.
 
 ### A12 — Direction A "Counsel" (Stage 3, step 2)
 

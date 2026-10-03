@@ -3,7 +3,7 @@
 
 - **Katie Fults photo, About page (`/about/`, staff card).** The only published photo, `unnamed-56.jpg`, is 169x224 px. That's fine for a small avatar but blurry at any larger size. Can you send the original or a higher-resolution headshot (1000 px wide or more)? Until then the small version stays.
 - **Logo, all pages (header, footer, favicon slot).** Only a 400x62 px WebP (`Logo-3.webp`) is published. Can you send the vector original (SVG, AI, EPS or PDF) and any square mark or monogram? We'll use it for the favicon and app icons. The old site has no favicon at all.
-- **Attorney portraits, Home and About heroes.** The sharpest published portraits are 673 px and 910 px wide, which is too small for a full-width hero. If you have the original full-resolution files from the photo shoot (the brick-doorway portrait and the desk photo), please send them.
+- **Attorney portraits, Home and About heroes.** The sharpest published portraits are 673 px and 910 px wide, which is too small for a full-width hero. Do you have the original full-size files from the photo shoot (the brick-doorway portrait and the desk photo), and can you send them?
 
 ### From A02 (fact half), from inventory/CONFLICTS.md
 
@@ -13,7 +13,7 @@
 - **C04, Melissa Harris. Pages: Testimonials, Home and About testimonial sliders.** Is Melissa Harris still with the firm? Is her title paralegal or legal assistant? Does she want to be named? For now she appears only inside verbatim testimonials.
 - **C05, Katie Fults and team size. Pages: About, Family Law pages, Legal Services, Personal Injury, Contact.** Is Katie Fults currently an attorney with your firm, and which matters does she handle? Are there other attorneys? May her bio and photo appear on About and the family-law pages? For now the copy avoids "our attorneys" and "team of lawyers".
 - **C06, service area. Pages: Home, all practice pages, schema areaServed.** Which counties and courts do you regularly appear in? Should Davidson, Williamson, Bedford, Cannon or Grundy be listed? Do you handle federal criminal cases? For now: Murfreesboro, Rutherford County and surrounding counties, with Rutherford, Coffee and Wilson named.
-- **C07, hours. Pages: footer on all pages, Contact, schema.** Please confirm Friday closes at 4:00 pm (the old schema says 5:00 pm), that you're closed weekends, and whether calls are answered after hours.
+- **C07, hours. Pages: footer on all pages, Contact, schema.** Does the office close at 4:00 pm on Fridays (one hidden listing on the old site says 5:00 pm)? Are you closed on weekends? Are calls answered after hours?
 - **C08, memberships. Pages: Home and About "Why" block, About Affiliations.** Which memberships are current? Are you a member of the Tennessee Association for Justice (formerly the Tennessee Trial Lawyers Association)? For now: TBA, Rutherford and Cannon County Bar Association, TACDL.
 - **C09, "Wills" card. Page: Family Law.** Do you draft wills or handle estate or probate matters? For now Wills is not listed.
 - **C10, "Murder" card. Pages: Criminal Defense, Violent Crimes.** Do you want homicide or murder defense named on its own, or is the Violent Crimes page enough? For now there's no separate card.
@@ -25,4 +25,4 @@
 - **C16, In the News. Page: In the News (new).** What is the exact headline of the October 5, 2014 Daily News Journal article? What was "Daily News Journal Article 2" meant to link to (it currently opens a DNJ search for "jc meeks")?
 - **C17, FAQ theft thresholds. Page: FAQs.** The old FAQ gives contradictory theft values ($50–$1,500 misdemeanor vs $500+ grand theft). Should the new FAQ keep this question? If so, please give the current Tennessee thresholds you want stated.
 - **C18, legal statements. Pages: DUI, Sex Crimes, FAQs.** May we drop the specific DUI penalty figures and the "first-degree criminal sexual conduct" wording (not Tennessee terminology), or do you want to supply current, approved figures?
-- **C19, credentials. Page: About.** Please confirm your Tennessee bar admission year and any federal court admissions, so About can state them next to the 2004 Nashville School of Law degree and the two TACDL certificates.
+- **C19, credentials. Page: About.** What year were you admitted to the Tennessee bar, and are you admitted in any federal courts? The About page can then state them next to the 2004 Nashville School of Law degree and the two TACDL certificates.

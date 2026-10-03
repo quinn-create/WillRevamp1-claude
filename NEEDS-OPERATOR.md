@@ -279,3 +279,12 @@ Things only the operator can do.
   key with `tools/configure.mjs`, rebuild so the hashes match. HSTS includeSubDomains assumes every subdomain
   of willfraleylaw.com serves HTTPS (check mail/autodiscover hosts before go-live; they are DNS-only and
   unaffected unless browsed).
+
+## A25
+
+### A25 — release manager
+
+- **Upload and domain:** follow HANDOFF.md sections 1–3 (Pages upload, domain + `plan/WWW-REDIRECT.md`, `/?p=` Redirect
+  Rules). When moving DNS to Cloudflare, keep the MX/SPF/DKIM records so inbox@willfraleylaw.com keeps working.
+- **`_UPLOAD_TO_CLOUDFLARE/README.txt`** (written by tools/package.mjs) is published with the site at /README.txt. It is
+  harmless; delete it from the folder before dragging if you prefer.
