@@ -1,0 +1,40 @@
+---
+// [cards] / [cards: N] from a copy section. Each "### item" becomes a card; its first link paragraph becomes the
+// whole-card link. Items with no link become static cards; a set of contact facts (Phone / Email / Office /
+// Hours and their Spanish names) becomes an info list. Blocks after a card's link render below the grid.
+import { splitH3, type Section, type Block } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import SectionHead from './SectionHead.astro';
+import Blocks from './Blocks.astro';
+import ServiceCard from './ServiceCard.astro';
+import InfoList from './InfoList.astro';
+
+interface Props { section: Section; lang?: Lang; eyebrow?: string; cols?: 2 | 3 | 4; headless?: boolean; variant?: 'auto' | 'cards' | 'info' }
+const { section, lang = 'en', eyebrow, headless = false, variant = 'auto' } = Astro.props;
+const { intro, items } = splitH3(section.blocks);
+const after: Block[] = [];
+const cards = items.map((it) => {
+  // The card's link is its first link paragraph; anything after it (e.g. "All practice areas") renders below the grid.
+  const idx = it.blocks.findIndex((b) => b.type === 'link' && /^(\/|https?:)/.test(b.href));
+  if (idx < 0) return { title: it.title, blocks: it.blocks, link: null };
+  const b = it.blocks[idx] as Extract<Block, { type: 'link' }>;
+  after.push(...it.blocks.slice(idx + 1));
+  return { title: it.title, blocks: it.blocks.slice(0, idx), link: { href: b.href, text: b.text } };
+});
+const INFO = /^(phone|email|e-mail|office|hours|office hours|address|teléfono|correo( electrónico)?|oficina|horario|dirección)$/i;
+const asInfo = variant === 'info' || (variant === 'auto' && cards.length > 0 && cards.every((c) => !c.link && INFO.test(c.title.replace(/[*_]/g, '').trim())));
+const n = Number(Astro.props.cols || section.args || (cards.length >= 4 && cards.length % 4 === 0 ? 4 : 3));
+const cols = n >= 4 ? 4 : n === 2 ? 2 : 3;
+---
+<div class="cards-block">
+  {!headless && section.h2 && <SectionHead h2={section.h2} eyebrow={eyebrow} lang={lang} />}
+  {intro.length > 0 && <Blocks blocks={intro} lang={lang} class="sec-intro" />}
+  {asInfo ? (
+    <InfoList items={cards.map((c) => ({ title: c.title, blocks: c.blocks }))} lang={lang} />
+  ) : (
+    <ul class:list={['card-grid', `card-grid--${cols}`]} role="list">
+      {cards.map((c) => <ServiceCard title={c.title} blocks={c.blocks} link={c.link} lang={lang} size={cols === 4 ? 'compact' : 'default'} />)}
+    </ul>
+  )}
+  {after.length > 0 && <Blocks blocks={after} lang={lang} class="sec-after" />}
+</div>

@@ -1,0 +1,45 @@
+---
+// Renders parsed copy blocks as-is: paragraphs, lists, single-link paragraphs (arrow links), h3/h4, quotes,
+// and A22's block directives as tagged wrappers. Nothing is dropped.
+import { inline, type Block } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import Icon from './Icon.astro';
+
+interface Props { blocks: Block[]; lang?: Lang; lead?: boolean; class?: string; flow?: boolean; headingLevel?: 3 | 4 }
+const { blocks, lang = 'en', lead = false, class: cls, flow = true, headingLevel = 3 } = Astro.props;
+const H3 = `h${headingLevel}` as 'h3' | 'h4';
+const H4 = `h${Math.min(headingLevel + 1, 4)}` as 'h4';
+const ext = (href: string) => /^https?:/.test(href);
+const xl = (href: string, text: string) => {
+  if (lang === 'en' && (href === '/es/' || href.startsWith('/es/'))) return { hreflang: 'es', lang: 'es' };
+  if (lang === 'es' && href.startsWith('/') && !href.startsWith('/es/') && /english/i.test(text)) return { hreflang: 'en', lang: 'en' };
+  return {};
+};
+---
+<div class:list={[{ flow }, cls]}>
+  {blocks.map((b, i) => {
+    switch (b.type) {
+      case 'p': return <p class:list={[{ lead: lead && i === 0 }]} set:html={inline(b.md, { lang })} />;
+      case 'ul': return <ul class="list">{b.items.map((it) => <li set:html={inline(it, { lang })} />)}</ul>;
+      case 'ol': return <ol class="list list--ol">{b.items.map((it) => <li set:html={inline(it, { lang })} />)}</ol>;
+      case 'h3': return <H3 class="h4" set:html={inline(b.md, { lang })} />;
+      case 'h4': return <H4 class="h4" set:html={inline(b.md, { lang })} />;
+      case 'quote': return <blockquote><p set:html={inline(b.md, { lang })} /></blockquote>;
+      case 'link':
+        return (
+          <p class="more">
+            <a class="link-arrow" href={b.href} rel={ext(b.href) ? 'noopener' : undefined} {...xl(b.href, b.text)}>
+              <span set:html={inline(b.text, { lang })} />
+              <Icon name={ext(b.href) ? 'arrow-up-right' : 'arrow-right'} />
+            </a>
+          </p>
+        );
+      case 'directive':
+        return (
+          <div class="directive" data-directive={b.name} data-args={b.args || undefined}>
+            <Astro.self blocks={b.blocks} lang={lang} flow={false} />
+          </div>
+        );
+    }
+  })}
+</div>

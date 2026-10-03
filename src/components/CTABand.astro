@@ -1,0 +1,23 @@
+---
+// [cta-band]: a contained ink panel, last section before the footer. The inverse call button is the panel's one
+// solid object; "Free consultation" sits beside the tel: link (CLAUDE.md rule 7). The ghost "Send a short message"
+// is added only when the copy does not already link to the form.
+import { inline, type Section } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import Blocks from './Blocks.astro';
+import CallCta from './CallCta.astro';
+interface Props { section: Section; lang?: Lang; id?: string; formLink?: boolean }
+const { section, lang = 'en', id = 'cta-heading', formLink = true } = Astro.props;
+const copyHasForm = section.blocks.some((b) => 'md' in b && /\((\/es)?\/(contact-us|contacto)\/#form\)|\(#form\)/.test(b.md));
+---
+<section class="section section--cta" aria-labelledby={id}>
+  <div class="container">
+    <div class="cta-band on-ink">
+      <div class="cta-band__copy">
+        {section.h2 && <h2 id={id} set:html={inline(section.h2, { lang })} />}
+        <Blocks blocks={section.blocks} lang={lang} />
+      </div>
+      <CallCta lang={lang} inverse secondary={formLink && !copyHasForm} />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+---
+// Buttons (DESIGN-SYSTEM 7.2). variant: primary | secondary | ghost | inverse | ghost-inverse.
+// `href` renders a link, otherwise a <button>. `loading` keeps the width, shows a spinner and the
+// "Sending…" label, and sets aria-busy. `disabled` on a link renders a non-focusable span (never href="#").
+// `state` forces a visual state for the components sheet only.
+import Icon from './Icon.astro';
+import { t } from '../lib/i18n';
+import type { Lang } from '../lib/site';
+
+interface Props {
+  variant?: 'primary' | 'secondary' | 'ghost' | 'inverse' | 'ghost-inverse';
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  icon?: string;
+  iconAfter?: string;
+  block?: boolean;
+  loading?: boolean;
+  disabled?: boolean;
+  state?: 'hover' | 'focus' | 'active';
+  lang?: Lang;
+  class?: string;
+  [key: string]: any;
+}
+const { variant = 'primary', href, type = 'button', icon, iconAfter, block = false, loading = false, disabled = false, state, lang = 'en', class: cls, ...rest } = Astro.props;
+const classes = ['btn', `btn-${variant}`, { 'btn-block': block, 'is-loading': loading, 'is-disabled': disabled && !!href }, state && `is-${state}`, cls];
+const ui = t(lang);
+---
+{href && !disabled ? (
+  <a class:list={classes} href={href} {...rest}>
+    {icon && <Icon name={icon} />}
+    <span class="btn__label"><slot /></span>
+    {iconAfter && <Icon name={iconAfter} class="btn__after" />}
+  </a>
+) : href ? (
+  <span class:list={classes} aria-disabled="true" {...rest}>
+    {icon && <Icon name={icon} />}
+    <span class="btn__label"><slot /></span>
+  </span>
+) : (
+  <button class:list={classes} type={type} disabled={disabled || undefined} aria-busy={loading ? 'true' : undefined} {...rest}>
+    {loading ? <Icon name="loader-circle" class="spinner" /> : icon && <Icon name={icon} />}
+    <span class="btn__label">{loading ? ui.sending : <slot />}</span>
+    {!loading && iconAfter && <Icon name={iconAfter} class="btn__after" />}
+  </button>
+)}

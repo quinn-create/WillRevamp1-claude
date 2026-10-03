@@ -1,0 +1,37 @@
+---
+// [testimonial]: verbatim quote in the display serif; attribution in a <figcaption>; the results disclaimer
+// directly under it as fine print (from the copy, or the dictionary if the copy section does not carry it).
+// No stars, ratings, photos or invented names. A quote that stops mid-sentence at the source is marked " …".
+import { parseQuote, smart, type Section, type Block } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+import SectionHead from './SectionHead.astro';
+import Blocks from './Blocks.astro';
+import Icon from './Icon.astro';
+interface Props { section?: Section; quote?: { text: string; by: string }; lang?: Lang; eyebrow?: string | false; layout?: 'split' | 'stack'; headless?: boolean }
+const { section, lang = 'en', layout = 'split', headless = false } = Astro.props;
+const ui = t(lang);
+const eyebrow = Astro.props.eyebrow === false ? undefined : Astro.props.eyebrow ?? ui.testimonial;
+const quotes = section ? section.blocks.filter((b): b is Extract<Block, { type: 'quote' }> => b.type === 'quote').map((b) => parseQuote(b.md)) : Astro.props.quote ? [Astro.props.quote] : [];
+const rest = section ? section.blocks.filter((b) => b.type !== 'quote') : [];
+const DISC = /Prior results do not guarantee|Los resultados anteriores no garantizan/i;
+const disclaimerBlocks = rest.filter((b) => b.type === 'p' && DISC.test(b.md));
+const notes = rest.filter((b) => !disclaimerBlocks.includes(b));
+const unfinished = (s: string) => !/[.!?…”"')]\s*$/.test(s.trim());
+---
+<div class:list={['testimonial', layout === 'split' ? 'split' : 'testimonial--stack']}>
+  {!headless && section?.h2 && (
+    <div class="split__aside"><SectionHead h2={section.h2} eyebrow={eyebrow} lang={lang} /></div>
+  )}
+  <div class="split__main">
+    {quotes.map((q) => (
+      <figure class="quote">
+        <Icon name="quote" class="quote__mark" />
+        <blockquote><p>{smart(q.text.trim())}{unfinished(q.text) && <span class="quote__omit" title={ui.quoteOmitted}>&nbsp;…</span>}</p></blockquote>
+        {q.by && <figcaption>— {q.by}</figcaption>}
+      </figure>
+    ))}
+    {disclaimerBlocks.length > 0 ? <Blocks blocks={disclaimerBlocks} lang={lang} class="fineprint disclaimer" /> : <p class="fineprint disclaimer">{ui.resultsDisclaimer}</p>}
+    {notes.length > 0 && <Blocks blocks={notes} lang={lang} class="testimonial__after" />}
+  </div>
+</div>

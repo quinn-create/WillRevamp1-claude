@@ -1,0 +1,14 @@
+---
+// Post card (blog; hidden until a first post): eyebrow (practice area · <time>), H3 link title, two-line excerpt.
+// The title link stretches over the card.
+import { inline } from '../lib/copy';
+import type { Lang } from '../lib/site';
+interface Props { title: string; href: string; area?: string; date?: string; dateLabel?: string; excerpt?: string; lang?: Lang; headingLevel?: 2 | 3 }
+const { title, href, area, date, dateLabel, excerpt, lang = 'en', headingLevel = 3 } = Astro.props;
+const H = `h${headingLevel}` as 'h2' | 'h3';
+---
+<article class="card card--link post-card">
+  <p class="eyebrow">{area}{area && date && ' · '}{date && <time datetime={date}>{dateLabel || date}</time>}</p>
+  <H class="card__title"><a class="post-card__link" href={href} set:html={inline(title, { lang })} /></H>
+  {excerpt && <p class="post-card__excerpt" set:html={inline(excerpt, { lang })} />}
+</article>

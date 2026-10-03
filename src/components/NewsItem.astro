@@ -1,0 +1,12 @@
+---
+// News item (In the News): date line (<time>), outlet, H3 headline, neutral description, external link.
+// No outlet logos. The whole card is the link (one tab stop).
+import Card from './Card.astro';
+import type { Lang } from '../lib/site';
+interface Props { date?: string; dateLabel?: string; outlet: string; headline: string; href: string; linkLabel: string; lang?: Lang; headingLevel?: 2 | 3 }
+const { date, dateLabel, outlet, headline, href, linkLabel, lang = 'en', headingLevel = 3 } = Astro.props;
+---
+<Card as="article" title={headline} href={href} linkLabel={linkLabel} lang={lang} headingLevel={headingLevel} class="news-item">
+  <p class="eyebrow news-item__meta">{date && <time datetime={date}>{dateLabel || date}</time>}{date && ' · '}<span>{outlet}</span></p>
+  <slot />
+</Card>

@@ -1,0 +1,9 @@
+---
+// Editorial split: heading aside (5fr) + content (7fr) from 60em; stacked on phones.
+interface Props { sticky?: boolean; class?: string; reverse?: boolean }
+const { sticky = false, class: cls } = Astro.props;
+---
+<div class:list={['split', { 'split--sticky': sticky }, cls]}>
+  <div class="split__aside"><slot name="aside" /></div>
+  <div class="split__main"><slot /></div>
+</div>

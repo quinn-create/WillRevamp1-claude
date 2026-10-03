@@ -295,6 +295,7 @@
   /* Language strip (phones) */
   /* @pair --lang-strip-text on --lang-strip-bg text */ /* 7.81:1 */
   /* @pair --color-text on --lang-strip-bg text */ /* 14.19:1 */
+  /* @pair --lang-strip-text on --color-surface-tint-pressed text */ /* 6.34:1  language strip :active (added by A19, P200) */
   /* Consent banner */
   /* @pair --consent-text on --consent-bg text */ /* 15.89:1 */
   /* @pair --color-text-muted on --consent-bg text */ /* 5.80:1 */

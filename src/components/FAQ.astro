@@ -1,0 +1,32 @@
+---
+// [faq]: native <details> (works with no JS; no script closes siblings). Ink top rule, hairline per item,
+// question in the display serif inside an H3, chevron in logo blue rotating 180° when open.
+// layout "split": heading aside + questions (default); "stack": heading above (FAQ hub groups).
+import { inline, splitH3, slugify, type Section } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+import SectionHead from './SectionHead.astro';
+import Blocks from './Blocks.astro';
+import Icon from './Icon.astro';
+interface Props { section: Section; lang?: Lang; eyebrow?: string | false; layout?: 'split' | 'stack'; openFirst?: boolean; headless?: boolean; questionLevel?: 3 | 4 }
+const { section, lang = 'en', layout = 'split', openFirst = false, headless = false, questionLevel = 3 } = Astro.props;
+const eyebrow = Astro.props.eyebrow === false ? undefined : Astro.props.eyebrow ?? t(lang).faq;
+const { intro, items } = splitH3(section.blocks);
+const Q = `h${questionLevel}` as 'h3' | 'h4';
+---
+<div class:list={['faq-block', layout === 'split' ? 'split split--sticky' : 'faq-block--stack']}>
+  {(!headless && section.h2) || intro.length ? (
+    <div class="split__aside">
+      {!headless && section.h2 && <SectionHead h2={section.h2} eyebrow={eyebrow} lang={lang} />}
+      {intro.length > 0 && <Blocks blocks={intro} lang={lang} class="sec-intro-plain" />}
+    </div>
+  ) : null}
+  <div class="split__main faq">
+    {items.map((q, i) => (
+      <details class="faq__item" open={openFirst && i === 0} id={`q-${slugify(q.title)}`}>
+        <summary><Q class="faq__q" set:html={inline(q.title, { lang })} /><Icon name="chevron-down" class="faq__chev" /></summary>
+        <Blocks blocks={q.blocks} lang={lang} class="faq__a" />
+      </details>
+    ))}
+  </div>
+</div>

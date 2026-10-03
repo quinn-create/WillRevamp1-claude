@@ -1,0 +1,33 @@
+---
+// Card (DESIGN-SYSTEM 7.4). With `href`, the whole card is the link: one real <a> pinned to the bottom whose
+// ::after overlay stretches over the card (one tab stop, focus ring on the card via :has). Without `href`
+// it is a static panel: no hover, no shadow change, no arrow.
+import Icon from './Icon.astro';
+import { inline } from '../lib/copy';
+import type { Lang } from '../lib/site';
+interface Props {
+  title: string; // inline markdown
+  href?: string;
+  linkLabel?: string; // inline markdown; defaults to the title
+  headingLevel?: 2 | 3 | 4;
+  size?: 'default' | 'compact';
+  as?: 'div' | 'li' | 'article';
+  lang?: Lang;
+  state?: 'hover' | 'focus';
+  class?: string;
+}
+const { title, href, linkLabel, headingLevel = 3, size = 'default', as: Tag = 'div', lang = 'en', state, class: cls } = Astro.props;
+const H = `h${headingLevel}` as 'h2' | 'h3' | 'h4';
+const external = !!href && /^https?:/.test(href);
+const cross = href && lang === 'en' && href.startsWith('/es/') ? { hreflang: 'es', lang: 'es' } : {};
+---
+<Tag class:list={['card', { 'card--link': !!href, 'card--static': !href, 'card--compact': size === 'compact' }, state && `is-${state}`, cls]}>
+  <H class="card__title" set:html={inline(title, { lang })} />
+  <div class="card__body flow"><slot /></div>
+  {href && (
+    <a class="card__link" href={href} rel={external ? 'noopener' : undefined} {...cross}>
+      <span set:html={inline(linkLabel || title, { lang })} />
+      <Icon name={external ? 'arrow-up-right' : 'arrow-right'} />
+    </a>
+  )}
+</Tag>

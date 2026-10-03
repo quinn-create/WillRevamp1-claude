@@ -1,0 +1,25 @@
+---
+// Stats (DESIGN-SYSTEM 7.12): ledgered figures only, passed in from copy. Items are list lines of the form
+// "**2004** Practicing law since". No counters, no animation, no "+" suffixes. Renders nothing it is not given.
+import { inline, type Section } from '../lib/copy';
+import type { Lang } from '../lib/site';
+interface Item { value: string; label: string }
+interface Props { section?: Section; items?: Item[]; lang?: Lang; class?: string }
+const { section, lang = 'en', class: cls } = Astro.props;
+const items: Item[] =
+  Astro.props.items ||
+  (section?.blocks.flatMap((b) => (b.type === 'ul' ? b.items : [])) || [])
+    .map((md) => md.match(/^\*\*([^*]+)\*\*\s*[—–:-]?\s*(.+)$/))
+    .filter((m): m is RegExpMatchArray => !!m)
+    .map((m) => ({ value: m[1], label: m[2] }));
+---
+{items.length > 0 && (
+  <dl class:list={['stats', cls]}>
+    {items.map((s) => (
+      <div class="stat">
+        <dt class="stat__label" set:html={inline(s.label, { lang })} />
+        <dd class="stat__value" set:html={inline(s.value, { lang })} />
+      </div>
+    ))}
+  </dl>
+)}

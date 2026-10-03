@@ -1,0 +1,6 @@
+---
+// Centered container: --container (76rem) + gutters; `prose` and `form` narrow it to 44rem.
+interface Props { as?: 'div' | 'section' | 'article' | 'header' | 'footer' | 'nav'; variant?: 'default' | 'prose' | 'form'; class?: string; [key: string]: any }
+const { as: Tag = 'div', variant = 'default', class: cls, ...rest } = Astro.props;
+---
+<Tag class:list={['container', variant !== 'default' && `container--${variant}`, cls]} {...rest}><slot /></Tag>

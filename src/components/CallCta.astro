@@ -1,0 +1,21 @@
+---
+// The call CTA group (DESIGN-SYSTEM 7.2): primary "Call (615) 410-7290" (tel:) + note "Free consultation · Se habla
+// español" + optional ghost "Send a short message". "Free consultation" never appears without the tel: link in
+// the same group (CLAUDE.md rule 7). `inverse` for the ink CTA band.
+import Icon from './Icon.astro';
+import { firm, type Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+
+interface Props { lang?: Lang; inverse?: boolean; secondary?: boolean | { href: string; label: string }; note?: boolean; label?: string; class?: string; state?: 'hover' | 'focus' | 'active' }
+const { lang = 'en', inverse = false, secondary = true, note = true, label, class: cls, state } = Astro.props;
+const ui = t(lang);
+const sec = secondary === true ? { href: ui.formHref, label: ui.sendMessage } : secondary || null;
+---
+<div class:list={['call-cta', { 'call-cta--inverse': inverse }, cls]}>
+  <a class:list={['btn', inverse ? 'btn-inverse' : 'btn-primary', 'btn-call', state && `is-${state}`]} href={firm.tel.value}>
+    <Icon name="phone" />
+    <span>{label || ui.call(firm.phone.value)}</span>
+  </a>
+  {note && <p class="call-cta__note" set:html={ui.callNote} />}
+  {sec && <a class:list={['btn', inverse ? 'btn-ghost-inverse' : 'btn-ghost', 'call-cta__secondary']} href={sec.href}>{sec.label}</a>}
+</div>

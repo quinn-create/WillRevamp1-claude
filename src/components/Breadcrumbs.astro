@@ -1,0 +1,27 @@
+---
+// Breadcrumbs (DESIGN-SYSTEM 7.19): <nav aria-label="Breadcrumb"><ol>, trail from plan/sitemap.json parents,
+// current page as plain text with aria-current. On phones only the parent link shows ("‹ Criminal defense").
+import Icon from './Icon.astro';
+import { breadcrumbs, type Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+interface Props { lang: Lang; path: string; class?: string }
+const { lang, path, class: cls } = Astro.props;
+const trail = breadcrumbs(path, lang);
+const ui = t(lang);
+---
+{trail.length > 1 && (
+  <nav class:list={['breadcrumbs', cls]} aria-label={ui.navBreadcrumb}>
+    <ol>
+      {trail.map((c, i) => (
+        <li class:list={{ 'is-parent': i === trail.length - 2, 'is-current': i === trail.length - 1 }}>
+          {i < trail.length - 1 ? (
+            <a href={c.href}><Icon name="chevron-left" class="breadcrumbs__back" /><span>{c.label}</span></a>
+          ) : (
+            <span aria-current="page">{c.label}</span>
+          )}
+          {i < trail.length - 1 && <Icon name="chevron-right" class="breadcrumbs__sep" />}
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}

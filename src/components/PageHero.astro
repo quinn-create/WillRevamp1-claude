@@ -1,0 +1,44 @@
+---
+// Page hero (DESIGN-SYSTEM 7.21): breadcrumbs → byline (where 7.14 says) → eyebrow → H1 → deck → call CTA group,
+// with an optional media slot (framed scene right of the copy ≥ 60em, below the CTA on phones).
+// variant "policy": breadcrumbs → H1 → summary → "Last reviewed" date; no CTA group.
+import { inline, type Block } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Byline from './Byline.astro';
+import Eyebrow from './Eyebrow.astro';
+import Blocks from './Blocks.astro';
+import CallCta from './CallCta.astro';
+interface Props {
+  lang: Lang;
+  path: string;
+  h1: string;
+  deck?: Block[];
+  eyebrow?: string;
+  variant?: 'page' | 'home' | 'policy' | 'plain';
+  breadcrumbs?: boolean;
+  byline?: boolean | 'mobile';
+  cta?: boolean | 'primary-only';
+  lastReviewed?: { date: string; label: string };
+  class?: string;
+}
+const { lang, path, h1, deck = [], eyebrow, variant = 'page', breadcrumbs = variant !== 'home' && variant !== 'plain', byline = false, cta = variant !== 'policy', lastReviewed, class: cls } = Astro.props;
+const hasMedia = Astro.slots.has('media');
+---
+<section class:list={['hero', `hero--${variant}`, { 'hero--media': hasMedia }, cls]} aria-labelledby="page-title">
+  <div class="container">
+    {breadcrumbs && <Breadcrumbs lang={lang} path={path} />}
+    <div class="hero__grid">
+      <div class="hero__copy">
+        {byline && <Byline lang={lang} class={byline === 'mobile' ? 'byline--mobile-only' : undefined} />}
+        {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+        <h1 id="page-title" set:html={inline(h1, { lang })} />
+        {deck.length > 0 && <Blocks blocks={deck} lang={lang} lead class="hero__deck" />}
+        {lastReviewed && <p class="hero__reviewed muted small">{lastReviewed.label} <time datetime={lastReviewed.date}>{lastReviewed.date}</time></p>}
+        <slot />
+        {cta && <CallCta lang={lang} secondary={cta !== 'primary-only'} />}
+      </div>
+      {hasMedia && <div class="hero__media"><slot name="media" /></div>}
+    </div>
+  </div>
+</section>

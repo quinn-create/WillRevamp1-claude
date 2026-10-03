@@ -1,0 +1,24 @@
+---
+// Info items (contact facts, office hours): eyebrow label with icon + body, divided by hairlines.
+import Icon from './Icon.astro';
+import Blocks from './Blocks.astro';
+import { inline, plain, type Block } from '../lib/copy';
+import type { Lang } from '../lib/site';
+interface Item { title: string; blocks?: Block[]; html?: string; icon?: string }
+interface Props { items: Item[]; lang?: Lang; headingLevel?: 3 | 4; class?: string }
+const { items, lang = 'en', headingLevel = 3, class: cls } = Astro.props;
+const H = `h${headingLevel}` as 'h3' | 'h4';
+const ICONS: [RegExp, string][] = [[/phone|teléfono/i, 'phone'], [/e-?mail|correo/i, 'mail'], [/office|oficina|address|dirección/i, 'map-pin'], [/hours|horario/i, 'clock'], [/spanish|español/i, 'languages']];
+const iconFor = (t: string) => ICONS.find(([re]) => re.test(plain(t)))?.[1];
+---
+<ul class:list={['info-list', cls]} role="list">
+  {items.map((it) => {
+    const icon = it.icon || iconFor(it.title);
+    return (
+      <li class="info-item">
+        <H class="info-item__title">{icon && <Icon name={icon} />}<span set:html={inline(it.title, { lang })} /></H>
+        {it.html ? <div class="info-item__body flow" set:html={it.html} /> : <Blocks blocks={it.blocks || []} lang={lang} class="info-item__body" />}
+      </li>
+    );
+  })}
+</ul>

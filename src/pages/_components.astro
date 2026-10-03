@@ -1,0 +1,288 @@
+---
+// DEV-ONLY components sheet (DESIGN-SYSTEM 15.9). The leading "_" keeps Astro from routing this file, so it is
+// never built into dist/ and never listed in the sitemap. In `astro dev` it is viewable at /dev-only/components/
+// through src/pages/dev-only/[sheet].astro, whose getStaticPaths returns nothing outside import.meta.env.DEV.
+// Every specimen uses real copy from copy/pages/ (or plainly labeled specimen text) and real tokens.
+import Base from '../layouts/Base.astro';
+import Container from '../components/Container.astro';
+import Button from '../components/Button.astro';
+import CallCta from '../components/CallCta.astro';
+import Card from '../components/Card.astro';
+import CardGrid from '../components/CardGrid.astro';
+import InfoList from '../components/InfoList.astro';
+import ProofStrip from '../components/ProofStrip.astro';
+import Steps from '../components/Steps.astro';
+import FAQ from '../components/FAQ.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Stats from '../components/Stats.astro';
+import SpanishPanel from '../components/SpanishPanel.astro';
+import CTABand from '../components/CTABand.astro';
+import Notice from '../components/Notice.astro';
+import Byline from '../components/Byline.astro';
+import Person from '../components/Person.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import LanguageToggle from '../components/LanguageToggle.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import Heading from '../components/Heading.astro';
+import SectionHead from '../components/SectionHead.astro';
+import Icon from '../components/Icon.astro';
+import Frame from '../components/Frame.astro';
+import DocumentFigure from '../components/DocumentFigure.astro';
+import NewsItem from '../components/NewsItem.astro';
+import PostCard from '../components/PostCard.astro';
+import PageHero from '../components/PageHero.astro';
+import Split from '../components/Split.astro';
+import { loadCopy, sectionsOf } from '../lib/copy';
+import { firm } from '../lib/site';
+import willByline from '../assets/people/will-byline.webp';
+import certificate from '../../inventory/assets/11.webp';
+
+const home = loadCopy('index', 'en');
+const homeEs = loadCopy('index', 'es');
+const crim = loadCopy('criminal-defense', 'en');
+const contact = loadCopy('contact-us', 'en');
+const first = (c: typeof home, hint: string) => sectionsOf(c, hint)[0];
+const spanish = home.sections.find((s) => s.h2 === 'Se habla español');
+const hero = first(home, 'hero');
+const contactCards = sectionsOf(contact, 'cards').find((s) => /phone|email|office|hours/i.test(s.markdown));
+const swatches = [
+  'color-bg', 'color-surface', 'color-surface-sunken', 'color-surface-card', 'color-surface-tint', 'color-inverse-bg',
+  'color-text', 'color-heading-quiet', 'color-text-muted', 'color-link', 'color-link-hover', 'color-brand',
+  'color-marker', 'color-numeral', 'color-error', 'color-success', 'focus-ring', 'callbar-bg',
+];
+---
+<Base title="Components (dev only) | Will Fraley" description="Development-only specimen sheet of every component and state in the Counsel design system. Not built for production." path="/dev-only/components/" noindex>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <main id="main" tabindex="-1">
+    <Container>
+      <section class="sheet-section" aria-label="Components sheet">
+        <Eyebrow>Dev only · not in production</Eyebrow>
+        <p class="h1">Components</p>
+        <p>Direction A “Counsel”. Every component in every state, rendered from real copy where copy exists. The one H1 on this sheet is the page-hero specimen at the bottom.</p>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-color">
+        <h2 id="s-color">Color tokens</h2>
+        <p>Semantic roles only. Every pairing used on the site is declared and proved in tokens.css.</p>
+        <div class="sheet-grid sheet-grid--3">
+          {swatches.map((s) => <div class="swatch"><div class="swatch__chip" style={`background: var(--${s})`}></div><code>--{s}</code></div>)}
+        </div>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-type">
+        <h2 id="s-type">Type scale</h2>
+        <p>Newsreader for display, Public Sans for text. Fluid 1.25 scale, 360 px to 1280 px.</p>
+        <div class="flow">
+          <p class="display-xl">Display · Home H1</p>
+          <p class="h1">H1 · every other page</p>
+          <p class="h2">H2 · section heading</p>
+          <p class="h2 h2--paired">H2 paired · step 3</p>
+          <p class="h3">H3 · card titles, FAQ questions</p>
+          <p class="h4">H4 · lead-ins</p>
+          <p class="lead">Lead paragraph · step 1</p>
+          <p>Body · step 0. <a href="/about/">Inline link</a>, <strong>bold</strong>, <em>italic</em>, <code>code</code>, and a tel link <a class="tel" href={firm.tel.value}>{firm.phone.value}</a>.</p>
+          <p class="small muted">Small muted · help text and attributions</p>
+          <p class="eyebrow">Eyebrow · uppercase tracked</p>
+        </div>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-buttons">
+        <h2 id="s-buttons">Buttons</h2>
+        <p>Primary, secondary, ghost on paper; inverse and ghost-inverse on ink. Default, hover, focus, active, disabled, loading.</p>
+        {(['primary', 'secondary', 'ghost'] as const).map((v) => (
+          <div class="specimens mb-8">
+            <div class="specimen"><span class="specimen__label">{v}</span><Button variant={v} icon={v === 'primary' ? 'phone' : undefined}>Default</Button></div>
+            <div class="specimen"><span class="specimen__label">hover</span><Button variant={v} state="hover">Hover</Button></div>
+            <div class="specimen"><span class="specimen__label">focus</span><Button variant={v} state="focus">Focus</Button></div>
+            <div class="specimen"><span class="specimen__label">active</span><Button variant={v} state="active">Active</Button></div>
+            <div class="specimen"><span class="specimen__label">disabled</span><Button variant={v} disabled>Disabled</Button></div>
+            {v === 'primary' && <div class="specimen"><span class="specimen__label">loading</span><Button variant={v} loading>Send message</Button></div>}
+            <div class="specimen"><span class="specimen__label">link</span><Button variant={v} href="/contact-us/" iconAfter="arrow-right">As a link</Button></div>
+          </div>
+        ))}
+        <div class="specimens specimens--ink on-ink">
+          <div class="specimen"><span class="specimen__label">inverse</span><Button variant="inverse" icon="phone">Default</Button></div>
+          <div class="specimen"><span class="specimen__label">hover</span><Button variant="inverse" state="hover">Hover</Button></div>
+          <div class="specimen"><span class="specimen__label">focus</span><Button variant="inverse" state="focus">Focus</Button></div>
+          <div class="specimen"><span class="specimen__label">ghost inverse</span><Button variant="ghost-inverse">Ghost</Button></div>
+          <div class="specimen"><span class="specimen__label">ghost hover</span><Button variant="ghost-inverse" state="hover">Hover</Button></div>
+        </div>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-call">
+        <h2 id="s-call">Call CTA group</h2>
+        <p>“Free consultation” always sits beside the tel: link.</p>
+        <div class="stack">
+          <CallCta lang="en" />
+          <CallCta lang="es" />
+          <div class="specimens--ink on-ink"><CallCta lang="en" inverse /></div>
+        </div>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-links">
+        <h2 id="s-links">Links and language</h2>
+        <div class="specimens">
+          <div class="specimen"><span class="specimen__label">arrow link</span><a class="link-arrow" href="/legal-services/"><span>All practice areas</span><Icon name="arrow-right" /></a></div>
+          <div class="specimen"><span class="specimen__label">toggle (header)</span><LanguageToggle lang="en" path="/criminal-defense/" variant="header" /></div>
+          <div class="specimen"><span class="specimen__label">toggle (block)</span><LanguageToggle lang="es" path="/es/defensa-penal/" variant="block" /></div>
+          <div class="specimen"><span class="specimen__label">toggle (inline)</span><LanguageToggle lang="en" path="/contact-us/" /></div>
+        </div>
+        <div class="mt-8"><LanguageToggle lang="en" path="/criminal-defense/dui/" variant="strip" /></div>
+        <div class="mt-4"><LanguageToggle lang="es" path="/es/defensa-penal/dui/" variant="strip" /></div>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-crumbs">
+        <h2 id="s-crumbs">Breadcrumbs and byline</h2>
+        <p>On phones only the parent link shows.</p>
+        <div class="stack">
+          <Breadcrumbs lang="en" path="/criminal-defense/dui/" />
+          <Breadcrumbs lang="es" path="/es/derecho-familiar/modificacion-plan-de-crianza/" />
+          <Byline lang="en" />
+          <Byline lang="es" />
+        </div>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-hero">
+        <h2 id="s-hero">Page hero</h2>
+        <p>Breadcrumbs, byline, eyebrow, H1 (an H2 here, as the sheet has its own H1), deck, call CTA.</p>
+        <Split>
+          <Fragment slot="aside">
+            <Byline lang="en" />
+          </Fragment>
+          <div class="flow">
+            <Eyebrow>Attorney at Law · Murfreesboro, Tennessee</Eyebrow>
+            <Heading level={2} size="h1" html={home.data.h1} />
+            <CallCta lang="en" />
+          </div>
+        </Split>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-proof">
+        <h2 id="s-proof">Proof strip</h2>
+        <ProofStrip section={first(home, 'proof-strip')} lang="en" />
+        <div class="mt-8"><ProofStrip section={first(homeEs, 'proof-strip')} lang="es" /></div>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-cards">
+        <h2 id="s-cards">Cards</h2>
+        <p>Whole-card link (one tab stop), hover lift, focus ring on the card; static card without link.</p>
+        <ul class="card-grid card-grid--3 mb-12" role="list">
+          <Card as="li" title="Default" href="/criminal-defense/" linkLabel="Criminal defense"><p>Resting card.</p></Card>
+          <Card as="li" title="Hover" href="/family-law/" linkLabel="Family law" state="hover"><p>Lift −2 px, deeper shadow, link underline.</p></Card>
+          <Card as="li" title="Focus" href="/personal-injury/" linkLabel="Personal injury" state="focus"><p>Brass ring around the whole card.</p></Card>
+          <Card as="li" title="Static"><p>No link, no hover, no arrow.</p></Card>
+        </ul>
+        <CardGrid section={first(home, 'cards')} lang="en" />
+        <div class="mt-12"><CardGrid section={first(crim, 'cards')} lang="en" /></div>
+      </section>
+
+      {contactCards && (
+        <section class="sheet-section" aria-labelledby="s-info">
+          <h2 id="s-info">Info list</h2>
+          <CardGrid section={contactCards} lang="en" headless />
+        </section>
+      )}
+      <section class="sheet-section" aria-labelledby="s-info2">
+        <h2 id="s-info2">Info items (from facts)</h2>
+        <InfoList headingLevel={3} items={[
+          { title: 'Phone', html: `<p><a class="tel" href="${firm.tel.value}">${firm.phone.value}</a></p>` },
+          { title: 'Office', html: `<address>${firm.addressLine.value}</address>` },
+          { title: 'Hours', html: firm.hours.map((h) => `<p>${h.days.en}: ${h.text.en}</p>`).join('') },
+        ]} />
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-steps">
+        <h2 id="s-steps">Steps</h2>
+        <Steps section={first(crim, 'steps')} lang="en" />
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-faq">
+        <h2 id="s-faq">FAQ</h2>
+        <p>Native details; first item open here to show the open state.</p>
+        <FAQ section={first(home, 'faq')} lang="en" openFirst />
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-quote">
+        <h2 id="s-quote">Testimonial</h2>
+        <Testimonial section={first(home, 'testimonial')} lang="en" />
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-stats">
+        <h2 id="s-stats">Stats</h2>
+        <p>Only ledgered figures from copy. No current page uses [stats]; specimen from the home proof strip fact.</p>
+        <Stats items={[{ value: '2004', label: 'Practicing law since' }]} />
+      </section>
+
+      {spanish && (
+        <section class="sheet-section" aria-labelledby="s-es">
+          <h2 id="s-es">Spanish panel</h2>
+          <SpanishPanel section={spanish} lang="en" id="spanish-specimen" />
+        </section>
+      )}
+
+      <section class="sheet-section" aria-labelledby="s-notice">
+        <h2 id="s-notice">Notices</h2>
+        <div class="stack">
+          <Notice><p>Info notice. Do not send confidential information through this form.</p></Notice>
+          <Notice variant="success" title="Saved"><p>Success notice with icon and words.</p></Notice>
+          <Notice variant="error" title="Please fix 1 field"><ul><li><a href="#f-contact">Enter a phone number or an email so the office can reply</a></li></ul></Notice>
+        </div>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-form">
+        <h2 id="s-form">Form fields</h2>
+        <p>Default, hover, focus, error, disabled; checkbox states. A21 wires the real form.</p>
+        <div class="form">
+          <div class="form-row form-row--2">
+            <div class="field"><label for="f-name">Name</label><input class="input" id="f-name" autocomplete="name" /></div>
+            <div class="field is-hover"><label for="f-hover">Hover</label><input class="input" id="f-hover" /></div>
+          </div>
+          <div class="form-row form-row--2">
+            <div class="field is-focus"><label for="f-focus">Focus</label><input class="input" id="f-focus" /></div>
+            <div class="field is-error"><label for="f-contact">Phone or email</label><input class="input" id="f-contact" aria-invalid="true" aria-describedby="f-contact-err" /><p class="error-msg" id="f-contact-err"><Icon name="circle-alert" />Enter a phone number or an email so the office can reply</p></div>
+          </div>
+          <div class="field">
+            <label for="f-topic">What is this about? <span class="opt">(optional)</span></label>
+            <div class="select-wrap"><select class="select" id="f-topic"><option>Criminal defense</option><option>Family law</option><option>Personal injury</option><option>Other</option></select><Icon name="chevron-down" /></div>
+          </div>
+          <div class="field"><label for="f-msg">Short message</label><textarea class="textarea" id="f-msg"></textarea><p class="help">Help text in muted small type.</p></div>
+          <div class="field is-disabled"><label for="f-dis">Disabled</label><input class="input" id="f-dis" disabled value="Configured-off state" /></div>
+          <fieldset class="stack">
+            <legend class="field__label">Checkboxes</legend>
+            <label class="check"><input type="checkbox" checked disabled />Strictly necessary · Always on</label>
+            <label class="check"><input type="checkbox" />Analytics</label>
+            <label class="check"><input type="checkbox" checked />Marketing (checked)</label>
+          </fieldset>
+          <div class="form-actions"><Button type="submit">Send message</Button><span>Or call <a class="tel" href={firm.tel.value}>{firm.phone.value}</a></span></div>
+        </div>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-media">
+        <h2 id="s-media">Media frames, person, document</h2>
+        <div class="sheet-grid sheet-grid--3">
+          <Frame kind="portrait" src={willByline} alt="Will Fraley" caption="<strong>Will Fraley</strong> · Attorney at Law" widths={[320]} />
+          <Person name="Will Fraley" role="Attorney at Law" photo={willByline} alt="Will Fraley"><p>Person block (About page only).</p></Person>
+          <DocumentFigure src={certificate} alt="Certificate of completion (specimen)" caption="Certificate of completion (specimen caption)" />
+        </div>
+      </section>
+
+      <section class="sheet-section" aria-labelledby="s-news">
+        <h2 id="s-news">News item and post card</h2>
+        <ul class="card-grid card-grid--3" role="list">
+          <li><NewsItem date="2026-01-01" dateLabel="Specimen date" outlet="Specimen outlet" headline="Specimen headline" href="/in-the-news/" linkLabel="Read the story"><p>Neutral description.</p></NewsItem></li>
+          <li><PostCard title="Specimen post title" href="/legal-services/" area="Criminal defense" date="2026-01-01" dateLabel="Specimen date" excerpt="Two-line excerpt in muted text. It clamps after two lines so the cards line up in the grid." /></li>
+        </ul>
+      </section>
+    </Container>
+
+    <PageHero lang="en" path="/criminal-defense/" h1={crim.data.h1 + ' (hero specimen H1)'} deck={first(crim, 'hero')?.blocks.slice(0, 1)} byline eyebrow="Practice area" class="sheet-hero-specimen" />
+
+    {first(home, 'cta-band') && <CTABand section={first(home, 'cta-band')} lang="en" />}
+  </main>
+</Base>
+
+<style>
+  .swatch { display: grid; gap: var(--space-2); font-size: var(--text-fine); color: var(--color-text-muted); }
+  .swatch__chip { height: 4rem; border-radius: var(--radius); border: var(--border-hairline) solid var(--hairline-card); }
+  .specimens--ink { padding: var(--space-8); }
+</style>

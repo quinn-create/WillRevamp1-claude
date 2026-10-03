@@ -1,0 +1,25 @@
+---
+// Vertical rhythm block. tone: paper (default) | linen. `tight` for short sections. Wraps a Container
+// unless `bare`. Pass `labelledby` with the id of the section's H2 so the landmark has a name.
+import Container from './Container.astro';
+interface Props {
+  as?: 'section' | 'div' | 'aside';
+  tone?: 'paper' | 'linen';
+  tight?: boolean;
+  flushTop?: boolean;
+  flushBottom?: boolean;
+  bare?: boolean;
+  container?: 'default' | 'prose' | 'form';
+  id?: string;
+  labelledby?: string;
+  class?: string;
+}
+const { as: Tag = 'section', tone = 'paper', tight = false, flushTop = false, flushBottom = false, bare = false, container = 'default', id, labelledby, class: cls } = Astro.props;
+---
+<Tag
+  id={id}
+  aria-labelledby={labelledby}
+  class:list={['section', { 'section--linen': tone === 'linen', 'section--tight': tight, 'section--flush-top': flushTop, 'section--flush-bottom': flushBottom }, cls]}
+>
+  {bare ? <slot /> : <Container variant={container}><slot /></Container>}
+</Tag>

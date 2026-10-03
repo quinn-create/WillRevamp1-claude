@@ -163,3 +163,13 @@ export const flags = {
   trackingOn: Object.values(config.tracking).some(Boolean),
   blogOn: !!config.blog.enabled,
 };
+
+/** BreadcrumbList JSON-LD node matching the visible trail (for Base `jsonLd`). */
+export function breadcrumbJsonLd(p: string, lang: Lang): Record<string, unknown> | null {
+  const trail = breadcrumbs(p, lang);
+  if (trail.length < 2) return null;
+  return {
+    '@type': 'BreadcrumbList',
+    itemListElement: trail.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.label, item: absUrl(c.href) })),
+  };
+}

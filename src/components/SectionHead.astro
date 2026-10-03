@@ -1,0 +1,14 @@
+---
+// Eyebrow + H2 (+ optional intro paragraph). The H2 gets a stable id for aria-labelledby and jump links.
+import { inline, slugify } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import Eyebrow from './Eyebrow.astro';
+import Heading from './Heading.astro';
+interface Props { h2: string; eyebrow?: string; eyebrowLang?: string; id?: string; level?: 2 | 3; size?: 'h2' | 'paired' | 'h3'; intro?: string; lang?: Lang; class?: string }
+const { h2, eyebrow, eyebrowLang, id, level = 2, size, intro, lang = 'en', class: cls } = Astro.props;
+---
+<div class:list={['sec-head', cls]}>
+  {eyebrow && <Eyebrow lang={eyebrowLang}>{eyebrow}</Eyebrow>}
+  <Heading level={level} size={size} id={id || slugify(h2)} html={inline(h2, { lang })} />
+  {intro && <p class="sec-head__intro" set:html={inline(intro, { lang })} />}
+</div>

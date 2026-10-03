@@ -1,0 +1,20 @@
+---
+// Person (About page only): a real photo (reused, cropped only; never generated), name, role and ledgered text.
+// No team grid: nothing here implies a multi-attorney firm. Alt text is literal ("Katie Fults").
+import Image from './Image.astro';
+import type { ImageMetadata } from 'astro';
+interface Props { name: string; role?: string; photo?: ImageMetadata; alt?: string; size?: 'avatar' | 'aside'; headingLevel?: 2 | 3; class?: string }
+const { name, role, photo, alt, size = 'avatar', headingLevel = 3, class: cls } = Astro.props;
+const H = `h${headingLevel}` as 'h2' | 'h3';
+// Never upscale: avatar renders at 84px CSS (168px at 2x); aside at up to 22rem.
+const widths = size === 'avatar' ? [84, 168] : [352, 480, 704];
+const sizes = size === 'avatar' ? '84px' : '(min-width: 60em) 22rem, 18rem';
+---
+<div class:list={['person', `person--${size}`, cls]}>
+  {photo && <Image src={photo} alt={alt ?? name} widths={widths} sizes={sizes} class="person__photo" />}
+  <div class="person__text flow">
+    <H class="person__name">{name}</H>
+    {role && <p class="eyebrow">{role}</p>}
+    <slot />
+  </div>
+</div>

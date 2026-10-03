@@ -1,0 +1,15 @@
+---
+// Spanish panel (DESIGN-SYSTEM 7.16): tint panel, H2 in navy with lang="es", phone + "Leer en español" link.
+// Home and About only.
+import { inline, type Section } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import Blocks from './Blocks.astro';
+interface Props { section: Section; lang?: Lang; id?: string }
+const { section, lang = 'en', id = 'se-habla-espanol' } = Astro.props;
+---
+<div class="lang-panel">
+  <div class="lang-panel__head">
+    {section.h2 && <h2 id={id} lang="es" set:html={inline(section.h2, { lang: 'es' })} />}
+  </div>
+  <Blocks blocks={section.blocks} lang={lang} />
+</div>

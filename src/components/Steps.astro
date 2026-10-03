@@ -1,0 +1,37 @@
+---
+// [steps]: a table of contents. Ink top rule, ordered list, brass tabular numerals (aria-hidden; the <ol>
+// keeps native numbering semantics), title in the display serif, muted text.
+import { inline, type Section, type Block } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import SectionHead from './SectionHead.astro';
+import Blocks from './Blocks.astro';
+interface Props { section: Section; lang?: Lang; eyebrow?: string; headless?: boolean }
+const { section, lang = 'en', eyebrow, headless = false } = Astro.props;
+const idx = section.blocks.findIndex((b) => b.type === 'ol');
+const ol = idx >= 0 ? (section.blocks[idx] as Extract<Block, { type: 'ol' }>) : null;
+const before = idx >= 0 ? section.blocks.slice(0, idx) : section.blocks;
+const after = idx >= 0 ? section.blocks.slice(idx + 1) : [];
+const split = (md: string) => {
+  const m = md.match(/^\*\*([^*]+)\*\*\s*(.*)$/);
+  return m ? { title: m[1], text: m[2] } : { title: '', text: md };
+};
+---
+<div class="steps-block">
+  {!headless && section.h2 && <SectionHead h2={section.h2} eyebrow={eyebrow} lang={lang} />}
+  {before.length > 0 && <Blocks blocks={before} lang={lang} class="sec-intro" />}
+  {ol && (
+    <ol class="steps">
+      {ol.items.map((it, i) => {
+        const s = split(it);
+        return (
+          <li class="step">
+            <span class="step__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            {s.title && <p class="step__title" set:html={inline(s.title, { lang })} />}
+            <p class="step__text" set:html={inline(s.text, { lang })} />
+          </li>
+        );
+      })}
+    </ol>
+  )}
+  {after.length > 0 && <Blocks blocks={after} lang={lang} class="steps-after" />}
+</div>

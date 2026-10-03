@@ -1,0 +1,12 @@
+---
+// Practice-area card built from one copy item ("### Title" + body + "[Link](/path/)").
+import Card from './Card.astro';
+import Blocks from './Blocks.astro';
+import type { Block } from '../lib/copy';
+import type { Lang } from '../lib/site';
+interface Props { title: string; blocks: Block[]; link?: { href: string; text: string } | null; lang?: Lang; size?: 'default' | 'compact'; as?: 'div' | 'li' }
+const { title, blocks, link, lang = 'en', size = 'default', as = 'li' } = Astro.props;
+---
+<Card as={as} title={title} href={link?.href} linkLabel={link?.text} lang={lang} size={size}>
+  <Blocks blocks={blocks} lang={lang} flow={false} class="card__blocks" />
+</Card>

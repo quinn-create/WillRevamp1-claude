@@ -1,0 +1,15 @@
+---
+// Notice (DESIGN-SYSTEM 7.9): linen surface, 3px left bar, icon + words (never color alone).
+// variant: info | success | error. `role` is opt-in: "status" for success messages, "alert" for error summaries.
+import Icon from './Icon.astro';
+interface Props { variant?: 'info' | 'success' | 'error'; role?: 'status' | 'alert'; title?: string; id?: string; tabindex?: number; class?: string; [key: string]: any }
+const { variant = 'info', role, title, id, tabindex, class: cls, ...rest } = Astro.props;
+const icon = { info: 'info', success: 'circle-check', error: 'circle-alert' }[variant];
+---
+<div class:list={['notice', `notice--${variant}`, cls]} role={role} id={id} tabindex={tabindex} {...rest}>
+  <Icon name={icon} />
+  <div class="notice__body flow">
+    {title && <p class="notice__title">{title}</p>}
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,35 @@
+---
+// Media frames (DESIGN-SYSTEM 7.22): portrait (attorney photo), scene 3:2 / 4:5 (generated scenes, alt=""),
+// plate (Home opening plate, full-bleed 21:9 / 4:3 on phones). Sunken placeholder + fixed aspect ratio so a slow
+// or missing image never shifts layout.
+import type { ImageMetadata } from 'astro';
+import Image from './Image.astro';
+interface Props {
+  kind: 'portrait' | 'scene-3x2' | 'scene-4x5' | 'plate' | 'aside-photo';
+  src: ImageMetadata;
+  alt: string;
+  sizes?: string;
+  widths?: number[];
+  priority?: boolean;
+  loading?: 'lazy' | 'eager';
+  caption?: string; // HTML
+  position?: 'center' | 'top' | 'upper' | 'right' | 'lower';
+  class?: string;
+}
+const { kind, src, alt, sizes, widths, priority = false, loading = 'lazy', caption, position, class: cls } = Astro.props;
+const defaults: Record<Props['kind'], { sizes: string; widths: number[] }> = {
+  portrait: { sizes: '(min-width: 60em) 30rem, (min-width: 37.5em) 26rem, 100vw', widths: [448, 596, 896] },
+  'aside-photo': { sizes: '(min-width: 60em) 22rem, 18rem', widths: [352, 528, 673] },
+  'scene-3x2': { sizes: '(min-width: 60em) 40vw, 100vw', widths: [640, 960, 1280, 1920] },
+  'scene-4x5': { sizes: '(min-width: 60em) 36vw, 100vw', widths: [640, 960, 1280] },
+  plate: { sizes: '100vw', widths: [640, 960, 1280, 1920, 2560] },
+};
+const d = defaults[kind];
+const Tag = caption ? 'figure' : 'div';
+---
+<Tag class:list={['frame-media', `frame-media--${kind}`, cls]}>
+  <div class="frame-media__box">
+    <Image src={src} alt={alt} sizes={sizes || d.sizes} widths={widths || d.widths} priority={priority} loading={loading} position={position} />
+  </div>
+  {caption && <figcaption set:html={caption} />}
+</Tag>

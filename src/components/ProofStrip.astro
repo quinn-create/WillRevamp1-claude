@@ -1,0 +1,12 @@
+---
+// [proof-strip]: a quiet line of uppercase tracked items between hairlines. Ledgered phrases only (from copy).
+import { inline, type Section } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+interface Props { section?: Section; items?: string[]; lang?: Lang; class?: string }
+const { section, lang = 'en', class: cls } = Astro.props;
+const items: string[] = Astro.props.items || (section ? section.blocks.flatMap((b) => (b.type === 'ul' ? b.items : b.type === 'p' ? [b.md] : [])) : []);
+---
+<ul class:list={['proof', cls]} aria-label={t(lang).atAGlance} role="list">
+  {items.map((it) => <li set:html={inline(it, { lang })} />)}
+</ul>

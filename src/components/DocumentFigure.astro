@@ -1,0 +1,23 @@
+---
+// Document figure (certificate scans IMG06/IMG07): shown whole (no crop) on card surface with a hairline and
+// 16px padding, caption below, "View full size" link to an optimized large file. Alt text names the document
+// from the ledger quote; never "certified"/"certification" as a claim about Will.
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Image from './Image.astro';
+import Icon from './Icon.astro';
+import { t } from '../lib/i18n';
+import type { Lang } from '../lib/site';
+interface Props { src: ImageMetadata; alt: string; caption: string; lang?: Lang }
+const { src, alt, caption, lang = 'en' } = Astro.props;
+const full = await getImage({ src, width: src.width, format: 'webp' });
+---
+<figure class="doc-figure">
+  <div class="doc-figure__frame">
+    <Image src={src} alt={alt} widths={[480, 640, 960]} sizes="(min-width: 60em) 30rem, 100vw" />
+  </div>
+  <figcaption>
+    <span set:html={caption} />
+    <a class="link-arrow" href={full.src}><span>{t(lang).viewFullSize}</span><Icon name="arrow-up-right" /></a>
+  </figcaption>
+</figure>

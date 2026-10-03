@@ -1,0 +1,9 @@
+---
+// Dev-only route for the components sheet (src/pages/_components.astro). Outside `astro dev` getStaticPaths
+// returns no paths, so nothing is built into dist/ and nothing reaches the sitemap.
+import Sheet from '../_components.astro';
+export function getStaticPaths() {
+  return import.meta.env.DEV ? [{ params: { sheet: 'components' } }] : [];
+}
+---
+<Sheet />

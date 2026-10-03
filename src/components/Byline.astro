@@ -1,0 +1,19 @@
+---
+// Byline [borrowed from C "Neighbor"]: small 4:5 photo of Will beside his name, title and street address
+// (DESIGN-SYSTEM 7.14). The photo is alt="" because the name sits beside it. Never a heading, never a link.
+// Name, title and street come from the facts map (same source as the footer NAP).
+import Image from './Image.astro';
+import willByline from '../assets/people/will-byline.webp';
+import { firm, type Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+interface Props { lang?: Lang; class?: string }
+const { lang = 'en', class: cls } = Astro.props;
+---
+<div class:list={['byline', cls]}>
+  <Image src={willByline} alt="" widths={[72, 96, 144, 192]} sizes="(min-width: 60em) 96px, 72px" ratio="4x5" loading="eager" class="byline__photo" />
+  <div class="byline__text">
+    <p class="eyebrow">{t(lang).attorneyAtLaw}</p>
+    <p class="byline__name">{firm.attorney.value}</p>
+    <p class="byline__addr">{firm.street.value}, {firm.city.value}</p>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+---
+// Default renderer for a page's copy sections (everything after [hero]), mapping each hint to its component:
+// proof-strip → ProofStrip, cards → CardGrid, steps → Steps, faq → FAQ, testimonial → Testimonial (linen),
+// stats → Stats, cta-band → CTABand, prose → editorial split (or plain prose with `prose="flow"`).
+// Pages may render sections themselves instead; this keeps every hinted block on-system by default.
+import type { Section as CopySection } from '../lib/copy';
+import { slugify } from '../lib/copy';
+import type { Lang } from '../lib/site';
+import Section from './Section.astro';
+import SectionHead from './SectionHead.astro';
+import Blocks from './Blocks.astro';
+import ProofStrip from './ProofStrip.astro';
+import CardGrid from './CardGrid.astro';
+import Steps from './Steps.astro';
+import FAQ from './FAQ.astro';
+import Testimonial from './Testimonial.astro';
+import Stats from './Stats.astro';
+import CTABand from './CTABand.astro';
+import Split from './Split.astro';
+interface Props { sections: CopySection[]; lang: Lang; prose?: 'split' | 'flow'; container?: 'default' | 'prose'; skipHero?: boolean }
+const { sections, lang, prose = 'split', container = 'default', skipHero = true } = Astro.props;
+const list = sections.filter((s) => !(skipHero && s.hint === 'hero'));
+const id = (s: CopySection) => (s.h2 ? slugify(s.h2) : undefined);
+---
+{list.map((s) => {
+  switch (s.hint) {
+    case 'proof-strip':
+      return <div class="container"><ProofStrip section={s} lang={lang} /></div>;
+    case 'cards':
+      return <Section labelledby={id(s)} container={container}><CardGrid section={s} lang={lang} /></Section>;
+    case 'steps':
+      return <Section labelledby={id(s)} container={container}><Steps section={s} lang={lang} /></Section>;
+    case 'faq':
+      return <Section labelledby={id(s)} container={container}><FAQ section={s} lang={lang} layout={container === 'prose' ? 'stack' : 'split'} /></Section>;
+    case 'testimonial':
+      return <Section labelledby={id(s)} tone="linen" container={container}><Testimonial section={s} lang={lang} layout={container === 'prose' ? 'stack' : 'split'} /></Section>;
+    case 'stats':
+      return <Section labelledby={id(s)} tight container={container}>{s.h2 && <SectionHead h2={s.h2} lang={lang} />}<Stats section={s} lang={lang} /></Section>;
+    case 'cta-band':
+      return <CTABand section={s} lang={lang} />;
+    default:
+      return prose === 'split' && s.h2 ? (
+        <Section labelledby={id(s)} container={container}>
+          <Split sticky>
+            <SectionHead slot="aside" h2={s.h2} lang={lang} />
+            <Blocks blocks={s.blocks} lang={lang} />
+          </Split>
+        </Section>
+      ) : (
+        <Section labelledby={id(s)} container={container} tight>
+          <div class="flow">
+            {s.h2 && <SectionHead h2={s.h2} lang={lang} />}
+            <Blocks blocks={s.blocks} lang={lang} />
+          </div>
+        </Section>
+      );
+  }
+})}

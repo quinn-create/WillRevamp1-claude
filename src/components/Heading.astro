@@ -1,0 +1,16 @@
+---
+// Semantic level and visual size are independent: <Heading level={2} size="paired">.
+// Text comes from `html` (inline markdown already rendered) or the slot.
+interface Props {
+  level?: 1 | 2 | 3 | 4;
+  size?: 'display' | 'h1' | 'h2' | 'paired' | 'h3' | 'h4';
+  id?: string;
+  html?: string;
+  class?: string;
+  lang?: string;
+}
+const { level = 2, size, id, html, class: cls, lang } = Astro.props;
+const Tag = `h${level}` as 'h1' | 'h2' | 'h3' | 'h4';
+const sizeClass = size ? ({ display: 'display-xl', h1: 'h1', h2: 'h2', paired: 'h2 h2--paired', h3: 'h3', h4: 'h4' } as const)[size] : undefined;
+---
+{html !== undefined ? <Tag id={id} lang={lang} class:list={[sizeClass, cls]} set:html={html} /> : <Tag id={id} lang={lang} class:list={[sizeClass, cls]}><slot /></Tag>}

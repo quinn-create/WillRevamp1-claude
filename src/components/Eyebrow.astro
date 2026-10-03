@@ -1,0 +1,6 @@
+---
+// Uppercase tracked small text above a heading. Always a <p>, never a heading.
+interface Props { lang?: string; class?: string }
+const { lang, class: cls } = Astro.props;
+---
+<p class:list={['eyebrow', cls]} lang={lang}><slot /></p>
