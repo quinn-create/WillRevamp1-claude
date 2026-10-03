@@ -39,6 +39,11 @@ Every call made without asking, with its reason. Newest stage last.
 - **Gate 3 stop → Build A.** The Creative Director recommends A "Counsel" (borrowing B's full-number phone button and C's small photo of Will). Per the operator's instruction to finish without stopping, this is recorded as the Build decision; the run continues to Stages 3b–7.
 - `tools/compare.mjs` also rewrites `imagesrcset`; web fonts cannot load over file:// in Chromium (expected — the unzipped folders fall back to system fonts; COMPARE.html screenshots show the real fonts).
 
+### Stage 3b + 5 — Design system and build (direction A "Counsel")
+- Borrowed elements (≤ 2): B's full-number header call button; C's small byline photo of Will beside his name.
+- 24 site-wide Higgsfield scenes (54 credits incl. 3 rejected and regenerated). Run total: 33 images kept, 72 credits.
+- Build phases P100–P800 each passed `npm run build` + `check.mjs --build`; `check.mjs --final` passed (60 pages: 30 EN + 30 ES incl. 404s/thank-you). Pages are rendered by catch-all EN/ES routes from the copy files plus a per-page verification pass (kit: "one pass per page").
+
 ## A01
 
 # A01 decisions: old-URL inventory (inventory/old-urls.json)
@@ -269,6 +274,18 @@ Every call made without asking, with its reason. Newest stage last.
 - **Spanish-service claims:** use "Se habla español" (F092) and "Spanish-speaking services available" (F094). Hold "full bilingual Spanish services" (F093) until the owner answers C13. This narrows, never expands, law-firm rule 10.
 - **One CTA wording site-wide:** "Free consultation" + "Call (615) 410-7290" (ES "Consulta gratuita" + "Llame al (615) 410-7290"), always a `tel:` link; secondary "Send a short message".
 - **Design directions:** all three keep the logo blue #447CB7 as the anchor (large type, fills and UI only) with a darker text-blue per direction; contrast ratios for every proposed pair were computed and recorded in `design/DESIGN-BRIEF.md`. Verdict reserves a signal gold (#F2B544, ink text 10.23:1) for CTAs only, with a brick fallback.
+
+### A11 — Stage 3b design system (direction A "Counsel")
+
+- **Build direction:** A "Counsel", per line 1 of `mockups/RECOMMENDATION.md` (operator asked the run to finish without stopping). Spec: `design/DESIGN-SYSTEM.md`; tokens: `src/styles/tokens.css` (92 `@pair` declarations, all pass AA, verified with the same formula as `tools/check.mjs`).
+- **Borrowed element 1 — B "Verdict" full-number header call button:** the header call button shows "(615) 410-7290" at every width, phones included (A showed an icon only on phones). Measured: the number is 117 px at 14 px Public Sans 600, so the phone header fits logo 120 px + call + 44 px menu at 360 px and logo 96 px + 13 px number at 320 px. Consequence: on phones the Español toggle leaves the header row and becomes a 44 px language strip above the header (not sticky), keeping the one-tap switch to Spanish in the first phone screen.
+- **Borrowed element 2 — C "Neighbor" byline:** 72/96 px 4:5 crop of IMG03 beside "Attorney at Law · Will Fraley · 509 W College St, Murfreesboro", in heroes of Home (< 60em), hubs, practice pages, Contact, FAQs, Testimonials, In the News. `alt=""` (name adjacent).
+- **No dark mode.** Light scheme only (`color-scheme: light`): one audited palette and one set of contrast proofs.
+- **Motion tightened to the brief:** mockup scroll-reveal (500 ms) and the scroll-timeline header hairline are removed; every transition ≤ 200 ms and opt-in under `prefers-reduced-motion: no-preference`.
+- **Fonts:** Newsreader + Public Sans, the four mockup woff2 files (latin + latin-ext each), one preload (newsreader-latin). Fallback metrics re-measured in Chromium: Newsreader 108% vs Times (opsz 60 is 109.8%, opsz 32 is 104.3%), Public Sans 104% vs Arial. Optional later: instance Newsreader to wght 400–600 / opsz 24–72 with npm `subset-font` only if LCP misses budget.
+- **Dropdowns** become disclosure buttons (parent label stays a link) with Esc support, for WCAG 1.4.13 and touch tablets.
+- **Consent banner:** non-modal, Accept and Reject as equal-weight secondary buttons, shown only once a non-essential vendor is configured (none at launch).
+- **Scene slots for Stage 5 (set A):** keep A-hero, A-practice, A-contact; add A-services, A-family, A-injury, A-adoption, A-dcs (3:2). Practice child pages, About, Testimonials, FAQs, News, policy, thank-you, 404 and blog use no generated image.
 
 ## A12
 
@@ -504,6 +521,25 @@ Every call made without asking, with its reason. Newest stage last.
   C-practice (a distant blank sign post seen edge-on; nothing readable), B-contact (the phone is soft and side-on, with no
   digits showing).
 - No placeholders were needed; Higgsfield was available on the first ToolSearch.
+
+## Stage 5 — site-wide image pass (direction A "Counsel", set `site`)
+
+- **Slot naming.** New site images are set `site` (`images/generated/site/<slot>.*`, prompts `images/prompts/site-<slot>.txt`);
+  map in `images/SLOTS-SITE.md`. The design system's planned `A-services`, `A-family`, `A-injury`, `A-adoption`, `A-dcs`
+  subjects (9.2) were kept and delivered as `services`, `family`, `injury`, `adoption`, `dcs`. Mockup images reused unchanged:
+  `A-hero` -> Home, `A-practice` -> `/criminal-defense/`, `A-contact` -> `/contact-us/`.
+- **Scope.** Per the orchestrator brief, one scene also for each criminal child page (8), family child page (5), About,
+  Testimonials, FAQs and In the News, plus `og-default` (16:9, centered for a 1200x630 crop) and `texture` (16:9 paper).
+  Design-system 9.1 still governs use: at most one image-led moment per page, decorative `alt=""`, frames may be omitted for
+  speed. About's scene is an office interior to pair with the real IMG02 portrait; it must never be captioned as Will's office.
+- **Sensitive practices** use non-literal scenes only: DUI = empty country road at dusk; drug crimes = empty bench on a foggy
+  courthouse lawn; violent crimes = closed courthouse doors; sex crimes = rain on an office window; domestic assault = calm river
+  bend under a bluff; probation = greenway path under autumn trees; custody/adoption/DCS = porch swing, window seat, porch with
+  empty rockers. No handcuffs, weapons, injuries, children, police imagery or courtrooms.
+- **Credits.** 28 submissions, 27 billed (one failed job unbilled), 54 credits (cap 250). Balance 643.07 -> 589.07.
+- **Rejections (3):** injury (translucent overlay panel artifact on the left third), about (gilt pseudo-lettering on book
+  spines), cd-drug-crimes (background sign boards with pseudo-lettering and a lit window sign). Each kept on attempt 2.
+- No placeholders were needed; Higgsfield was available on the first call.
 
 ## A16
 
@@ -829,3 +865,227 @@ Every call made without asking, with its reason. Newest stage last.
 - "Last reviewed: {{last_reviewed}}" = "Última revisión: {{last_reviewed}}" (the builder fills the same token; the
   date should render in Spanish format on /es/ pages).
 - Results disclaimer not needed on these pages (no results are mentioned, matching EN).
+
+## A19
+
+### A19 — design-system engineer (Stage 5, P100–P300)
+
+**P100 foundation**
+- **Fonts.** `public/fonts/` holds the four variable WOFF2 files (Newsreader + Public Sans, latin + latin-ext) copied byte-for-byte from `mockups/A/public/fonts/`, which A11 downloaded once from Google Fonts in Stage 3 (DESIGN-SYSTEM 3.1 says "copy from mockups/A/public/fonts"). No second download, no Google Fonts request at runtime. `@font-face` with `unicode-range` and `font-display: swap` stays in `src/styles/tokens.css` (A11's file, values unchanged).
+- **Two font preloads, not one.** The build kit (§1, binding) asks for two preloaded files; DESIGN-SYSTEM 3.1 says one. The kit wins: `Base.astro` preloads `newsreader-latin.woff2` (H1 face, 132 KB) and `public-sans-latin.woff2` (body face, 27 KB). The second costs 27 KB and removes a late body-font swap. A23 may drop it if Lighthouse shows contention.
+- **Facts in code.** `src/lib/site.ts` builds the NAP, hours and socials from a small map of fact IDs (F001, F011, F013, F015, F016, F019–F021, F024–F029, F031, F032) and fails the build if a value is not contained in its fact's `exact_quote`. Hours follow the footer (F031/F032: Friday closes 4:00 p.m.), not the schema (F033), per CONFLICTS C07; `firm.hours` carries `close: '16:00'` for Friday so A23's schema matches.
+- **Copy loader.** `src/lib/copy.ts` loads `copy/pages/<slug>.md` / `es/<slug>.md` with `yaml`, strips every `{fact:…}` tag (frontmatter included), splits sections on the section hints (hero, proof-strip, cards[:N], faq, cta-band, testimonial, steps, stats; un-hinted H2 blocks become `prose`), keeps the block directives (`[vendor: x]`, `[vendor-off: x]`, `[consent-controls]`) as `directive` blocks for A22, and renders a minimal markdown subset. On EN pages "Se habla español" and "Llame al … para una consulta gratuita." get `lang="es"`.
+- **Logo.** `src/assets/brand/logo.webp` is IMG01 (Logo-3.webp, 400×62) re-encoded losslessly; `logo-wordmark.webp` is its top 42 px (tagline removed) for phone widths, per DESIGN-SYSTEM 7.5. Neither is ever rendered wider than 400 px at 2x.
+- **Byline photo.** `src/assets/people/will-byline.webp` is a 320×400 (4:5) head-and-shoulders crop of IMG03 (crop only, no retouching), served at 72/96 px CSS width (≤ 192 px at 2x).
+- **Favicon + default social card.** The old site had no favicon (none in the crawl); the Astro starter rocket is replaced by a thin-stroke "W" in Counsel blue on paper (`public/favicon.svg`, `favicon.ico`, `apple-touch-icon.png`). Default `og:image` is `public/og/default.jpg` (1200×630, the logo at its native 400 px on paper, never upscaled). A23 may replace both with per-page cards.
+- **Interim home.** `src/pages/index.astro` was the Astro starter (it would fail the build check); it now renders the home copy through the foundation so P100 can be checked. A20 owns the real Home template.
+
+**P200 components** (`src/components/`, styles in `src/styles/components.css`)
+- Built: Button (primary/secondary/ghost/inverse/ghost-inverse; default, hover, focus, active, disabled, loading), CallCta (tel: button + "Free consultation · Se habla español" note + ghost "Send a short message"), Card (whole-card link via `::after`, focus ring on the card through `:has`), ServiceCard, CardGrid (copy `[cards]`/`[cards: N]` → link cards, static cards or an info list), Container, Section, Split, Eyebrow, Heading (level and size independent), SectionHead, Blocks (copy blocks + A22 directive wrappers), ProofStrip, CTABand, FAQ (native `<details>`, no sibling-closing script), Testimonial (verbatim, disclaimer always rendered), Steps, Stats (copy-only figures), Image (astro:assets `<Picture>` AVIF+WebP, never upscaled), Frame (portrait / scenes / plate / aside photo), Byline [borrowed: C], Person (About only, no team grid), Icon (inline Lucide, stroke 1.75), LanguageToggle (header / block / strip / footer / inline), Breadcrumbs (phones show only the parent link), Notice, InfoList, NewsItem, PostCard, DocumentFigure (whole scan + "View full size"), SpanishPanel, PageHero, Sections (default hint → component renderer for A20).
+- **No inline style attributes in components.** Image ratios and focal points are classes (`ratio-4x5`, `pos-lower` …) so a strict CSP (`style-src 'self'`) from A23 cannot break layout. Only the dev-only sheet uses inline swatch styles.
+- **New contrast pair** (no value changed): `--lang-strip-text on --color-surface-tint-pressed` (6.34:1) declared in `tokens.css` for the language strip's pressed state, which DESIGN-SYSTEM 7.6 specifies but A11 did not list.
+- **Components sheet.** `src/pages/_components.astro` (underscore: never routed, never in dist or the sitemap). Viewable only under `astro dev` at `/dev-only/components/` through `src/pages/dev-only/[sheet].astro`, whose `getStaticPaths` returns `[]` unless `import.meta.env.DEV`. A directory-scoped param route was chosen over a root catch-all so it cannot collide with any `[...slug]` route A20 may add.
+- **Testimonial omission mark.** A quote that ends mid-sentence at the source (Katherine S., F133 ends "I highly recommend") gets a visual " …" after the verbatim words, per DESIGN-SYSTEM 7.11; the words themselves are untouched.
+
+**P300 shell** (`src/layouts/Site.astro`, `src/components/{Header,Logo,MenuDialog,CallBar,Footer,NotFoundPage,ThankYouPage}.astro`, `src/styles/shell.css`)
+- **Layout API for A20–A22.** Every public page renders inside `Site.astro` (props: `title`, `description`, `path`, `lang`, `noindex`, `pageType`, `jsonLd`, `ogImage`, `isNotFound`; slots: default, `head`, `end`). It adds skip link → language strip (phones) → header → `<main id="main" tabindex="-1">` → footer → call bar → menu `<dialog>`. `Base.astro` alone is the bare document.
+- **Header.** 68 px sticky glass with a static hairline; logo is IMG01 via `Logo.astro` (art-directed: tagline-free wordmark < 37.5em, full logo above; AVIF + WebP; never above the 400 px source). Six nav items from `plan/sitemap.json` `nav`; Criminal Defense, Family Law and About have a separate chevron disclosure button (`aria-expanded`/`aria-controls`), plus hover and focus-within; Esc closes (also hover-opened panels) and returns focus. Ancestor items get `aria-current="true"`, the page itself `aria-current="page"`. The call button shows "(615) 410-7290" at every width (`tel:+16154107290`), with a visually hidden "Call"/"Llamar al" prefix for the accessible name.
+- **Spanish desktop navigation uses the menu dialog.** Measured: the six Spanish labels need about 920 px inline, which does not fit beside the logo and the full-number call button in the 1136–1216 px container at any width (English fits: 1178 of 1178 px at 1216). Instead of truncating or renaming A18's labels, Spanish pages keep the menu button at ≥ 76em with a visible "Menú" label. All six items and their children stay one click away.
+- **Menu dialog.** Native `<dialog>` + `showModal()`; close button, Esc, backdrop click; `aria-expanded` synced; focus returns to the opener; the call bar hides while it is open. Without JS the menu control is a link to `#site-footer` (the footer carries every link), and the dialog stays hidden.
+- **Footer.** NAP, hours (Friday 9:00 a.m. – 4:00 p.m. from F032, per C07), Google Maps link (F024), practice + site links, the language toggle, socials as published (Facebook, LinkedIn, X, AVVO, same order as the old footer; same tab, `rel="noopener"`), the legal line ("…not legal advice…" / "…no constituye asesoramiento legal…"), © year + firm name, and **"Cookie settings" as a link** to `/cookie-settings/` (`/es/configuracion-de-cookies/`) carrying `data-cookie-settings`. It works with no JS; A22 should intercept clicks on `[data-cookie-settings]` to reopen the consent manager in place. I did not use `data-consent`, so A22's own markup has to satisfy the final gate's consent check. No agency credit.
+- **Shipped JS:** one inline module of about 0.5 KB gzipped (menu dialog + disclosure). No scroll-reveal script: DESIGN-SYSTEM section 6 removes it, and the kit allows it but does not require it.
+- **404.** `src/pages/404.astro` → `dist/404.html`; `src/pages/es/404.astro` → `dist/es/404/index.html` (`/es/404/` as the brief asks). Both are noindex, with no canonical or hreflang. **Hand-off to A23:** Cloudflare Pages serves the *nearest `404.html`*, so `/es/<missing>` gets the English 404 unless the build also writes `dist/es/404.html`. Copy `dist/es/404/index.html` → `dist/es/404.html` in an `astro:build:done` hook in `astro.config.mjs`, which is outside A19's files. Astro names `src/pages/es/404.html.astro` `es/404.html/index.html`, so a page file cannot produce it.
+- **Thank-you.** `/thank-you/` and `/es/gracias/` (noindex) from `copy/pages/thank-you.md` (+ es): success icon, H1, deck, call button labelled with the copy's `primary_cta` ("…if it cannot wait"), steps, info items (While you wait / Office hours / court-date note), link row, CTA band.
+- **Interim home.** `src/pages/index.astro` now renders the home copy through PageHero + Sections inside the shell, so the chrome is exercised. A20 replaces it.
+- **Verified:** no horizontal overflow at 320/360/390/600/768/1024/1216/1280 on every built page (EN + ES); axe 0 critical / 0 serious and 0 invisible focus stops on all 5 pages; Playwright: dialog open/Esc/backdrop/focus return, disclosure Enter/Tab/Esc/hover, no-JS fallback, and the skip link all behave as specified.
+
+## A20
+
+### A20 — page builder (Stage 5, P400)
+
+- **Routes.** `src/pages/[...slug].astro` (EN) and `src/pages/es/[...slug].astro` (ES, at `esPath`) build every `plan/sitemap.json` page with `publish !== false`, except `/404/` and `/thank-you/` (own route files by A19). `/blog/` (+ `/es/blog/`) is added only when `site.config.json` `blog.enabled` is true; `copy/pages/blog/_template.md` has no route and is never built. A19's interim `src/pages/index.astro` is removed; Home comes from the catch-all. 60 pages build (29 EN + 29 ES + two 404s).
+- **Renderer.** `src/pages/_templates/PageView.astro` picks the DESIGN-SYSTEM 10 template per page (`src/pages/_lib/pages.ts#templateOf`) and renders every copy section in copy order through A19's components; the build fails if any copy section is left unrendered, if a hub's cards do not link every sitemap child, or if the `[cta-band]` is not the last section. Page-template strings A19's dictionary lacks live in `src/pages/_lib/strings.ts` (no facts in them).
+- **Hero scenes.** Home (`A/hero`, opening plate under the proof strip), criminal-defense hub (`A/practice`), Contact (`A/contact`, beside the form) use the chosen direction's set; the other hubs and every practice page use set `site` per `images/SLOTS-SITE.md`. Hub and practice scenes are eager with `fetchpriority="high"` (the LCP image at ≥ 60em). Generated `about`, `testimonials`, `faqs`, `news`, `og-default`, `texture` slots are not placed: DESIGN-SYSTEM 9.2 keeps those pages image-free (About uses Will's real photos) and the OG/texture slots belong to A23.
+- **Home LCP.** On Home the H1 is the intended LCP on phones (DESIGN-SYSTEM 9.1), so the hero portrait (IMG03) is eager but not `fetchpriority="high"`; the plate is lazy. A23 may change this after Lighthouse.
+- **Originals not shipped.** astro:assets copies an imported original into `dist/` once any property of the import is read (e.g. `width`), which shipped every 8–11 MB PNG master (dist was 257 MB). `pages.ts#derivativesOnly` hands the components a plain copy of the metadata so only AVIF/WebP derivatives ship (dist 27 MB), and only the masters a page uses are imported. A19's logo and byline originals (small) still ship via their components.
+- **Real photos.** About: IMG02 (doorway) as the hero portrait (largest candidate 673 px = source), IMG03 (desk) beside "How Will practices", IMG06/IMG07 certificates as document figures (alt text from F064/F065/F066), Katie Fults' IMG05 at 84 px inside her own section only. Home: IMG03 hero portrait (crop keeps the shelf mug out), IMG02 beside "Why people call". Nothing upscaled.
+- **Testimonials.** Rendered by `_templates/Quotes.astro` (A19's markup and classes) so lines the copy places before a quote stay before it ("Testimonio publicado en inglés:"), and the verbatim English quotes and pull lines carry `lang="en"` on Spanish pages. Every testimonial block shows the results disclaimer.
+- **Vendor directives.** `[vendor: x]` / `[vendor-off: x]` follow `site.config.json` at build time and govern the blocks after them up to the next directive or sub-heading; a sub-heading left empty is dropped (Privacy hides the GA4/Clarity/Meta/TikTok/Turnstile headings at launch). Note for A22: on Cookie Settings the GPC sentence sits inside the `[vendor-off: tracking]` passage, so it disappears once a tracker is configured; move it above the directive in the copy if it should always show.
+- **Last reviewed.** `{{last_reviewed}}` lines become the policy hero's "Last reviewed: <time datetime="2026-10-03">October 3, 2026</time>" (`pages.ts#LAST_REVIEWED`); A22 owns the date.
+- **Hand-offs.** Contact renders `src/components/forms/ContactForm.astro` (props `{ lang }`) inside `<section id="form">` if A21 creates it; until then a notice says online messages are off and gives the tel: and mailto: links. Cookie Settings renders `src/components/consent/ConsentControls.astro` (props `{ lang }`) after "Your choices" if A22 creates it; until then an empty `<div class="directive" data-directive="consent-controls">` marks the spot.
+- **JSON-LD.** Every non-policy page: `LegalService` (firm: NAP, geo, map, hours from F031/F032, `areaServed` Murfreesboro + Rutherford/Coffee/Wilson counties as F035, `knowsLanguage`, `sameAs` = the four old-footer profiles) and `Person` (Will Fraley, "Attorney at Law", F011). Hubs and practice pages add a `Service` provided by the firm; any page with an `[faq]` adds an `FAQPage` node; every non-home page a `BreadcrumbList` matching the visible trail. Base adds `WebSite` + the page node with `inLanguage` en-US / es-US. No ratings or reviews markup. Katie Fults is not in structured data (law-firm rule 12).
+- **Hero CTA.** The call group label stays "Call (615) 410-7290" with the "Free consultation · Se habla español" note beside it; together they carry each page's `primary_cta`. Contact drops the ghost "Send a short message" because its deck already links to `#form` on the same page.
+- **Per-page pass.** A script checked all 58 sitemap pages (EN + ES): each page is built, has one H1 equal to the copy H1, the right `<html lang>`, every copy H2/H3 shown as a heading (vendor-off sub-headings excepted), no `{fact:` and no `{{`, a hreflang pair that resolves to the sibling page and points back, alt/width/height on every image, and every internal link, image file and `#anchor` resolves. 0 problems. No horizontal overflow at 320/390/768/1280 on any of the 60 built pages.
+
+## A21
+
+# A21 decisions (P500 — contact form)
+
+- **D-A21-1: Required fields follow the approved copy (D-A14-20), not the P500 task line.** The P500 brief
+  marks Email* and "How can we help?"* as required. But the contact copy rendered directly above the form says
+  "Leave your name and phone number… Email and a short note are optional" (EN and ES), and the design system
+  (D-A14-20) already settled on that. Requiring them would make the page contradict itself. Result: First name,
+  Last name and Phone are required. Email, Best time, New client and How can we help? are marked "(optional)".
+  All 7 fields from inventory/forms.json gform_1 are present. If the owner wants email or the message required,
+  change `required` in `src/components/forms/ContactForm.astro` (defs) and the sentence in copy/pages/contact-us.md
+  together.
+- **D-A21-2: Configured-off state = disabled fieldset, no action, no submit, no script.** With
+  `forms.web3formsAccessKey` empty, all fields render disabled (`<fieldset disabled>`), the `<form>` has no
+  action, there is no submit button, and the form script is not shipped. A note at the top of the form says
+  online messages are not on yet and gives the tel: and mailto: links. This follows the P500 task ("renders
+  DISABLED … no fake submit"). It is stricter than DESIGN-SYSTEM 7.9 ("fields enabled"), which would let people
+  type a message they cannot send.
+- **D-A21-3: Non-confidentiality notice comes from the copy, rendered inside the form directly above Submit.**
+  PageView.astro (one small integration edit) takes the copy's "Please read before you send" paragraph (the
+  one that mentions an attorney-client relationship) out of the section prose and passes it to the form as
+  `notice`. So the text appears once, in the copy's wording, as an info notice above Submit (law-firm rule 8,
+  D-A13-16). If no copy block is passed, the component falls back to the same wording in its own EN/ES strings.
+- **D-A21-4: Progressive enhancement.** With a key set, the form is a plain `POST` to
+  https://api.web3forms.com/submit with hidden `access_key`, `subject`, `from_name`, `language` and `redirect`
+  (absolute thank-you URL of the page language). Without JS it still works natively, and Web3Forms redirects to
+  the thank-you page. With JS (`src/components/forms/contact-form.ts`, about 1.1 KB gzipped, inlined only on
+  /contact-us/ and /es/contacto/), the script turns off native bubbles and validates on blur. It clears an error
+  once the value is fixed, never while the person is still typing. On submit it shows an error summary
+  (role=alert, focused, links to fields). It sends with fetch (Accept: application/json, `redirect` removed,
+  `name` = first + last), shows a success notice that replaces the form (role=status, focused), then goes to
+  /thank-you/ or /es/gracias/ after 0.9 s. On failure it shows an error notice with the phone link, keeps the
+  typed text and re-enables the button.
+- **D-A21-5: Spam.** Honeypot input `botcheck`: off-screen, aria-hidden, tabindex -1, autocomplete off. Web3Forms
+  also rejects it server side, so it works without JS too. Time-trap: a JS submit less than 3 s after page load is
+  rejected with "That was very fast…". Cloudflare Turnstile: the widget div and
+  challenges.cloudflare.com/turnstile/v0/api.js render only when `forms.turnstileSiteKey` is set. When it is
+  set, the script holds back a submit that has no `cf-turnstile-response` token.
+- **D-A21-6: Labels and messages.** Labels sit above the fields, with "(optional)" in muted text and no
+  asterisks. There is helper text under the Email, Phone and message labels. Error copy is specific (EN/ES)
+  and is shown with an icon, `aria-invalid` and `aria-describedby`. Option lists are lightly reworded from
+  forms.json ("ASAP" → "As soon as possible"; "Yes, I am a potential new client." → "Yes, I may be a new
+  client"). The 600-character limit comes from the old form. Phone needs 10–15 digits (native `pattern` too).
+  autocomplete uses given-name, family-name, email and tel.
+- **D-A21-7: Test harness `tools/form-test.mjs`** writes results to plan/checks/form-test.json. It checks the
+  off state on dist/. It builds into a temp outDir with a dummy key, restoring site.config.json byte-for-byte in
+  `finally`. It mocks Web3Forms with Playwright routing and aborts every other external request. It covers EN
+  and ES: empty submit, blur, time-trap, honeypot, endpoint failure, and a valid submit that must reach the
+  thank-you page. A second build with Cloudflare's public test site key checks that the Turnstile script loads
+  only then and that a submit without a token is held back. Result: 100/100 assertions pass.
+
+## A22
+
+# A22 decisions (P600 — consent + legal)
+
+- **D-A22-1: No banner while no tracking ID is configured (launch state).** The P600 task left the choice open
+  ("one sentence … or not shown at all"); DESIGN-SYSTEM 7.20 says no banner. With every `tracking.*` key empty
+  there is nothing optional to ask about, so `ConsentManager.astro` renders nothing and no consent script ships on
+  any page except Cookie Settings (EN/ES). Cookie Settings still shows the three categories, lets a visitor save a
+  choice (stored for later, as its copy promises) and says no tool is on via the copy's `[vendor-off]` blocks.
+- **D-A22-2: Banner buttons = Accept all · Reject all · Settings as three identical secondary buttons.** The kit
+  (§5, binding) asks for equal visual weight for all three; DESIGN-SYSTEM 7.20 had Settings as a text link. The kit
+  wins. Settings expands the category rows in place and reveals "Save my choices" (also secondary, so the call
+  button stays the only solid blue block). Non-modal `<section aria-label>` region, fixed bottom, above the phone
+  call bar; `html.consent-open` adds scroll-padding/body padding so focused content and the footer are not hidden
+  (WCAG 2.4.11). On Cookie Settings, "Save my choices" is primary with Accept all / Reject all secondary (7.20).
+- **D-A22-3: Storage.** First-party cookie `consent` (Path=/, Max-Age 180 days, SameSite=Lax, Secure on https)
+  plus a localStorage mirror, both `{v: consentPolicyVersion, ts: ISO time, analytics, marketing, vendors: [ids
+  configured when chosen]}`. A choice is asked again when the version differs, it is older than 180 days, or a
+  vendor was configured after it (so tools/configure.mjs adding a key re-asks even without a version bump, which
+  is what the Cookie Settings copy promises). The mirror restores a lost cookie.
+- **D-A22-4: GPC = Reject, no banner.** `navigator.globalPrivacyControl === true` forces Analytics and Marketing
+  off even over a stored Accept; the optional switches show off and disabled, with a notice saying why.
+- **D-A22-5: Vendor loading.** `vendors.ts` puts only configured vendors (public IDs, shape-validated at build so
+  a pasted secret or snippet fails the build) into an inert JSON config; `loaders.ts` injects GA4 (gtag + Consent
+  Mode mirroring the choice), Clarity (`clarity('consent')`), Meta Pixel and TikTok Pixel only after their category
+  is accepted. No static tracker `<script src>` exists in any page. Withdrawing a category stops it from the next
+  page and clears that category's first-party cookies (_ga, _clck, _fbp, _ttp …).
+- **D-A22-6: "Last reviewed" = build date** (America/Chicago) on Privacy, Accessibility and Cookie Settings, per
+  the P600 task. The policy pages are regenerated from site.config.json on every build (vendor sections follow the
+  keys). `POLICY_REVIEWED=YYYY-MM-DD npm run build` pins a date. Implemented by changing `LAST_REVIEWED` in
+  src/pages/_lib/pages.ts (A20 left it for A22).
+- **D-A22-7: Edits outside src/components/consent/** (all integration points prepared by A19/A20 or legal pages):
+  `src/layouts/Site.astro` mounts `<ConsentManager>` (its header said "A22 adds consent"); `src/pages/_lib/pages.ts`
+  `LAST_REVIEWED`; `copy/pages/cookie-settings.md` and `copy/pages/es/cookie-settings.md` gain the
+  `Last reviewed: {{last_reviewed}}` / `Última revisión: {{last_reviewed}}` hero line the other two policy pages
+  already had (no fact changes). The footer "Cookie settings" link (A19, `data-cookie-settings`) re-opens the
+  banner with settings in place when a vendor is configured, moves to the controls on Cookie Settings, and is a
+  plain link to Cookie Settings otherwise.
+- **D-A22-8: Test tool `tools/consent-test.mjs`** (pattern of A21's form-test): off-state checks on dist/, then a
+  temporary build with dummy IDs (site.config.json restored byte-for-byte) driving EN + ES in Playwright with
+  tracker hosts intercepted: 80 assertions, all pass (plan/checks/consent-test.json). axe (WCAG 2.2 AA tags) on the
+  banner and on Cookie Settings at 375 and 1280 px: 0 violations.
+
+## A23
+
+# A23 decisions (P700 routing & SEO, P800 performance)
+
+## P700
+- **Build pipeline.** `npm run build` = `node tools/og.mjs && node tools/redirects.mjs && astro build && node tools/csp.mjs`.
+  Social cards, favicons and `_redirects` are regenerated from the plan on every build; `dist/_headers` gets the CSP
+  hash list after Astro writes the HTML.
+- **`_redirects` is generated** (`tools/redirects.mjs`) from `plan/sitemap.json` redirects, each page's `old` list
+  and `inventory/old-urls.json`: 67 rules, all 301, one hop, chains collapsed, every target checked to be a real
+  built page. Directory-style old URLs get both `/x/` and `/x` forms; `index.html` and `.xml`/media files stay
+  exact. Splats only for gone WordPress trees (`/feed/*`, `/comments/feed/*`, `/wp-content/uploads/*`), placed
+  after the exact rules (Cloudflare applies the first match). No `:placeholder` syntax. Sources that are real
+  pages are dropped automatically; `/blog/` → `/` is emitted only while `site.config.json` `blog.enabled` is false.
+- **Query-string URLs** (`/?p=<id>` ×25, `/?author=1`) cannot be matched by `_redirects`; they go to the operator
+  with a ready Pages Function (`functions/index.js`, runs only on `/`) and Redirect Rule expressions.
+- **www → apex** is a Bulk Redirect the operator adds (`plan/WWW-REDIRECT.md`); every canonical, og:url,
+  hreflang and sitemap URL is `https://willfraleylaw.com/…`.
+- **Headers** (`public/_headers` → `dist/_headers`): HSTS 1 year + includeSubDomains (no `preload`: preload is
+  hard to undo and is the owner's call), nosniff, strict-origin-when-cross-origin, Permissions-Policy (camera,
+  microphone, geolocation, interest-cohort, payment, usb off), X-Frame-Options DENY + `frame-ancestors 'none'`,
+  COOP same-origin. CSP: `default-src 'self'`, scripts `'self'` + sha256 of each executable inline script
+  (JSON-LD and JSON data blocks are not governed by script-src), styles `'self'` (+ hashes if Astro ever inlines
+  CSS), Web3Forms in connect-src/form-action, Turnstile in script/frame/connect, GA4/Clarity/Meta/TikTok hosts
+  allowed but only contacted after consent + a configured key. Immutable caching for `/_astro/*`, 30 days for
+  `/fonts/*` (names not hashed), 1 day for `/og/*`. Verified in Chromium with the CSP applied: no violations on
+  Home, Contact (EN/ES), Cookie Settings, DUI, Thank-you; the inline menu script runs.
+- **Sitemap hreflang.** The integration's i18n pairing only matches identical paths under `/es/`, and the ES
+  slugs are translated, so only Home was paired. `astro.config.mjs` now adds `en` / `es` / `x-default`
+  `xhtml:link` alternates to all 56 URLs from `plan/sitemap.json` (same codes as the `<link rel="alternate">` tags).
+- **robots.txt** allows everything and names `https://willfraleylaw.com/sitemap-index.xml`. Thank-you pages are
+  not disallowed: they carry `noindex`, which crawlers must be able to read.
+- **OG cards** (`tools/og.mjs`): 1200×630 PNG per page and language (63 incl. 404 and a default), named by file
+  slug (`/es/defensa-penal/dui/` → `og/es__defensa-penal__dui.png`), ~13 KB each (palette PNG). Content: WF
+  tile, "WILL FRALEY · ATTORNEY AT LAW", the page's own H1 from its copy file, phone (615) 410-7290, "Murfreesboro,
+  Tennessee · Se habla español" (F092) — firm facts only. Colors read from `src/styles/tokens.css`.
+  `Base.astro` points og:image/twitter:image at the page's card (fallback `og/default.png`), alt = page title.
+- **Fonts for rendering.** No network download: `tools/fonts/build-fonts.py` (fontTools) instances the already
+  self-hosted Google Fonts files (OFL) into static TTFs — Newsreader wght 460/560 opsz 60, Public Sans 400/600 —
+  committed under `tools/fonts/`. `tools/fonts/fonts.conf` exposes only those; og.mjs sets `FONTCONFIG_FILE` to it
+  before sharp loads, so the cards cannot silently fall back to a system face.
+- **Favicon set.** The logo is a raster wordmark with no mark, so the icon is a monogram tile: "WF" outlines from
+  Newsreader (wght 560, opsz 60) in paper `#F7F6F2` on Counsel blue `#2E5F96`. `favicon.svg` (glyphs as paths, no
+  font dependency), `favicon.ico` (16/32/48), `apple-touch-icon.png` 180, `icon-192.png`, `icon-512.png`,
+  `icon-maskable-512.png`, `site.webmanifest` (linked from Base). Replaces A19's interim stroke "W". Owner
+  question about a square mark stays open (A02).
+
+## P800
+- **Lighthouse (mobile, simulated throttling, 1 run, `.cache/lh-p800.json`)** — perf/a11y/best-practices/SEO,
+  LCP, CLS, TBT: `/` 99/100/100/100, 1.96 s, 0, 0 ms · `/criminal-defense/dui/` 100/100/100/100, 1.88 s ·
+  `/es/` 99/100/100/100, 1.96 s · `/contact-us/` 100/100/100/100, 1.66 s. LCP is the H1 (text) on every page.
+  It is under 2.0 s with little margin. What is left is mostly the preloaded Newsreader file (66 KB). Trimming
+  it further would mean changing the type (one optical size, or no kerning), so it was not done.
+- **`tools/lighthouse.mjs` fix.** With `--dist`, the static server runs in the same process, and the old
+  `spawnSync` blocked its event loop. Every page timed out after 240 s, so no `--dist` run had ever worked.
+  It is now an async `execFile`, and the metrics and output format are unchanged.
+- **`tools/lib.mjs` `serve()` gzips text responses** (HTML, CSS, JS, JSON, XML, SVG, webmanifest) when the
+  client accepts gzip, because Cloudflare Pages compresses at the edge. Without this, local runs counted 46 KB
+  of raw HTML and 60 KB of raw CSS per page, when visitors get about 10 KB and 11 KB. Also added the
+  `.webmanifest` MIME type.
+- **Fonts.** `tools/fonts/subset-web.py` cuts the variable fonts down to the axis ranges the CSS uses, starting
+  from the Google Fonts originals in `mockups/A/public/fonts/`. Newsreader is wght 400–700 and opsz 32–60,
+  because every Newsreader rule sets opsz 32 or 60. Public Sans is wght 400–700. Sizes: Newsreader latin
+  129 → 66 KB, latin-ext 84 → 40 KB, Public Sans latin 26 → 23 KB. The latin / latin-ext unicode-range split
+  stays. The `@font-face` weight descriptors in `tokens.css` now read 400 700. The two latin files are still
+  preloaded.
+- **Images.** AVIF is now encoded at 0.7× the WebP quality (78 → 55) in `Image.astro`. Six 1280w hero AVIFs
+  were over the 200 KB budget (largest: paternity 343 KB, probation 302 KB). The largest is now 167 KB, and I
+  checked it visually. The LCP-image rules are unchanged: `priority` sets fetchpriority=high and eager on
+  practice and About heroes, and everything else is lazy. The home desk photo is eager without high priority,
+  because it sits below the fold on phones.
+- **CSS.** Moved the dev-only components-sheet specimen rules out of the global stylesheets into
+  `src/pages/_components.astro`. Removed 12 utility classes that nothing in `src/` uses (`mt-0`, `mt-2`,
+  `mt-16`, `mb-0`, `mb-4`, `mb-6`, `cluster`, `measure-narrow`, `rule-top`, `rule-bottom`, `container--form`,
+  `btn-block-phone`). Raised Vite `assetsInlineLimit` to 6 KB so the 4.1 KB template sheet is inlined: one
+  render-blocking request per page instead of two. `csp.mjs` hashes the inlined `<style>`. Total per page:
+  60,700 bytes (59.3 KiB) raw, about 11.5 KB gzipped (budget 60 KB). JS stays at 3.3 KB gzipped
+  (budget 50 KB). No third-party requests with tracking off.

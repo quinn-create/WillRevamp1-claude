@@ -30,3 +30,8 @@
 - Gate 3 passed. Three real Astro mockups (Home, Criminal Defense, Contact + components sheet) with 390/1280 screenshots, design-QA'd; 9 Higgsfield scenes (nano_banana_pro 2k, 18 credits); COMPARE.html (self-contained) and MOCKUPS-rev1.zip (22.7 MB).
 - **Gate 3 stop → Build A.** The Creative Director recommends A "Counsel" (borrowing B's full-number phone button and C's small photo of Will). Per the operator's instruction to finish without stopping, this is recorded as the Build decision; the run continues to Stages 3b–7.
 - `tools/compare.mjs` also rewrites `imagesrcset`; web fonts cannot load over file:// in Chromium (expected — the unzipped folders fall back to system fonts; COMPARE.html screenshots show the real fonts).
+
+### Stage 3b + 5 — Design system and build (direction A "Counsel")
+- Borrowed elements (≤ 2): B's full-number header call button; C's small byline photo of Will beside his name.
+- 24 site-wide Higgsfield scenes (54 credits incl. 3 rejected and regenerated). Run total: 33 images kept, 72 credits.
+- Build phases P100–P800 each passed `npm run build` + `check.mjs --build`; `check.mjs --final` passed (60 pages: 30 EN + 30 ES incl. 404s/thank-you). Pages are rendered by catch-all EN/ES routes from the copy files plus a per-page verification pass (kit: "one pass per page").

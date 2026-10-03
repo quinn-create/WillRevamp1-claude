@@ -336,3 +336,35 @@ None. Performance decisions need no owner input.
   describes current Tennessee law, in both languages.
 - **/es/testimonios/ and testimonial blocks on /es/ pages:** reviews are shown in English with a Spanish lead-in. If any
   Spanish-speaking client has left a review the firm may publish, please send it with the client's permission.
+
+## A19
+
+### A19 — design-system engineer
+
+- **Favicon (all pages, browser tab).** The old site had no favicon, so the new site uses a simple thin-line "W" in the logo blue. If you have an official icon or would prefer a different mark, send it and it will be swapped in.
+
+## A20
+
+### A20 — page builder
+
+- **Katie Fults (About page, "Katie Fults, Attorney at Law").** Her photo on the old site is 169 × 224 px, so it can only appear as a small 84 px image beside her text. If you have a larger photo of Katie, send it and it will be swapped in.
+
+## A21
+
+# A21 — owner questions (P500 contact form)
+
+- **/contact-us/ and /es/contacto/ (contact form):** the new form requires only first name, last name and
+  phone. Email, best time, new-client and the message are optional, because the page copy says "Email and a short
+  note are optional". The old form also required email, best time and the message. Should email or the message
+  be required again? (If yes, the copy sentence changes too.)
+- **/contact-us/ (form "Best time to reach you"):** keep the old six options (As soon as possible, Morning,
+  Noon, Afternoon, Evening, No preference), or simplify?
+
+## A22
+
+# A22 owner items (P600)
+
+- **Please read the Privacy Policy, Accessibility Statement and Cookie Settings (EN and ES) before launch.**
+  Pages: /privacy-policy/, /accessibility/, /cookie-settings/ and /es/politica-de-privacidad/, /es/accesibilidad/,
+  /es/configuracion-de-cookies/. Each shows "Last reviewed: <build date>"; if you want it to show the date you
+  actually reviewed them instead, tell the operator the date (placeholder: `POLICY_REVIEWED`).
