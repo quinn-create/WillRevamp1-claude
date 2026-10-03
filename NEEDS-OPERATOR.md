@@ -16,3 +16,57 @@ Things only the operator can do.
 - **Query-string redirects for WordPress shortlinks.** The 23 `/?p=<id>` URLs (see `kind: wordpress` in `inventory/old-urls.json`) each 301 to a page today. Cloudflare Pages `_redirects` ignores query strings, so these need a Pages Function (`functions/_middleware`) or a Cloudflare zone Redirect Rule matching `http.request.uri.query eq "p=<id>"`. If neither is set up, they will serve the home page with a 200 instead of the right page.
 - **Hostinger staging host.** `beige-baboon-435532.hostingersite.com` is linked from the live site. At launch, confirm it is offline or set to noindex, and remove it from the Hostinger account if the owner agrees.
 - **Search Console.** `/sitemap_index.xml` is declared in robots.txt today. After launch, submit the new sitemap and keep `/sitemap_index.xml`, `/page-sitemap.xml` and `/sitemap.xml` redirecting (301) to it.
+
+## A04
+
+### From A04 (SEO and local)
+
+- **Search Console at launch.**
+  - Verify the domain property.
+  - Submit `/sitemap-index.xml`.
+  - Remove the old `/sitemap_index.xml` submission. That URL now 301s to the new sitemap.
+  - Request indexing for `/` and `/es/`.
+- **Google Business Profile.** Set the website field to `https://willfraleylaw.com/`. If the owner wants traffic measured, add UTM parameters once tracking is on. Check that the profile's hours read Fri 9:00–4:00, matching the site.
+- **Host canonicalization.** In Cloudflare, add a 301 from `www.willfraleylaw.com/*` to `https://willfraleylaw.com/*`. The old site linked the www host in body copy.
+- **Hostinger staging host.** Retire `beige-baboon-435532.hostingersite.com` or set it to `noindex`. Ten old body links point to it. This repeats A01's item.
+
+## A05
+
+# A05 operator items
+
+- **Analytics, all pages.** The old site runs GA4 property `G-MN6QWEVWM4` (it appears in `inventory/html/index.html`). Please confirm whether to carry this property over. If yes, enable it with `tools/configure.mjs`; tracking stays OFF until then.
+- **Before baseline, all pages.** `audit/lighthouse-before.json` was measured through the sandbox proxy, which dropped some requests: `failedRequests` was 2 to 6 on /criminal-defense/theft/, /criminal-defense/sex-crimes/ and /family-law/visitation/. If you want a clean before/after comparison, please re-run `node tools/lighthouse.mjs --url ...` from an unproxied network, or pull CrUX/PageSpeed field data for willfraleylaw.com.
+
+## A08
+
+# A08 — operator items
+
+- The old site has 9 body links to a staging host (beige-baboon-435532.hostingersite.com) on /criminal-defense/dui/, /legal-services/ and /criminal-defense/domestic-assault/. Confirm that host is not indexed and that no live traffic depends on it. No action is taken on it from this repo.
+- When the form is configured (tools/configure.mjs), route submissions to inbox@willfraleylaw.com and enable the thank-you page redirect so conversions can be counted.
+
+## A09
+
+# A09 — operator items
+
+- Analytics (all pages): GA4 stays OFF. If the owner approves it, add the measurement ID with `tools/configure.mjs` and gate it behind the Cookie Settings consent. It must never load before consent.
+- Form endpoint (contact form, every page): keep forms OFF until an endpoint is configured. The endpoint's privacy terms must match the Privacy page's "Who receives form submissions" section.
+- SMS consent (contact form): keep it disabled unless the owner confirms a texting provider. If it is enabled, the checkbox must be optional and unchecked and must link Privacy. Do not reuse the old "Acceptable Use Policy" text.
+
+## A10
+
+### From A10 (market and competitors)
+
+- **Directory citations.** Five local searches checked 2026-10-03 return mostly directory listings: Cornell LII, Avvo, Nolo, USLegal, abogado.com. willfraleylaw.com appeared in none of the result lists. After launch, claim or update the firm's listings on these directories. Use the exact NAP and link to `https://willfraleylaw.com/`, and give abogado.com the `/es/` URL. No sign-ups by agents; this is a manual operator task.
+
+## A11
+
+### A11 — creative director
+
+- **Conditional `/blog/` redirect (`_redirects`).** `plan/sitemap.json` has `/blog/ → /` with `conditional: "blog.enabled === false"`. When you turn the blog on with `tools/configure.mjs`, rebuild so the rule is dropped. At the same time, consider pointing `/feed/` and `/category/uncategorized/` at `/blog/`.
+- **Old social previews.** The six old og:image files now 301 to their pages. After launch, re-scrape the home, contact, legal-services, criminal-defense, about and family-law URLs in the Facebook Sharing Debugger and the LinkedIn Post Inspector, so the new preview images replace the old screenshots.
+
+## A16
+
+### A16 — copy director
+
+- **Map link (Contact page and footer).** The old footer used `https://goo.gl/maps/5UGDFjKCfam` (F024), which depends on Google's retired goo.gl shortener. The copy uses `https://www.google.com/maps/search/?api=1&query=509+W+College+St+Murfreesboro+TN+37130`. Once the Google Business Profile is claimed, swap in its place URL.

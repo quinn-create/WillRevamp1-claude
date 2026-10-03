@@ -46,3 +46,82 @@ Questions only the owner can answer. Each names the page and placeholder it affe
 - **C17, FAQ theft thresholds. Page: FAQs.** The old FAQ gives contradictory theft values ($50–$1,500 misdemeanor vs $500+ grand theft). Should the new FAQ keep this question? If so, please give the current Tennessee thresholds you want stated.
 - **C18, legal statements. Pages: DUI, Sex Crimes, FAQs.** May we drop the specific DUI penalty figures and the "first-degree criminal sexual conduct" wording (not Tennessee terminology), or do you want to supply current, approved figures?
 - **C19, credentials. Page: About.** Please confirm your Tennessee bar admission year and any federal court admissions, so About can state them next to the 2004 Nashville School of Law degree and the two TACDL certificates.
+
+## A03
+
+### A03 (content audit)
+
+- **Theft and Drug Crimes pages (`/criminal-defense/theft/`, `/criminal-defense/drug-crimes/`):** each old page has only about 125–150 unique words. Which charge types and situations do you most often handle under each (for example, shoplifting, burglary, possession, intent to distribute), so the new pages can describe them accurately?
+- **Families of someone arrested (`/criminal-defense/`):** do you take calls from a family member when the accused person is in custody, and can you help with bond or arraignment questions? This affects the families section and its call to action.
+- **Spanish intake (all `/es/` pages, contact form):** when a Spanish speaker calls (615) 410-7290, who answers? Should the form offer "Prefiero español"?
+
+## A04
+
+### From A04 (SEO and local)
+
+- **Google Business Profile.** Affects every page (footer map link, schema `sameAs`, Contact). Please send the exact business name, primary category and website URL on your Google Business Profile, plus its full Maps link. The old site links a `goo.gl/maps` short URL. The GBP name should match "Will Fraley, Attorney at Law" exactly. Until you confirm, the new site links a Maps search for the street address.
+- **Review platform.** Affects Testimonials and the Home testimonial strip. Were the three testimonials posted on Google, Avvo or Facebook? Can we link "Read more reviews on Google" to your profile? Until you answer, there's no link, no stars and no rating markup.
+
+## A05
+
+# A05 owner questions
+
+None. Performance decisions need no owner input.
+
+## A07
+
+### A07 (visual brand)
+
+- **Logo source file (header and footer on every page, favicon):** the site has only a 400×62 raster WebP. Do you have the original vector logo (AI, EPS, SVG or PDF) or the name of its typeface? Until then we will use a faithful SVG redraw.
+- **Attorney photography (Home, /about/, hub pages):** the best photos of Will (desk portrait and brick doorway) are only 673–910 px wide, and Katie Fults' headshot is 169×224 px. Can you send higher-resolution originals, or arrange a short photo session? The new site uses framed layouts until then.
+
+## A08
+
+# A08 — owner questions
+
+- Contact form (all pages with the consultation form): may we drop "When is the Best Time to Reach You?" and "Are you a New Client?" and make email optional? Staff would call back during office hours. Placeholder affected: consultation form fields.
+- Office hours (header/call bar micro-label, footer, contact page): footer says Mon–Thu 9–5, Fri 9–4 (F031/F032) but structured data says Mon–Fri 9–5 (F033). Which is correct? Until answered we use the footer version.
+- Call handling (sticky call bar label): who answers calls outside office hours, and may the call bar say anything about after-hours calls? Until answered it says nothing about after-hours.
+
+## A09
+
+# A09 — owner questions
+
+- Bar standing (About page, footer, schema `Person`): verify bar standing on tbpr.org and confirm that every listed association membership is current before launch. Give your Tennessee bar admission year. Placeholders affected: About "Admissions" line and the memberships list.
+- Memberships (About page, practice-page "Why choose" block): are you a member of the Tennessee Association for Justice (formerly the Tennessee Trial Lawyers Association)? Until you answer, only the TBA, the Rutherford and Cannon County Bar Association and TACDL are listed (C08).
+- SMS texting (contact form on every page, "SMS consent" checkbox): does the firm actually text clients or prospects, and from what service? Does an "Acceptable Use Policy" exist? Until you answer, the SMS consent box is not shown and the form promises no texts.
+- Testimonials (Testimonials page, testimonial strip on practice pages): send the full original text of the Katherine S. review, which currently ends at "I highly recommend". Say where each review was posted, and confirm that Katherine S., Eddie W. and the third reviewer still consent to its use. Typos stay verbatim until you supply corrections. Star graphics are dropped until a source is named.
+- Spanish service (footer, Contact, every "Why choose" block, the whole /es/ mirror): who provides Spanish-language service (you, staff or an interpreter), and does "full bilingual Spanish services" still hold for calls, meetings and documents? The site keeps the exact ledgered wording until then.
+- Free consultation (every consultation CTA beside the phone link): is it free for every matter type (criminal, family, DCS, adoption, personal injury), and is it phone, in person or both? The CTA says only "Free consultation" beside the phone number until you answer.
+- Analytics (Cookie Settings page, consent banner): may the new site use Google Analytics (old property G-MN6QWEVWM4) once a visitor consents? It ships OFF.
+- Privacy page (Privacy page, "Data we collect" and "Who receives form submissions"): confirm where form submissions go (email inbox, practice-management system) and how long they are kept. Placeholders stay blank until you answer.
+
+## A10
+
+### From A10 (market and competitors)
+
+- **Topics competitors rank for that the old site never mentions.** Affects possible new pages under /criminal-defense/ and /family-law/ (none built yet). Do you handle these, and should we add pages for them?
+  - orders of protection
+  - expungement
+  - juvenile cases
+  - uncontested divorce
+
+  Competitors run 3–4 pages each on these topics. Until you confirm, the new site says nothing about them.
+- **Smyrna and La Vergne.** Affects possible location pages; the current service area is Rutherford, Coffee and Wilson counties (F035). Do you take clients from Smyrna and La Vergne, and should they be named? Rival firms run 5 pages each targeting them. Until you confirm, those towns are not named.
+- **Results you can share.** Affects Home proof strip and a possible /results/ page. Rivals publish case counts and outcomes, such as "1,000+ Cases Handled" and "Over 800 Divorces Handled". Can you give a case count or outcomes you are willing to publish, with documentation? Until you do, there are no numbers beyond years of practice, and any results run with the required disclaimer.
+- **Spanish phone access.** Affects the /es/ header, contact and every Spanish CTA. One rival has a dedicated Spanish phone line. Can Spanish-speaking callers reach a Spanish speaker at (615) 410-7290? This links to C13.
+
+## A11
+
+### A11 — creative director
+
+- **Spanish page names and copy review (all `/es/` pages).** The Spanish site uses Spanish web addresses, for example `/es/defensa-penal/robo/` for Theft and `/es/derecho-familiar/modificacion-plan-de-crianza/` for Parenting Plan Modifications. Is there someone in your office who reads Spanish and could review the Spanish pages and their names before launch? If not, we launch with professionally written Spanish and flag it for a later review.
+- **Menu grouping (every page, header).** The new menu has six items: Criminal Defense, Family Law, Personal Injury, About, FAQs, Contact. Adoption and DCS Cases appear under Family Law, and Testimonials and In the News appear under About. Their web addresses do not change. Tell us if you'd rather Adoption or DCS have their own top-level menu item.
+
+## A16
+
+### A16 — copy director
+
+- **What happens after someone calls (Contact page, "What happens after you reach out").** Right now the page says only that the office sets up an initial consultation to discuss your options. Do you return calls the same day? Are calls answered after hours or on weekends? Is the consultation by phone, in person, or both? We'll add a line once you tell us.
+- **Directions and parking (Contact page, "Finding the office").** Is there client parking at 509 W College St, or a landmark visitors should look for? Right now the page gives only the address and a map link.
+- **Families calling for someone who was arrested (Criminal Defense page, "If someone you love was arrested").** The page tells a parent or spouse they can make the first call. Please confirm the office takes these calls and say whether you visit clients held in the Rutherford County jail.

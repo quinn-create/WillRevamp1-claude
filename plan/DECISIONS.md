@@ -25,6 +25,11 @@ Every call made without asking, with its reason. Newest stage last.
 - **Years of experience:** the ledger supports "practicing law since 2004" as the safest true form (A02, C01). That replaces the plan-time "18+ years" wording; the owner is still asked for the exact number.
 - Chromium's networking through the sandbox proxy is unreliable; live-site browser loads go through Node fetch (tools/lib.mjs). Lighthouse (separate Chrome) cannot be routed, so old-site numbers note failed requests.
 
+### Stage 2 — Audit and voice
+- Gate 2 and Gate 2b passed. 31 pages (24 kept URLs + 7 new), nav: Criminal Defense · Family Law · Personal Injury · About · FAQs · Contact; 66 redirects.
+- **Form fields:** A08 recommends a 4-field form. The kit (A21: "same fields, better labels") and the plan-time decision keep the old site's 7 fields; "best time to reach you" and "new client?" become optional selects to reduce friction. Recorded here; A08's view is noted for the owner.
+- **`/?p=<id>` shortlinks:** Cloudflare Pages `_redirects` cannot match query strings; they are listed for the operator (Pages Function or Redirect Rule) rather than shipped as broken rules.
+
 ## A01
 
 # A01 decisions: old-URL inventory (inventory/old-urls.json)
@@ -102,3 +107,173 @@ Every call made without asking, with its reason. Newest stage last.
 - **Legal statements** the old site makes (DUI penalties, residency statute, FAQ answers) are typed `other`. Each claim is marked "verify current law before reuse". They're ledgered so the copywriter can trace them, but CONFLICTS C17 and C18 say not to restate figures until the owner approves.
 - **Testimonials (F133–F135)** are stored verbatim, including the truncated "I highly recommend" and Eddie W.'s missing word. Card headlines are F136–F138, and the attribution is in each claim.
 - **Schema-only claims** (Davidson and Williamson counties F039–F040, Friday 17:00 close F033, "Attorneys at Law" F005) are ledgered so the conflict is visible. The safest-form rule means copy and the new schema don't use them.
+
+## A03
+
+### A03, Stage 1: content audit
+
+- **Duplicate-copy metric.** 8-word shingles over `inventory/text/*.md`. "Boilerplate" means a shingle that appears on 10 or more pages. Sibling pages overlap about 0% once boilerplate is removed. The duplication comes from the sitewide "Why Will Fraley" block, the badges, the SMS text and the testimonial carousel, plus the Theft and Drug Crimes stubs (57% and 69% copied from the criminal hub intro).
+- **Reading-level target:** Flesch-Kincaid grade 8 or below (the old site's median is about 9.3).
+- **The "Why Will Fraley" block becomes one short proof strip** built only from ledgered facts (since 2004, Nashville School of Law, TACDL training, the 3 memberships both lists share). It is not repeated as paragraphs.
+- **Testimonials are matched to the practice area:** the Katherine S. divorce review goes only on family pages, and Eddie W. and S.A. go on general and criminal pages.
+- **Theft and Drug Crimes** become full pages only if the ledger supports them. Otherwise they stay short and honest and link to the hub. No padding with unsourced claims.
+- **The criminal hub gets a section for families of someone arrested,** written as process description only (no new facts).
+
+## A04
+
+# A04 decisions: SEO and local search (audit/A04.md)
+
+- **URLs.** All 24 inventoried page URLs stay exactly as they are. Nothing is merged. Custody and visitation overlap, but each page gets rewritten to its own search intent, because merging them would throw away an indexed URL.
+- **Spanish URLs.** The Spanish mirror lives at `/es/<same English slug>/`, which matches the copy convention `copy/pages/es/<slug>.md`. Every page pair carries `hreflang` en, es and x-default (x-default points to EN).
+- **Redirects.** Every legacy URL redirects in one hop to its final URL; there are no chains. The full map is the Keep-URL list in audit/A04.md.
+  - /page/2/, /category/uncategorized/, /wp-json/, /feed/ and /comments/feed/ go to /.
+  - /news/ goes to /in-the-news/.
+  - The four Yoast sitemap paths go to /sitemap-index.xml (the Astro default).
+  - Each of the 6 old og:image uploads goes to the new OG image of the same page.
+- **/blog/.** The scaffold serves /blog/ with `noindex` and leaves it out of the sitemap until the first post is published.
+- **Schema.** Each page gets one linked `@graph`:
+  - `LegalService` (also typed `Attorney`), named "Will Fraley, Attorney at Law".
+  - Hours: Mon–Thu 09:00–17:00 and Fri 09:00–16:00.
+  - `areaServed`: Murfreesboro, Rutherford County, Coffee County and Wilson County.
+  - `Person` "Will Fraley".
+  - `BreadcrumbList`.
+  - A single `FAQPage`, on /faqs/ only.
+  - No `SearchAction`, `AggregateRating` or `Review`. Self-serving reviews aren't eligible for review stars, and the source platform is unknown (C15).
+- **Titles.** Pattern: "{Service} Lawyer in Murfreesboro, TN | Will Fraley", 60 characters or less. The home page title leads with "Murfreesboro Attorney". Spanish titles follow the same pattern.
+- **Headings.** Each page has exactly one H1. Sidebar and footer labels such as "Contact Us" aren't marked up as headings.
+- **Alt text.** Content photos (attorney, Katie Fults, logo) get descriptive alt. The certificate alt text transcribes the certificate. Generated decorative scenes get `alt=""`.
+
+## A05
+
+# A05 decisions: performance (audit/A05.md)
+
+- **Old-site baseline.** These are the median figures from `audit/lighthouse-before.json` (24 pages, mobile):
+
+  | Metric | Median |
+  |---|---|
+  | Performance score | 54 |
+  | LCP | 8,081 ms |
+  | TBT | 369 ms |
+  | CLS | 0.003 |
+  | Total weight | 846 KB |
+  | JS | 430 KB |
+  | CSS | 160 KB |
+  | Fonts | 219 KB |
+  | Requests | 81 |
+
+  The weights are a floor, not the true figure: the proxy dropped some requests, and Elementor lazy-loads background images.
+- **Budgets for the new site.** These apply to every EN and ES page (mobile Lighthouse, median of 3 runs):
+
+  | Metric | Budget |
+  |---|---|
+  | LCP | 2.5 s or less (target 2.0 s) |
+  | CLS | 0.05 or less |
+  | TBT | 150 ms or less |
+  | JS | 30 KB or less |
+  | CSS | 30 KB or less |
+  | Fonts | 100 KB or less, in 4 files or fewer |
+  | Total weight | 500 KB or less |
+  | Requests | 25 or fewer |
+
+- **Fonts.** Self-host at most 2 families as subset `woff2` (Latin + Latin-1 for Spanish), using `font-display: swap` with metric-matched fallbacks. Load nothing from Google Fonts at runtime.
+- **Frameworks.** Ship no jQuery, Swiper, Font Awesome or emoji script. Icons are inline SVG.
+- **Contact form.** The form script loads only on pages that render the form.
+- **Images.** All images go through Astro `<Image>` (AVIF/WebP, `srcset`, explicit width and height). The hero uses `fetchpriority="high"`, and everything below the fold uses `loading="lazy"`.
+- **Analytics.** GA4 is scaffolded OFF and loads only after consent, when the page is idle.
+
+## A06
+
+# A06 decisions
+
+- A06-D1: The new site's accessibility target is WCAG 2.2 AA. Build gate: zero serious or critical axe violations on every EN and ES page, a skip link present, one H1 per page, and visible focus on 100% of tab stops.
+- A06-D2: No autoplaying carousels or scroll-linked effects. Any motion is wrapped in `prefers-reduced-motion: no-preference`. Testimonials render as a static list.
+- A06-D3: Consultation form fields keep visible labels (placeholders are not used as labels), never use positive tabindex, and carry autocomplete tokens. The form stays off until configured (CLAUDE.md rule 5).
+- A06-D4: Every phone link uses `tel:+16154107290`. The sticky mobile call bar must not obscure focused elements (WCAG 2.4.11).
+
+## A07
+
+# A07 decisions: visual brand (audit/A07.md)
+
+- **Logo colors (sampled from `inventory/assets/Logo-3.webp` with sharp).**
+  - Wordmark: #447CB7 (median of 1,916 opaque pixels).
+  - Tagline and rules: #113964 at about 40% alpha (renders near #A0B0C1 on white).
+  - The Elementor kit's custom color #457CB7 matches the wordmark, so the brand blue is #447CB7.
+- **Proposed token direction (the design stage finalizes it):**
+
+  | Token | Hex | Use |
+  |---|---|---|
+  | Brand | #447CB7 | Large type, rules, fills. White on it is 4.36:1, so large text only. |
+  | Text-blue | about #356BA6 | Links and small type (5.5:1 on white) |
+  | Navy | #1D478A | Deep ground (9.05:1 with white) |
+  | Accent | warm brick | Secondary accent |
+  | Neutrals | paper and ink | Background and body text |
+
+  Retire sky #6EC1E4 (2.02:1), #00CCFF, #3366FF, the Gravity Forms blues and the default kit colors.
+- **Brand equity to preserve:** the wordmark and its blue; the attorney photos IMG03 and IMG02; Katie Fults (IMG05) as a small avatar only; Murfreesboro rootedness; the persistent phone band.
+- **Logo:** rebuild as SVG for the new site, matching the raster's letterforms and color. Make the tagline solid (no alpha) and contrast-compliant, or omit it when the logo is narrower than 200 px. Generate the favicon from the wordmark (an initials mark). No new logo design.
+- **Kit CSS fetch.** `post-6.css`, `post-57.css` and `post-10.css` were fetched read-only from the old site with curl: 3 requests, 10 s apart, no browser.
+
+## A08
+
+# A08 decisions
+
+- A08-D1: Primary action on every page is the phone call (`tel:+16154107290`); secondary is the on-page consultation form reached by in-page anchor. One CTA wording site-wide; every "free consultation" CTA sits beside the `tel:` link.
+- A08-D2: Navigation renders once per page (no duplicate desktop/sticky/dropdown copies), max 2 levels; practice-page link sidebars are dropped in favour of in-content related links.
+- A08-D3: Consultation form = Name, Phone, Email (optional), short message (optional). "Best time to reach you" and "Are you a new client?" are removed. Form carries a no-confidential-info / no attorney–client relationship note and stays OFF until configured.
+- A08-D4: Mobile bottom call bar >= 48 px with safe-area and scroll padding so it never covers inputs or focus; all tap targets >= 44x44 px; practice cards keep text labels at all widths.
+- A08-D5: Trust strip next to each CTA uses ledgered facts only: "Practicing law since 2004" (F087, per CONFLICTS C01), Se habla español (F092), office hours (F031/F032), one verbatim testimonial.
+- A08-D6: Build gate proposal: fail on `href="#"`, any hostingersite.com URL, `tel:` without `+`, or a page lacking a primary CTA in the first 390 px viewport.
+
+## A09
+
+# A09 — decisions
+
+- D-A09-1: The old SMS/TCPA line ("By submitting, you agree to be contacted… Acceptable Use Policy") is not carried over. Its policy link was dead text, and it bundled consent into submitting the form. The new form carries a non-confidentiality notice and a Privacy link. SMS consent becomes an optional, unchecked box, disabled until the owner confirms texting.
+- D-A09-2: The words "expert", "experts" and "expertise" (about the firm or attorney), "best possible recovery", "cases others may not feel confident in winning", "reduce or dismiss the charges" and "aggressive" are not carried into new copy (RPC 7.1; law-firm.md rules 1 and 3; warn list). Testimonial text is the only exception: it stays verbatim.
+- D-A09-3: The results disclaimer appears on every page that shows a testimonial or describes an outcome, because the testimonials mention a "fair settlement" and "would win".
+- D-A09-4: Spanish-service claims follow law-firm.md rule 10: "Se habla español" and "full bilingual Spanish services" exactly as ledgered, never expanded. Rule 10 takes precedence over the narrower C13 suggestion. The owner is asked to confirm scope.
+- D-A09-5: Star graphics and any aggregateRating are dropped, because no review source is named (C15).
+- D-A09-6: Privacy, Cookie Settings and Accessibility Statement pages ship in EN and ES, linked from every footer. Analytics is consent-gated and OFF by default.
+- D-A09-7: No "Attorney Advertising" label is added (law-firm.md rule 11), so the owner knows this was a deliberate choice.
+
+## A10
+
+# A10 decisions: market and competitors (audit/MARKET.md)
+
+- **Positioning.** The new site leads on what no Murfreesboro competitor offers: a full Spanish mirror (`/es/` + hreflang + `knowsLanguage`), a dedicated DCS page, and a page bridging criminal and family cases. Of the 8 rival sites reviewed, the most Spanish content is one page (Clarke), and 0 of 469 competitor URLs mention DCS.
+- **No rating markup or badge walls.** Two rivals (Boss, Fiola) self-serve AggregateRating and several show award badges. We show none: no stars, no AggregateRating, no "Top 100"-style awards (C15, RPC 7.1).
+- **Conversion parity.** Phone and "Free consultation" go in the hero and in a sticky mobile call bar, both `tel:`-first, matching Boss, Fiola and Crain.
+- **Child support and alimony.** These get H2 sections on the divorce and custody pages, using facts already in the ledger. No new URLs.
+- **Gap topics held back.** Order of protection, expungement, juvenile, uncontested divorce, and Smyrna and La Vergne location pages appear nowhere on the old site. They are not built until the owner confirms (see needs-owner).
+- **Sites not reviewed.** mitchellattorneys.com returned 403 to both curl and WebFetch. santelgarner.com was reviewed from a WebFetch summary only.
+
+## A11
+
+### A11 — Stage 2 synthesis (audit, brief, sitemap, design brief)
+
+- **All 24 old URLs kept exactly**; `/legal-services/` stays the practice-areas hub and is the breadcrumb parent of Criminal Defense, Family Law and Personal Injury. No merges (custody and visitation keep separate intents).
+- **Spanish URLs use natural Spanish slugs** (`/es/defensa-penal/dui/`, `/es/derecho-familiar/custodia/`, `/es/contacto/`, `/es/sobre-nosotros/`, home `/es/`). This supersedes A04's suggestion of `/es/<same English slug>/`. Copy files stay keyed by the EN slug (`copy/pages/es/<slug>.md`); the build maps slug → `esPath` from `plan/sitemap.json`.
+- **Nav (6 + phone + toggle):** Criminal Defense · Family Law · Personal Injury · About · FAQs · Contact, plus `tel:+16154107290` ("Free consultation · Se habla español") and the Español/English toggle to the current page's twin. Adoption and DCS sit in the Family Law dropdown (their URLs stay top-level). Testimonials and In the News sit under About. The Legal Services hub is reached from the footer, the home page and breadcrumbs.
+- **Mockup pages:** `/`, `/criminal-defense/`, `/contact-us/`.
+- **New pages:** `/in-the-news/` (only the 2014 DNJ story, C16), `/privacy-policy/`, `/accessibility/`, `/cookie-settings/` (noindex), `/thank-you/` (noindex), `/blog/` (`publish:false`, copy written, built only when `blog.enabled`), `/404/` (`publish:false`, `copy:true`, `policy_page:true`, emitted as `dist/404.html` + `dist/es/404.html`).
+- **Redirects:** 66 rules cover the 65 non-page entries in `inventory/old-urls.json` plus one `/wp-content/uploads/*` → `/` catch-all for other uploads indexed via the Yoast image sitemap (it must sit after the six specific og:image rules). The six og:image uploads 301 to the page they represented, not to a new image file, so every target is a real built page. `/news/` → `/in-the-news/`. Old sitemaps → `/sitemap-index.xml`. Feeds, `/page/2/`, `/category/uncategorized/` and `/wp-json/` → `/` (switch feeds/category to `/blog/` once the blog is enabled). `/blog/` → `/` is **conditional** (`blog.enabled === false`) and must be omitted when the blog is built. The 26 query-string rules (`/?p=…`, `/?author=1`) carry `query:true` and need a Pages Function or zone rule (see A01's operator item); the 3 that target `/` work without one.
+- **Spanish-service claims:** use "Se habla español" (F092) and "Spanish-speaking services available" (F094). Hold "full bilingual Spanish services" (F093) until the owner answers C13. This narrows, never expands, law-firm rule 10.
+- **One CTA wording site-wide:** "Free consultation" + "Call (615) 410-7290" (ES "Consulta gratuita" + "Llame al (615) 410-7290"), always a `tel:` link; secondary "Send a short message".
+- **Design directions:** all three keep the logo blue #447CB7 as the anchor (large type, fills and UI only) with a darker text-blue per direction; contrast ratios for every proposed pair were computed and recorded in `design/DESIGN-BRIEF.md`. Verdict reserves a signal gold (#F2B544, ink text 10.23:1) for CTAs only, with a brick fallback.
+
+## A16
+
+### A16 — copy director (Stage 2b: voice + mockup copy)
+
+- **Card hint written as `[cards]`, not `[cards: N]`.** `tools/check.mjs` strips hint lines only when they contain no digit, so `[cards: 3]` would be flagged as an untagged number. The card count is the number of `###` items under the hint. Builders should treat `[cards]` as "one card per H3".
+- **Fact tags sit after the sentence's closing punctuation** (`Sentence. {fact:F001}`); renderers strip `\s*\{fact:[^}]+\}`. Phone numbers in copy are written as Markdown links `[(615) 410-7290](tel:+16154107290)`.
+- **"Practicing law since 2004" never paired with "in Murfreesboro".** F087 dates his practice, not his Murfreesboro office (the private practice opened later; C01). Home says "He has practiced law since 2004, and his office is in Murfreesboro" (F087, F046).
+- **Testimonial attributions cite only the text fact** (F133/F134), not F294/F295. The gate checks every testimonial-type fact on a quote line for verbatim text, and the attribution facts' quotes don't contain the review text, so co-citing them fails. F133/F134's claims already name the reviewer. Supersedes the A02 note suggesting co-citation.
+- **Home testimonial = Katherine S. (F133), full text, truncation kept; Criminal hub = Eddie W. (F134), full text, typo kept.** Both pages carry "Prior results do not guarantee a similar outcome." (F133 says "settlement"; the criminal hub mentions charges "reduced or dismissed", F150.) Melissa Harris appears only inside the verbatim F133 quote (C04).
+- **No federal-case claim on the criminal hub.** F048/F168 mention federal cases, but C06 queues that question; copy says "state felony and misdemeanor charges".
+- **Map link:** the old `goo.gl/maps/…` short link (F024) depends on Google's retired goo.gl shortener, so Contact uses a Google Maps search URL built from the ledgered address (F021): `https://www.google.com/maps/search/?api=1&query=509+W+College+St+Murfreesboro+TN+37130`.
+- **Contact "what happens next" uses only F098 (schedule an initial consultation) and F099 (discuss your legal options).** No response-time promise, no "closed weekends", no parking or landmark claims; those wait for the owner.
+- **Form anchor:** the form section ("Send a short message") must render with `id="form"`; every "Send a short message" link points to `/contact-us/#form`.
+- **"If someone you love was arrested" (criminal hub)** tells families they can make the first call and what to have ready. It makes no claim about jail visits, bond or timing.
+- **Reading grade:** by Flesch-Kincaid on prose lines, Home is about 7.5, Criminal Defense about 5.7 and Contact about 4.4. These pages are hero/CTA-heavy and written for a stressed phone reader, so we keep them under grade 8 deliberately. Legal-process pages will run at 8–10.
+- **VOICE.md CTA table** fixes the exact EN/ES CTA wording; "free consultation" never appears without the phone number in the same sentence or button.

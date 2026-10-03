@@ -1,0 +1,4 @@
+### A11 — creative director
+
+- **Spanish page names and copy review (all `/es/` pages).** The Spanish site uses Spanish web addresses, for example `/es/defensa-penal/robo/` for Theft and `/es/derecho-familiar/modificacion-plan-de-crianza/` for Parenting Plan Modifications. Is there someone in your office who reads Spanish and could review the Spanish pages and their names before launch? If not, we launch with professionally written Spanish and flag it for a later review.
+- **Menu grouping (every page, header).** The new menu has six items: Criminal Defense, Family Law, Personal Injury, About, FAQs, Contact. Adoption and DCS Cases appear under Family Law, and Testimonials and In the News appear under About. Their web addresses do not change. Tell us if you'd rather Adoption or DCS have their own top-level menu item.

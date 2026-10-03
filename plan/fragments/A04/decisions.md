@@ -1,0 +1,21 @@
+# A04 decisions: SEO and local search (audit/A04.md)
+
+- **URLs.** All 24 inventoried page URLs stay exactly as they are. Nothing is merged. Custody and visitation overlap, but each page gets rewritten to its own search intent, because merging them would throw away an indexed URL.
+- **Spanish URLs.** The Spanish mirror lives at `/es/<same English slug>/`, which matches the copy convention `copy/pages/es/<slug>.md`. Every page pair carries `hreflang` en, es and x-default (x-default points to EN).
+- **Redirects.** Every legacy URL redirects in one hop to its final URL; there are no chains. The full map is the Keep-URL list in audit/A04.md.
+  - /page/2/, /category/uncategorized/, /wp-json/, /feed/ and /comments/feed/ go to /.
+  - /news/ goes to /in-the-news/.
+  - The four Yoast sitemap paths go to /sitemap-index.xml (the Astro default).
+  - Each of the 6 old og:image uploads goes to the new OG image of the same page.
+- **/blog/.** The scaffold serves /blog/ with `noindex` and leaves it out of the sitemap until the first post is published.
+- **Schema.** Each page gets one linked `@graph`:
+  - `LegalService` (also typed `Attorney`), named "Will Fraley, Attorney at Law".
+  - Hours: Mon–Thu 09:00–17:00 and Fri 09:00–16:00.
+  - `areaServed`: Murfreesboro, Rutherford County, Coffee County and Wilson County.
+  - `Person` "Will Fraley".
+  - `BreadcrumbList`.
+  - A single `FAQPage`, on /faqs/ only.
+  - No `SearchAction`, `AggregateRating` or `Review`. Self-serving reviews aren't eligible for review stars, and the source platform is unknown (C15).
+- **Titles.** Pattern: "{Service} Lawyer in Murfreesboro, TN | Will Fraley", 60 characters or less. The home page title leads with "Murfreesboro Attorney". Spanish titles follow the same pattern.
+- **Headings.** Each page has exactly one H1. Sidebar and footer labels such as "Contact Us" aren't marked up as headings.
+- **Alt text.** Content photos (attorney, Katie Fults, logo) get descriptive alt. The certificate alt text transcribes the certificate. Generated decorative scenes get `alt=""`.

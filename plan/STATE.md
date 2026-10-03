@@ -1,11 +1,12 @@
 # STATE
 
-stage: 2 (Audit) — IN PROGRESS
-phase: eight audits running, then A11 synthesis, then A16 voice (2b)
+stage: 3 (Mockups) — IN PROGRESS
+phase: three directions → Higgsfield scenes → three Astro mockups → recommendation
 
 ## Done
 - Stage 0 bootstrap — gate 0 PASSED. check.mjs hash-locked (plan/CHECK-HASH) after a 133-case stress test.
 - Stage 1 capture — gate 1 PASSED (24 pages, 315 facts, 29 assets, 89 old URLs, 19 conflicts).
+- Stage 2 audit + 2b voice — gates 2 and 2b PASSED (31 pages, 66 redirects, voice + 3 mockup pages of copy).
 
 ## Next
 Stage 1: A01 legacy-URL probe + inventory/old-urls.json; A02 assets + facts ledger + CONFLICTS → gate 1.

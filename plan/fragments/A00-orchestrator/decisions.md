@@ -16,3 +16,8 @@
 - Gate 1 passed: 24 pages, 315 facts (every quote verified on its page), 29 assets, 89 old URLs, 19 conflicts.
 - **Years of experience:** the ledger supports "practicing law since 2004" as the safest true form (A02, C01). That replaces the plan-time "18+ years" wording; the owner is still asked for the exact number.
 - Chromium's networking through the sandbox proxy is unreliable; live-site browser loads go through Node fetch (tools/lib.mjs). Lighthouse (separate Chrome) cannot be routed, so old-site numbers note failed requests.
+
+### Stage 2 — Audit and voice
+- Gate 2 and Gate 2b passed. 31 pages (24 kept URLs + 7 new), nav: Criminal Defense · Family Law · Personal Injury · About · FAQs · Contact; 66 redirects.
+- **Form fields:** A08 recommends a 4-field form. The kit (A21: "same fields, better labels") and the plan-time decision keep the old site's 7 fields; "best time to reach you" and "new client?" become optional selects to reduce friction. Recorded here; A08's view is noted for the owner.
+- **`/?p=<id>` shortlinks:** Cloudflare Pages `_redirects` cannot match query strings; they are listed for the operator (Pages Function or Redirect Rule) rather than shipped as broken rules.

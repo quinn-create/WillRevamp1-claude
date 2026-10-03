@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-03T12:02:56.447Z",
+  "pass": true,
+  "failed": 0,
+  "results": [
+    {
+      "name": "tools/check.mjs hash matches plan/CHECK-HASH",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "copy/VOICE.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "three mockup pages named in sitemap",
+      "pass": true,
+      "detail": "index, criminal-defense, contact-us"
+    },
+    {
+      "name": "copy copy/pages/index.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "copy copy/pages/criminal-defense.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "copy copy/pages/contact-us.md",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

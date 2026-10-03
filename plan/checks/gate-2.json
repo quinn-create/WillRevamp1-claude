@@ -1,0 +1,97 @@
+{
+  "at": "2026-10-03T12:02:56.315Z",
+  "pass": true,
+  "failed": 0,
+  "results": [
+    {
+      "name": "tools/check.mjs hash matches plan/CHECK-HASH",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit audit/A03.md with score + KEEP/FIX/KILL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit audit/A04.md with score + KEEP/FIX/KILL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit audit/A05.md with score + KEEP/FIX/KILL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit audit/A06.md with score + KEEP/FIX/KILL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit audit/A07.md with score + KEEP/FIX/KILL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit audit/A08.md with score + KEEP/FIX/KILL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit audit/A09.md with score + KEEP/FIX/KILL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit/MARKET.md (A10)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists audit/AUDIT.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists plan/REVAMP-BRIEF.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists plan/SITEMAP.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists design/DESIGN-BRIEF.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "plan/sitemap.json (machine-readable SITEMAP)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "SITEMAP covers 100% of pages.json",
+      "pass": true,
+      "detail": "24/24"
+    },
+    {
+      "name": "SITEMAP.md lists every old URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "every page has an ES twin",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "3 pages flagged mockup:true",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

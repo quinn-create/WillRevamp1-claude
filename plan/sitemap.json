@@ -1,0 +1,1228 @@
+{
+  "version": 1,
+  "generatedBy": "A11 creative director (stage 2)",
+  "notes": [
+    "All 24 old page URLs are kept exactly. /legal-services/ stays the practice-areas hub.",
+    "Copy files are keyed by the EN slug: copy/pages/<slug>.md and copy/pages/es/<slug>.md, whatever the esPath.",
+    "publish:false pages are not built (blog until site.config.json blog.enabled; 404 is emitted as dist/404.html and dist/es/404.html by the layout, not as a routed page).",
+    "Redirects are ordered: specific rules before the /wp-content/uploads/* splat. query:true rules need a Pages Function or a zone Redirect Rule; conditional rules are emitted only while their condition holds.",
+    "www -> apex normalization is a Cloudflare zone setting (see NEEDS-OPERATOR), not a _redirects rule."
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "esPath": "/es/",
+      "title": "Home",
+      "titleEs": "Inicio",
+      "intent": "Tell a stressed visitor in five seconds who Will Fraley is (Murfreesboro attorney practicing since 2004; criminal defense and family law, plus personal injury), that Spanish is spoken, and how to reach him now. Route to the right practice page.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": null,
+      "nav": false,
+      "mockup": true,
+      "old": [
+        "/",
+        "/category/uncategorized/",
+        "/page/2/",
+        "/wp-json/",
+        "/feed/",
+        "/comments/feed/",
+        "/wp-content/uploads/2025/10/mainstage-v1-img.webp",
+        "/wp-content/uploads/*",
+        "/?p=1",
+        "/?author=1",
+        "/?p=46"
+      ],
+      "policy_page": false,
+      "schemaType": "LegalService"
+    },
+    {
+      "path": "/legal-services/",
+      "esPath": "/es/servicios-legales/",
+      "title": "Practice Areas",
+      "titleEs": "Áreas de práctica",
+      "intent": "Practice-areas hub: every service in one scannable list, grouped Criminal / Family / Personal injury, plus the criminal-meets-family bridge (how a charge can affect custody or a parenting plan). Fixes the staging-host links and the \"our attorneys\" claims.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/legal-services/",
+        "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-12.58.05-PM.png",
+        "/?p=65"
+      ],
+      "policy_page": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "path": "/criminal-defense/",
+      "esPath": "/es/defensa-penal/",
+      "title": "Criminal Defense",
+      "titleEs": "Defensa penal",
+      "intent": "Criminal hub for someone just charged or arrested, and for their family: what to do now, the eight charge pages (Sex Crimes added, Murder card removed), what happens next, and a call-first CTA.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/legal-services/",
+      "nav": true,
+      "mockup": true,
+      "old": [
+        "/criminal-defense/",
+        "/legal-services/criminal-defense/",
+        "/legal-services/criminal-defense/index.html",
+        "/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.04.57-PM.png",
+        "/?p=89"
+      ],
+      "policy_page": false,
+      "schemaType": "LegalService"
+    },
+    {
+      "path": "/criminal-defense/dui/",
+      "esPath": "/es/defensa-penal/dui/",
+      "title": "DUI",
+      "titleEs": "DUI",
+      "intent": "DUI arrest in Rutherford County: process in plain terms, license concerns, what to bring to the consultation. No penalty figures unless the owner approves them (C18).",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/criminal-defense/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/criminal-defense/dui/",
+        "/dui/",
+        "/?p=95"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/criminal-defense/drug-crimes/",
+      "esPath": "/es/defensa-penal/delitos-de-drogas/",
+      "title": "Drug Crimes",
+      "titleEs": "Delitos de drogas",
+      "intent": "Someone charged (not convicted) with a drug offense. Rebuilt past stub length from ledgered facts; speaks to the accused and the family.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/criminal-defense/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/criminal-defense/drug-crimes/",
+        "/drug-crimes/",
+        "/?p=92"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/criminal-defense/theft/",
+      "esPath": "/es/defensa-penal/robo/",
+      "title": "Theft",
+      "titleEs": "Robo y hurto",
+      "intent": "Theft or shoplifting charge: what the charge means in general terms and next steps. No dollar thresholds (C17). Rebuilt past stub length.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/criminal-defense/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/criminal-defense/theft/",
+        "/theft/",
+        "/?p=97"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/criminal-defense/violent-crimes/",
+      "esPath": "/es/defensa-penal/delitos-violentos/",
+      "title": "Violent Crimes",
+      "titleEs": "Delitos violentos",
+      "intent": "Serious violent-offense charges (assault through homicide, per F192): calm, direct reassurance that the case gets a real defense; absorbs the old \"Murder\" card.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/criminal-defense/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/criminal-defense/violent-crimes/",
+        "/violent-crimes/",
+        "/legal-services/criminal-defense/violent-crimes/",
+        "/?p=99"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/criminal-defense/sex-crimes/",
+      "esPath": "/es/defensa-penal/delitos-sexuales/",
+      "title": "Sex Crimes",
+      "titleEs": "Delitos sexuales",
+      "intent": "Accused of a sex offense: discretion, confidentiality of the consultation, what not to do. Drops the \"criminal sexual conduct\" wording (C18).",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/criminal-defense/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/criminal-defense/sex-crimes/",
+        "/legal-services/criminal-defense/sex-crimes/",
+        "/?p=104"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/criminal-defense/fraud/",
+      "esPath": "/es/defensa-penal/fraude/",
+      "title": "Fraud",
+      "titleEs": "Fraude",
+      "intent": "Fraud or white-collar charge for an individual: process and documents to gather. No commercial-organization claims (C11).",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/criminal-defense/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/criminal-defense/fraud/",
+        "/fraud/",
+        "/?p=101"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/criminal-defense/probation-violation/",
+      "esPath": "/es/defensa-penal/violacion-de-libertad-condicional/",
+      "title": "Probation Violation",
+      "titleEs": "Violación de libertad condicional",
+      "intent": "Probation violation warrant or hearing: urgency, what happens at the hearing, link to family-law effects.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/criminal-defense/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/criminal-defense/probation-violation/",
+        "/probation-violation/",
+        "/?p=102"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/criminal-defense/domestic-assault/",
+      "esPath": "/es/defensa-penal/agresion-domestica/",
+      "title": "Domestic Assault",
+      "titleEs": "Agresión doméstica",
+      "intent": "Domestic assault charge: next steps, bond conditions in general terms, and the bridge to custody and visitation pages.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/criminal-defense/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/criminal-defense/domestic-assault/",
+        "/domestic-assault/",
+        "/?p=103"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/family-law/",
+      "esPath": "/es/derecho-familiar/",
+      "title": "Family Law",
+      "titleEs": "Derecho familiar",
+      "intent": "Family-law hub for parents and spouses in Rutherford, Coffee and Wilson counties: divorce, custody, visitation, parenting plans, paternity, plus DCS and adoption. No \"Wills\" card (C09).",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/legal-services/",
+      "nav": true,
+      "mockup": false,
+      "old": [
+        "/family-law/",
+        "/legal-services/family-law/",
+        "/legal-services/family-law/index.html",
+        "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.23.01-PM-1024x842.png",
+        "/?p=111"
+      ],
+      "policy_page": false,
+      "schemaType": "LegalService"
+    },
+    {
+      "path": "/family-law/divorce/",
+      "esPath": "/es/derecho-familiar/divorcio/",
+      "title": "Divorce",
+      "titleEs": "Divorcio",
+      "intent": "Divorce in Tennessee explained plainly; adds child support and alimony sections from ledgered facts (market gap).",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/family-law/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/family-law/divorce/",
+        "/divorce/",
+        "/?p=106"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/family-law/child-custody/",
+      "esPath": "/es/derecho-familiar/custodia/",
+      "title": "Child Custody",
+      "titleEs": "Custodia de menores",
+      "intent": "Parent in a custody dispute: how decisions get made in general terms, what to document, and links to visitation and parenting plans. Drops the risky \"favors the parent who takes custody\" advice (C18).",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/family-law/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/family-law/child-custody/",
+        "/child-custody/",
+        "/?p=105"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/family-law/visitation/",
+      "esPath": "/es/derecho-familiar/visitas/",
+      "title": "Visitation",
+      "titleEs": "Régimen de visitas",
+      "intent": "Parent seeking or defending parenting time: rewritten to its own intent, distinct from custody. Removes the broken \"online or at\" sentence.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/family-law/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/family-law/visitation/",
+        "/visitation/",
+        "/?p=109"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/family-law/parenting-plan-modifications/",
+      "esPath": "/es/derecho-familiar/modificacion-plan-de-crianza/",
+      "title": "Parenting Plan Modifications",
+      "titleEs": "Modificación del plan de crianza",
+      "intent": "Parent whose circumstances changed and needs an existing parenting plan changed: when it is possible, what the process looks like.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/family-law/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/family-law/parenting-plan-modifications/",
+        "/parenting-plan-modifications/",
+        "/?p=107"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/family-law/paternity/",
+      "esPath": "/es/derecho-familiar/paternidad/",
+      "title": "Paternity",
+      "titleEs": "Paternidad",
+      "intent": "Father or mother establishing or contesting paternity: why it matters for custody, visitation and support.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/family-law/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/family-law/paternity/",
+        "/paternity/",
+        "/?p=108"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/adoption/",
+      "esPath": "/es/adopcion/",
+      "title": "Adoption",
+      "titleEs": "Adopción",
+      "intent": "Adoptive families in Murfreesboro and Rutherford County: a warm, clear overview and first step. Gets the missing meta description.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/family-law/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/adoption/",
+        "/?p=162"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/dcs-case-attorney/",
+      "esPath": "/es/abogado-casos-dcs/",
+      "title": "DCS Cases",
+      "titleEs": "Casos del DCS",
+      "intent": "Parent or guardian contacted by the Department of Children's Services: urgent, calm first steps; the only DCS page in the local market. Gets the missing meta description.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/family-law/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/dcs-case-attorney/",
+        "/?p=164"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/personal-injury/",
+      "esPath": "/es/lesiones-personales/",
+      "title": "Personal Injury",
+      "titleEs": "Lesiones personales",
+      "intent": "Injured person in the Murfreesboro area: modest, singular, factual (Will Fraley handles personal injury cases, C12); a clear next step instead of a dead end.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/legal-services/",
+      "nav": true,
+      "mockup": false,
+      "old": [
+        "/personal-injury/",
+        "/legal-services/personal-injury/",
+        "/legal-services/personal-injury/index.html",
+        "/?p=110"
+      ],
+      "policy_page": false,
+      "schemaType": "Service"
+    },
+    {
+      "path": "/about/",
+      "esPath": "/es/sobre-nosotros/",
+      "title": "About",
+      "titleEs": "Sobre nosotros",
+      "intent": "Who Will Fraley is: Tennessee native, MTSU, Nashville School of Law 2004, practicing since 2004, TACDL training with the two certificate scans, the three shared memberships; Katie Fults shown here only, as published.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/",
+      "nav": true,
+      "mockup": false,
+      "old": [
+        "/about/",
+        "/wp-content/uploads/2025/10/content-v10-img-attorney.webp",
+        "/?p=60"
+      ],
+      "policy_page": false,
+      "schemaType": "AboutPage"
+    },
+    {
+      "path": "/testimonials/",
+      "esPath": "/es/testimonios/",
+      "title": "Testimonials",
+      "titleEs": "Testimonios",
+      "intent": "The three published client testimonials, verbatim, no stars, with the results disclaimer.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/about/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/testimonials/",
+        "/?p=118"
+      ],
+      "policy_page": false,
+      "schemaType": "WebPage"
+    },
+    {
+      "path": "/in-the-news/",
+      "esPath": "/es/en-las-noticias/",
+      "title": "In the News",
+      "titleEs": "En las noticias",
+      "intent": "NEW. Replaces the dead \"#\" menu item: lists only the October 2014 Daily News Journal story, linked and described neutrally (C16).",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/about/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/news/"
+      ],
+      "policy_page": false,
+      "schemaType": "CollectionPage",
+      "new": true
+    },
+    {
+      "path": "/faqs/",
+      "esPath": "/es/preguntas-frecuentes/",
+      "title": "FAQs",
+      "titleEs": "Preguntas frecuentes",
+      "intent": "Answers to common questions, grouped by practice area, on native details/summary; one FAQPage schema. Only owner-safe answers (C17, C18).",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/",
+      "nav": true,
+      "mockup": false,
+      "old": [
+        "/faqs/",
+        "/?p=135"
+      ],
+      "policy_page": false,
+      "schemaType": "FAQPage"
+    },
+    {
+      "path": "/contact-us/",
+      "esPath": "/es/contacto/",
+      "title": "Contact",
+      "titleEs": "Contacto",
+      "intent": "Reach the office now: tap-to-call first, then a 4-field form (OFF until configured) with the non-confidentiality notice, address, hours, map link and \"Se habla español\".",
+      "primaryCta": "Call (615) 410-7290 — or send a short message",
+      "primaryCtaEs": "Llame al (615) 410-7290 — o envíe un mensaje breve",
+      "parent": "/",
+      "nav": true,
+      "mockup": true,
+      "old": [
+        "/contact-us/",
+        "/contact/",
+        "/contact/index.html",
+        "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.27.41-PM-924x1024.png",
+        "/?p=115"
+      ],
+      "policy_page": false,
+      "schemaType": "ContactPage"
+    },
+    {
+      "path": "/privacy-policy/",
+      "esPath": "/es/politica-de-privacidad/",
+      "title": "Privacy Policy",
+      "titleEs": "Política de privacidad",
+      "intent": "NEW. What the site collects (form fields, optional analytics after consent), why, and how to ask for deletion. Shows a last-reviewed date.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/",
+      "nav": false,
+      "mockup": false,
+      "old": [],
+      "policy_page": true,
+      "schemaType": "WebPage",
+      "new": true
+    },
+    {
+      "path": "/accessibility/",
+      "esPath": "/es/accesibilidad/",
+      "title": "Accessibility Statement",
+      "titleEs": "Declaración de accesibilidad",
+      "intent": "NEW. WCAG 2.2 AA commitment, known limits, and how to report a barrier by phone or email. Shows a last-reviewed date.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/",
+      "nav": false,
+      "mockup": false,
+      "old": [],
+      "policy_page": true,
+      "schemaType": "WebPage",
+      "new": true
+    },
+    {
+      "path": "/cookie-settings/",
+      "esPath": "/es/configuracion-de-cookies/",
+      "title": "Cookie Settings",
+      "titleEs": "Configuración de cookies",
+      "intent": "NEW. Re-open the consent choices; explains that tracking is off until the visitor opts in.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/",
+      "nav": false,
+      "mockup": false,
+      "old": [],
+      "policy_page": true,
+      "schemaType": "WebPage",
+      "noindex": true,
+      "new": true
+    },
+    {
+      "path": "/thank-you/",
+      "esPath": "/es/gracias/",
+      "title": "Thank You",
+      "titleEs": "Gracias",
+      "intent": "NEW. Confirms the message was sent, says what happens next, and repeats the phone number for anything urgent.",
+      "primaryCta": "Call (615) 410-7290 if it cannot wait",
+      "primaryCtaEs": "Llame al (615) 410-7290 si es urgente",
+      "parent": "/",
+      "nav": false,
+      "mockup": false,
+      "old": [],
+      "policy_page": true,
+      "schemaType": "WebPage",
+      "noindex": true,
+      "new": true
+    },
+    {
+      "path": "/blog/",
+      "esPath": "/es/blog/",
+      "title": "Blog",
+      "titleEs": "Blog",
+      "intent": "NEW scaffold. Built only when site.config.json blog.enabled is true (no posts exist today). Copy is still written so the hub is ready.",
+      "primaryCta": "Call (615) 410-7290 — free consultation",
+      "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
+      "parent": "/",
+      "nav": false,
+      "mockup": false,
+      "old": [
+        "/blog/"
+      ],
+      "policy_page": false,
+      "schemaType": "Blog",
+      "publish": false,
+      "copy": true,
+      "noindex": true,
+      "new": true
+    },
+    {
+      "path": "/404/",
+      "esPath": "/es/404/",
+      "title": "Page Not Found",
+      "titleEs": "Página no encontrada",
+      "intent": "NEW. Friendly not-found page in EN and ES: phone, search-free links to the main practice hubs, never a dead end. Emitted as dist/404.html.",
+      "primaryCta": "Call (615) 410-7290",
+      "primaryCtaEs": "Llame al (615) 410-7290",
+      "parent": null,
+      "nav": false,
+      "mockup": false,
+      "old": [],
+      "policy_page": true,
+      "schemaType": "WebPage",
+      "publish": false,
+      "copy": true,
+      "noindex": true,
+      "new": true
+    }
+  ],
+  "nav": [
+    {
+      "label": "Criminal Defense",
+      "labelEs": "Defensa penal",
+      "path": "/criminal-defense/",
+      "esPath": "/es/defensa-penal/",
+      "children": [
+        {
+          "label": "DUI",
+          "labelEs": "DUI",
+          "path": "/criminal-defense/dui/",
+          "esPath": "/es/defensa-penal/dui/"
+        },
+        {
+          "label": "Drug Crimes",
+          "labelEs": "Delitos de drogas",
+          "path": "/criminal-defense/drug-crimes/",
+          "esPath": "/es/defensa-penal/delitos-de-drogas/"
+        },
+        {
+          "label": "Theft",
+          "labelEs": "Robo y hurto",
+          "path": "/criminal-defense/theft/",
+          "esPath": "/es/defensa-penal/robo/"
+        },
+        {
+          "label": "Violent Crimes",
+          "labelEs": "Delitos violentos",
+          "path": "/criminal-defense/violent-crimes/",
+          "esPath": "/es/defensa-penal/delitos-violentos/"
+        },
+        {
+          "label": "Sex Crimes",
+          "labelEs": "Delitos sexuales",
+          "path": "/criminal-defense/sex-crimes/",
+          "esPath": "/es/defensa-penal/delitos-sexuales/"
+        },
+        {
+          "label": "Fraud",
+          "labelEs": "Fraude",
+          "path": "/criminal-defense/fraud/",
+          "esPath": "/es/defensa-penal/fraude/"
+        },
+        {
+          "label": "Probation Violation",
+          "labelEs": "Violación de libertad condicional",
+          "path": "/criminal-defense/probation-violation/",
+          "esPath": "/es/defensa-penal/violacion-de-libertad-condicional/"
+        },
+        {
+          "label": "Domestic Assault",
+          "labelEs": "Agresión doméstica",
+          "path": "/criminal-defense/domestic-assault/",
+          "esPath": "/es/defensa-penal/agresion-domestica/"
+        }
+      ]
+    },
+    {
+      "label": "Family Law",
+      "labelEs": "Derecho familiar",
+      "path": "/family-law/",
+      "esPath": "/es/derecho-familiar/",
+      "children": [
+        {
+          "label": "Divorce",
+          "labelEs": "Divorcio",
+          "path": "/family-law/divorce/",
+          "esPath": "/es/derecho-familiar/divorcio/"
+        },
+        {
+          "label": "Child Custody",
+          "labelEs": "Custodia de menores",
+          "path": "/family-law/child-custody/",
+          "esPath": "/es/derecho-familiar/custodia/"
+        },
+        {
+          "label": "Visitation",
+          "labelEs": "Régimen de visitas",
+          "path": "/family-law/visitation/",
+          "esPath": "/es/derecho-familiar/visitas/"
+        },
+        {
+          "label": "Parenting Plan Modifications",
+          "labelEs": "Modificación del plan de crianza",
+          "path": "/family-law/parenting-plan-modifications/",
+          "esPath": "/es/derecho-familiar/modificacion-plan-de-crianza/"
+        },
+        {
+          "label": "Paternity",
+          "labelEs": "Paternidad",
+          "path": "/family-law/paternity/",
+          "esPath": "/es/derecho-familiar/paternidad/"
+        },
+        {
+          "label": "Adoption",
+          "labelEs": "Adopción",
+          "path": "/adoption/",
+          "esPath": "/es/adopcion/"
+        },
+        {
+          "label": "DCS Cases",
+          "labelEs": "Casos del DCS",
+          "path": "/dcs-case-attorney/",
+          "esPath": "/es/abogado-casos-dcs/"
+        }
+      ]
+    },
+    {
+      "label": "Personal Injury",
+      "labelEs": "Lesiones personales",
+      "path": "/personal-injury/",
+      "esPath": "/es/lesiones-personales/"
+    },
+    {
+      "label": "About",
+      "labelEs": "Sobre nosotros",
+      "path": "/about/",
+      "esPath": "/es/sobre-nosotros/",
+      "children": [
+        {
+          "label": "About Will Fraley",
+          "labelEs": "Sobre Will Fraley",
+          "path": "/about/",
+          "esPath": "/es/sobre-nosotros/"
+        },
+        {
+          "label": "Testimonials",
+          "labelEs": "Testimonios",
+          "path": "/testimonials/",
+          "esPath": "/es/testimonios/"
+        },
+        {
+          "label": "In the News",
+          "labelEs": "En las noticias",
+          "path": "/in-the-news/",
+          "esPath": "/es/en-las-noticias/"
+        }
+      ]
+    },
+    {
+      "label": "FAQs",
+      "labelEs": "Preguntas frecuentes",
+      "path": "/faqs/",
+      "esPath": "/es/preguntas-frecuentes/"
+    },
+    {
+      "label": "Contact",
+      "labelEs": "Contacto",
+      "path": "/contact-us/",
+      "esPath": "/es/contacto/"
+    }
+  ],
+  "header": {
+    "phone": {
+      "label": "(615) 410-7290",
+      "href": "tel:+16154107290",
+      "microLabel": "Free consultation · Se habla español",
+      "microLabelEs": "Consulta gratuita · Se habla español"
+    },
+    "languageToggle": {
+      "en": "English",
+      "es": "Español",
+      "behavior": "links to the current page's twin (path <-> esPath); hreflang en / es / x-default (x-default = EN)"
+    }
+  },
+  "footer": [
+    {
+      "label": "Practice Areas",
+      "labelEs": "Áreas de práctica",
+      "path": "/legal-services/",
+      "esPath": "/es/servicios-legales/"
+    },
+    {
+      "label": "Privacy Policy",
+      "labelEs": "Política de privacidad",
+      "path": "/privacy-policy/",
+      "esPath": "/es/politica-de-privacidad/"
+    },
+    {
+      "label": "Accessibility",
+      "labelEs": "Accesibilidad",
+      "path": "/accessibility/",
+      "esPath": "/es/accesibilidad/"
+    },
+    {
+      "label": "Cookie Settings",
+      "labelEs": "Configuración de cookies",
+      "path": "/cookie-settings/",
+      "esPath": "/es/configuracion-de-cookies/"
+    },
+    {
+      "label": "Sitemap",
+      "labelEs": "Mapa del sitio",
+      "path": "/sitemap-index.xml",
+      "esPath": "/sitemap-index.xml"
+    }
+  ],
+  "redirects": [
+    {
+      "from": "/domestic-assault/",
+      "to": "/criminal-defense/domestic-assault/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/drug-crimes/",
+      "to": "/criminal-defense/drug-crimes/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/dui/",
+      "to": "/criminal-defense/dui/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/fraud/",
+      "to": "/criminal-defense/fraud/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/violent-crimes/",
+      "to": "/criminal-defense/violent-crimes/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/probation-violation/",
+      "to": "/criminal-defense/probation-violation/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/theft/",
+      "to": "/criminal-defense/theft/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/divorce/",
+      "to": "/family-law/divorce/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/child-custody/",
+      "to": "/family-law/child-custody/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/visitation/",
+      "to": "/family-law/visitation/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/parenting-plan-modifications/",
+      "to": "/family-law/parenting-plan-modifications/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/paternity/",
+      "to": "/family-law/paternity/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/contact/",
+      "to": "/contact-us/",
+      "status": 301,
+      "note": "Legacy short URL; already 301 on the old site."
+    },
+    {
+      "from": "/legal-services/criminal-defense/",
+      "to": "/criminal-defense/",
+      "status": 301,
+      "note": "Old /legal-services/<area>/ scheme."
+    },
+    {
+      "from": "/legal-services/family-law/",
+      "to": "/family-law/",
+      "status": 301,
+      "note": "Old /legal-services/<area>/ scheme."
+    },
+    {
+      "from": "/legal-services/personal-injury/",
+      "to": "/personal-injury/",
+      "status": 301,
+      "note": "Old /legal-services/<area>/ scheme."
+    },
+    {
+      "from": "/legal-services/criminal-defense/sex-crimes/",
+      "to": "/criminal-defense/sex-crimes/",
+      "status": 301,
+      "note": "404 today; linked from /criminal-defense/violent-crimes/ body copy."
+    },
+    {
+      "from": "/legal-services/criminal-defense/violent-crimes/",
+      "to": "/criminal-defense/violent-crimes/",
+      "status": 301,
+      "note": "404 today; linked from /criminal-defense/domestic-assault/ body copy."
+    },
+    {
+      "from": "/contact/index.html",
+      "to": "/contact-us/",
+      "status": 301,
+      "note": "Staging-host link path (404 today)."
+    },
+    {
+      "from": "/legal-services/criminal-defense/index.html",
+      "to": "/criminal-defense/",
+      "status": 301,
+      "note": "Staging-host link path (404 today)."
+    },
+    {
+      "from": "/legal-services/family-law/index.html",
+      "to": "/family-law/",
+      "status": 301,
+      "note": "Staging-host link path (404 today)."
+    },
+    {
+      "from": "/legal-services/personal-injury/index.html",
+      "to": "/personal-injury/",
+      "status": 301,
+      "note": "Staging-host link path (404 today)."
+    },
+    {
+      "from": "/category/uncategorized/",
+      "to": "/",
+      "status": 301,
+      "note": "Empty WordPress category archive. Point to /blog/ instead once blog.enabled is true."
+    },
+    {
+      "from": "/page/2/",
+      "to": "/",
+      "status": 301,
+      "note": "WordPress paged duplicate of the home page."
+    },
+    {
+      "from": "/wp-json/",
+      "to": "/",
+      "status": 301,
+      "note": "WordPress REST API index; no API on the static site."
+    },
+    {
+      "from": "/feed/",
+      "to": "/",
+      "status": 301,
+      "note": "Empty RSS feed. Point to /blog/ instead once blog.enabled is true."
+    },
+    {
+      "from": "/comments/feed/",
+      "to": "/",
+      "status": 301,
+      "note": "Empty comments feed."
+    },
+    {
+      "from": "/news/",
+      "to": "/in-the-news/",
+      "status": 301,
+      "note": "Natural alias for the new In the News page (404 today)."
+    },
+    {
+      "from": "/blog/",
+      "to": "/",
+      "status": 301,
+      "note": "Only while blog.enabled is false (the /blog/ scaffold is not built). The build MUST omit this rule when blog.enabled is true.",
+      "conditional": "blog.enabled === false"
+    },
+    {
+      "from": "/sitemap.xml",
+      "to": "/sitemap-index.xml",
+      "status": 301,
+      "note": "Old Yoast sitemap; the Astro sitemap index replaces it."
+    },
+    {
+      "from": "/sitemap_index.xml",
+      "to": "/sitemap-index.xml",
+      "status": 301,
+      "note": "Old Yoast sitemap; the Astro sitemap index replaces it."
+    },
+    {
+      "from": "/page-sitemap.xml",
+      "to": "/sitemap-index.xml",
+      "status": 301,
+      "note": "Old Yoast sitemap; the Astro sitemap index replaces it."
+    },
+    {
+      "from": "/post-sitemap.xml",
+      "to": "/sitemap-index.xml",
+      "status": 301,
+      "note": "Old Yoast sitemap; the Astro sitemap index replaces it."
+    },
+    {
+      "from": "/wp-content/uploads/2025/10/mainstage-v1-img.webp",
+      "to": "/",
+      "status": 301,
+      "note": "Old og:image cached by social platforms; lands on the page it represented."
+    },
+    {
+      "from": "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.27.41-PM-924x1024.png",
+      "to": "/contact-us/",
+      "status": 301,
+      "note": "Old og:image cached by social platforms; lands on the page it represented."
+    },
+    {
+      "from": "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-12.58.05-PM.png",
+      "to": "/legal-services/",
+      "status": 301,
+      "note": "Old og:image cached by social platforms; lands on the page it represented."
+    },
+    {
+      "from": "/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.04.57-PM.png",
+      "to": "/criminal-defense/",
+      "status": 301,
+      "note": "Old og:image cached by social platforms; lands on the page it represented."
+    },
+    {
+      "from": "/wp-content/uploads/2025/10/content-v10-img-attorney.webp",
+      "to": "/about/",
+      "status": 301,
+      "note": "Old og:image cached by social platforms; lands on the page it represented."
+    },
+    {
+      "from": "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.23.01-PM-1024x842.png",
+      "to": "/family-law/",
+      "status": 301,
+      "note": "Old og:image cached by social platforms; lands on the page it represented."
+    },
+    {
+      "from": "/wp-content/uploads/*",
+      "to": "/",
+      "status": 301,
+      "note": "Catch-all for every other old WordPress upload indexed via the Yoast image sitemap. MUST come after the specific /wp-content/uploads/ rules.",
+      "splat": true
+    },
+    {
+      "from": "/?p=1",
+      "to": "/",
+      "status": 301,
+      "note": "Query-string URL; without a rule the static host serves the home page (200), which is acceptable.",
+      "query": true
+    },
+    {
+      "from": "/?author=1",
+      "to": "/",
+      "status": 301,
+      "note": "Query-string URL; without a rule the static host serves the home page (200), which is acceptable.",
+      "query": true
+    },
+    {
+      "from": "/?p=46",
+      "to": "/",
+      "status": 301,
+      "note": "Query-string URL; without a rule the static host serves the home page (200), which is acceptable.",
+      "query": true
+    },
+    {
+      "from": "/?p=60",
+      "to": "/about/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=65",
+      "to": "/legal-services/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=89",
+      "to": "/criminal-defense/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=92",
+      "to": "/criminal-defense/drug-crimes/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=95",
+      "to": "/criminal-defense/dui/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=97",
+      "to": "/criminal-defense/theft/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=99",
+      "to": "/criminal-defense/violent-crimes/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=101",
+      "to": "/criminal-defense/fraud/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=102",
+      "to": "/criminal-defense/probation-violation/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=103",
+      "to": "/criminal-defense/domestic-assault/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=104",
+      "to": "/criminal-defense/sex-crimes/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=105",
+      "to": "/family-law/child-custody/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=106",
+      "to": "/family-law/divorce/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=107",
+      "to": "/family-law/parenting-plan-modifications/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=108",
+      "to": "/family-law/paternity/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=109",
+      "to": "/family-law/visitation/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=110",
+      "to": "/personal-injury/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=111",
+      "to": "/family-law/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=115",
+      "to": "/contact-us/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=118",
+      "to": "/testimonials/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=135",
+      "to": "/faqs/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=162",
+      "to": "/adoption/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    },
+    {
+      "from": "/?p=164",
+      "to": "/dcs-case-attorney/",
+      "status": 301,
+      "note": "WordPress shortlink. Query-string redirect: needs a Pages Function (functions/_middleware) or a Cloudflare zone Redirect Rule; _redirects cannot match ?p=.",
+      "query": true
+    }
+  ]
+}

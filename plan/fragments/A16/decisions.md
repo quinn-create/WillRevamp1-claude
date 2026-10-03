@@ -1,0 +1,14 @@
+### A16 — copy director (Stage 2b: voice + mockup copy)
+
+- **Card hint written as `[cards]`, not `[cards: N]`.** `tools/check.mjs` strips hint lines only when they contain no digit, so `[cards: 3]` would be flagged as an untagged number. The card count is the number of `###` items under the hint. Builders should treat `[cards]` as "one card per H3".
+- **Fact tags sit after the sentence's closing punctuation** (`Sentence. {fact:F001}`); renderers strip `\s*\{fact:[^}]+\}`. Phone numbers in copy are written as Markdown links `[(615) 410-7290](tel:+16154107290)`.
+- **"Practicing law since 2004" never paired with "in Murfreesboro".** F087 dates his practice, not his Murfreesboro office (the private practice opened later; C01). Home says "He has practiced law since 2004, and his office is in Murfreesboro" (F087, F046).
+- **Testimonial attributions cite only the text fact** (F133/F134), not F294/F295. The gate checks every testimonial-type fact on a quote line for verbatim text, and the attribution facts' quotes don't contain the review text, so co-citing them fails. F133/F134's claims already name the reviewer. Supersedes the A02 note suggesting co-citation.
+- **Home testimonial = Katherine S. (F133), full text, truncation kept; Criminal hub = Eddie W. (F134), full text, typo kept.** Both pages carry "Prior results do not guarantee a similar outcome." (F133 says "settlement"; the criminal hub mentions charges "reduced or dismissed", F150.) Melissa Harris appears only inside the verbatim F133 quote (C04).
+- **No federal-case claim on the criminal hub.** F048/F168 mention federal cases, but C06 queues that question; copy says "state felony and misdemeanor charges".
+- **Map link:** the old `goo.gl/maps/…` short link (F024) depends on Google's retired goo.gl shortener, so Contact uses a Google Maps search URL built from the ledgered address (F021): `https://www.google.com/maps/search/?api=1&query=509+W+College+St+Murfreesboro+TN+37130`.
+- **Contact "what happens next" uses only F098 (schedule an initial consultation) and F099 (discuss your legal options).** No response-time promise, no "closed weekends", no parking or landmark claims; those wait for the owner.
+- **Form anchor:** the form section ("Send a short message") must render with `id="form"`; every "Send a short message" link points to `/contact-us/#form`.
+- **"If someone you love was arrested" (criminal hub)** tells families they can make the first call and what to have ready. It makes no claim about jail visits, bond or timing.
+- **Reading grade:** by Flesch-Kincaid on prose lines, Home is about 7.5, Criminal Defense about 5.7 and Contact about 4.4. These pages are hero/CTA-heavy and written for a stressed phone reader, so we keep them under grade 8 deliberately. Legal-process pages will run at 8–10.
+- **VOICE.md CTA table** fixes the exact EN/ES CTA wording; "free consultation" never appears without the phone number in the same sentence or button.
