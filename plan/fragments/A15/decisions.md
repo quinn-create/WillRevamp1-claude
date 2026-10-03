@@ -23,3 +23,22 @@
   C-practice (a distant blank sign post seen edge-on; nothing readable), B-contact (the phone is soft and side-on, with no
   digits showing).
 - No placeholders were needed; Higgsfield was available on the first ToolSearch.
+
+## Stage 5 — site-wide image pass (direction A "Counsel", set `site`)
+
+- **Slot naming.** New site images are set `site` (`images/generated/site/<slot>.*`, prompts `images/prompts/site-<slot>.txt`);
+  map in `images/SLOTS-SITE.md`. The design system's planned `A-services`, `A-family`, `A-injury`, `A-adoption`, `A-dcs`
+  subjects (9.2) were kept and delivered as `services`, `family`, `injury`, `adoption`, `dcs`. Mockup images reused unchanged:
+  `A-hero` -> Home, `A-practice` -> `/criminal-defense/`, `A-contact` -> `/contact-us/`.
+- **Scope.** Per the orchestrator brief, one scene also for each criminal child page (8), family child page (5), About,
+  Testimonials, FAQs and In the News, plus `og-default` (16:9, centered for a 1200x630 crop) and `texture` (16:9 paper).
+  Design-system 9.1 still governs use: at most one image-led moment per page, decorative `alt=""`, frames may be omitted for
+  speed. About's scene is an office interior to pair with the real IMG02 portrait; it must never be captioned as Will's office.
+- **Sensitive practices** use non-literal scenes only: DUI = empty country road at dusk; drug crimes = empty bench on a foggy
+  courthouse lawn; violent crimes = closed courthouse doors; sex crimes = rain on an office window; domestic assault = calm river
+  bend under a bluff; probation = greenway path under autumn trees; custody/adoption/DCS = porch swing, window seat, porch with
+  empty rockers. No handcuffs, weapons, injuries, children, police imagery or courtrooms.
+- **Credits.** 28 submissions, 27 billed (one failed job unbilled), 54 credits (cap 250). Balance 643.07 -> 589.07.
+- **Rejections (3):** injury (translucent overlay panel artifact on the left third), about (gilt pseudo-lettering on book
+  spines), cd-drug-crimes (background sign boards with pseudo-lettering and a lit window sign). Each kept on attempt 2.
+- No placeholders were needed; Higgsfield was available on the first call.

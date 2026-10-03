@@ -1,0 +1,92 @@
+---
+// Page chrome for every public page: skip link → language strip (phones) → sticky header → <main id="main"> →
+// footer → mobile call bar, plus the menu <dialog>. Wraps Base.astro (document + <head> SEO).
+// Shipped JS: one small module for the menu dialog and the nav disclosure (Esc). A22 adds consent; A21 the form.
+import Base from './Base.astro';
+import Header from '../components/Header.astro';
+import MenuDialog from '../components/MenuDialog.astro';
+import Footer from '../components/Footer.astro';
+import CallBar from '../components/CallBar.astro';
+import LanguageToggle from '../components/LanguageToggle.astro';
+import { langOf, normPath, type Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+import '../styles/shell.css';
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  lang?: Lang;
+  noindex?: boolean;
+  pageType?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  ogImage?: { src: string; width: number; height: number; alt: string };
+  ogType?: 'website' | 'article' | 'profile';
+  isNotFound?: boolean;
+  mainClass?: string;
+}
+const props = Astro.props;
+const path = normPath(props.path ?? Astro.url.pathname);
+const lang: Lang = props.lang ?? langOf(path);
+const ui = t(lang);
+---
+<Base {...props} path={path} lang={lang}>
+  <slot name="head" slot="head" />
+  <a class="skip-link" href="#main">{ui.skip}</a>
+  <LanguageToggle lang={lang} path={path} variant="strip" class="lang-strip--phone" />
+  <Header lang={lang} path={path} />
+  <main id="main" tabindex="-1" class={props.mainClass}>
+    <slot />
+  </main>
+  <Footer lang={lang} path={path} />
+  <CallBar lang={lang} />
+  <MenuDialog lang={lang} path={path} />
+  <slot name="end" />
+</Base>
+
+<script>
+  // Menu dialog: native <dialog>.showModal() gives the focus trap, Esc and the inert page.
+  const dialog = document.getElementById('menu') as HTMLDialogElement | null;
+  const opener = document.querySelector<HTMLButtonElement>('[data-menu-open]');
+  const fallback = document.querySelector<HTMLAnchorElement>('[data-menu-fallback]');
+  if (dialog && opener && typeof dialog.showModal === 'function') {
+    opener.hidden = false;
+    if (fallback) fallback.hidden = true;
+    opener.addEventListener('click', () => {
+      dialog.showModal();
+      opener.setAttribute('aria-expanded', 'true');
+    });
+    dialog.querySelector('[data-menu-close]')?.addEventListener('click', () => dialog.close());
+    // Backdrop click: the panel fills the dialog box, so only clicks on ::backdrop target the dialog itself.
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+    dialog.addEventListener('close', () => {
+      opener.setAttribute('aria-expanded', 'false');
+      opener.focus();
+    });
+    // A link to an anchor on the same page closes the menu first.
+    dialog.querySelectorAll('a[href]').forEach((a) => a.addEventListener('click', () => dialog.close()));
+  }
+
+  // Nav disclosure: the chevron button toggles the submenu; Esc closes it (also when opened by hover or
+  // focus-within, WCAG 1.4.13) and returns focus to the chevron.
+  document.querySelectorAll<HTMLButtonElement>('[data-disclosure]').forEach((btn) => {
+    const item = btn.closest('.nav-item');
+    if (!item) return;
+    const set = (open: boolean) => {
+      btn.setAttribute('aria-expanded', String(open));
+      item.classList.toggle('is-open', open);
+      if (open) item.classList.remove('is-dismissed');
+    };
+    btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true'));
+    item.addEventListener('keydown', (e) => {
+      if ((e as KeyboardEvent).key !== 'Escape') return;
+      set(false);
+      item.classList.add('is-dismissed');
+      btn.focus();
+    });
+    item.addEventListener('focusout', (e) => {
+      if (!item.contains((e as FocusEvent).relatedTarget as Node | null)) { set(false); item.classList.remove('is-dismissed'); }
+    });
+    item.addEventListener('mouseleave', () => item.classList.remove('is-dismissed'));
+  });
+</script>

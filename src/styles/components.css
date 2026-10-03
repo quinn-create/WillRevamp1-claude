@@ -26,7 +26,8 @@
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-@media (max-width: 22.49em) { .btn { white-space: normal; } .btn-call span { white-space: nowrap; } }
+@media (max-width: 22.49em) { .btn { white-space: normal; } }
+.btn__label, .btn > span { min-width: 0; }
 @media (prefers-reduced-motion: no-preference) {
   .btn {
     transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
@@ -112,6 +113,9 @@
 .call-cta__note { font-size: var(--text-small); color: var(--color-text-muted); }
 .call-cta--inverse .call-cta__note { color: var(--color-on-inverse-muted); }
 .call-cta__secondary { margin-left: calc(-1 * var(--space-2)); }
+/* Long labels (Spanish, "…if it cannot wait") wrap to two lines before they overflow; the number never breaks. */
+.btn-call, .btn-block { white-space: normal; }
+.btn-call .nowrap, .btn-block .nowrap { white-space: nowrap; }
 @media (max-width: 37.49em) {
   .call-cta .btn-call { width: 100%; }
   .call-cta__note { width: 100%; }
@@ -167,7 +171,7 @@
 .hero .call-cta { margin-top: var(--space-8); }
 @media (min-width: 60em) {
   .hero--media .hero__grid, .hero--home .hero__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
-  .byline--mobile-only { display: none; }
+  .byline.byline--mobile-only { display: none; }
 }
 
 /* ================================================================== byline [borrowed: C] (7.14) */
@@ -341,7 +345,8 @@
   .card--link:hover .card__link .icon { transform: translateX(var(--nudge-arrow)); }
 }
 @supports selector(:has(a)) {
-  .card__link:focus-visible, .post-card__link:focus-visible { outline: none; }
+  /* The ring goes around the whole card; the link itself keeps a brass bar so its own focus is never invisible. */
+  .card__link:focus-visible, .post-card__link:focus-visible { outline: none; box-shadow: 0 var(--focus-width) 0 0 var(--focus-ring); border-radius: 0; }
   .card:has(.card__link:focus-visible), .card:has(.post-card__link:focus-visible), .card.is-focus {
     outline: var(--focus-width) solid var(--focus-ring);
     outline-offset: var(--focus-offset);
@@ -659,6 +664,7 @@
 .lang-strip__link:focus-visible { outline-offset: calc(-1 * var(--focus-offset) - var(--focus-width)); }
 .lang-strip__link:active { background: var(--color-surface-tint-pressed); }
 .lang-strip__link .icon { flex: none; width: var(--icon-size-small); height: var(--icon-size-small); }
+@media (max-width: 22.49em) { .lang-strip__link { font-size: var(--text-fine); } }
 
 /* ================================================================== block directives (A22 styles their content) */
 .directive > .flow, .directive > * { max-width: var(--measure); }

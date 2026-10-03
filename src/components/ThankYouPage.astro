@@ -1,0 +1,48 @@
+---
+// Thank-you template (DESIGN-SYSTEM 10): no breadcrumbs, noindex. Hero: success icon + H1 + deck + primary call
+// "Call (615) 410-7290 if it cannot wait" → [steps] what happens next → "While you wait", "Office hours" and the
+// court-date note as info items → links home and practice areas → [cta-band]. Copy: copy/pages/thank-you.md (+ es).
+import Site from '../layouts/Site.astro';
+import PageHero from './PageHero.astro';
+import Section from './Section.astro';
+import Steps from './Steps.astro';
+import InfoList from './InfoList.astro';
+import CTABand from './CTABand.astro';
+import Blocks from './Blocks.astro';
+import Icon from './Icon.astro';
+import CallCta from './CallCta.astro';
+import { loadCopy, slugify, type Block } from '../lib/copy';
+import type { Lang } from '../lib/site';
+interface Props { lang: Lang; path: string }
+const { lang, path } = Astro.props;
+const copy = loadCopy('thank-you', lang);
+const hero = copy.sections.find((s) => s.hint === 'hero');
+const steps = copy.sections.find((s) => s.hint === 'steps');
+const cta = copy.sections.find((s) => s.hint === 'cta-band');
+const prose = copy.sections.filter((s) => s.hint === 'prose');
+// A trailing paragraph made only of links ("[Home](/) · [Practice areas](…)") becomes the status-links row.
+const isLinkRow = (b: Block) => b.type === 'p' && /^(\s*\[[^\]]+\]\([^)]+\)\s*·?\s*)+$/.test(b.md);
+const linkRows = prose.flatMap((s) => s.blocks.filter(isLinkRow));
+const items = prose.map((s) => ({ title: s.h2 || '', blocks: s.blocks.filter((b) => !isLinkRow(b)) }));
+const label = String(copy.data.primary_cta || '');
+---
+<Site title={copy.data.title} description={copy.data.description} path={path} lang={lang} noindex>
+  <section class="hero hero--plain hero--status" aria-labelledby="page-title">
+    <div class="container">
+      <div class="hero__copy">
+        <Icon name="circle-check" class="status-icon" />
+        <h1 id="page-title">{copy.data.h1}</h1>
+        {hero && <Blocks blocks={hero.blocks} lang={lang} lead class="hero__deck" />}
+        <CallCta lang={lang} label={label} secondary={false} />
+      </div>
+    </div>
+  </section>
+  {steps && <Section labelledby={steps.h2 ? slugify(steps.h2) : undefined} flushTop><Steps section={steps} lang={lang} /></Section>}
+  {items.length > 0 && (
+    <Section tone="linen" tight>
+      <InfoList items={items} lang={lang} headingLevel={2} class="info-list--h2" />
+      {linkRows.length > 0 && <Blocks blocks={linkRows} lang={lang} class="status-links-row mt-8" />}
+    </Section>
+  )}
+  {cta && <CTABand section={cta} lang={lang} />}
+</Site>

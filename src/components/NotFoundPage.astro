@@ -1,0 +1,23 @@
+---
+// 404 template (DESIGN-SYSTEM 10): no breadcrumbs; hero H1 + deck + call CTA → [cards: 4] (three practice hubs +
+// contact) with the Home · All practice areas · other-language links → [cta-band]. Copy: copy/pages/404.md (+ es).
+import Site from '../layouts/Site.astro';
+import PageHero from './PageHero.astro';
+import Section from './Section.astro';
+import CardGrid from './CardGrid.astro';
+import CTABand from './CTABand.astro';
+import { loadCopy, slugify } from '../lib/copy';
+import type { Lang } from '../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const copy = loadCopy('404', lang);
+const hero = copy.sections.find((s) => s.hint === 'hero');
+const path = lang === 'es' ? '/es/404/' : '/404/';
+---
+<Site title={copy.data.title} description={copy.data.description} path={path} lang={lang} noindex isNotFound>
+  <PageHero lang={lang} path={path} h1={copy.data.h1} deck={hero?.blocks || []} variant="plain" breadcrumbs={false} cta="primary-only" />
+  {copy.sections.filter((s) => s.hint !== 'hero').map((s) =>
+    s.hint === 'cta-band' ? <CTABand section={s} lang={lang} /> :
+    <Section labelledby={s.h2 ? slugify(s.h2) : undefined} flushTop><CardGrid section={s} lang={lang} cols={4} /></Section>
+  )}
+</Site>

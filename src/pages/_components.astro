@@ -3,7 +3,10 @@
 // never built into dist/ and never listed in the sitemap. In `astro dev` it is viewable at /dev-only/components/
 // through src/pages/dev-only/[sheet].astro, whose getStaticPaths returns nothing outside import.meta.env.DEV.
 // Every specimen uses real copy from copy/pages/ (or plainly labeled specimen text) and real tokens.
-import Base from '../layouts/Base.astro';
+import Site from '../layouts/Site.astro';
+import MenuDialog from '../components/MenuDialog.astro';
+import CallBar from '../components/CallBar.astro';
+import Footer from '../components/Footer.astro';
 import Container from '../components/Container.astro';
 import Button from '../components/Button.astro';
 import CallCta from '../components/CallCta.astro';
@@ -51,9 +54,7 @@ const swatches = [
   'color-marker', 'color-numeral', 'color-error', 'color-success', 'focus-ring', 'callbar-bg',
 ];
 ---
-<Base title="Components (dev only) | Will Fraley" description="Development-only specimen sheet of every component and state in the Counsel design system. Not built for production." path="/dev-only/components/" noindex>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <main id="main" tabindex="-1">
+<Site title="Components (dev only) | Will Fraley" description="Development-only specimen sheet of every component and state in the Counsel design system. Not built for production." path="/dev-only/components/" lang="en" noindex>
     <Container>
       <section class="sheet-section" aria-label="Components sheet">
         <Eyebrow>Dev only · not in production</Eyebrow>
@@ -277,12 +278,29 @@ const swatches = [
 
     <PageHero lang="en" path="/criminal-defense/" h1={crim.data.h1 + ' (hero specimen H1)'} deck={first(crim, 'hero')?.blocks.slice(0, 1)} byline eyebrow="Practice area" class="sheet-hero-specimen" />
 
+    <Container>
+      <section class="sheet-section" aria-labelledby="s-shell">
+        <h2 id="s-shell">Shell: menu dialog, call bar, footer (ES)</h2>
+        <p>The real header, menu and footer frame this page. Below: static specimens of the menu panel (EN and ES), the
+          phone call bar and the Spanish footer.</p>
+        <div class="sheet-grid sheet-grid--2">
+          <div class="specimen-frame"><MenuDialog lang="en" path="/criminal-defense/dui/" specimen /></div>
+          <div class="specimen-frame"><MenuDialog lang="es" path="/es/defensa-penal/dui/" specimen /></div>
+        </div>
+        <div class="mt-8 stack">
+          <CallBar lang="en" specimen />
+          <CallBar lang="es" specimen />
+        </div>
+      </section>
+    </Container>
+    <Footer lang="es" path="/es/" />
+
     {first(home, 'cta-band') && <CTABand section={first(home, 'cta-band')} lang="en" />}
-  </main>
-</Base>
+</Site>
 
 <style>
   .swatch { display: grid; gap: var(--space-2); font-size: var(--text-fine); color: var(--color-text-muted); }
   .swatch__chip { height: 4rem; border-radius: var(--radius); border: var(--border-hairline) solid var(--hairline-card); }
   .specimens--ink { padding: var(--space-8); }
+  .specimen-frame { border: var(--border-hairline) solid var(--hairline-card); border-radius: var(--radius); overflow: hidden; max-width: 26rem; }
 </style>

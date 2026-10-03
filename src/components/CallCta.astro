@@ -9,12 +9,15 @@ import { t } from '../lib/i18n';
 interface Props { lang?: Lang; inverse?: boolean; secondary?: boolean | { href: string; label: string }; note?: boolean; label?: string; class?: string; state?: 'hover' | 'focus' | 'active' }
 const { lang = 'en', inverse = false, secondary = true, note = true, label, class: cls, state } = Astro.props;
 const ui = t(lang);
+const esc = (x: string) => x.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// The phone number never breaks across lines, even when a long label wraps.
+const labelHtml = esc(label || ui.call(firm.phone.value)).replace(firm.phone.value, `<span class="nowrap">${firm.phone.value}</span>`);
 const sec = secondary === true ? { href: ui.formHref, label: ui.sendMessage } : secondary || null;
 ---
 <div class:list={['call-cta', { 'call-cta--inverse': inverse }, cls]}>
   <a class:list={['btn', inverse ? 'btn-inverse' : 'btn-primary', 'btn-call', state && `is-${state}`]} href={firm.tel.value}>
     <Icon name="phone" />
-    <span>{label || ui.call(firm.phone.value)}</span>
+    <span set:html={labelHtml} />
   </a>
   {note && <p class="call-cta__note" set:html={ui.callNote} />}
   {sec && <a class:list={['btn', inverse ? 'btn-ghost-inverse' : 'btn-ghost', 'call-cta__secondary']} href={sec.href}>{sec.label}</a>}

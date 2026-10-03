@@ -164,3 +164,309 @@ Set grade: Warm low golden light or soft warm after-rain light; cream and pale-h
 - **C-practice:** a distant street-sign post is seen edge-on and blank, and far signs are unreadable blurs; no lettering anywhere.
 - **C-hero (attempt 3):** far left background holds a very soft grey shape behind a shrub that may be a parked car roof; no plate, no text, not legible. Retries for this slot are exhausted (max 2).
 - No image shows a person, face, hand, silhouette or readable text. None is captioned or implied to be 509 W College St or any real courthouse (all decorative, alt="").
+
+## Site-wide (direction X)
+
+Direction X = A "Counsel" (`mockups/RECOMMENDATION.md`). Set `site`; slot map in `images/SLOTS-SITE.md`. Reused from the mockup pass: `A-hero` -> Home, `A-practice` -> `/criminal-defense/`, `A-contact` -> `/contact-us/` (no new credits).
+
+Set grade (design-system 9.1, every prompt): overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain. Sensitive practices get non-literal, respectful subjects: no handcuffs, weapons, injuries, crime scenes, children, police imagery or courtrooms with people.
+
+- **Model:** `nano_banana_pro` (job API reports `nano_banana_2`), `resolution: "2k"`, no project/folder, `use_unlim` never passed. Preflight `get_cost` = 2 credits.
+- **Generations:** 28 submitted (24 first pass + 3 regenerations + 1 resubmission of a failed job); 27 billed. **Kept:** 24. **Rejected:** 3. **Failed (unbilled):** 1.
+- **Credits spent by A15 this pass: 54** (cap 250). Balance 643.07 before, 589.07 after.
+- **Mood references:** IMG08 (`inventory/assets/mainstage-v1-img.webp`) for exteriors and landscapes; IMG09 (`inventory/assets/Screenshot-2025-10-21-at-2.27.41-PM.png`) for interiors and still lifes. Light, palette and materials only.
+
+### site-services (3:2) — `/legal-services/`
+
+- **Subject:** courthouse-square cornices and brick storefront row under high overcast
+- **Master:** 2528x1696 (`images/generated/site/services.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `485cf9ea-506d-4960-bfb6-38ec2dd825e9` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Wide, calm editorial architectural photograph of one side of a historic courthouse square in a small Middle Tennessee town on a still morning under high, even overcast. A continuous row of two- and three-story red-brick storefronts with ornate painted cornices, stone window hoods and tall multi-pane upper windows runs across the right two-thirds of the frame at a gentle angle; ground-floor display windows are plain dark glass reflecting only soft sky, with no awnings and no lettering. At the far right edge, a corner of a pale limestone civic building with a plain column. The upper third is pale, even sky. Empty brick sidewalk, one dark iron lamp post. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 35 mm shift lens at eye level, corrected verticals. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-family (3:2) — `/family-law/`
+
+- **Subject:** kitchen table by a window, two empty chairs, closed folder, morning light
+- **Master:** 2528x1696 (`images/generated/site/family.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `de5a56a2-a32b-47d0-87fe-518112d800b1` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial interior photograph of a modest Middle Tennessee farmhouse kitchen in soft early-morning light. A worn pale oak kitchen table stands beside a tall double-hung window with white-painted trim; two plain wooden chairs are pulled in, empty. On the table: one closed plain manila folder with a blank cover and no tab label, a white ceramic mug, and a small glass jar holding a few sprigs of green leaves. Soft window light falls across the tabletop from the right and fades into cool blue-grey shade on the left wall, which is plain and calm. A faint view of a green yard through the window glass, out of focus. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 40 mm lens at seated eye height, medium depth of field. Warm, steady, private; family warmth carried by objects, never people. Generic, uncluttered, not any real office. No hands, no screens, no framed pictures, no certificates, no books with printed spines, no printed paper. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-injury (3:2) — `/personal-injury/`
+
+- **Subject:** quiet two-lane road between fields after rain, guardrail, overcast
+- **Master:** 2528x1696 (`images/generated/site/injury.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `204dd06a-ab2c-4d8d-a7c5-17d409fb04bc` (2 credits). Attempts: 2; rejected: 1.
+
+**Prompt (kept):**
+
+> Editorial landscape photograph of a quiet two-lane rural road in Middle Tennessee just after a rain shower, under soft grey overcast. The damp dark asphalt curves gently from the lower right toward low rolling green hills and a line of trees, with a plain galvanized steel guardrail along the right shoulder and open hayfields on both sides. The road surface carries a soft sheen of sky. The road is completely empty. No road markings with words, no road signs, no mailboxes, no power-line clutter. A single continuous, unbroken natural photograph with no panels, overlays, translucent bands, borders, seams or split; the left side of the frame is simply open hayfield and soft sky, evenly lit and quiet. Shot on a 35 mm lens at standing eye height, horizon in the upper third. Calm, clear, after the storm: steadiness, not a crash, no debris, no damage. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+**Rejected attempt 1** — job `4f1074dd-38cc-48d5-9e13-7f8c6f69d398` (2 credits). Reason: AI artifact: a flat translucent grey panel was laid over the left third of the frame (the model read "left third calm" as an overlay). Regenerated as one continuous photograph with an open hayfield left side.
+
+<details><summary>Prompt used</summary>
+
+> Editorial landscape photograph of a quiet two-lane rural road in Middle Tennessee just after a rain shower, under soft grey overcast. The damp dark asphalt curves gently from the lower right toward low rolling green hills and a line of trees, with a plain galvanized steel guardrail along the right shoulder and open hayfields on both sides. The road surface carries a soft sheen of sky. The road is completely empty. No road markings with words, no road signs, no mailboxes, no power-line clutter. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 35 mm lens at standing eye height, horizon in the upper third. Calm, clear, after the storm: steadiness, not a crash, no debris, no damage. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+</details>
+
+### site-about (3:2) — `/about/`
+
+- **Subject:** quiet law-office interior in an older brick building, tall window, walnut desk
+- **Master:** 2528x1696 (`images/generated/site/about.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `c1c00c3f-2d83-4db2-8ba3-b1b926a14d10` (2 credits). Attempts: 2; rejected: 1.
+- **Accepted with note:** A valet stand rendered in place of the coat stand (harmless). The blown-out window panes show faint, unreadable shapes of a building across the street; nothing legible.
+
+**Prompt (kept):**
+
+> Editorial interior photograph of a quiet small-town law office on the upper floor of an older red-brick building in Middle Tennessee, late morning. A tall arched window with white-painted mullions on the right lets in soft overcast light; an exposed brick wall in low-saturation red runs along the right side. A deep walnut desk stands empty and tidy in the middle distance with a closed leather padfolio and a brass desk lamp switched off; a wooden client chair faces it, empty. On the left, a calm plain plaster wall painted a soft cool grey-blue with a tall paneled walnut wainscot and an empty wooden coat stand; there are no bookshelves and no books anywhere in the room. Worn wide-plank wooden floor. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 35 mm lens at standing eye height, corrected verticals, medium depth of field. Settled, trustworthy, practical. Generic, uncluttered, not any real office. No hands, no screens, no framed pictures, no certificates, no books with printed spines, no printed paper. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+**Rejected attempt 1** — job `7a956d32-aec1-47af-abf3-fafa51d5daf5` (2 credits). Reason: Bookshelf volumes carried gilt pseudo-lettering on their spines (implied text). Regenerated with no bookshelves or books in the room.
+
+<details><summary>Prompt used</summary>
+
+> Editorial interior photograph of a quiet small-town law office on the upper floor of an older red-brick building in Middle Tennessee, late morning. A tall arched window with white-painted mullions on the right lets in soft overcast light; an exposed brick wall in low-saturation red runs along the right side. A deep walnut desk stands empty and tidy in the middle distance with a closed leather padfolio and a brass desk lamp switched off; a wooden client chair faces it, empty. On the left, built-in walnut shelves hold rows of plain cloth-bound volumes in muted blue, oxblood and tan with completely blank spines, softly out of focus. Worn wide-plank wooden floor. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 35 mm lens at standing eye height, corrected verticals, medium depth of field. Settled, trustworthy, practical. Generic, uncluttered, not any real office. No hands, no screens, no framed pictures, no certificates, no books with printed spines, no printed paper. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+</details>
+
+### site-testimonials (3:2) — `/testimonials/`
+
+- **Subject:** open front gate and tree-lined lane to a white farmhouse, morning
+- **Master:** 2528x1696 (`images/generated/site/testimonials.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `068dcdb9-f8e8-4c6f-a8a3-4350cdebc732` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial landscape photograph of a white-painted wooden front gate standing open in a simple board fence, a gravel lane beyond it leading between two rows of mature oak trees to a modest white farmhouse with a green metal roof in the middle distance, in rolling Middle Tennessee countryside on a soft overcast morning. Dew on the grass verges, a faint low mist over the far field. The farmhouse windows are plain and dark. No mailbox, no animals. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 50 mm lens at standing eye height, medium depth of field, the gate sharp and the house gently soft. Welcoming, grateful, quietly hopeful. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-faqs (3:2) — `/faqs/`
+
+- **Subject:** closed law book and blank legal pad on a walnut table
+- **Master:** 2528x1696 (`images/generated/site/faqs.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `d7b9def0-f879-4a2a-a6c1-8cbc2c0bfb39` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial still-life photograph on a deep walnut library table by a window in an older law office, mid-morning. In the right half of the frame: a single thick closed book bound in dark oxblood cloth with a completely blank cover and blank spine, and beside it a yellow legal pad with faint ruled lines and nothing written on it, a plain wooden pencil laid across the pad. Soft window light from the upper left rakes across the table and the edge of the pad, falling off into blue-black shadow on the right. The left third is quiet, softly lit walnut surface. Shot on a 50 mm lens about 30 degrees above table height, shallow depth of field focused on the edge of the pad. Clear, patient, answers within reach. Generic, uncluttered, not any real office. No hands, no screens, no framed pictures, no certificates, no books with printed spines, no printed paper. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-news (3:2) — `/in-the-news/`
+
+- **Subject:** white cupola rising above courthouse-square rooftops and trees, morning
+- **Master:** 2528x1696 (`images/generated/site/news.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `fdb63591-d08e-4453-aab3-78f538c0ed3b` (2 credits). Attempts: 1; rejected: 0.
+- **Accepted with note:** A blank pale metal panel on a storefront parapet at the bottom edge; checked at full size, no lettering.
+
+**Prompt (kept):**
+
+> Editorial architectural photograph of the rooftops of a small Middle Tennessee courthouse square seen from slightly above, early morning under thin high overcast. A white-painted octagonal cupola with plain louvered openings, no clock and no dial, rises from a pale limestone civic building in the right half of the frame, above a ring of mature trees just turning gold; around it, the parapets and cornices of red-brick storefront rooftops, a few plain chimneys. The upper third is soft, pale sky. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 70 mm lens from an elevated vantage, corrected verticals, gentle compression. Civic, local, present. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-cd-dui (3:2) — `/criminal-defense/dui/`
+
+- **Subject:** empty Middle Tennessee two-lane road at dusk
+- **Master:** 2528x1696 (`images/generated/site/cd-dui.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `8966758f-a135-43b0-bd6d-2876dcdcc83b` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial landscape photograph of an empty two-lane country road in Middle Tennessee at dusk, about twenty minutes after sunset. The road runs straight away from the camera then bends gently right over a low rise, between a split-rail fence on the left and dark cedar trees on the right. The sky is a deep, calm blue fading to a thin band of muted warm paper-white at the horizon; the asphalt holds a faint reflection of the sky. No vehicles, no headlights, no tail lights, no police lights, no road signs, no mailboxes. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 35 mm lens at standing eye height, horizon in the lower third, long exposure stillness. Quiet, sober, reflective, never threatening. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-cd-drug-crimes (3:2) — `/criminal-defense/drug-crimes/`
+
+- **Subject:** empty bench under an old oak on a courthouse lawn in morning mist
+- **Master:** 2528x1696 (`images/generated/site/cd-drug-crimes.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `820ec2c3-f12b-4c8d-a9e4-f3bb17b23f7c` (2 credits). Attempts: 2; rejected: 1.
+- **Accepted with note:** The left third is a soft out-of-focus foreground trunk in fog, which crops cleanly.
+
+**Prompt (kept):**
+
+> Editorial landscape photograph of a single empty slatted wooden park bench with dark iron ends beneath a broad old oak tree on the lawn of a small Middle Tennessee courthouse square, on a misty early morning under soft overcast. In the background, softly out of focus through the mist, only the pale limestone corner and plain columns of a generic civic building and more bare trees fading into fog; no storefronts, no shop windows, no signs, no lamps with panels anywhere. Damp green grass, a few fallen leaves, a brick walkway curving past the bench. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 50 mm lens at seated eye height, shallow depth of field with the bench sharp. Patient, steady, a place to think. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+**Rejected attempt 1** — job `c7a58bb8-7bdf-4ee1-aace-d7c35fd04f28` (2 credits). Reason: Background storefronts carried sign boards with pseudo-lettering and a lit window sign. Regenerated with only the civic building corner and fog-bound trees behind the bench.
+
+<details><summary>Prompt used</summary>
+
+> Editorial landscape photograph of a single empty slatted wooden park bench with dark iron ends beneath a broad old oak tree on the lawn of a small Middle Tennessee courthouse square, on a misty early morning under soft overcast. In the background, softly out of focus through the mist, the pale limestone corner and plain columns of a generic civic building and a few red-brick storefronts. Damp green grass, a few fallen leaves, a brick walkway curving past the bench. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 50 mm lens at seated eye height, shallow depth of field with the bench sharp. Patient, steady, a place to think. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+</details>
+
+### site-cd-theft (3:2) — `/criminal-defense/theft/`
+
+- **Subject:** brick storefront facade without signage, closed door, early morning
+- **Master:** 2528x1696 (`images/generated/site/cd-theft.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `0c445f1d-2ba2-484d-9ce2-afc383dc8b61` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Straight-on editorial architectural photograph of a single two-story historic red-brick storefront facade on a Middle Tennessee town square in early morning under soft overcast. A recessed entry with a closed dark-painted wooden door with a tall glass panel, flanked by two plain display windows of dark glass that reflect only soft sky and contain no goods; above, a plain painted cornice and three tall arched upper windows with white trim. The sign band above the windows is completely plain painted wood. Clean brick sidewalk in front, empty. The facade fills the right two-thirds; on the left, the soft edge of a neighboring building in shade. Shot on a 50 mm shift lens at eye level, perfectly corrected verticals, symmetrical calm. Ordinary, local, composed. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-cd-violent-crimes (3:2) — `/criminal-defense/violent-crimes/`
+
+- **Subject:** closed paneled doors in a pale limestone civic portico, overcast
+- **Master:** 2528x1696 (`images/generated/site/cd-violent-crimes.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `4cdcbb41-1c19-4ef3-a465-99f6d2d3ab5a` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial architectural photograph of the portico of a generic Southern county courthouse in Middle Tennessee under high overcast: a pair of tall closed paneled dark walnut doors with dull brass pulls, set deep in a pale limestone doorway framed by two plain fluted columns, three wide shallow limestone steps in front. Soft even light, cool blue-grey shade within the doorway. The stone is weathered and plain, with no inscriptions, no seals, no carved words. The doors and columns sit in the right two-thirds; the left third is smooth shaded limestone wall and a soft column edge. Shot on a 40 mm lens from the foot of the steps, corrected verticals. Gravity, order, a serious matter met calmly; no police imagery, no bars. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-cd-sex-crimes (3:2) — `/criminal-defense/sex-crimes/`
+
+- **Subject:** rain on a tall office window overlooking blurred brick rooftops
+- **Master:** 2528x1696 (`images/generated/site/cd-sex-crimes.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `1e793f7a-7cb7-4487-8eee-ac55d6678289` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Quiet editorial interior photograph looking out through a tall old multi-pane office window with white-painted mullions on a rainy overcast afternoon. Fine raindrops bead and run on the glass; beyond, softly out of focus, the red-brick upper floors and cornices of a Middle Tennessee town square and the tops of bare trees in cool grey light. A deep walnut window sill in the foreground holds nothing but soft reflected light. The left third is the plain shaded plaster wall beside the window. Shot on a 50 mm lens at standing eye height, shallow depth of field focused on the raindrops. Private, discreet, calm, considered. Generic, uncluttered, not any real office. No hands, no screens, no framed pictures, no certificates, no books with printed spines, no printed paper. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-cd-fraud (3:2) — `/criminal-defense/fraud/`
+
+- **Subject:** neat stack of blank manila folders, closed ledger, brass clip on walnut desk
+- **Master:** 2528x1696 (`images/generated/site/cd-fraud.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `9ffa4ba3-ea13-452b-8fef-86c1cc2bcd56` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial still-life photograph on a deep walnut desk in an older law office, soft overcast window light from the left. In the right half: a neat squared stack of plain manila folders with blank covers and no tab labels, a closed ledger book bound in dark blue-black cloth with a completely blank cover, and a single brass binder clip resting on top. An all-brass desk lamp with a brass dome shade and no green glass, switched off, stands softly out of focus behind. No loose paper with writing, no numbers, no calculators, no money. The left third is clean, softly lit walnut surface fading to shadow. Shot on a 50 mm lens about 25 degrees above desk height, shallow depth of field. Order, scrutiny, careful review. Generic, uncluttered, not any real office. No hands, no screens, no framed pictures, no certificates, no books with printed spines, no printed paper. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-cd-probation (3:2) — `/criminal-defense/probation-violation/`
+
+- **Subject:** Stones River greenway path under autumn trees, morning mist
+- **Master:** 2528x1696 (`images/generated/site/cd-probation.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `975bf777-d07e-4eb9-b97b-35b9957a4da3` (2 credits). Attempts: 1; rejected: 0. Plus 1 failed submission (`4d5b97c6-8baa-4568-bdc6-120cded2ab7a`, unbilled), resubmitted unchanged.
+
+**Prompt (kept):**
+
+> Editorial landscape photograph of a paved riverside greenway path in Middle Tennessee curving gently forward under tall autumn trees, beside a calm river with low limestone banks, on a soft misty overcast morning. Trees in muted gold, rust and faded green; a scatter of fallen leaves on the pale path; still water reflecting the pale sky on the left. A simple wooden rail fence along the riverside edge of the path. No benches with plaques, no trail markers, no signs. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 35 mm lens at standing eye height, medium depth of field, the path leading the eye forward into soft mist. Forward motion, a way back on track, quiet resolve. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-cd-domestic-assault (3:2) — `/criminal-defense/domestic-assault/`
+
+- **Subject:** calm river bend under a limestone bluff, still water, overcast
+- **Master:** 2528x1696 (`images/generated/site/cd-domestic-assault.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `e11765f6-8e12-47c3-86b8-a178382b2b20` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial landscape photograph of a calm bend in a Middle Tennessee river beneath a low, layered grey limestone bluff topped with cedars and bare-branched hardwoods, on a still overcast morning. The water is glassy and slow, reflecting the pale sky and the bluff; a gravel bar and smooth river stones in the near foreground at the right. Faint low mist over the water in the distance. No boats, no docks, no structures. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 35 mm lens from the riverbank at standing eye height, horizon in the middle third. Stillness after strain; calm, measured, steady. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-fl-divorce (3:2) — `/family-law/divorce/`
+
+- **Subject:** single set of house keys on an entry table by a closed front door, morning
+- **Master:** 2528x1696 (`images/generated/site/fl-divorce.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `a4029cea-d56c-424d-b5da-8c8886374186` (2 credits). Attempts: 1; rejected: 0.
+- **Accepted with note:** Keys rendered as an old-fashioned brass ring of skeleton keys; on-brief and tasteful.
+
+**Prompt (kept):**
+
+> Editorial interior still-life photograph of the entry hall of a modest older Middle Tennessee house in soft morning light. A narrow painted wooden entry table stands against a plain pale wall in the right half of the frame; on it, a single ring of plain brass house keys with no tags, a small ceramic dish, and a short glass vase with one branch of green leaves. Beside the table, a closed white-painted paneled front door with a brass knob and a narrow sidelight window of seeded glass, glowing softly. Worn oak floor. The left third is a calm stretch of plain wall in cool blue-grey shade. Shot on a 50 mm lens at standing eye height, shallow depth of field focused on the keys. A new chapter, steady and dignified, never sad or broken. Generic, uncluttered, not any real office. No hands, no screens, no framed pictures, no certificates, no books with printed spines, no printed paper. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-fl-custody (3:2) — `/family-law/child-custody/`
+
+- **Subject:** empty wooden porch swing on a front porch, morning
+- **Master:** 2528x1696 (`images/generated/site/fl-custody.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `ec0cbc1a-892f-4c23-90e6-083e90a49902` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial photograph of a wide covered front porch on a white-painted Middle Tennessee farmhouse on a soft overcast morning. An empty slatted wooden porch swing hangs on plain chains in the right half of the frame, a folded wool blanket in muted blue resting on its seat; painted white porch posts and a beadboard ceiling in pale blue-grey. Beyond the porch rail, a softly out-of-focus green lawn and a large shade tree. A potted fern hangs at the far end. No toys, no bicycles. The left third is the plain clapboard wall of the house in soft shade. Shot on a 40 mm lens at standing eye height, medium depth of field. Home, continuity, security, gentle care. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-fl-visitation (3:2) — `/family-law/visitation/`
+
+- **Subject:** gravel driveway under a big oak leading to a farmhouse, late afternoon
+- **Master:** 2528x1696 (`images/generated/site/fl-visitation.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `5bbcd054-e0ed-4641-a0f6-fed2e4660a54` (2 credits). Attempts: 1; rejected: 0.
+- **Accepted with note:** Two empty porch chairs on the distant farmhouse porch; checked at full size, no figures.
+
+**Prompt (kept):**
+
+> Editorial landscape photograph of a gravel driveway winding up a gentle slope beneath a great spreading oak toward a modest white farmhouse with a deep front porch, in rolling Middle Tennessee countryside on a soft overcast late afternoon. A board fence follows the driveway on the left; pasture grass on both sides, a faint warm paper-white glow low in the sky behind the house. The house windows are plain. No vehicles, no mailbox, no animals. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 50 mm lens at standing eye height, medium depth of field. Coming and going, connection kept, unhurried. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-fl-parenting-plan (3:2) — `/family-law/parenting-plan-modifications/`
+
+- **Subject:** open blank notebook and pencil on a kitchen counter by a window
+- **Master:** 2528x1696 (`images/generated/site/fl-parenting-plan.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `2ad8188b-9eb8-42a8-9644-3e0fec9c08e1` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial still-life photograph on a pale butcher-block kitchen counter beside a window in an older Middle Tennessee house, soft morning light. In the right half of the frame: an open spiral-bound notebook with plain unruled cream pages, completely blank, a sharpened wooden pencil lying across it, and a small potted herb plant on the windowsill behind, softly out of focus. A white ceramic mug at the edge of the frame. Soft light from the window at upper right falls across the pages, with cool blue-grey shade on the left. Shot on a 50 mm lens about 35 degrees above counter height, shallow depth of field focused on the pencil tip. Planning ahead, adjusting, calm practicality. Generic, uncluttered, not any real office. No hands, no screens, no framed pictures, no certificates, no books with printed spines, no printed paper. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-fl-paternity (3:2) — `/family-law/paternity/`
+
+- **Subject:** old oak with spreading roots on a Middle Tennessee hillside, morning
+- **Master:** 2528x1696 (`images/generated/site/fl-paternity.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `0b7f7ce7-cada-4418-9248-02a7e24614d8` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial landscape photograph of a single great old white oak tree with a broad spreading crown and thick roots gripping a gentle grassy hillside in Middle Tennessee, on a soft overcast morning with faint mist in the valley beyond. The trunk stands at about two-thirds of the frame width; its roots spread across the near ground into dew-wet grass. Low rolling hills and a distant tree line fade into pale sky. No fences with signs, no buildings, no swings. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 35 mm lens at standing eye height, horizon in the lower third. Roots, lineage, belonging, steadiness. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-adoption (3:2) — `/adoption/`
+
+- **Subject:** sunlit empty window seat with a folded quilt in an old house
+- **Master:** 2528x1696 (`images/generated/site/adoption.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `588a8838-9f48-4c51-b354-d98ee2ded6de` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial interior photograph of an empty built-in window seat in a bay window of an older Middle Tennessee house, in soft hopeful morning light. A neatly folded handmade patchwork quilt in muted blue, cream and faded brick red rests on a plain linen cushion, with one soft pillow. Tall multi-pane windows with white-painted trim glow with pale light; beyond them, out of focus, green leaves of a garden tree. Painted wood paneling below the windows, worn oak floor. No toys, no framed photos. The left third is plain painted wall in soft cool shade. Shot on a 40 mm lens at seated eye height, medium depth of field. Welcome, belonging, a place made ready. Generic, uncluttered, not any real office. No hands, no screens, no framed pictures, no certificates, no books with printed spines, no printed paper. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-dcs (3:2) — `/dcs-case-attorney/`
+
+- **Subject:** front porch of a modest brick house, door closed, two empty rocking chairs
+- **Master:** 2528x1696 (`images/generated/site/dcs.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `d09b411c-a175-421c-8fdd-27fa9a93cc84` (2 credits). Attempts: 1; rejected: 0.
+
+**Prompt (kept):**
+
+> Editorial photograph of the front porch of a modest single-story red-brick house in a Middle Tennessee neighborhood in soft overcast daylight. Two empty white-painted wooden rocking chairs sit side by side on a plain concrete porch; behind them a closed dark-blue painted front door with a brass knob and a plain storm door, and a window with simple white curtains. A small potted plant by the steps, neatly kept boxwood shrubs along the front. No house numbers, no mailbox, no toys, no signs. The porch sits in the right two-thirds; the left third is soft lawn and shrub in gentle shade. Shot on a 40 mm lens from the front walk at standing eye height, corrected verticals. Home intact, respectful, steady, private. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-og-default (16:9) — `site-wide social share image (1200x630 crop)`
+
+- **Subject:** courthouse-square cornices and limestone cupola, centered for a 1.9:1 crop
+- **Master:** 2752x1536 (`images/generated/site/og-default.png`)
+- **Mood reference:** IMG08
+- **Kept job:** `8f60d3fc-f518-4acc-a585-8c21bf1da8ff` (2 credits). Attempts: 1; rejected: 0.
+- **Accepted with note:** Centered composition; a small blank plate under the portico window, no lettering. Crop to 1200x630 keeps the cupola and both storefront rows.
+
+**Prompt (kept):**
+
+> Wide, balanced editorial architectural photograph of a historic courthouse square in a small Middle Tennessee town on a calm morning under soft high overcast. Centered in the frame: a pale limestone civic building with a plain columned portico and a white octagonal cupola with plain louvered openings, no clock and no dial; on both sides, rows of two-story red-brick storefronts with ornate painted cornices and tall multi-pane upper windows, display glass plain and dark. Mature shade trees in muted green frame the left and right edges; an empty brick-paved plaza runs across the bottom. Keep all important detail inside the central band of the frame, with calm sky in the top 15 percent and plain paving in the bottom 15 percent so it crops to a wide 1.9 to 1 banner. Shot on a 35 mm shift lens at eye level, corrected verticals, horizon in the lower third. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering
+
+### site-texture (16:9) — `section backgrounds (site-wide)`
+
+- **Subject:** subtle warm paper-white cotton paper texture
+- **Master:** 2752x1536 (`images/generated/site/texture.png`)
+- **Mood reference:** IMG09
+- **Kept job:** `ea222a94-9e48-40e5-b9fc-c0ae39ed0c2c` (2 credits). Attempts: 1; rejected: 0.
+- **Accepted with note:** Near-uniform warm paper-white with faint fibre; use at low opacity or as-is for linen sections.
+
+**Prompt (kept):**
+
+> Extreme close, perfectly flat, evenly lit photograph of a sheet of heavy warm paper-white handmade cotton rag paper filling the entire frame edge to edge, showing only a very subtle fine fiber texture and the faintest soft mottling. Very low contrast, almost uniform tone, with a barely perceptible cool blue-grey cast in the slightest hollows. No folds, no creases, no edges, no stains, no watermark, no shadows, no objects, no vignette, no gradient. Shot straight down with soft diffused light, entire frame in focus. Quiet, tactile, suitable as a seamless background. Grade: warm paper-white with the faintest cool blue-grey in the shadows, low saturation. no people, no faces, no text, no signage, no lettering

@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-03T13:38:42.752Z",
+  "at": "2026-10-03T13:48:30.546Z",
   "pass": true,
   "failed": 0,
   "results": [
@@ -19,14 +19,14 @@
       "detail": ""
     },
     {
-      "name": "page rules on 1 pages (lang, one h1, title, description, canonical, hreflang, img dims+alt, no href=#, tel, law rules, legal line)",
+      "name": "page rules on 5 pages (lang, one h1, title, description, canonical, hreflang, img dims+alt, no href=#, tel, law rules, legal line)",
       "pass": true,
       "detail": ""
     },
     {
       "name": "shipped JS ≤ 50 KB gzipped (tracking off)",
       "pass": true,
-      "detail": "0.0 KB"
+      "detail": "0.5 KB"
     },
     {
       "name": "0 banned phrases / forbidden strings in src/",

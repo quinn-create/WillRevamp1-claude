@@ -1,9 +1,10 @@
 ---
 // Dev-only route for the components sheet (src/pages/_components.astro). Outside `astro dev` getStaticPaths
-// returns no paths, so nothing is built into dist/ and nothing reaches the sitemap.
-import Sheet from '../_components.astro';
+// returns no paths and the sheet is never imported (the dynamic import is dead code once import.meta.env.DEV is
+// false), so nothing from it, not even its specimen images, reaches dist/ or the sitemap.
 export function getStaticPaths() {
   return import.meta.env.DEV ? [{ params: { sheet: 'components' } }] : [];
 }
+const Sheet = import.meta.env.DEV ? (await import('../_components.astro')).default : null;
 ---
-<Sheet />
+{Sheet && <Sheet />}

@@ -1,29 +1,14 @@
 ---
-// Interim home (A19 P100): proves the foundation (Base head, copy loader, fonts, tokens) end to end.
+// Interim home (A19 P100/P300): proves the foundation, components and shell end to end with the home copy.
 // A20 replaces this file with the designed Home template in P400.
-import Base from '../layouts/Base.astro';
-import { loadCopy, renderMarkdown, inline } from '../lib/copy';
-import { firm } from '../lib/site';
-import { t } from '../lib/i18n';
+import Site from '../layouts/Site.astro';
+import PageHero from '../components/PageHero.astro';
+import Sections from '../components/Sections.astro';
+import { loadCopy } from '../lib/copy';
 
 const copy = loadCopy('index', 'en');
-const ui = t('en');
 ---
-<Base title={copy.data.title} description={copy.data.description} path="/">
-  <a class="skip-link" href="#main">{ui.skip}</a>
-  <main id="main" tabindex="-1">
-    <div class="container section">
-      <h1 class="display-xl" set:html={inline(copy.data.h1)} />
-      {copy.sections.map((s) => (
-        <section class="section--tight flow">
-          {s.h2 && <h2 set:html={inline(s.h2)} />}
-          <Fragment set:html={renderMarkdown(s.markdown)} />
-        </section>
-      ))}
-    </div>
-  </main>
-  <footer class="container section--tight">
-    <p><a class="tel" href={firm.tel.value}>{firm.phone.value}</a> · {firm.addressLine.value}</p>
-    <p class="fine muted">{ui.legalLine}</p>
-  </footer>
-</Base>
+<Site title={copy.data.title} description={copy.data.description} path="/">
+  <PageHero lang="en" path="/" h1={copy.data.h1} deck={copy.sections.find((x) => x.hint === 'hero')?.blocks || []} variant="home" byline="mobile" eyebrow="Attorney at Law · Murfreesboro, Tennessee" />
+  <Sections sections={copy.sections} lang="en" />
+</Site>

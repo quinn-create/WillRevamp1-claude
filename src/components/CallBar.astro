@@ -1,0 +1,15 @@
+---
+// Mobile call bar (DESIGN-SYSTEM 7.8): < 37.5em only, fixed bottom, "Call (615) 410-7290 · Free consultation".
+// The note drops below 23.4em, never the number. Hidden while the menu dialog is open.
+import Icon from './Icon.astro';
+import { firm, type Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+interface Props { lang: Lang; specimen?: boolean }
+const { lang, specimen = false } = Astro.props;
+const ui = t(lang);
+---
+<a class:list={['callbar', { 'callbar--specimen': specimen }]} href={firm.tel.value}>
+  <Icon name="phone" />
+  <span>{ui.call(firm.phone.value)}</span>
+  <span class="callbar__note">{ui.freeConsultation}</span>
+</a>

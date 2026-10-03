@@ -1120,5 +1120,491 @@
       }
     ],
     "createdAt": "2026-10-03T13:38:34.917Z"
+  },
+  {
+    "slot": "dcs",
+    "set": "site",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "3:2",
+    "job": "d09b411c-a175-421c-8fdd-27fa9a93cc84",
+    "reference": "inventory/assets/Screenshot-2025-10-21-at-2.27.41-PM.png",
+    "prompt": "Editorial photograph of the front porch of a modest single-story red-brick house in a Middle Tennessee neighborhood in soft overcast daylight. Two empty white-painted wooden rocking chairs sit side by side on a plain concrete porch; behind them a closed dark-blue painted front door with a brass knob and a plain storm door, and a window with simple white curtains. A small potted plant by the steps, neatly kept boxwood shrubs along the front. No house numbers, no mailbox, no toys, no signs. The porch sits in the right two-thirds; the left third is soft lawn and shrub in gentle shade. Shot on a 40 mm lens from the front walk at standing eye height, corrected verticals. Home intact, respectful, steady, private. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_132752_d09b411c-a175-421c-8fdd-27fa9a93cc84.png",
+    "master": "images/generated/site/dcs.png",
+    "width": 2528,
+    "height": 1696,
+    "variants": [
+      {
+        "file": "images/generated/site/dcs-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 34040
+      },
+      {
+        "file": "images/generated/site/dcs-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 59176
+      },
+      {
+        "file": "images/generated/site/dcs-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 65935
+      },
+      {
+        "file": "images/generated/site/dcs-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 115846
+      },
+      {
+        "file": "images/generated/site/dcs-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 107364
+      },
+      {
+        "file": "images/generated/site/dcs-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 188766
+      },
+      {
+        "file": "images/generated/site/dcs-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 212022
+      },
+      {
+        "file": "images/generated/site/dcs-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 384320
+      }
+    ],
+    "createdAt": "2026-10-03T13:39:06.581Z"
+  },
+  {
+    "slot": "og-default",
+    "set": "site",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "16:9",
+    "job": "8f60d3fc-f518-4acc-a585-8c21bf1da8ff",
+    "reference": "inventory/assets/mainstage-v1-img.webp",
+    "prompt": "Wide, balanced editorial architectural photograph of a historic courthouse square in a small Middle Tennessee town on a calm morning under soft high overcast. Centered in the frame: a pale limestone civic building with a plain columned portico and a white octagonal cupola with plain louvered openings, no clock and no dial; on both sides, rows of two-story red-brick storefronts with ornate painted cornices and tall multi-pane upper windows, display glass plain and dark. Mature shade trees in muted green frame the left and right edges; an empty brick-paved plaza runs across the bottom. Keep all important detail inside the central band of the frame, with calm sky in the top 15 percent and plain paving in the bottom 15 percent so it crops to a wide 1.9 to 1 banner. Shot on a 35 mm shift lens at eye level, corrected verticals, horizon in the lower third. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_132748_8f60d3fc-f518-4acc-a585-8c21bf1da8ff.png",
+    "master": "images/generated/site/og-default.png",
+    "width": 2752,
+    "height": 1536,
+    "variants": [
+      {
+        "file": "images/generated/site/og-default-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 18544
+      },
+      {
+        "file": "images/generated/site/og-default-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 30902
+      },
+      {
+        "file": "images/generated/site/og-default-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 38546
+      },
+      {
+        "file": "images/generated/site/og-default-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 66058
+      },
+      {
+        "file": "images/generated/site/og-default-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 67167
+      },
+      {
+        "file": "images/generated/site/og-default-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 116682
+      },
+      {
+        "file": "images/generated/site/og-default-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 156520
+      },
+      {
+        "file": "images/generated/site/og-default-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 269172
+      },
+      {
+        "file": "images/generated/site/og-default-2560.avif",
+        "width": 2560,
+        "format": "avif",
+        "bytes": 274956
+      },
+      {
+        "file": "images/generated/site/og-default-2560.webp",
+        "width": 2560,
+        "format": "webp",
+        "bytes": 477072
+      }
+    ],
+    "createdAt": "2026-10-03T13:39:47.049Z"
+  },
+  {
+    "slot": "texture",
+    "set": "site",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "16:9",
+    "job": "ea222a94-9e48-40e5-b9fc-c0ae39ed0c2c",
+    "reference": "inventory/assets/Screenshot-2025-10-21-at-2.27.41-PM.png",
+    "prompt": "Extreme close, perfectly flat, evenly lit photograph of a sheet of heavy warm paper-white handmade cotton rag paper filling the entire frame edge to edge, showing only a very subtle fine fiber texture and the faintest soft mottling. Very low contrast, almost uniform tone, with a barely perceptible cool blue-grey cast in the slightest hollows. No folds, no creases, no edges, no stains, no watermark, no shadows, no objects, no vignette, no gradient. Shot straight down with soft diffused light, entire frame in focus. Quiet, tactile, suitable as a seamless background. Grade: warm paper-white with the faintest cool blue-grey in the shadows, low saturation. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_132748_ea222a94-9e48-40e5-b9fc-c0ae39ed0c2c.png",
+    "master": "images/generated/site/texture.png",
+    "width": 2752,
+    "height": 1536,
+    "variants": [
+      {
+        "file": "images/generated/site/texture-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 2392
+      },
+      {
+        "file": "images/generated/site/texture-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 1768
+      },
+      {
+        "file": "images/generated/site/texture-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 5582
+      },
+      {
+        "file": "images/generated/site/texture-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 4094
+      },
+      {
+        "file": "images/generated/site/texture-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 10615
+      },
+      {
+        "file": "images/generated/site/texture-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 7950
+      },
+      {
+        "file": "images/generated/site/texture-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 21238
+      },
+      {
+        "file": "images/generated/site/texture-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 21192
+      },
+      {
+        "file": "images/generated/site/texture-2560.avif",
+        "width": 2560,
+        "format": "avif",
+        "bytes": 37003
+      },
+      {
+        "file": "images/generated/site/texture-2560.webp",
+        "width": 2560,
+        "format": "webp",
+        "bytes": 41418
+      }
+    ],
+    "createdAt": "2026-10-03T13:39:58.773Z"
+  },
+  {
+    "slot": "injury",
+    "set": "site",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "3:2",
+    "job": "204dd06a-ab2c-4d8d-a7c5-17d409fb04bc",
+    "reference": "inventory/assets/mainstage-v1-img.webp",
+    "prompt": "Editorial landscape photograph of a quiet two-lane rural road in Middle Tennessee just after a rain shower, under soft grey overcast. The damp dark asphalt curves gently from the lower right toward low rolling green hills and a line of trees, with a plain galvanized steel guardrail along the right shoulder and open hayfields on both sides. The road surface carries a soft sheen of sky. The road is completely empty. No road markings with words, no road signs, no mailboxes, no power-line clutter. A single continuous, unbroken natural photograph with no panels, overlays, translucent bands, borders, seams or split; the left side of the frame is simply open hayfield and soft sky, evenly lit and quiet. Shot on a 35 mm lens at standing eye height, horizon in the upper third. Calm, clear, after the storm: steadiness, not a crash, no debris, no damage. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_133104_204dd06a-ab2c-4d8d-a7c5-17d409fb04bc.png",
+    "master": "images/generated/site/injury.png",
+    "width": 2528,
+    "height": 1696,
+    "variants": [
+      {
+        "file": "images/generated/site/injury-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 13972
+      },
+      {
+        "file": "images/generated/site/injury-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 19014
+      },
+      {
+        "file": "images/generated/site/injury-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 28865
+      },
+      {
+        "file": "images/generated/site/injury-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 40532
+      },
+      {
+        "file": "images/generated/site/injury-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 51267
+      },
+      {
+        "file": "images/generated/site/injury-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 73722
+      },
+      {
+        "file": "images/generated/site/injury-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 126761
+      },
+      {
+        "file": "images/generated/site/injury-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 191602
+      }
+    ],
+    "createdAt": "2026-10-03T13:41:17.298Z"
+  },
+  {
+    "slot": "about",
+    "set": "site",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "3:2",
+    "job": "c1c00c3f-2d83-4db2-8ba3-b1b926a14d10",
+    "reference": "inventory/assets/Screenshot-2025-10-21-at-2.27.41-PM.png",
+    "prompt": "Editorial interior photograph of a quiet small-town law office on the upper floor of an older red-brick building in Middle Tennessee, late morning. A tall arched window with white-painted mullions on the right lets in soft overcast light; an exposed brick wall in low-saturation red runs along the right side. A deep walnut desk stands empty and tidy in the middle distance with a closed leather padfolio and a brass desk lamp switched off; a wooden client chair faces it, empty. On the left, a calm plain plaster wall painted a soft cool grey-blue with a tall paneled walnut wainscot and an empty wooden coat stand; there are no bookshelves and no books anywhere in the room. Worn wide-plank wooden floor. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 35 mm lens at standing eye height, corrected verticals, medium depth of field. Settled, trustworthy, practical. Generic, uncluttered, not any real office. No hands, no screens, no framed pictures, no certificates, no books with printed spines, no printed paper. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_133104_c1c00c3f-2d83-4db2-8ba3-b1b926a14d10.png",
+    "master": "images/generated/site/about.png",
+    "width": 2528,
+    "height": 1696,
+    "variants": [
+      {
+        "file": "images/generated/site/about-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 15738
+      },
+      {
+        "file": "images/generated/site/about-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 22438
+      },
+      {
+        "file": "images/generated/site/about-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 28878
+      },
+      {
+        "file": "images/generated/site/about-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 40368
+      },
+      {
+        "file": "images/generated/site/about-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 44102
+      },
+      {
+        "file": "images/generated/site/about-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 63400
+      },
+      {
+        "file": "images/generated/site/about-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 84623
+      },
+      {
+        "file": "images/generated/site/about-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 119692
+      }
+    ],
+    "createdAt": "2026-10-03T13:41:38.718Z"
+  },
+  {
+    "slot": "cd-drug-crimes",
+    "set": "site",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "3:2",
+    "job": "820ec2c3-f12b-4c8d-a9e4-f3bb17b23f7c",
+    "reference": "inventory/assets/mainstage-v1-img.webp",
+    "prompt": "Editorial landscape photograph of a single empty slatted wooden park bench with dark iron ends beneath a broad old oak tree on the lawn of a small Middle Tennessee courthouse square, on a misty early morning under soft overcast. In the background, softly out of focus through the mist, only the pale limestone corner and plain columns of a generic civic building and more bare trees fading into fog; no storefronts, no shop windows, no signs, no lamps with panels anywhere. Damp green grass, a few fallen leaves, a brick walkway curving past the bench. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 50 mm lens at seated eye height, shallow depth of field with the bench sharp. Patient, steady, a place to think. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_133104_820ec2c3-f12b-4c8d-a9e4-f3bb17b23f7c.png",
+    "master": "images/generated/site/cd-drug-crimes.png",
+    "width": 2528,
+    "height": 1696,
+    "variants": [
+      {
+        "file": "images/generated/site/cd-drug-crimes-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 18688
+      },
+      {
+        "file": "images/generated/site/cd-drug-crimes-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 26602
+      },
+      {
+        "file": "images/generated/site/cd-drug-crimes-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 33388
+      },
+      {
+        "file": "images/generated/site/cd-drug-crimes-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 47832
+      },
+      {
+        "file": "images/generated/site/cd-drug-crimes-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 49895
+      },
+      {
+        "file": "images/generated/site/cd-drug-crimes-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 74294
+      },
+      {
+        "file": "images/generated/site/cd-drug-crimes-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 90273
+      },
+      {
+        "file": "images/generated/site/cd-drug-crimes-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 140584
+      }
+    ],
+    "createdAt": "2026-10-03T13:41:57.481Z"
+  },
+  {
+    "slot": "cd-probation",
+    "set": "site",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "3:2",
+    "job": "975bf777-d07e-4eb9-b97b-35b9957a4da3",
+    "reference": "inventory/assets/mainstage-v1-img.webp",
+    "prompt": "Editorial landscape photograph of a paved riverside greenway path in Middle Tennessee curving gently forward under tall autumn trees, beside a calm river with low limestone banks, on a soft misty overcast morning. Trees in muted gold, rust and faded green; a scatter of fallen leaves on the pale path; still water reflecting the pale sky on the left. A simple wooden rail fence along the riverside edge of the path. No benches with plaques, no trail markers, no signs. The left third of the frame is calm and low in detail so it crops cleanly beside a headline. Shot on a 35 mm lens at standing eye height, medium depth of field, the path leading the eye forward into soft mist. Forward motion, a way back on track, quiet resolve. Generic architecture, not a recognizable landmark and not any real law office. No vehicles, no flags, no street signs, no house numbers, no plaques, no notices, no posters. Grade: overcast Middle Tennessee light, cool blue-grey shadow, low-saturation brick and wood, warm paper-white highlights, deepest shadows a blue-black ink, never pure black; low saturation, gentle contrast, fine natural grain, no HDR, no lens flare, no heavy vignette. Calm and unhurried, like the opening plate of a book, not advertising. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_134011_975bf777-d07e-4eb9-b97b-35b9957a4da3.png",
+    "master": "images/generated/site/cd-probation.png",
+    "width": 2528,
+    "height": 1696,
+    "variants": [
+      {
+        "file": "images/generated/site/cd-probation-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 41030
+      },
+      {
+        "file": "images/generated/site/cd-probation-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 63980
+      },
+      {
+        "file": "images/generated/site/cd-probation-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 84885
+      },
+      {
+        "file": "images/generated/site/cd-probation-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 135874
+      },
+      {
+        "file": "images/generated/site/cd-probation-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 142436
+      },
+      {
+        "file": "images/generated/site/cd-probation-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 236854
+      },
+      {
+        "file": "images/generated/site/cd-probation-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 303132
+      },
+      {
+        "file": "images/generated/site/cd-probation-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 524512
+      }
+    ],
+    "createdAt": "2026-10-03T13:42:30.189Z"
   }
 ]

@@ -1,0 +1,47 @@
+---
+// Mobile menu (DESIGN-SYSTEM 7.7): native <dialog> opened with showModal() — focus trap, Esc and an inert page
+// come from the platform. Right-anchored panel; top bar with wordmark + close; the 6 nav items with their
+// children; foot with the call button, note and language toggle. Focus returns to the opener on close.
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import LanguageToggle from './LanguageToggle.astro';
+import { nav, firm, type Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+interface Props { lang: Lang; path: string; specimen?: boolean }
+const { lang, path, specimen = false } = Astro.props;
+const ui = t(lang);
+const items = nav(lang, path);
+const home = lang === 'es' ? '/es/' : '/';
+const Tag = specimen ? 'div' : 'dialog';
+---
+<Tag id={specimen ? undefined : 'menu'} class:list={['menu-dialog', { 'menu-dialog--specimen': specimen }]} aria-label={ui.menu}>
+  <div class="menu-panel">
+    <div class="menu-dialog__top">
+      <a class="brand" href={home} aria-label={ui.homeLabel}><Logo alt={ui.logoAlt} variant="wordmark" eager={false} /></a>
+      <button class="menu-close" type="button" data-menu-close={specimen ? undefined : ''}>
+        <Icon name="x" /><span class="visually-hidden">{ui.closeMenu}</span>
+      </button>
+    </div>
+    <nav aria-label={specimen ? `${ui.menu} (specimen)` : ui.menu}>
+      <ul class="menu-list">
+        {items.map((item) => (
+          <li>
+            <a class="menu-link" href={item.href} aria-current={item.href === path ? 'page' : item.current ? 'true' : undefined}>{item.label}</a>
+            {item.children?.length ? (
+              <ul class="menu-sub">
+                {item.children.filter((c) => c.href !== item.href).map((c) => (
+                  <li><a href={c.href} aria-current={c.current ? 'page' : undefined}>{c.label}</a></li>
+                ))}
+              </ul>
+            ) : null}
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <div class="menu-dialog__foot">
+      <a class="btn btn-primary btn-block" href={firm.tel.value}><Icon name="phone" /><span set:html={ui.call(`<span class="nowrap">${firm.phone.value}</span>`)} /></a>
+      <p class="menu-note" set:html={ui.callNote} />
+      <LanguageToggle lang={lang} path={path} variant="block" />
+    </div>
+  </div>
+</Tag>

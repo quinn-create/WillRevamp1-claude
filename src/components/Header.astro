@@ -1,0 +1,63 @@
+---
+// Sticky glass header (DESIGN-SYSTEM 7.5): logo link, ≤ 6 nav items from plan/sitemap.json "nav" with practice
+// sub-menus as a disclosure (parent stays a link to its hub; a separate chevron button toggles the submenu;
+// hover and focus-within also open it; Esc closes and returns focus), language toggle (≥ 37.5em), the call
+// button showing the full number "(615) 410-7290" at every width [borrowed: B], and the menu button (< 76em).
+// Without JS the menu button is a link to the footer, which carries every nav link.
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import LanguageToggle from './LanguageToggle.astro';
+import { nav, firm, type Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+interface Props { lang: Lang; path: string; specimen?: boolean }
+const { lang, path, specimen = false } = Astro.props;
+const ui = t(lang);
+const items = nav(lang, path);
+const home = lang === 'es' ? '/es/' : '/';
+const cur = (href: string, current: boolean) => (href === path ? 'page' : current ? 'true' : undefined);
+const sid = (i: number) => `${specimen ? 'spec-' : ''}nav-sub-${i}`;
+---
+<header class:list={['site-header', { 'site-header--specimen': specimen }]}>
+  <div class="container header-inner">
+    <a class="brand" href={home} aria-label={ui.homeLabel}>
+      <Logo alt={ui.logoAlt} />
+    </a>
+
+    <nav class="nav-primary" aria-label={specimen ? `${ui.navMain} (specimen)` : ui.navMain}>
+      <ul>
+        {items.map((item, i) => (
+          <li class:list={['nav-item', { 'has-sub': item.children?.length }]}>
+            <a class="nav-link" href={item.href} aria-current={cur(item.href, item.current)}>{item.label}</a>
+            {item.children?.length ? (
+              <>
+                <button class="nav-chev" type="button" aria-expanded="false" aria-controls={sid(i)} data-disclosure>
+                  <Icon name="chevron-down" />
+                  <span class="visually-hidden">{ui.showSubmenu(item.label)}</span>
+                </button>
+                <ul class="nav-sub" id={sid(i)}>
+                  {item.children.map((c) => (
+                    <li><a href={c.href} aria-current={c.current ? 'page' : undefined}>{c.label}</a></li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <LanguageToggle lang={lang} path={path} variant="header" class="header-lang" />
+      <a class="btn btn-primary header-call" href={firm.tel.value}>
+        <Icon name="phone" class="header-call__icon" />
+        <span class="visually-hidden">{ui.callPrefix} </span><span class="header-call__num">{firm.phone.value}</span>
+      </a>
+      <a class="menu-btn" href="#site-footer" data-menu-fallback>
+        <Icon name="menu" /><span class="menu-btn__text">{ui.menu}</span>
+      </a>
+      <button class="menu-btn" type="button" hidden aria-haspopup="dialog" aria-controls={specimen ? undefined : 'menu'} aria-expanded="false" data-menu-open={specimen ? undefined : ''}>
+        <Icon name="menu" /><span class="menu-btn__text">{ui.menu}</span>
+      </button>
+    </div>
+  </div>
+</header>

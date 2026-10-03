@@ -1,0 +1,42 @@
+---
+// The firm logo (IMG01, reused as-is) with art direction: the tagline-free wordmark crop below 37.5em,
+// the full logo with "Attorney at Law" from 37.5em. AVIF + WebP srcsets; the largest candidate is the
+// source's own 400 px, so the logo is never upscaled. width/height set on <source> and <img>.
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import logo from '../assets/brand/logo.webp';
+import wordmark from '../assets/brand/logo-wordmark.webp';
+interface Props { alt: string; variant?: 'responsive' | 'wordmark' | 'full'; eager?: boolean; class?: string }
+const { alt, variant = 'responsive', eager = true, class: cls } = Astro.props;
+const set = async (src: ImageMetadata, widths: number[], format: 'avif' | 'webp') =>
+  (await Promise.all(widths.filter((w) => w <= src.width).map((w) => getImage({ src, width: w, format })))).map((r) => `${r.src} ${r.attributes.width}w`).join(', ');
+const wm = { avif: await set(wordmark, [96, 120, 192, 240, 400], 'avif'), webp: await set(wordmark, [96, 120, 192, 240, 400], 'webp') };
+const full = { avif: await set(logo, [184, 200, 368, 400], 'avif'), webp: await set(logo, [184, 200, 368, 400], 'webp') };
+const fallback = await getImage({ src: variant === 'wordmark' ? wordmark : logo, width: 400, format: 'webp' });
+const PHONE = '(max-width: 37.49em)';
+const wmSizes = '(max-width: 22.49em) 6rem, 7.5rem';
+const fullSizes = '(min-width: 76em) 11.5rem, 12.5rem';
+---
+<picture class:list={['logo', cls]}>
+  {variant === 'responsive' && <source media={PHONE} type="image/avif" srcset={wm.avif} sizes={wmSizes} width={wordmark.width} height={wordmark.height} />}
+  {variant === 'responsive' && <source media={PHONE} type="image/webp" srcset={wm.webp} sizes={wmSizes} width={wordmark.width} height={wordmark.height} />}
+  {variant === 'wordmark' ? (
+    <>
+      <source type="image/avif" srcset={wm.avif} sizes="10rem" />
+      <source type="image/webp" srcset={wm.webp} sizes="10rem" />
+    </>
+  ) : (
+    <>
+      <source type="image/avif" srcset={full.avif} sizes={fullSizes} />
+      <source type="image/webp" srcset={full.webp} sizes={fullSizes} />
+    </>
+  )}
+  <img
+    src={fallback.src}
+    width={variant === 'wordmark' ? wordmark.width : logo.width}
+    height={variant === 'wordmark' ? wordmark.height : logo.height}
+    alt={alt}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+  />
+</picture>

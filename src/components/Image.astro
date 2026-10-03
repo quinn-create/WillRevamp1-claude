@@ -1,9 +1,11 @@
 ---
-// Responsive image through astro:assets: AVIF + WebP <picture>, srcset, explicit width/height on the <img>,
-// `alt` required (use "" for decorative scenes). Never upscales: srcset widths above the source width are
-// dropped. `ratio` reserves the box (aspect-ratio + object-fit: cover) so a slow image never shifts layout.
-// No inline style attributes (a strict CSP may block them); ratios and focal points are classes.
-import { Picture } from 'astro:assets';
+// Responsive image through astro:assets (getImage): AVIF + WebP <picture>, srcset, explicit width/height on the
+// <img>, `alt` required (use "" for decorative scenes and the byline photo). Never upscales: srcset widths above
+// the source width are dropped. `ratio` reserves the box (aspect-ratio + object-fit: cover) so a slow image never
+// shifts layout. No inline style attributes (a strict CSP may block them); ratios and focal points are classes.
+// The <picture> is written here rather than with astro:assets <Picture> so an empty alt is emitted as alt=""
+// (Astro serializes an empty attribute value as a bare `alt`, which some validators read as missing).
+import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 
 interface Props {
@@ -11,32 +13,36 @@ interface Props {
   alt: string;
   sizes: string;
   widths?: number[];
-  ratio?: '1x1' | '4x5' | '3x2' | '4x3' | '21x9' | '596x715' | '673x841'; // reserved box (class, no inline style: CSP-safe)
-  position?: 'center' | 'top' | 'upper' | 'right' | 'lower'; // object-position presets (components.css)
+  ratio?: '1x1' | '4x5' | '3x2' | '4x3' | '21x9' | '596x715' | '673x841';
+  position?: 'center' | 'top' | 'upper' | 'right' | 'lower';
   loading?: 'lazy' | 'eager';
   priority?: boolean; // fetchpriority=high: only the page's LCP image
   class?: string; // on <picture>
   imgClass?: string;
+  quality?: number;
 }
-const { src, alt, sizes, widths = [320, 640, 960, 1280, 1920], ratio, position, loading = 'lazy', priority = false, class: cls, imgClass } = Astro.props;
+const { src, alt, sizes, widths = [320, 640, 960, 1280, 1920], ratio, position, loading = 'lazy', priority = false, class: cls, imgClass, quality = 78 } = Astro.props;
 if (typeof alt !== 'string') throw new Error('Image.astro: alt is required ("" for decorative images)');
-const usable = [...new Set(widths.filter((w) => w <= src.width))].sort((a, b) => a - b);
-if (!usable.length || usable[usable.length - 1] < Math.min(src.width, Math.max(...widths))) usable.push(Math.min(src.width, Math.max(...widths)));
-const width = usable[usable.length - 1];
-const height = Math.round((width * src.height) / src.width);
+const cap = Math.min(src.width, Math.max(...widths));
+const usable = [...new Set([...widths.filter((w) => w <= src.width), cap])].sort((a, b) => a - b);
+const build = async (format: 'avif' | 'webp') => {
+  const out = await Promise.all(usable.map((w) => getImage({ src, width: w, format, quality })));
+  return out.map((r, i) => `${r.src} ${usable[i]}w`).join(', ');
+};
+const avif = await build('avif');
+const webp = await build('webp');
+const fallback = await getImage({ src, width: usable.find((w) => w >= 960) ?? cap, format: 'webp', quality });
+const width = cap;
+const height = Math.round((cap * src.height) / src.width);
+const imgClasses = [ratio && `ratio-${ratio}`, position && `pos-${position}`, imgClass].filter(Boolean).join(' ') || undefined;
+const load = priority ? 'eager' : loading;
 ---
-<Picture
-  src={src}
-  alt={alt}
-  widths={usable}
-  sizes={sizes}
-  width={width}
-  height={height}
-  formats={['avif', 'webp']}
-  fallbackFormat="webp"
-  loading={priority ? 'eager' : loading}
-  decoding={priority ? 'sync' : 'async'}
-  fetchpriority={priority ? 'high' : undefined}
-  pictureAttributes={{ class: cls }}
-  class:list={[ratio && `ratio-${ratio}`, position && `pos-${position}`, imgClass]}
-/>
+<picture class={cls}>
+  <source type="image/avif" srcset={avif} sizes={sizes} />
+  <source type="image/webp" srcset={webp} sizes={sizes} />
+  {alt === '' ? (
+    <img src={fallback.src} srcset={webp} sizes={sizes} alt="" width={width} height={height} loading={load} decoding={priority ? 'sync' : 'async'} fetchpriority={priority ? 'high' : undefined} class={imgClasses} />
+  ) : (
+    <img src={fallback.src} srcset={webp} sizes={sizes} alt={alt} width={width} height={height} loading={load} decoding={priority ? 'sync' : 'async'} fetchpriority={priority ? 'high' : undefined} class={imgClasses} />
+  )}
+</picture>

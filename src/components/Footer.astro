@@ -1,0 +1,76 @@
+---
+// Footer (DESIGN-SYSTEM 7.18): ink. NAP + hours from the facts map (Friday closes 4:00 p.m. per the footer fact
+// F032; CONFLICTS C07), practice and site links from plan/sitemap.json, socials exactly as published on the old
+// site (Facebook, LinkedIn, X, AVVO), the legal line ("not legal advice" / "no constituye asesoramiento legal"),
+// © line and the "Cookie settings" control A22 wires to re-open the consent manager. No agency credit.
+import Icon from './Icon.astro';
+import LanguageToggle from './LanguageToggle.astro';
+import { sitemap, firm, pathIn, labelIn, type Lang } from '../lib/site';
+import { t } from '../lib/i18n';
+interface Props { lang: Lang; path: string }
+const { lang, path } = Astro.props;
+const ui = t(lang);
+const practice = sitemap.nav.slice(0, 3).map((n) => ({ label: labelIn(n, lang), href: pathIn(n, lang) }));
+const hub = sitemap.footer.find((f) => f.path === '/legal-services/');
+const about = sitemap.nav.find((n) => n.path === '/about/');
+const site = [
+  ...(about ? [{ label: labelIn(about, lang), href: pathIn(about, lang) }, ...(about.children || []).filter((c) => c.path !== about.path).map((c) => ({ label: labelIn(c, lang), href: pathIn(c, lang) }))] : []),
+  ...sitemap.nav.slice(4).map((n) => ({ label: labelIn(n, lang), href: pathIn(n, lang) })),
+  ...sitemap.footer.filter((f) => f.path !== '/legal-services/').map((f) => ({ label: labelIn(f, lang), href: f.path.endsWith('.xml') ? f.path : pathIn(f, lang) })),
+];
+const year = new Date().getFullYear();
+const cookies = sitemap.footer.find((f) => f.path === '/cookie-settings/');
+---
+<footer class="site-footer on-ink" id="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-firm">
+        <p class="footer-name">{firm.attorney.value}<span>{ui.attorneyShort}</span></p>
+        <address>
+          <span>{firm.street.value}</span>
+          <span>{firm.city.value}, {firm.region.value}&nbsp;{firm.postalCode.value}</span>
+        </address>
+        <ul class="footer-contact" role="list">
+          <li><a class="tel" href={firm.tel.value}><Icon name="phone" />{firm.phone.value}</a></li>
+          <li class="footer-free" set:html={ui.callNote} />
+          <li><a href={firm.mailto.value}><Icon name="mail" />{firm.email.value}</a></li>
+          <li><a href={firm.mapUrl.value} rel="noopener"><Icon name="map-pin" />{ui.directions}</a></li>
+        </ul>
+      </div>
+      <div class="footer-hours">
+        <h2 class="footer-head">{ui.officeHours}</h2>
+        <dl class="hours">
+          {firm.hours.map((h) => (
+            <div><dt>{h.days[lang]}</dt><dd><span class="nowrap">{h.text[lang]}</span></dd></div>
+          ))}
+        </dl>
+      </div>
+      <nav class="footer-nav" aria-label={ui.navPractice}>
+        <h2 class="footer-head">{ui.navPractice}</h2>
+        <ul class="footer-links" role="list">
+          {practice.map((p) => <li><a href={p.href}>{p.label}</a></li>)}
+          {hub && <li><a href={pathIn(hub, lang)}>{ui.allPractice}</a></li>}
+        </ul>
+      </nav>
+      <nav class="footer-nav" aria-label={ui.navSite}>
+        <h2 class="footer-head">{ui.navSite}</h2>
+        <ul class="footer-links" role="list">
+          {site.map((p) => <li><a href={p.href}>{p.label}</a></li>)}
+          <li><LanguageToggle lang={lang} path={path} variant="footer" /></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <ul class="footer-social" role="list" aria-label={ui.navSocial}>
+        {firm.socials.map((s) => <li><a href={s.value} rel="noopener">{s.label}</a></li>)}
+      </ul>
+      <div class="footer-legal">
+        <p class="footer-legal__line">{ui.legalLine}</p>
+        <p class="footer-legal__meta">
+          <span>{ui.copyright(year, firm.name.value)}</span>
+          <a class="footer-cookie" href={cookies ? pathIn(cookies, lang) : '/cookie-settings/'} data-cookie-settings>{ui.cookieSettings}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
