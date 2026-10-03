@@ -1,0 +1,12 @@
+---
+// A22 P600: the consent config (public vendor IDs + policy version, inert JSON) and the consent client module.
+// Rendered once per page: by ConsentManager on every page when a vendor is configured, otherwise only by
+// ConsentControls on the Cookie Settings page (so a choice can still be saved there).
+import { clientConfig } from './vendors';
+const json = JSON.stringify(clientConfig()).replace(/</g, '\\u003c');
+---
+<script type="application/json" data-consent-config set:html={json} />
+<script>
+  import { init } from './consent';
+  init();
+</script>

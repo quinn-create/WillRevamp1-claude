@@ -1,0 +1,62 @@
+/* A22 P600 consent banner + Cookie Settings controls (DESIGN-SYSTEM 7.20). Tokens only (src/styles/tokens.css):
+   --consent-bg/--consent-text, --shadow-consent, --z-consent; checkbox rows reuse .check (7.9), buttons .btn (7.2). */
+
+/* ---------------------------------------------------------------- banner */
+.consent {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: var(--z-consent);
+  max-height: 80vh;
+  max-height: 80dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-block: var(--space-5) calc(var(--space-5) + env(safe-area-inset-bottom));
+  background: var(--consent-bg);
+  color: var(--consent-text);
+  border-top: 1px solid var(--color-rule);
+  box-shadow: var(--shadow-consent);
+}
+.consent[hidden] { display: none; }
+.consent__inner { display: grid; gap: var(--space-4); }
+.consent__text { max-width: 70ch; font-size: var(--text-small); line-height: var(--leading-body); }
+.consent__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.consent__actions .btn { min-height: var(--control-height); }
+.consent__panel { display: grid; gap: var(--space-3); }
+.consent__panel[hidden] { display: none; }
+/* Keep focused content clear of the banner (WCAG 2.4.11) and let the footer scroll fully into view. */
+html.consent-open { scroll-padding-bottom: calc(var(--consent-h, 10rem) + var(--space-4)); }
+html.consent-open body { padding-bottom: var(--consent-h, 10rem); }
+
+/* Phones: the call bar stays visible below the banner; buttons stack full width with equal weight. */
+@media (max-width: 37.49em) {
+  .consent { bottom: calc(var(--callbar-height) + env(safe-area-inset-bottom)); padding-bottom: var(--space-4); max-height: 70vh; max-height: 70dvh; }
+  .consent__actions { display: grid; grid-template-columns: 1fr; }
+  .consent__actions .btn { width: 100%; }
+  html.consent-open { scroll-padding-bottom: calc(var(--consent-h, 10rem) + var(--callbar-height) + var(--space-4)); }
+}
+@media (min-width: 37.5em) {
+  .consent__actions .btn { flex: 1 1 0; max-width: 16rem; }
+}
+
+/* ---------------------------------------------------------------- category rows */
+.consent-cats { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; }
+.consent-cat { padding-block: var(--space-3); border-top: 1px solid var(--color-rule); }
+.consent-cat:last-child { border-bottom: 1px solid var(--color-rule); }
+.consent-cat__head { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-3); min-height: var(--control-height); margin: 0; }
+.consent-cat__name { font-weight: var(--weight-text-strong); color: var(--color-heading); }
+.consent-cat__state { font-size: var(--text-small); color: var(--color-text-muted); }
+.consent-cat--fixed .consent-cat__head { padding-inline-start: calc(var(--check-size) + var(--space-3)); }
+.consent-cat__desc { font-size: var(--text-small); color: var(--color-text-muted); padding-inline-start: calc(var(--check-size) + var(--space-3)); max-width: 65ch; }
+
+/* ---------------------------------------------------------------- Cookie Settings page */
+.consent-controls { display: grid; gap: var(--space-5); margin-top: var(--space-6); scroll-margin-top: var(--space-24); }
+.consent-controls__set { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: var(--space-6); }
+.consent-controls__set:disabled .check { cursor: not-allowed; }
+.consent-controls__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+@media (max-width: 37.49em) { .consent-controls__actions .btn { width: 100%; } }
+.consent-controls__gpc[hidden] { display: none; }
+/* The status region stays in the accessibility tree; it only takes space once a save filled it. */
+.consent-controls__status:not(.is-on) { padding: 0; border: 0; background: none; min-height: 0; }
+.consent-controls__status:not(.is-on) > .icon { display: none; }
+.consent-controls__current:empty { display: none; }

@@ -1,0 +1,407 @@
+{
+  "ranAt": "2026-10-03T14:26:39.645Z",
+  "passed": true,
+  "failures": 0,
+  "results": [
+    {
+      "name": "off state: no consent banner on any page (no vendor configured)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "off state: consent script only on Cookie Settings EN/ES",
+      "pass": true,
+      "detail": "/cookie-settings/ /es/configuracion-de-cookies/"
+    },
+    {
+      "name": "[en] off state: Cookie Settings controls with data-consent, fieldset disabled before script",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] off state: config lists no vendors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] /cookie-settings/ shows a last-reviewed date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] /privacy-policy/ shows a last-reviewed date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] /accessibility/ shows a last-reviewed date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] off state: Privacy shows no vendor sections",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] off state: Cookie Settings controls with data-consent, fieldset disabled before script",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] off state: config lists no vendors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] /es/configuracion-de-cookies/ shows a last-reviewed date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] /es/politica-de-privacidad/ shows a last-reviewed date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] /es/accesibilidad/ shows a last-reviewed date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] off state: Privacy shows no vendor sections",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] live: script enables the controls",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] live: two optional switches, none pre-ticked",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] live: save stores cookie \"consent\" {v, ts, analytics, marketing}",
+      "pass": true,
+      "detail": "{\"v\":1,\"ts\":\"2026-10-03T14:26:22.581Z\",\"analytics\":true,\"marketing\":false,\"vendors\":[]}"
+    },
+    {
+      "name": "[en] live: localStorage mirror matches",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] live: status confirms and is focused",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] live: \"saved on this device\" line",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] live: Reject all stores both off",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] live: switches reflect the saved choice after reload",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] live: footer \"Cookie settings\" leads to the settings page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] live: no external request at all",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] live: script enables the controls",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] live: two optional switches, none pre-ticked",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] live: save stores cookie \"consent\" {v, ts, analytics, marketing}",
+      "pass": true,
+      "detail": "{\"v\":1,\"ts\":\"2026-10-03T14:26:23.611Z\",\"analytics\":true,\"marketing\":false,\"vendors\":[]}"
+    },
+    {
+      "name": "[es] live: localStorage mirror matches",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] live: status confirms and is focused",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] live: \"saved on this device\" line",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] live: Reject all stores both off",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] live: switches reflect the saved choice after reload",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] live: footer \"Cookie settings\" leads to the settings page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] live: no external request at all",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "live GPC: optional switches off and disabled, notice shown",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "site.config.json restored with empty tracking keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "configured: no tracker <script src> in any static page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "configured: banner markup on every page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: Privacy shows the configured vendor sections",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: Privacy shows the configured vendor sections",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: banner shown on first visit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: Accept all / Reject all / Settings with equal styling",
+      "pass": true,
+      "detail": "btn btn-secondary | btn btn-secondary | btn btn-secondary"
+    },
+    {
+      "name": "[en] configured: banner text in the page language",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: no tracker request before a choice",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: scrolling is not consent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: Reject all hides the banner",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: after Reject + reload: no banner, no tracker",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: stored choice has version, timestamp, vendors",
+      "pass": true,
+      "detail": "{\"v\":1,\"ts\":\"2026-10-03T14:26:29.859Z\",\"analytics\":false,\"marketing\":false,\"vendors\":[\"ga4\",\"clarity\",\"meta\",\"tiktok\"]}"
+    },
+    {
+      "name": "[en] configured: footer \"Cookie settings\" re-opens the banner with settings",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: focus moves into the manager",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: Settings → analytics only loads GA4 + Clarity",
+      "pass": true,
+      "detail": "clarity,ga4"
+    },
+    {
+      "name": "[en] configured: Accept all loads all four vendors",
+      "pass": true,
+      "detail": "clarity,ga4,meta,tiktok"
+    },
+    {
+      "name": "[en] configured: accepted choice applies on the next page without asking",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: Cookie Settings reflects the choice",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: older policy version → asked again",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: newly configured vendor → asked again",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: localStorage mirror restores the cookie (no banner)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: GPC → no banner, no tracker",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: GPC overrides a stored Accept (nothing loads)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] configured: GPC → switches shown off and disabled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: banner shown on first visit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: Accept all / Reject all / Settings with equal styling",
+      "pass": true,
+      "detail": "btn btn-secondary | btn btn-secondary | btn btn-secondary"
+    },
+    {
+      "name": "[es] configured: banner text in the page language",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: no tracker request before a choice",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: scrolling is not consent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: Reject all hides the banner",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: after Reject + reload: no banner, no tracker",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: stored choice has version, timestamp, vendors",
+      "pass": true,
+      "detail": "{\"v\":1,\"ts\":\"2026-10-03T14:26:35.159Z\",\"analytics\":false,\"marketing\":false,\"vendors\":[\"ga4\",\"clarity\",\"meta\",\"tiktok\"]}"
+    },
+    {
+      "name": "[es] configured: footer \"Cookie settings\" re-opens the banner with settings",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: focus moves into the manager",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: Settings → analytics only loads GA4 + Clarity",
+      "pass": true,
+      "detail": "clarity,ga4"
+    },
+    {
+      "name": "[es] configured: Accept all loads all four vendors",
+      "pass": true,
+      "detail": "clarity,ga4,meta,tiktok"
+    },
+    {
+      "name": "[es] configured: accepted choice applies on the next page without asking",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: Cookie Settings reflects the choice",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: older policy version → asked again",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: newly configured vendor → asked again",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: localStorage mirror restores the cookie (no banner)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: GPC → no banner, no tracker",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: GPC overrides a stored Accept (nothing loads)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "[es] configured: GPC → switches shown off and disabled",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+---
+// A22 P600 Cookie Settings controls (the copy's [consent-controls] directive; PageView places it in "Your choices").
+// Three category rows (Strictly necessary · Analytics · Marketing), then "Save my choices" (primary) with
+// "Accept all" and "Reject all" (equal secondary). The fieldset ships disabled and the script enables it, so a
+// no-JS visitor never sees controls that do nothing (a <noscript> line explains instead). After a save, a focused
+// role="status" notice confirms it and the "Saved on this device" line updates. GPC: optional switches show off,
+// are disabled, and a notice says why.
+import ConsentCategories from './ConsentCategories.astro';
+import ConsentScript from './ConsentScript.astro';
+import Icon from '../Icon.astro';
+import { C } from './strings';
+import { anyOptional } from './vendors';
+import type { Lang } from '../../lib/site';
+import './consent.css';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = C(lang);
+---
+<div class="consent-controls" id="consent-controls" data-consent="controls"
+  data-s-saved={s.saved} data-s-on={s.on} data-s-off={s.off} data-s-current={s.current} data-s-none={s.none}
+  data-s-analytics={s.analytics} data-s-marketing={s.marketing}>
+  <noscript><div class="notice"><p>{s.noscript}</p></div></noscript>
+  <p class="notice consent-controls__gpc" data-consent-gpc hidden><Icon name="shield-check" /><span>{s.gpc}</span></p>
+  <form class="consent-controls__form" novalidate>
+    <fieldset class="consent-controls__set" data-consent-enable disabled>
+      <ConsentCategories lang={lang} prefix="cs" />
+      <div class="consent-controls__actions">
+        <button type="submit" class="btn btn-primary">{s.save}</button>
+        <button type="button" class="btn btn-secondary" data-consent-action="accept">{s.acceptAll}</button>
+        <button type="button" class="btn btn-secondary" data-consent-action="reject">{s.rejectAll}</button>
+      </div>
+    </fieldset>
+  </form>
+  <div class="notice notice--success consent-controls__status" role="status" tabindex="-1" data-consent-status><Icon name="circle-check" /><span data-consent-status-text></span></div>
+  <p class="small muted consent-controls__current" data-consent-current></p>
+</div>
+{!anyOptional && <ConsentScript />}

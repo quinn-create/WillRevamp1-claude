@@ -12,6 +12,8 @@ Usted decide qué puede usar este sitio además de lo básico. Nada de analític
 
 Puede cambiar de opinión en cualquier momento. Su nueva elección se aplica de inmediato.
 
+Última revisión: {{last_reviewed}}
+
 [consent-controls]
 ## Sus opciones
 

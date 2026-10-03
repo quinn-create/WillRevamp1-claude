@@ -1,0 +1,42 @@
+---
+// A22 P600 consent banner (DESIGN-SYSTEM 7.20, kit section 5). Mounted on every page by Site.astro.
+// Shown only when site.config.json configures at least one analytics or marketing vendor; in the launch state
+// (no IDs) nothing renders and no consent script ships outside Cookie Settings (decision A22-D1).
+// Non-modal fixed region at the bottom (above the phone call bar): one sentence + Privacy link; Accept all,
+// Reject all and Settings as three equal secondary buttons (no dark pattern, no pre-ticked boxes, no cookie wall).
+// Settings expands the three category rows in place with "Save my choices". Hidden until the script decides to ask.
+import ConsentCategories from './ConsentCategories.astro';
+import ConsentScript from './ConsentScript.astro';
+import { C } from './strings';
+import { anyOptional, vendorsIn } from './vendors';
+import { sitemap, pathIn, type Lang } from '../../lib/site';
+import './consent.css';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = C(lang);
+const a = vendorsIn('analytics').length > 0;
+const m = vendorsIn('marketing').length > 0;
+const sentence = a && m ? s.sentence.both : a ? s.sentence.analytics : s.sentence.marketing;
+const pg = (p: string) => { const x = sitemap.pages.find((q) => q.path === p); return x ? pathIn(x, lang) : p; };
+const privacyHref = pg('/privacy-policy/');
+const settingsHref = pg('/cookie-settings/');
+---
+{anyOptional && (
+  <section class="consent" id="consent-banner" data-consent="banner" aria-label={s.region} hidden>
+    <div class="container consent__inner">
+      <p class="consent__text">{sentence} <a href={privacyHref}>{s.privacy}</a></p>
+      <div class="consent__panel" id="consent-panel" data-consent-panel hidden>
+        <ConsentCategories lang={lang} prefix="cb" />
+        <p class="small"><a href={settingsHref}>{s.morePage}</a></p>
+      </div>
+      <div class="consent__actions">
+        <button type="button" class="btn btn-secondary" data-consent-action="accept">{s.acceptAll}</button>
+        <button type="button" class="btn btn-secondary" data-consent-action="reject">{s.rejectAll}</button>
+        <button type="button" class="btn btn-secondary" data-consent-action="settings" aria-expanded="false" aria-controls="consent-panel">{s.settings}</button>
+        <button type="button" class="btn btn-secondary consent__save" data-consent-action="save" hidden>{s.save}</button>
+      </div>
+    </div>
+  </section>
+)}
+{anyOptional && <ConsentScript />}

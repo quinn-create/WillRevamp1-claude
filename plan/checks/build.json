@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-03T14:19:21.323Z",
+  "at": "2026-10-03T14:27:49.966Z",
   "pass": true,
   "failed": 0,
   "results": [
@@ -26,7 +26,7 @@
     {
       "name": "shipped JS ≤ 50 KB gzipped (tracking off)",
       "pass": true,
-      "detail": "0.5 KB"
+      "detail": "3.3 KB"
     },
     {
       "name": "0 banned phrases / forbidden strings in src/",

@@ -12,6 +12,8 @@ You decide what this site may use beyond the basics. Nothing for analytics or ma
 
 Change your mind any time. Your new choice takes effect right away.
 
+Last reviewed: {{last_reviewed}}
+
 [consent-controls]
 ## Your choices
 

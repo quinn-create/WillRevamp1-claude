@@ -302,7 +302,11 @@ export function pageJsonLd({ pg, copy, lang, path, template }: LdInput): { pageT
 }
 
 // ------------------------------------------------------------------ dates
-export const LAST_REVIEWED = '2026-10-03'; // the build-phase review date of the policy pages (A22 may move it)
+// A22: the policy pages (Privacy, Accessibility, Cookie Settings) are regenerated from site.config.json on every
+// build (vendor sections follow the configured keys), so their "Last reviewed" date is the build date in the
+// firm's time zone. POLICY_REVIEWED=YYYY-MM-DD pins it (e.g. to rebuild without re-review).
+const buildDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+export const LAST_REVIEWED: string = /^\d{4}-\d{2}-\d{2}$/.test(process.env.POLICY_REVIEWED || '') ? process.env.POLICY_REVIEWED! : buildDate;
 export function formatDate(iso: string, lang: Lang): string {
   const d = new Date(`${iso}T12:00:00Z`);
   return new Intl.DateTimeFormat(lang === 'es' ? 'es-US' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(d);
