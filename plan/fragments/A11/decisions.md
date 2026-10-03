@@ -9,3 +9,15 @@
 - **Spanish-service claims:** use "Se habla español" (F092) and "Spanish-speaking services available" (F094). Hold "full bilingual Spanish services" (F093) until the owner answers C13. This narrows, never expands, law-firm rule 10.
 - **One CTA wording site-wide:** "Free consultation" + "Call (615) 410-7290" (ES "Consulta gratuita" + "Llame al (615) 410-7290"), always a `tel:` link; secondary "Send a short message".
 - **Design directions:** all three keep the logo blue #447CB7 as the anchor (large type, fills and UI only) with a darker text-blue per direction; contrast ratios for every proposed pair were computed and recorded in `design/DESIGN-BRIEF.md`. Verdict reserves a signal gold (#F2B544, ink text 10.23:1) for CTAs only, with a brick fallback.
+
+### A11 — Stage 3b design system (direction A "Counsel")
+
+- **Build direction:** A "Counsel", per line 1 of `mockups/RECOMMENDATION.md` (operator asked the run to finish without stopping). Spec: `design/DESIGN-SYSTEM.md`; tokens: `src/styles/tokens.css` (92 `@pair` declarations, all pass AA, verified with the same formula as `tools/check.mjs`).
+- **Borrowed element 1 — B "Verdict" full-number header call button:** the header call button shows "(615) 410-7290" at every width, phones included (A showed an icon only on phones). Measured: the number is 117 px at 14 px Public Sans 600, so the phone header fits logo 120 px + call + 44 px menu at 360 px and logo 96 px + 13 px number at 320 px. Consequence: on phones the Español toggle leaves the header row and becomes a 44 px language strip above the header (not sticky), keeping the one-tap switch to Spanish in the first phone screen.
+- **Borrowed element 2 — C "Neighbor" byline:** 72/96 px 4:5 crop of IMG03 beside "Attorney at Law · Will Fraley · 509 W College St, Murfreesboro", in heroes of Home (< 60em), hubs, practice pages, Contact, FAQs, Testimonials, In the News. `alt=""` (name adjacent).
+- **No dark mode.** Light scheme only (`color-scheme: light`): one audited palette and one set of contrast proofs.
+- **Motion tightened to the brief:** mockup scroll-reveal (500 ms) and the scroll-timeline header hairline are removed; every transition ≤ 200 ms and opt-in under `prefers-reduced-motion: no-preference`.
+- **Fonts:** Newsreader + Public Sans, the four mockup woff2 files (latin + latin-ext each), one preload (newsreader-latin). Fallback metrics re-measured in Chromium: Newsreader 108% vs Times (opsz 60 is 109.8%, opsz 32 is 104.3%), Public Sans 104% vs Arial. Optional later: instance Newsreader to wght 400–600 / opsz 24–72 with npm `subset-font` only if LCP misses budget.
+- **Dropdowns** become disclosure buttons (parent label stays a link) with Esc support, for WCAG 1.4.13 and touch tablets.
+- **Consent banner:** non-modal, Accept and Reject as equal-weight secondary buttons, shown only once a non-essential vendor is configured (none at launch).
+- **Scene slots for Stage 5 (set A):** keep A-hero, A-practice, A-contact; add A-services, A-family, A-injury, A-adoption, A-dcs (3:2). Practice child pages, About, Testimonials, FAQs, News, policy, thank-you, 404 and blog use no generated image.
