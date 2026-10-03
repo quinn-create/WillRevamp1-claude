@@ -1,0 +1,21 @@
+{
+  "sourceSite": "https://willfraleylaw.com",
+  "domain": "willfraleylaw.com",
+  "siteUrl": "https://willfraleylaw.com",
+  "client": "Will Fraley, Attorney at Law",
+  "languages": ["en", "es"],
+  "forms": {
+    "provider": "web3forms",
+    "web3formsAccessKey": "",
+    "turnstileSiteKey": "",
+    "destinationEmail": "inbox@willfraleylaw.com"
+  },
+  "tracking": {
+    "ga4": "",
+    "metaPixel": "",
+    "tiktokPixel": "",
+    "clarity": ""
+  },
+  "consentPolicyVersion": 1,
+  "blog": { "enabled": false }
+}

@@ -1,0 +1,2 @@
+- **Keys (later):** Web3Forms access key, optional Cloudflare Turnstile site key, and any tracking IDs (GA4, Meta Pixel, TikTok Pixel, Clarity). Run `FINISH-PROMPT.md` when you have them. Until then the form shows phone and email instead of submitting.
+- **Deploy:** Upload `_UPLOAD_TO_CLOUDFLARE/` to Cloudflare Pages by hand (see HANDOFF.md) and point willfraleylaw.com at it.

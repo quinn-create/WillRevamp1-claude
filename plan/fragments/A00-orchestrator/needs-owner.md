@@ -1,0 +1,3 @@
+- **All pages — bar standing and memberships:** Verify bar standing (tbpr.org) and that every listed association membership is current before launch.
+- **All `/es/` pages:** Have a Spanish-speaking staff member read the /es/ pages before launch.
+- **Logo:** Please send the logo as a vector file (SVG, AI, EPS or PDF). The site currently uses the 2025 WebP raster.
