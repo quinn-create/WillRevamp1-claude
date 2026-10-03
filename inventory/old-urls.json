@@ -1,0 +1,625 @@
+[
+  {
+    "path": "/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Murfreesboro Attorney | Will Fraley, Attorney at Law\" (slug index); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/contact-us/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Contact Us - Will Fraley, Attorney at Law in Murfreeesboro\" (slug contact-us); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/faqs/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"FAQs & Legal Questions - Will Fraley, Attorney at Law in Murfreeesboro\" (slug faqs); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/legal-services/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Legal Services - Will Fraley, Attorney at Law in Murfreeesboro\" (slug legal-services); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/criminal-defense/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Criminal Defense - Will Fraley, Attorney at Law in Murfreeesboro\" (slug criminal-defense); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/personal-injury/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Personal Injury - Will Fraley, Attorney at Law in Murfreeesboro\" (slug personal-injury); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/criminal-defense/drug-crimes/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Drug Crimes - Will Fraley, Attorney at Law in Murfreeesboro\" (slug criminal-defense/drug-crimes); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/criminal-defense/dui/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"DUI - Will Fraley, Attorney at Law in Murfreeesboro\" (slug criminal-defense/dui); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/about/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"About - Will Fraley, Attorney at Law in Murfreeesboro\" (slug about); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/family-law/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Murfreesboro Family Lawyer | Will Fraley, Attorney at Law\" (slug family-law); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/criminal-defense/theft/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Theft - Will Fraley, Attorney at Law in Murfreeesboro\" (slug criminal-defense/theft); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/criminal-defense/violent-crimes/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Murfreesboro Violent Crimes Lawyer | Will Fraley, Attorney at Law\" (slug criminal-defense/violent-crimes); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/criminal-defense/sex-crimes/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Murfreesboro Sex Crime Lawyer | Will Fraley, Attorney at Law\" (slug criminal-defense/sex-crimes); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/criminal-defense/fraud/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Murfreesboro Fraud Attorney | Will Fraley, Attorney at Law\" (slug criminal-defense/fraud); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/criminal-defense/probation-violation/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Probation Violation Attorney in Murfreesboro, Tennessee\" (slug criminal-defense/probation-violation); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/criminal-defense/domestic-assault/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Domestic Assault - Will Fraley, Attorney at Law in Murfreeesboro\" (slug criminal-defense/domestic-assault); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/family-law/child-custody/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Child Custody - Will Fraley, Attorney at Law in Murfreeesboro\" (slug family-law/child-custody); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/family-law/divorce/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Divorce - Will Fraley, Attorney at Law in Murfreeesboro\" (slug family-law/divorce); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/family-law/parenting-plan-modifications/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Parenting Plan Modification Attorney in Murfreesboro\" (slug family-law/parenting-plan-modifications); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/family-law/paternity/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Murfreesboro Paternity Lawyer | Will Fraley, Attorney at Law\" (slug family-law/paternity); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/family-law/visitation/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Murfreesboro Visitation Lawyer | Will Fraley, Attorney at Law\" (slug family-law/visitation); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/testimonials/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Testimonials - Will Fraley, Attorney at Law in Murfreeesboro\" (slug testimonials); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/adoption/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"Adoption - Will Fraley, Attorney at Law in Murfreeesboro\" (slug adoption); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/dcs-case-attorney/",
+    "kind": "page",
+    "status": 200,
+    "to": null,
+    "note": "Inventoried page \"DCS Case Attorney - Will Fraley, Attorney at Law in Murfreeesboro\" (slug dcs-case-attorney); listed in page-sitemap.xml."
+  },
+  {
+    "path": "/domestic-assault/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/criminal-defense/domestic-assault/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /criminal-defense/ (service card on the hub page)."
+  },
+  {
+    "path": "/drug-crimes/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/criminal-defense/drug-crimes/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /criminal-defense/ (service card on the hub page)."
+  },
+  {
+    "path": "/dui/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/criminal-defense/dui/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /criminal-defense/ (service card on the hub page)."
+  },
+  {
+    "path": "/fraud/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/criminal-defense/fraud/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /criminal-defense/ (service card on the hub page)."
+  },
+  {
+    "path": "/violent-crimes/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/criminal-defense/violent-crimes/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /criminal-defense/ (service card on the hub page)."
+  },
+  {
+    "path": "/probation-violation/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/criminal-defense/probation-violation/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /criminal-defense/ (service card on the hub page)."
+  },
+  {
+    "path": "/theft/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/criminal-defense/theft/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /criminal-defense/ (service card on the hub page)."
+  },
+  {
+    "path": "/divorce/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/family-law/divorce/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /family-law/ (service card on the hub page)."
+  },
+  {
+    "path": "/child-custody/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/family-law/child-custody/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /family-law/ (service card on the hub page)."
+  },
+  {
+    "path": "/visitation/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/family-law/visitation/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /family-law/ (service card on the hub page)."
+  },
+  {
+    "path": "/parenting-plan-modifications/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/family-law/parenting-plan-modifications/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /family-law/ (service card on the hub page)."
+  },
+  {
+    "path": "/paternity/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/family-law/paternity/",
+    "note": "Legacy short URL; 301 today, target returns 200. linked from /family-law/ (service card on the hub page)."
+  },
+  {
+    "path": "/contact/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/contact-us/",
+    "note": "Legacy short URL; 301 today, target returns 200. Linked as https://www.willfraleylaw.com/contact/ (anchor \"send us a message\") in body copy of /criminal-defense/fraud/; the Hostinger staging links use /contact/index.html (see that entry)."
+  },
+  {
+    "path": "/legal-services/criminal-defense/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/criminal-defense/",
+    "note": "WordPress/Yoast redirect from the old /legal-services/<area>/ scheme (probed). Not linked directly; the staging host links /legal-services/criminal-defense/index.html."
+  },
+  {
+    "path": "/legal-services/family-law/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/family-law/",
+    "note": "WordPress/Yoast redirect from the old /legal-services/<area>/ scheme (probed). Not linked directly; the staging host links /legal-services/family-law/index.html."
+  },
+  {
+    "path": "/legal-services/personal-injury/",
+    "kind": "redirect",
+    "status": 301,
+    "to": "/personal-injury/",
+    "note": "WordPress/Yoast redirect from the old /legal-services/<area>/ scheme (probed). Not linked directly; the staging host links /legal-services/personal-injury/index.html."
+  },
+  {
+    "path": "/legal-services/criminal-defense/sex-crimes/",
+    "kind": "broken-link",
+    "status": 404,
+    "to": null,
+    "note": "404 today. Linked (anchor \"sex crimes\", absolute https://www.willfraleylaw.com/legal-services/criminal-defense/sex-crimes/) from /criminal-defense/violent-crimes/ in body copy. Old pre-Elementor URL scheme; new site should 301 it to /criminal-defense/sex-crimes/."
+  },
+  {
+    "path": "/legal-services/criminal-defense/violent-crimes/",
+    "kind": "broken-link",
+    "status": 404,
+    "to": null,
+    "note": "404 today. Linked (anchor \"violence\", absolute https://www.willfraleylaw.com/legal-services/criminal-defense/violent-crimes/) from /criminal-defense/domestic-assault/ in body copy. Old pre-Elementor URL scheme; new site should 301 it to /criminal-defense/violent-crimes/."
+  },
+  {
+    "path": "/contact/index.html",
+    "kind": "broken-link",
+    "status": 404,
+    "to": null,
+    "note": "Hostinger staging link: body copy points to https://beige-baboon-435532.hostingersite.com/contact/index.html; linked from /criminal-defense/domestic-assault/, /criminal-defense/dui/, /legal-services/; anchor(s) \"contact us online\" (domestic-assault, dui, legal-services), \"Contact Will Fraley, Attorney at Law\" and \"call our law firm\" (dui), \"consultation. We look forward to hearing from you.\" (legal-services). Same path on willfraleylaw.com returns 404 today; new site should 301 it to /contact-us/."
+  },
+  {
+    "path": "/legal-services/criminal-defense/index.html",
+    "kind": "broken-link",
+    "status": 404,
+    "to": null,
+    "note": "Hostinger staging link: body copy points to https://beige-baboon-435532.hostingersite.com/legal-services/criminal-defense/index.html; linked from /legal-services/; anchor(s) \"Criminal Defense\" service card. Same path on willfraleylaw.com returns 404 today; new site should 301 it to /criminal-defense/."
+  },
+  {
+    "path": "/legal-services/family-law/index.html",
+    "kind": "broken-link",
+    "status": 404,
+    "to": null,
+    "note": "Hostinger staging link: body copy points to https://beige-baboon-435532.hostingersite.com/legal-services/family-law/index.html; linked from /legal-services/; anchor(s) \"Family Law\" service card. Same path on willfraleylaw.com returns 404 today; new site should 301 it to /family-law/."
+  },
+  {
+    "path": "/legal-services/personal-injury/index.html",
+    "kind": "broken-link",
+    "status": 404,
+    "to": null,
+    "note": "Hostinger staging link: body copy points to https://beige-baboon-435532.hostingersite.com/legal-services/personal-injury/index.html; linked from /legal-services/; anchor(s) \"Personal Injury\" service card. Same path on willfraleylaw.com returns 404 today; new site should 301 it to /personal-injury/."
+  },
+  {
+    "path": "/category/uncategorized/",
+    "kind": "wordpress",
+    "status": 200,
+    "to": null,
+    "note": "Empty WordPress category archive (h1 \"Category: Uncategorized\"); self-canonical."
+  },
+  {
+    "path": "/page/2/",
+    "kind": "wordpress",
+    "status": 200,
+    "to": null,
+    "note": "WordPress paged front page; renders the home page with canonical https://willfraleylaw.com/ (duplicate content)."
+  },
+  {
+    "path": "/?p=1",
+    "kind": "wordpress",
+    "status": 404,
+    "to": null,
+    "note": "Default \"Hello world\" post ID; already 404 today. On the static host it will serve the home page (200) with no rule."
+  },
+  {
+    "path": "/wp-json/",
+    "kind": "wordpress",
+    "status": 200,
+    "to": null,
+    "note": "WordPress REST API index; <link rel=https://api.w.org/> in <head> of all pages. No API on the static site; redirect to / is enough."
+  },
+  {
+    "path": "/blog/",
+    "kind": "wordpress",
+    "status": 404,
+    "to": null,
+    "note": "404 today. New site has a /blog/ scaffold (hidden until a first post); serve it or 301 to /."
+  },
+  {
+    "path": "/news/",
+    "kind": "wordpress",
+    "status": 404,
+    "to": null,
+    "note": "404 today. Natural alias for the new \"In the News\" page; recommend 301 there."
+  },
+  {
+    "path": "/?author=1",
+    "kind": "wordpress",
+    "status": 403,
+    "to": null,
+    "note": "On a static host any /?query serves the home page (200). Author enumeration is blocked today (403, no Location); no author slug appears in any crawled HTML, feed or sitemap, so no /author/<slug>/ URL exists to preserve. Recorded for completeness only; nothing to keep."
+  },
+  {
+    "path": "/?p=46",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/",
+    "note": "WordPress shortlink (post ID 46); front-page ID (wp-json/wp/v2/pages/46); no shortlink emitted. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=60",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/about/",
+    "note": "WordPress shortlink (post ID 60); emitted as <link rel=shortlink> on /about/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=65",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/legal-services/",
+    "note": "WordPress shortlink (post ID 65); emitted as <link rel=shortlink> on /legal-services/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=89",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/criminal-defense/",
+    "note": "WordPress shortlink (post ID 89); emitted as <link rel=shortlink> on /criminal-defense/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=92",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/criminal-defense/drug-crimes/",
+    "note": "WordPress shortlink (post ID 92); emitted as <link rel=shortlink> on /criminal-defense/drug-crimes/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=95",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/criminal-defense/dui/",
+    "note": "WordPress shortlink (post ID 95); emitted as <link rel=shortlink> on /criminal-defense/dui/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=97",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/criminal-defense/theft/",
+    "note": "WordPress shortlink (post ID 97); emitted as <link rel=shortlink> on /criminal-defense/theft/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=99",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/criminal-defense/violent-crimes/",
+    "note": "WordPress shortlink (post ID 99); emitted as <link rel=shortlink> on /criminal-defense/violent-crimes/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=101",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/criminal-defense/fraud/",
+    "note": "WordPress shortlink (post ID 101); emitted as <link rel=shortlink> on /criminal-defense/fraud/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=102",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/criminal-defense/probation-violation/",
+    "note": "WordPress shortlink (post ID 102); emitted as <link rel=shortlink> on /criminal-defense/probation-violation/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=103",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/criminal-defense/domestic-assault/",
+    "note": "WordPress shortlink (post ID 103); emitted as <link rel=shortlink> on /criminal-defense/domestic-assault/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=104",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/criminal-defense/sex-crimes/",
+    "note": "WordPress shortlink (post ID 104); emitted as <link rel=shortlink> on /criminal-defense/sex-crimes/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=105",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/family-law/child-custody/",
+    "note": "WordPress shortlink (post ID 105); emitted as <link rel=shortlink> on /family-law/child-custody/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=106",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/family-law/divorce/",
+    "note": "WordPress shortlink (post ID 106); emitted as <link rel=shortlink> on /family-law/divorce/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=107",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/family-law/parenting-plan-modifications/",
+    "note": "WordPress shortlink (post ID 107); emitted as <link rel=shortlink> on /family-law/parenting-plan-modifications/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=108",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/family-law/paternity/",
+    "note": "WordPress shortlink (post ID 108); emitted as <link rel=shortlink> on /family-law/paternity/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=109",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/family-law/visitation/",
+    "note": "WordPress shortlink (post ID 109); emitted as <link rel=shortlink> on /family-law/visitation/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=110",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/personal-injury/",
+    "note": "WordPress shortlink (post ID 110); emitted as <link rel=shortlink> on /personal-injury/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=111",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/family-law/",
+    "note": "WordPress shortlink (post ID 111); emitted as <link rel=shortlink> on /family-law/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=115",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/contact-us/",
+    "note": "WordPress shortlink (post ID 115); emitted as <link rel=shortlink> on /contact-us/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=118",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/testimonials/",
+    "note": "WordPress shortlink (post ID 118); emitted as <link rel=shortlink> on /testimonials/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=135",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/faqs/",
+    "note": "WordPress shortlink (post ID 135); emitted as <link rel=shortlink> on /faqs/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=162",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/adoption/",
+    "note": "WordPress shortlink (post ID 162); emitted as <link rel=shortlink> on /adoption/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/?p=164",
+    "kind": "wordpress",
+    "status": 301,
+    "to": "/dcs-case-attorney/",
+    "note": "WordPress shortlink (post ID 164); emitted as <link rel=shortlink> on /dcs-case-attorney/. Query-string redirect: Cloudflare Pages _redirects cannot match ?p=, needs a Pages Function or a zone Redirect Rule."
+  },
+  {
+    "path": "/feed/",
+    "kind": "feed",
+    "status": 200,
+    "to": null,
+    "note": "Main RSS feed, empty (no posts); <link rel=alternate> in <head> of all 24 pages. Feed readers/crawlers may hold it."
+  },
+  {
+    "path": "/comments/feed/",
+    "kind": "feed",
+    "status": 200,
+    "to": null,
+    "note": "Comments RSS feed, empty; <link rel=alternate> in <head> of all 24 pages."
+  },
+  {
+    "path": "/sitemap.xml",
+    "kind": "sitemap",
+    "status": 301,
+    "to": "/sitemap_index.xml",
+    "note": "Yoast redirects it to /sitemap_index.xml. New Astro sitemap lives at a different path; keep 200 or 301 to the new sitemap index."
+  },
+  {
+    "path": "/sitemap_index.xml",
+    "kind": "sitemap",
+    "status": 200,
+    "to": null,
+    "note": "Yoast sitemap index; declared in robots.txt and likely submitted to Search Console. Lists only page-sitemap.xml. New Astro sitemap lives at a different path; keep 200 or 301 to the new sitemap index."
+  },
+  {
+    "path": "/page-sitemap.xml",
+    "kind": "sitemap",
+    "status": 200,
+    "to": null,
+    "note": "Yoast page sitemap: lists exactly the 24 inventoried pages (plus image:image entries). New Astro sitemap lives at a different path; keep 200 or 301 to the new sitemap index."
+  },
+  {
+    "path": "/post-sitemap.xml",
+    "kind": "sitemap",
+    "status": 200,
+    "to": null,
+    "note": "Yoast post sitemap, empty urlset (not listed in the index). New Astro sitemap lives at a different path; keep 200 or 301 to the new sitemap index."
+  },
+  {
+    "path": "/wp-content/uploads/2025/10/mainstage-v1-img.webp",
+    "kind": "media",
+    "status": 200,
+    "to": null,
+    "note": "og:image of / (og:image); cached by social platforms on shared links. Keep the file at this path (200) or 301 to the new page's og image."
+  },
+  {
+    "path": "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.27.41-PM-924x1024.png",
+    "kind": "media",
+    "status": 200,
+    "to": null,
+    "note": "og:image of /contact-us/ (og:image); cached by social platforms on shared links. Keep the file at this path (200) or 301 to the new page's og image."
+  },
+  {
+    "path": "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-12.58.05-PM.png",
+    "kind": "media",
+    "status": 200,
+    "to": null,
+    "note": "og:image of /legal-services/ (og:image); cached by social platforms on shared links. Keep the file at this path (200) or 301 to the new page's og image."
+  },
+  {
+    "path": "/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.04.57-PM.png",
+    "kind": "media",
+    "status": 200,
+    "to": null,
+    "note": "og:image of /criminal-defense/ (og:image); cached by social platforms on shared links. Keep the file at this path (200) or 301 to the new page's og image."
+  },
+  {
+    "path": "/wp-content/uploads/2025/10/content-v10-img-attorney.webp",
+    "kind": "media",
+    "status": 200,
+    "to": null,
+    "note": "og:image of /about/ (og:image); cached by social platforms on shared links. Keep the file at this path (200) or 301 to the new page's og image."
+  },
+  {
+    "path": "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.23.01-PM-1024x842.png",
+    "kind": "media",
+    "status": 200,
+    "to": null,
+    "note": "og:image of /family-law/ (og:image); cached by social platforms on shared links. Keep the file at this path (200) or 301 to the new page's og image."
+  }
+]

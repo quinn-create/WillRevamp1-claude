@@ -19,3 +19,86 @@ Every call made without asking, with its reason. Newest stage last.
 - **Wiring changes to the kit:** (1) Stage 1 — A02's fact ledger waits for A01's text; assets download in parallel. (2) Stage 3 — designers write tokens + rationale → one A15 run → designers build (the kit's designers and A15 each wait on the other). (3) Shared ledgers use per-agent fragments merged by `tools/merge-fragments.mjs`.
 - **Machine-readable sitemap:** `plan/sitemap.json` alongside `plan/SITEMAP.md`, so gates and builders read one source.
 - **Plan-time decisions accepted by the operator (no vetoes):** experience shown as "18+ years"; firm name "Will Fraley, Attorney at Law"; Katie Fults kept on About only; both real building photos replaced by generated scenes (home civic building, Contact office exterior); testimonials verbatim incl. two garbled ones; SMS/TCPA consent sentence not carried over; same 7 form fields; ≤ 6 nav items; Wills/Murder cards get no pages; logo reused from WebP; all old URLs redirected; social links kept as published.
+
+### Stage 1 — Capture
+- Gate 1 passed: 24 pages, 315 facts (every quote verified on its page), 29 assets, 89 old URLs, 19 conflicts.
+- **Years of experience:** the ledger supports "practicing law since 2004" as the safest true form (A02, C01). That replaces the plan-time "18+ years" wording; the owner is still asked for the exact number.
+- Chromium's networking through the sandbox proxy is unreliable; live-site browser loads go through Node fetch (tools/lib.mjs). Lighthouse (separate Chrome) cannot be routed, so old-site numbers note failed requests.
+
+## A01
+
+# A01 decisions: old-URL inventory (inventory/old-urls.json)
+
+- **What it holds.** 89 old URLs that should still answer 200, or 301 to a 200, after launch: 24 pages, 16 redirects, 6 broken-links, 31 wordpress, 2 feeds, 4 sitemaps and 6 media files. Each entry records the status observed today and the current redirect target.
+- **Sources.** I took the 24 pages, 13 short-URL redirects and 2 broken entries from `inventory/pages.json`. To find every internal `<a href>` and every `<link rel=shortlink|alternate>`, I scanned all 24 files in `inventory/html/*.html`, deduped the results and resolved them against the crawled pages.
+- **What I left out.** Fragment `#` anchors, `tel:` and `mailto:` links, `/wp-content/plugins|themes/*` and `/wp-content/uploads/elementor/css/*` assets, the `/wp-json/oembed/*` and `/wp-json/wp/v2/pages/*` head links, and `xmlrpc.php?rsd`. www variants are left to Cloudflare. Two internal links use the www host: `www.willfraleylaw.com/contact/` and `www…/legal-services/criminal-defense/{sex-crimes,violent-crimes}/`. I recorded them under their bare paths.
+- **Live probes.** I sent 50 single GETs with `redirect: manual`, 11 s apart and in sequence:
+  - WordPress and sitemap paths: `/feed/`, `/comments/feed/`, `/category/uncategorized/`, `/page/2/`, `/?p=1`, `/sitemap.xml`, `/sitemap_index.xml`, `/page-sitemap.xml`, `/post-sitemap.xml`, `/wp-json/`, `/blog/`, `/news/`, `/?author=1`
+  - Old service-area paths: `/legal-services/{criminal-defense,family-law,personal-injury}/`
+  - The 4 staging paths on willfraleylaw.com
+  - All 24 `/?p=<id>` shortlinks, including front page ID 46
+  - The 6 og:image files
+
+  Results:
+  - `/legal-services/<area>/` → 301 to `/<area>/`
+  - `/sitemap.xml` → 301 to `/sitemap_index.xml`
+  - Every `/?p=<id>` → 301 to its page
+  - `/?p=1`, `/blog/` and `/news/` → 404
+  - `/?author=1` → 403. Author enumeration is blocked, and no author slug appears in any HTML, feed or sitemap, so there is no `/author/<slug>/` URL to keep.
+  - The feeds return 200 but have no posts. `/post-sitemap.xml` returns 200 with an empty urlset.
+  - `/page/2/` returns 200 as a duplicate of the home page, with its canonical set to `/`.
+  - `/category/uncategorized/` returns 200 as an empty archive.
+- **Broken links.**
+  - `/legal-services/criminal-defense/sex-crimes/` (404) is linked from the body of `/criminal-defense/violent-crimes/`, anchor "sex crimes".
+  - `/legal-services/criminal-defense/violent-crimes/` (404) is linked from the body of `/criminal-defense/domestic-assault/`, anchor "violence".
+  - pages.json had `linkedFrom: []` for both because the links use the www host. Map each one to `/criminal-defense/<same slug>/`.
+- **Hostinger staging links (beige-baboon-435532.hostingersite.com).** I recorded these as broken-link entries using the same paths on willfraleylaw.com, where each currently returns 404:
+  - `/contact/index.html` is linked from `/criminal-defense/domestic-assault/`, `/criminal-defense/dui/` and `/legal-services/`. Map it to `/contact-us/`.
+  - `/legal-services/{criminal-defense,family-law,personal-injury}/index.html` are the 3 service cards on `/legal-services/`. Map them to the matching area hub.
+- **Media.** I kept only og:image files under `/wp-content/uploads/`, as the task scoped. There are 6, including the 4 `Screenshot-*.png` files, and all return 200. No page sets `twitter:image`. The Yoast page-sitemap lists about 30 more `image:image` uploads (service JPGs, `Screenshot-2025-10-20-at-6.05.23-PM.png` and others). I did not add them because they are not social-cache URLs.
+- **Note for the redirect builder.** Cloudflare Pages `_redirects` cannot match query strings. Without a rule, every `/?p=<id>` would serve the home page with a 200. To keep the 23 per-page 301s, use a small Pages Function middleware or a zone Redirect Rule (filed in needs-operator.md).
+
+## A01-A02-critic
+
+### Stage 1 completeness critic (acting for A01/A02)
+
+- **Facts F293–F315 added** after re-reading home, about, contact-us, criminal-defense/dui, family-law/child-custody, testimonials and the home footer. Each quote was checked against the saved page with the same normalization `tools/check.mjs` uses. The additions:
+  - **Katie Fults's title** "Attorney at Law" (F293).
+  - **Testimonial attributions** Katherine S., Eddie W. and S.A. (F294–F296). Before this, the names appeared only inside the F133–F135 claims, not in any quote.
+  - **Practice-area name lists:** the home cards, both header-menu groups and the footer "Areas of Practice" list (F297–F300).
+  - **The "Murfreesboro Lawyer" heading** (F301).
+  - **The DUI page's "handles … and more"** service line (F302).
+  - **Nine DUI legal statements** the ledger was missing (F303–F311). These cover: misdemeanor; jail time by BAC and priors; marijuana and other intoxicants; zero tolerance; treatment program; work-release restrictions; restitution; a passenger under 18; and a refusal used in court. All are typed `other` and marked "verify current law before reuse", the same as C18.
+  - **Child Custody facts** (F312–F315): custody decision-making, negotiation or court, a legal statement on proof of paternity, and adoption help.
+- **Testimonials:** a copy attribution such as "— Katherine S." should cite the attribution fact (F294–F296) together with the text fact (F133–F135).
+- **Checked with no gaps found:** the assets and old URLs.
+  - All 29 page image URLs, including size variants and the 6 og:images, map to an `assets.json` entry.
+  - Of the 4 person entries, all are Will Fraley or Katie Fults. Every anonymous stock person is typed `scene` with verdict replace or drop.
+  - `old-urls.json` has the 13 `pages.json` redirects, both broken links, the 4 staging-host paths and the 6 og:image media files.
+- **Known data gap, not fixed here** because it is outside this critic's files: `inventory/text/about.md` leaves out Will's bio block (1992 MTSU, Nashville School of Law 2004, court officer for Judge McFarlin, began practice 2004, Affiliations). The facts F051–F062 and F068–F074 still verify, because their quotes are found in `inventory/html/about.html`. Copywriters must read the About HTML, not only the text file.
+- **Heads-up for the build gate:** `tools/check.mjs` requires every path in `old-urls.json` to resolve to 200 or 301→200 after launch, including paths that do not answer 200 today.
+  - **404 or 403 today:** `/?p=1`, `/?author=1`, `/blog/`, `/news/` and the 6 broken-link paths.
+  - **Also included:** `/wp-json/`, the feeds, the sitemaps and the 6 `/wp-content/uploads/...` og:image paths.
+  - **What the build needs:** `_redirects` must map each of these (for example `/news/` → `/in-the-news/`, `/feed/` → `/`, uploads → the new image URLs). Query-string shortlinks need the Function or Redirect Rule A01 noted.
+
+## A02
+
+### A02 (asset half), Stage 1: asset ledger
+
+- **Originals, not resized copies.** For every referenced image, A02 stripped the WordPress `-WxH` suffix and downloaded the original. All 29 originals existed (HTTP 200), so no fallback to a srcset size was needed. Requests were spaced about 10.5 s apart, GET only. Published size variants are listed per asset in `publishedVariants`.
+- **No favicon or site icon exists.** No page `<head>` has `<link rel="icon">` or a tile image, and `/favicon.ico` returns an empty 200 response, so there was nothing to download. Decision: the build derives the favicon and touch icons from the reused logo (IMG01). Owner question queued for a square mark.
+- **No PDFs are linked** from any of the 24 pages. The two certificates are WebP scans (IMG06 and IMG07). They are kept as `kind: scene`, `document: true`, reuse-only.
+- **Excluded as theme chrome, not content:** the Ultimate-Elementor seasonal-effect sprites (tree/skull/pumpkin/ghost/bat/moon/gift/snowflake), `post-loader.gif` and the Gravity Forms `spinner.svg`. They appear in markup on every page but aren't site images.
+- **Attorney photo orientation:** `Screenshot-2025-10-20-at-6.05.23-PM.png` (IMG04) is IMG02's photograph mirrored horizontally. In IMG04 the breast pocket sits on the wearer's right, which is wrong. IMG02 is the canonical orientation. If IMG04's wider crop is ever used, flop it back and crop off the baked-in blue frame.
+- **Verdicts:** reuse = IMG01 logo, IMG02–IMG04 Will Fraley, IMG05 Katie Fults, IMG06–IMG07 certificates. Replace = every stock and building image (IMG08–IMG12, IMG14–IMG29), using generated scenes with no people. Drop = IMG13, the section-background texture. Per the plan-time decision, IMG08 (civic building, Home) and IMG09 (brick office showing "509", Contact) are replaced, and no generated image may be captioned or implied to be the real office.
+- **Stock photos showing anonymous people** (IMG11, IMG12, IMG13, IMG15, IMG18, IMG20–IMG25, IMG27–IMG29) are marked `kind: scene` with the note "stock photo with people — must be replaced, never reused".
+- **Graphic content:** IMG21, the Murder card, shows a crime scene with a covered body and readable tape text. Its imagery doesn't carry over. The plan already gives the Murder card no page.
+
+### A02 (fact half), Stage 1: facts ledger
+
+- **Ledger:** `inventory/facts.json` has 292 facts (F001–F292), each `{id, claim, type, source_url, exact_quote}`. A script verified every exact_quote with the gate's normalization (`.cache/a02-verify.mjs`): 0 misses. The generator is `.cache/a02-facts.mjs`, and IDs are positional, so append new facts at the end.
+- **Chrome facts** (footer phone, email, address, hours, tagline, disclaimer, sidebar bullets, menu "In The News" links, social and AVVO links, LegalService JSON-LD) cite the home page URL. **Exception:** the SMS-consent sentence (F113) cites /about/, because the home page's form renders without it.
+- **Certificate facts (F064–F066):** the TACDL course names and dates exist only as text inside the certificate images IMG06 and IMG07. For these facts, `exact_quote` is the image path as it appears in the About HTML, which proves the document is on the page. Two extra fields, `evidence: "image-transcription"` and `image_text`, carry the exact transcription. Copy may cite these facts for the 2019 Advanced Cross-Examination training and the 2006 Tennessee Criminal Defense College, but never as "certified".
+- **Legal statements** the old site makes (DUI penalties, residency statute, FAQ answers) are typed `other`. Each claim is marked "verify current law before reuse". They're ledgered so the copywriter can trace them, but CONFLICTS C17 and C18 say not to restate figures until the owner approves.
+- **Testimonials (F133–F135)** are stored verbatim, including the truncated "I highly recommend" and Eddie W.'s missing word. Card headlines are F136–F138, and the attribution is in each claim.
+- **Schema-only claims** (Davidson and Williamson counties F039–F040, Friday 17:00 close F033, "Attorneys at Law" F005) are ledgered so the conflict is visible. The safest-form rule means copy and the new schema don't use them.

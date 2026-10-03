@@ -1,10 +1,11 @@
 # STATE
 
-stage: 1 (Capture) — IN PROGRESS
-phase: crawl running (tools/crawl.mjs, 10 s between pages)
+stage: 2 (Audit) — IN PROGRESS
+phase: eight audits running, then A11 synthesis, then A16 voice (2b)
 
 ## Done
 - Stage 0 bootstrap — gate 0 PASSED. check.mjs hash-locked (plan/CHECK-HASH) after a 133-case stress test.
+- Stage 1 capture — gate 1 PASSED (24 pages, 315 facts, 29 assets, 89 old URLs, 19 conflicts).
 
 ## Next
 Stage 1: A01 legacy-URL probe + inventory/old-urls.json; A02 assets + facts ledger + CONFLICTS → gate 1.

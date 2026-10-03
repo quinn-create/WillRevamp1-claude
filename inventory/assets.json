@@ -1,0 +1,803 @@
+[
+  {
+    "id": "IMG01",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/Logo-3.webp",
+    "file": "inventory/assets/Logo-3.webp",
+    "sourcePages": [
+      "/",
+      "/contact-us/",
+      "/faqs/",
+      "/legal-services/",
+      "/criminal-defense/",
+      "/personal-injury/",
+      "/criminal-defense/drug-crimes/",
+      "/criminal-defense/dui/",
+      "/about/",
+      "/family-law/",
+      "/criminal-defense/theft/",
+      "/criminal-defense/violent-crimes/",
+      "/criminal-defense/sex-crimes/",
+      "/criminal-defense/fraud/",
+      "/criminal-defense/probation-violation/",
+      "/criminal-defense/domestic-assault/",
+      "/family-law/child-custody/",
+      "/family-law/divorce/",
+      "/family-law/parenting-plan-modifications/",
+      "/family-law/paternity/",
+      "/family-law/visitation/",
+      "/testimonials/",
+      "/adoption/",
+      "/dcs-case-attorney/"
+    ],
+    "alt": "Logo for Murfreesboro Attorney, Will Fraley",
+    "width": 400,
+    "height": 62,
+    "bytes": 5318,
+    "format": "webp",
+    "kind": "logo",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "logo"
+    ],
+    "verdict": "reuse",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Logo-3-300x47.webp"
+    ],
+    "notes": "Firm wordmark \"WILL FRALEY / ATTORNEY AT LAW\" in blue on a transparent background; published in the header (and mobile/footer menus) of all 24 pages. Raster only, 400x62 — fine for a header at 1x/2x up to ~200 px wide but too small for print or large use; no SVG/vector published. Reuse as-is (plan-time decision: logo reused from WebP); vector requested from owner."
+  },
+  {
+    "id": "IMG02",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/content-v10-img-attorney.webp",
+    "file": "inventory/assets/content-v10-img-attorney.webp",
+    "sourcePages": [
+      "/about/"
+    ],
+    "alt": "",
+    "width": 673,
+    "height": 951,
+    "bytes": 51138,
+    "format": "webp",
+    "kind": "person",
+    "document": false,
+    "heroCandidate": true,
+    "lowRes": true,
+    "usedAs": [
+      "content",
+      "og"
+    ],
+    "verdict": "reuse",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/content-v10-img-attorney-212x300.webp"
+    ],
+    "notes": "Will Fraley (attorney), waist-up, dark pinstripe suit and gold dotted tie, smiling, in front of a brick arched doorway in strong sunlight. Correct orientation (breast pocket on the wearer's left). About-page portrait and /about/ og:image. 673 px wide: below 1200 px, so not usable as a full-bleed hero or OG at 1200x630 without upscaling — use as a portrait/card or crop-in-frame."
+  },
+  {
+    "id": "IMG03",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/content-v1-img.webp",
+    "file": "inventory/assets/content-v1-img.webp",
+    "sourcePages": [
+      "/"
+    ],
+    "alt": "",
+    "width": 910,
+    "height": 715,
+    "bytes": 75410,
+    "format": "webp",
+    "kind": "person",
+    "document": false,
+    "heroCandidate": true,
+    "lowRes": true,
+    "usedAs": [
+      "content"
+    ],
+    "verdict": "reuse",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/content-v1-img-300x236.webp",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/content-v1-img-768x603.webp"
+    ],
+    "notes": "Will Fraley (attorney) seated at a desk in a law office, white shirt and gold tie, pen in hand over a legal pad, open book, bookshelves and window behind; a mug with a university logo and small personal items on the shelf are visible. Home \"Experience You Can Count On\" image. Best candidate for an About/Home split-hero. 910 px wide (low-res for a full-bleed hero). Reuse with crop/colour-correct only; consider cropping out the logo mug."
+  },
+  {
+    "id": "IMG04",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.05.23-PM.png",
+    "file": "inventory/assets/Screenshot-2025-10-20-at-6.05.23-PM.png",
+    "sourcePages": [
+      "/legal-services/",
+      "/criminal-defense/",
+      "/family-law/"
+    ],
+    "alt": "",
+    "width": 1302,
+    "height": 1506,
+    "bytes": 1206499,
+    "format": "png",
+    "kind": "person",
+    "document": false,
+    "heroCandidate": true,
+    "lowRes": true,
+    "usedAs": [
+      "content"
+    ],
+    "verdict": "reuse",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.05.23-PM-259x300.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.05.23-PM-768x888.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.05.23-PM-885x1024.png"
+    ],
+    "notes": "Will Fraley (attorney) — the SAME photograph as IMG02 but HORIZONTALLY MIRRORED (breast pocket on the wrong side) and cropped wider to show the brick arch; it is a design screenshot with a baked-in blue gradient bar on the right and a white/gradient block at the bottom (photo area ≈ 1050x1290 of the 1302x1506 canvas). Used on Legal Services, Criminal Defense and Family Law. If reused: crop to the photo area and flop back to true orientation; otherwise prefer IMG02. Effective width after crop ≈ 1050 px → low-res for hero."
+  },
+  {
+    "id": "IMG05",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/unnamed-56.jpg",
+    "file": "inventory/assets/unnamed-56.jpg",
+    "sourcePages": [
+      "/about/"
+    ],
+    "alt": "",
+    "width": 169,
+    "height": 224,
+    "bytes": 8035,
+    "format": "jpeg",
+    "kind": "person",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "content"
+    ],
+    "verdict": "reuse",
+    "publishedVariants": [],
+    "notes": "Katie Fults — head-and-shoulders, dark blazer, seated in an office chair, plain grey wall. About page only (plan-time decision). Very low resolution (169x224): only usable as a small avatar (≤ 112 px CSS at 2x); higher-resolution original requested from owner."
+  },
+  {
+    "id": "IMG06",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/11.webp",
+    "file": "inventory/assets/11.webp",
+    "sourcePages": [
+      "/about/"
+    ],
+    "alt": "",
+    "width": 1600,
+    "height": 1240,
+    "bytes": 129518,
+    "format": "webp",
+    "kind": "scene",
+    "document": true,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "content"
+    ],
+    "verdict": "reuse",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/11-1024x794.webp",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/11-1536x1190.webp",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/11-300x233.webp",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/11-768x595.webp"
+    ],
+    "notes": "Certificate scan (document): TACDL \"Advanced Cross-Examination — Certificate of Completion\", Will Fraley, 2019 TACDL Advanced Cross Examination Training at Montgomery Bell Park, Burns, TN, dated September 20, 2019; contains signatures. About page (Affiliations). Reuse-only as a document image (crop/straighten/colour-correct only); never regenerate. Alt text must describe it; the facts it states are ledgered separately by the fact half."
+  },
+  {
+    "id": "IMG07",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/12.webp",
+    "file": "inventory/assets/12.webp",
+    "sourcePages": [
+      "/about/"
+    ],
+    "alt": "",
+    "width": 1600,
+    "height": 1246,
+    "bytes": 322714,
+    "format": "webp",
+    "kind": "scene",
+    "document": true,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "content"
+    ],
+    "verdict": "reuse",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/12-1024x797.webp",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/12-1536x1196.webp",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/12-300x234.webp",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/12-768x598.webp"
+    ],
+    "notes": "Certificate scan (document): Tennessee Association of Criminal Defense Lawyers certificate awarded to \"R. Wilford Fraley, III\" for completion of the 5th Annual Tennessee Criminal Defense College, March 30 – April 1, 2006, Montgomery Bell State Park; contains signatures. About page (Affiliations). Reuse-only as a document image; never regenerate."
+  },
+  {
+    "id": "IMG08",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/mainstage-v1-img.webp",
+    "file": "inventory/assets/mainstage-v1-img.webp",
+    "sourcePages": [
+      "/"
+    ],
+    "alt": "",
+    "width": 1124,
+    "height": 736,
+    "bytes": 159436,
+    "format": "webp",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": true,
+    "lowRes": true,
+    "usedAs": [
+      "hero",
+      "og"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/mainstage-v1-img-1024x671.webp",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/mainstage-v1-img-300x196.webp",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/mainstage-v1-img-768x503.webp"
+    ],
+    "notes": "Multi-storey brick-and-glass civic building with a white tower and portico, flagpole, street and autumn trees under a blue sky — a real, identifiable building (not verified which). Home hero and home og:image (1124x736, low-res for a modern hero/OG). DECISION (plan-time, accepted): replaced by a generated Middle Tennessee civic/courthouse-square scene with no readable signage; this file is not reused."
+  },
+  {
+    "id": "IMG09",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.27.41-PM.png",
+    "file": "inventory/assets/Screenshot-2025-10-21-at-2.27.41-PM.png",
+    "sourcePages": [
+      "/contact-us/"
+    ],
+    "alt": "",
+    "width": 1728,
+    "height": 1916,
+    "bytes": 3787863,
+    "format": "png",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": true,
+    "lowRes": false,
+    "usedAs": [
+      "hero",
+      "og"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.27.41-PM-1385x1536.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.27.41-PM-271x300.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.27.41-PM-768x852.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.27.41-PM-924x1024.png"
+    ],
+    "notes": "Two-storey red-brick office building with a fanlight dormer, Juliet balcony and arched double doors; house number \"509\" is visible — appears to be the firm's own office exterior. A design screenshot with a baked-in translucent blue panel over the left third. Contact page hero (og uses the 924x1024 crop). DECISION (plan-time, accepted): replaced by a generated law-office/townscape scene; the generated image must not be presented as the actual office."
+  },
+  {
+    "id": "IMG10",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-12.58.05-PM.png",
+    "file": "inventory/assets/Screenshot-2025-10-21-at-12.58.05-PM.png",
+    "sourcePages": [
+      "/legal-services/"
+    ],
+    "alt": "",
+    "width": 1754,
+    "height": 1322,
+    "bytes": 1034778,
+    "format": "png",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": true,
+    "lowRes": false,
+    "usedAs": [
+      "hero",
+      "og"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-12.58.05-PM-1024x772.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-12.58.05-PM-1536x1158.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-12.58.05-PM-300x226.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-12.58.05-PM-768x579.png"
+    ],
+    "notes": "Stock photo: wooden gavel on its sound block, blurred books behind; design screenshot with baked-in blue gradient bar and white block. Legal Services hero + og:image. Generic stock; replaced by a generated scene (gavel imagery optional)."
+  },
+  {
+    "id": "IMG11",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.04.57-PM.png",
+    "file": "inventory/assets/Screenshot-2025-10-20-at-6.04.57-PM.png",
+    "sourcePages": [
+      "/criminal-defense/"
+    ],
+    "alt": "",
+    "width": 1738,
+    "height": 1398,
+    "bytes": 1083052,
+    "format": "png",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": true,
+    "lowRes": false,
+    "usedAs": [
+      "hero",
+      "og"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.04.57-PM-1024x824.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.04.57-PM-1536x1236.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.04.57-PM-300x241.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.04.57-PM-768x618.png"
+    ],
+    "notes": "Stock photo: an anonymous man in a blue suit, hands handcuffed behind his back (no face). Design screenshot with baked-in blue gradient bar. Criminal Defense hero + og:image. Not the firm's people — stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG12",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.23.01-PM.png",
+    "file": "inventory/assets/Screenshot-2025-10-21-at-2.23.01-PM.png",
+    "sourcePages": [
+      "/family-law/"
+    ],
+    "alt": "",
+    "width": 1742,
+    "height": 1432,
+    "bytes": 1575290,
+    "format": "png",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": true,
+    "lowRes": false,
+    "usedAs": [
+      "hero",
+      "og"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.23.01-PM-1024x842.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.23.01-PM-1536x1263.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.23.01-PM-300x247.png",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.23.01-PM-768x631.png"
+    ],
+    "notes": "Stock photo: an anonymous father reading a picture book to a toddler on his lap (faces visible) — same stock image as services-paternity.jpg. Design screenshot with baked-in blue gradient bar. Family Law hero + og:image (og uses the 1024x842 size). Not the firm's people — stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG13",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/panel-group-v1-bg.webp",
+    "file": "inventory/assets/panel-group-v1-bg.webp",
+    "sourcePages": [
+      "/",
+      "/personal-injury/",
+      "/criminal-defense/drug-crimes/",
+      "/about/",
+      "/criminal-defense/theft/",
+      "/criminal-defense/violent-crimes/",
+      "/criminal-defense/sex-crimes/",
+      "/criminal-defense/probation-violation/",
+      "/criminal-defense/domestic-assault/",
+      "/family-law/child-custody/",
+      "/family-law/paternity/",
+      "/family-law/visitation/",
+      "/adoption/",
+      "/dcs-case-attorney/"
+    ],
+    "alt": "",
+    "width": 1600,
+    "height": 938,
+    "bytes": 14614,
+    "format": "webp",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "background"
+    ],
+    "verdict": "drop",
+    "publishedVariants": [],
+    "notes": "Section background: solid royal-blue field with a faded corner showing scales of justice and an anonymous person's hands writing with a fountain pen. Used as a CSS background on 14 pages. stock photo with people — must be replaced, never reused; the new design system supplies its own backgrounds/textures (generated if needed)."
+  },
+  {
+    "id": "IMG14",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/criminal-defense.jpg",
+    "file": "inventory/assets/criminal-defense.jpg",
+    "sourcePages": [
+      "/legal-services/"
+    ],
+    "alt": "",
+    "width": 418,
+    "height": 314,
+    "bytes": 11242,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/criminal-defense-300x225.jpg"
+    ],
+    "notes": "Stock photo: misty green forest. Legal Services \"Criminal Defense\" card thumbnail; 418x314 (low-res), no relation to the subject. Replace with a generated scene."
+  },
+  {
+    "id": "IMG15",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/family-law.jpg",
+    "file": "inventory/assets/family-law.jpg",
+    "sourcePages": [
+      "/legal-services/"
+    ],
+    "alt": "",
+    "width": 418,
+    "height": 314,
+    "bytes": 22665,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/family-law-300x225.jpg"
+    ],
+    "notes": "Stock photo: redwood-type forest path with a tiny distant hiker (a person, not identifiable). Legal Services \"Family Law\" card; 418x314 (low-res). Not the firm's people — stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG16",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/personal-injury.jpg",
+    "file": "inventory/assets/personal-injury.jpg",
+    "sourcePages": [
+      "/legal-services/"
+    ],
+    "alt": "",
+    "width": 451,
+    "height": 314,
+    "bytes": 13318,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/personal-injury-300x209.jpg"
+    ],
+    "notes": "Stock photo: close-up of tall redwood trunks in mist. Legal Services \"Personal Injury\" card; 451x314 (low-res), unrelated to subject. Replace with a generated scene."
+  },
+  {
+    "id": "IMG17",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-domestic-assault.jpg",
+    "file": "inventory/assets/services-domestic-assault.jpg",
+    "sourcePages": [
+      "/criminal-defense/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 41241,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-domestic-assault-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-domestic-assault-768x571.jpg"
+    ],
+    "notes": "Stock photo: a cracked white plate on a blue background (no people). Criminal Defense \"Domestic Assault\" card. Replace with a generated object/still-life scene for consistency."
+  },
+  {
+    "id": "IMG18",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-drug-crimes.jpg",
+    "file": "inventory/assets/services-drug-crimes.jpg",
+    "sourcePages": [
+      "/criminal-defense/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 60961,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-drug-crimes-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-drug-crimes-768x571.jpg"
+    ],
+    "notes": "Stock photo: two anonymous people's hands exchanging money/a small bag (hand-to-hand deal). Criminal Defense \"Drug Crimes\" card. stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG19",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-dui.jpg",
+    "file": "inventory/assets/services-dui.jpg",
+    "sourcePages": [
+      "/criminal-defense/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 117036,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-dui-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-dui-768x571.jpg"
+    ],
+    "notes": "Stock photo: glass of whiskey on ice beside car keys (no people). Criminal Defense \"DUI\" card. Replace with a generated still-life for a consistent set."
+  },
+  {
+    "id": "IMG20",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-fraud.jpg",
+    "file": "inventory/assets/services-fraud.jpg",
+    "sourcePages": [
+      "/criminal-defense/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 96206,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-fraud-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-fraud-768x571.jpg"
+    ],
+    "notes": "Stock photo: an anonymous man in a suit slipping a wad of banknotes into his jacket (no face; printed currency text visible). Criminal Defense \"Fraud\" card. stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG21",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-murder.jpg",
+    "file": "inventory/assets/services-murder.jpg",
+    "sourcePages": [
+      "/criminal-defense/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 75437,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-murder-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-murder-768x571.jpg"
+    ],
+    "notes": "Stock photo: crime scene — police officer, a sheet-covered body with an evidence marker, and readable \"CRIME SCENE DO NOT CROSS\" tape. Criminal Defense \"Murder\" card (no page; plan-time decision: Wills/Murder cards get no pages). stock photo with people — must be replaced, never reused; graphic — do not carry over."
+  },
+  {
+    "id": "IMG22",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-criminal-defense-probation-violation.jpg",
+    "file": "inventory/assets/services-criminal-defense-probation-violation.jpg",
+    "sourcePages": [
+      "/criminal-defense/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 62492,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-criminal-defense-probation-violation-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-criminal-defense-probation-violation-768x571.jpg"
+    ],
+    "notes": "Stock photo: clasped hands of an anonymous person in an orange jumpsuit with a handcuff on one wrist. Criminal Defense \"Probation Violation\" card. stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG23",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-theft.jpg",
+    "file": "inventory/assets/services-theft.jpg",
+    "sourcePages": [
+      "/criminal-defense/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 90982,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-theft-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-theft-768x571.jpg"
+    ],
+    "notes": "Stock photo: an anonymous man in a cap and jacket crouching in an electronics store aisle, slipping a product into a bag (shoplifting). Criminal Defense \"Theft\" card. stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG24",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-violent-crimes.jpg",
+    "file": "inventory/assets/services-violent-crimes.jpg",
+    "sourcePages": [
+      "/criminal-defense/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 53306,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-violent-crimes-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-violent-crimes-768x571.jpg"
+    ],
+    "notes": "Stock photo: an anonymous person's clenched fist toward the camera. Criminal Defense \"Violent Crimes\" card. stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG25",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-child-custody.jpg",
+    "file": "inventory/assets/services-child-custody.jpg",
+    "sourcePages": [
+      "/family-law/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 113954,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-child-custody-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-child-custody-768x571.jpg"
+    ],
+    "notes": "Stock photo: a man and a boy seen from behind, embracing, outdoors. Family Law \"Child Custody\" card. stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG26",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-divorce.jpg",
+    "file": "inventory/assets/services-divorce.jpg",
+    "sourcePages": [
+      "/family-law/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 106904,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-divorce-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-divorce-768x571.jpg"
+    ],
+    "notes": "Stock photo: two wedding rings standing on a blue textured surface (no people). Family Law \"Divorce\" card. Replace with a generated still-life for a consistent set."
+  },
+  {
+    "id": "IMG27",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-parenting-plan-modifications.jpg",
+    "file": "inventory/assets/services-parenting-plan-modifications.jpg",
+    "sourcePages": [
+      "/family-law/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 73873,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-parenting-plan-modifications-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-parenting-plan-modifications-768x571.jpg"
+    ],
+    "notes": "Stock photo: a mother, a girl and a father at a glass table with a professional taking notes (faces visible). Family Law \"Parenting Plan Modification\" card. stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG28",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-paternity.jpg",
+    "file": "inventory/assets/services-paternity.jpg",
+    "sourcePages": [
+      "/family-law/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 98975,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-paternity-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-paternity-768x571.jpg"
+    ],
+    "notes": "Stock photo: father reading a picture book to a toddler (faces visible) — same stock image as the Family Law hero (IMG12). Family Law \"Paternity\" card. stock photo with people — must be replaced, never reused."
+  },
+  {
+    "id": "IMG29",
+    "url": "https://willfraleylaw.com/wp-content/uploads/2025/10/services-wills.jpg",
+    "file": "inventory/assets/services-wills.jpg",
+    "sourcePages": [
+      "/family-law/"
+    ],
+    "alt": "",
+    "width": 1023,
+    "height": 761,
+    "bytes": 126341,
+    "format": "jpeg",
+    "kind": "scene",
+    "document": false,
+    "heroCandidate": false,
+    "lowRes": false,
+    "usedAs": [
+      "card"
+    ],
+    "verdict": "replace",
+    "publishedVariants": [
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-wills-300x223.jpg",
+      "https://willfraleylaw.com/wp-content/uploads/2025/10/services-wills-768x571.jpg"
+    ],
+    "notes": "Stock photo: an elderly couple signing a document at a table (faces visible). Family Law \"Wills\" card (no page; plan-time decision: Wills/Murder cards get no pages). stock photo with people — must be replaced, never reused."
+  }
+]

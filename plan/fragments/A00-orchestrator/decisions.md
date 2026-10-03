@@ -11,3 +11,8 @@
 - **Wiring changes to the kit:** (1) Stage 1 — A02's fact ledger waits for A01's text; assets download in parallel. (2) Stage 3 — designers write tokens + rationale → one A15 run → designers build (the kit's designers and A15 each wait on the other). (3) Shared ledgers use per-agent fragments merged by `tools/merge-fragments.mjs`.
 - **Machine-readable sitemap:** `plan/sitemap.json` alongside `plan/SITEMAP.md`, so gates and builders read one source.
 - **Plan-time decisions accepted by the operator (no vetoes):** experience shown as "18+ years"; firm name "Will Fraley, Attorney at Law"; Katie Fults kept on About only; both real building photos replaced by generated scenes (home civic building, Contact office exterior); testimonials verbatim incl. two garbled ones; SMS/TCPA consent sentence not carried over; same 7 form fields; ≤ 6 nav items; Wills/Murder cards get no pages; logo reused from WebP; all old URLs redirected; social links kept as published.
+
+### Stage 1 — Capture
+- Gate 1 passed: 24 pages, 315 facts (every quote verified on its page), 29 assets, 89 old URLs, 19 conflicts.
+- **Years of experience:** the ledger supports "practicing law since 2004" as the safest true form (A02, C01). That replaces the plan-time "18+ years" wording; the owner is still asked for the exact number.
+- Chromium's networking through the sandbox proxy is unreliable; live-site browser loads go through Node fetch (tools/lib.mjs). Lighthouse (separate Chrome) cannot be routed, so old-site numbers note failed requests.

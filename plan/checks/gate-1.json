@@ -1,0 +1,67 @@
+{
+  "at": "2026-10-03T07:07:44.383Z",
+  "pass": true,
+  "failed": 0,
+  "results": [
+    {
+      "name": "tools/check.mjs hash matches plan/CHECK-HASH",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "inventory/pages.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "≥ 1 page captured",
+      "pass": true,
+      "detail": "24"
+    },
+    {
+      "name": "every page has text or is flagged thin",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "inventory/forms.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "inventory/assets.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "every asset classified person|logo|scene",
+      "pass": true,
+      "detail": "29 assets, 0 unclassified"
+    },
+    {
+      "name": "fact ids are unique",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "≥ 10 facts",
+      "pass": true,
+      "detail": "315"
+    },
+    {
+      "name": "facts have id/claim/type/source_url/exact_quote with a known type",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "every exact_quote is found on its source page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "inventory/CONFLICTS.md",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

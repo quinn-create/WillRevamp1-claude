@@ -1,0 +1,2216 @@
+[
+  {
+    "id": "F001",
+    "claim": "Firm name used in the home-page headline: \"Will Fraley, Attorney at Law\", serving Murfreesboro, TN and the surrounding counties.",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Will Fraley, Attorney at Law Serving Murfreesboro, TN & The Surrounding Counties"
+  },
+  {
+    "id": "F002",
+    "claim": "Firm name variant \"Law Offices of Will Fraley\" (About page subheading).",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Law Offices of Will Fraley"
+  },
+  {
+    "id": "F003",
+    "claim": "Firm name variant \"Law Offices of Will Fraley\" used in the CTA under Katie Fults's bio.",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "to get started with Law Offices of Will Fraley. Se habla español."
+  },
+  {
+    "id": "F004",
+    "claim": "Firm name variant \"Will Fraley Attorney at Law\" (no comma).",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/contact-us/",
+    "exact_quote": "At Will Fraley Attorney at Law, we’re prepared to be more than just your lawyer."
+  },
+  {
+    "id": "F005",
+    "claim": "Firm name variant \"Will Fraley, Attorneys at Law\" (plural) in the LegalService structured data.",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"name\": \"Will Fraley, Attorneys at Law\""
+  },
+  {
+    "id": "F006",
+    "claim": "Site/organization name in metadata: \"Will Fraley, Attorney at Law in Murfreeesboro\" (note the misspelling \"Murfreeesboro\").",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Will Fraley, Attorney at Law in Murfreeesboro"
+  },
+  {
+    "id": "F007",
+    "claim": "Firm name mis-punctuated as \"Will Fraley, Attorney at, Law\" on the Criminal Defense page.",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/criminal-defense/",
+    "exact_quote": "Will Fraley, Attorney at, Law will aggressively defend clients against a government intent on prosecution"
+  },
+  {
+    "id": "F008",
+    "claim": "Logo alt text: \"Logo for Murfreesboro Attorney, Will Fraley\".",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Logo for Murfreesboro Attorney, Will Fraley"
+  },
+  {
+    "id": "F009",
+    "claim": "The attorney's full legal name is Raymond Wilford Fraley, III.",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Raymond Wilford Fraley, III"
+  },
+  {
+    "id": "F010",
+    "claim": "Raymond Wilford Fraley, III is better known as \"Will\".",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "better known as “Will,”"
+  },
+  {
+    "id": "F011",
+    "claim": "Will Fraley is listed in structured data as founder with job title \"Attorney at Law\".",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"founder\": { \"@type\": \"Person\", \"name\": \"Will Fraley\", \"jobTitle\": \"Attorney at Law\" }"
+  },
+  {
+    "id": "F012",
+    "claim": "About page heading for the firm section: \"About Our Firm\".",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "About Our Firm"
+  },
+  {
+    "id": "F013",
+    "claim": "Office phone number is (615) 410-7290 (footer, every page).",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Phone: (615) 410-7290"
+  },
+  {
+    "id": "F014",
+    "claim": "Site-wide \"Call Today\" button shows (615) 410-7290.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Call Today (615) 410-7290"
+  },
+  {
+    "id": "F015",
+    "claim": "Phone link target is tel:+16154107290.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "tel:+16154107290"
+  },
+  {
+    "id": "F016",
+    "claim": "Phone in structured data: +1-615-410-7290.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"telephone\": \"+1-615-410-7290\""
+  },
+  {
+    "id": "F017",
+    "claim": "FAQ page invites further questions by phone at (615) 410-7290.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "If you have more questions, call us at (615) 410-7290."
+  },
+  {
+    "id": "F018",
+    "claim": "About page meta description gives the phone number (615) 410-7290.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Call today (615) 410-7290"
+  },
+  {
+    "id": "F019",
+    "claim": "Firm email address is inbox@willfraleylaw.com (footer, every page).",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Email: inbox@willfraleylaw.com"
+  },
+  {
+    "id": "F020",
+    "claim": "Email link target is mailto:inbox@willfraleylaw.com.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "mailto:inbox@willfraleylaw.com"
+  },
+  {
+    "id": "F021",
+    "claim": "Office street address is 509 W College St, Murfreesboro, TN 37130 (footer, every page).",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "509 W College St Murfreesboro, TN 37130"
+  },
+  {
+    "id": "F022",
+    "claim": "Structured-data street address: 509 W College St.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"streetAddress\": \"509 W College St\""
+  },
+  {
+    "id": "F023",
+    "claim": "Structured-data postal code: 37130.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"postalCode\": \"37130\""
+  },
+  {
+    "id": "F024",
+    "claim": "Footer address links to a Google Maps short link: https://goo.gl/maps/5UGDFjKCfam.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "https://goo.gl/maps/5UGDFjKCfam"
+  },
+  {
+    "id": "F025",
+    "claim": "Structured-data geo coordinates of the office: latitude 35.847942, longitude -86.396674.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"latitude\": 35.847942, \"longitude\": -86.396674"
+  },
+  {
+    "id": "F026",
+    "claim": "Facebook page: https://www.facebook.com/WillFraleyLaw/.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "https://www.facebook.com/WillFraleyLaw/"
+  },
+  {
+    "id": "F027",
+    "claim": "LinkedIn profile: https://www.linkedin.com/in/will-fraley-b745416/.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "https://www.linkedin.com/in/will-fraley-b745416/"
+  },
+  {
+    "id": "F028",
+    "claim": "X (Twitter) account: https://x.com/fraley37 (@fraley37).",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "https://x.com/fraley37"
+  },
+  {
+    "id": "F029",
+    "claim": "Footer links to an AVVO attorney profile for Raymond Fraley: https://www.avvo.com/attorneys/37130-tn-raymond-fraley-1707380.html.",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "https://www.avvo.com/attorneys/37130-tn-raymond-fraley-1707380.html"
+  },
+  {
+    "id": "F030",
+    "claim": "Contact page heading: \"Contact Us For a Free Consultation\".",
+    "type": "contact",
+    "source_url": "https://willfraleylaw.com/contact-us/",
+    "exact_quote": "Contact Us For a Free Consultation"
+  },
+  {
+    "id": "F031",
+    "claim": "Office hours Monday–Thursday 9:00am–5:00pm (footer, every page).",
+    "type": "hours",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Monday -Thursday 9:00am - 5:00pm"
+  },
+  {
+    "id": "F032",
+    "claim": "Office hours Friday 9:00am–4:00pm (footer, every page).",
+    "type": "hours",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Friday 9:00am - 4:00pm"
+  },
+  {
+    "id": "F033",
+    "claim": "Structured data says Monday–Friday open 09:00, close 17:00 (contradicts the footer's Friday 4:00pm close — see CONFLICTS.md).",
+    "type": "hours",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"opens\": \"09:00\", \"closes\": \"17:00\""
+  },
+  {
+    "id": "F034",
+    "claim": "The firm serves Murfreesboro and surrounding counties.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Championing Your Rights and Interests in Murfreesboro and Surrounding Counties"
+  },
+  {
+    "id": "F035",
+    "claim": "Will Fraley represents clients in Murfreesboro and the surrounding counties of Rutherford, Coffee, and Wilson.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "He represents clients in Murfreesboro and the surrounding counties of Rutherford, Coffee, and Wilson"
+  },
+  {
+    "id": "F036",
+    "claim": "Family-law service area: Rutherford, Coffee, and Wilson Counties.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "Protecting Your Parental Rights in Rutherford, Coffee, and Wilson Counties"
+  },
+  {
+    "id": "F037",
+    "claim": "Fraud/white-collar defense offered in Rutherford, Coffee, & Wilson Counties (same wording also on Probation Violation, Domestic Assault, Sex Crimes, Violent Crimes, Parenting Plan Modifications and Paternity pages).",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "White-Collar Crime Defense in Rutherford, Coffee, & Wilson Counties"
+  },
+  {
+    "id": "F038",
+    "claim": "Practice-area pages carry the subheading \"Serving Murfreesboro, TN & The Surrounding Counties\" (16 pages).",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Serving Murfreesboro, TN & The Surrounding Counties"
+  },
+  {
+    "id": "F039",
+    "claim": "Structured data lists Davidson County, TN as an area served (not stated anywhere in visible copy).",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"name\": \"Davidson County, TN\""
+  },
+  {
+    "id": "F040",
+    "claim": "Structured data lists Williamson County, TN as an area served (not stated anywhere in visible copy).",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"name\": \"Williamson County, TN\""
+  },
+  {
+    "id": "F041",
+    "claim": "Structured data lists Wilson County, TN as an area served.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"name\": \"Wilson County, TN\""
+  },
+  {
+    "id": "F042",
+    "claim": "Structured data lists Rutherford County, TN as an area served.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "\"name\": \"Rutherford County, TN\""
+  },
+  {
+    "id": "F043",
+    "claim": "Structured data describes the firm as serving clients throughout Middle Tennessee, including Murfreesboro and surrounding counties.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "throughout Middle Tennessee, including Murfreesboro and surrounding counties"
+  },
+  {
+    "id": "F044",
+    "claim": "Adoption page claims the firm is known throughout Murfreesboro and Rutherford County.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/adoption/",
+    "exact_quote": "Our firm is known throughout Murfreesboro and Rutherford County for providing personalized, compassionate legal service."
+  },
+  {
+    "id": "F045",
+    "claim": "The firm represents parents and guardians in DCS cases in Murfreesboro and Rutherford County.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/dcs-case-attorney/",
+    "exact_quote": "representing parents and guardians in DCS cases in Murfreesboro and Rutherford County"
+  },
+  {
+    "id": "F046",
+    "claim": "The firm has an office in Murfreesboro.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/personal-injury/",
+    "exact_quote": "Contact our office in Murfreesboro today to set up a consultation"
+  },
+  {
+    "id": "F047",
+    "claim": "Personal injury cases handled in the Murfreesboro area and beyond.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/personal-injury/",
+    "exact_quote": "handles personal injury cases of all kinds in the Murfreesboro area and beyond"
+  },
+  {
+    "id": "F048",
+    "claim": "The firm handles federal cases and all state felony and misdemeanor cases in Tennessee.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/criminal-defense/",
+    "exact_quote": "We provide criminal defense attorneys for federal cases and all state felony and misdemeanor cases in the state of Tennessee."
+  },
+  {
+    "id": "F049",
+    "claim": "The firm states it wants to help residents of Murfreesboro, TN.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "We want to help the residents of Murfreesboro, TN, get the legal assistance they need."
+  },
+  {
+    "id": "F050",
+    "claim": "Will Fraley is a native of Tennessee (sidebar bullet).",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Native to Tennessee"
+  },
+  {
+    "id": "F051",
+    "claim": "Will is a native of Tennessee who made Murfreesboro his home and established his private practice there.",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Being a native of Tennessee, Will came to love the city of Murfreesboro and decided to make it his home and where he would establish his private legal practice."
+  },
+  {
+    "id": "F052",
+    "claim": "Will grew up with parents who both practiced law in Fayetteville, Tennessee.",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "grew up with his parents who both practiced law in Fayetteville, Tennessee."
+  },
+  {
+    "id": "F053",
+    "claim": "Will moved to Murfreesboro in 1992 to attend Middle Tennessee State University.",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Will began his pursuit in 1992 when he moved to Murfreesboro to attend Middle Tennessee State University."
+  },
+  {
+    "id": "F054",
+    "claim": "Will was a member of the MTSU baseball team.",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "During his time at MTSU, he was a member of the baseball team."
+  },
+  {
+    "id": "F055",
+    "claim": "Will's personal philosophy (quoted on the About page): \"Baseball is the greatest game, and discipline is the key to life.\"",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Baseball is the greatest game, and discipline is the key to life."
+  },
+  {
+    "id": "F056",
+    "claim": "Will Fraley is described as a \"Dedicated Trial Attorney\" (sidebar bullet).",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Dedicated Trial Attorney"
+  },
+  {
+    "id": "F057",
+    "claim": "Will Fraley dedicates his practice to defending clients in criminal court and advocating for parents and spouses in family court.",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "dedicates his practice to defending clients in criminal court and advocating for parents and spouses in family court"
+  },
+  {
+    "id": "F058",
+    "claim": "Will Fraley and his team personally handle criminal cases, big or small.",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/criminal-defense/",
+    "exact_quote": "Will Fraley and his team will personally handle your criminal law case, no matter how big or small it may be."
+  },
+  {
+    "id": "F059",
+    "claim": "Will Fraley and his team personally handle each case (Theft page).",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/criminal-defense/theft/",
+    "exact_quote": "Will Fraley and his team will personally handle your case, no matter how big or small it may be."
+  },
+  {
+    "id": "F060",
+    "claim": "Will received his law degree from Nashville School of Law in 2004.",
+    "type": "credential",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Will attended Nashville School of Law where he received his law degree in 2004."
+  },
+  {
+    "id": "F061",
+    "claim": "While in law school Will worked as a court officer for Judge Ben Hall McFarlin, Jr.",
+    "type": "credential",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "While in law school, he worked as a court officer for Judge Ben Hall McFarlin, Jr."
+  },
+  {
+    "id": "F062",
+    "claim": "Will opened his own full-service private practice handling all criminal and domestic/family law matters.",
+    "type": "credential",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "he opened his own full-service private practice handling all criminal and domestic or family law matters."
+  },
+  {
+    "id": "F063",
+    "claim": "Attorney Fraley attended an advanced cross-examination training with the Tennessee Association of Criminal Defense Lawyers.",
+    "type": "credential",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Attorney Fraley has also attended an advanced cross-examination with the Tennessee Association of Criminal Defense Lawyers"
+  },
+  {
+    "id": "F064",
+    "claim": "Certificate scan (IMG06, About page): TACDL \"Advanced Cross-Examination\" Certificate of Completion awarded to Will Fraley for successfully completing the 2019 TACDL Advanced Cross Examination Training at Montgomery Bell Park in Burns, TN, dated September 20, 2019; presented by Rich McGee and Kevin McGee, Master Instructors. Text is in the image only; exact_quote is the image file on the page.",
+    "type": "credential",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "wp-content/uploads/2025/10/11-1024x794.webp",
+    "evidence": "image-transcription",
+    "image": "IMG06 inventory/assets/11.webp",
+    "image_text": "TACDL ...wherever justice demands | Advanced Cross-Examination | CERTIFICATE OF COMPLETION | Will Fraley | Successfully completed the 2019 TACDL Advanced Cross Examination Training at Montgomery Bell Park in Burns, TN. | PRESENTED BY: Rich McGee, Master Instructor; Kevin McGee, Master Instructor | ON THIS DAY: September 20, 2019"
+  },
+  {
+    "id": "F065",
+    "claim": "Certificate scan (IMG07, About page): Tennessee Association of Criminal Defense Lawyers certificate awarded to \"R. Wilford Fraley, III\" for successful completion of the 5th Annual Tennessee Criminal Defense College, March 30 – April 1, 2006, at Montgomery Bell State Park; signed by William D. Massey (TCDC Master Instructor & Organizer) and Barbara N. Short (TACDL Executive Director). Text is in the image only; exact_quote is the image file on the page.",
+    "type": "credential",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "wp-content/uploads/2025/10/12-1024x797.webp",
+    "evidence": "image-transcription",
+    "image": "IMG07 inventory/assets/12.webp",
+    "image_text": "Tennessee Association of Criminal Defense Lawyers | This certificate is hereby awarded to | R. Wilford Fraley, III | For the successful completion of the 5th Annual Tennessee Criminal Defense College March 30 – April 1, 2006 at Montgomery Bell State Park | William D. Massey, TCDC Master Instructor & Organizer | Barbara N. Short, TACDL Executive Director"
+  },
+  {
+    "id": "F066",
+    "claim": "Name form on the 2006 TACDL certificate (IMG07): \"R. Wilford Fraley, III\". Text is in the image only; exact_quote is the image file on the page.",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "wp-content/uploads/2025/10/12-1024x797.webp",
+    "evidence": "image-transcription",
+    "image": "IMG07 inventory/assets/12.webp",
+    "image_text": "R. Wilford Fraley, III"
+  },
+  {
+    "id": "F067",
+    "claim": "Will Fraley is a member of the Tennessee Bar Association, Rutherford Cannon County Bar Association, Tennessee Association of Criminal Defense Lawyers, and Tennessee Trial Lawyers Association (home \"Why\" block, repeated on 21 pages).",
+    "type": "membership",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "He is a member of several legal associations, including the Tennessee Bar Association, Rutherford Cannon County Bar Association, Tennessee Association of Criminal Defense Lawyers, and Tennessee Trial Lawyers Association."
+  },
+  {
+    "id": "F068",
+    "claim": "About \"Affiliations\": Will is a member of the Tennessee Bar Association, the Rutherford and Cannon County Bar Association, the Tennessee Association for Justice and the Tennessee Association of Criminal Defense Lawyers (spelled \"Defenses\" on the page).",
+    "type": "membership",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Will is a member of the Tennessee Bar Association, the Rutherford and Cannon County Bar Association, the Tennessee Association for Justice and the Tennessee Association of Criminal Defenses Lawyers"
+  },
+  {
+    "id": "F069",
+    "claim": "Will Fraley is a member of the Tennessee Bar Association.",
+    "type": "membership",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Will is a member of the Tennessee Bar Association"
+  },
+  {
+    "id": "F070",
+    "claim": "Will Fraley is a member of the Rutherford and Cannon County Bar Association.",
+    "type": "membership",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "the Rutherford and Cannon County Bar Association, the Tennessee Association for Justice"
+  },
+  {
+    "id": "F071",
+    "claim": "Will Fraley is a member of the \"Rutherford Cannon County Bar Association\" (home wording).",
+    "type": "membership",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Rutherford Cannon County Bar Association"
+  },
+  {
+    "id": "F072",
+    "claim": "Will Fraley is a member of the Tennessee Association of Criminal Defense Lawyers (TACDL).",
+    "type": "membership",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Tennessee Association of Criminal Defense Lawyers, and Tennessee Trial Lawyers Association"
+  },
+  {
+    "id": "F073",
+    "claim": "Will Fraley is a member of the Tennessee Trial Lawyers Association (home wording).",
+    "type": "membership",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Tennessee Trial Lawyers Association"
+  },
+  {
+    "id": "F074",
+    "claim": "Will Fraley is a member of the Tennessee Association for Justice (About wording).",
+    "type": "membership",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "the Tennessee Association for Justice"
+  },
+  {
+    "id": "F075",
+    "claim": "About page section heading \"Affiliations\".",
+    "type": "membership",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Affiliations"
+  },
+  {
+    "id": "F076",
+    "claim": "Home section heading claims 20+ years of experience advocating for clients in criminal and family cases.",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "20+ Years of Experience Advocating for Clients in Criminal and Family Cases"
+  },
+  {
+    "id": "F077",
+    "claim": "Home body copy says the firm has been representing clients for 18 years in criminal and family cases.",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "At Will Fraley, Attorney at Law, we have been representing clients for 18 years in criminal and family cases."
+  },
+  {
+    "id": "F078",
+    "claim": "Will Fraley has been practicing law for over 20 years (home \"Why\" block, repeated on 21 pages).",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Will Fraley, Attorney at Law has been practicing law for over 20 years"
+  },
+  {
+    "id": "F079",
+    "claim": "Sidebar bullet: \"Over 20 Years of Legal Experience\".",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Over 20 Years of Legal Experience"
+  },
+  {
+    "id": "F080",
+    "claim": "Footer tagline: Will Fraley, Your Murfreesboro Attorney for almost 20 years.",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Will Fraley, Your Murfreesboro Attorney for almost 20 years."
+  },
+  {
+    "id": "F081",
+    "claim": "Legal Services heading: \"Put Over 20 Years of Legal Experience on Your Side\".",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "Put Over 20 Years of Legal Experience on Your Side"
+  },
+  {
+    "id": "F082",
+    "claim": "Legal Services meta description: the legal team has almost 20 years legal experience.",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "Our legal team at Will Fraley Attorney At Law has almost 20 years legal experience to help you."
+  },
+  {
+    "id": "F083",
+    "claim": "Legal Services claims \"combined decades of experience\".",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "backed by our combined decades of experience"
+  },
+  {
+    "id": "F084",
+    "claim": "Family Law page: the firm has been representing clients for 20+ years.",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "We have been representing clients for 20+ years and are deeply familiar with the Tennessee family court system."
+  },
+  {
+    "id": "F085",
+    "claim": "Visitation page heading: 18 Years of Experience Advocating for Families in Rutherford, Coffee, and Wilson Counties.",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/family-law/visitation/",
+    "exact_quote": "18 Years of Experience Advocating for Families in Rutherford, Coffee, and Wilson Counties"
+  },
+  {
+    "id": "F086",
+    "claim": "Visitation page: Will Fraley has been representing parents and families \"for years\".",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/family-law/visitation/",
+    "exact_quote": "Will Fraley, Attorney at Law has been representing parents and families for years."
+  },
+  {
+    "id": "F087",
+    "claim": "Will began his practice in 2004.",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "He began his practice in 2004."
+  },
+  {
+    "id": "F088",
+    "claim": "With over 10 years of experience, Will opened his own full-service private practice.",
+    "type": "stat",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "With over 10 years of experience, he opened his own full-service private practice"
+  },
+  {
+    "id": "F089",
+    "claim": "Footer copyright line: © 2019-2026 All Rights Reserved.",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "© 2019-2026 All Rights Reserved."
+  },
+  {
+    "id": "F090",
+    "claim": "The firm offers a free consultation (call or contact online).",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Put a strong and experienced legal fighter on your case. Call or contact us online for a free consultation."
+  },
+  {
+    "id": "F091",
+    "claim": "Home meta description: contact the firm for a free consultation; Se habla español.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "contact Will Fraley, Attorney at Law for a free consultation to discuss your plan of action today. Se habla español."
+  },
+  {
+    "id": "F092",
+    "claim": "Spanish is spoken: \"Se habla español.\"",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Se habla español."
+  },
+  {
+    "id": "F093",
+    "claim": "The firm offers full bilingual Spanish services for clients who need it.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "We also offer full bilingual Spanish services for clients who need it, so you should not feel discouraged by any language barriers."
+  },
+  {
+    "id": "F094",
+    "claim": "Sidebar bullet: Spanish Speaking Services Available.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Spanish Speaking Services Available"
+  },
+  {
+    "id": "F095",
+    "claim": "Family Law meta description: schedule a free consultation; Se habla español.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "Schedule a free consultation to get started. Se habla español."
+  },
+  {
+    "id": "F096",
+    "claim": "Free initial consultation offered for family law matters.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "to get started in a free initial consultation."
+  },
+  {
+    "id": "F097",
+    "claim": "Visitation meta description offers a free initial consultation.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/family-law/visitation/",
+    "exact_quote": "Contact Will Fraley, Attorney at Law for a free initial consultation to discuss your legal options."
+  },
+  {
+    "id": "F098",
+    "claim": "Contact page: contact the firm to schedule an initial consultation.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/contact-us/",
+    "exact_quote": "Contact us today to schedule an initial consultation and we’ll show you what we can do for you."
+  },
+  {
+    "id": "F099",
+    "claim": "Contact page meta description: free consultation to discuss legal options in a Murfreesboro case.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/contact-us/",
+    "exact_quote": "Contact Will Fraley, Attorney at Law for a free consultation to discuss your legal options in your Murfreesboro case."
+  },
+  {
+    "id": "F100",
+    "claim": "Probation Violation page offers a free consultation via the contact form or phone.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/criminal-defense/probation-violation/",
+    "exact_quote": "To schedule a free consultation, fill out our contact form"
+  },
+  {
+    "id": "F101",
+    "claim": "Sex Crimes page offers a free consultation via the contact form.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/criminal-defense/sex-crimes/",
+    "exact_quote": "to schedule a free consultation. We can also be reached via phone at ."
+  },
+  {
+    "id": "F102",
+    "claim": "Fraud page offers a free consultation by message or call.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "For a free consultation, send us a message"
+  },
+  {
+    "id": "F103",
+    "claim": "Violent Crimes page offers a free consultation (online or by phone).",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/criminal-defense/violent-crimes/",
+    "exact_quote": "or call to schedule a free consultation."
+  },
+  {
+    "id": "F104",
+    "claim": "Paternity page offers a free consultation (call or message).",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/family-law/paternity/",
+    "exact_quote": "to schedule a free consultation."
+  },
+  {
+    "id": "F105",
+    "claim": "Parenting Plan Modifications page offers a free consultation.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/family-law/parenting-plan-modifications/",
+    "exact_quote": "or call for a free consultation."
+  },
+  {
+    "id": "F106",
+    "claim": "Adoption page offers a confidential consultation.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/adoption/",
+    "exact_quote": "Contact us to schedule a confidential consultation and take the next step toward growing your family."
+  },
+  {
+    "id": "F107",
+    "claim": "DCS page offers a confidential consultation.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/dcs-case-attorney/",
+    "exact_quote": "to schedule a confidential consultation and let our experienced team stand up for your rights and your family’s future."
+  },
+  {
+    "id": "F108",
+    "claim": "Legal Services page invites visitors to schedule a legal consultation.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "Get in touch with us today to schedule a legal consultation"
+  },
+  {
+    "id": "F109",
+    "claim": "FAQ page button: \"Free Consultation\".",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "Free Consultation"
+  },
+  {
+    "id": "F110",
+    "claim": "Contact form asks whether the enquirer is a potential new client, an existing client or neither.",
+    "type": "offer",
+    "source_url": "https://willfraleylaw.com/contact-us/",
+    "exact_quote": "Yes, I am a potential new client. No, I'm a current existing client. I'm neither."
+  },
+  {
+    "id": "F111",
+    "claim": "Site disclaimer: information is for general information purposes only and is not legal advice for any individual case.",
+    "type": "policy",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice for any individual case or situation."
+  },
+  {
+    "id": "F112",
+    "claim": "Site disclaimer: viewing the site does not create an attorney-client relationship.",
+    "type": "policy",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship."
+  },
+  {
+    "id": "F113",
+    "claim": "Contact-form SMS/automated-contact consent sentence (followed by the plain text \"Acceptable Use Policy\", which is not a link).",
+    "type": "policy",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "By submitting, you agree to be contacted about your request & other information using automated technology. Message frequency varies. Msg & data rates may apply. Text STOP to cancel. Acceptable Use Policy"
+  },
+  {
+    "id": "F114",
+    "claim": "Contact form limits the \"How Can We Help\" message to 600 characters.",
+    "type": "policy",
+    "source_url": "https://willfraleylaw.com/contact-us/",
+    "exact_quote": "0 of 600 max characters"
+  },
+  {
+    "id": "F115",
+    "claim": "Footer credit: site built by \"Knoxville Web Design\".",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Knoxville Web Design"
+  },
+  {
+    "id": "F116",
+    "claim": "Katie Fults is an attorney with the firm (About page staff card titled \"Attorney at Law\").",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Katie Fults is dedicated to guiding clients through some of life’s most challenging transitions with compassion, integrity, and a steady hand."
+  },
+  {
+    "id": "F117",
+    "claim": "Katie Fults's practice focuses on family law, including divorce, custody matters, and adoption.",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Her practice focuses on family law, including divorce, custody matters, and adoption"
+  },
+  {
+    "id": "F118",
+    "claim": "Before becoming an attorney, Katie spent a decade working with one of Murfreesboro's top law firms.",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Before becoming an attorney, Katie spent a decade working with one of Murfreesboro’s top law firms"
+  },
+  {
+    "id": "F119",
+    "claim": "Katie Fults earned an undergraduate degree in Organizational Communication from Middle Tennessee State University in 2014.",
+    "type": "credential",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "She earned her undergraduate degree in Organizational Communication from Middle Tennessee State University in 2014"
+  },
+  {
+    "id": "F120",
+    "claim": "Katie Fults earned her law degree in 2022 and has practiced law since (law school not named).",
+    "type": "credential",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Katie went on to earn her law degree in 2022 and has been practicing law ever since."
+  },
+  {
+    "id": "F121",
+    "claim": "Katie Fults is an active member of the Tennessee Bar Association, the Rutherford and Cannon County Bar Association, and the Middle Tennessee Lawyers Association for Women.",
+    "type": "membership",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Katie is an active member of the Tennessee Bar Association, the Rutherford and Cannon County Bar Association, and the Middle Tennessee Lawyers Association for Women."
+  },
+  {
+    "id": "F122",
+    "claim": "Katie Fults represents clients across Middle Tennessee, including Rutherford, Coffee, Bedford, Cannon, and Grundy Counties, among others.",
+    "type": "location",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "She represents clients across Middle Tennessee, including Rutherford, Coffee, Bedford, Cannon, and Grundy Counties, among others."
+  },
+  {
+    "id": "F123",
+    "claim": "Melissa Harris is described in a client testimonial as Will Fraley's \"experienced Paralegal\".",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Will Fraley, along with his experienced Paralegal, Melissa Harris"
+  },
+  {
+    "id": "F124",
+    "claim": "Melissa is described in a client testimonial as Will's \"assistant\".",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "working with Will and his assistant Melissa"
+  },
+  {
+    "id": "F125",
+    "claim": "A testimonial refers to Mr. Fraley's \"staff\".",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "He and his staff are professional and friendly."
+  },
+  {
+    "id": "F126",
+    "claim": "Personal Injury page describes a single personal injury lawyer (\"he\").",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/personal-injury/",
+    "exact_quote": "Our personal injury lawyer is dedicated and hardworking, and he has helped many clients navigate the complexities involved in this type of case."
+  },
+  {
+    "id": "F127",
+    "claim": "Legal Services page uses plural \"attorneys\" and a \"criminal defense team\".",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "Our attorneys will provide you with a strong, experienced criminal defense team"
+  },
+  {
+    "id": "F128",
+    "claim": "Legal Services page refers to plural \"skilled family law attorneys\".",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "Our skilled family law attorneys can handle a wide range of issues"
+  },
+  {
+    "id": "F129",
+    "claim": "Legal Services page refers to plural \"premier personal injury lawyers\".",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "Our premier personal injury lawyers will help you receive the compensation you deserve for serious injury or wrongful deaths."
+  },
+  {
+    "id": "F130",
+    "claim": "Contact page describes one criminal defense and family attorney (wording uses \"expert\" — not reusable under RPC 7.1 rules).",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/contact-us/",
+    "exact_quote": "Our criminal defense attorney and family attorney is an expert in addressing felonies and misdemeanours, personal injuries, and family law cases"
+  },
+  {
+    "id": "F131",
+    "claim": "Child Custody page refers to plural \"our attorneys\".",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "Legal matters involving children can be complex, but our attorneys are here to help you navigate through the process."
+  },
+  {
+    "id": "F132",
+    "claim": "Child Custody page claims the firm has earned the respect of the judiciary and peers.",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "we have earned the respect of both the judiciary and our peers"
+  },
+  {
+    "id": "F133",
+    "claim": "Testimonial by Katherine S. (5 stars; card headline: \"They listened to my concerns and addressed each one in a timely manner.\"): divorce client praising Will Fraley and Paralegal Melissa Harris. Text ends mid-sentence (\"I highly recommend\") on the old site.",
+    "type": "testimonial",
+    "source_url": "https://willfraleylaw.com/testimonials/",
+    "exact_quote": "While the process of divorce can be complicated and trying on emotions and finances, Will Fraley, along with his experienced Paralegal, Melissa Harris, provided me guidance and their combined expertise to achieve a fair settlement. The law firm helped me set and achieve reasonable goals for my divorce case. They listened to my concerns and addressed each one in a timely manner. I highly recommend"
+  },
+  {
+    "id": "F134",
+    "claim": "Testimonial by Eddie W. (5 stars; card headline: \"What a Blessing\"): referred by another attorney.",
+    "type": "testimonial",
+    "source_url": "https://willfraleylaw.com/testimonials/",
+    "exact_quote": "I was referred by another attorney to Mr. Fraley and what a blessing. He and his staff are professional and friendly. He is the man to get the job done. If you need an attorney Mr. Fraley is the man you. Thank you to all the staff and Mr. Fraley!!"
+  },
+  {
+    "id": "F135",
+    "claim": "Testimonial by S.A. (5 stars; card headline: \"They were helpful, caring, and dedicated to making sure I would win.\"): praises Will and his assistant Melissa.",
+    "type": "testimonial",
+    "source_url": "https://willfraleylaw.com/testimonials/",
+    "exact_quote": "I have to say working with Will and his assistant Melissa has been one of the best experiences I have ever had. They both worked hard and made sure that the issue I had at hand was resolved for the better, and led me in the exact direction I needed to go. They were helpful, caring, and dedicated to making sure I would win. I'm sure you can find cheap service in plenty of places in Murfreesboro, but if you want a lawyer that you will be satisfied with then I definitely recommend seeing Will!"
+  },
+  {
+    "id": "F136",
+    "claim": "Card headline of the Katherine S. testimonial: \"They listened to my concerns and addressed each one in a timely manner.\" — Katherine S.",
+    "type": "testimonial",
+    "source_url": "https://willfraleylaw.com/testimonials/",
+    "exact_quote": "\"They listened to my concerns and addressed each one in a timely manner.\""
+  },
+  {
+    "id": "F137",
+    "claim": "Card headline of the S.A. testimonial: \"They were helpful, caring, and dedicated to making sure I would win.\" — S.A.",
+    "type": "testimonial",
+    "source_url": "https://willfraleylaw.com/testimonials/",
+    "exact_quote": "\"They were helpful, caring, and dedicated to making sure I would win.\""
+  },
+  {
+    "id": "F138",
+    "claim": "Card headline of the Eddie W. testimonial: \"What a Blessing\" — Eddie W.",
+    "type": "testimonial",
+    "source_url": "https://willfraleylaw.com/testimonials/",
+    "exact_quote": "What a Blessing"
+  },
+  {
+    "id": "F139",
+    "claim": "Each testimonial card shows a five-star graphic (★ ★ ★ ★ ★); the star rating is not tied to a named review platform.",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/testimonials/",
+    "exact_quote": "★ ★ ★ ★ ★"
+  },
+  {
+    "id": "F140",
+    "claim": "In the News menu: \"Daily News Journal (DNJ)\" links to a DNJ business story dated 2014-10-05 titled (from URL slug) \"Fraley follows family's footsteps, private practice\".",
+    "type": "award",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "http://www.dnj.com/story/money/business/2014/10/05/fraley-follows-familys-footsteps-private-practice/16772235/"
+  },
+  {
+    "id": "F141",
+    "claim": "In the News menu: \"Daily News Journal Article 2\" links to a DNJ site search for \"jc meeks\" (not a specific article).",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "https://www.dnj.com/search/jc%20meeks/"
+  },
+  {
+    "id": "F142",
+    "claim": "Menu label of the first news link: \"Daily News Journal (DNJ)\".",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Daily News Journal (DNJ)"
+  },
+  {
+    "id": "F143",
+    "claim": "Menu has \"Latest News & Blog\" item linking to \"#\" (no blog exists).",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Latest News & Blog"
+  },
+  {
+    "id": "F144",
+    "claim": "Practice areas: criminal defense, family law, and personal injury.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "provides trusted legal representation in criminal defense, family law, and personal injury cases"
+  },
+  {
+    "id": "F145",
+    "claim": "Home service card: Criminal Law.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Criminal Law"
+  },
+  {
+    "id": "F146",
+    "claim": "Home examples of cases: DUI charges to domestic assault accusations.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "From DUI charges to domestic assault accusations, we have the professional experience to fight for your defense and constitutional rights in criminal court."
+  },
+  {
+    "id": "F147",
+    "claim": "Home: the firm guides clients through divorce disputes including child custody negotiations and parenting plan modifications.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "we also have the negotiation skill to guide you through your divorce disputes, whether they involve child custody negotiations or parenting plan modifications"
+  },
+  {
+    "id": "F148",
+    "claim": "Home: the firm handles DUI charges and drug-related offenses.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Whether you have legal concerns about a DUI charge or a drug-related offense"
+  },
+  {
+    "id": "F149",
+    "claim": "Contact page: cases from DUI to family law.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/contact-us/",
+    "exact_quote": "For cases from DUI to Family Law, we are here to serve your needs!"
+  },
+  {
+    "id": "F150",
+    "claim": "Contact page: the firm will try to reduce or dismiss charges.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/contact-us/",
+    "exact_quote": "we’ll do everything possible to reduce or dismiss the charges against you"
+  },
+  {
+    "id": "F151",
+    "claim": "Criminal Defense \"Types of Cases We Handle\" grid includes a \"Murder\" card (links to the Violent Crimes page).",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/",
+    "exact_quote": "Murder"
+  },
+  {
+    "id": "F152",
+    "claim": "The firm says it has served people facing allegations from murder to hit and runs.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/",
+    "exact_quote": "we are proud to have served many people who faced serious allegations—from murder to hit and runs and more."
+  },
+  {
+    "id": "F153",
+    "claim": "DUI cases handled: DUI first offense, DUI second offense, felony DUI, and underage DWI.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/",
+    "exact_quote": "Whether yours is a DUI first offense, DUI second offense, felony DUI, or underage DWI, we can help."
+  },
+  {
+    "id": "F154",
+    "claim": "DUI page: Will Fraley is a DUI lawyer in Murfreesboro, TN (page uses \"expertise\").",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Will Fraley, Attorney at Law is a DUI lawyer in Murfreesboro, TN ready to put his expertise and knowledge to work for you."
+  },
+  {
+    "id": "F155",
+    "claim": "DUI charges handled: driving under the influence (DUI).",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Driving under the influence (DUI)"
+  },
+  {
+    "id": "F156",
+    "claim": "DUI charges handled: DUI first offense.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "DUI first offense"
+  },
+  {
+    "id": "F157",
+    "claim": "DUI charges handled: DUI second offense.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "DUI second offense"
+  },
+  {
+    "id": "F158",
+    "claim": "DUI charges handled: felony DUI and underage DUI (list item garbled on the old site as \"Felony DUUnderage DUI\").",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Felony DUUnderage DUI"
+  },
+  {
+    "id": "F159",
+    "claim": "DUI-related charges handled: driving while suspended.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Driving while suspended"
+  },
+  {
+    "id": "F160",
+    "claim": "DUI-related charges handled: vehicular homicide.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Vehicular homicide"
+  },
+  {
+    "id": "F161",
+    "claim": "DUI-related charges handled: reckless driving or other traffic violations.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Reckless driving or other traffic violations"
+  },
+  {
+    "id": "F162",
+    "claim": "DUI page heading: from underage DUI to vehicular homicide.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "From Underage DUI to Vehicular Homicide, We’re Here for You"
+  },
+  {
+    "id": "F163",
+    "claim": "Drug crimes handled: manufacture of a dangerous drug, possession or use of a dangerous drug, possession of marijuana, possession of drug paraphernalia, or any other drug-related offense.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/drug-crimes/",
+    "exact_quote": "such as the manufacture of a dangerous drug, possession or use of a dangerous drug, possession of marijuana, possession of drug paraphernalia or any other drug-related offense"
+  },
+  {
+    "id": "F164",
+    "claim": "Other crimes handled: white-collar crime.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/",
+    "exact_quote": "White-collar crime"
+  },
+  {
+    "id": "F165",
+    "claim": "Theft page case types: white collar crime, theft, fraud, robbery, burglary — burglary.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/theft/",
+    "exact_quote": "Burglary"
+  },
+  {
+    "id": "F166",
+    "claim": "Theft page case types: robbery.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/theft/",
+    "exact_quote": "Robbery"
+  },
+  {
+    "id": "F167",
+    "claim": "Theft page case types: white collar crime.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/theft/",
+    "exact_quote": "White collar crime"
+  },
+  {
+    "id": "F168",
+    "claim": "The firm helps people accused of theft, misdemeanor or federal.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "We can also help people who have been accused of theft, whether it’s a misdemeanor or a federal offense."
+  },
+  {
+    "id": "F169",
+    "claim": "The firm handles DUI and drug possession and distribution matters.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "We provide legal guidance and representation for people charged with driving under the influence and similar matters, as well as drug possession and distribution."
+  },
+  {
+    "id": "F170",
+    "claim": "The firm can represent individuals and commercial organizations facing municipal, federal, or state criminal charges.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "We can represent both individuals and commercial organizations who are facing criminal charges on a municipal, federal, or state level."
+  },
+  {
+    "id": "F171",
+    "claim": "Criminal charges handled include fraud, violence, DUI, domestic violence, and white-collar crimes.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "these include fraud, violence, DUI, domestic violence, and white-collar crimes"
+  },
+  {
+    "id": "F172",
+    "claim": "White-collar offenses listed on the Fraud page: embezzlement.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Embezzlement"
+  },
+  {
+    "id": "F173",
+    "claim": "White-collar offenses listed on the Fraud page: money laundering.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Money laundering"
+  },
+  {
+    "id": "F174",
+    "claim": "White-collar offenses listed on the Fraud page: counterfeiting.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Counterfeiting"
+  },
+  {
+    "id": "F175",
+    "claim": "White-collar offenses listed on the Fraud page: bribery.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Bribery"
+  },
+  {
+    "id": "F176",
+    "claim": "White-collar offenses listed on the Fraud page: piracy.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Piracy"
+  },
+  {
+    "id": "F177",
+    "claim": "Fraud types described: wire fraud.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Wire fraud: Wire fraud is a type of fraud in which emails, phone calls, text, or other forms of electronic communication are used as a tool in committing the crime."
+  },
+  {
+    "id": "F178",
+    "claim": "Fraud types described: tax fraud (tax evasion).",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Tax fraud: Reporting falsities when completing your taxes is a type of fraud. This is also known as tax evasion."
+  },
+  {
+    "id": "F179",
+    "claim": "Fraud types described: mail fraud.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Mail fraud: Similar to wire fraud"
+  },
+  {
+    "id": "F180",
+    "claim": "Fraud types described: insurance fraud.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Insurance fraud: An insurance company or policy holder may commit fraud in order to gain financially."
+  },
+  {
+    "id": "F181",
+    "claim": "Fraud types described: bankruptcy fraud.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Bankruptcy fraud: Any type of fraud involving the bankruptcy process is a crime."
+  },
+  {
+    "id": "F182",
+    "claim": "Fraud types described: credit card and debit card fraud.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Credit card and debit card fraud: This crime often involves stealing and using another person’s credit card information."
+  },
+  {
+    "id": "F183",
+    "claim": "Fraud types described: identity theft.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Identity theft: Identity theft is a complex crime in which a victim’s personal information is used by someone else."
+  },
+  {
+    "id": "F184",
+    "claim": "Forgery is described as a type of white-collar crime.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Forgery is a type of white-collar crime in which documents are falsified."
+  },
+  {
+    "id": "F185",
+    "claim": "The firm defends against accusations of violating probation.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/probation-violation/",
+    "exact_quote": "With the help of Will Fraley, Attorney at Law, you can fight against accusations of violating your probation and get back to living your life."
+  },
+  {
+    "id": "F186",
+    "claim": "Domestic assault defense: the firm can provide strong legal protection.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/domestic-assault/",
+    "exact_quote": "Will Fraley, Attorney at Law can provide strong legal protection and defend your rights."
+  },
+  {
+    "id": "F187",
+    "claim": "Other assault crimes described: assault, assault and battery, or aggravated assault.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/domestic-assault/",
+    "exact_quote": "the incident may be labeled as assault, assault and battery, or aggravated assault."
+  },
+  {
+    "id": "F188",
+    "claim": "Sex crime offenses listed: rape.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/sex-crimes/",
+    "exact_quote": "Rape"
+  },
+  {
+    "id": "F189",
+    "claim": "Sex crime offenses listed: sexual battery.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/sex-crimes/",
+    "exact_quote": "Sexual battery"
+  },
+  {
+    "id": "F190",
+    "claim": "Sex crime offenses listed: child molestation.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/sex-crimes/",
+    "exact_quote": "Child molestation"
+  },
+  {
+    "id": "F191",
+    "claim": "Sex crime offenses listed: prostitution.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/sex-crimes/",
+    "exact_quote": "Prostitution"
+  },
+  {
+    "id": "F192",
+    "claim": "Violent crimes listed: murder or attempted murder.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/violent-crimes/",
+    "exact_quote": "Murder or attempted murder: This is when a person kills or attempts to kill another person and has planned the crime in advance."
+  },
+  {
+    "id": "F193",
+    "claim": "Violent crimes listed: manslaughter (including vehicular manslaughter).",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/violent-crimes/",
+    "exact_quote": "Manslaughter: Manslaughter is differentiated from murder because planning the crime is not a factor."
+  },
+  {
+    "id": "F194",
+    "claim": "Violent crimes listed: assault and battery.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/violent-crimes/",
+    "exact_quote": "Assault and battery: While assault and battery are often grouped together, they are actually two separate crimes."
+  },
+  {
+    "id": "F195",
+    "claim": "Violent crimes listed: violent sexual offenses.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/violent-crimes/",
+    "exact_quote": "Violent sexual offenses: Rape and other sex crimes are often considered as violent offenses."
+  },
+  {
+    "id": "F196",
+    "claim": "Violent Crimes meta: contact the firm if accused of murder or another violent crime.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/violent-crimes/",
+    "exact_quote": "If you have been accused of murder or another type of violent crime, contact the Murfreesboro violent crimes attorney of Will Fraley, Attorney at Law."
+  },
+  {
+    "id": "F197",
+    "claim": "Family Law \"Types of Cases We Handle\" grid: Child Custody, Divorce, Parenting Plan Modification, Paternity, and a \"Wills\" card (the Wills card links back to /family-law/; no Wills page exists).",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "Wills"
+  },
+  {
+    "id": "F198",
+    "claim": "Family Law grid card: Parenting Plan Modification.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "Parenting Plan Modification"
+  },
+  {
+    "id": "F199",
+    "claim": "FAQ lists family law situations: divorce, a will, a protective order, or child custody.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "be it a divorce, a will, a protective order, or child custody case"
+  },
+  {
+    "id": "F200",
+    "claim": "Family law help: filing for divorce, negotiating child custody and visitation, or requesting modification of a parenting plan.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "Whether you have questions about filing for divorce , negotiating child custody and visitation , or requesting modification of a parenting plan"
+  },
+  {
+    "id": "F201",
+    "claim": "Divorce disputes negotiated include child custody and visitation, child support, property division, and spousal support — child support.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "child support;"
+  },
+  {
+    "id": "F202",
+    "claim": "Divorce disputes include property division.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "property division;"
+  },
+  {
+    "id": "F203",
+    "claim": "Divorce disputes include spousal support.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "spousal support."
+  },
+  {
+    "id": "F204",
+    "claim": "Divorce disputes include child custody and visitation.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "child custody and visitation;"
+  },
+  {
+    "id": "F205",
+    "claim": "Family Law: from petitioning for divorce to filing for modification of an existing parenting plan.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "From helping clients petition for divorce to filing for modification of an existing parenting plan, our firm is prepared to take on your family law case"
+  },
+  {
+    "id": "F206",
+    "claim": "Family law issues handled range from divorces to child support and visitation.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "from divorces to child support and visitation"
+  },
+  {
+    "id": "F207",
+    "claim": "The firm provides legal counsel on domestic violence in family law.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "We also provide legal counsel when it comes to domestic violence, because we take all allegations of domestic abuse seriously."
+  },
+  {
+    "id": "F208",
+    "claim": "Family law cases handled can include alimony, immigration, family law for military families, adoptions, post-divorce disputes, and visitation rights.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "Cases we handle can include alimony, immigration, family law for military families, adoptions, post-divorce disputes, and visitation rights."
+  },
+  {
+    "id": "F209",
+    "claim": "Child support cases handled.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "Our firm has handled many different types of child support cases, so we have experience in this area."
+  },
+  {
+    "id": "F210",
+    "claim": "Child custody and parenting time: the firm helps develop parenting plans and custody agreements.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "Developing a solid parenting plan and custody agreement helps create stability for the child or children and ease the adjustment to the new living situation."
+  },
+  {
+    "id": "F211",
+    "claim": "The firm handles paternity suits.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "Will Fraley Attorney at Law can handle paternity suits for clients whenever necessary."
+  },
+  {
+    "id": "F212",
+    "claim": "The firm has represented fathers proving paternity and mothers establishing paternity.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "Our firm has represented fathers who are trying to prove a child is theirs, as well as mothers who are attempting to establish paternity."
+  },
+  {
+    "id": "F213",
+    "claim": "The firm recommends DNA testing as the gold standard for paternity.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "We recommend DNA testing as the gold standard for this type of situation"
+  },
+  {
+    "id": "F214",
+    "claim": "Adoption: the firm handles the paperwork and filings.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "We will take care of all the paperwork involved, make sure everything is filed and signed"
+  },
+  {
+    "id": "F215",
+    "claim": "Divorce services: child support.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/divorce/",
+    "exact_quote": "If you have children with your partner, the issue of child support will likely need to be addressed."
+  },
+  {
+    "id": "F216",
+    "claim": "Divorce services: custody bids.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/divorce/",
+    "exact_quote": "We work with our clients to present a neat, well-organized bid for custody that takes all the legal factors into account."
+  },
+  {
+    "id": "F217",
+    "claim": "Divorce services: spousal maintenance.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/divorce/",
+    "exact_quote": "If you are in a situation where you will be filing for spousal maintenance, we can help you get the job done."
+  },
+  {
+    "id": "F218",
+    "claim": "Divorce services: division of property.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/divorce/",
+    "exact_quote": "Division of property"
+  },
+  {
+    "id": "F219",
+    "claim": "Divorce services: paternity during a divorce.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/divorce/",
+    "exact_quote": "If you find yourself in need of this type of service during a divorce, we can help advise you and take care of any paperwork that needs to be filed to prove parenthood."
+  },
+  {
+    "id": "F220",
+    "claim": "Divorce services: custody of a child adopted during the marriage.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/divorce/",
+    "exact_quote": "We can review the adoption paperwork carefully and talk with you about what to file in court in these unique situations."
+  },
+  {
+    "id": "F221",
+    "claim": "The firm helps propose a parenting-plan change or respond to an ex-spouse's proposed modification.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/parenting-plan-modifications/",
+    "exact_quote": "We can help you propose a change to your parenting plan or figure out what to do next if your former spouse has suggested a modification that you don’t agree with."
+  },
+  {
+    "id": "F222",
+    "claim": "Parenting plans can include child support, visitation schedule, insurance, education, and religious upbringing — religious upbringing.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/parenting-plan-modifications/",
+    "exact_quote": "Religious upbringing"
+  },
+  {
+    "id": "F223",
+    "claim": "Reasons a parenting plan may be modified: a parent moving away, a change in either parent's finances, or parents no longer agreeing.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/parenting-plan-modifications/",
+    "exact_quote": "One of the parents plans on moving away"
+  },
+  {
+    "id": "F224",
+    "claim": "The firm handles paternity cases.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/paternity/",
+    "exact_quote": "We understand the complexities of paternity cases and can apply our experience to your case."
+  },
+  {
+    "id": "F225",
+    "claim": "Paternity actions: establishing paternity or contesting a false paternity claim.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/paternity/",
+    "exact_quote": "You may be involved in a paternity action if you are attempting to establish your paternity or if a mother is trying to falsely label you as the father of her child."
+  },
+  {
+    "id": "F226",
+    "claim": "The firm handles visitation cases.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/visitation/",
+    "exact_quote": "We especially understand how important visitation cases are, as they directly impact your relationship with your child."
+  },
+  {
+    "id": "F227",
+    "claim": "Visitation enforcement: non-residential parent denied visitation can file a petition for enforcement.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/visitation/",
+    "exact_quote": "they can file a petition for enforcement with the court"
+  },
+  {
+    "id": "F228",
+    "claim": "Adoption types: private, agency, stepparent, or relative adoption.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/adoption/",
+    "exact_quote": "Whether you’re pursuing a private adoption , agency adoption , stepparent adoption , or relative adoption"
+  },
+  {
+    "id": "F229",
+    "claim": "Adoption representation: stepparent and relative adoptions.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/adoption/",
+    "exact_quote": "Stepparent and relative adoptions"
+  },
+  {
+    "id": "F230",
+    "claim": "Adoption representation: private and agency adoptions.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/adoption/",
+    "exact_quote": "Private and agency adoptions"
+  },
+  {
+    "id": "F231",
+    "claim": "Adoption representation: termination of parental rights.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/adoption/",
+    "exact_quote": "Termination of parental rights"
+  },
+  {
+    "id": "F232",
+    "claim": "Adoption representation: foster care adoptions.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/adoption/",
+    "exact_quote": "Foster care adoptions"
+  },
+  {
+    "id": "F233",
+    "claim": "Adoption representation: contested adoptions.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/adoption/",
+    "exact_quote": "Contested adoptions"
+  },
+  {
+    "id": "F234",
+    "claim": "Adoption: the firm handles all filings, represents clients before the judge, and communicates with all parties.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/adoption/",
+    "exact_quote": "We handle all filings, represent you before the judge, and communicate with all involved parties"
+  },
+  {
+    "id": "F235",
+    "claim": "DCS cases: Tennessee Department of Children's Services investigations or cases.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/dcs-case-attorney/",
+    "exact_quote": "If you are facing an investigation or case involving the Tennessee Department of Children’s Services (DCS)"
+  },
+  {
+    "id": "F236",
+    "claim": "DCS matters handled: DCS investigations and interviews.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/dcs-case-attorney/",
+    "exact_quote": "DCS investigations and interviews"
+  },
+  {
+    "id": "F237",
+    "claim": "DCS matters handled: protective custody and removal hearings.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/dcs-case-attorney/",
+    "exact_quote": "Protective custody and removal hearings"
+  },
+  {
+    "id": "F238",
+    "claim": "DCS matters handled: dependency and neglect cases.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/dcs-case-attorney/",
+    "exact_quote": "Dependency and neglect cases"
+  },
+  {
+    "id": "F239",
+    "claim": "DCS matters handled: termination of parental rights (TPR).",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/dcs-case-attorney/",
+    "exact_quote": "Termination of parental rights (TPR)"
+  },
+  {
+    "id": "F240",
+    "claim": "DCS matters handled: reunification and permanency plans.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/dcs-case-attorney/",
+    "exact_quote": "Reunification and permanency plans"
+  },
+  {
+    "id": "F241",
+    "claim": "DCS matters handled: foster care placement and court reviews.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/dcs-case-attorney/",
+    "exact_quote": "Foster care placement and court reviews"
+  },
+  {
+    "id": "F242",
+    "claim": "DCS: help responding to inquiries, preparing for interviews or court, and working toward reunification.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/dcs-case-attorney/",
+    "exact_quote": "help you respond appropriately to DCS inquiries, prepare for interviews or court appearances, and work toward reunification whenever possible"
+  },
+  {
+    "id": "F243",
+    "claim": "Personal injury case types handled: slip-and-fall, dog-bite, and medical malpractice.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/personal-injury/",
+    "exact_quote": "from slip-and-fall cases to dog-bite situations to medical malpractice lawsuits"
+  },
+  {
+    "id": "F244",
+    "claim": "Personal injury: serious injury or wrongful death; automobile or motorcycle accidents; broken bones or spinal cord injuries.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/legal-services/",
+    "exact_quote": "From automobile or motorcycle accidents to broken bones or spinal cord injuries"
+  },
+  {
+    "id": "F245",
+    "claim": "Personal injury recovery includes damages for past and future medical bills, lost income, emotional distress, and pain and suffering.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/personal-injury/",
+    "exact_quote": "This includes factors such as damages for past and future medical bills, lost income, emotional distress, and pain and suffering."
+  },
+  {
+    "id": "F246",
+    "claim": "The firm claims extensive civil litigation experience and settlement negotiation skills.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/personal-injury/",
+    "exact_quote": "Through our extensive civil litigation experience, our knowledge about insurance company tactics and our skills at settlement negotiations"
+  },
+  {
+    "id": "F247",
+    "claim": "Personal injury suits against a person or company.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/personal-injury/",
+    "exact_quote": "If you’re considering bringing a suit against a person or company for an injury you have sustained"
+  },
+  {
+    "id": "F248",
+    "claim": "Personal injury examples: vehicle accident, slip and fall, dog bite, doctor's neglect.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "A vehicle accident, a slip and fall, a dog bite, and a doctor’s neglect are just a few examples of personal injuries"
+  },
+  {
+    "id": "F249",
+    "claim": "Personal Injury meta description mentions car wrecks (misspelled \"Injuried\").",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/personal-injury/",
+    "exact_quote": "Injuried in a Car Wreck?"
+  },
+  {
+    "id": "F250",
+    "claim": "Tennessee BAC limit is .08% (or .04% for commercial vehicle operators). (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "it’s considered drunk driving if your BAC is .08% or higher (or .04% or higher if you’re operating a commercial vehicle)"
+  },
+  {
+    "id": "F251",
+    "claim": "Underage DUI: under 21 with BAC of .02% — $250 fine, license revoked for a year, community service at minimum. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "An individual under 21 with a BAC of .02% can still be found guilty of an underage DUI, which carries a $250 fine, a revoked driver’s license for a year, and community service with it at a minimum."
+  },
+  {
+    "id": "F252",
+    "claim": "DUI is described as a misdemeanor with fines, license suspension and mandatory jail time even for first offenders. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "In Tennessee, driving under the influence carries fines, driver’s license suspensions and mandatory jail time even for first-time DUI offenders."
+  },
+  {
+    "id": "F253",
+    "claim": "DUI first offense: $350–$1,500 fine, license revoked a year, up to a year in jail (2–7 days minimum). (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "The consequences for a DUI first offense in Tennessee may include a $350-$1,500 fine, a revoked driver’s license for a year and up to a year in jail (with 2-7 days in jail at a minimum)."
+  },
+  {
+    "id": "F254",
+    "claim": "DUI second offense: minimum 45 days jail (up to a year), $600–$3,500 fine, license revoked two years, court-ordered alcohol treatment. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "A DUI second offense usually carries a minimum of 45 days in jail (up to a year), a $600-$3,500 fine, a revoked driver’s license for two years and attending a court-ordered alcohol treatment program."
+  },
+  {
+    "id": "F255",
+    "claim": "Vehicle can be confiscated beginning with the second DUI. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Beginning with your second DUI, your vehicle can also be confiscated."
+  },
+  {
+    "id": "F256",
+    "claim": "DUI third offense: minimum 120 days jail (up to a year), $1,100–$10,000 fine, license revoked or restricted 6–10 years. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "A third-time DUI offender may face a minimum of 120 days in jail (up to a year), a $1,100-$10,000 fine and a revoked or restricted driver’s license for 6-10 years."
+  },
+  {
+    "id": "F257",
+    "claim": "Ignition Interlock Device may be required at the offender's expense. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Other penalties may include an Ignition Interlock Device (IID) installed in your vehicle at your expense."
+  },
+  {
+    "id": "F258",
+    "claim": "Fourth DUI is a felony: minimum a year in jail, $3,000–$15,000 fine, license revoked eight years. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "A fourth-time DUI and anything after is considered a felony DUI and carries with it a minimum of a year in jail, a $3,000-$15,000 fine and a revoked driver’s license for eight years."
+  },
+  {
+    "id": "F259",
+    "claim": "Vehicular homicide by intoxication: Class B felony, 8–30 years, fine up to $25,000, license revoked 3–10 years. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "it’s considered vehicular homicide, which is a Class B felony punishable by 8-30 years in jail, a fine up to $25,000 and a revoked driver’s license for 3-10 years."
+  },
+  {
+    "id": "F260",
+    "claim": "Multiple DUIs plus vehicular homicide: Class A felony, 15–60 years, fine up to $50,000. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "If you have multiple DUI offenses and a vehicular homicide charge, you may face a Class A felony punishable by 15-60 years in jail and a fine up to $50,000."
+  },
+  {
+    "id": "F261",
+    "claim": "Refusing a blood alcohol test still results in a suspended license. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Even if you refuse to submit to a blood alcohol test, you still face a suspended driver’s license."
+  },
+  {
+    "id": "F262",
+    "claim": "A DUI conviction stays on the criminal record for at least 10 years. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "it will show up on your criminal record for at least 10 years"
+  },
+  {
+    "id": "F263",
+    "claim": "Divorce residency: under Tenn. Code Ann. § 36-4-104 (a), either spouse must have resided in Tennessee at least 6 months before filing. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "according to Tenn. Code Ann. § 36-4-104 (a), either spouse must have resided in the state for at least 6 months before filing."
+  },
+  {
+    "id": "F264",
+    "claim": "No-fault (mutual-consent) divorce generally takes 2–6 months; contested divorce can take months to years. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "No-fault divorce (mutual-consent divorce generally takes 2-6 months to complete."
+  },
+  {
+    "id": "F265",
+    "claim": "Fault grounds examples: adultery, impotence, criminal conduct. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "either on no-fault grounds or fault grounds (e.g., adultery, impotence, criminal conduct)."
+  },
+  {
+    "id": "F266",
+    "claim": "Divorce disputes can be settled by mediation with a third-party mediator. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/family-law/",
+    "exact_quote": "You can also pursue mediation to negotiate a settlement"
+  },
+  {
+    "id": "F267",
+    "claim": "Tennessee divides property by \"equitable distribution\"; fault is not a consideration. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/family-law/divorce/",
+    "exact_quote": "In divorce cases in Tennessee, a judge using a principle called “equitable distribution” handles the division of property."
+  },
+  {
+    "id": "F268",
+    "claim": "Permanent parenting plans last until modification is requested or the child turns 18. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/family-law/visitation/",
+    "exact_quote": "permanent parenting plans will be finalized into an enforceable court order that will last until either parent requests modification or the child turns 18 years old."
+  },
+  {
+    "id": "F269",
+    "claim": "The parent the child resides with is designated the primary residential parent. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/family-law/visitation/",
+    "exact_quote": "The parent whom the child resides with will be designated the primary residential parent."
+  },
+  {
+    "id": "F270",
+    "claim": "Parenting-plan decisions are almost always made based on the best interests of the children. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/family-law/parenting-plan-modifications/",
+    "exact_quote": "Decisions about parenting plans are almost always made based on the best interests of the children."
+  },
+  {
+    "id": "F271",
+    "claim": "Probation violation hearings require only a \"preponderance of evidence\". (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/probation-violation/",
+    "exact_quote": "prosecutors must only demonstrate a “preponderance of evidence” to show that you are guilty."
+  },
+  {
+    "id": "F272",
+    "claim": "Tennessee practices capital punishment; death penalty possible in homicide cases. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/violent-crimes/",
+    "exact_quote": "The state of Tennessee practices capital punishment, so it is possible to face the death penalty in homicide cases."
+  },
+  {
+    "id": "F273",
+    "claim": "Sex Crimes page says Tennessee defines certain sex crimes as \"first-degree criminal sexual conduct\" (terminology not used in the Tennessee Code — see CONFLICTS.md). (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/sex-crimes/",
+    "exact_quote": "Tennessee state law defines certain sex crimes as “first-degree” criminal sexual conduct."
+  },
+  {
+    "id": "F274",
+    "claim": "Many people convicted of sex crimes must register as sex offenders. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/sex-crimes/",
+    "exact_quote": "many alleged perpetrators of sex crimes are required to register as a sex offender"
+  },
+  {
+    "id": "F275",
+    "claim": "Domestic assault can apply to any close relationship, not only romantic partners. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/domestic-assault/",
+    "exact_quote": "An act of violence can be labeled as domestic assault if the involved parties have any kind of close relationship"
+  },
+  {
+    "id": "F276",
+    "claim": "Domestic assault relationships include roommates. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/domestic-assault/",
+    "exact_quote": "Roommates"
+  },
+  {
+    "id": "F277",
+    "claim": "Forgery is a felony. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Committing forgery is a felony"
+  },
+  {
+    "id": "F278",
+    "claim": "Fraud crimes are almost always considered felonies. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "exact_quote": "Fraud crimes are almost always considered felonies"
+  },
+  {
+    "id": "F279",
+    "claim": "FAQ: misdemeanor (\"petty\") theft covers property worth $50–$1,500; grand theft applies at $500 or more (internally inconsistent). (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "Misdemeanor offenses, which can be considered comparable to “petty theft,” cover stolen property worth between $50 and $1,500. Grand theft is usually a felony and applies to stolen goods valued at $500 or more."
+  },
+  {
+    "id": "F280",
+    "claim": "FAQ: drug trafficking across state or international borders becomes a federal offense. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "If you are convicted of drug trafficking across state or international borders, it becomes a federal offense."
+  },
+  {
+    "id": "F281",
+    "claim": "FAQ: DUI penalties can include fines, license suspension, probation, mandatory DUI classes, and jail. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "Penalties can include fines, license suspension, probation, mandatory DUI classes, and a jail sentence."
+  },
+  {
+    "id": "F282",
+    "claim": "FAQ: charges can be DUI, DWI, or OWI. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "You could be charged with DUI (driving under the influence), DWI (driving while intoxicated), or OWI (operating while intoxicated), depending on your circumstances."
+  },
+  {
+    "id": "F283",
+    "claim": "FAQ: a driver can politely refuse a field sobriety test without legal penalties. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "You can politely refuse to take the test without worrying about legal penalties."
+  },
+  {
+    "id": "F284",
+    "claim": "FAQ: you may refuse to answer whether you have been drinking until you speak to an attorney. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "You have the right by law to refuse to answer until you have spoken to an attorney."
+  },
+  {
+    "id": "F285",
+    "claim": "FAQ: a person less than 50% at fault can still recover from the at-fault driver's insurance. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "If you are less than 50% at fault, you can still file a claim and collect from the at-fault driver’s insurance."
+  },
+  {
+    "id": "F286",
+    "claim": "FAQ: damages include medical bills, property damage, lost wages, pain and suffering, scars, emotional distress, disability. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "Damages include medical bills, property damage, lost wages, pain and suffering, permanent scars, emotional distress, and disability."
+  },
+  {
+    "id": "F287",
+    "claim": "FAQ: four elements of a tort claim (duty, breach, damages, causation). (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "Four elements define a tort claim:"
+  },
+  {
+    "id": "F288",
+    "claim": "FAQ: most personal injury cases settle with the at-fault party's insurer. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "Most personal injury cases are settled directly with the at-fault party’s insurance company."
+  },
+  {
+    "id": "F289",
+    "claim": "FAQ: a car is totaled if repairs cost more than its value. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "If repairs cost more than your car’s value, it’s considered totaled."
+  },
+  {
+    "id": "F290",
+    "claim": "FAQ: custody decisions focus on the best interests of the child. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "custody decisions now focus on the best interests of the child"
+  },
+  {
+    "id": "F291",
+    "claim": "FAQ: joint physical custody, joint legal custody, full joint custody definitions. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "both parents consult on major decisions about education, religion, and health"
+  },
+  {
+    "id": "F292",
+    "claim": "FAQ advice: a parent moving out should take the children and file for temporary custody and child support promptly (advice to review before reuse). (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/faqs/",
+    "exact_quote": "Yes. Family court often favors the parent who takes custody of the children. However, you must file for temporary custody and child support as soon as possible."
+  },
+  {
+    "id": "F293",
+    "claim": "Katie Fults's staff card on the About page gives her title as \"Attorney at Law\" (see C05 on solo vs. multiple attorneys).",
+    "type": "person",
+    "source_url": "https://willfraleylaw.com/about/",
+    "exact_quote": "Katie Fults Attorney at Law"
+  },
+  {
+    "id": "F294",
+    "claim": "Attribution of the divorce testimonial (F133): \"Katherine S.\", shown under a five-star graphic.",
+    "type": "testimonial",
+    "source_url": "https://willfraleylaw.com/testimonials/",
+    "exact_quote": "★ ★ ★ ★ ★ Katherine S. While the process of divorce"
+  },
+  {
+    "id": "F295",
+    "claim": "Attribution of the referral testimonial (F134): \"Eddie W.\", shown under a five-star graphic and repeated at the end of the text.",
+    "type": "testimonial",
+    "source_url": "https://willfraleylaw.com/testimonials/",
+    "exact_quote": "★ ★ ★ ★ ★ Eddie W. I was referred by another attorney"
+  },
+  {
+    "id": "F296",
+    "claim": "Attribution of the testimonial praising Will and his assistant Melissa (F135): \"S.A.\", shown under a five-star graphic.",
+    "type": "testimonial",
+    "source_url": "https://willfraleylaw.com/testimonials/",
+    "exact_quote": "★ ★ ★ ★ ★ S.A. I have to say working with Will"
+  },
+  {
+    "id": "F297",
+    "claim": "Home-page service cards, in order: Criminal Law, Family Law, Personal Injury.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Criminal Law Family Law Personal Injury"
+  },
+  {
+    "id": "F298",
+    "claim": "Header menu lists these criminal-defense practice pages: Drug Crimes, DUI, Theft, Violent Crimes, Fraud, Probation Violation, Domestic Assault, Sex Crimes.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Criminal Defense Drug Crimes DUI Theft Violent Crimes Fraud Probation Violation Domestic Assault Sex Crimes"
+  },
+  {
+    "id": "F299",
+    "claim": "Header menu lists these family-law practice pages: Child Custody, Divorce, Adoption, Parenting Plan Modifications, Paternity, Visitation, DCS Case Attorney; then Personal Injury.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Family Law Child Custody Divorce Adoption Parenting Plan Modifications Paternity Visitation DCS Case Attorney Personal Injury"
+  },
+  {
+    "id": "F300",
+    "claim": "Footer \"Areas of Practice\" list: Criminal Defense, Family Law, Personal Injury.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Areas of Practice Criminal Defense Family Law Personal Injury"
+  },
+  {
+    "id": "F301",
+    "claim": "Home-page eyebrow heading: \"Murfreesboro Lawyer\".",
+    "type": "identity",
+    "source_url": "https://willfraleylaw.com/",
+    "exact_quote": "Murfreesboro Lawyer"
+  },
+  {
+    "id": "F302",
+    "claim": "The DUI page says Will Fraley handles cases involving the listed DUI and traffic charges \"and more\" in Murfreesboro, for adults and minors.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Whether you’re an adult or a minor facing a DUI ticket, Will Fraley, Attorney at Law handles cases involving all of the following charges and more in Murfreesboro, TN"
+  },
+  {
+    "id": "F303",
+    "claim": "DUI page calls a DUI a misdemeanor. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Considered a misdemeanor by law, a DUI can land you in hot water if you’re found guilty."
+  },
+  {
+    "id": "F304",
+    "claim": "DUI jail time varies with BAC and the number of prior DUI offenses. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "The amount of jail time will vary according to your BAC (blood alcohol content) and how many prior DUI offenses you have on your record."
+  },
+  {
+    "id": "F305",
+    "claim": "A driver may be \"under the influence\" of intoxicants and controlled substances other than alcohol, including marijuana. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "You may also be considered “under the influence” of other intoxicants and controlled substances, including marijuana, which may impair your ability to operate a vehicle safely."
+  },
+  {
+    "id": "F306",
+    "claim": "Tennessee has a zero-tolerance policy for underage (under-21) drinking and driving. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Our state also has a zero-tolerance policy when it comes to underage drinking (drinking under the age of 21)."
+  },
+  {
+    "id": "F307",
+    "claim": "A first-offense DUI likely also requires an alcohol and drug treatment program. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "You’ll also likely need to complete an alcohol and drug treatment program."
+  },
+  {
+    "id": "F308",
+    "claim": "After a second DUI, license restrictions such as probation or work-release permits may still apply after the license is returned. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Even when you get your driver’s license back, you may still face restrictions, including probation or work-release permits."
+  },
+  {
+    "id": "F309",
+    "claim": "Felony DUI: a judge may also order restitution if anyone was harmed. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "If you harmed anyone while driving under the influence, a judge might also order some form of restitution"
+  },
+  {
+    "id": "F310",
+    "claim": "More severe DUI consequences may apply with a passenger under 18 present. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "More severe consequences may be applicable if you’re charged with a DUI with a passenger under 18 years old present"
+  },
+  {
+    "id": "F311",
+    "claim": "Refusing a blood alcohol test may be used against the driver in court, along with the officer's testimony. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/criminal-defense/dui/",
+    "exact_quote": "Your refusal to comply may also be used against you in court, along with the police officer’s testimony."
+  },
+  {
+    "id": "F312",
+    "claim": "Child custody work: the firm helps clients decide who makes decisions for the child and whether custody is sole or shared.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "We work with our clients to determine the answers to questions such as who will make decisions on the child’s behalf, what parent will have custody or if it will be shared, and other important issues."
+  },
+  {
+    "id": "F313",
+    "claim": "Child Custody page: the firm handles family law issues through cooperative negotiation or arguing before the court.",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "Whether through cooperative negotiation or arguing before the court for a fair judgment"
+  },
+  {
+    "id": "F314",
+    "claim": "Paternity matters in custody and support cases; if the father's identity is in question, the court requires proof first. (Legal statement made by the old site about Tennessee/U.S. law; verify current law before reuse — see CONFLICTS.md.)",
+    "type": "other",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "Establishing paternity is often of legal importance in either a child custody or a child support situation. If there is a question as to the identity of the father, the court will require proof before pursuing either type of agreement."
+  },
+  {
+    "id": "F315",
+    "claim": "Child Custody page offers help with adoption (an attorney can make sure everything goes smoothly).",
+    "type": "service",
+    "source_url": "https://willfraleylaw.com/family-law/child-custody/",
+    "exact_quote": "If you are involved in an adoption situation, an attorney can make sure everything goes along smoothly."
+  }
+]
