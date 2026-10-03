@@ -1,0 +1,115 @@
+---
+// Document shell for every page: <html lang>, <head> SEO (title, description, canonical, hreflang en/es/x-default
+// from plan/sitemap.json, Open Graph + Twitter, JSON-LD with inLanguage, theme-color, favicons, font preloads).
+// The body is the page's own markup (Site.astro wraps it in the header/footer chrome).
+import '../styles/tokens.css';
+import '../styles/global.css';
+import { SITE_URL, absUrl, alternates, langOf, normPath, config, type Lang } from '../lib/site';
+
+interface OgImage { src: string; width: number; height: number; alt: string }
+interface Props {
+  title: string;
+  description: string;
+  /** Page path ("/criminal-defense/dui/"); defaults to the current URL. */
+  path?: string;
+  lang?: Lang;
+  noindex?: boolean;
+  /** schema.org type of the page node (WebPage, AboutPage, ContactPage, FAQPage, CollectionPage…). */
+  pageType?: string;
+  /** Extra JSON-LD nodes merged into the page @graph (Organization, BreadcrumbList, FAQPage…). */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  ogImage?: OgImage;
+  ogType?: 'website' | 'article' | 'profile';
+  /** 404 pages: no canonical/hreflang (the URL is whatever was mistyped). */
+  isNotFound?: boolean;
+}
+
+const {
+  title,
+  description,
+  path = Astro.url.pathname,
+  noindex = false,
+  pageType = 'WebPage',
+  jsonLd,
+  ogImage = { src: '/og/default.jpg', width: 1200, height: 630, alt: 'Will Fraley, Attorney at Law' },
+  ogType = 'website',
+  isNotFound = false,
+} = Astro.props;
+const here = normPath(path);
+const lang: Lang = Astro.props.lang ?? langOf(here);
+const alt = alternates(here);
+const canonical = absUrl(here);
+const locale = lang === 'es' ? 'es_US' : 'en_US';
+const inLanguage = lang === 'es' ? 'es-US' : 'en-US';
+
+const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
+      name: config.client,
+      inLanguage: ['en-US', 'es-US'],
+    },
+    {
+      '@type': pageType,
+      '@id': `${canonical}#webpage`,
+      url: canonical,
+      name: title,
+      description,
+      inLanguage,
+      isPartOf: { '@id': `${SITE_URL}/#website` },
+    },
+    ...extra.map((n) => ({ inLanguage, ...n })),
+  ],
+};
+// Escape "<" so no string in the data can close the script element.
+const ld = JSON.stringify(graph).replace(/</g, '\\u003c');
+---
+<!doctype html>
+<html lang={lang} dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    {!isNotFound && <link rel="canonical" href={canonical} />}
+    {!isNotFound && <link rel="alternate" hreflang="en" href={absUrl(alt.en)} />}
+    {!isNotFound && <link rel="alternate" hreflang="es" href={absUrl(alt.es)} />}
+    {!isNotFound && <link rel="alternate" hreflang="x-default" href={absUrl(alt.en)} />}
+    <meta name="color-scheme" content="light" />
+    <!-- theme-color = --color-bg (paper); a meta value cannot read a CSS custom property -->
+    <meta name="theme-color" content="#F7F6F2" />
+    <link rel="preload" href="/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={config.client} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:locale:alternate" content={lang === 'es' ? 'en_US' : 'es_US'} />
+    <meta property="og:image" content={absUrl(ogImage.src)} />
+    <meta property="og:image:width" content={String(ogImage.width)} />
+    <meta property="og:image:height" content={String(ogImage.height)} />
+    <meta property="og:image:alt" content={ogImage.alt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absUrl(ogImage.src)} />
+    <meta name="twitter:image:alt" content={ogImage.alt} />
+
+    <script type="application/ld+json" set:html={ld} />
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
