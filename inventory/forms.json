@@ -1,0 +1,2233 @@
+[
+  {
+    "page": "https://willfraleylaw.com/",
+    "id": "gform_1",
+    "action": "/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/contact-us/",
+    "id": "gform_1",
+    "action": "/contact-us/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/legal-services/",
+    "id": "gform_1",
+    "action": "/legal-services/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/criminal-defense/",
+    "id": "gform_1",
+    "action": "/criminal-defense/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/personal-injury/",
+    "id": "gform_1",
+    "action": "/personal-injury/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/criminal-defense/drug-crimes/",
+    "id": "gform_1",
+    "action": "/criminal-defense/drug-crimes/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/criminal-defense/dui/",
+    "id": "gform_1",
+    "action": "/criminal-defense/dui/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/about/",
+    "id": "gform_1",
+    "action": "/about/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/family-law/",
+    "id": "gform_1",
+    "action": "/family-law/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/criminal-defense/theft/",
+    "id": "gform_1",
+    "action": "/criminal-defense/theft/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/criminal-defense/violent-crimes/",
+    "id": "gform_1",
+    "action": "/criminal-defense/violent-crimes/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/criminal-defense/sex-crimes/",
+    "id": "gform_1",
+    "action": "/criminal-defense/sex-crimes/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/criminal-defense/fraud/",
+    "id": "gform_1",
+    "action": "/criminal-defense/fraud/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/criminal-defense/probation-violation/",
+    "id": "gform_1",
+    "action": "/criminal-defense/probation-violation/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/criminal-defense/domestic-assault/",
+    "id": "gform_1",
+    "action": "/criminal-defense/domestic-assault/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/family-law/child-custody/",
+    "id": "gform_1",
+    "action": "/family-law/child-custody/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/family-law/divorce/",
+    "id": "gform_1",
+    "action": "/family-law/divorce/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/family-law/parenting-plan-modifications/",
+    "id": "gform_1",
+    "action": "/family-law/parenting-plan-modifications/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/family-law/paternity/",
+    "id": "gform_1",
+    "action": "/family-law/paternity/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/family-law/visitation/",
+    "id": "gform_1",
+    "action": "/family-law/visitation/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/testimonials/",
+    "id": "gform_1",
+    "action": "/testimonials/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/adoption/",
+    "id": "gform_1",
+    "action": "/adoption/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  },
+  {
+    "page": "https://willfraleylaw.com/dcs-case-attorney/",
+    "id": "gform_1",
+    "action": "/dcs-case-attorney/",
+    "method": "post",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.3",
+        "id": "input_1_1_3",
+        "required": true,
+        "placeholder": "First Name",
+        "label": "First"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "input_1.6",
+        "id": "input_1_1_6",
+        "required": true,
+        "placeholder": "Last Name",
+        "label": "Last"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "name": "input_2",
+        "id": "input_1_2",
+        "required": true,
+        "placeholder": "Your Email Address",
+        "label": "Email(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "tel",
+        "name": "input_4",
+        "id": "input_1_4",
+        "required": true,
+        "placeholder": "Your Phone Number",
+        "label": "Phone(Required)"
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_5",
+        "id": "input_1_5",
+        "required": true,
+        "placeholder": null,
+        "label": "When is the Best Time to Reach You?(Required)",
+        "options": [
+          "When is the Best Time To Reach You?",
+          "ASAP",
+          "Morning",
+          "Noon",
+          "Afternoon",
+          "Evening",
+          "No Preference"
+        ]
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": "input_6",
+        "id": "input_1_6",
+        "required": false,
+        "placeholder": null,
+        "label": "Are you a New Client?",
+        "options": [
+          "Are you a New Client?",
+          "Yes, I am a potential new client.",
+          "No, I'm a current existing client.",
+          "I'm neither."
+        ]
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": "input_3",
+        "id": "input_1_3",
+        "required": true,
+        "placeholder": "Please let us know your reason for contacting us below...",
+        "label": "How Can We Help(Required)"
+      },
+      {
+        "tag": "input",
+        "type": "submit",
+        "name": "",
+        "id": "gform_submit_button_1",
+        "required": false,
+        "placeholder": null,
+        "label": null
+      }
+    ],
+    "submit": "Submit",
+    "textAfter": "No, I'm a current existing client. I'm neither. How Can We Help(Required) 0 of 600 max characters"
+  }
+]

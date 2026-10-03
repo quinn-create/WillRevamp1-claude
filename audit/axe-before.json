@@ -1,0 +1,2506 @@
+{
+  "generatedAt": "2026-10-03T02:06:44.736Z",
+  "results": [
+    {
+      "url": "https://willfraleylaw.com/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate[data-swiper-slide-index=\"2\"][aria-label=\"3 / 3\"] > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 3,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-ee1e28d > h2",
+            "p:nth-child(2) > span > a > strong"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 44,
+        "focusNotVisible": 22
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/contact-us/",
+      "critical": 0,
+      "serious": 2,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 3,
+          "targets": [
+            "ul[data-smartmenus-id=\"1790993025725451\"] > .current-menu-item.page_item.page-item-115 > .elementor-item-active.elementor-item[aria-current=\"page\"]",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default.elementor-mobile-position-top > .elementor-icon-box-wrapper > .elementor-icon-box-content > h3 > a",
+            "#gform_submit_button_1"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 34,
+        "focusNotVisible": 20
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/faqs/",
+      "critical": 0,
+      "serious": 1,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 2,
+          "targets": [
+            "ul[data-smartmenus-id=\"17909930336325808\"] > .current-menu-item.page_item.page-item-135 > .elementor-item-active.elementor-item[aria-current=\"page\"]",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default.elementor-mobile-position-top > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 33,
+        "focusNotVisible": 13
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/legal-services/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 25,
+          "targets": [
+            "#sm-17909930403927961-1",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-36103ad > h3",
+            ".elementor-element-34f064c > h2",
+            "span > a > strong"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 43,
+        "focusNotVisible": 22
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/",
+      "critical": 0,
+      "serious": 4,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 5,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-90d9d57 > .elementor-heading-title.elementor-size-default",
+            ".elementor-element-c7e6145 > h2",
+            "a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "help": "Links must have discernible text",
+          "nodes": 8,
+          "targets": [
+            ".elementor-element-7b3ec5f > .elementor-image-box-wrapper > figure > a",
+            ".elementor-element-26b906c > .elementor-image-box-wrapper > figure > a",
+            "figure > a[href$=\"dui/\"]",
+            ".elementor-element-d3e3c9f > .elementor-image-box-wrapper > figure > a",
+            ".elementor-element-7afd1c6 > .elementor-image-box-wrapper > figure > a"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 47,
+        "focusNotVisible": 22
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/personal-injury/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-cee8fe4 > h2",
+            "a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 56,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/drug-crimes/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 5,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            "#menu-1-e8f2756 > .menu-item-123.current-menu-item.page_item > .elementor-item-active.elementor-item[aria-current=\"page\"]",
+            ".elementor-element-cdef29a > h2",
+            "a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.elementor-nav-menu--main.e--pointer-underline"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 56,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/dui/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 6,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-c49af36 > p:nth-child(1) > a",
+            "p:nth-child(10) > a",
+            ".elementor-element-9500238 > h2",
+            "a > strong"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 58,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/about/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 1,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 7,
+          "targets": [
+            "ul[data-smartmenus-id=\"17909930812217847\"] > .current-menu-item.page_item.page-item-60 > .elementor-item-active.elementor-item[aria-current=\"page\"]",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-525beeb > a",
+            ".elementor-element-525beeb > span > a",
+            ".elementor-element-32096af > h2"
+          ]
+        },
+        {
+          "id": "empty-heading",
+          "impact": "minor",
+          "help": "Headings should not be empty",
+          "nodes": 1,
+          "targets": [
+            "h3:nth-child(4)"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 43,
+        "focusNotVisible": 22
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/",
+      "critical": 0,
+      "serious": 4,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate[data-swiper-slide-index=\"2\"][aria-label=\"3 / 3\"] > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 9,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-5c3583b > h3",
+            ".elementor-element-023c005 > p:nth-child(1) > a:nth-child(1)",
+            "p:nth-child(1) > a:nth-child(2)",
+            "a:nth-child(3)"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "help": "Links must have discernible text",
+          "nodes": 5,
+          "targets": [
+            ".elementor-element-0e4bb19 > .elementor-image-box-wrapper > figure > a",
+            ".elementor-element-95e15be > .elementor-image-box-wrapper > figure > a",
+            ".elementor-element-187e950 > .elementor-image-box-wrapper > figure > a",
+            ".elementor-element-d69e82b > .elementor-image-box-wrapper > figure > a",
+            ".elementor-element-129b25b > .elementor-image-box-wrapper > figure > a"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 49,
+        "focusNotVisible": 22
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/theft/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 3,
+          "targets": [
+            ".elementor-repeater-item-497b3fa > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-71afb3b > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 3,
+          "targets": [
+            ".elementor-icon-box-title > a",
+            ".elementor-element-eb37677 > h2",
+            "a > strong"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-nav-menu--layout-horizontal"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 56,
+        "focusNotVisible": 38
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/violent-crimes/",
+      "critical": 0,
+      "serious": 4,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 3,
+          "targets": [
+            ".elementor-repeater-item-497b3fa > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-71afb3b > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 11,
+          "targets": [
+            ".elementor-icon-box-title > a",
+            "ul:nth-child(7) > li:nth-child(4) > a",
+            ".elementor-element-05d51bb > h2",
+            "span > a > strong",
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-nav-menu--layout-horizontal"
+          ]
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "help": "Links must be distinguishable without relying on color",
+          "nodes": 1,
+          "targets": [
+            ".elementor-image-box-description > a"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 58,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/sex-crimes/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-261f103 > h2",
+            "span > a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 57,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/fraud/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-f5b4b63 > h2",
+            "span > a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 57,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/probation-violation/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-4c23d87 > h2",
+            "span > a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 57,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/domestic-assault/",
+      "critical": 0,
+      "serious": 4,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-666ddc9 > h2",
+            "span > a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "help": "Links must be distinguishable without relying on color",
+          "nodes": 1,
+          "targets": [
+            "p:nth-child(5) > a"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 58,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/child-custody/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-2447db8 > h2",
+            "a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 56,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/divorce/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-11b9d1f > h2",
+            "a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 56,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/parenting-plan-modifications/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 6,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-9970927 > p:nth-child(1) > a",
+            "p:nth-child(3) > a",
+            ".elementor-element-2f4ff03 > h2",
+            "span > a > strong"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 59,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/paternity/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-active > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-8c5146b > h2",
+            "span > a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 57,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/visitation/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 5,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-ac41133 > p:nth-child(5) > a",
+            ".elementor-element-248748f > h2",
+            "span > a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 58,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/testimonials/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 3,
+          "targets": [
+            "ul[data-smartmenus-id=\"17909931809895212\"] > .current-menu-item.page_item.page-item-118 > .elementor-item-active.elementor-item[aria-current=\"page\"]",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default.elementor-mobile-position-top > .elementor-icon-box-wrapper > .elementor-icon-box-content > h3 > a",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 37,
+        "focusNotVisible": 21
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/adoption/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-a00d61d > h2",
+            "a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 56,
+        "focusNotVisible": 39
+      }
+    },
+    {
+      "url": "https://willfraleylaw.com/dcs-case-attorney/",
+      "critical": 0,
+      "serious": 3,
+      "moderate": 5,
+      "minor": 0,
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "help": "Elements must only use permitted ARIA attributes",
+          "nodes": 5,
+          "targets": [
+            ".swiper-slide-duplicate-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".elementor-repeater-item-594a5a1 > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-next > .elementor-repeater-item-71afb3b.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]",
+            ".swiper-slide-duplicate-prev > .elementor-repeater-item-497b3fa.elementor-testimonial > .elementor-testimonial__header > .elementor-testimonial__icon.elementor-icon-[aria-label=\"Read More\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2d31af0a.elementor-hidden-mobile[data-id=\"2d31af0a\"] > .elementor-element-35f0c9a.elementor-view-default[data-id=\"35f0c9a\"] > .elementor-icon-box-wrapper > .elementor-icon-box-content > .elementor-icon-box-title > a",
+            ".elementor-element-d039bba > h2",
+            "a > strong",
+            ".charleft"
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-99207bd > h6"
+          ]
+        },
+        {
+          "id": "landmark-banner-is-top-level",
+          "impact": "moderate",
+          "help": "Banner landmark should not be contained in another landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-banner",
+          "impact": "moderate",
+          "help": "Document should not have more than one banner landmark",
+          "nodes": 1,
+          "targets": [
+            ".elementor-10"
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "nodes": 2,
+          "targets": [
+            ".elementor-10",
+            ".elementor-element-45ecd58e.elementor-motion-effects-element.elementor-motion-effects-element-type-background:nth-child(1) > .elementor-element-2472e5ca.e-child[data-id=\"2472e5ca\"] > .elementor-element-5bd8ce1e.elementor-nav-menu--stretch.elementor-nav-menu__text-align-center > .elementor-nav-menu--layout-horizontal.e--pointer-underline.elementor-nav-menu--main"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 8,
+          "targets": [
+            "#input_1_1_3",
+            "#input_1_1_6",
+            "#input_1_2",
+            "#input_1_4",
+            "#input_1_5"
+          ]
+        }
+      ],
+      "structure": {
+        "h1": 0,
+        "headingSkips": 1,
+        "lang": "en-US",
+        "main": true,
+        "skipLink": false
+      },
+      "keyboard": {
+        "stops": 56,
+        "focusNotVisible": 39
+      }
+    }
+  ]
+}

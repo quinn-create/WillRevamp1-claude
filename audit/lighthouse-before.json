@@ -1,0 +1,682 @@
+{
+  "generatedAt": "2026-10-03T02:03:37.087Z",
+  "runs": 1,
+  "results": [
+    {
+      "url": "https://willfraleylaw.com/",
+      "performance": 60,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 4844,
+      "cls": 0,
+      "tbtMs": 473,
+      "fcpMs": 3455,
+      "totalKB": 973,
+      "jsKB": 430,
+      "cssKB": 160,
+      "imageKB": 131,
+      "fontKB": 219,
+      "requests": 83,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        60
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/contact-us/",
+      "performance": 62,
+      "accessibility": 93,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 6942,
+      "cls": 0,
+      "tbtMs": 178,
+      "fcpMs": 4439,
+      "totalKB": 1015,
+      "jsKB": 388,
+      "cssKB": 143,
+      "imageKB": 254,
+      "fontKB": 203,
+      "requests": 72,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        62
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/faqs/",
+      "performance": 56,
+      "accessibility": 99,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 6829,
+      "cls": 0,
+      "tbtMs": 356,
+      "fcpMs": 4214,
+      "totalKB": 620,
+      "jsKB": 317,
+      "cssKB": 145,
+      "imageKB": 6,
+      "fontKB": 126,
+      "requests": 62,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "heading-order"
+      ],
+      "runs": [
+        56
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/legal-services/",
+      "performance": 48,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 10698,
+      "cls": 0,
+      "tbtMs": 413,
+      "fcpMs": 6149,
+      "totalKB": 1431,
+      "jsKB": 430,
+      "cssKB": 160,
+      "imageKB": 590,
+      "fontKB": 219,
+      "requests": 84,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        48
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/",
+      "performance": 45,
+      "accessibility": 87,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 9918,
+      "cls": 0,
+      "tbtMs": 536,
+      "fcpMs": 6148,
+      "totalKB": 1209,
+      "jsKB": 430,
+      "cssKB": 162,
+      "imageKB": 367,
+      "fontKB": 218,
+      "requests": 83,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "link-name",
+        "tabindex"
+      ],
+      "runs": [
+        45
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/personal-injury/",
+      "performance": 52,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 8027,
+      "cls": 0.001,
+      "tbtMs": 389,
+      "fcpMs": 4494,
+      "totalKB": 846,
+      "jsKB": 429,
+      "cssKB": 161,
+      "imageKB": 6,
+      "fontKB": 218,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        52
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/drug-crimes/",
+      "performance": 56,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 7948,
+      "cls": 0.034,
+      "tbtMs": 269,
+      "fcpMs": 4479,
+      "totalKB": 846,
+      "jsKB": 430,
+      "cssKB": 161,
+      "imageKB": 6,
+      "fontKB": 219,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        56
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/dui/",
+      "performance": 55,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 7970,
+      "cls": 0.005,
+      "tbtMs": 313,
+      "fcpMs": 4636,
+      "totalKB": 847,
+      "jsKB": 430,
+      "cssKB": 159,
+      "imageKB": 6,
+      "fontKB": 218,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        55
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/about/",
+      "performance": 74,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 4140,
+      "cls": 0,
+      "tbtMs": 203,
+      "fcpMs": 3137,
+      "totalKB": 1067,
+      "jsKB": 430,
+      "cssKB": 159,
+      "imageKB": 166,
+      "fontKB": 279,
+      "requests": 86,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        74
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/",
+      "performance": 49,
+      "accessibility": 87,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 9973,
+      "cls": 0,
+      "tbtMs": 391,
+      "fcpMs": 5985,
+      "totalKB": 1323,
+      "jsKB": 432,
+      "cssKB": 160,
+      "imageKB": 480,
+      "fontKB": 219,
+      "requests": 83,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "link-name",
+        "tabindex"
+      ],
+      "runs": [
+        49
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/theft/",
+      "performance": 53,
+      "accessibility": 90,
+      "bestPractices": 77,
+      "seo": 100,
+      "lcpMs": 8222,
+      "cls": 0.003,
+      "tbtMs": 384,
+      "fcpMs": 4475,
+      "totalKB": 839,
+      "jsKB": 424,
+      "cssKB": 159,
+      "imageKB": 6,
+      "fontKB": 219,
+      "requests": 81,
+      "failedRequests": 2,
+      "failedAudits": [
+        "errors-in-console",
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        53
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/violent-crimes/",
+      "performance": 54,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 8030,
+      "cls": 0.003,
+      "tbtMs": 321,
+      "fcpMs": 4520,
+      "totalKB": 847,
+      "jsKB": 429,
+      "cssKB": 161,
+      "imageKB": 6,
+      "fontKB": 219,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        54
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/sex-crimes/",
+      "performance": 53,
+      "accessibility": 90,
+      "bestPractices": 77,
+      "seo": 100,
+      "lcpMs": 7870,
+      "cls": 0.003,
+      "tbtMs": 382,
+      "fcpMs": 4692,
+      "totalKB": 805,
+      "jsKB": 391,
+      "cssKB": 157,
+      "imageKB": 6,
+      "fontKB": 219,
+      "requests": 81,
+      "failedRequests": 6,
+      "failedAudits": [
+        "errors-in-console",
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        53
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/fraud/",
+      "performance": 58,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 8100,
+      "cls": 0.015,
+      "tbtMs": 207,
+      "fcpMs": 4692,
+      "totalKB": 862,
+      "jsKB": 431,
+      "cssKB": 160,
+      "imageKB": 6,
+      "fontKB": 234,
+      "requests": 82,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        58
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/probation-violation/",
+      "performance": 50,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 8150,
+      "cls": 0.003,
+      "tbtMs": 411,
+      "fcpMs": 5993,
+      "totalKB": 846,
+      "jsKB": 430,
+      "cssKB": 160,
+      "imageKB": 6,
+      "fontKB": 218,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        50
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/criminal-defense/domestic-assault/",
+      "performance": 47,
+      "accessibility": 87,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 8152,
+      "cls": 0.027,
+      "tbtMs": 526,
+      "fcpMs": 6132,
+      "totalKB": 846,
+      "jsKB": 430,
+      "cssKB": 159,
+      "imageKB": 6,
+      "fontKB": 219,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "link-in-text-block",
+        "tabindex"
+      ],
+      "runs": [
+        47
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/child-custody/",
+      "performance": 56,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 8362,
+      "cls": 0.004,
+      "tbtMs": 281,
+      "fcpMs": 4584,
+      "totalKB": 846,
+      "jsKB": 430,
+      "cssKB": 160,
+      "imageKB": 6,
+      "fontKB": 218,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        56
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/divorce/",
+      "performance": 52,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 8232,
+      "cls": 0.001,
+      "tbtMs": 393,
+      "fcpMs": 4656,
+      "totalKB": 847,
+      "jsKB": 430,
+      "cssKB": 161,
+      "imageKB": 6,
+      "fontKB": 219,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        52
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/parenting-plan-modifications/",
+      "performance": 53,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 8429,
+      "cls": 0.003,
+      "tbtMs": 393,
+      "fcpMs": 4492,
+      "totalKB": 848,
+      "jsKB": 431,
+      "cssKB": 160,
+      "imageKB": 6,
+      "fontKB": 219,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        53
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/paternity/",
+      "performance": 52,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 7943,
+      "cls": 0.003,
+      "tbtMs": 392,
+      "fcpMs": 4654,
+      "totalKB": 846,
+      "jsKB": 430,
+      "cssKB": 159,
+      "imageKB": 6,
+      "fontKB": 219,
+      "requests": 86,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        52
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/family-law/visitation/",
+      "performance": 77,
+      "accessibility": 90,
+      "bestPractices": 77,
+      "seo": 100,
+      "lcpMs": 3729,
+      "cls": 0.004,
+      "tbtMs": 242,
+      "fcpMs": 3129,
+      "totalKB": 840,
+      "jsKB": 423,
+      "cssKB": 160,
+      "imageKB": 6,
+      "fontKB": 219,
+      "requests": 81,
+      "failedRequests": 2,
+      "failedAudits": [
+        "errors-in-console",
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        77
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/testimonials/",
+      "performance": 54,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 100,
+      "lcpMs": 8171,
+      "cls": 0,
+      "tbtMs": 324,
+      "fcpMs": 4677,
+      "totalKB": 843,
+      "jsKB": 431,
+      "cssKB": 159,
+      "imageKB": 6,
+      "fontKB": 218,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex"
+      ],
+      "runs": [
+        54
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/adoption/",
+      "performance": 55,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 92,
+      "lcpMs": 8061,
+      "cls": 0.032,
+      "tbtMs": 285,
+      "fcpMs": 4640,
+      "totalKB": 846,
+      "jsKB": 430,
+      "cssKB": 160,
+      "imageKB": 6,
+      "fontKB": 218,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex",
+        "meta-description"
+      ],
+      "runs": [
+        55
+      ]
+    },
+    {
+      "url": "https://willfraleylaw.com/dcs-case-attorney/",
+      "performance": 54,
+      "accessibility": 90,
+      "bestPractices": 81,
+      "seo": 92,
+      "lcpMs": 8252,
+      "cls": 0.074,
+      "tbtMs": 317,
+      "fcpMs": 4658,
+      "totalKB": 845,
+      "jsKB": 429,
+      "cssKB": 160,
+      "imageKB": 6,
+      "fontKB": 219,
+      "requests": 81,
+      "failedRequests": 0,
+      "failedAudits": [
+        "deprecations",
+        "aria-prohibited-attr",
+        "color-contrast",
+        "heading-order",
+        "tabindex",
+        "meta-description"
+      ],
+      "runs": [
+        54
+      ]
+    }
+  ]
+}
