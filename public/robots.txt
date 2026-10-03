@@ -1,0 +1,5 @@
+# willfraleylaw.com — thank-you pages carry <meta name="robots" content="noindex">, so they stay crawlable.
+User-agent: *
+Allow: /
+
+Sitemap: https://willfraleylaw.com/sitemap-index.xml

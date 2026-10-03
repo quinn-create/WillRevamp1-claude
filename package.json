@@ -8,10 +8,12 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node tools/og.mjs && node tools/redirects.mjs && astro build && node tools/csp.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "node tools/check.mjs"
+    "check": "node tools/check.mjs",
+    "og": "node tools/og.mjs",
+    "csp": "node tools/csp.mjs"
   },
   "allowScripts": {
     "esbuild": true
