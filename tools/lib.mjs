@@ -99,7 +99,7 @@ const MIME = {
 export function parseRedirects(text) {
   return text
     .split('\n')
-    .map((l) => l.replace(/#.*$/, '').trim())
+    .map((l) => l.replace(/(^|\s)#.*$/, '').trim())
     .filter(Boolean)
     .map((l) => {
       const [from, to, status] = l.split(/\s+/);

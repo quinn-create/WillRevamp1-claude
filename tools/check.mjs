@@ -84,9 +84,9 @@ function walk(dir, filter = () => true) {
 }
 function sha256(file) { return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'); }
 function frontmatter(text) {
-  const m = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  const m = text.replace(/\r\n/g, '\n').match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
   if (!m) return { data: null, body: text };
-  return { data: YAML.parse(m[1]) || {}, body: m[2] };
+  try { return { data: YAML.parse(m[1]) || {}, body: m[2] }; } catch (e) { return { data: null, body: m[2], error: String(e.message).split('\n')[0] }; }
 }
 function visibleText(html) {
   return html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ')
@@ -112,13 +112,27 @@ const slugOf = (p) => { const s = String(p).replace(/^\/+|\/+$/g, ''); return s 
 function validateCopy(file, facts, { esOf } = {}) {
   const errors = [], warnings = [];
   const text = read(file);
-  const { data, body } = frontmatter(text);
-  if (!data) return { errors: ['no frontmatter'], warnings, ids: new Set() };
+  const { data, body, error } = frontmatter(text);
+  if (!data) return { errors: [error ? `frontmatter YAML: ${error}` : 'no frontmatter'], warnings, ids: new Set() };
   for (const k of ['title', 'description', 'h1', 'primary_cta', 'schema_type']) if (!data[k]) errors.push(`frontmatter.${k} missing`);
   const t = String(data.title || '').replace(/\{fact:[^}]+\}/g, '').trim();
   const d = String(data.description || '').replace(/\{fact:[^}]+\}/g, '').trim();
   if (t.length > TITLE_MAX) errors.push(`title ${t.length} chars > ${TITLE_MAX}`);
   if (d.length < DESC_MIN || d.length > DESC_MAX) errors.push(`description ${d.length} chars (needs ${DESC_MIN}-${DESC_MAX})`);
+  // Title, description and H1 obey the same rules as the body: law words, forbidden strings, and any
+  // number must be backed by a fact-tagged sentence in the body that contains the same number.
+  const fm = ['title', 'description', 'h1'].map((k) => String(data[k] || '')).join(' \n ').replace(/\{fact:[^}]+\}/g, '');
+  const fmLaw = fm.replace(/\s+/g, ' ').match(LAW_FORBIDDEN);
+  if (fmLaw) errors.push(`law-firm rule in title/description/h1: "${fmLaw[0]}"`);
+  for (const s of FORBIDDEN_STRINGS) if (fm.includes(s)) errors.push(`forbidden string in title/description/h1 "${s}"`);
+  if (!data.policy_page) {
+    const tagged = body.split('\n').filter((l) => /\{fact:[^}]+\}/.test(l)).join(' ');
+    for (const k of ['title', 'description', 'h1']) {
+      const v = String(data[k] || '');
+      if (/\{fact:[^}]+\}/.test(v)) continue; // the field cites its own fact
+      for (const n of v.match(/\d[\d,.]*/g) || []) { const x = n.replace(/[.,]+$/, ''); if (!tagged.includes(x)) errors.push(`number "${x}" in ${k} needs {fact:ID} in the field or a fact-tagged body sentence with the same number`); }
+    }
+  }
   const ids = new Set();
   for (const m of text.matchAll(/\{fact:([^}]+)\}/g)) for (const id of m[1].split(/[,\s]+/).filter(Boolean)) {
     ids.add(id);
@@ -126,9 +140,9 @@ function validateCopy(file, facts, { esOf } = {}) {
   }
   // Every sentence that carries a number (years, phone, address, hours, prices, counts) must cite a fact.
   const NUMBER_EXEMPT = /last reviewed|[úu]ltima revisi[óo]n|©|copyright|\b404\b|WCAG\s*2(\.\d)?|Section 508/i;
-  const lines = (data.policy_page ? '' : body).split('\n').map((l) => l.replace(/^\s*\[[^\]]*\]\s*$/, '').replace(/^\s*(\d+\.|[-*>#]+)\s+/, ''));
+  const lines = (data.policy_page ? '' : body).split('\n').map((l) => l.replace(/^\s*\[[^\]\d]*\]\s*$/, '').replace(/^\s*(\d+\.|[-*>#]+)\s+/, ''));
   for (const line of lines) {
-    const sentences = line.split(/(?<=[.!?])\s+(?=[A-Z¿¡"“])/);
+    const sentences = line.split(/(?<=[.!?])(?<!\b(?:[A-Z]|St|Ste|Ave|Rd|Blvd|Dr|Mr|Mrs|Ms|Jr|Sr|No|[ap]\.m)\.)\s+(?=[A-Z¿¡"“])/);
     for (const s of sentences) {
       const bare = s.replace(/\{fact:[^}]+\}/g, '').replace(/\[[^\]]*\]\([^)]*\)/g, (m) => m.replace(/\([^)]*\)/, ''));
       if (/\d/.test(bare) && !/\{fact:[^}]+\}/.test(s) && !NUMBER_EXEMPT.test(bare)) errors.push(`number without {fact:ID}: "${bare.trim().slice(0, 90)}"`);
@@ -140,8 +154,10 @@ function validateCopy(file, facts, { esOf } = {}) {
     for (const id of fids) {
       const f = facts.get(id);
       if (f && f.type === 'testimonial') {
-        const q = norm(line.replace(/^\s*>\s*/, '').replace(/\{fact:[^}]+\}/g, '').replace(/^["“]|["”]$/g, '').replace(/\s*[—-]\s*[^—-]+$/, ''));
-        if (q && !norm(f.exact_quote).includes(q.replace(/^"|"$/g, '')) && !norm(f.claim).includes(q.replace(/^"|"$/g, ''))) errors.push(`testimonial ${id} not verbatim`);
+        const raw = line.replace(/^\s*>\s*/, '').replace(/\{fact:[^}]+\}/g, '').trim();
+        const quoted = raw.match(/^["“](.*)["”](?:\s*[—–-].*)?$/);
+        const q = norm(quoted ? quoted[1] : raw.replace(/\s+[—–-]\s+[^—–]*$/, ''));
+        if (q && !norm(f.exact_quote).includes(q) && !norm(f.claim).includes(q)) errors.push(`testimonial ${id} not verbatim`);
       }
     }
   }
@@ -149,10 +165,10 @@ function validateCopy(file, facts, { esOf } = {}) {
   for (const ph of BANNED_PHRASES) if (hasPhrase(plain, ph)) errors.push(`banned phrase "${ph}"`);
   for (const s of FORBIDDEN_STRINGS) if (plain.includes(s)) errors.push(`forbidden string "${s}"`);
   for (const ph of WARN_PHRASES) if (hasPhrase(plain, ph)) warnings.push(`warn phrase "${ph}"`);
-  const nonQuote = plain.split('\n').filter((l) => !/^\s*>/.test(l)).join('\n').replace(new RegExp(RESULTS_DISCLAIMER.source, 'gi'), ' ');
+  const nonQuote = plain.split('\n').filter((l) => !/^\s*>/.test(l)).join('\n').replace(/\s+/g, ' ').replace(new RegExp(RESULTS_DISCLAIMER.source, 'gi'), ' ');
   const law = nonQuote.match(LAW_FORBIDDEN);
   if (law) errors.push(`law-firm rule: "${law[0]}" (use "focuses on"/"practices")`);
-  if (RESULTS_WORDS.test(plain) && !RESULTS_DISCLAIMER.test(plain) && !/\[results-disclaimer\]/.test(body)) errors.push('results mentioned without "Prior results do not guarantee a similar outcome."');
+  if (RESULTS_WORDS.test(plain) && !RESULTS_DISCLAIMER.test(plain.replace(/\s+/g, ' ')) && !/\[results-disclaimer\]/.test(body)) errors.push('results mentioned without "Prior results do not guarantee a similar outcome."');
   if (esOf) for (const id of ids) if (!esOf.has(id)) errors.push(`Spanish cites ${id}, which the English page does not`);
   return { errors, warnings, ids };
 }
@@ -190,8 +206,16 @@ function distHtml(dir = 'dist') {
   const root = P(dir);
   return walk(dir, (f) => f.endsWith('.html')).map((f) => ({ file: f, url: '/' + path.relative(root, f).replace(/index\.html$/, '').replace(/\\/g, '/'), html: fs.readFileSync(f, 'utf8') }));
 }
+function metaContent(html, attr, value) {
+  for (const t of html.match(/<meta\b[^>]*>/gi) || []) {
+    if (!new RegExp(`\\s${attr}="${value}"`, 'i').test(t)) continue;
+    const c = t.match(/\scontent="([^"]*)"/i);
+    if (c) return c[1];
+  }
+  return null;
+}
 function parseRedirects(text) {
-  return text.split('\n').map((l) => l.replace(/#.*$/, '').trim()).filter(Boolean).map((l) => { const [from, to, status] = l.split(/\s+/); return { from, to, status: Number(status || 302) }; });
+  return text.split('\n').map((l) => l.replace(/(^|\s)#.*$/, '').trim()).filter(Boolean).map((l) => { const [from, to, status] = l.split(/\s+/); return { from, to, status: Number(status || 302) }; });
 }
 function resolveOld(dir, rules, p) {
   const fileFor = (x) => {
@@ -230,9 +254,9 @@ function checkBuiltSite({ final }) {
     if (h1 !== 1) errs.push(`${h1} <h1>`);
     if (!/<title>[^<]{3,}<\/title>/i.test(html)) errs.push('no <title>');
     if (!is404) {
-      if (!/<meta[^>]+name="description"[^>]+content="[^"]{50,}"/i.test(html)) errs.push('meta description missing/short');
+      if ((metaContent(html, 'name', 'description') || '').length < 50) errs.push('meta description missing/short');
       if (!/<link[^>]+rel="canonical"/i.test(html)) errs.push('no canonical');
-      if (!/hreflang="en"/i.test(html) || !/hreflang="es"/i.test(html) || !/hreflang="x-default"/i.test(html)) errs.push('hreflang pair incomplete');
+      if (!/hreflang="en(-[a-z0-9]+)?"/i.test(html) || !/hreflang="es(-[a-z0-9]+)?"/i.test(html) || !/hreflang="x-default"/i.test(html)) errs.push('hreflang pair incomplete');
     }
     for (const img of html.match(/<img\b[^>]*>/gi) || []) {
       if (!/\swidth="?\d/.test(img) || !/\sheight="?\d/.test(img)) errs.push(`img without width/height: ${img.slice(0, 80)}`);
@@ -248,10 +272,10 @@ function checkBuiltSite({ final }) {
     const law = lawText.match(LAW_FORBIDDEN);
     if (law) errs.push(`law-firm rule "${law[0]}"`);
     if (RESULTS_WORDS.test(text) && !RESULTS_DISCLAIMER.test(text)) errs.push('results mentioned without disclaimer');
-    for (const m of text.matchAll(/free consultation|consulta gratuita/gi)) {
-      const i = html.toLowerCase().indexOf(m[0].toLowerCase());
-      const win = html.slice(Math.max(0, i - 900), i + 900);
-      if (!/href="tel:/.test(win)) { errs.push(`"${m[0]}" not beside a tel: link`); break; }
+    const bodyHtml = html.replace(/^[\s\S]*?<body\b[^>]*>/i, '').replace(/<(script|style|template)\b[\s\S]*?<\/\1>/gi, ' ');
+    for (const m of bodyHtml.matchAll(/free(?:\s|&nbsp;|&#160;|<[^>]*>)+consultation|consulta(?:\s|&nbsp;|&#160;|<[^>]*>)+gratuita/gi)) {
+      const win = bodyHtml.slice(Math.max(0, m.index - 900), m.index + 900);
+      if (!/href="tel:/.test(win)) { errs.push(`"${visibleText(m[0]).trim()}" not beside a tel: link`); break; }
     }
     if (!is404 && !LEGAL_LINE.test(text)) errs.push('footer legal line missing');
     for (const src of html.match(/<script[^>]+src="[^"]+"/gi) || []) if (TRACKERS.test(src)) errs.push(`tracker loaded statically: ${src}`);
@@ -271,9 +295,9 @@ function checkBuiltSite({ final }) {
   const secretFiles = [...srcFiles, ...walk('dist', () => true).filter((f) => !/\.(png|jpe?g|webp|avif|woff2|ico|pdf|zip)$/.test(f)), P('site.config.json')].filter((f) => fs.existsSync(f) && SECRET.test(fs.readFileSync(f, 'utf8')));
   ok('no secrets in src/, dist/, site.config.json', secretFiles.length === 0, secretFiles.map((f) => path.relative(ROOT, f)).join(', '));
   const fams = new Set();
-  for (const f of walk('dist', (x) => x.endsWith('.css'))) for (const m of fs.readFileSync(f, 'utf8').matchAll(/@font-face\s*{[^}]*font-family:\s*["']?([^;"']+)/g)) fams.add(m[1].trim().toLowerCase());
+  for (const f of walk('dist', (x) => x.endsWith('.css'))) for (const m of fs.readFileSync(f, 'utf8').matchAll(/@font-face\s*{[^}]*font-family:\s*["']?([^;"'}]+)/g)) fams.add(m[1].trim().toLowerCase());
   for (const f of [...fams]) if (/fallback/.test(f)) fams.delete(f);
-  for (const p of pages) for (const m of p.html.matchAll(/@font-face\s*{[^}]*font-family:\s*["']?([^;"']+)/g)) fams.add(m[1].trim().toLowerCase());
+  for (const p of pages) for (const m of p.html.matchAll(/@font-face\s*{[^}]*font-family:\s*["']?([^;"'}]+)/g)) fams.add(m[1].trim().toLowerCase());
   for (const f of [...fams]) if (/fallback/.test(f)) fams.delete(f);
   ok('≤ 2 font families', fams.size <= 2, [...fams].join(', '));
   ok('no Google Fonts / external font CDN at runtime', !pages.some((p) => /fonts\.(googleapis|gstatic)\.com/.test(p.html)));
@@ -304,7 +328,7 @@ function checkBuiltSite({ final }) {
   ok('robots.txt references the sitemap', exists('dist/robots.txt') && /sitemap/i.test(read('dist/robots.txt')));
   const smx = walk('dist', (f) => /sitemap.*\.xml$/.test(f)).map((f) => fs.readFileSync(f, 'utf8')).join('\n');
   ok('XML sitemap with hreflang alternates', /<loc>/.test(smx) && /hreflang/.test(smx));
-  const ogMissing = pages.filter((p) => !/404/.test(p.url)).filter((p) => { const m = p.html.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/i); if (!m) return true; const u = new URL(m[1], 'https://x'); return !fs.existsSync(path.join(P('dist'), u.pathname)); }).map((p) => p.url);
+  const ogMissing = pages.filter((p) => !/404/.test(p.url)).filter((p) => { const c = metaContent(p.html, 'property', 'og:image'); if (!c) return true; const u = new URL(c, 'https://x'); return !fs.existsSync(path.join(P('dist'), u.pathname)); }).map((p) => p.url);
   ok('og:image on every page and the file exists', ogMissing.length === 0, ogMissing.slice(0, 10).join(', '));
   ok('favicon set', exists('dist/favicon.ico') || exists('dist/favicon.svg') || exists('dist/favicon-32x32.png'));
   ok('404 page', exists('dist/404.html'));
@@ -314,8 +338,8 @@ function checkBuiltSite({ final }) {
     const noDate = legal.flatMap((pg) => [pg.path, pg.esPath].filter(Boolean)).filter((p) => { const f = P('dist', pagePath(p), 'index.html'); return !fs.existsSync(f) || !/Last reviewed|Última revisión|Ultima revision/i.test(fs.readFileSync(f, 'utf8')); });
     ok('legal pages show a last-reviewed date', legal.length >= 2 && noDate.length === 0, noDate.join(', '));
   }
-  const consent = pages.some((p) => /consent/i.test(p.html));
-  ok('consent manager present', consent);
+  const consent = pages.some((p) => /data-consent|id="[^"]*consent/i.test(p.html));
+  ok('consent manager present (data-consent / #…consent… markup)', consent);
 }
 
 // ---------------------------------------------------------------- gates
@@ -348,15 +372,19 @@ function gate1() {
     const badKind = list.filter((x) => !['person', 'logo', 'scene'].includes(x.kind));
     ok('every asset classified person|logo|scene', list.length > 0 && badKind.length === 0, `${list.length} assets, ${badKind.length} unclassified`);
   }
-  const facts = [...factsIndex().values()];
+  const rawFacts = exists('inventory/facts.json') ? readJSON('inventory/facts.json') : [];
+  const facts = Array.isArray(rawFacts) ? rawFacts : rawFacts.facts || [];
+  const dup = [...new Set(facts.map((f) => String(f.id)).filter((id, i, a) => a.indexOf(id) !== i))];
+  ok('fact ids are unique', dup.length === 0, dup.join(', '));
   ok('≥ 10 facts', facts.length >= 10, `${facts.length}`);
-  const malformed = facts.filter((f) => !f.id || !f.claim || !FACT_TYPES.includes(f.type) || !f.source_url || !f.exact_quote);
+  const malformed = facts.filter((f) => !f.id || !f.claim || !FACT_TYPES.includes(f.type) || !f.source_url || !norm(f.exact_quote));
   ok('facts have id/claim/type/source_url/exact_quote with a known type', malformed.length === 0, malformed.slice(0, 5).map((f) => f.id).join(', '));
   // Every exact_quote must really appear on the cited page (text or HTML).
-  const byUrl = new Map(pages.map((p) => [p.url.replace(/\/$/, ''), p]));
+  const urlKey = (u) => String(u).replace(/#.*$/, '').replace(/^https?:\/\/(www\.)?/i, '//').replace(/\/$/, '');
+  const byUrl = new Map(pages.map((p) => [urlKey(p.url), p]));
   const notFound = [];
   for (const f of facts) {
-    const pg = byUrl.get(String(f.source_url).replace(/\/$/, '').replace('://www.', '://'));
+    const pg = byUrl.get(urlKey(f.source_url));
     if (!pg) { notFound.push(`${f.id} (source not crawled)`); continue; }
     const hay = norm((pg.textFile && exists(pg.textFile) ? read(pg.textFile) : '') + ' ' + (pg.htmlFile && exists(pg.htmlFile) ? visibleText(read(pg.htmlFile)) + ' ' + read(pg.htmlFile) : ''));
     if (!hay.includes(norm(f.exact_quote))) notFound.push(f.id);
@@ -469,33 +497,34 @@ function gate4() {
   ok('copy/FACT-CHECK.md', exists('copy/FACT-CHECK.md'));
 }
 
+const verdict = (t) => { const v = [...t.matchAll(/^[^\w\n]*Result:[^\w\n]*(PASS|FAIL)[^\w\n]*$/gim)].map((m) => m[1].toUpperCase()); return v.includes('FAIL') ? 'FAIL' : v.length ? 'PASS' : null; };
 function gate6() {
   const blocked = exists('plan/BLOCKED.md') ? read('plan/BLOCKED.md') : '';
   for (const c of QA_CHECKS) {
     const f = `qa/${c}.md`;
     if (!exists(f)) { ok(`qa ${c}`, false, 'report missing (a check that did not run is a failure)'); continue; }
     const t = read(f);
-    const pass = /Result:\s*PASS/i.test(t);
-    const fail = /Result:\s*FAIL/i.test(t);
+    const pass = verdict(t) === 'PASS';
+    const fail = verdict(t) === 'FAIL';
     ok(`qa ${c}`, pass || (fail && blocked.includes(c)), pass ? 'PASS' : fail ? 'FAIL, explained in BLOCKED.md' : 'no Result line');
   }
   // Honesty: the numbers must agree with the PASS claims.
   if (exists('qa/lighthouse.json')) {
     const r = readJSON('qa/lighthouse.json').results || [];
     const bad = r.filter((x) => x.error || x.performance < LH.performance || x.accessibility < LH.accessibility || x.bestPractices < LH.bestPractices || x.seo < LH.seo || x.lcpMs > LH.lcpMs || x.cls > LH.cls || x.tbtMs > LH.tbtMs);
-    const claimsPass = exists('qa/02-lighthouse.md') && /Result:\s*PASS/i.test(read('qa/02-lighthouse.md'));
+    const claimsPass = exists('qa/02-lighthouse.md') && verdict(read('qa/02-lighthouse.md')) === 'PASS';
     ok('Lighthouse numbers agree with qa/02 result', r.length > 0 && (bad.length === 0 || !claimsPass), `${bad.length}/${r.length} pages under threshold`);
   } else ok('qa/lighthouse.json exists', false);
   if (exists('qa/axe.json')) {
     const r = readJSON('qa/axe.json').results || [];
     const bad = r.filter((x) => x.error || x.critical || x.serious);
-    const claimsPass = exists('qa/03-accessibility.md') && /Result:\s*PASS/i.test(read('qa/03-accessibility.md'));
+    const claimsPass = exists('qa/03-accessibility.md') && verdict(read('qa/03-accessibility.md')) === 'PASS';
     ok('axe numbers agree with qa/03 result', r.length > 0 && (bad.length === 0 || !claimsPass), `${bad.length} pages with critical/serious`);
   } else ok('qa/axe.json exists', false);
   if (exists('qa/links.json')) {
     const r = readJSON('qa/links.json');
     const bad = (r.brokenInternal || []).length + (r.oldUrlFailures || []).length;
-    const claimsPass = exists('qa/04-links.md') && /Result:\s*PASS/i.test(read('qa/04-links.md'));
+    const claimsPass = exists('qa/04-links.md') && verdict(read('qa/04-links.md')) === 'PASS';
     ok('link numbers agree with qa/04 result', bad === 0 || !claimsPass, `${bad} broken`);
   } else ok('qa/links.json exists', false);
 }

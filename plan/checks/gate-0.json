@@ -1,0 +1,137 @@
+{
+  "at": "2026-10-03T01:33:39.533Z",
+  "pass": true,
+  "failed": 0,
+  "results": [
+    {
+      "name": "tools/check.mjs hash matches plan/CHECK-HASH",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists CLAUDE.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists AGENTS.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists plan/STATE.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists plan/DECISIONS.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists plan/rules/law-firm.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists site.config.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists .mcp.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists package.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists NEEDS-OWNER.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists NEEDS-OPERATOR.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists tools/crawl.mjs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists tools/shots.mjs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists tools/check.mjs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists tools/lighthouse.mjs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists tools/axe.mjs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists tools/links.mjs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists tools/images.mjs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists tools/compare.mjs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists tools/configure.mjs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists tools/package.mjs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "25 agent briefs in .claude/agents/",
+      "pass": true,
+      "detail": "25 found"
+    },
+    {
+      "name": "briefs have name/description/tools, persona line, \"Obey CLAUDE.md / AGENTS.md\"",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Astro starter builds (dist/index.html)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Higgsfield probe recorded in DECISIONS",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "site.config.json keys empty at start",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}
