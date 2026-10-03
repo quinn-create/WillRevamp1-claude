@@ -1,49 +1,42 @@
 # 07-responsive
 Result: PASS
 
-This is round 3.
+This is the recheck after round 3, run against the current build.
 
-**Tool data.** `qa/responsive.json` was generated at 2026-10-03T17:48Z by `tools/responsive.mjs` against `dist/`.
-- `dist/` was built at 17:41Z. The round-2 fix commit is 2e0944e. No `src/` file is newer than the build.
-- It covers 60 pages (30 EN + 30 ES) at 5 widths (360x780, 390x844, 768x1024, 1280x800, 1920x1080). That is 300 page-widths, with `errors: 0`.
+**Build state.** The working tree has three uncommitted `src/` edits, and all three are in the build:
+- `src/styles/shell.css` lines 318–320 change the footer social row. The links get `gap: 0` and `padding-inline: var(--space-4)`, and the row gets a negative start margin. A `@media (max-width: 22.49em)` rule steps both down to `--space-3`.
+- `src/components/Steps.astro` changes one line.
+- `src/pages/_templates/PageView.astro` changes one line.
 
-**Round-2 fix check.**
-- `src/styles/shell.css` lines 215–222, `.menu-sub a`, now has `min-width: var(--control-height)`.
-- The built CSS (`dist/_astro/CTABand.FJEOHOuE.css`) contains it.
-- The advisory fixes are also in source and in `dist`:
-  - `.related-links a` in `src/pages/_templates/PageView.astro`, line 466
-  - `.list a` in `src/styles/components.css`, line 142
+`dist/` was rebuilt at 18:31:30Z, which is about 4 minutes after `qa/responsive.json` (18:27:15Z). No `src/` file is newer than `dist/`. Because the build is newer than the tool data, I re-probed the current `dist/` myself (see below). `REPORT/shots/after/` has been re-captured: 120 shots (60 pages × 390/1280), all modified in the working tree.
 
-**Independent re-probe.** I wrote my own script and ran it against the same `dist/`. It covered all 60 pages at 6 widths (the 5 above plus 1216, the 76em nav breakpoint), so 360 page-widths. Each width used a fresh page with the mouse parked at x=2, so no hover state carried over. It checked:
-- overflow
-- tap targets, with their region
-- text-line overlap
-- a reverse (Shift+Tab) focus pass
-- every desktop dropdown expanded
-- the **header menu dialog opened**, with a Tab pass inside it
+## Tool data (`qa/responsive.json`)
 
-## Requirement-by-requirement
+The tool ran at 360x780, 390x844, 768x1024, 1280x800 and 1920x1080 on 60 pages (30 EN + 30 ES). That is 300 page-widths, with `errors: 0`.
+
+| Summary field | Value |
+|---|---|
+| `overflowPages` | [] |
+| `smallTargetCount` | 0 |
+| `smallTargetsBelow24` | 0 |
+| `focusObscured` | fully 0, partly 0, offscreen 0 |
+
+## Independent re-probe (current `dist/`)
+
+I ran my own Playwright script against the current `dist/`:
+- **Coverage:** all 60 pages at 6 widths (320, 360, 390, 768, 1280 and 1920), which is 360 page-widths with 0 errors.
+- **Setup:** each page-width got a fresh context, with the pointer parked at (2,2).
+- **Focus test:** 19,002 forward Tab stops.
 
 | Requirement | Result | Evidence |
 |---|---|---|
-| No horizontal scroll (`scrollWidth <= innerWidth`) | PASS | Tool: `summary.overflowPages: []`, max `overflowPx` 0 over 300 page-widths. Re-probe: `max(documentElement.scrollWidth, body.scrollWidth) - innerWidth <= 0` and `documentElement.scrollWidth - clientWidth <= 0` on all 360 page-widths. With the menu dialog open (270 page-widths): dialog `scrollWidth - clientWidth` = 0, document overflow 0, and the dialog's right edge is never past the viewport. With the dropdowns expanded (90 page-widths at 1216/1280/1920): document overflow 0. |
-| Tap targets >= 44x44 in header, CTA, footer | PASS | Tool: `smallTargetCount: 0`, `smallTargetsBelow24: 0`. That covers every `a[href]`, `button`, `input`, `select` and `summary` on all pages, not only header/CTA/footer. Inline links inside a paragraph are exempt, as in rounds 1–2. Re-probe: (1) Menu dialog `#menu a[href], #menu button` gave 0 small targets in 270 opened dialogs (EN 360/390/768; ES all 6 widths), so R2-D1 is fixed. "DUI", "Theft", "Fraud" and "Robo" now measure >= 44 wide. (2) Desktop `.nav-sub a` gave 0 small. (3) `.site-header`, `.callbar`, `.site-footer`, `.cta-band` and `.hero` had 0 non-inline small targets at any width. (4) The only non-inline sub-44 controls on the site are both in the page body and both pass. The `botcheck` honeypot on contact/contacto has `aria-hidden`, `tabindex=-1` and is not a target. The cookie-settings checkboxes are 22x22 inside a `label` that is 44–55 px tall. |
-| No overlapping text | PASS | Re-probe compared the client rects of every visible text node against every other element's on all 360 page-widths. A hit means more than 2 px of horizontal overlap and more than 35% of the line height. There were 0 overlaps. Inside the opened menu dialog, comparing link, button and text boxes gave 0 overlaps in 270 dialogs. |
-| Sticky header / call bar not covering focused elements | PASS | Tool forward Tab pass: `focusObscured {fully 0, partly 0, offscreen 0}` over 16,100 focus stops. Re-probe reverse Shift+Tab pass, 7x5 sample grid against every visible fixed or sticky box: 0 covered and 0 off-screen on all 360 page-widths. Tab pass inside the opened menu dialog (focus trapped): 0 covered and 0 off-screen in 270 dialogs. |
-
-## Notes on what was excluded
-
-- **Pointer hover is not a keyboard defect.** A first run of the re-probe kept one page across widths. The mouse was left over a desktop nav item, so its hover dropdown stayed open in the sticky header and covered footer links during the reverse Tab pass. It also overlapped H1 text at 1920.
-  - A fresh page with the pointer parked showed 0 such cases.
-  - That combination needs the pointer resting on the nav while the user Tabs.
-  - It is pointer-triggered transient content, not something the author placed over focused content, so it is not counted.
-- **Inline text links in hero and CTA-band paragraphs are not counted.** The same ruling was made in rounds 1 and 2, and `tools/responsive.mjs` excludes them by design. WCAG 2.5.8's Inline exception covers them. 130 instances are 17–26 px tall, for example `.cta-band__copy p a.tel` "(615) 410-7290" and "send a short message".
-  - Every inline `tel:` link sits in a block that also has a >= 44 px `a.btn` to the same `tel:` target, except the accessibility hero (EN/ES). There the header call button and the call bar are on the same page.
-  - "send a short message" has a >= 44 px `/contact-us/` control elsewhere on each page.
+| No horizontal scroll | PASS | I measured `max(html.scrollWidth, body.scrollWidth) - html.clientWidth`. The largest value was **0 px** across 360 page-widths, including every page at 320. |
+| Tap targets ≥ 44×44 (header, call bar, CTA, footer) | PASS | I checked every visible `a`, `button`, `summary`, `input` and `select` inside `header`/`.site-header`, `.callbar`, `footer`/`.site-footer`, `.cta-band` and `[class*=cta]`, plus every `.btn`. Inline `<a>` inside paragraph text was exempt (WCAG 2.5.8 inline exception, as in rounds 1–3). **0 targets were under 44×44** across the 360 page-widths. |
+| Menu dialog and dropdowns | PASS | I opened the mobile menu dialog with every disclosure expanded on all 60 pages at 320, 360, 390 and 768 (240 dialogs). I also opened it on the 30 pages that show the menu button at 1280, for 270 dialogs in total. Every dialog opened, with **0 small targets, 0 overflow and 0 links past the right edge**. I also expanded each desktop header dropdown at 1280 and found 0 small or clipped links. |
+| No overlapping text | PASS | I compared the client rects of every visible text node pairwise, excluding the header, call bar, skip link and dialog. A hit meant more than 2 px of horizontal overlap and more than 35% of the line height. Result: **0 overlaps** in 360 page-widths. |
+| Sticky header / call bar not covering focused elements | PASS | For each Tab stop I measured the share of the focused element's box covered by any visible fixed or sticky element that is not its own ancestor or descendant. Where boxes overlapped, I used `elementFromPoint` to check paint order, so the skip link (z-index 100, above the header's 50) is not counted as covered. Result: **0 stops more than 1% covered and 0 stops off-screen**, out of 19,002. |
+| Footer social row: one row at 320 px, each link ≥ 44×44 | PASS | `.footer-social` is present on all 60 pages and has 4 links (Facebook, LinkedIn, X, AVVO). It is **1 row at every width**. **The smallest link is 44.0×44.0 at every width.** At 320 the row runs from x = 4.0 to 288.0 inside a 320 px viewport, so nothing is clipped. At 360 it runs from 1.0 to 309.0, and at 390 from 1.8 to 309.8. |
 
 ## Fixes
 
-None required: no defects remain in scope. R2-D1 (`.menu-sub a` narrow labels, 570 instances) is verified fixed.
-
-Optional, not counted toward the result: if a 44 px hit area is wanted on the inline CTA/hero links as well, add
-`.cta-band__copy p a, .hero__deck p a { padding-block: 0.6em; margin-block: -0.6em; }` to `src/styles/components.css`.
+None required.

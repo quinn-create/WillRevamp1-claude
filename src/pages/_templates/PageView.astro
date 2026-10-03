@@ -141,7 +141,7 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
     </PageHero>
   ) : template === 'home' ? (
     <PageHero lang={lang} path={path} h1={raw.data.h1} deck={hero?.blocks || []} variant="home" byline="mobile" eyebrow={s.homeEyebrow}>
-      <Frame slot="media" kind="portrait" src={willDesk} alt={s.willDeskAlt} loading="eager" widths={[448, 596, 896]} class="crop-desk" caption={`<strong>${esc(firm.attorney.value)}</strong> · ${esc(firm.jobTitle.value)}`} />
+      <Frame slot="media" kind="portrait" src={willDesk} alt={s.willDeskAlt} loading="eager" widths={[448, 596, 896]} class="crop-desk" caption={`<strong>${esc(firm.attorney.value)}</strong> · ${esc(lang === 'en' ? firm.jobTitle.value : ui.attorneyAtLaw)}`} />
     </PageHero>
   ) : template === 'about' ? (
     <PageHero lang={lang} path={path} h1={raw.data.h1} deck={hero?.blocks || []}>

@@ -44,6 +44,11 @@ Every call made without asking, with its reason. Newest stage last.
 - 24 site-wide Higgsfield scenes (54 credits incl. 3 rejected and regenerated). Run total: 33 images kept, 72 credits.
 - Build phases P100–P800 each passed `npm run build` + `check.mjs --build`; `check.mjs --final` passed (60 pages: 30 EN + 30 ES incl. 404s/thank-you). Pages are rendered by catch-all EN/ES routes from the copy files plus a per-page verification pass (kit: "one pass per page").
 
+### Stage 6 — QA
+- Three QA rounds (A24): 9/10 checks passed; 01-visual had 3 small residual defects after round 3 (documented in BLOCKED). Gate 6 passed with that residue.
+- **Orchestrator follow-up (beyond the kit's 3 loops):** the three residual defects were precise one-line fixes, so the orchestrator applied them (steps disclaimer as fine print; even footer social spacing with ≥ 44 px targets; Spanish home portrait caption "Abogado"), rebuilt, re-ran `check.mjs --final` (pass), re-captured screenshots and re-ran checks 01 and 07.
+- **Lighthouse on noindex pages:** /cookie-settings/, /thank-you/ and their ES twins are noindex by design; `tools/lighthouse.mjs` skips only the `is-crawlable` audit on them and marks `noindex: true, skippedAudits: ["is-crawlable"]` in qa/lighthouse.json. All other audits run. Disclosed in the owner report.
+
 ## A01
 
 # A01 decisions: old-URL inventory (inventory/old-urls.json)
