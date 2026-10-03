@@ -1,16 +1,41 @@
 {
-  "generatedAt": "2026-10-03T16:22:02.795Z",
+  "generatedAt": "2026-10-03T18:08:14.869Z",
   "runs": 3,
   "results": [
     {
-      "url": "http://127.0.0.1:43707/criminal-defense/probation-violation/",
+      "url": "http://127.0.0.1:33309/",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1960,
+      "cls": 0,
+      "tbtMs": 17,
+      "fcpMs": 760,
+      "totalKB": 177,
+      "jsKB": 0,
+      "cssKB": 11,
+      "imageKB": 64,
+      "fontKB": 90,
+      "requests": 10,
+      "failedRequests": 0,
+      "failedAudits": [],
+      "runs": [
+        99,
+        99,
+        99
+      ],
+      "path": "/"
+    },
+    {
+      "url": "http://127.0.0.1:33309/criminal-defense/probation-violation/",
       "performance": 99,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 100,
       "lcpMs": 1957,
       "cls": 0,
-      "tbtMs": 8,
+      "tbtMs": 0,
       "fcpMs": 757,
       "totalKB": 156,
       "jsKB": 0,
@@ -23,20 +48,70 @@
       "runs": [
         99,
         99,
-        100
+        99
       ],
       "path": "/criminal-defense/probation-violation/"
     },
     {
-      "url": "http://127.0.0.1:43707/es/defensa-penal/violacion-de-libertad-condicional/",
+      "url": "http://127.0.0.1:33309/criminal-defense/theft/",
+      "performance": 100,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1886,
+      "cls": 0,
+      "tbtMs": 7,
+      "fcpMs": 761,
+      "totalKB": 143,
+      "jsKB": 0,
+      "cssKB": 11,
+      "imageKB": 30,
+      "fontKB": 90,
+      "requests": 9,
+      "failedRequests": 0,
+      "failedAudits": [],
+      "runs": [
+        100,
+        100,
+        100
+      ],
+      "path": "/criminal-defense/theft/"
+    },
+    {
+      "url": "http://127.0.0.1:33309/es/",
       "performance": 99,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 100,
-      "lcpMs": 1954,
+      "lcpMs": 1956,
       "cls": 0,
-      "tbtMs": 0,
-      "fcpMs": 754,
+      "tbtMs": 19,
+      "fcpMs": 759,
+      "totalKB": 178,
+      "jsKB": 0,
+      "cssKB": 11,
+      "imageKB": 64,
+      "fontKB": 90,
+      "requests": 10,
+      "failedRequests": 0,
+      "failedAudits": [],
+      "runs": [
+        99,
+        99,
+        99
+      ],
+      "path": "/es/"
+    },
+    {
+      "url": "http://127.0.0.1:33309/es/defensa-penal/violacion-de-libertad-condicional/",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1960,
+      "cls": 0,
+      "tbtMs": 16,
+      "fcpMs": 760,
       "totalKB": 156,
       "jsKB": 0,
       "cssKB": 11,
@@ -48,12 +123,12 @@
       "runs": [
         99,
         99,
-        100
+        99
       ],
       "path": "/es/defensa-penal/violacion-de-libertad-condicional/"
     },
     {
-      "url": "http://127.0.0.1:43707/family-law/paternity/",
+      "url": "http://127.0.0.1:33309/es/derecho-familiar/paternidad/",
       "performance": 99,
       "accessibility": 100,
       "bestPractices": 100,
@@ -61,32 +136,7 @@
       "lcpMs": 1955,
       "cls": 0,
       "tbtMs": 0,
-      "fcpMs": 755,
-      "totalKB": 164,
-      "jsKB": 0,
-      "cssKB": 11,
-      "imageKB": 51,
-      "fontKB": 90,
-      "requests": 9,
-      "failedRequests": 0,
-      "failedAudits": [],
-      "runs": [
-        99,
-        99,
-        100
-      ],
-      "path": "/family-law/paternity/"
-    },
-    {
-      "url": "http://127.0.0.1:43707/es/derecho-familiar/paternidad/",
-      "performance": 99,
-      "accessibility": 100,
-      "bestPractices": 100,
-      "seo": 100,
-      "lcpMs": 1963,
-      "cls": 0,
-      "tbtMs": 15,
-      "fcpMs": 763,
+      "fcpMs": 809,
       "totalKB": 165,
       "jsKB": 0,
       "cssKB": 11,
@@ -103,54 +153,29 @@
       "path": "/es/derecho-familiar/paternidad/"
     },
     {
-      "url": "http://127.0.0.1:43707/family-law/visitation/",
-      "performance": 100,
+      "url": "http://127.0.0.1:33309/family-law/paternity/",
+      "performance": 99,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 100,
-      "lcpMs": 1809,
+      "lcpMs": 1961,
       "cls": 0,
       "tbtMs": 0,
-      "fcpMs": 759,
-      "totalKB": 149,
+      "fcpMs": 761,
+      "totalKB": 164,
       "jsKB": 0,
       "cssKB": 11,
-      "imageKB": 35,
+      "imageKB": 51,
       "fontKB": 90,
       "requests": 9,
       "failedRequests": 0,
       "failedAudits": [],
       "runs": [
-        100,
-        100,
-        100
+        99,
+        99,
+        99
       ],
-      "path": "/family-law/visitation/"
-    },
-    {
-      "url": "http://127.0.0.1:43707/es/derecho-familiar/visitas/",
-      "performance": 100,
-      "accessibility": 100,
-      "bestPractices": 100,
-      "seo": 100,
-      "lcpMs": 1883,
-      "cls": 0,
-      "tbtMs": 0,
-      "fcpMs": 758,
-      "totalKB": 149,
-      "jsKB": 0,
-      "cssKB": 11,
-      "imageKB": 35,
-      "fontKB": 90,
-      "requests": 9,
-      "failedRequests": 0,
-      "failedAudits": [],
-      "runs": [
-        100,
-        100,
-        100
-      ],
-      "path": "/es/derecho-familiar/visitas/"
+      "path": "/family-law/paternity/"
     }
   ]
 }

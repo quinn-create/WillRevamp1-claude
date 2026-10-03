@@ -30,7 +30,7 @@ PASS  [en] honeypot filled: rejected
 PASS  [en] endpoint failure: error notice with phone, message kept, button re-enabled  ({"shown":true,"reason":true,"tel":true,"kept":"Test message from tools/form-test.mjs","enabled":true})
 PASS  [en] endpoint failure: one request made
 PASS  [en] success state replaces the form  ({"formHidden":true,"focused":true})
-PASS  [en] reaches the thank-you page (/thank-you/)  (http://127.0.0.1:45747/thank-you/)
+PASS  [en] reaches the thank-you page (/thank-you/)  (http://127.0.0.1:40313/thank-you/)
 PASS  [en] one POST to Web3Forms with Accept: application/json
 PASS  [en] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field  ({"access_key":"00000000-0000-4000-8000-00000000a21f","first_name":"Maria","last_name":"Lopez","name":"Maria Lopez","email":"maria@example.com","phone":"(615) 555-0100","best_time":"Morning","new_client":"Yes, I may be a new client","message":"Test message from tools/form-test.mjs","subject":"New message from willfraleylaw.com","language":"en","botcheck":""})
 PASS  [en] no page errors
@@ -50,7 +50,7 @@ PASS  [es] honeypot filled: rejected
 PASS  [es] endpoint failure: error notice with phone, message kept, button re-enabled  ({"shown":true,"reason":true,"tel":true,"kept":"Test message from tools/form-test.mjs","enabled":true})
 PASS  [es] endpoint failure: one request made
 PASS  [es] success state replaces the form  ({"formHidden":true,"focused":true})
-PASS  [es] reaches the thank-you page (/es/gracias/)  (http://127.0.0.1:45747/es/gracias/)
+PASS  [es] reaches the thank-you page (/es/gracias/)  (http://127.0.0.1:40313/es/gracias/)
 PASS  [es] one POST to Web3Forms with Accept: application/json
 PASS  [es] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field  ({"access_key":"00000000-0000-4000-8000-00000000a21f","first_name":"Maria","last_name":"Lopez","name":"Maria Lopez","email":"maria@example.com","phone":"(615) 555-0100","best_time":"Por la mañana","new_client":"Sí, podría ser un cliente nuevo","message":"Test message from tools/form-test.mjs","subject":"Nuevo mensaje desde willfraleylaw.com (español)","language":"es","botcheck":""})
 PASS  [es] no page errors
@@ -73,7 +73,7 @@ PASS  [en turnstile] Turnstile: submit without a token held back
 PASS  [en turnstile] endpoint failure: error notice with phone, message kept, button re-enabled  ({"shown":true,"reason":true,"tel":true,"kept":"Test message from tools/form-test.mjs","enabled":true})
 PASS  [en turnstile] endpoint failure: one request made
 PASS  [en turnstile] success state replaces the form  ({"formHidden":true,"focused":true})
-PASS  [en turnstile] reaches the thank-you page (/thank-you/)  (http://127.0.0.1:35349/thank-you/)
+PASS  [en turnstile] reaches the thank-you page (/thank-you/)  (http://127.0.0.1:38491/thank-you/)
 PASS  [en turnstile] one POST to Web3Forms with Accept: application/json
 PASS  [en turnstile] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field  ({"access_key":"00000000-0000-4000-8000-00000000a21f","first_name":"Maria","last_name":"Lopez","name":"Maria Lopez","email":"maria@example.com","phone":"(615) 555-0100","best_time":"Morning","new_client":"Yes, I may be a new client","message":"Test message from tools/form-test.mjs","subject":"New message from willfraleylaw.com","language":"en","botcheck":""})
 PASS  [en turnstile] payload carries the Turnstile token
@@ -95,7 +95,7 @@ PASS  [es turnstile] Turnstile: submit without a token held back
 PASS  [es turnstile] endpoint failure: error notice with phone, message kept, button re-enabled  ({"shown":true,"reason":true,"tel":true,"kept":"Test message from tools/form-test.mjs","enabled":true})
 PASS  [es turnstile] endpoint failure: one request made
 PASS  [es turnstile] success state replaces the form  ({"formHidden":true,"focused":true})
-PASS  [es turnstile] reaches the thank-you page (/es/gracias/)  (http://127.0.0.1:35349/es/gracias/)
+PASS  [es turnstile] reaches the thank-you page (/es/gracias/)  (http://127.0.0.1:38491/es/gracias/)
 PASS  [es turnstile] one POST to Web3Forms with Accept: application/json
 PASS  [es turnstile] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field  ({"access_key":"00000000-0000-4000-8000-00000000a21f","first_name":"Maria","last_name":"Lopez","name":"Maria Lopez","email":"maria@example.com","phone":"(615) 555-0100","best_time":"Por la mañana","new_client":"Sí, podría ser un cliente nuevo","message":"Test message from tools/form-test.mjs","subject":"Nuevo mensaje desde willfraleylaw.com (español)","language":"es","botcheck":""})
 PASS  [es turnstile] payload carries the Turnstile token

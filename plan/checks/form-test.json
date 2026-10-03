@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-03T16:52:55.587Z",
+  "ranAt": "2026-10-03T17:44:46.114Z",
   "passed": true,
   "failures": 0,
   "results": [
@@ -135,7 +135,7 @@
     {
       "name": "[en] reaches the thank-you page (/thank-you/)",
       "pass": true,
-      "detail": "http://127.0.0.1:45747/thank-you/"
+      "detail": "http://127.0.0.1:40313/thank-you/"
     },
     {
       "name": "[en] one POST to Web3Forms with Accept: application/json",
@@ -221,7 +221,7 @@
     {
       "name": "[es] reaches the thank-you page (/es/gracias/)",
       "pass": true,
-      "detail": "http://127.0.0.1:45747/es/gracias/"
+      "detail": "http://127.0.0.1:40313/es/gracias/"
     },
     {
       "name": "[es] one POST to Web3Forms with Accept: application/json",
@@ -315,7 +315,7 @@
     {
       "name": "[en turnstile] reaches the thank-you page (/thank-you/)",
       "pass": true,
-      "detail": "http://127.0.0.1:35349/thank-you/"
+      "detail": "http://127.0.0.1:38491/thank-you/"
     },
     {
       "name": "[en turnstile] one POST to Web3Forms with Accept: application/json",
@@ -409,7 +409,7 @@
     {
       "name": "[es turnstile] reaches the thank-you page (/es/gracias/)",
       "pass": true,
-      "detail": "http://127.0.0.1:35349/es/gracias/"
+      "detail": "http://127.0.0.1:38491/es/gracias/"
     },
     {
       "name": "[es turnstile] one POST to Web3Forms with Accept: application/json",

@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-03T17:41:26.826Z",
+  "at": "2026-10-03T18:21:11.746Z",
   "pass": true,
   "failed": 0,
   "results": [
@@ -7,6 +7,71 @@
       "name": "tools/check.mjs hash matches plan/CHECK-HASH",
       "pass": true,
       "detail": ""
+    },
+    {
+      "name": "qa 01-visual",
+      "pass": true,
+      "detail": "FAIL, explained in BLOCKED.md"
+    },
+    {
+      "name": "qa 02-lighthouse",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "qa 03-accessibility",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "qa 04-links",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "qa 05-content-parity",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "qa 06-copy-proof",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "qa 07-responsive",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "qa 08-forms",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "qa 09-seo",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "qa 10-build-console",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "Lighthouse numbers agree with qa/02 result",
+      "pass": true,
+      "detail": "0/58 pages under threshold"
+    },
+    {
+      "name": "axe numbers agree with qa/03 result",
+      "pass": true,
+      "detail": "0 pages with critical/serious"
+    },
+    {
+      "name": "link numbers agree with qa/04 result",
+      "pass": true,
+      "detail": "0 broken"
     },
     {
       "name": "dist/ exists",
