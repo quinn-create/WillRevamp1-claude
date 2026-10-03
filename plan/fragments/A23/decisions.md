@@ -42,3 +42,35 @@
   font dependency), `favicon.ico` (16/32/48), `apple-touch-icon.png` 180, `icon-192.png`, `icon-512.png`,
   `icon-maskable-512.png`, `site.webmanifest` (linked from Base). Replaces A19's interim stroke "W". Owner
   question about a square mark stays open (A02).
+
+## P800
+- **Lighthouse (mobile, simulated throttling, 1 run, `.cache/lh-p800.json`)** — perf/a11y/best-practices/SEO,
+  LCP, CLS, TBT: `/` 99/100/100/100, 1.96 s, 0, 0 ms · `/criminal-defense/dui/` 100/100/100/100, 1.88 s ·
+  `/es/` 99/100/100/100, 1.96 s · `/contact-us/` 100/100/100/100, 1.66 s. LCP is the H1 (text) on every page.
+  It is under 2.0 s with little margin. What is left is mostly the preloaded Newsreader file (66 KB). Trimming
+  it further would mean changing the type (one optical size, or no kerning), so it was not done.
+- **`tools/lighthouse.mjs` fix.** With `--dist`, the static server runs in the same process, and the old
+  `spawnSync` blocked its event loop. Every page timed out after 240 s, so no `--dist` run had ever worked.
+  It is now an async `execFile`, and the metrics and output format are unchanged.
+- **`tools/lib.mjs` `serve()` gzips text responses** (HTML, CSS, JS, JSON, XML, SVG, webmanifest) when the
+  client accepts gzip, because Cloudflare Pages compresses at the edge. Without this, local runs counted 46 KB
+  of raw HTML and 60 KB of raw CSS per page, when visitors get about 10 KB and 11 KB. Also added the
+  `.webmanifest` MIME type.
+- **Fonts.** `tools/fonts/subset-web.py` cuts the variable fonts down to the axis ranges the CSS uses, starting
+  from the Google Fonts originals in `mockups/A/public/fonts/`. Newsreader is wght 400–700 and opsz 32–60,
+  because every Newsreader rule sets opsz 32 or 60. Public Sans is wght 400–700. Sizes: Newsreader latin
+  129 → 66 KB, latin-ext 84 → 40 KB, Public Sans latin 26 → 23 KB. The latin / latin-ext unicode-range split
+  stays. The `@font-face` weight descriptors in `tokens.css` now read 400 700. The two latin files are still
+  preloaded.
+- **Images.** AVIF is now encoded at 0.7× the WebP quality (78 → 55) in `Image.astro`. Six 1280w hero AVIFs
+  were over the 200 KB budget (largest: paternity 343 KB, probation 302 KB). The largest is now 167 KB, and I
+  checked it visually. The LCP-image rules are unchanged: `priority` sets fetchpriority=high and eager on
+  practice and About heroes, and everything else is lazy. The home desk photo is eager without high priority,
+  because it sits below the fold on phones.
+- **CSS.** Moved the dev-only components-sheet specimen rules out of the global stylesheets into
+  `src/pages/_components.astro`. Removed 12 utility classes that nothing in `src/` uses (`mt-0`, `mt-2`,
+  `mt-16`, `mb-0`, `mb-4`, `mb-6`, `cluster`, `measure-narrow`, `rule-top`, `rule-bottom`, `container--form`,
+  `btn-block-phone`). Raised Vite `assetsInlineLimit` to 6 KB so the 4.1 KB template sheet is inlined: one
+  render-blocking request per page instead of two. `csp.mjs` hashes the inlined `<style>`. Total per page:
+  60,700 bytes (59.3 KiB) raw, about 11.5 KB gzipped (budget 60 KB). JS stays at 3.3 KB gzipped
+  (budget 50 KB). No third-party requests with tracking off.

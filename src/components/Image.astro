@@ -25,8 +25,12 @@ const { src, alt, sizes, widths = [320, 640, 960, 1280, 1920], ratio, position, 
 if (typeof alt !== 'string') throw new Error('Image.astro: alt is required ("" for decorative images)');
 const cap = Math.min(src.width, Math.max(...widths));
 const usable = [...new Set([...widths.filter((w) => w <= src.width), cap])].sort((a, b) => a - b);
+// AVIF reaches WebP's visual quality at a much lower setting; 0.7x keeps every 1280w hero under the
+// 200 KB AVIF budget (A23 P800) without visible loss on the generated scenes.
+const avifQuality = Math.round(quality * 0.7);
 const build = async (format: 'avif' | 'webp') => {
-  const out = await Promise.all(usable.map((w) => getImage({ src, width: w, format, quality })));
+  const q = format === 'avif' ? avifQuality : quality;
+  const out = await Promise.all(usable.map((w) => getImage({ src, width: w, format, quality: q })));
   return out.map((r, i) => `${r.src} ${usable[i]}w`).join(', ');
 };
 const avif = await build('avif');

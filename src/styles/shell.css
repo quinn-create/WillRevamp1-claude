@@ -17,7 +17,6 @@
   backdrop-filter: blur(var(--header-blur)) saturate(1.2);
   box-shadow: 0 var(--border-hairline) 0 var(--hairline-header); /* static hairline, no scroll animation */
 }
-.site-header--specimen { position: relative; }
 .header-inner { height: 100%; display: flex; align-items: center; gap: var(--header-gap-xs); }
 .brand { display: block; flex: none; border-radius: var(--radius-focus); line-height: 0; }
 .brand .logo img { width: var(--logo-width-phone-xs); height: auto; }
@@ -255,7 +254,6 @@ body:has(.menu-dialog[open]) .callbar { display: none; }
 .callbar__note::before { content: "· "; }
 @media (max-width: 23.4em) { .callbar__note { display: none; } }
 @media (min-width: 37.5em) { .callbar:not(.callbar--specimen) { display: none; } }
-.callbar--specimen { position: static; box-shadow: none; }
 @media (max-width: 37.49em) {
   html { scroll-padding-bottom: calc(var(--callbar-height) + var(--space-4)); }
   .site-footer { padding-bottom: calc(var(--space-10) + var(--callbar-height) + env(safe-area-inset-bottom)); }
@@ -326,5 +324,3 @@ body:has(.menu-dialog[open]) .callbar { display: none; }
 .status-links { display: flex; flex-wrap: wrap; gap: 0 var(--space-6); }
 .status-links a { display: inline-flex; align-items: center; min-height: var(--control-height); }
 
-/* Components sheet only (dev): static specimen of the menu panel */
-.menu-dialog--specimen { position: static; display: block; width: 100%; height: auto; max-height: none; overflow: visible; }

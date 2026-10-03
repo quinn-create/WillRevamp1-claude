@@ -20,7 +20,11 @@ for (const pg of plan.pages) {
 export default defineConfig({
   site: SITE,
   trailingSlash: 'always',
-  build: { format: 'directory' },
+  build: { format: 'directory', inlineStylesheets: 'auto' },
+  // A23 P800: Astro inlines a page stylesheet only when it is under Vite's assetsInlineLimit (default 4 KB);
+  // the template sheet (~4.1 KB) sat just over it and cost a second render-blocking request on every page.
+  // tools/csp.mjs hashes inlined <style> blocks into the CSP.
+  vite: { build: { assetsInlineLimit: 6144 } },
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'es'],

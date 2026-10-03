@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """A23 P700: static TTF instances of the brand fonts for build-time rendering (OG cards, favicon monogram).
 
-Source: the self-hosted variable WOFF2 files in public/fonts/ (downloaded once from Google Fonts in Stage 3,
+Source: the variable WOFF2 originals in mockups/A/public/fonts/ (downloaded once from Google Fonts in Stage 3,
 SIL Open Font License 1.1). Nothing is fetched here. Outputs, committed so the Node build needs no Python:
   tools/fonts/Newsreader-Display.ttf      wght 460, opsz 60  (= --weight-display / --opsz-display)
   tools/fonts/Newsreader-DisplayStrong.ttf wght 560, opsz 60 (= --weight-display-strong), monogram source
@@ -19,7 +19,8 @@ from fontTools.pens.transformPen import TransformPen
 from fontTools.pens.boundsPen import BoundsPen
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-FONTS = os.path.join(HERE, '..', '..', 'public', 'fonts')
+# Google Fonts originals (full axis ranges); public/fonts/ holds the trimmed web copies (subset-web.py).
+FONTS = os.path.join(HERE, '..', '..', 'mockups', 'A', 'public', 'fonts')
 
 
 def instance(src, axes, family, style, out):

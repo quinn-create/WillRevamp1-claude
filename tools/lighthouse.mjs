@@ -4,20 +4,25 @@
 // Usage:
 //   node tools/lighthouse.mjs --dist dist --out qa/lighthouse.json [--runs 3] [--paths /,/es/]
 //   node tools/lighthouse.mjs --url https://willfraleylaw.com/ --url ... --out audit/lighthouse-before.json
-import { spawnSync } from 'node:child_process';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+// Async on purpose: with --dist the static server runs in THIS process, and a synchronous spawn would block its
+// event loop so Lighthouse's page requests never get an answer (A23 P800 fix).
+const run = promisify(execFile);
 import { args, abs, serve, distPages, chromiumPath, writeJSON, readJSON } from './lib.mjs';
 
 const a = args();
 const runs = Number(a.runs || 1);
 const CHROME = process.env.CHROME_PATH || chromiumPath();
 
-function once(url) {
-  const r = spawnSync(abs('node_modules/.bin/lighthouse'), [
+async function once(url) {
+  const r = await run(abs('node_modules/.bin/lighthouse'), [
     url, '--output=json', '--output-path=stdout', '--quiet',
     '--only-categories=performance,accessibility,best-practices,seo',
     '--chrome-flags=--headless=new --no-sandbox --disable-gpu --ignore-certificate-errors',
     '--max-wait-for-load=90000',
-  ], { env: { ...process.env, CHROME_PATH: CHROME }, encoding: 'utf8', maxBuffer: 512 * 1024 * 1024, timeout: 240000 });
+  ], { env: { ...process.env, CHROME_PATH: CHROME }, encoding: 'utf8', maxBuffer: 512 * 1024 * 1024, timeout: 240000 })
+    .then((x) => ({ ...x, status: 0 }), (e) => ({ status: e.code ?? 1, stdout: e.stdout, stderr: e.stderr || e.message }));
   if (r.status !== 0 || !r.stdout) return { url, error: (r.stderr || 'lighthouse failed').split('\n').slice(-3).join(' ') };
   const j = JSON.parse(r.stdout);
   if (j.runtimeError) return { url, error: j.runtimeError.message };
@@ -62,7 +67,7 @@ async function main() {
   const out = [];
   for (const u of urls) {
     const rs = [];
-    for (let i = 0; i < runs; i++) rs.push(once(u));
+    for (let i = 0; i < runs; i++) rs.push(await once(u));
     const m = median(rs);
     if (server) m.path = u.slice(server.url.length);
     out.push(m);

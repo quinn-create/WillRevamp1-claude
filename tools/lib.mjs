@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import http from 'node:http';
+import zlib from 'node:zlib';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -131,6 +132,7 @@ const MIME = {
   '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.avif': 'image/avif', '.woff2': 'font/woff2',
   '.ico': 'image/x-icon', '.xml': 'application/xml', '.txt': 'text/plain', '.pdf': 'application/pdf',
+  '.webmanifest': 'application/manifest+json',
 };
 
 /** Parse a Cloudflare Pages _redirects file into [{from, to, status}]. */
@@ -172,7 +174,14 @@ export function serve(dir, port = 0) {
     for (const c of candidates) {
       const f = path.join(root, c);
       if (f.startsWith(root) && fs.existsSync(f) && fs.statSync(f).isFile()) {
-        res.writeHead(200, { 'content-type': MIME[path.extname(f)] || 'application/octet-stream' });
+        const type = MIME[path.extname(f)] || 'application/octet-stream';
+        // Cloudflare Pages compresses text responses at the edge; do the same so local Lighthouse runs measure
+        // the bytes a visitor actually downloads (A23 P800). Binary formats (woff2, images) are already compressed.
+        if (/^(text\/|application\/(javascript|json|xml|manifest\+json))|image\/svg/.test(type) && /\bgzip\b/.test(req.headers['accept-encoding'] || '')) {
+          res.writeHead(200, { 'content-type': type, 'content-encoding': 'gzip', vary: 'accept-encoding' });
+          return fs.createReadStream(f).pipe(zlib.createGzip()).pipe(res);
+        }
+        res.writeHead(200, { 'content-type': type });
         return fs.createReadStream(f).pipe(res);
       }
     }

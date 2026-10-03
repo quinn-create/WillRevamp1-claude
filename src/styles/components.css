@@ -106,7 +106,6 @@
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 .btn-block { width: 100%; }
-@media (max-width: 37.49em) { .btn-block-phone { width: 100%; } }
 
 /* Call CTA group: primary call + note + ghost "Send a short message" */
 .call-cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-5); }
@@ -669,14 +668,4 @@
 /* ================================================================== block directives (A22 styles their content) */
 .directive > .flow, .directive > * { max-width: var(--measure); }
 
-/* ================================================================== components sheet (dev only) */
-.sheet-section { padding-block: clamp(var(--space-12), 5vw, var(--space-16)); border-top: var(--border-hairline) solid var(--color-rule); }
-.sheet-section > h2 { font-size: var(--step-3); margin-bottom: var(--space-2); }
-.sheet-section > p { color: var(--color-text-muted); margin-bottom: var(--space-8); max-width: var(--measure); }
-.specimens { display: flex; flex-wrap: wrap; gap: var(--space-6) var(--space-8); align-items: flex-start; }
-.specimen { display: grid; gap: var(--space-3); justify-items: start; }
-.specimen__label { font-size: var(--text-fine); font-weight: var(--weight-text-strong); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--color-eyebrow); }
-.specimens--ink { padding: var(--space-8); background: var(--color-inverse-bg); border-radius: var(--radius); }
-.specimens--ink .specimen__label { color: var(--color-on-inverse-muted); }
-.sheet-grid { display: grid; gap: var(--space-6); }
-@media (min-width: 60em) { .sheet-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sheet-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* components sheet (dev only): its specimen styles live in src/pages/_components.astro (A23 P800: not shipped) */
