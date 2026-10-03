@@ -1,0 +1,432 @@
+{
+  "ranAt": "2026-10-03T14:19:21.106Z",
+  "passed": true,
+  "failures": 0,
+  "results": [
+    {
+      "name": "[en] off state: form renders",
+      "pass": true
+    },
+    {
+      "name": "[en] off state: no action, no submit button",
+      "pass": true
+    },
+    {
+      "name": "[en] off state: fields disabled (fieldset disabled)",
+      "pass": true
+    },
+    {
+      "name": "[en] off state: note with tel: and mailto:",
+      "pass": true
+    },
+    {
+      "name": "[en] off state: no access key, no Web3Forms or Turnstile reference",
+      "pass": true
+    },
+    {
+      "name": "[en] off state: non-confidentiality notice inside the form",
+      "pass": true
+    },
+    {
+      "name": "[es] off state: form renders",
+      "pass": true
+    },
+    {
+      "name": "[es] off state: no action, no submit button",
+      "pass": true
+    },
+    {
+      "name": "[es] off state: fields disabled (fieldset disabled)",
+      "pass": true
+    },
+    {
+      "name": "[es] off state: note with tel: and mailto:",
+      "pass": true
+    },
+    {
+      "name": "[es] off state: no access key, no Web3Forms or Turnstile reference",
+      "pass": true
+    },
+    {
+      "name": "[es] off state: non-confidentiality notice inside the form",
+      "pass": true
+    },
+    {
+      "name": "site.config.json restored with empty keys",
+      "pass": true
+    },
+    {
+      "name": "form script shipped (file or inline) on the contact page",
+      "pass": true,
+      "detail": "inline"
+    },
+    {
+      "name": "form script absent from pages without the form",
+      "pass": true
+    },
+    {
+      "name": "[en] Turnstile script absent",
+      "pass": true
+    },
+    {
+      "name": "[en] form has the Web3Forms action and the dummy key",
+      "pass": true
+    },
+    {
+      "name": "[en] non-confidentiality notice directly above Submit",
+      "pass": true
+    },
+    {
+      "name": "[en] empty submit: specific errors on first, last, phone",
+      "pass": true,
+      "detail": "{\"first\":\"Enter your first name.\",\"last\":\"Enter your last name.\",\"phone\":\"Enter your phone number so the office can call you back.\",\"email\":\"\",\"message\":\"\"}"
+    },
+    {
+      "name": "[en] empty submit: optional fields not flagged",
+      "pass": true
+    },
+    {
+      "name": "[en] empty submit: error summary shown, focused, links to fields",
+      "pass": true,
+      "detail": "{\"shown\":true,\"focused\":true,\"links\":[\"#cf-first\",\"#cf-last\",\"#cf-phone\"]}"
+    },
+    {
+      "name": "[en] empty submit: aria-invalid on the three fields",
+      "pass": true
+    },
+    {
+      "name": "[en] empty submit: no request sent",
+      "pass": true
+    },
+    {
+      "name": "[en] blur: invalid email flagged with specific copy",
+      "pass": true
+    },
+    {
+      "name": "[en] input: error clears when fixed",
+      "pass": true
+    },
+    {
+      "name": "[en] blur: short phone flagged",
+      "pass": true
+    },
+    {
+      "name": "[en] time-trap: submit < 3 s rejected",
+      "pass": true
+    },
+    {
+      "name": "[en] honeypot filled: rejected",
+      "pass": true
+    },
+    {
+      "name": "[en] endpoint failure: error notice with phone, message kept, button re-enabled",
+      "pass": true,
+      "detail": "{\"shown\":true,\"reason\":true,\"tel\":true,\"kept\":\"Test message from tools/form-test.mjs\",\"enabled\":true}"
+    },
+    {
+      "name": "[en] endpoint failure: one request made",
+      "pass": true
+    },
+    {
+      "name": "[en] success state replaces the form",
+      "pass": true,
+      "detail": "{\"formHidden\":true,\"focused\":true}"
+    },
+    {
+      "name": "[en] reaches the thank-you page (/thank-you/)",
+      "pass": true,
+      "detail": "http://127.0.0.1:42451/thank-you/"
+    },
+    {
+      "name": "[en] one POST to Web3Forms with Accept: application/json",
+      "pass": true
+    },
+    {
+      "name": "[en] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field",
+      "pass": true,
+      "detail": "{\"access_key\":\"00000000-0000-4000-8000-00000000a21f\",\"first_name\":\"Maria\",\"last_name\":\"Lopez\",\"name\":\"Maria Lopez\",\"email\":\"maria@example.com\",\"phone\":\"(615) 555-0100\",\"best_time\":\"Morning\",\"new_client\":\"Yes, I may be a new client\",\"message\":\"Test message from tools/form-test.mjs\",\"subject\":\"New message from willfraleylaw.com\",\"language\":\"en\",\"botcheck\":\"\"}"
+    },
+    {
+      "name": "[en] no page errors",
+      "pass": true
+    },
+    {
+      "name": "[es] Turnstile script absent",
+      "pass": true
+    },
+    {
+      "name": "[es] form has the Web3Forms action and the dummy key",
+      "pass": true
+    },
+    {
+      "name": "[es] non-confidentiality notice directly above Submit",
+      "pass": true
+    },
+    {
+      "name": "[es] empty submit: specific errors on first, last, phone",
+      "pass": true,
+      "detail": "{\"first\":\"Escriba su nombre.\",\"last\":\"Escriba su apellido.\",\"phone\":\"Escriba su número de teléfono para que la oficina pueda llamarle.\",\"email\":\"\",\"message\":\"\"}"
+    },
+    {
+      "name": "[es] empty submit: optional fields not flagged",
+      "pass": true
+    },
+    {
+      "name": "[es] empty submit: error summary shown, focused, links to fields",
+      "pass": true,
+      "detail": "{\"shown\":true,\"focused\":true,\"links\":[\"#cf-first\",\"#cf-last\",\"#cf-phone\"]}"
+    },
+    {
+      "name": "[es] empty submit: aria-invalid on the three fields",
+      "pass": true
+    },
+    {
+      "name": "[es] empty submit: no request sent",
+      "pass": true
+    },
+    {
+      "name": "[es] blur: invalid email flagged with specific copy",
+      "pass": true
+    },
+    {
+      "name": "[es] input: error clears when fixed",
+      "pass": true
+    },
+    {
+      "name": "[es] blur: short phone flagged",
+      "pass": true
+    },
+    {
+      "name": "[es] time-trap: submit < 3 s rejected",
+      "pass": true
+    },
+    {
+      "name": "[es] honeypot filled: rejected",
+      "pass": true
+    },
+    {
+      "name": "[es] endpoint failure: error notice with phone, message kept, button re-enabled",
+      "pass": true,
+      "detail": "{\"shown\":true,\"reason\":true,\"tel\":true,\"kept\":\"Test message from tools/form-test.mjs\",\"enabled\":true}"
+    },
+    {
+      "name": "[es] endpoint failure: one request made",
+      "pass": true
+    },
+    {
+      "name": "[es] success state replaces the form",
+      "pass": true,
+      "detail": "{\"formHidden\":true,\"focused\":true}"
+    },
+    {
+      "name": "[es] reaches the thank-you page (/es/gracias/)",
+      "pass": true,
+      "detail": "http://127.0.0.1:42451/es/gracias/"
+    },
+    {
+      "name": "[es] one POST to Web3Forms with Accept: application/json",
+      "pass": true
+    },
+    {
+      "name": "[es] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field",
+      "pass": true,
+      "detail": "{\"access_key\":\"00000000-0000-4000-8000-00000000a21f\",\"first_name\":\"Maria\",\"last_name\":\"Lopez\",\"name\":\"Maria Lopez\",\"email\":\"maria@example.com\",\"phone\":\"(615) 555-0100\",\"best_time\":\"Por la mañana\",\"new_client\":\"Sí, podría ser un cliente nuevo\",\"message\":\"Test message from tools/form-test.mjs\",\"subject\":\"Nuevo mensaje desde willfraleylaw.com (español)\",\"language\":\"es\",\"botcheck\":\"\"}"
+    },
+    {
+      "name": "[es] no page errors",
+      "pass": true
+    },
+    {
+      "name": "site.config.json restored with empty keys",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] Turnstile script loaded",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] form has the Web3Forms action and the dummy key",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] non-confidentiality notice directly above Submit",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] empty submit: specific errors on first, last, phone",
+      "pass": true,
+      "detail": "{\"first\":\"Enter your first name.\",\"last\":\"Enter your last name.\",\"phone\":\"Enter your phone number so the office can call you back.\",\"email\":\"\",\"message\":\"\"}"
+    },
+    {
+      "name": "[en turnstile] empty submit: optional fields not flagged",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] empty submit: error summary shown, focused, links to fields",
+      "pass": true,
+      "detail": "{\"shown\":true,\"focused\":true,\"links\":[\"#cf-first\",\"#cf-last\",\"#cf-phone\"]}"
+    },
+    {
+      "name": "[en turnstile] empty submit: aria-invalid on the three fields",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] empty submit: no request sent",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] blur: invalid email flagged with specific copy",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] input: error clears when fixed",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] blur: short phone flagged",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] time-trap: submit < 3 s rejected",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] honeypot filled: rejected",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] Turnstile: submit without a token held back",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] endpoint failure: error notice with phone, message kept, button re-enabled",
+      "pass": true,
+      "detail": "{\"shown\":true,\"reason\":true,\"tel\":true,\"kept\":\"Test message from tools/form-test.mjs\",\"enabled\":true}"
+    },
+    {
+      "name": "[en turnstile] endpoint failure: one request made",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] success state replaces the form",
+      "pass": true,
+      "detail": "{\"formHidden\":true,\"focused\":true}"
+    },
+    {
+      "name": "[en turnstile] reaches the thank-you page (/thank-you/)",
+      "pass": true,
+      "detail": "http://127.0.0.1:44183/thank-you/"
+    },
+    {
+      "name": "[en turnstile] one POST to Web3Forms with Accept: application/json",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field",
+      "pass": true,
+      "detail": "{\"access_key\":\"00000000-0000-4000-8000-00000000a21f\",\"first_name\":\"Maria\",\"last_name\":\"Lopez\",\"name\":\"Maria Lopez\",\"email\":\"maria@example.com\",\"phone\":\"(615) 555-0100\",\"best_time\":\"Morning\",\"new_client\":\"Yes, I may be a new client\",\"message\":\"Test message from tools/form-test.mjs\",\"subject\":\"New message from willfraleylaw.com\",\"language\":\"en\",\"botcheck\":\"\"}"
+    },
+    {
+      "name": "[en turnstile] payload carries the Turnstile token",
+      "pass": true
+    },
+    {
+      "name": "[en turnstile] no page errors",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] Turnstile script loaded",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] form has the Web3Forms action and the dummy key",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] non-confidentiality notice directly above Submit",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] empty submit: specific errors on first, last, phone",
+      "pass": true,
+      "detail": "{\"first\":\"Escriba su nombre.\",\"last\":\"Escriba su apellido.\",\"phone\":\"Escriba su número de teléfono para que la oficina pueda llamarle.\",\"email\":\"\",\"message\":\"\"}"
+    },
+    {
+      "name": "[es turnstile] empty submit: optional fields not flagged",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] empty submit: error summary shown, focused, links to fields",
+      "pass": true,
+      "detail": "{\"shown\":true,\"focused\":true,\"links\":[\"#cf-first\",\"#cf-last\",\"#cf-phone\"]}"
+    },
+    {
+      "name": "[es turnstile] empty submit: aria-invalid on the three fields",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] empty submit: no request sent",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] blur: invalid email flagged with specific copy",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] input: error clears when fixed",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] blur: short phone flagged",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] time-trap: submit < 3 s rejected",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] honeypot filled: rejected",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] Turnstile: submit without a token held back",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] endpoint failure: error notice with phone, message kept, button re-enabled",
+      "pass": true,
+      "detail": "{\"shown\":true,\"reason\":true,\"tel\":true,\"kept\":\"Test message from tools/form-test.mjs\",\"enabled\":true}"
+    },
+    {
+      "name": "[es turnstile] endpoint failure: one request made",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] success state replaces the form",
+      "pass": true,
+      "detail": "{\"formHidden\":true,\"focused\":true}"
+    },
+    {
+      "name": "[es turnstile] reaches the thank-you page (/es/gracias/)",
+      "pass": true,
+      "detail": "http://127.0.0.1:44183/es/gracias/"
+    },
+    {
+      "name": "[es turnstile] one POST to Web3Forms with Accept: application/json",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field",
+      "pass": true,
+      "detail": "{\"access_key\":\"00000000-0000-4000-8000-00000000a21f\",\"first_name\":\"Maria\",\"last_name\":\"Lopez\",\"name\":\"Maria Lopez\",\"email\":\"maria@example.com\",\"phone\":\"(615) 555-0100\",\"best_time\":\"Por la mañana\",\"new_client\":\"Sí, podría ser un cliente nuevo\",\"message\":\"Test message from tools/form-test.mjs\",\"subject\":\"Nuevo mensaje desde willfraleylaw.com (español)\",\"language\":\"es\",\"botcheck\":\"\"}"
+    },
+    {
+      "name": "[es turnstile] payload carries the Turnstile token",
+      "pass": true
+    },
+    {
+      "name": "[es turnstile] no page errors",
+      "pass": true
+    }
+  ]
+}

@@ -78,6 +78,8 @@ const isJumpList = (x: CopySection) => x.hint === 'prose' && x.blocks.length ===
 const isRelated = (x: CopySection) => x.hint === 'prose' && !isJumpList(x) && x.blocks.length === 1 && x.blocks[0].type === 'ul' && x.blocks[0].items.every(isLinkItem);
 const contactCards = template === 'contact' ? body.find((x) => x.hint === 'cards') : undefined;
 const formSection = template === 'contact' ? prose.find((x) => /message|mensaje/i.test(x.h2 || '')) : undefined;
+// The copy's non-confidentiality paragraph (law-firm rule 8) moves into the form, directly above Submit (A21).
+const isFormNotice = (b: Block) => b.type === 'p' && /attorney-client|abogado y cliente/i.test(b.md);
 const whySection = template === 'home' ? prose[0] : undefined;
 const spanishSection = template === 'home' ? prose[1] : undefined;
 const katieSection = template === 'about' ? prose.find((x) => /Katie Fults/.test(x.h2 || '')) : undefined;
@@ -283,9 +285,9 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
               <div class="form-split">
                 <div class="form-split__main">
                   <SectionHead h2={x.h2!} lang={lang} />
-                  <Blocks blocks={x.blocks} lang={lang} class="mt-6" />
+                  <Blocks blocks={ContactForm ? x.blocks.filter((b) => !isFormNotice(b)) : x.blocks} lang={lang} class="mt-6" />
                   {ContactForm ? (
-                    <div class="mt-8"><ContactForm lang={lang} /></div>
+                    <div class="mt-8"><ContactForm lang={lang} notice={x.blocks.filter(isFormNotice)} /></div>
                   ) : (
                     <Notice class="mt-8" title={s.formOffTitle} data-form-off>
                       <p set:html={esc(s.formOff('§TEL§', '§MAIL§')).replace('§TEL§', `<a class="tel" href="${firm.tel.value}">${firm.phone.value}</a>`).replace('§MAIL§', `<a href="${firm.mailto.value}">${firm.email.value}</a>`)} />

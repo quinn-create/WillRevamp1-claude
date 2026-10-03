@@ -1,0 +1,185 @@
+---
+// Contact form (DESIGN-SYSTEM 7.9; A21 / P500). The 7 fields of inventory/forms.json gform_1 with plain labels,
+// labels above 48 px fields, helper text, inline validation on blur (contact-form.ts), error summary, a
+// success state that replaces the form, and a failure notice that keeps the typed message.
+// Spam: honeypot ("botcheck", also honored by Web3Forms server side) + 3 s time-trap, always; Cloudflare
+// Turnstile only when site.config.json forms.turnstileSiteKey is set (its script is loaded only then).
+// OFF until site.config.json forms.web3formsAccessKey is set: the fields render disabled, there is no submit
+// and no action, and a note gives the phone (tel:) and email (mailto:). No request ever leaves the page.
+// `notice`: the copy's non-confidentiality paragraph (law-firm rule 8), rendered directly above Submit.
+import { config, firm, pageByPath, pathIn, SITE_URL, type Lang } from '../../lib/site';
+import type { Block } from '../../lib/copy';
+import Blocks from '../Blocks.astro';
+import Icon from '../Icon.astro';
+import Notice from '../Notice.astro';
+import { FORM_TEXT, type FieldText } from './strings';
+
+interface Props { lang?: Lang; notice?: Block[] }
+const { lang = 'en', notice } = Astro.props;
+const t = FORM_TEXT[lang];
+const key = (config.forms.web3formsAccessKey || '').trim();
+const turnstile = (config.forms.turnstileSiteKey || '').trim();
+const on = key.length > 0;
+const thanks = pathIn(pageByPath('/thank-you/')!, lang);
+const privacy = pathIn(pageByPath('/privacy-policy/')!, lang);
+const p = 'cf'; // id prefix (one form per page)
+const tel = { href: firm.tel.value, text: firm.phone.value };
+const mail = { href: firm.mailto.value, text: firm.email.value };
+
+type Def = { id: string; name: string; text: FieldText; kind: 'input' | 'select' | 'textarea'; type?: string; required?: boolean; autocomplete?: string; inputmode?: string; options?: string[]; choose?: string };
+const defs: Record<string, Def> = {
+  first: { id: `${p}-first`, name: 'first_name', text: t.first, kind: 'input', type: 'text', required: true, autocomplete: 'given-name' },
+  last: { id: `${p}-last`, name: 'last_name', text: t.last, kind: 'input', type: 'text', required: true, autocomplete: 'family-name' },
+  email: { id: `${p}-email`, name: 'email', text: t.email, kind: 'input', type: 'email', autocomplete: 'email', inputmode: 'email' },
+  phone: { id: `${p}-phone`, name: 'phone', text: t.phone, kind: 'input', type: 'tel', required: true, autocomplete: 'tel', inputmode: 'tel' },
+  time: { id: `${p}-time`, name: 'best_time', text: t.time, kind: 'select', options: t.time.options, choose: t.time.choose },
+  client: { id: `${p}-client`, name: 'new_client', text: t.client, kind: 'select', options: t.client.options, choose: t.client.choose },
+  message: { id: `${p}-message`, name: 'message', text: t.message, kind: 'textarea' },
+};
+const describedBy = (d: Def) => [d.text.help && `${d.id}-help`, `${d.id}-err`].filter(Boolean).join(' ');
+const attrs = (d: Def) => ({
+  id: d.id,
+  name: d.name,
+  required: d.required || undefined,
+  'aria-describedby': describedBy(d),
+  'data-v': '',
+  'data-required': d.text.required,
+  'data-invalid': d.text.invalid,
+});
+const row = (...k: string[]) => k.map((x) => defs[x]);
+---
+<div class="contact-form-wrap">
+  <form
+    class="form contact-form"
+    data-contact-form
+    data-thanks={thanks}
+    data-success={`${p}-success`}
+    action={on ? 'https://api.web3forms.com/submit' : undefined}
+    method="post"
+    aria-labelledby={`${p}-legend`}
+  >
+    {!on && (
+      <Notice title={t.offTitle} data-form-off>
+        <p>{t.off[0]}<a class="tel" href={tel.href}>{tel.text}</a>{t.off[1]}<a href={mail.href}>{mail.text}</a>{t.off[2]}</p>
+      </Notice>
+    )}
+
+    <div class="notice notice--error error-summary" data-summary role="alert" tabindex="-1" hidden>
+      <Icon name="circle-alert" />
+      <div class="notice__body">
+        <p class="notice__title">{t.summaryTitle}</p>
+        <ul></ul>
+      </div>
+    </div>
+
+    <fieldset class="contact-form__fields" disabled={!on || undefined}>
+      <legend id={`${p}-legend`} class="visually-hidden">{t.legend}</legend>
+      <p class="help contact-form__intro">{t.intro}</p>
+
+      {on && (
+        <Fragment>
+          <input type="hidden" name="access_key" value={key} />
+          <input type="hidden" name="subject" value={t.subject} />
+          <input type="hidden" name="from_name" value="willfraleylaw.com" />
+          <input type="hidden" name="language" value={lang} />
+          <input type="hidden" name="redirect" value={`${SITE_URL}${thanks}`} />
+        </Fragment>
+      )}
+      <div class="contact-form__hp" aria-hidden="true">
+        <label for={`${p}-hp`}>{t.honeypot}</label>
+        <input type="text" id={`${p}-hp`} name="botcheck" tabindex="-1" autocomplete="off" />
+      </div>
+
+      {[row('first', 'last'), row('email', 'phone'), row('time', 'client'), row('message')].map((r) => (
+        <div class:list={['form-row', { 'form-row--2': r.length === 2 }]}>
+          {r.map((d) => (
+            <div class:list={['field', { 'is-disabled': !on }]}>
+              <label for={d.id}>{d.text.label}{!d.required && <Fragment> <span class="opt">{t.optional}</span></Fragment>}</label>
+              {d.text.help && <p class="help" id={`${d.id}-help`}>{d.text.help}</p>}
+              {d.kind === 'input' && (
+                <input class="input" type={d.type} autocomplete={d.autocomplete} inputmode={d.inputmode as any} spellcheck={d.type === 'email' ? 'false' : undefined}
+                  pattern={d.type === 'tel' ? '[0-9 \\(\\)\\+\\.\\-]{10,24}' : undefined} maxlength={d.type === 'tel' ? 24 : 120} {...attrs(d)} />
+              )}
+              {d.kind === 'select' && (
+                <div class="select-wrap">
+                  <select class="select" {...attrs(d)}>
+                    <option value="">{d.choose}</option>
+                    {d.options!.map((o) => <option>{o}</option>)}
+                  </select>
+                  <Icon name="chevron-down" />
+                </div>
+              )}
+              {d.kind === 'textarea' && <textarea class="textarea" rows="5" maxlength="600" {...attrs(d)}></textarea>}
+              <p class="error-msg" id={`${d.id}-err`} hidden><Icon name="circle-alert" /><span></span></p>
+            </div>
+          ))}
+        </div>
+      ))}
+
+      {on && turnstile && (
+        <Fragment>
+          <div class="cf-turnstile" data-sitekey={turnstile} data-language={lang} data-theme="light"></div>
+          <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        </Fragment>
+      )}
+
+      <Notice class="contact-form__notice" data-confidentiality>
+        {notice && notice.length ? (
+          <Blocks blocks={notice} lang={lang} flow={false} />
+        ) : (
+          <p><strong>{t.notice}</strong> {t.noticeBody} {t.noticeSee} <a href={privacy}>{t.privacy}</a>.</p>
+        )}
+      </Notice>
+
+      <div class="notice notice--error" data-fail role="alert" tabindex="-1" hidden
+        data-net={t.network} data-fast={t.tooFast} data-spam={t.spam} data-captcha={t.captcha}>
+        <Icon name="circle-alert" />
+        <div class="notice__body flow">
+          <p class="notice__title">{t.failTitle}</p>
+          <p data-fail-reason></p>
+          <p>{t.fail[0]}<a class="tel" href={tel.href}>{tel.text}</a>{t.fail[1]}</p>
+        </div>
+      </div>
+
+      {on && (
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit" data-sending={t.sending}>
+            <Icon name="send" class="contact-form__send" />
+            <Icon name="loader-circle" class="spinner" />
+            <span class="btn__label">{t.submit}</span>
+          </button>
+          <p class="contact-form__call">{t.orCall} <a class="tel" href={tel.href}>{tel.text}</a></p>
+        </div>
+      )}
+    </fieldset>
+  </form>
+
+  {on && (
+    <div class="notice notice--success contact-form__success" id={`${p}-success`} role="status" tabindex="-1" hidden>
+      <Icon name="circle-check" />
+      <div class="notice__body flow">
+        <p class="notice__title">{t.successTitle}</p>
+        <p>{t.success}</p>
+      </div>
+    </div>
+  )}
+</div>
+
+{on && <script src="./contact-form.ts"></script>}
+
+<style>
+  .contact-form__fields { display: grid; gap: var(--space-6); min-width: 0; margin: 0; padding: 0; border: 0; }
+  .contact-form__intro { margin: 0; }
+  /* Honeypot: off-screen (not display:none, which some bots skip), out of the tab order, hidden from AT. */
+  .contact-form__hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+  .contact-form { position: relative; }
+  .contact-form__call { margin: 0; font-size: var(--text-small); }
+  .contact-form__call a { font-weight: var(--weight-text-strong); white-space: nowrap; }
+  /* Icons come from Icon.astro (no scope attribute), hence :global. */
+  .btn :global(.spinner) { display: none; }
+  .btn.is-loading :global(.spinner) { display: inline-block; }
+  .btn.is-loading :global(.contact-form__send) { display: none; }
+  .btn:disabled.is-loading { opacity: 1; cursor: progress; }
+  .error-summary ul { margin: var(--space-2) 0 0; }
+  @media (max-width: 37.49em) { .form-actions .btn { width: 100%; } }
+</style>
