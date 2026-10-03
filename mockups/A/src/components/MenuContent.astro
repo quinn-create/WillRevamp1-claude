@@ -1,0 +1,45 @@
+---
+// Contents of the mobile menu. Used inside the real <dialog> and, as a static specimen, on the
+// components sheet.
+import fs from 'node:fs';
+import path from 'node:path';
+import { ROOT } from '../lib/copy.mjs';
+import Icon from './Icon.astro';
+
+interface Props { current?: string; specimen?: boolean }
+const { current = '/', specimen = false } = Astro.props;
+const sitemap = JSON.parse(fs.readFileSync(path.join(ROOT, 'plan', 'sitemap.json'), 'utf8'));
+const nav = sitemap.nav.slice(0, 6);
+const isActive = (item: any) =>
+  current === item.path || (item.path !== '/' && current.startsWith(item.path)) || (item.children || []).some((c: any) => c.path === current);
+---
+<div class="menu-dialog__top">
+  <a class="brand" href="/" aria-label="Will Fraley, Attorney at Law: home">
+    <img src="/img/logo-wordmark.webp" width="400" height="42" alt="Will Fraley, Attorney at Law" />
+  </a>
+  <button class="menu-close" type="button" data-menu-close={specimen ? undefined : ''}>
+    <Icon name="x" />
+    <span class="visually-hidden">Close menu</span>
+  </button>
+</div>
+<nav aria-label={specimen ? 'Menu (specimen)' : 'Menu'}>
+  <ul class="menu-list">
+    {nav.map((item: any) => (
+      <li>
+        <a class="menu-link" href={item.path} aria-current={isActive(item) ? 'page' : undefined}>{item.label}</a>
+        {item.children && (
+          <ul class="menu-sub">
+            {item.children.filter((c: any) => c.path !== item.path).map((c: any) => (
+              <li><a href={c.path}>{c.label}</a></li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))}
+  </ul>
+</nav>
+<div class="menu-dialog__foot">
+  <a class="btn btn-primary btn-call btn-block" href="tel:+16154107290"><Icon name="phone" /><span>Call (615) 410-7290</span></a>
+  <p class="menu-note">Free consultation · <span lang="es">Se habla español</span></p>
+  <a class="lang-toggle lang-toggle--block" href="/es/" hreflang="es" lang="es"><Icon name="languages" /> Ver en español</a>
+</div>

@@ -1,0 +1,24 @@
+---
+// [faq]: native <details>, heading left / questions right on wide screens.
+import { splitH3, inline } from '../lib/copy.mjs';
+import Blocks from './Blocks.astro';
+import Icon from './Icon.astro';
+import SectionHead from './SectionHead.astro';
+interface Props { section: any; eyebrow?: string }
+const { section, eyebrow = 'FAQ' } = Astro.props;
+const { intro, items } = splitH3(section.blocks);
+---
+<div class="split">
+  <div class="split__aside">
+    <SectionHead h2={section.h2} eyebrow={eyebrow} />
+    {intro.length > 0 && <Blocks blocks={intro} />}
+  </div>
+  <div class="split__main faq">
+    {items.map((q: any, i: number) => (
+      <details class="faq__item" open={i === 0}>
+        <summary><h3 class="faq__q" set:html={inline(q.title)} /><Icon name="chevron-down" class="faq__chev" /></summary>
+        <Blocks blocks={q.blocks} class="faq__a" />
+      </details>
+    ))}
+  </div>
+</div>

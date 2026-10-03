@@ -1,0 +1,9 @@
+---
+import { inline, slugify } from '../lib/copy.mjs';
+interface Props { h2: string; eyebrow?: string; eyebrowLang?: string; id?: string }
+const { h2, eyebrow, eyebrowLang, id } = Astro.props;
+---
+<div class="sec-head">
+  {eyebrow && <p class="eyebrow" lang={eyebrowLang}>{eyebrow}</p>}
+  <h2 id={id || slugify(h2)} set:html={inline(h2)} />
+</div>

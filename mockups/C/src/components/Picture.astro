@@ -1,0 +1,22 @@
+---
+// Responsive <picture>: AVIF + WebP srcsets from public/img/<name>-<w>.<fmt>. Width/height reserve the box.
+// Never lists a width larger than the source file (the prep script never upscales).
+import images from '../lib/images.json';
+interface Props { name: string; alt: string; sizes: string; priority?: boolean; eagerLow?: boolean; class?: string; pos?: string }
+const { name, alt, sizes, priority = false, eagerLow = false, class: cls = '', pos } = Astro.props;
+const key = { 'will-desk': 'willDesk', 'will-door': 'willDoor' }[name] || name;
+const rec = images[key];
+const widths = rec.widths;
+const biggest = widths.reduce((a, b) => (b.w > a.w ? b : a));
+const fallback = widths.find((x) => x.w >= 960) || biggest;
+const srcset = (fmt) => widths.map((x) => `/img/${name}-${x.w}.${fmt} ${x.w}w`).join(', ');
+const style = pos ? `object-position:${pos}` : undefined;
+// Built as a string so an empty alt renders as alt="" (Astro would print a bare `alt`).
+const attr = (v) => String(v).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+const imgTag = `<img src="/img/${name}-${fallback.w}.webp" width="${fallback.w}" height="${fallback.h}" alt="${attr(alt)}" sizes="${attr(sizes)}" loading="${priority || eagerLow ? 'eager' : 'lazy'}" decoding="${priority || eagerLow ? 'sync' : 'async'}"${priority ? ' fetchpriority="high"' : eagerLow ? ' fetchpriority="low"' : ''}${style ? ` style="${attr(style)}"` : ''}>`;
+---
+<picture class={cls}>
+  <source type="image/avif" srcset={srcset('avif')} sizes={sizes} />
+  <source type="image/webp" srcset={srcset('webp')} sizes={sizes} />
+  <Fragment set:html={imgTag} />
+</picture>

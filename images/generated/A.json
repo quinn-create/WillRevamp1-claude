@@ -1,0 +1,200 @@
+[
+  {
+    "slot": "practice",
+    "set": "A",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "3:2",
+    "job": "cf530bdb-68a6-40d6-81ce-3ce612d2e0dc",
+    "reference": "inventory/assets/mainstage-v1-img.webp",
+    "prompt": "Editorial interior photograph of an empty upstairs corridor in a historic Southern county courthouse in Middle Tennessee, mid-morning. A worn pale marble terrazzo floor runs into a long one-point perspective toward a closed pair of tall paneled wooden doors with dull brass handles, the vanishing point slightly right of center. Tall arched multi-pane windows line the right wall and lay long soft window-shaped patches of daylight across the floor. Plain honey-brown wooden benches stand empty against the left wall, which is calm, plain plaster in cool grey-blue, so the left third crops cleanly. Bare walls: no seals, no plaques, no notices, no frames. Palette: cool grey-blue daylight on the walls, warm paper-white window light, worn honey-brown wood, blue-black ink shadow at the far end, a dull brass glint on the door hardware. Shot on a 40 mm lens at standing eye height, corrected verticals, medium depth of field, fine natural grain, low saturation. Mood: gravity, order, stillness, patience; serious but never threatening, no bars, no cells, no police imagery. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_121514_cf530bdb-68a6-40d6-81ce-3ce612d2e0dc.png",
+    "master": "images/generated/A/practice.png",
+    "width": 2528,
+    "height": 1696,
+    "variants": [
+      {
+        "file": "images/generated/A/practice-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 11938
+      },
+      {
+        "file": "images/generated/A/practice-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 15672
+      },
+      {
+        "file": "images/generated/A/practice-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 22211
+      },
+      {
+        "file": "images/generated/A/practice-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 28856
+      },
+      {
+        "file": "images/generated/A/practice-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 34076
+      },
+      {
+        "file": "images/generated/A/practice-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 43424
+      },
+      {
+        "file": "images/generated/A/practice-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 65774
+      },
+      {
+        "file": "images/generated/A/practice-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 87854
+      }
+    ],
+    "createdAt": "2026-10-03T12:17:05.935Z"
+  },
+  {
+    "slot": "hero",
+    "set": "A",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "16:9",
+    "job": "0d0c9939-45b5-4cb0-94fc-c86faec6fba9",
+    "reference": "inventory/assets/mainstage-v1-img.webp",
+    "prompt": "Wide editorial architectural photograph of a historic courthouse square in a small Middle Tennessee town just after sunrise under high thin overcast. In the right two-thirds of the frame: a pale limestone civic building with tall fluted columns and a plain blank pediment, beside a row of two-story red-brick storefronts with ornate painted cornices and tall multi-pane upper windows; storefront glass is plain and dark, reflecting only soft sky. Empty brick sidewalk and empty street in the foreground, one dark iron lamp post with a faint touch of aged brass. The left third of the frame is quiet and natural: open pale sky over a low, distant line of bare-branched trees and a broad empty plaza of pale paving, free of detail, leaving room for a headline; no blank walls. The top 35 percent is calm, even, pale sky. Soft directional light from the left, deep cool blue-grey shade on the right-hand facades. Palette: warm paper-white stone, muted mid-blue sky and shade, blue-black ink in the deepest shadows, softened low-saturation brick red, a whisper of aged brass. Shot on a 35 mm shift lens at eye level, corrected verticals, horizon in the lower third, gentle depth, fine detail, no wide-angle distortion, no vehicles, no flags. The facades carry no plaques, no placards, no notices, no boards and no carved inscriptions of any kind. Composed, civic, quiet and unhurried, like the opening plate of a book. Generic architecture, not a recognizable landmark. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_122158_0d0c9939-45b5-4cb0-94fc-c86faec6fba9.png",
+    "master": "images/generated/A/hero.png",
+    "width": 2752,
+    "height": 1536,
+    "variants": [
+      {
+        "file": "images/generated/A/hero-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 14007
+      },
+      {
+        "file": "images/generated/A/hero-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 22212
+      },
+      {
+        "file": "images/generated/A/hero-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 27138
+      },
+      {
+        "file": "images/generated/A/hero-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 46198
+      },
+      {
+        "file": "images/generated/A/hero-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 45378
+      },
+      {
+        "file": "images/generated/A/hero-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 76620
+      },
+      {
+        "file": "images/generated/A/hero-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 96793
+      },
+      {
+        "file": "images/generated/A/hero-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 171086
+      },
+      {
+        "file": "images/generated/A/hero-2560.avif",
+        "width": 2560,
+        "format": "avif",
+        "bytes": 171131
+      },
+      {
+        "file": "images/generated/A/hero-2560.webp",
+        "width": 2560,
+        "format": "webp",
+        "bytes": 292436
+      }
+    ],
+    "createdAt": "2026-10-03T12:23:13.065Z"
+  },
+  {
+    "slot": "contact",
+    "set": "A",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "4:5",
+    "job": "9b98dd02-e91a-470b-826a-87aa547a2d18",
+    "reference": "inventory/assets/Screenshot-2025-10-21-at-2.27.41-PM.png",
+    "prompt": "Editorial still-life photograph on a law-office desk in an older Middle Tennessee building, late morning. In the lower two-thirds: a dark brown leather padfolio lying open, holding a blank cream writing pad with no ruled lines, a capped black fountain pen lying diagonally across it, a closed plain manila folder to one side with a blank cover and no tab label, and an all-brass desk lamp with a polished brass dome shade, switched off, behind them; no green glass, no colored shade. The desk surface is warm deep walnut with a soft low-gloss sheen. The upper third is a tall window with white-painted mullions, softly out of focus, glass carrying a muted cool blue cast. Soft side light from the window at the back left, gentle falloff into blue-black shadow on the right. Palette: warm paper-white page and window light, deep walnut wood, blue-black ink shadows, a muted mid-blue cast in the window glass, low-gloss polished brass. Shot on an 85 mm lens slightly above desk level looking down about 20 degrees, shallow depth of field focused on the pen nib and the edge of the pad. Uncluttered, generic, discreet and ready. No hands, no books with spines, no screens, no certificates. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_122158_9b98dd02-e91a-470b-826a-87aa547a2d18.png",
+    "master": "images/generated/A/contact.png",
+    "width": 1856,
+    "height": 2304,
+    "variants": [
+      {
+        "file": "images/generated/A/contact-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 21409
+      },
+      {
+        "file": "images/generated/A/contact-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 32230
+      },
+      {
+        "file": "images/generated/A/contact-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 37345
+      },
+      {
+        "file": "images/generated/A/contact-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 56242
+      },
+      {
+        "file": "images/generated/A/contact-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 57026
+      },
+      {
+        "file": "images/generated/A/contact-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 86252
+      }
+    ],
+    "createdAt": "2026-10-03T12:23:29.423Z"
+  }
+]

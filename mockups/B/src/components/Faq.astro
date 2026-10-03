@@ -1,0 +1,25 @@
+---
+import Icon from './Icon.astro';
+import Blocks from './Blocks.astro';
+import { groupByH3 } from '../lib/copy.mjs';
+interface Props { section: any; band?: string; eyebrow?: string }
+const { section, band = 'band--white', eyebrow = 'FAQ' } = Astro.props;
+const { intro, groups } = groupByH3(section.blocks);
+---
+<section class:list={['band', band]} aria-labelledby={section.id}>
+  <div class="container faq-grid">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">{eyebrow}</p>
+      <h2 id={section.id} set:html={section.heading} />
+      {intro.map((b: any) => <p set:html={b.html} />)}
+    </div>
+    <div class="faq" data-reveal style="--i:1">
+      {groups.map((g, i) => (
+        <details open={i === 0 ? true : undefined}>
+          <summary><span set:html={g.title} /><Icon name="chevron-down" /></summary>
+          <Blocks blocks={g.blocks} class="faq__a" />
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

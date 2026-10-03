@@ -1,0 +1,50 @@
+---
+// [cards]: tonal cards, whole card clickable through its one real link (::after overlay).
+// Cards without an internal link (e.g. Contact's phone/email/office/hours) render as info panels.
+import { splitH3, inline } from '../lib/copy.mjs';
+import Blocks from './Blocks.astro';
+import Icon from './Icon.astro';
+import SectionHead from './SectionHead.astro';
+
+interface Props { section: any; eyebrow?: string; cols?: number; headless?: boolean }
+const { section, eyebrow, cols = 3, headless = false } = Astro.props;
+const { intro, items } = splitH3(section.blocks);
+const after: any[] = [];
+const cards = items.map((it: any) => {
+  const li = it.blocks.findIndex((b: any) => b.type === 'link' && b.href.startsWith('/'));
+  if (li < 0) return { ...it, link: null };
+  const rest = it.blocks.slice(li + 1);
+  after.push(...rest);
+  return { title: it.title, blocks: it.blocks.slice(0, li), link: it.blocks[li] };
+});
+const clickable = cards.every((c: any) => c.link);
+const ICONS: Record<string, string> = { Phone: 'phone', Email: 'mail', Office: 'map-pin', Hours: 'clock' };
+---
+<div class="cards-block">
+  {!headless && section.h2 && <SectionHead h2={section.h2} eyebrow={eyebrow} />}
+  {intro.length > 0 && <Blocks blocks={intro} class="sec-intro" />}
+  {clickable ? (
+    <ul class:list={['card-grid', `card-grid--${cols}`]} data-reveal-group>
+      {cards.map((c: any, i: number) => (
+        <li class="card" data-reveal style={`--i:${i % 4}`}>
+          <h3 class="card__title" set:html={inline(c.title)} />
+          <Blocks blocks={c.blocks} class="card__body" />
+          <a class="card__link" href={c.link.href}>
+            <span set:html={inline(c.link.text)} />
+            <Icon name="arrow-right" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <ul class="info-list">
+      {cards.map((c: any) => (
+        <li class="info-item">
+          <h3 class="info-item__title">{ICONS[c.title] && <Icon name={ICONS[c.title]} />}<span set:html={inline(c.title)} /></h3>
+          <Blocks blocks={c.blocks} class="info-item__body" />
+        </li>
+      ))}
+    </ul>
+  )}
+  {after.length > 0 && <Blocks blocks={after} class="sec-after" />}
+</div>

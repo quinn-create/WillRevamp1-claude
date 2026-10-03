@@ -1,0 +1,71 @@
+---
+// Sticky glass header: logo, six nav items from plan/sitemap.json "nav", Español toggle, phone CTA,
+// and the mobile menu as a native <dialog>. `static` renders a non-sticky specimen (components sheet).
+import fs from 'node:fs';
+import path from 'node:path';
+import { ROOT } from '../lib/copy.mjs';
+import Icon from './Icon.astro';
+import MenuContent from './MenuContent.astro';
+
+interface Props { current?: string; specimen?: boolean; mobile?: boolean }
+// `mobile` (specimen only) forces the small-screen header at any viewport width.
+const { current = '/', specimen = false, mobile = false } = Astro.props;
+const sitemap = JSON.parse(fs.readFileSync(path.join(ROOT, 'plan', 'sitemap.json'), 'utf8'));
+const nav = sitemap.nav.slice(0, 6);
+const isActive = (item: any) =>
+  current === item.path || (item.path !== '/' && current.startsWith(item.path)) || (item.children || []).some((c: any) => c.path === current);
+---
+<header class:list={['site-header', { 'site-header--specimen': specimen, 'site-header--mobile-specimen': specimen && mobile }]}>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Will Fraley, Attorney at Law: home">
+      {specimen && mobile ? (
+        <img src="/img/logo-wordmark.webp" width="400" height="42" alt="Will Fraley, Attorney at Law" />
+      ) : (
+        <picture>
+          <source media="(max-width: 37.49em)" srcset="/img/logo-wordmark.webp" width="400" height="42" />
+          <img src="/img/logo.webp" width="400" height="62" alt="Will Fraley, Attorney at Law" />
+        </picture>
+      )}
+    </a>
+
+    <nav class="nav-primary" aria-label={specimen ? (mobile ? 'Main (mobile specimen)' : 'Main (specimen)') : 'Main'}>
+      <ul>
+        {nav.map((item: any) => (
+          <li class:list={['nav-item', { 'has-sub': item.children }]}>
+            <a class="nav-link" href={item.path} aria-current={isActive(item) ? 'page' : undefined}>
+              {item.label}
+              {item.children && <Icon name="chevron-down" class="nav-chev" />}
+            </a>
+            {item.children && (
+              <ul class="nav-sub">
+                {item.children.map((c: any) => (
+                  <li><a href={c.path} aria-current={c.path === current ? 'page' : undefined}>{c.label}</a></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="lang-toggle" href="/es/" hreflang="es" lang="es" aria-label="Español">
+        <span class="lang-toggle__long">Español</span><span class="lang-toggle__short" aria-hidden="true">ES</span>
+      </a>
+      <a class="btn btn-primary btn-header-call" href="tel:+16154107290" aria-label="Call (615) 410-7290">
+        <Icon name="phone" />
+        <span class="btn-header-call__num">(615) 410-7290</span>
+      </a>
+      <button class="menu-btn" type="button" aria-haspopup="dialog" aria-controls={specimen ? undefined : 'menu'} aria-expanded="false" data-menu-open={specimen ? undefined : ''}>
+        <Icon name="menu" />
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+{!specimen && (
+  <dialog id="menu" class="menu-dialog" aria-label="Menu">
+    <MenuContent current={current} />
+  </dialog>
+)}

@@ -1,0 +1,48 @@
+---
+// Mobile menu as an accessible <dialog> (showModal traps focus; Esc closes; the close button is first).
+// `demo` renders it open and inert-free for the components sheet (no id, not modal).
+import { nav, firm, icon, esPathFor } from '../lib/site.mjs';
+interface Props { current?: string; demo?: boolean }
+const { current = '/', demo = false } = Astro.props;
+const esHref = esPathFor(current);
+const chevron = icon('chevron-right', { size: 20 });
+---
+<dialog class="menu-dialog" id={demo ? undefined : 'site-menu'} aria-label="Menu" open={demo ? true : undefined}>
+  <div class="menu-panel">
+    <div class="menu-panel__top">
+      <img src="/img/logo-wordmark.webp" width="400" height="40" alt="Will Fraley, Attorney at Law" />
+      <button class="menu-close" type="button" data-menu-close={demo ? undefined : ''}>
+        <Fragment set:html={icon('x', { size: 22 })} />
+        <span class="visually-hidden">Close menu</span>
+      </button>
+    </div>
+    <div class="menu-panel__body">
+      <div class="menu-call">
+        <a class="btn btn--primary" href={firm.tel}><Fragment set:html={icon('phone', { size: 18 })} />Call {firm.phone}</a>
+        <p>Free consultation · <span lang="es">Se habla español</span></p>
+      </div>
+      <nav aria-label={demo ? undefined : 'Mobile'} role={demo ? 'presentation' : undefined}>
+        <ul class="menu-list">
+          {nav.map((n) => (
+            <li>
+              <a href={n.path} aria-current={current === n.path ? 'page' : undefined}>{n.label}<Fragment set:html={chevron} /></a>
+              {n.children.length > 0 && (
+                <ul class="menu-sub">
+                  {n.children.filter((c) => c.path !== n.path).map((c) => <li><a href={c.path}>{c.label}</a></li>)}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div class="menu-meta">
+        <div class="lang" role="group" aria-label="Language">
+          <span class="lang-en" aria-current="true" lang="en">English</span>
+          <span class="sep lang-en" aria-hidden="true">/</span>
+          <a href={esHref} hreflang="es" lang="es">Español</a>
+        </div>
+        <p>{firm.street}, {firm.cityLine}<br />Mon–Thu 9:00–5:00 · Fri 9:00–4:00</p>
+      </div>
+    </div>
+  </div>
+</dialog>

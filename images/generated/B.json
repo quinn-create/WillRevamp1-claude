@@ -1,0 +1,200 @@
+[
+  {
+    "slot": "hero",
+    "set": "B",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "16:9",
+    "job": "93514767-3e55-4534-96b1-f2674ceb3381",
+    "reference": "inventory/assets/mainstage-v1-img.webp",
+    "prompt": "Bold low-angle architectural photograph looking up a row of tall classical columns and the plain cornice and entablature of a generic Southern county courthouse in Middle Tennessee, late afternoon. The columns are smooth painted-white limestone with deep flutes and fill the right 45 percent of the frame, the strongest column at about 65 percent of the width; a sliver of warm red brick at the far right edge. The blank frieze has no carved words. The left 55 percent of the frame is clean, open, cloudless deep navy sky grading to near-black at the top edge, with no objects in it, leaving room for a headline. Hard late-afternoon sun from the right about 30 degrees above the horizon rakes across the flutes so every column throws a crisp vertical shadow. Palette: deep navy sky, limestone white on sunlit column faces, cool slate-grey and navy shadow in the flutes, one small note of warm red brick. High contrast, moderate saturation, no haze, no lens flare, no vignette. Shot on a 24 mm tilt-shift lens from a low angle with verticals kept straight, horizon not visible, strong vertical rhythm. Decisive, upright, steady. No flags. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_121514_93514767-3e55-4534-96b1-f2674ceb3381.png",
+    "master": "images/generated/B/hero.png",
+    "width": 2752,
+    "height": 1536,
+    "variants": [
+      {
+        "file": "images/generated/B/hero-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 11921
+      },
+      {
+        "file": "images/generated/B/hero-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 24440
+      },
+      {
+        "file": "images/generated/B/hero-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 22727
+      },
+      {
+        "file": "images/generated/B/hero-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 45318
+      },
+      {
+        "file": "images/generated/B/hero-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 35455
+      },
+      {
+        "file": "images/generated/B/hero-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 68872
+      },
+      {
+        "file": "images/generated/B/hero-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 65727
+      },
+      {
+        "file": "images/generated/B/hero-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 123622
+      },
+      {
+        "file": "images/generated/B/hero-2560.avif",
+        "width": 2560,
+        "format": "avif",
+        "bytes": 104553
+      },
+      {
+        "file": "images/generated/B/hero-2560.webp",
+        "width": 2560,
+        "format": "webp",
+        "bytes": 186092
+      }
+    ],
+    "createdAt": "2026-10-03T12:18:03.564Z"
+  },
+  {
+    "slot": "contact",
+    "set": "B",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "4:5",
+    "job": "7e1155e5-09d8-4ea6-a04d-b4e3d9b44f7c",
+    "reference": "inventory/assets/Screenshot-2025-10-21-at-2.27.41-PM.png",
+    "prompt": "Low-key editorial still-life photograph of a quiet law-office desk at blue hour, just after sunset, in an older Middle Tennessee building. On a dark walnut desktop in the lower-middle third: a classic dark desk telephone with its handset resting in the cradle, keypad turned away from camera and soft out of focus so no digits show; beside it a closed plain muted navy case folder with a blank cover and no label or tab, and a closed pen lying on top. A single focused desk lamp from upper left casts one small, contained pool of warm white light across the phone and folder, falling off to near-black within a short distance. The top 35 percent is a tall window, out of focus, showing deep twilight blue sky, with plain dark wall around it, calm and empty. Faint cool fill from the window. Palette: near-black and deep navy shadows filling most of the frame, dark walnut wood, deep twilight blue window, one small warm-white lamp pool, muted navy folder. Shot on a 50 mm lens about 30 degrees above desk height at f/2.8, shallow depth of field. Uncluttered: no screens, no books, no certificates, no diplomas. Ready, direct, calm, private. No hands. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_121514_7e1155e5-09d8-4ea6-a04d-b4e3d9b44f7c.png",
+    "master": "images/generated/B/contact.png",
+    "width": 1856,
+    "height": 2304,
+    "variants": [
+      {
+        "file": "images/generated/B/contact-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 10622
+      },
+      {
+        "file": "images/generated/B/contact-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 14338
+      },
+      {
+        "file": "images/generated/B/contact-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 18470
+      },
+      {
+        "file": "images/generated/B/contact-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 26346
+      },
+      {
+        "file": "images/generated/B/contact-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 30302
+      },
+      {
+        "file": "images/generated/B/contact-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 52774
+      }
+    ],
+    "createdAt": "2026-10-03T12:18:16.285Z"
+  },
+  {
+    "slot": "practice",
+    "set": "B",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "3:2",
+    "job": "7478a934-d629-428a-aae4-9a225f130f28",
+    "reference": "inventory/assets/mainstage-v1-img.webp",
+    "prompt": "Minimal, geometric architectural photograph of steep, wide pale limestone steps rising toward a pair of closed, heavy paneled dark walnut double doors at the top of a generic Southern civic building in Middle Tennessee, mid-morning on a clear day. The steps fill the lower two-thirds of the frame; the doors sit in the upper third. Plain stone cheek walls on each side, no railings, no plaques, no door numbers, no arch. Hard side light raking from the left makes each tread cast a sharp graphic band of deep navy-slate shadow, so the steps read as a bold stripe pattern with strong diagonals leading up to the doors. The left third is quieter, mostly smooth shadowed stone. A thin sliver of pale sky blue at the very top edge, or none. Palette: pale limestone and cool grey stone, deep navy-slate shadows, near-black walnut doors, pale sky blue. High contrast, moderate saturation, no haze, no lens flare, no vignette, no foliage. Shot on a 35 mm lens from the foot of the steps, slightly left of center, looking up about 15 degrees, verticals straight. Resolve, forward motion, clarity, weight, order. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_121514_7478a934-d629-428a-aae4-9a225f130f28.png",
+    "master": "images/generated/B/practice.png",
+    "width": 2528,
+    "height": 1696,
+    "variants": [
+      {
+        "file": "images/generated/B/practice-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 12542
+      },
+      {
+        "file": "images/generated/B/practice-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 15234
+      },
+      {
+        "file": "images/generated/B/practice-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 22334
+      },
+      {
+        "file": "images/generated/B/practice-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 27194
+      },
+      {
+        "file": "images/generated/B/practice-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 33500
+      },
+      {
+        "file": "images/generated/B/practice-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 40978
+      },
+      {
+        "file": "images/generated/B/practice-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 64393
+      },
+      {
+        "file": "images/generated/B/practice-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 77438
+      }
+    ],
+    "createdAt": "2026-10-03T12:20:25.433Z"
+  }
+]

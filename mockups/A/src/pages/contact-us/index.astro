@@ -1,0 +1,158 @@
+---
+import Base from '../../layouts/Base.astro';
+import Blocks from '../../components/Blocks.astro';
+import CallCta from '../../components/CallCta.astro';
+import Cards from '../../components/Cards.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import Icon from '../../components/Icon.astro';
+import Picture from '../../components/Picture.astro';
+import SectionHead from '../../components/SectionHead.astro';
+import Steps from '../../components/Steps.astro';
+import { loadCopy, inline, slugify } from '../../lib/copy.mjs';
+
+const { data, sections } = loadCopy('contact-us');
+const get = (type: string, re?: RegExp) => sections.find((s: any) => s.type === type && (!re || re.test(s.h2 || '')));
+const hero = get('hero');
+const cards = get('cards');
+const steps = get('steps');
+const message = get('prose', /Send a short message/);
+const finding = get('prose', /Finding the office/);
+const cta = get('cta-band');
+const rendered = new Set([hero, cards, steps, message, finding, cta]);
+const missing = sections.filter((s: any) => !rendered.has(s));
+if (missing.length) throw new Error('contact-us: unrendered copy sections: ' + missing.map((s: any) => s.h2 || s.type).join(', '));
+
+// The non-confidentiality notice from the copy sits directly above the submit button.
+const noticeIdx = message.blocks.findIndex((b: any) => b.type === 'p' && /^\*\*Please read/.test(b.md));
+const notice = message.blocks[noticeIdx];
+const messageIntro = message.blocks.filter((_: any, i: number) => i !== noticeIdx);
+
+// Fields from inventory/forms.json (gform_1), relabelled in plain language. Required = name + phone,
+// per the copy ("Email and a short note are optional").
+const bestTimes = ['ASAP', 'Morning', 'Noon', 'Afternoon', 'Evening', 'No preference'];
+const clientTypes = ['Yes, I am a potential new client.', 'No, I’m a current client.', 'I’m neither.'];
+---
+<Base title={data.title} description={data.description} current="/contact-us/">
+  <section class="hero" aria-labelledby="page-title">
+    <div class="container">
+      <div class="hero__grid hero__grid--contact">
+        <div class="hero__copy">
+          <p class="eyebrow">Contact · Murfreesboro, Tennessee</p>
+          <h1 id="page-title" set:html={inline(data.h1)} />
+          <Blocks blocks={hero.blocks} lead class="hero__deck" />
+          <CallCta secondary={{ href: '#form', label: 'Send a short message' }} />
+        </div>
+        <div class="contact-facts" aria-labelledby={slugify(cards.h2)}>
+          <h2 id={slugify(cards.h2)} class="contact-facts__title" set:html={inline(cards.h2)} />
+          <Cards section={cards} headless />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--linen" aria-labelledby={slugify(steps.h2)}>
+    <div class="container">
+      <Steps section={steps} eyebrow="What to expect" />
+    </div>
+  </section>
+
+  <section class="section" id="form" aria-labelledby={slugify(message.h2)}>
+    <div class="container form-wrap">
+      <div>
+        <SectionHead h2={message.h2} eyebrow="Write to the office" />
+        <Blocks blocks={messageIntro} class="sec-intro-plain" />
+
+        <form class="form" action="#" method="post" novalidate aria-describedby="form-status">
+          <p class="mock-note" id="form-status"><Icon name="info" /> Mockup: this form is not connected yet. The phone field shows the inline error state.</p>
+
+          <div class="form-row form-row--2">
+            <div class="field">
+              <label for="first-name">First name <span class="req">(required)</span></label>
+              <input class="input" id="first-name" name="first_name" type="text" autocomplete="given-name" required />
+            </div>
+            <div class="field">
+              <label for="last-name">Last name <span class="req">(required)</span></label>
+              <input class="input" id="last-name" name="last_name" type="text" autocomplete="family-name" required />
+            </div>
+          </div>
+
+          <div class="form-row form-row--2">
+            <div class="field is-error">
+              <label for="phone">Phone <span class="req">(required)</span></label>
+              <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" value="615 410" required aria-invalid="true" aria-describedby="phone-error phone-help" />
+              <p class="error-msg" id="phone-error"><Icon name="circle-alert" /> Enter the full phone number, area code first, so the office can call you back.</p>
+              <p class="help" id="phone-help">The office will call this number.</p>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="opt">(optional)</span></label>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" aria-describedby="email-help" />
+              <p class="help" id="email-help">Only used to reply to you.</p>
+            </div>
+          </div>
+
+          <div class="form-row form-row--2">
+            <div class="field">
+              <label for="best-time">Best time to reach you <span class="opt">(optional)</span></label>
+              <div class="select-wrap">
+                <select class="select" id="best-time" name="best_time">
+                  <option value="">Choose a time</option>
+                  {bestTimes.map((t) => <option>{t}</option>)}
+                </select>
+                <Icon name="chevron-down" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="new-client">Are you a new client? <span class="opt">(optional)</span></label>
+              <div class="select-wrap">
+                <select class="select" id="new-client" name="new_client">
+                  <option value="">Choose one</option>
+                  {clientTypes.map((t) => <option>{t}</option>)}
+                </select>
+                <Icon name="chevron-down" />
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">How can we help? <span class="opt">(optional)</span></label>
+            <textarea class="textarea" id="message" name="message" rows="5" maxlength="600" aria-describedby="message-help"></textarea>
+            <p class="help" id="message-help">A line or two about what happened is enough. Up to 600 characters.</p>
+          </div>
+
+          <div class="notice" role="note">
+            <Icon name="info" />
+            <p set:html={inline(notice.md)} />
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" disabled aria-describedby="form-fallback">Send message</button>
+            <p class="fallback" id="form-fallback">
+              Online messages aren’t switched on in this preview. Please call{' '}
+              <a class="tel" href="tel:+16154107290">(615) 410-7290</a> for a free consultation, or email{' '}
+              <a href="mailto:inbox@willfraleylaw.com">inbox@willfraleylaw.com</a>.
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <aside class="form-aside" aria-label="The office">
+        <figure class="scene scene--4x5">
+          <Picture name="a-contact" alt="" sizes="(min-width: 76em) 31rem, (min-width: 60em) 40vw, 92vw" />
+        </figure>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--linen" aria-labelledby={slugify(finding.h2)}>
+    <div class="container split">
+      <div class="split__aside">
+        <SectionHead h2={finding.h2} eyebrow="Directions" />
+      </div>
+      <div class="split__main">
+        <Blocks blocks={finding.blocks} class="finding" />
+      </div>
+    </div>
+  </section>
+
+  <CtaBand section={cta} formHref="#form" />
+</Base>

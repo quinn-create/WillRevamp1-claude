@@ -1,0 +1,103 @@
+---
+// Home. Every section of copy/pages/index.md is rendered in order.
+import Layout from '../layouts/Layout.astro';
+import Picture from '../components/Picture.astro';
+import ProofStrip from '../components/ProofStrip.astro';
+import Cards from '../components/Cards.astro';
+import SectionHead from '../components/SectionHead.astro';
+import Blocks from '../components/Blocks.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { loadPage } from '../lib/copy.mjs';
+import { firm, icon } from '../lib/site.mjs';
+import images from '../lib/images.json';
+
+const page = loadPage('index');
+const { fm, sections } = page;
+const heroSizes = '100vw';
+const preload = { type: 'image/avif', sizes: heroSizes, srcset: images.hero.widths.map((x) => `/img/hero-${x.w}.avif ${x.w}w`).join(', '), href: '/img/hero-1280.avif' };
+// Mark Spanish phrases inside English copy with lang="es".
+const markEs = (html) => html
+  .replace(/(Llame al[\s\S]*?gratuita\.)/, '<span lang="es">$1</span>')
+  .replace(/(?<!>)(Se habla español\.?)/g, '<span lang="es">$1</span>');
+const withEs = (blocks) => blocks.map((b) => (b.html ? { ...b, html: markEs(b.html) } : b));
+const eyebrows = { cards: 'Practice areas', testimonial: 'Testimonials', faq: 'Common questions', 'cta-band': 'Free consultation' };
+---
+<Layout title={fm.title} description={fm.description} path="/" schemaType={fm.schema_type} preloadImage={preload}>
+  {sections.map((s) => {
+    if (s.type === 'hero') return (
+      <section class="hero-home" aria-labelledby="page-title">
+        <div class="hero-home__media">
+          <Picture name="hero" alt="" sizes={heroSizes} priority />
+        </div>
+        <div class="container hero-home__inner">
+          <div class="hero-card">
+            <div class="byline">
+              <div class="byline__photo">
+                <picture>
+                  <source type="image/avif" srcset="/img/will-byline-350.avif" />
+                  <img src="/img/will-byline-350.webp" width="350" height="438" alt="Will Fraley at his desk" />
+                </picture>
+              </div>
+              <div>
+                <p class="eyebrow">Attorney at Law</p>
+                <p class="byline__name">Will Fraley</p>
+                <p class="byline__place">{firm.street}, Murfreesboro</p>
+              </div>
+            </div>
+            <h1 id="page-title">{fm.h1}</h1>
+            <div class="hero-card__copy"><Blocks blocks={withEs(s.blocks)} /></div>
+            <div class="hero-card__actions btn-row">
+              <a class="btn btn--primary" href={firm.tel}><Fragment set:html={icon('phone', { size: 18 })} />{fm.primary_cta}</a>
+              <a class="btn btn--ghost" href="/contact-us/#form">Send a short message<Fragment set:html={icon('arrow-right', { size: 18 })} /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+    if (s.type === 'proof-strip') return <ProofStrip section={{ ...s, blocks: withEs(s.blocks.map((b) => (b.items ? { ...b, items: b.items.map((x) => ({ ...x, html: markEs(x.html) })) } : b))) }} />;
+    if (s.type === 'cards') return <Cards section={s} eyebrow={eyebrows.cards} cols={3} icons={[]} numbered />;
+    if (s.type === 'testimonial') return <Testimonial section={s} eyebrow={eyebrows.testimonial} />;
+    if (s.type === 'faq') return <Faq section={{ ...s, groups: { ...s.groups, items: s.groups.items.map((it) => ({ ...it, blocks: withEs(it.blocks) })) } }} eyebrow={eyebrows.faq} band="band-sand" />;
+    if (s.type === 'cta-band') return <CtaBand section={s} eyebrow={eyebrows['cta-band']} />;
+    if (s.type === 'prose' && /why people call/i.test(s.heading?.text || '')) return (
+      <section class="section band-sand" aria-labelledby={s.id}>
+        <div class="container why">
+          <div class="why__head"><SectionHead eyebrow="About Will Fraley" heading={s.heading} id={s.id} /></div>
+          <figure class="why__portrait" data-reveal>
+            <div class="frame">
+              <Picture name="will-door" eagerLow alt="Will Fraley, smiling, in a dark suit outside a brick building" sizes="(min-width: 900px) 416px, (min-width: 480px) 416px, 100vw" pos="50% 18%" />
+            </div>
+            <figcaption>Will Fraley, Attorney at Law</figcaption>
+          </figure>
+          <ul class="why__list" role="list">
+            {s.blocks.map((b, i) => <li data-reveal style={`--i:${i % 3}`} set:html={b.html} />)}
+          </ul>
+        </div>
+      </section>
+    );
+    if (s.type === 'prose' && /habla español/i.test(s.heading?.text || '')) return (
+      <section class="section" aria-labelledby={s.id} style="padding-top:0">
+        <div class="container">
+          <div class="es-panel" data-reveal>
+            <div>
+              <p class="eyebrow" lang="es">Español</p>
+              <h2 id={s.id} lang="es" set:html={s.heading.html} />
+            </div>
+            <div class="prose"><Blocks blocks={withEs(s.blocks)} linkStyle="secondary" /></div>
+          </div>
+        </div>
+      </section>
+    );
+    // Any other prose section: rendered plainly so no copy is ever dropped.
+    return (
+      <section class="section" aria-labelledby={s.id}>
+        <div class="container">
+          <SectionHead heading={s.heading} id={s.id} />
+          <div class="prose measure"><Blocks blocks={withEs(s.blocks)} /></div>
+        </div>
+      </section>
+    );
+  })}
+</Layout>

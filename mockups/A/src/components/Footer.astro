@@ -1,0 +1,63 @@
+---
+// Footer: real NAP and hours (verified firm facts, ledgered in inventory/facts.json: F013, F019, F021,
+// F031, F032), practice and site links from plan/sitemap.json, and the legal line.
+import fs from 'node:fs';
+import path from 'node:path';
+import { ROOT } from '../lib/copy.mjs';
+import Icon from './Icon.astro';
+
+const sitemap = JSON.parse(fs.readFileSync(path.join(ROOT, 'plan', 'sitemap.json'), 'utf8'));
+const practice = sitemap.nav.slice(0, 3);
+const site = [...sitemap.nav.slice(3), ...sitemap.footer];
+---
+<footer class="site-footer on-ink">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-firm">
+        <p class="footer-name">Will Fraley<span>Attorney at Law</span></p>
+        <address>
+          <span>509 W College St</span>
+          <span>Murfreesboro, TN 37130</span>
+        </address>
+        <p class="footer-contact">
+          <a class="tel" href="tel:+16154107290"><Icon name="phone" />(615) 410-7290</a>
+          <span class="footer-free">Free consultation · <span lang="es">Se habla español</span></span>
+          <a href="mailto:inbox@willfraleylaw.com"><Icon name="mail" />inbox@willfraleylaw.com</a>
+        </p>
+      </div>
+      <div>
+        <h2 class="footer-head">Office hours</h2>
+        <dl class="hours">
+          <div><dt>Monday–Thursday</dt><dd>9:00 a.m. – 5:00 p.m.</dd></div>
+          <div><dt>Friday</dt><dd>9:00 a.m. – 4:00 p.m.</dd></div>
+        </dl>
+      </div>
+      <nav aria-label="Practice areas">
+        <h2 class="footer-head">Practice areas</h2>
+        <ul class="footer-links">
+          {practice.map((p: any) => <li><a href={p.path}>{p.label}</a></li>)}
+          <li><a href="/legal-services/">All practice areas</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Site">
+        <h2 class="footer-head">Site</h2>
+        <ul class="footer-links">
+          {site.filter((p: any) => p.path !== '/legal-services/').map((p: any) => <li><a href={p.path}>{p.label}</a></li>)}
+          <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p>
+        The information on this website is general information only, not legal advice. Viewing this site or
+        contacting the office does not create an attorney-client relationship.
+      </p>
+      <p>© 2026 Will Fraley, Attorney at Law · Murfreesboro, Tennessee</p>
+    </div>
+  </div>
+</footer>
+<a class="callbar" href="tel:+16154107290">
+  <Icon name="phone" />
+  <span>Call (615) 410-7290</span>
+  <span class="callbar__note">Free consultation</span>
+</a>

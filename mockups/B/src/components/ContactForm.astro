@@ -1,0 +1,67 @@
+---
+// Intake form (fields from inventory/forms.json). Not wired in the mockup: the submit is disabled and a
+// fallback note points to phone and email. The email field shows the inline error state as an example.
+import Icon from './Icon.astro';
+import { FIRM } from '../lib/site.mjs';
+interface Props { notice: string; idPrefix?: string }
+const { notice, idPrefix = 'f' } = Astro.props;
+const id = (s: string) => `${idPrefix}-${s}`;
+const times = ['As soon as possible', 'Morning', 'Noon', 'Afternoon', 'Evening', 'No preference'];
+const clientTypes = ['Yes, I am a potential new client.', 'No, I’m a current client.', 'I’m neither.'];
+---
+<form class="form" action="/thank-you/" method="post" novalidate aria-describedby={id('fallback')}>
+  <div class="form__row form__row--2">
+    <div class="field">
+      <label for={id('first')}>First name <span class="tag">Required</span></label>
+      <input class="input" id={id('first')} name="first_name" type="text" autocomplete="given-name" required />
+    </div>
+    <div class="field">
+      <label for={id('last')}>Last name <span class="tag">Required</span></label>
+      <input class="input" id={id('last')} name="last_name" type="text" autocomplete="family-name" required />
+    </div>
+  </div>
+  <div class="form__row form__row--2">
+    <div class="field">
+      <label for={id('phone')}>Phone <span class="tag">Required</span></label>
+      <input class="input" id={id('phone')} name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby={id('phone-help')} />
+      <p class="help" id={id('phone-help')}>The best number for a call back.</p>
+    </div>
+    <div class="field field--error">
+      <label for={id('email')}>Email <span class="tag">Optional</span></label>
+      <input class="input" id={id('email')} name="email" type="email" autocomplete="email" value="maria@" aria-invalid="true" aria-describedby={id('email-err')} />
+      <p class="error-msg" id={id('email-err')}><Icon name="circle-alert" />Enter a full email address, like name@example.com, or leave this blank.</p>
+    </div>
+  </div>
+  <div class="form__row form__row--2">
+    <div class="field">
+      <label for={id('time')}>Best time to reach you <span class="tag">Required</span></label>
+      <div class="select-wrap">
+        <select class="select" id={id('time')} name="best_time" required>
+          <option value="">Choose a time</option>
+          {times.map((t) => <option>{t}</option>)}
+        </select>
+        <Icon name="chevron-down" />
+      </div>
+    </div>
+    <div class="field">
+      <label for={id('client')}>Are you a new client? <span class="tag">Optional</span></label>
+      <div class="select-wrap">
+        <select class="select" id={id('client')} name="client_type">
+          <option value="">Choose one</option>
+          {clientTypes.map((t) => <option>{t}</option>)}
+        </select>
+        <Icon name="chevron-down" />
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label for={id('help')}>How can we help? <span class="tag">Optional</span></label>
+    <textarea class="textarea" id={id('help')} name="message" rows="5" maxlength="600" aria-describedby={id('help-help')}></textarea>
+    <p class="help" id={id('help-help')}>A line about what happened is enough. Please leave out confidential details. Up to 600 characters.</p>
+  </div>
+  <div class="notice" role="note"><p set:html={notice} /></div>
+  <div class="form__submit">
+    <button class="btn btn--primary btn--block" type="submit" disabled><Icon name="message-square" />Send message</button>
+    <p class="fallback-note" id={id('fallback')}><Icon name="phone" /><span>Online messages are not switched on in this preview. Call <a class="tel" href={FIRM.tel}>{FIRM.phone}</a> or email <a href={`mailto:${FIRM.email}`}>{FIRM.email}</a>.</span></p>
+  </div>
+</form>

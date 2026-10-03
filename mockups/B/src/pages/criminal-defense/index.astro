@@ -1,0 +1,97 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import Pic from '../../components/Pic.astro';
+import Blocks from '../../components/Blocks.astro';
+import ProofStrip from '../../components/ProofStrip.astro';
+import Cards from '../../components/Cards.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Testimonial from '../../components/Testimonial.astro';
+import { loadPage } from '../../lib/copy.mjs';
+import { FIRM } from '../../lib/site.mjs';
+
+const { fm, sections } = loadPage('criminal-defense');
+const by = (kind: string) => sections.find((s) => s.kind === kind);
+const hero = by('hero');
+const proof = by('proof-strip');
+const cards = by('cards');
+const steps = by('steps');
+const faq = by('faq');
+const testimonial = by('testimonial');
+const cta = by('cta-band');
+const charged = sections.find((s) => s.headingText === 'If you were just charged');
+const loved = sections.find((s) => s.headingText === 'If someone you love was arrested');
+const placed = new Set([hero, proof, cards, steps, faq, testimonial, cta, charged, loved]);
+const leftover = sections.filter((s) => !placed.has(s));
+
+const [lede, ...heroRest] = hero.blocks;
+const chargedIntro = charged.blocks.filter((b) => b.type === 'p');
+const chargedList = charged.blocks.find((b) => b.type === 'ul');
+// bold-lead bullets -> numbered checklist items
+const items = chargedList.items.map((html: string) => {
+  const m = html.match(/^<strong>(.*?)<\/strong>\s*(.*)$/);
+  return m ? { lead: m[1], rest: m[2] } : { lead: '', rest: html };
+});
+---
+<Layout title={fm.title} description={fm.description} path="/criminal-defense/" cta={{ heading: cta.heading, html: cta.blocks.map((b) => b.html).join(' ') }}>
+
+  <!-- HERO: navy color block with the practice scene as a panel -->
+  <section class="band band--navy on-dark page-hero" aria-labelledby="page-title">
+    <div class="container page-hero__grid">
+      <div class="page-hero__copy">
+        <p class="eyebrow">Criminal defense · Murfreesboro</p>
+        <h1 id="page-title">{fm.h1}</h1>
+        <p class="lede" set:html={lede.html} />
+        {heroRest.map((b) => <p set:html={b.html} />)}
+        <div class="cta-row">
+          <a class="btn btn--primary" href={FIRM.tel}><Icon name="phone" /><span>Call {FIRM.phone}<span class="btn__extra"> — free consultation</span></span></a>
+          <a class="btn btn--ghost" href="/contact-us/#form">Send a short message <Icon name="arrow-right" /></a>
+        </div>
+      </div>
+      <Pic class="page-hero__media page-hero__media--practice" name="practice" widths={[640, 960, 1280]} ratio={[3, 2]} sizes="(min-width: 76rem) 30rem, (min-width: 60rem) 40vw, 92vw" alt="" eager />
+    </div>
+  </section>
+
+  <ProofStrip items={proof.blocks[0].items} icons={['calendar', 'landmark', 'languages', 'phone']} label="Will Fraley at a glance" />
+
+  <!-- FIRST STEPS: charged + loved one -->
+  <section class="band band--white" aria-labelledby={charged.id}>
+    <div class="container split split--wide-left">
+      <div>
+        <div data-reveal>
+          <p class="eyebrow">Start here</p>
+          <h2 id={charged.id} set:html={charged.heading} />
+          {chargedIntro.map((b) => <p class="intro-lg" set:html={b.html} />)}
+        </div>
+        <ol class="checklist">
+          {items.map((it, i) => (
+            <li data-reveal style={`--i:${i}`}>
+              <span class="checklist__num" aria-hidden="true">{i + 1}</span>
+              <p><strong set:html={it.lead} /><span set:html={it.rest} /></p>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <aside class="panel" aria-labelledby={loved.id} data-reveal style="--i:1">
+        <p class="eyebrow">For family</p>
+        <h2 id={loved.id} set:html={loved.heading} />
+        <Blocks blocks={loved.blocks} />
+      </aside>
+    </div>
+  </section>
+
+  <Cards section={cards} band="band--raised" eyebrow="Charges" cols={4} compact />
+
+  <Steps section={steps} band="band--night" dark eyebrow="The process" />
+
+  <Faq section={faq} band="band--white" eyebrow="Questions" />
+
+  <Testimonial section={testimonial} band="band--tint" portrait />
+
+  {leftover.map((s) => (
+    <section class="band band--white" aria-labelledby={s.id}>
+      <div class="container">{s.heading && <h2 id={s.id} set:html={s.heading} />}<Blocks blocks={s.blocks} /></div>
+    </section>
+  ))}
+</Layout>

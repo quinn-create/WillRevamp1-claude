@@ -1,0 +1,50 @@
+---
+// Generous footer: NAP and hours (ledgered: F013, F019, F021, F031, F032), nav, Spanish line, legal line.
+import { nav, firm, icon } from '../lib/site.mjs';
+const year = 2026;
+---
+<footer class="site-footer on-deep">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-name">Will Fraley,<br />Attorney at Law</p>
+        <div class="footer-contact">
+          <a href={firm.tel}><Fragment set:html={icon('phone', { size: 18 })} /><span class="tnum">{firm.phone}</span></a>
+          <a href={`mailto:${firm.email}`}><Fragment set:html={icon('mail', { size: 18 })} />{firm.email}</a>
+          <a href={firm.mapsUrl} rel="noopener" target="_blank"><Fragment set:html={icon('map-pin', { size: 18 })} /><span>{firm.street}, {firm.cityLine}<span class="visually-hidden"> (opens Google Maps in a new tab)</span></span></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h2>Office hours</h2>
+        <dl class="hours">
+          {firm.hours.map((h) => <div><dt>{h.days}</dt><dd>{h.time}</dd></div>)}
+        </dl>
+        <p class="footer-es" style="margin-top: var(--space-5)"><span lang="es">Se habla español.</span></p>
+      </div>
+      <div class="footer-col">
+        <h2>Practice</h2>
+        <ul>
+          {nav.slice(0, 3).map((n) => <li><a href={n.path}>{n.label}</a></li>)}
+          <li><a href="/legal-services/">All legal services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>The office</h2>
+        <ul>
+          {nav.slice(3).map((n) => <li><a href={n.path}>{n.label}</a></li>)}
+          <li><a href="/testimonials/">Testimonials</a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>The information on this website is general information only, not legal advice. Reading it or contacting the office does not create an attorney-client relationship. Please do not send confidential information through this website.</p>
+      <div class="links">
+        <span>© {year} Will Fraley, Attorney at Law</span>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/accessibility/">Accessibility</a>
+        <a href="/cookie-settings/">Cookie settings</a>
+      </div>
+    </div>
+  </div>
+</footer>

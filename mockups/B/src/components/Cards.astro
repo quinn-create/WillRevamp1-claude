@@ -1,0 +1,44 @@
+---
+import Icon from './Icon.astro';
+import Blocks from './Blocks.astro';
+import { groupByH3 } from '../lib/copy.mjs';
+interface Props { section: any; band?: string; cols?: number; eyebrow?: string; icons?: string[]; compact?: boolean }
+const { section, band = 'band--raised', cols, eyebrow, icons, compact = false } = Astro.props;
+// Split a label so its last word and the arrow never part across lines.
+const tail = (html: string) => { const i = html.lastIndexOf(' '); return i < 0 ? ['', html] : [html.slice(0, i + 1), html.slice(i + 1)]; };
+const { intro, groups, outro } = groupByH3(section.blocks);
+const n = cols || (groups.length % 4 === 0 ? 4 : 3);
+// A card is fully clickable when its last block is its only link.
+const shape = groups.map((g) => {
+  const links = g.blocks.filter((b: any) => b.type === 'link');
+  const inlineLinks = g.blocks.some((b: any) => b.type !== 'link' && /<a /.test(b.html || (b.items || []).join('')));
+  const last = g.blocks[g.blocks.length - 1];
+  const clickable = links.length === 1 && last?.type === 'link' && !inlineLinks && g.blocks.length > 1;
+  return { ...g, clickable, link: clickable ? last : null, body: clickable ? g.blocks.slice(0, -1) : g.blocks };
+});
+---
+<section class:list={['band', band]} aria-labelledby={section.id}>
+  <div class="container">
+    <div class="section-head" data-reveal>
+      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+      <h2 id={section.id} set:html={section.heading} />
+      {intro.map((b: any) => <p set:html={b.html} />)}
+    </div>
+    <div class:list={['cards', `cards--${n}`]}>
+      {shape.map((g, i) => (
+        <article class:list={['card', { 'card--link': g.clickable, 'card--compact': compact }]} data-reveal style={`--i:${i % 4}`}>
+          {icons ? <span class="card__icon"><Icon name={icons[i] || 'check'} /></span> : <span class="card__bar" aria-hidden="true"></span>}
+          <h3 set:html={g.title} />
+          <Blocks blocks={g.body} />
+          {g.link && (
+            <a class="card__link" href={g.link.href} {...(g.link.external ? { rel: 'noopener', target: '_blank' } : {})}>
+              <span set:html={tail(g.link.label)[0]} /><span class="nowrap"><span set:html={tail(g.link.label)[1]} />{g.link.external ? <Icon name="arrow-up-right" /> : <Icon name="arrow-right" />}</span>
+              {g.link.external && <span class="visually-hidden"> (opens in a new tab)</span>}
+            </a>
+          )}
+        </article>
+      ))}
+    </div>
+    {outro.length > 0 && <div class="section-foot" data-reveal><Blocks blocks={outro} /></div>}
+  </div>
+</section>

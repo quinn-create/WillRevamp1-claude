@@ -1,0 +1,9 @@
+---
+interface Props { heading: string; id: string; eyebrow?: string; intro?: string[] }
+const { heading, id, eyebrow, intro = [] } = Astro.props;
+---
+<div class="section-head" data-reveal>
+  {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+  <h2 id={id} set:html={heading} />
+  {intro.map((p) => <p set:html={p} />)}
+</div>

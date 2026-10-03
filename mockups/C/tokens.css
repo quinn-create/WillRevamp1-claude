@@ -1,0 +1,392 @@
+/*
+ * Direction C "Neighbor": design tokens.
+ * Warm, human, Tennessee-rooted: cream and sand neutrals, warm ink, the logo blue as the
+ * brand hue, red brick as the one accent, a photographic hero, approachable type.
+ *
+ * Rules for this file
+ * - Every base color is an opaque #rrggbb hex so contrast can be machine-checked.
+ *   Semantic tokens alias base tokens with var(). Alpha colors (hairlines, the glass
+ *   header, shadows, the image scrim) are derived from hex tokens with color-mix().
+ * - Every foreground/background pairing the mockups use is declared below with @pair.
+ *   text = needs 4.5:1, ui = needs 3:1 (WCAG 2.2, relative luminance). Ratios were
+ *   computed with a node script and are listed in plan/fragments/A14/decisions.md.
+ * - The focus ring sits 2 px off the element, so it is checked against the grounds it
+ *   is drawn on (cream, card, sand, navy, ink), not against a button fill.
+ */
+
+/* Body text and headings on light grounds */
+/* @pair --color-text on --color-bg text */
+/* @pair --color-text on --color-surface text */
+/* @pair --color-text on --color-surface-alt text */
+/* @pair --color-heading on --color-bg text */
+/* @pair --color-heading on --color-surface text */
+/* @pair --color-heading on --color-surface-alt text */
+/* @pair --color-heading-blue on --color-bg text */
+/* @pair --color-heading-blue on --color-surface-alt text */
+/* @pair --color-text-muted on --color-bg text */
+/* @pair --color-text-muted on --color-surface text */
+/* @pair --color-text-muted on --color-surface-alt text */
+/* @pair --color-text-strong-muted on --color-surface-alt text */
+
+/* Links, eyebrows, numerals and brand marks */
+/* @pair --color-link on --color-bg text */
+/* @pair --color-link on --color-surface text */
+/* @pair --color-link on --color-surface-alt text */
+/* @pair --color-link on --color-surface-tint text */
+/* @pair --color-link-hover on --color-bg text */
+/* @pair --color-link-hover on --color-surface-alt text */
+/* @pair --color-eyebrow on --color-bg text */
+/* @pair --color-eyebrow on --color-surface text */
+/* @pair --color-eyebrow on --color-surface-alt text */
+/* @pair --color-numeral on --color-bg text */
+/* @pair --color-numeral on --color-surface-alt text */
+/* @pair --color-brand on --color-bg ui */
+/* @pair --color-brand on --color-surface ui */
+/* @pair --color-chip-text on --color-chip-bg text */
+
+/* Buttons */
+/* @pair --btn-primary-text on --btn-primary-bg text */
+/* @pair --btn-primary-text on --btn-primary-bg-hover text */
+/* @pair --btn-primary-bg on --color-bg ui */
+/* @pair --btn-primary-bg on --color-surface-alt ui */
+/* @pair --btn-primary-inverse-text on --btn-primary-inverse-bg text */
+/* @pair --btn-primary-inverse-bg on --color-deep ui */
+/* @pair --btn-secondary-text on --color-bg text */
+/* @pair --btn-secondary-text on --color-surface-alt text */
+/* @pair --btn-secondary-border on --color-bg ui */
+/* @pair --btn-secondary-border on --color-surface-alt ui */
+/* @pair --btn-secondary-text on --btn-secondary-bg-hover text */
+/* @pair --btn-secondary-inverse-text on --color-deep text */
+/* @pair --btn-secondary-inverse-border on --color-deep ui */
+/* @pair --callbar-text on --callbar-bg text */
+
+/* Deep brand band (navy) and footer (warm ink) */
+/* @pair --color-on-deep on --color-deep text */
+/* @pair --color-on-deep-muted on --color-deep text */
+/* @pair --color-link-on-deep on --color-deep text */
+/* @pair --color-eyebrow-on-deep on --color-deep text */
+/* @pair --color-on-footer on --color-footer text */
+/* @pair --color-on-footer-muted on --color-footer text */
+/* @pair --color-link-on-footer on --color-footer text */
+/* @pair --color-eyebrow-on-footer on --color-footer text */
+/* @pair --color-on-footer on --color-footer-raised text */
+
+/* Focus ring (ui) */
+/* @pair --focus-ring on --color-bg ui */
+/* @pair --focus-ring on --color-surface ui */
+/* @pair --focus-ring on --color-surface-alt ui */
+/* @pair --focus-ring on --input-bg ui */
+/* @pair --focus-ring-inverse on --color-deep ui */
+/* @pair --focus-ring-inverse on --color-footer ui */
+
+/* Forms */
+/* @pair --input-border on --input-bg ui */
+/* @pair --input-border on --color-bg ui */
+/* @pair --input-border on --color-surface ui */
+/* @pair --input-text on --input-bg text */
+/* @pair --input-placeholder on --input-bg text */
+/* @pair --input-helper on --color-bg text */
+/* @pair --color-error on --color-bg text */
+/* @pair --color-error on --input-bg text */
+/* @pair --color-error on --color-error-bg text */
+/* @pair --input-border-error on --input-bg ui */
+/* @pair --color-success on --color-bg text */
+/* @pair --color-success on --color-success-bg text */
+
+/* ---------- Fonts: self-hosted variable WOFF2 (latin + latin-ext) ---------- */
+/* Preload exactly two files: fraunces-latin.woff2 and figtree-latin.woff2. */
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/figtree-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/figtree-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Metric-matched fallbacks (from the files' own metrics via @capsizecss/unpack:
+   Fraunces upm 2000, ascent 1956, descent 510, avg x-width 0.518 em;
+   Figtree upm 1000, ascent 950, descent 250, avg x-width 0.444 em). */
+@font-face {
+  font-family: "Fraunces Fallback";
+  src: local("Georgia"), local("Times New Roman"), local("Liberation Serif");
+  size-adjust: 110%;
+  ascent-override: 88.9%;
+  descent-override: 23.2%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Figtree Fallback";
+  src: local("Arial"), local("ArialMT"), local("Liberation Sans");
+  size-adjust: 100.7%;
+  ascent-override: 94.3%;
+  descent-override: 24.8%;
+  line-gap-override: 0%;
+}
+
+:root {
+  /* ---------- Neutral ramp: 10 warm steps, cream to warm ink ---------- */
+  --neutral-50: #FCFAF6;   /* card / raised surface, one tonal step above cream */
+  --neutral-100: #F6F1EA;  /* cream: page ground */
+  --neutral-200: #E9DFD1;  /* sand: alternate bands, chips, sunken areas */
+  --neutral-300: #D9CCBC;  /* opaque hairline (decorative only), muted text on ink */
+  --neutral-400: #BCAC9B;  /* disabled glyphs, rules on ink */
+  --neutral-500: #857567;  /* input and control borders */
+  --neutral-600: #6B5E55;  /* muted text */
+  --neutral-700: #4F443C;  /* strong muted text on sand */
+  --neutral-800: #3A312B;  /* raised surface on the ink footer */
+  --neutral-900: #2B2420;  /* warm ink: body text, headings, footer ground */
+  --white: #FFFFFF;        /* input fields */
+
+  /* ---------- Brand hue: the logo blue, 3 tints and 2 shades ---------- */
+  --brand-tint-3: #E3ECF6; /* quiet blue wash: info callout, selected chip */
+  --brand-tint-2: #B9CFE8; /* links on navy and on ink */
+  --brand-tint-1: #7FA5D2; /* rules and marks on navy (decorative) */
+  --brand: #447CB7;        /* logo blue: wordmark, large type 24 px+, rules, UI. Never small text. */
+  --brand-shade-1: #2F5F95;/* text-size links, primary button fill, mobile call bar */
+  --brand-shade-2: #1D478A;/* navy: deep band, link hover, H2 accent */
+  --brand-shade-1-lift: #3A6AA0; /* primary fill on hover: shade-1 lightened about 4% */
+
+  /* ---------- Accent: red brick (from the courthouse-square equity in A07) ---------- */
+  --accent: #96452F;       /* brick: focus ring, eyebrows, step numerals, secondary button */
+  --accent-shade: #7A3826; /* brick pressed */
+  --accent-tint: #F5E6DD;  /* secondary-button hover fill, chip on cream */
+  --accent-light: #F0B9A3; /* brick on dark: focus ring and eyebrows on navy and ink */
+
+  /* ---------- Status ---------- */
+  --red-700: #B42318;
+  --red-50: #FBEAE7;
+  --green-700: #2F6B3A;
+  --green-50: #E8F1E6;
+
+  /* ---------- Semantic surfaces ---------- */
+  --color-bg: var(--neutral-100);
+  --color-surface: var(--neutral-50);
+  --color-surface-alt: var(--neutral-200);
+  --color-surface-tint: var(--brand-tint-3);
+  --color-deep: var(--brand-shade-2);
+  --color-footer: var(--neutral-900);
+  --color-footer-raised: var(--neutral-800);
+
+  /* ---------- Semantic text ---------- */
+  --color-text: var(--neutral-900);
+  --color-heading: var(--neutral-900);
+  --color-heading-blue: var(--brand-shade-2);
+  --color-text-muted: var(--neutral-600);
+  --color-text-strong-muted: var(--neutral-700);
+  --color-brand: var(--brand);
+  --color-link: var(--brand-shade-1);
+  --color-link-hover: var(--brand-shade-2);
+  --color-eyebrow: var(--accent);
+  --color-numeral: var(--accent);
+  --color-chip-text: var(--neutral-900);
+  --color-chip-bg: var(--neutral-200);
+  --color-rule: var(--neutral-300);
+
+  /* On the navy band */
+  --color-on-deep: var(--neutral-100);
+  --color-on-deep-muted: var(--neutral-300);
+  --color-link-on-deep: var(--brand-tint-2);
+  --color-eyebrow-on-deep: var(--accent-light);
+
+  /* On the warm-ink footer */
+  --color-on-footer: var(--neutral-100);
+  --color-on-footer-muted: var(--neutral-300);
+  --color-link-on-footer: var(--brand-tint-2);
+  --color-eyebrow-on-footer: var(--accent-light);
+
+  /* Status */
+  --color-error: var(--red-700);
+  --color-error-bg: var(--red-50);
+  --color-success: var(--green-700);
+  --color-success-bg: var(--green-50);
+
+  /* Alpha derivatives (decorative, never the only boundary of a control) */
+  --hairline: color-mix(in srgb, var(--neutral-900) 10%, transparent);
+  --hairline-strong: color-mix(in srgb, var(--neutral-900) 16%, transparent);
+  --hairline-on-dark: color-mix(in srgb, var(--neutral-100) 14%, transparent);
+  --header-glass: color-mix(in srgb, var(--neutral-100) 80%, transparent);
+  --scrim-warm: color-mix(in srgb, var(--neutral-900) 38%, transparent);
+
+  /* ---------- Buttons ---------- */
+  --btn-primary-bg: var(--brand-shade-1);
+  --btn-primary-bg-hover: var(--brand-shade-1-lift);
+  --btn-primary-bg-active: var(--brand-shade-2);
+  --btn-primary-text: var(--white);
+  --btn-primary-inverse-bg: var(--neutral-100);
+  --btn-primary-inverse-text: var(--brand-shade-2);
+  --btn-secondary-text: var(--accent);
+  --btn-secondary-border: var(--accent);
+  --btn-secondary-bg-hover: var(--accent-tint);
+  --btn-secondary-inverse-text: var(--neutral-100);
+  --btn-secondary-inverse-border: var(--neutral-100);
+  --callbar-bg: var(--brand-shade-1);
+  --callbar-text: var(--white);
+
+  --btn-min-h: 2.75rem;          /* 44 px */
+  --btn-min-h-primary: 3rem;     /* 48 px */
+  --btn-pad-y: 0.75rem;
+  --btn-pad-x: 1.5rem;
+  --btn-pad-x-lg: 1.75rem;
+  --btn-weight: 600;
+  --btn-tracking: 0.005em;
+  --btn-border: 1.5px;
+  --btn-hover-lift: -1px;
+  --btn-active-scale: 0.985;
+  --btn-disabled-opacity: 0.5;
+
+  /* ---------- Focus ---------- */
+  --focus-ring: var(--accent);
+  --focus-ring-inverse: var(--accent-light);
+  --focus-width: 3px;
+  --focus-offset: 2px;
+
+  /* ---------- Forms ---------- */
+  --input-bg: var(--white);
+  --input-text: var(--neutral-900);
+  --input-placeholder: var(--neutral-600);
+  --input-helper: var(--neutral-600);
+  --input-border: var(--neutral-500);
+  --input-border-hover: var(--neutral-700);
+  --input-border-error: var(--red-700);
+  --input-h: 3rem;               /* 48 px */
+  --input-border-w: 1.5px;
+  --input-pad-x: 0.875rem;
+
+  /* ---------- Typography ---------- */
+  --font-display: "Fraunces", "Fraunces Fallback", Georgia, "Times New Roman", serif;
+  --font-text: "Figtree", "Figtree Fallback", Arial, system-ui, sans-serif;
+  --display-variation: "SOFT" 0, "WONK" 0; /* serious: no soft or wonky forms */
+  --display-weight: 560;
+  --display-weight-strong: 640;
+  --text-weight: 400;
+  --text-weight-medium: 500;
+  --text-weight-bold: 650;
+
+  /* Fluid 1.25 scale, 360 px to 1280 px viewport */
+  --step--2: 0.8125rem;                                              /* 13 px: legal fine print, captions */
+  --step--1: clamp(0.875rem, 0.8505rem + 0.1087vw, 0.9375rem);       /* 14 to 15 px: eyebrow, micro-label */
+  --step-0: clamp(1.0625rem, 1.038rem + 0.1087vw, 1.125rem);         /* 17 to 18 px: body */
+  --step-1: clamp(1.25rem, 1.1889rem + 0.2717vw, 1.40625rem);        /* 20 to 22.5 px: lead, H4 */
+  --step-2: clamp(1.5rem, 1.4022rem + 0.4348vw, 1.75rem);            /* 24 to 28 px: H3, testimonial */
+  --step-3: clamp(1.75rem, 1.5788rem + 0.7609vw, 2.1875rem);         /* 28 to 35 px: H2 */
+  --step-4: clamp(2.125rem, 1.8804rem + 1.087vw, 2.75rem);           /* 34 to 44 px: section display */
+  --step-5: clamp(2.5rem, 2.1087rem + 1.7391vw, 3.5rem);             /* 40 to 56 px: H1 */
+  --step-6: clamp(2.75rem, 2.163rem + 2.6087vw, 4.25rem);            /* 44 to 68 px: short display only (never ES H1s) */
+
+  --leading-body: 1.6;
+  --leading-tight: 1.1;   /* display */
+  --leading-snug: 1.25;   /* H3, H4, card titles */
+  --tracking-display: -0.018em;
+  --tracking-h1: -0.022em;
+  --tracking-body: 0;
+  --tracking-eyebrow: 0.08em;
+  --measure: 68ch;
+  --measure-narrow: 52ch;
+
+  /* ---------- Space: 4 px base ---------- */
+  --space-1: 0.25rem;   /* 4 */
+  --space-2: 0.5rem;    /* 8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.25rem;   /* 20 */
+  --space-6: 1.5rem;    /* 24 */
+  --space-8: 2rem;      /* 32 */
+  --space-10: 2.5rem;   /* 40 */
+  --space-12: 3rem;     /* 48 */
+  --space-16: 4rem;     /* 64 */
+  --space-20: 5rem;     /* 80 */
+  --space-24: 6rem;     /* 96 */
+  --space-32: 8rem;     /* 128 */
+  --section-pad: clamp(4rem, 8vw, 8rem);
+  --gutter: clamp(1rem, 0.6rem + 1.8vw, 2rem);
+
+  /* ---------- Layout ---------- */
+  --container: 76rem;        /* 1216 px */
+  --container-narrow: 46rem;
+  --header-h: 4.25rem;       /* 68 px */
+  --header-blur: 12px;
+  --callbar-h: 3rem;         /* 48 px mobile bottom call bar */
+
+  /* ---------- Shape ---------- */
+  --radius: 0.5rem;          /* the one radius: buttons, cards, inputs, chips, image frames */
+
+  /* ---------- Shadows: two layers (ambient + key), warm-tinted from the ink ---------- */
+  --shadow-1:
+    0 1px 2px color-mix(in srgb, var(--neutral-900) 6%, transparent),
+    0 2px 8px color-mix(in srgb, var(--neutral-900) 7%, transparent);
+  --shadow-2:
+    0 2px 4px color-mix(in srgb, var(--neutral-900) 7%, transparent),
+    0 12px 28px color-mix(in srgb, var(--neutral-900) 12%, transparent);
+  --shadow-btn:
+    0 1px 2px color-mix(in srgb, var(--brand-shade-2) 18%, transparent),
+    0 4px 12px color-mix(in srgb, var(--brand-shade-2) 18%, transparent);
+  --shadow-btn-hover:
+    0 2px 4px color-mix(in srgb, var(--brand-shade-2) 22%, transparent),
+    0 8px 20px color-mix(in srgb, var(--brand-shade-2) 24%, transparent);
+
+  /* ---------- Motion ---------- */
+  --dur-fast: 160ms;
+  --dur: 180ms;
+  --dur-slow: 200ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --reveal-dur: 520ms;
+  --reveal-rise: 14px;
+  --reveal-stagger: 60ms;
+  --card-lift: -2px;
+
+  /* ---------- Details ---------- */
+  --icon-stroke: 1.75;
+  --icon-size: 1.25rem;
+  --hairline-w: 1px;
+  --link-underline-offset: 0.2em;
+  --link-underline: 1.5px;
+  --link-underline-hover: 2px;
+
+  /* ---------- Image slots (reserved aspect ratios, no CLS) ---------- */
+  --ratio-hero: 16 / 9;
+  --ratio-hero-phone: 4 / 5;
+  --ratio-practice: 3 / 2;
+  --ratio-contact: 4 / 5;
+  --ratio-portrait-desk: 910 / 715;   /* IMG03, shown no wider than 910 px */
+  --ratio-portrait-door: 673 / 951;   /* IMG02, shown no wider than 673 px */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+    --dur-slow: 0ms;
+    --reveal-dur: 0ms;
+    --reveal-rise: 0px;
+    --reveal-stagger: 0ms;
+    --btn-hover-lift: 0px;
+    --btn-active-scale: 1;
+    --card-lift: 0px;
+  }
+}

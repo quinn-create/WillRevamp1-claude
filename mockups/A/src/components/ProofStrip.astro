@@ -1,0 +1,10 @@
+---
+// [proof-strip]: a quiet line of small caps separated by hairlines.
+import { inline } from '../lib/copy.mjs';
+interface Props { section: any }
+const { section } = Astro.props;
+const items: string[] = section.blocks.flatMap((b: any) => (b.type === 'ul' ? b.items : []));
+---
+<ul class="proof" aria-label="At a glance">
+  {items.map((it) => <li set:html={inline(it)} />)}
+</ul>

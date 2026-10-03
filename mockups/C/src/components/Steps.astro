@@ -1,0 +1,33 @@
+---
+// Numbered steps with tabular numerals. Each item's bold lead becomes the step title.
+import SectionHead from './SectionHead.astro';
+import Blocks from './Blocks.astro';
+interface Props { section: any; eyebrow?: string; band?: string }
+const { section, eyebrow, band = '' } = Astro.props;
+const list = section.blocks.find((b) => b.type === 'ol');
+const others = section.blocks.filter((b) => b !== list);
+const split = (html) => { const m = html.match(/^<strong>([\s\S]*?)<\/strong>\s*([\s\S]*)$/); return m ? [m[1], m[2]] : ['', html]; };
+---
+<section class={`section ${band}`} aria-labelledby={section.id}>
+  <div class="container steps-wrap">
+    <SectionHead eyebrow={eyebrow} heading={section.heading} id={section.id} />
+    <div>
+      <ol class="steps" role="list">
+        {list.items.map((it, i) => {
+          const [t, rest] = split(it.html);
+          return (
+            <li data-reveal style={`--i:${i}`}>
+              <span class="step-num" aria-hidden="true">{String(it.n).padStart(2, '0')}</span>
+              <div class="step-body">
+                <span class="visually-hidden">Step {it.n}: </span>
+                {t && <strong set:html={t} />}
+                <p set:html={rest} />
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+      {others.length > 0 && <div class="disclaimer"><Blocks blocks={others} linkStyle="inline" /></div>}
+    </div>
+  </div>
+</section>

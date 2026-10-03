@@ -1,0 +1,29 @@
+---
+import Icon from './Icon.astro';
+import { NAV, FIRM } from '../lib/site.mjs';
+
+interface Props { current: string; demo?: boolean }
+const { current, demo = false } = Astro.props;
+const id = demo ? 'site-menu-example' : 'site-menu';
+---
+<dialog id={id} class="menu" aria-label="Site navigation" open={demo ? true : undefined}>
+  <div class="menu__inner">
+    <div class="menu__top">
+      <img src="/img/logo-blue-mark.webp" width="400" height="40" alt="Will Fraley, Attorney at Law" />
+      <button class="menu-close" type="button" data-menu-close={demo ? undefined : true} aria-label="Close menu"><Icon name="x" /></button>
+    </div>
+    <nav class="menu__nav" aria-label={demo ? 'Mobile (example)' : 'Mobile'}>
+      <ul>
+        <li><a href="/" aria-current={current === '/' ? 'page' : undefined}>Home <Icon name="arrow-right" /></a></li>
+        {NAV.map((n) => (
+          <li><a href={n.path} aria-current={current === n.path ? 'page' : undefined}>{n.label} <Icon name="arrow-right" /></a></li>
+        ))}
+      </ul>
+    </nav>
+    <div class="menu__foot">
+      <a class="btn btn--primary btn--block" href={FIRM.tel}><Icon name="phone" />Call {FIRM.phone}</a>
+      <p class="small" set:html={FIRM.microHtml} />
+      <a class="btn btn--secondary btn--block" href="/es/" hreflang="es" lang="es"><Icon name="languages" />Leer en español</a>
+    </div>
+  </div>
+</dialog>

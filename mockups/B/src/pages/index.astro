@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import Pic from '../components/Pic.astro';
+import Blocks from '../components/Blocks.astro';
+import ProofStrip from '../components/ProofStrip.astro';
+import Cards from '../components/Cards.astro';
+import Faq from '../components/Faq.astro';
+import Testimonial from '../components/Testimonial.astro';
+import { loadPage } from '../lib/copy.mjs';
+import { FIRM } from '../lib/site.mjs';
+
+const { fm, sections } = loadPage('index');
+const by = (kind: string) => sections.find((s) => s.kind === kind);
+const hero = by('hero');
+const proof = by('proof-strip');
+const cards = by('cards');
+const testimonial = by('testimonial');
+const faq = by('faq');
+const cta = by('cta-band');
+const why = sections.find((s) => s.headingText === 'Why people call Will Fraley');
+const es = sections.find((s) => s.headingText === 'Se habla español');
+// Any section not placed explicitly is still rendered (nothing in the copy is dropped).
+const placed = new Set([hero, proof, cards, testimonial, faq, cta, why, es]);
+const leftover = sections.filter((s) => !placed.has(s));
+
+const [lede, ...heroRest] = hero.blocks;
+const heroSrcset = [640, 960, 1280, 1920].map((w) => `/img/hero-${w}.avif ${w}w`).join(', ');
+---
+<Layout title={fm.title} description={fm.description} path="/" cta={{ heading: cta.heading, html: cta.blocks.map((b) => b.html).join(' ') }}
+  preloadImage={{ srcset: heroSrcset, sizes: '100vw', type: 'image/avif' }}>
+
+  <!-- HERO: night block, the page's one full-bleed image -->
+  <section class="hero on-dark" aria-labelledby="page-title">
+    <Pic class="hero__media" name="hero" widths={[640, 960, 1280, 1920]} ratio={[16, 9]} sizes="100vw" alt="" eager />
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow">Will Fraley · Attorney at Law</p>
+        <h1 id="page-title">{fm.h1}</h1>
+        <p class="lede" set:html={lede.html} />
+        {heroRest.map((b) => <p set:html={b.html} />)}
+        <div class="cta-row">
+          <a class="btn btn--primary" href={FIRM.tel}><Icon name="phone" /><span>Call {FIRM.phone}<span class="btn__extra"> — free consultation</span></span></a>
+          <a class="btn btn--ghost" href="/contact-us/#form">Send a short message <Icon name="arrow-right" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ProofStrip items={proof.blocks[0].items} icons={['calendar', 'map-pin', 'languages', 'phone']} label="Will Fraley at a glance" />
+
+  <Cards section={cards} band="band--raised" eyebrow="Practice areas" cols={3} />
+
+  <!-- WHY: navy block, Will's real photo in a crisp frame -->
+  <section class="band band--navy on-dark" aria-labelledby={why.id}>
+    <div class="container">
+      <div class="why-top">
+        <div data-reveal>
+          <Pic class="photo-frame" name="will-desk" widths={[640, 880]} ratio={[880, 715]} sizes="(min-width: 76rem) 40rem, (min-width: 60rem) 52vw, min(55rem, 92vw)" alt="Will Fraley at his desk, writing on a legal pad" lazy={false} />
+        </div>
+        <div class="section-head why-head" data-reveal style="--i:1">
+          <p class="eyebrow">Why Will Fraley</p>
+          <h2 id={why.id} set:html={why.heading} />
+        </div>
+      </div>
+      <div class="why-items">
+        {why.blocks.map((b, i) => b.lead
+          ? <p data-reveal style={`--i:${i % 3}`}><strong class="lead" set:html={b.lead} /><span set:html={b.rest} /></p>
+          : <p data-reveal set:html={b.html} />)}
+      </div>
+    </div>
+  </section>
+
+  <Testimonial section={testimonial} band="band--white" />
+
+  <!-- SE HABLA ESPAÑOL -->
+  <section class="band band--tint" aria-labelledby={es.id}>
+    <div class="container">
+      <div class="es-panel" data-reveal>
+        <div class="es-panel__mark on-dark">
+          <Icon name="languages" />
+          <h2 id={es.id} lang="es" set:html={es.heading} />
+        </div>
+        <div class="es-panel__body">
+          <Blocks blocks={es.blocks} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Faq section={faq} band="band--white" eyebrow="Questions" />
+
+  {leftover.map((s) => (
+    <section class="band band--white" aria-labelledby={s.id}>
+      <div class="container">{s.heading && <h2 id={s.id} set:html={s.heading} />}<Blocks blocks={s.blocks} /></div>
+    </section>
+  ))}
+</Layout>

@@ -1,0 +1,21 @@
+---
+// Generic renderer for parsed copy blocks: paragraphs, lists, link lines, quotes.
+import Icon from './Icon.astro';
+interface Props { blocks: any[]; class?: string }
+const { blocks, class: cls = 'stack' } = Astro.props;
+---
+<div class={cls}>
+  {blocks.map((b) => {
+    if (b.type === 'p') return <p class={/^Prior results do not/.test(b.html) ? 'disclaimer' : undefined} set:html={b.html} />;
+    if (b.type === 'ul') return <ul>{b.items.map((i: string) => <li set:html={i} />)}</ul>;
+    if (b.type === 'ol') return <ol>{b.items.map((i: any) => <li set:html={i.html} />)}</ol>;
+    if (b.type === 'quote') return <blockquote><p set:html={b.html} />{b.cite && <footer>— {b.cite}</footer>}</blockquote>;
+    if (b.type === 'link') return (
+      <p><a class="btn btn--ghost" href={b.href} {...(b.external ? { rel: 'noopener', target: '_blank' } : {})} {...(b.href.startsWith('/es/') ? { hreflang: 'es', lang: 'es' } : {})}>
+        <span set:html={b.label} />{/^(mailto|tel):/.test(b.href) ? null : b.external ? <Icon name="arrow-up-right" /> : <Icon name="arrow-right" />}
+        {b.external && <span class="visually-hidden"> (opens in a new tab)</span>}
+      </a></p>
+    );
+    return null;
+  })}
+</div>

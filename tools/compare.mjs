@@ -31,7 +31,7 @@ function relativize(distDir) {
     };
     if (f.endsWith('.html')) {
       s = s.replace(/(\s(?:href|src|poster|content)=")([^"]*)"/g, (m, k, u) => (k.includes('content') && !u.startsWith('/') ? m : k + fix(u) + '"'));
-      s = s.replace(/(\ssrcset=")([^"]*)"/g, (m, k, v) => k + v.split(',').map((part) => { const [u, d] = part.trim().split(/\s+/); return [fix(u), d].filter(Boolean).join(' '); }).join(', ') + '"');
+      s = s.replace(/(\s(?:image)?srcset=")([^"]*)"/g, (m, k, v) => k + v.split(',').map((part) => { const [u, d] = part.trim().split(/\s+/); return [fix(u), d].filter(Boolean).join(' '); }).join(', ') + '"');
       s = s.replace(/url\((['"]?)(\/[^)'"]+)\1\)/g, (m, q, u) => `url(${q}${fix(u)}${q})`);
     } else {
       const cssUp = '../'.repeat(depth);
@@ -77,7 +77,8 @@ async function verifyOpensFromDisk(dir) {
   const ctx = await newContext(browser);
   const page = await ctx.newPage();
   const failed = [];
-  page.on('requestfailed', (r) => failed.push(r.url()));
+  // Chromium refuses web fonts over file:// (opaque origin, CORS) — expected; the page falls back to system fonts.
+  page.on('requestfailed', (r) => { if (!/\.woff2?$/.test(r.url())) failed.push(r.url()); });
   await page.goto('file://' + f, { waitUntil: 'load' });
   const css = await page.evaluate(() => document.styleSheets.length);
   await browser.close();

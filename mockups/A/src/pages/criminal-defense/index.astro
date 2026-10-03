@@ -1,0 +1,82 @@
+---
+import Base from '../../layouts/Base.astro';
+import Blocks from '../../components/Blocks.astro';
+import CallCta from '../../components/CallCta.astro';
+import Cards from '../../components/Cards.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import Faq from '../../components/Faq.astro';
+import Picture from '../../components/Picture.astro';
+import ProofStrip from '../../components/ProofStrip.astro';
+import Steps from '../../components/Steps.astro';
+import Testimonial from '../../components/Testimonial.astro';
+import { loadCopy, inline, slugify } from '../../lib/copy.mjs';
+
+const { data, sections } = loadCopy('criminal-defense');
+const get = (type: string) => sections.find((s: any) => s.type === type);
+const hero = get('hero');
+const proof = get('proof-strip');
+const prose = sections.filter((s: any) => s.type === 'prose');
+const cards = get('cards');
+const steps = get('steps');
+const faq = get('faq');
+const testimonial = get('testimonial');
+const cta = get('cta-band');
+const rendered = new Set([hero, proof, ...prose, cards, steps, faq, testimonial, cta]);
+const missing = sections.filter((s: any) => !rendered.has(s));
+if (missing.length) throw new Error('criminal-defense: unrendered copy sections: ' + missing.map((s: any) => s.h2 || s.type).join(', '));
+---
+<Base title={data.title} description={data.description} current="/criminal-defense/">
+  <section class="hero" aria-labelledby="page-title">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Criminal defense · Murfreesboro, Tennessee</p>
+          <h1 id="page-title" set:html={inline(data.h1)} />
+          <Blocks blocks={hero.blocks} lead class="hero__deck" />
+          <CallCta secondary={{ href: '/contact-us/#form', label: 'Send a short message' }} />
+        </div>
+        <figure class="scene scene--3x2">
+          <Picture name="a-practice" alt="" sizes="(min-width: 76em) 31rem, (min-width: 60em) 40vw, 92vw" eager />
+        </figure>
+      </div>
+      <ProofStrip section={proof} />
+    </div>
+  </section>
+
+  <section class="section section--flush-top" aria-label="What to do first">
+    <div class="container pair">
+      {prose.map((s: any) => (
+        <div data-reveal>
+          <h2 id={slugify(s.h2)} set:html={inline(s.h2)} />
+          <Blocks blocks={s.blocks} />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section--linen" aria-labelledby={slugify(cards.h2)}>
+    <div class="container">
+      <Cards section={cards} eyebrow="Case types" cols={4} />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby={slugify(steps.h2)}>
+    <div class="container">
+      <Steps section={steps} eyebrow="The process" />
+    </div>
+  </section>
+
+  <section class="section section--linen" aria-labelledby={slugify(faq.h2)}>
+    <div class="container">
+      <Faq section={faq} eyebrow="Questions" />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby={slugify(testimonial.h2)}>
+    <div class="container">
+      <Testimonial section={testimonial} eyebrow="Testimonial" />
+    </div>
+  </section>
+
+  <CtaBand section={cta} />
+</Base>

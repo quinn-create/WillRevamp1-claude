@@ -1,0 +1,27 @@
+---
+// Renders parsed copy blocks as-is (p, lists, single-link paragraphs, h3, quotes).
+import { inline } from '../lib/copy.mjs';
+import Icon from './Icon.astro';
+
+interface Props { blocks: any[]; lead?: boolean; class?: string }
+const { blocks, lead = false, class: cls } = Astro.props;
+---
+<div class:list={['flow', cls]}>
+  {blocks.map((b, i) => {
+    if (b.type === 'p') return <p class:list={[{ lead: lead && i === 0 }]} set:html={inline(b.md)} />;
+    if (b.type === 'ul') return <ul class="list">{b.items.map((it: string) => <li set:html={inline(it)} />)}</ul>;
+    if (b.type === 'ol') return <ol class="list list--ol">{b.items.map((it: string) => <li set:html={inline(it)} />)}</ol>;
+    if (b.type === 'h3') return <h3 set:html={inline(b.md)} />;
+    if (b.type === 'quote') return <blockquote><p set:html={inline(b.md)} /></blockquote>;
+    if (b.type === 'link')
+      return (
+        <p class="more">
+          <a class="link-arrow" href={b.href} hreflang={b.href === '/es/' ? 'es' : undefined} lang={b.href === '/es/' ? 'es' : undefined} rel={/^https?:/.test(b.href) ? 'noopener' : undefined}>
+            <span set:html={inline(b.text)} />
+            <Icon name={/^https?:/.test(b.href) ? 'arrow-up-right' : 'arrow-right'} />
+          </a>
+        </p>
+      );
+    return null;
+  })}
+</div>

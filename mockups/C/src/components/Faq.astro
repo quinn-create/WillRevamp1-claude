@@ -1,0 +1,22 @@
+---
+// FAQ as native <details>. Questions are the copy's H3s; answers are rendered verbatim.
+import SectionHead from './SectionHead.astro';
+import Blocks from './Blocks.astro';
+interface Props { section: any; eyebrow?: string; band?: string; openFirst?: boolean }
+const { section, eyebrow, band = '', openFirst = true } = Astro.props;
+const { intro, items, after } = section.groups;
+---
+<section class={`section ${band}`} aria-labelledby={section.id}>
+  <div class="container faq-wrap">
+    <SectionHead eyebrow={eyebrow} heading={section.heading} intro={intro} id={section.id} />
+    <div class="faq" data-reveal>
+      {items.map((it, i) => (
+        <details open={openFirst && i === 0 ? true : undefined}>
+          <summary><span set:html={it.title.html} /><span class="plus" aria-hidden="true"></span></summary>
+          <div class="answer"><Blocks blocks={it.blocks} linkStyle="inline" /></div>
+        </details>
+      ))}
+      {after.length > 0 && <Blocks blocks={after} />}
+    </div>
+  </div>
+</section>

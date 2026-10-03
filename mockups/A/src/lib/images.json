@@ -1,0 +1,220 @@
+{
+  "a-contact": [
+    {
+      "src": "/img/a-contact-1280.avif",
+      "width": 1280,
+      "height": 1589,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-contact-1280.webp",
+      "width": 1280,
+      "height": 1589,
+      "format": "webp"
+    },
+    {
+      "src": "/img/a-contact-640.avif",
+      "width": 640,
+      "height": 794,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-contact-640.webp",
+      "width": 640,
+      "height": 794,
+      "format": "webp"
+    },
+    {
+      "src": "/img/a-contact-960.avif",
+      "width": 960,
+      "height": 1192,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-contact-960.webp",
+      "width": 960,
+      "height": 1192,
+      "format": "webp"
+    }
+  ],
+  "a-hero": [
+    {
+      "src": "/img/a-hero-1280.avif",
+      "width": 1280,
+      "height": 714,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-hero-1280.webp",
+      "width": 1280,
+      "height": 714,
+      "format": "webp"
+    },
+    {
+      "src": "/img/a-hero-1920.avif",
+      "width": 1920,
+      "height": 1072,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-hero-1920.webp",
+      "width": 1920,
+      "height": 1072,
+      "format": "webp"
+    },
+    {
+      "src": "/img/a-hero-2560.avif",
+      "width": 2560,
+      "height": 1429,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-hero-2560.webp",
+      "width": 2560,
+      "height": 1429,
+      "format": "webp"
+    },
+    {
+      "src": "/img/a-hero-640.avif",
+      "width": 640,
+      "height": 357,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-hero-640.webp",
+      "width": 640,
+      "height": 357,
+      "format": "webp"
+    },
+    {
+      "src": "/img/a-hero-960.avif",
+      "width": 960,
+      "height": 536,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-hero-960.webp",
+      "width": 960,
+      "height": 536,
+      "format": "webp"
+    }
+  ],
+  "a-practice": [
+    {
+      "src": "/img/a-practice-1280.avif",
+      "width": 1280,
+      "height": 859,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-practice-1280.webp",
+      "width": 1280,
+      "height": 859,
+      "format": "webp"
+    },
+    {
+      "src": "/img/a-practice-1920.avif",
+      "width": 1920,
+      "height": 1288,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-practice-1920.webp",
+      "width": 1920,
+      "height": 1288,
+      "format": "webp"
+    },
+    {
+      "src": "/img/a-practice-640.avif",
+      "width": 640,
+      "height": 429,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-practice-640.webp",
+      "width": 640,
+      "height": 429,
+      "format": "webp"
+    },
+    {
+      "src": "/img/a-practice-960.avif",
+      "width": 960,
+      "height": 644,
+      "format": "avif"
+    },
+    {
+      "src": "/img/a-practice-960.webp",
+      "width": 960,
+      "height": 644,
+      "format": "webp"
+    }
+  ],
+  "logo": [
+    {
+      "src": "/img/logo.webp",
+      "width": 400,
+      "height": 62,
+      "format": "webp"
+    }
+  ],
+  "logo-wordmark": [
+    {
+      "src": "/img/logo-wordmark.webp",
+      "width": 400,
+      "height": 42,
+      "format": "webp"
+    }
+  ],
+  "will-desk": [
+    {
+      "src": "/img/will-desk-596.avif",
+      "width": 596,
+      "height": 715,
+      "format": "avif"
+    },
+    {
+      "src": "/img/will-desk-596.webp",
+      "width": 596,
+      "height": 715,
+      "format": "webp"
+    },
+    {
+      "src": "/img/will-desk-448.avif",
+      "width": 448,
+      "height": 537,
+      "format": "avif"
+    },
+    {
+      "src": "/img/will-desk-448.webp",
+      "width": 448,
+      "height": 537,
+      "format": "webp"
+    }
+  ],
+  "will-portrait": [
+    {
+      "src": "/img/will-portrait-673.avif",
+      "width": 673,
+      "height": 841,
+      "format": "avif"
+    },
+    {
+      "src": "/img/will-portrait-673.webp",
+      "width": 673,
+      "height": 841,
+      "format": "webp"
+    },
+    {
+      "src": "/img/will-portrait-448.avif",
+      "width": 448,
+      "height": 560,
+      "format": "avif"
+    },
+    {
+      "src": "/img/will-portrait-448.webp",
+      "width": 448,
+      "height": 560,
+      "format": "webp"
+    }
+  ]
+}

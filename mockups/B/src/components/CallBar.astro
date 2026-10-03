@@ -1,0 +1,9 @@
+---
+import Icon from './Icon.astro';
+import { FIRM } from '../lib/site.mjs';
+interface Props { demo?: boolean }
+const { demo = false } = Astro.props;
+---
+<div class:list={['callbar', { 'callbar--demo': demo }]} data-callbar={demo ? undefined : true}>
+  <a class="btn btn--primary" href={FIRM.tel}><Icon name="phone" /><span>Call {FIRM.phone}<span class="btn__extra"> · Free consultation</span></span></a>
+</div>

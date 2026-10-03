@@ -1,0 +1,112 @@
+---
+// Contact. Every section of copy/pages/contact-us.md is rendered in order. The "Send a short message"
+// section carries the intake form (fields from inventory/forms.json); "Finding the office" is the
+// map-and-hours block. Forms are not wired in mockups: submit is disabled with a phone/email fallback.
+import Layout from '../../layouts/Layout.astro';
+import Picture from '../../components/Picture.astro';
+import Cards from '../../components/Cards.astro';
+import SectionHead from '../../components/SectionHead.astro';
+import Blocks from '../../components/Blocks.astro';
+import Steps from '../../components/Steps.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { loadPage } from '../../lib/copy.mjs';
+import { firm, icon } from '../../lib/site.mjs';
+
+const page = loadPage('contact-us');
+const { fm, sections } = page;
+const markEs = (html) => html.replace(/(?<!>)(Se habla español\.?)/g, '<span lang="es">$1</span>');
+const withEs = (blocks) => blocks.map((b) => (b.html ? { ...b, html: markEs(b.html) } : b));
+const cardIcons = ['phone', 'mail', 'map-pin', 'clock'];
+---
+<Layout title={fm.title} description={fm.description} path="/contact-us/" schemaType={fm.schema_type}>
+  {sections.map((s) => {
+    if (s.type === 'hero') return (
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="container page-hero__grid">
+          <div class="page-hero__text">
+            <p class="eyebrow">Contact</p>
+            <h1 id="page-title">{fm.h1}</h1>
+            <div class="stack">
+              {withEs(s.blocks).map((b, i) => <p class={i === 0 ? 'lead' : undefined} set:html={b.html} />)}
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--primary" href={firm.tel}><Fragment set:html={icon('phone', { size: 18 })} />Call {firm.phone}</a>
+              <a class="btn btn--secondary" href="#form">Send a short message</a>
+            </div>
+          </div>
+          <div class="page-hero__media is-square frame frame--hairline">
+            <Picture name="contact" alt="" sizes="(min-width: 1260px) 590px, (min-width: 900px) 46vw, 100vw" priority pos="50% 62%" />
+          </div>
+        </div>
+      </section>
+    );
+    if (s.type === 'cards') {
+      // Each card's own content, verbatim; the Hours card's list gets the hours-table look.
+      return <Cards section={{ ...s, groups: { ...s.groups, items: s.groups.items.map((it) => ({ ...it, body: withEs(it.body) })) } }} eyebrow="Reach the office" cols={4} icons={cardIcons} band="band-sand" />;
+    }
+    if (s.type === 'steps') return <Steps section={s} eyebrow="What to expect" />;
+    if (s.type === 'prose' && /send a short message/i.test(s.heading?.text || '')) {
+      const intro = s.blocks.filter((b) => !/confidential|can.t wait/i.test(b.raw || ''));
+      const urgent = s.blocks.find((b) => /can.t wait/i.test(b.raw || ''));
+      const notice = s.blocks.find((b) => /confidential/i.test(b.raw || ''));
+      return (
+        <section class="section band-sand" id="form" aria-labelledby={s.id}>
+          <div class="container">
+            <SectionHead eyebrow="Write to the office" heading={s.heading} intro={intro} id={s.id} />
+            <div class="contact-grid">
+              <div class="form-card" data-reveal>
+                <ContactForm noticeHtml={notice?.html} />
+              </div>
+              <aside class="contact-aside" aria-label="Call instead">
+                <div class="call-card" data-reveal style="--i:1">
+                  <div class="call-card__body">
+                    <p class="eyebrow" style="margin:0">Prefer to talk?</p>
+                    {urgent && <p set:html={urgent.html} />}
+                    <a class="btn btn--primary btn--block" href={firm.tel}><Fragment set:html={icon('phone', { size: 18 })} />Call {firm.phone}</a>
+                    <p class="muted">Free consultation · <span lang="es">Se habla español</span></p>
+                    <dl class="hours">
+                      {firm.hours.map((h) => <div><dt>{h.days}</dt><dd>{h.time}</dd></div>)}
+                    </dl>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      );
+    }
+    if (s.type === 'prose' && /finding the office/i.test(s.heading?.text || '')) {
+      const links = s.blocks.filter((b) => b.type === 'link');
+      const paras = s.blocks.filter((b) => b.type === 'p');
+      return (
+        <section class="section" aria-labelledby={s.id}>
+          <div class="container visit">
+            <div data-reveal>
+              <SectionHead eyebrow="Visit" heading={s.heading} id={s.id} />
+              <address class="visit__address">{firm.street}<br />{firm.cityLine}</address>
+              <div class="prose measure" style="margin-top: var(--space-6)">
+                <p set:html={paras[0]?.html} />
+                <Blocks blocks={links} linkStyle="secondary" />
+                {paras.slice(1).map((b) => <p set:html={b.html} />)}
+              </div>
+            </div>
+            <div class="visit-card" data-reveal style="--i:1">
+              <h3><Fragment set:html={icon('clock', { size: 20 })} />Office hours</h3>
+              <dl class="hours">
+                {firm.hours.map((h) => <div><dt>{h.days}</dt><dd>{h.time}</dd></div>)}
+              </dl>
+              <p class="fine" style="margin-top: var(--space-4)">Call ahead: <a class="tel" href={firm.tel}>{firm.phone}</a></p>
+            </div>
+          </div>
+        </section>
+      );
+    }
+    if (s.type === 'cta-band') return <CtaBand section={{ ...s, blocks: withEs(s.blocks) }} eyebrow="Free consultation" secondaryHref="#form" />;
+    return (
+      <section class="section" aria-labelledby={s.id}>
+        <div class="container"><SectionHead heading={s.heading} id={s.id} /><div class="prose measure"><Blocks blocks={s.blocks} /></div></div>
+      </section>
+    );
+  })}
+</Layout>

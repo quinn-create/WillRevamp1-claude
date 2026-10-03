@@ -25,3 +25,8 @@
 ### Stage 4 — Copy (run in parallel with Stage 3)
 - Because the operator removed the Gate 3 stop, Stage 4 copy ran alongside the mockups (copy does not depend on the design direction). Gate 4 passed: 31 EN + 31 ES copy files, every factual sentence tagged, Spanish cites only English fact IDs.
 - Spanish avoids "certificado" (reads as "certified"): the TACDL certificates are "constancias de finalización".
+
+### Stage 3 — Mockups
+- Gate 3 passed. Three real Astro mockups (Home, Criminal Defense, Contact + components sheet) with 390/1280 screenshots, design-QA'd; 9 Higgsfield scenes (nano_banana_pro 2k, 18 credits); COMPARE.html (self-contained) and MOCKUPS-rev1.zip (22.7 MB).
+- **Gate 3 stop → Build A.** The Creative Director recommends A "Counsel" (borrowing B's full-number phone button and C's small photo of Will). Per the operator's instruction to finish without stopping, this is recorded as the Build decision; the run continues to Stages 3b–7.
+- `tools/compare.mjs` also rewrites `imagesrcset`; web fonts cannot load over file:// in Chromium (expected — the unzipped folders fall back to system fonts; COMPARE.html screenshots show the real fonts).

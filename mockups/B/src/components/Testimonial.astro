@@ -1,0 +1,35 @@
+---
+import Blocks from './Blocks.astro';
+import Pic from './Pic.astro';
+interface Props { section: any; band?: string; portrait?: boolean; eyebrow?: string }
+const { section, band = 'band--white', portrait = false, eyebrow = 'Client testimonial' } = Astro.props;
+const quote = section.blocks.find((b: any) => b.type === 'quote');
+const rest = section.blocks.filter((b: any) => b !== quote);
+---
+<section class:list={['band', band]} aria-labelledby={section.id}>
+  <div class:list={['container', 'testimonial-grid', { 'testimonial-grid--portrait': portrait }]}>
+    {portrait ? (
+      <div data-reveal>
+        <Pic class="portrait" name="will-door" widths={[480, 672]} ratio={[3, 4]} sizes="(min-width: 60rem) 22rem, min(22rem, 92vw)" alt="Will Fraley, Attorney at Law" lazy={false} />
+      </div>
+    ) : (
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">{eyebrow}</p>
+        <h2 id={section.id} set:html={section.heading} />
+      </div>
+    )}
+    <div>
+      {portrait && (
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">{eyebrow}</p>
+          <h2 id={section.id} set:html={section.heading} />
+        </div>
+      )}
+      <figure class="quote" data-reveal style="--i:1">
+        <blockquote><p set:html={`“${quote.html}”`} /></blockquote>
+        {quote.cite && <figcaption>{quote.cite}</figcaption>}
+      </figure>
+      <div class="quote-after" data-reveal style="--i:2"><Blocks blocks={rest} /></div>
+    </div>
+  </div>
+</section>

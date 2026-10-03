@@ -1,0 +1,36 @@
+---
+import Icon from './Icon.astro';
+import MobileMenu from './MobileMenu.astro';
+import { NAV, FIRM } from '../lib/site.mjs';
+
+interface Props { current: string; demo?: boolean; scrolled?: boolean }
+const { current, demo = false, scrolled = false } = Astro.props;
+const isCurrent = (p: string) => current === p;
+---
+<header class:list={['site-header', { 'is-scrolled': scrolled }]} aria-label={demo ? 'Header example' : undefined}>
+  <div class="container header__inner">
+    <a class="header__logo" href="/">
+      <img src="/img/logo-blue-mark.webp" width="400" height="40" alt="Will Fraley, Attorney at Law: home" />
+    </a>
+    <nav class="header__nav" aria-label={demo ? 'Main (example)' : 'Main'}>
+      <ul class="nav-list">
+        {NAV.map((n) => (
+          <li><a class="nav-link" href={n.path} aria-current={isCurrent(n.path) ? 'page' : undefined}>{n.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <a class="lang-toggle" href="/es/" hreflang="es" lang="es"><Icon name="languages" /><span class="lang-long">Español</span><abbr class="lang-short" title="Español">ES</abbr></a>
+      <a class="btn btn--navy header__phone" href={FIRM.tel}>
+        <Icon name="phone" />
+        <span><span class="visually-hidden">Call </span>{FIRM.phone}<span class="btn__sub" set:html={FIRM.microHtml} /></span>
+      </a>
+      {demo ? (
+        <button class="menu-btn" type="button" aria-label="Menu (example)"><Icon name="menu" /><span class="menu-btn__label">Menu</span></button>
+      ) : (
+        <button class="menu-btn" type="button" data-menu-open aria-haspopup="dialog" aria-controls="site-menu" aria-expanded="false"><Icon name="menu" /><span class="menu-btn__label">Menu</span><span class="visually-hidden"> (opens site navigation)</span></button>
+      )}
+    </div>
+  </div>
+</header>
+{!demo && <MobileMenu current={current} />}

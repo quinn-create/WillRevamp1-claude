@@ -1,0 +1,20 @@
+---
+// [cta-band]: contained ink panel. "Free consultation" always sits beside the tel: button.
+import { inline } from '../lib/copy.mjs';
+import Blocks from './Blocks.astro';
+import CallCta from './CallCta.astro';
+interface Props { section: any; formHref?: string | null }
+const { section, formHref = '/contact-us/#form' } = Astro.props;
+const copyHasForm = section.blocks.some((b: any) => /\(\/contact-us\/#form\)|\(#form\)/.test(b.md || ''));
+---
+<section class="section section--cta" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-band on-ink" data-reveal>
+      <div class="cta-band__copy">
+        <h2 id="cta-heading" set:html={inline(section.h2)} />
+        <Blocks blocks={section.blocks} />
+      </div>
+      <CallCta inverse secondary={formHref && !copyHasForm ? { href: formHref, label: 'Send a short message' } : null} />
+    </div>
+  </div>
+</section>

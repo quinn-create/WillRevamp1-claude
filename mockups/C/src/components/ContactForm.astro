@@ -1,0 +1,61 @@
+---
+// Intake form. Fields from inventory/forms.json (gform_1). Required fields follow the approved copy
+// ("Leave your name and phone number… Email and a short note are optional"). Not wired in the mockup:
+// no action, submit disabled, with the phone/email fallback. The email field shows the inline error state.
+import { firm, icon } from '../lib/site.mjs';
+interface Props { noticeHtml?: string; demoErrors?: boolean }
+const { noticeHtml, demoErrors = true } = Astro.props;
+const alert = icon('circle-alert', { size: 18 });
+const times = ['ASAP', 'Morning', 'Noon', 'Afternoon', 'Evening', 'No preference'];
+const clientOpts = ['Yes, I am a potential new client.', 'No, I’m a current existing client.', 'I’m neither.'];
+---
+<form class="intake" aria-labelledby="form-title" novalidate>
+  <h3 id="form-title" class="visually-hidden">Message form</h3>
+  <div class="form-grid">
+    <div class="field">
+      <label for="f-first">First name <span class="req">(required)</span></label>
+      <input class="input" id="f-first" name="first_name" type="text" autocomplete="given-name" required />
+    </div>
+    <div class="field">
+      <label for="f-last">Last name <span class="req">(required)</span></label>
+      <input class="input" id="f-last" name="last_name" type="text" autocomplete="family-name" required />
+    </div>
+    <div class="field">
+      <label for="f-phone">Phone <span class="req">(required)</span></label>
+      <input class="input" id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="f-phone-help" />
+      <p class="helper" id="f-phone-help">A number where you can talk privately.</p>
+    </div>
+    <div class={`field${demoErrors ? ' is-error' : ''}`}>
+      <label for="f-email">Email <span class="opt">(optional)</span></label>
+      <input class="input" id="f-email" name="email" type="email" autocomplete="email" value={demoErrors ? 'maria@gmail' : undefined} aria-invalid={demoErrors ? 'true' : undefined} aria-describedby="f-email-err" />
+      {demoErrors && <p class="error-msg" id="f-email-err"><Fragment set:html={alert} />This email is missing its ending. Add it, like name@example.com, or leave it blank.</p>}
+    </div>
+    <div class="field">
+      <label for="f-time">Best time to reach you <span class="opt">(optional)</span></label>
+      <select class="select" id="f-time" name="best_time">
+        <option value="">Choose a time</option>
+        {times.map((t) => <option>{t}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="f-client">Are you a new client? <span class="opt">(optional)</span></label>
+      <select class="select" id="f-client" name="new_client">
+        <option value="">Choose one</option>
+        {clientOpts.map((t) => <option>{t}</option>)}
+      </select>
+    </div>
+    <div class="field span-2">
+      <label for="f-msg">How can we help? <span class="opt">(optional)</span></label>
+      <textarea class="textarea" id="f-msg" name="message" rows="5" maxlength="600" aria-describedby="f-msg-help"></textarea>
+      <p class="helper" id="f-msg-help">A line or two about what happened is enough. Up to 600 characters.</p>
+    </div>
+  </div>
+  <div class="form-actions">
+    {noticeHtml && <div class="notice" role="note"><Fragment set:html={icon('info', { size: 20 })} /><p set:html={noticeHtml} /></div>}
+    <div class="btn-row">
+      <button class="btn btn--primary" type="submit" disabled aria-describedby="f-fallback">Send message</button>
+    </div>
+    <p class="fallback" id="f-fallback">Online messages are not switched on in this preview. Please call <a class="tel" href={firm.tel}>{firm.phone}</a> or email <a href={`mailto:${firm.email}`}>{firm.email}</a>.</p>
+    {demoErrors && <p class="mock-note">Mockup note: the email field shows the inline error state that appears when a field is left with a mistake.</p>}
+  </div>
+</form>

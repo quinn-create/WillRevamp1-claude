@@ -1,0 +1,48 @@
+---
+import { NAV, FIRM, FOOTER_LINKS } from '../lib/site.mjs';
+const year = 2026;
+---
+<footer class="site-footer on-dark">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="footer__logo" href="/"><img src="/img/logo-white.webp" width="400" height="62" alt="Will Fraley, Attorney at Law: home" /></a>
+        <p>Criminal defense and family law in Murfreesboro. <Fragment set:html={FIRM.spanishHtml} />.</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h2 class="footer__h">Call or write</h2>
+          <address class="footer__nap">
+            <a class="footer__phone" href={FIRM.tel}>{FIRM.phone}</a>
+            <span class="footer__micro" set:html={FIRM.microHtml} />
+            <a href={`mailto:${FIRM.email}`}>{FIRM.email}</a>
+            <span>{FIRM.street}<br />{FIRM.city}</span>
+          </address>
+        </div>
+        <div>
+          <h2 class="footer__h">Office hours</h2>
+          <ul class="footer__hours">
+            {FIRM.hours.map((h) => <li><span>{h.days}</span>{h.time}</li>)}
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__h">Pages</h2>
+          <ul class="footer__list">
+            {NAV.map((n) => <li><a href={n.path}>{n.label}</a></li>)}
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__h">Site</h2>
+          <ul class="footer__list">
+            {FOOTER_LINKS.map((n) => <li><a href={n.path}>{n.label}</a></li>)}
+            <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <p>The information on this website is general information only, not legal advice. Calling or sending a message does not create an attorney-client relationship. Prior results do not guarantee a similar outcome.</p>
+      <p>© {year} {FIRM.name}. {FIRM.street}, {FIRM.city}.</p>
+    </div>
+  </div>
+</footer>

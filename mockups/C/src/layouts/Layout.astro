@@ -1,0 +1,83 @@
+---
+import '../../tokens.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import MenuDialog from '../components/MenuDialog.astro';
+import Footer from '../components/Footer.astro';
+import { firm, esPathFor, icon } from '../lib/site.mjs';
+interface Props { title: string; description: string; path: string; schemaType?: string; preloadImage?: { href: string; srcset: string; sizes: string; type: string } }
+const { title, description, path, schemaType = 'LegalService', preloadImage } = Astro.props;
+const canonical = firm.site + path;
+const es = firm.site + esPathFor(path);
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': schemaType === 'ContactPage' ? 'ContactPage' : 'LegalService',
+  name: firm.name,
+  url: canonical,
+  telephone: '+1-615-410-7290',
+  email: firm.email,
+  address: { '@type': 'PostalAddress', streetAddress: firm.street, addressLocality: 'Murfreesboro', addressRegion: 'TN', postalCode: '37130', addressCountry: 'US' },
+  openingHours: ['Mo-Th 09:00-17:00', 'Fr 09:00-16:00'],
+  availableLanguage: ['English', 'Spanish'],
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <link rel="alternate" hreflang="es" href={es} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
+    <meta name="theme-color" content="#F6F1EA" />
+    <meta name="robots" content="noindex" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="data:," />
+    <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    {preloadImage && <link rel="preload" as="image" type={preloadImage.type} imagesrcset={preloadImage.srcset} imagesizes={preloadImage.sizes} fetchpriority="high" />}
+    <script is:inline>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header current={path} />
+    <MenuDialog current={path} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <a class="callbar" href={firm.tel}>
+      <Fragment set:html={icon('phone', { size: 18 })} />
+      <span>Call <span class="num">{firm.phone}</span></span>
+      <span class="sub">· Free consultation</span>
+    </a>
+    <script is:inline>
+      (function () {
+        var d = document.getElementById('site-menu');
+        var opener = document.querySelector('[data-menu-open]');
+        if (d && opener && typeof d.showModal === 'function') {
+          opener.addEventListener('click', function () { d.showModal(); opener.setAttribute('aria-expanded', 'true'); });
+          d.addEventListener('close', function () { opener.setAttribute('aria-expanded', 'false'); opener.focus(); });
+          d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+          d.querySelectorAll('[data-menu-close], a').forEach(function (el) { el.addEventListener('click', function () { if (el.matches('[data-menu-close]') || el.getAttribute('href').charAt(0) !== 't') d.close(); }); });
+          matchMedia('(min-width: 1240px)').addEventListener('change', function (m) { if (m.matches && d.open) d.close(); });
+        }
+        var els = document.querySelectorAll('[data-reveal]');
+        if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          els.forEach(function (el) { el.classList.add('is-in'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
+        }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
+        els.forEach(function (el) { io.observe(el); });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+---
+// Cards from an H3-grouped copy section. A card with exactly one link becomes wholly clickable
+// (one real link + ::after overlay); its focus ring is drawn on the card.
+import SectionHead from './SectionHead.astro';
+import Blocks from './Blocks.astro';
+import { icon } from '../lib/site.mjs';
+interface Props { section: any; eyebrow?: string; cols?: 3 | 4; icons?: string[]; band?: string; numbered?: boolean }
+const { section, eyebrow, cols = 3, icons = [], band = '', numbered = false } = Astro.props;
+const { intro, items, after } = section.groups;
+const arrow = icon('arrow-right', { size: 18 });
+// Keep the arrow on the same line as the link's last word (no orphaned arrow when the label wraps).
+const keepArrow = (html) => (/</.test(html) ? html + arrow : html.replace(/(\S+)\s*$/, `<span class="nowrap">$1${arrow}</span>`));
+const linkCount = (it) => (it.link ? 1 : 0) + it.body.reduce((n, b) => n + (b.type === 'link' ? 1 : 0) + (b.html ? (b.html.match(/<a /g) || []).length : 0) + (b.items ? b.items.reduce((m, x) => m + (x.html.match(/<a /g) || []).length, 0) : 0), 0);
+const addStretch = (html) => html.replace(/<a ([^>]*)>/, (m, attrs) => (/class="/.test(attrs) ? `<a ${attrs.replace(/class="([^"]*)"/, 'class="$1 stretch"')}>` : `<a class="stretch" ${attrs}>`));
+---
+<section class={`section ${band}`} aria-labelledby={section.id}>
+  <div class="container">
+    <SectionHead eyebrow={eyebrow} heading={section.heading} intro={intro} id={section.id} />
+    <ul class={`cards cards--${cols}`} role="list">
+      {items.map((it, i) => {
+        const clickable = linkCount(it) === 1;
+        const body = clickable && !it.link ? it.body.map((b) => (b.type === 'link' ? { ...b, stretch: true } : b.html && /<a /.test(b.html) ? { ...b, html: addStretch(b.html) } : b.items ? { ...b, items: b.items.map((x) => ({ ...x, html: /<a /.test(x.html) ? addStretch(x.html) : x.html })) } : b)) : it.body;
+        return (
+          <li class={`card${clickable ? ' is-clickable' : ''}`} data-reveal style={`--i:${i % 4}`}>
+            {icons[i] && <span class="card__icon"><Fragment set:html={icon(icons[i], { size: 22 })} /></span>}
+            {numbered && <span class="card-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>}
+            <h3 set:html={it.title.html} />
+            <Blocks blocks={body} linkStyle="inline" />
+            {it.link && (
+              <p class="card__more">
+                <a class={clickable ? 'stretch' : ''} href={it.link.href}><span set:html={keepArrow(it.link.html)} /></a>
+              </p>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+    {after.length > 0 && <div class="section-after"><Blocks blocks={after} linkStyle="secondary" /></div>}
+  </div>
+</section>

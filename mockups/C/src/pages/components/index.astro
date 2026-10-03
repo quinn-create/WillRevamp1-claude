@@ -1,0 +1,243 @@
+---
+// Components sheet: every state, forced side by side (hover/active/focus as classes that mirror the
+// pseudo-classes), plus the header at desktop and the mobile dialog open.
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import MenuDialog from '../../components/MenuDialog.astro';
+import { firm, icon } from '../../lib/site.mjs';
+const phone = icon('phone', { size: 18 });
+const arrow = icon('arrow-right', { size: 18 });
+const states = [
+  ['Default', ''], ['Hover', 'is-hover'], ['Active', 'is-active'], ['Focus-visible', 'is-focus'], ['Disabled', 'is-disabled'], ['Loading', 'is-loading'],
+];
+---
+<Layout title="Components — Direction C “Neighbor”" description="Direction C Neighbor component sheet: buttons, links, cards, form fields, navigation, header and mobile menu in every state, for the Will Fraley mockup review." path="/components/">
+  <section class="section" style="padding-bottom: var(--space-8)">
+    <div class="container">
+      <p class="eyebrow">Direction C · Neighbor</p>
+      <h1>Components and states</h1>
+      <p class="lead measure" style="margin-top: var(--space-4)">Every interactive element in its default, hover, active, focus-visible, disabled, loading and error states. Hover, active and focus are forced with classes so they sit side by side.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="sheet-section" aria-labelledby="c-primary">
+      <h2 id="c-primary">Primary button</h2>
+      <div class="state-grid">
+        {states.map(([label, cls]) => (
+          <div class="state">
+            <span class="state__label">{label}</span>
+            {cls === 'is-disabled'
+              ? <button class="btn btn--primary" type="button" disabled>{label === 'Disabled' && <Fragment set:html={phone} />}Call now</button>
+              : cls === 'is-loading'
+                ? <button class="btn btn--primary is-loading" type="button" aria-busy="true"><span class="spinner" aria-hidden="true"></span>Sending…</button>
+                : <a class={`btn btn--primary ${cls}`} href={firm.tel}><Fragment set:html={phone} />Call now</a>}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-secondary">
+      <h2 id="c-secondary">Secondary and ghost buttons</h2>
+      <div class="state-grid">
+        {states.slice(0, 5).map(([label, cls]) => (
+          <div class="state">
+            <span class="state__label">Secondary · {label}</span>
+            {cls === 'is-disabled' ? <button class="btn btn--secondary" type="button" disabled>Send a message</button> : <a class={`btn btn--secondary ${cls}`} href="/contact-us/#form">Send a message</a>}
+          </div>
+        ))}
+      </div>
+      <div class="state-grid" style="margin-top: var(--space-8)">
+        {states.slice(0, 4).map(([label, cls]) => (
+          <div class="state">
+            <span class="state__label">Ghost · {label}</span>
+            <a class={`btn btn--ghost ${cls}`} href="/criminal-defense/">Criminal defense<Fragment set:html={arrow} /></a>
+          </div>
+        ))}
+        <div class="state">
+          <span class="state__label">Text link · default</span>
+          <p>Call <a class="tel" href={firm.tel}>{firm.phone}</a> today.</p>
+        </div>
+        <div class="state">
+          <span class="state__label">Text link · hover</span>
+          <p>Read <a class="is-hover" href="/faqs/">common questions</a>.</p>
+        </div>
+        <div class="state">
+          <span class="state__label">Text link · focus-visible</span>
+          <p>Read <a class="is-focus" href="/faqs/">common questions</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-faq">
+      <h2 id="c-faq">Questions (accordion)</h2>
+      <div class="faq demo-faq">
+        <details>
+          <summary><span><span class="state__label" style="display:block">Closed · default</span>Is the first consultation free?</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="answer"><p>Yes. Call <a class="tel" href={firm.tel}>{firm.phone}</a> for a free consultation.</p></div>
+        </details>
+        <details>
+          <summary class="is-hover"><span><span class="state__label" style="display:block">Closed · hover</span>Can I get help in Spanish?</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="answer"><p>Yes. <span lang="es">Se habla español</span>, and Spanish-speaking services are available.</p></div>
+        </details>
+        <details>
+          <summary class="is-focus"><span><span class="state__label" style="display:block">Closed · focus-visible</span>Where do you represent clients?</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="answer"><p>In Murfreesboro and the surrounding counties of Rutherford, Coffee and Wilson.</p></div>
+        </details>
+        <details open>
+          <summary><span><span class="state__label" style="display:block">Open</span>Is the consultation free?</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="answer"><p>Yes. Call <a class="tel" href={firm.tel}>{firm.phone}</a> for a free consultation.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-utility">
+      <h2 id="c-utility">Header controls and call bar</h2>
+      <div class="state-grid">
+        <div class="state"><span class="state__label">Language · default</span><div class="lang"><span aria-current="true" lang="en">EN</span><span class="sep" aria-hidden="true">/</span><a href="/es/" hreflang="es" lang="es">ES</a></div></div>
+        <div class="state"><span class="state__label">Language · hover</span><div class="lang"><span aria-current="true" lang="en">EN</span><span class="sep" aria-hidden="true">/</span><a class="is-hover" href="/es/" hreflang="es" lang="es">ES</a></div></div>
+        <div class="state"><span class="state__label">Language · focus-visible</span><div class="lang"><span aria-current="true" lang="en">EN</span><span class="sep" aria-hidden="true">/</span><a class="is-focus" href="/es/" hreflang="es" lang="es">ES</a></div></div>
+        <div class="state"><span class="state__label">Menu button · default</span><button class="menu-btn" type="button" tabindex="-1"><Fragment set:html={icon('menu', { size: 22 })} /><span class="visually-hidden">Menu</span></button></div>
+        <div class="state"><span class="state__label">Menu button · hover</span><button class="menu-btn is-hover" type="button" tabindex="-1"><Fragment set:html={icon('menu', { size: 22 })} /><span class="visually-hidden">Menu</span></button></div>
+        <div class="state"><span class="state__label">Menu button · focus-visible</span><button class="menu-btn is-focus" type="button" tabindex="-1"><Fragment set:html={icon('menu', { size: 22 })} /><span class="visually-hidden">Menu</span></button></div>
+      </div>
+      <div class="demo-callbars" style="margin-top: var(--space-8)">
+        {[['Phone call bar · default', ''], ['Phone call bar · hover', 'is-hover'], ['Phone call bar · focus-visible', 'is-focus']].map(([label, cls]) => (
+          <div class="state" style="justify-items: stretch">
+            <span class="state__label">{label}</span>
+            <div class="demo-callbar">
+              <a class={`callbar ${cls}`} href={firm.tel} tabindex="-1"><Fragment set:html={phone} /><span>Call <span class="num">{firm.phone}</span></span><span class="sub">· Free consultation</span></a>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p class="fine" style="margin-top: var(--space-3)">The call bar is fixed to the bottom of the screen below 760 px; the footer reserves its height so nothing is covered.</p>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-footer">
+      <h2 id="c-footer">Footer links (dark ground)</h2>
+      <div class="demo-footer">
+        <div class="state-grid">
+          <div class="state"><span class="state__label">Default</span><a class="fnav" href="/about/">About</a></div>
+          <div class="state"><span class="state__label">Hover</span><a class="fnav is-hover" href="/about/">About</a></div>
+          <div class="state"><span class="state__label">Focus-visible</span><a class="fnav is-focus" href="/about/">About</a></div>
+          <div class="state"><span class="state__label">Legal link</span><a href="/privacy-policy/">Privacy</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-deep">
+      <h2 id="c-deep">On the navy band</h2>
+      <div class="demo-deep on-deep">
+        <div class="state-grid">
+          {states.slice(0, 4).map(([label, cls]) => (
+            <div class="state">
+              <span class="state__label">Primary · {label}</span>
+              <a class={`btn btn--primary ${cls}`} href={firm.tel}><Fragment set:html={phone} />Call now</a>
+            </div>
+          ))}
+          <div class="state">
+            <span class="state__label">Secondary · default</span>
+            <a class="btn btn--secondary" href="/contact-us/#form">Send a message</a>
+          </div>
+          <div class="state">
+            <span class="state__label">Secondary · hover</span>
+            <a class="btn btn--secondary is-hover" href="/contact-us/#form">Send a message</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-cards">
+      <h2 id="c-cards">Cards</h2>
+      <ul class="cards cards--3" role="list">
+        {[['Default', ''], ['Hover', 'is-hover'], ['Focus-visible', 'is-focus']].map(([label, cls], i) => (
+          <li class={`card is-clickable ${cls}`}>
+            <span class="card-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <span class="state__label">{label}</span>
+            <h3>Family law</h3>
+            <p>Divorce, child custody, visitation, parenting plan changes, paternity, adoption and DCS cases.</p>
+            <p class="card__more"><a class="stretch" href="/family-law/" tabindex="-1">Family law<Fragment set:html={arrow} /></a></p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-fields">
+      <h2 id="c-fields">Form fields</h2>
+      <div class="state-grid state-grid--wide">
+        <div class="field">
+          <span class="state__label">Default</span>
+          <label for="d1">First name <span class="req">(required)</span></label>
+          <input class="input" id="d1" type="text" />
+        </div>
+        <div class="field">
+          <span class="state__label">Focus</span>
+          <label for="d2">Phone <span class="req">(required)</span></label>
+          <input class="input is-focus" id="d2" type="tel" value="(615) 410-" aria-describedby="d2h" />
+          <p class="helper" id="d2h">A number where you can talk privately.</p>
+        </div>
+        <div class="field is-error">
+          <span class="state__label">Error</span>
+          <label for="d3">Email <span class="opt">(optional)</span></label>
+          <input class="input" id="d3" type="email" value="maria@gmail" aria-invalid="true" aria-describedby="d3e" />
+          <p class="error-msg" id="d3e"><Fragment set:html={icon('circle-alert', { size: 18 })} />This email is missing its ending. Add it, like name@example.com, or leave it blank.</p>
+        </div>
+        <div class="field is-disabled">
+          <span class="state__label">Disabled</span>
+          <label for="d4">Last name</label>
+          <input class="input" id="d4" type="text" disabled value="Not available" />
+        </div>
+        <div class="field">
+          <span class="state__label">Select</span>
+          <label for="d5">Best time to reach you <span class="opt">(optional)</span></label>
+          <select class="select" id="d5"><option>Choose a time</option><option>Morning</option></select>
+        </div>
+        <div class="field">
+          <span class="state__label">Textarea</span>
+          <label for="d6">How can we help? <span class="opt">(optional)</span></label>
+          <textarea class="textarea" id="d6" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="state-grid state-grid--wide" style="margin-top: var(--space-10)">
+        <div class="state" style="justify-items: stretch">
+          <span class="state__label">Notice</span>
+          <div class="notice" role="note"><Fragment set:html={icon('info', { size: 20 })} /><p><strong>Please read before you send.</strong> Do not include confidential information in this form.</p></div>
+        </div>
+        <div class="state" style="justify-items: stretch">
+          <span class="state__label">Form error summary</span>
+          <div class="notice notice--error" role="note"><Fragment set:html={icon('circle-alert', { size: 20 })} /><p>Two things need a fix before this can send: add your phone number, and finish your email address.</p></div>
+        </div>
+        <div class="state" style="justify-items: stretch">
+          <span class="state__label">Success (replaces the form)</span>
+          <div class="notice notice--success" role="note"><Fragment set:html={icon('check', { size: 20 })} /><p><strong>Thank you. Your message was sent.</strong> If it can’t wait, call <a class="tel" href={firm.tel}>{firm.phone}</a>.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-nav">
+      <h2 id="c-nav">Navigation links</h2>
+      <div class="state-grid">
+        <div class="state"><span class="state__label">Default</span><a class="nav-link" href="/family-law/">Family Law</a></div>
+        <div class="state"><span class="state__label">Hover</span><a class="nav-link is-hover" href="/family-law/">Family Law</a></div>
+        <div class="state"><span class="state__label">Active (current page)</span><a class="nav-link is-current" href="/criminal-defense/">Criminal Defense</a></div>
+        <div class="state"><span class="state__label">Focus-visible</span><a class="nav-link is-focus" href="/about/">About</a></div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-header">
+      <h2 id="c-header">Header at desktop</h2>
+      <div class="demo-frame">
+        <Header current="/criminal-defense/" demo />
+      </div>
+      <p class="fine" style="margin-top: var(--space-3)">Sticky, 68 px tall, glass surface (80% cream, 12 px blur), hairline appears on scroll. Below 1240 px the nav moves into the menu dialog; the phone number stays in the header at every width.</p>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-dialog">
+      <h2 id="c-dialog">Mobile menu dialog (open)</h2>
+      <div class="demo-phone">
+        <MenuDialog current="/criminal-defense/" demo />
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,45 @@
+---
+// Sticky glass header: logo, six nav items from plan/sitemap.json, phone CTA (tel:, number as text),
+// EN/ES toggle, and the menu button that opens the <dialog> below 1240 px.
+// `demo` renders a copy for the components sheet: no landmark, no ids, no dialog wiring.
+import { nav, firm, icon, esPathFor } from '../lib/site.mjs';
+interface Props { current?: string; demo?: boolean; forceState?: string }
+const { current = '/', demo = false, forceState } = Astro.props;
+const Tag = demo ? 'div' : 'header';
+const esHref = esPathFor(current);
+---
+<Tag class="site-header" data-header>
+  <div class="container header-bar">
+    <a class="brand" href="/" aria-label="Will Fraley, Attorney at Law — home">
+      <img class="logo-full" src="/img/logo.webp" width="400" height="62" alt="" />
+      <img class="logo-mark" src="/img/logo-wordmark.webp" width="400" height="40" alt="" />
+    </a>
+    <nav class="primary-nav" aria-label={demo ? undefined : 'Main'} role={demo ? 'presentation' : undefined}>
+      <ul>
+        {nav.map((n, i) => {
+          const isCur = current === n.path || (n.path !== '/' && current.startsWith(n.path));
+          const forced = forceState && i === 0 ? ` ${forceState}` : '';
+          return <li><a class={`nav-link${forced}`} href={n.path} aria-current={isCur ? 'page' : undefined}>{n.label}</a></li>;
+        })}
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="header-call" href={firm.tel} aria-label={`Call ${firm.phone}, free consultation`}>
+        <Fragment set:html={icon('phone', { size: 18 })} />
+        <span class="header-call__text">
+          <span class="header-call__num">{firm.phone}</span>
+          <span class="header-call__sub">Free consultation · <span lang="es">Se habla español</span></span>
+        </span>
+      </a>
+      <div class="lang" role="group" aria-label="Language">
+        <span class="lang-en" aria-current="true" lang="en">EN</span>
+        <span class="sep lang-en" aria-hidden="true">/</span>
+        <a href={esHref} hreflang="es" lang="es" aria-label="Español">ES</a>
+      </div>
+      <button class="menu-btn" type="button" data-menu-open={demo ? undefined : ''} aria-haspopup="dialog" aria-expanded="false" aria-controls={demo ? undefined : 'site-menu'}>
+        <Fragment set:html={icon('menu', { size: 22 })} />
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+  </div>
+</Tag>

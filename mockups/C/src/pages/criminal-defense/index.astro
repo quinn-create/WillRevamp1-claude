@@ -1,0 +1,84 @@
+---
+// Criminal Defense hub. Every section of copy/pages/criminal-defense.md is rendered in order; the two
+// "If…" prose sections that follow the proof strip are set side by side as panels.
+import Layout from '../../layouts/Layout.astro';
+import Picture from '../../components/Picture.astro';
+import ProofStrip from '../../components/ProofStrip.astro';
+import Cards from '../../components/Cards.astro';
+import SectionHead from '../../components/SectionHead.astro';
+import Blocks from '../../components/Blocks.astro';
+import Steps from '../../components/Steps.astro';
+import Testimonial from '../../components/Testimonial.astro';
+import Faq from '../../components/Faq.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { loadPage } from '../../lib/copy.mjs';
+import { firm, icon } from '../../lib/site.mjs';
+
+const page = loadPage('criminal-defense');
+const { fm, sections } = page;
+const markEs = (html) => html.replace(/(?<!>)(Se habla español\.?)/g, '<span lang="es">$1</span>');
+const withEs = (blocks) => blocks.map((b) => (b.html ? { ...b, html: markEs(b.html) } : b.items ? { ...b, items: b.items.map((x) => ({ ...x, html: markEs(x.html) })) } : b));
+
+// Group consecutive untyped prose sections into one "panels" row.
+const rows = [];
+for (const s of sections) {
+  const prev = rows[rows.length - 1];
+  if (s.type === 'prose' && prev && prev.type === 'panels') prev.items.push(s);
+  else if (s.type === 'prose') rows.push({ type: 'panels', items: [s] });
+  else rows.push(s);
+}
+---
+<Layout title={fm.title} description={fm.description} path="/criminal-defense/" schemaType={fm.schema_type}>
+  {rows.map((s) => {
+    if (s.type === 'hero') return (
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="container page-hero__grid">
+          <div class="page-hero__text">
+            <nav class="crumbs" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="/legal-services/">Legal services</a></li>
+                <li><span aria-current="page">Criminal defense</span></li>
+              </ol>
+            </nav>
+            <h1 id="page-title">{fm.h1}</h1>
+            <div class="stack">
+              {withEs(s.blocks).map((b, i) => <p class={i === 0 ? 'lead' : undefined} set:html={b.html} />)}
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--primary" href={firm.tel}><Fragment set:html={icon('phone', { size: 18 })} />{fm.primary_cta}</a>
+              <a class="btn btn--ghost" href="/contact-us/#form">Send a short message<Fragment set:html={icon('arrow-right', { size: 18 })} /></a>
+            </div>
+          </div>
+          <div class="page-hero__media frame frame--hairline">
+            <Picture name="practice" alt="" sizes="(min-width: 1260px) 590px, (min-width: 900px) 46vw, 100vw" priority />
+          </div>
+        </div>
+      </section>
+    );
+    if (s.type === 'proof-strip') return <ProofStrip section={{ ...s, blocks: withEs(s.blocks) }} class="band-sand" />;
+    if (s.type === 'panels') return (
+      <section class="section band-sand" aria-label="What to do now" style="padding-top: var(--space-4)">
+        <div class="container panels">
+          {s.items.map((p, i) => (
+            <article class="panel" data-reveal style={`--i:${i}`} aria-labelledby={p.id}>
+              <p class="eyebrow">{i === 0 ? 'Today' : 'For family'}</p>
+              <h2 id={p.id} set:html={p.heading.html} />
+              <Blocks blocks={withEs(p.blocks)} linkStyle="inline" />
+            </article>
+          ))}
+        </div>
+      </section>
+    );
+    if (s.type === 'cards') return <Cards section={s} eyebrow="Charges" cols={4} />;
+    if (s.type === 'steps') return <Steps section={s} eyebrow="The process" band="band-sand" />;
+    if (s.type === 'faq') return <Faq section={{ ...s, groups: { ...s.groups, items: s.groups.items.map((it) => ({ ...it, blocks: withEs(it.blocks) })) } }} eyebrow="Common questions" />;
+    if (s.type === 'testimonial') return <Testimonial section={s} eyebrow="Testimonials" band="band-sand" />;
+    if (s.type === 'cta-band') return <CtaBand section={s} eyebrow="Free consultation" />;
+    return (
+      <section class="section" aria-labelledby={s.id}>
+        <div class="container"><SectionHead heading={s.heading} id={s.id} /><div class="prose measure"><Blocks blocks={s.blocks} /></div></div>
+      </section>
+    );
+  })}
+</Layout>

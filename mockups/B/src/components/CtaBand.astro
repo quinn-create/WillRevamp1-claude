@@ -1,0 +1,18 @@
+---
+import Icon from './Icon.astro';
+import { FIRM } from '../lib/site.mjs';
+interface Props { heading: string; html: string }
+const { heading, html } = Astro.props;
+---
+<section class="cta-band on-dark" aria-labelledby="cta-band-h">
+  <div class="container cta-band__grid">
+    <div class="stack-lg" data-reveal>
+      <h2 id="cta-band-h" set:html={heading} />
+      <p set:html={html} />
+    </div>
+    <div class="cta-band__actions" data-reveal style="--i:1">
+      <a class="btn btn--primary" href={FIRM.tel}><Icon name="phone" />Call {FIRM.phone}</a>
+      <p class="small" set:html={FIRM.microHtml} />
+    </div>
+  </div>
+</section>

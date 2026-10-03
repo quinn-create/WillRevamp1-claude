@@ -1,0 +1,20 @@
+---
+// The phone CTA: a solid tel: button showing the number, with "Free consultation" set beside it.
+// Optional secondary action (in-page anchor to the short form).
+import Icon from './Icon.astro';
+
+interface Props { inverse?: boolean; secondary?: { href: string; label: string } | null; note?: string; class?: string }
+const { inverse = false, secondary = null, note = 'Free consultation · <span lang="es">Se habla español</span>', class: cls } = Astro.props;
+---
+<div class:list={['call-cta', cls, { 'call-cta--inverse': inverse }]}>
+  <a class:list={['btn', inverse ? 'btn-inverse' : 'btn-primary', 'btn-call']} href="tel:+16154107290">
+    <Icon name="phone" />
+    <span>Call (615) 410-7290</span>
+  </a>
+  <p class="call-cta__note" set:html={note} />
+  {secondary && (
+    <a class:list={['btn', inverse ? 'btn-ghost-inverse' : 'btn-ghost', 'call-cta__secondary']} href={secondary.href}>
+      {secondary.label}
+    </a>
+  )}
+</div>

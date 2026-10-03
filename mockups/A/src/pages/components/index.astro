@@ -1,0 +1,272 @@
+---
+// Components sheet: every button, link, card, form field, nav and alert state for Direction A.
+// Hover / active / focus are shown with forced-state classes (.is-hover, .is-active, .is-focus) side by side.
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import Header from '../../components/Header.astro';
+import Icon from '../../components/Icon.astro';
+import MenuContent from '../../components/MenuContent.astro';
+
+const states = [
+  { label: 'Default', cls: '' },
+  { label: 'Hover', cls: 'is-hover' },
+  { label: 'Active', cls: 'is-active' },
+  { label: 'Focus-visible', cls: 'is-focus' },
+];
+const swatches = [
+  ['Paper', '--neutral-50'], ['Linen', '--neutral-100'], ['Card', '--card-white'], ['Sunken', '--neutral-200'],
+  ['Rule', '--neutral-300'], ['Slate', '--neutral-600'], ['Ink', '--neutral-900'], ['Tint', '--brand-100'],
+  ['Logo blue', '--brand-500'], ['Counsel blue', '--brand-600'], ['Navy', '--brand-700'], ['Brass', '--accent-600'],
+];
+const cta = {
+  h2: 'Start with one phone call',
+  blocks: [{ type: 'p', md: 'Tell us what happened. Call [(615) 410-7290](tel:+16154107290) for a free consultation.' }],
+};
+---
+<Base title="Components · Direction A “Counsel”" description="Direction A Counsel components sheet: buttons, links, cards, form fields, navigation, header and mobile menu in every state, for review." current="/components/">
+  <section class="hero" aria-labelledby="page-title">
+    <div class="container">
+      <p class="eyebrow">Direction A · Counsel</p>
+      <h1 id="page-title">Components and states</h1>
+      <p class="lead hero__deck">Every interactive element in the Counsel direction, shown in each state. Hover, active and focus are forced here so they can be compared side by side.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="sheet-section" aria-labelledby="color">
+      <h2 id="color">Color</h2>
+      <p>Warm paper, blue-black ink, the logo blue and one sparing brass accent. Every text and UI pairing is declared with @pair in tokens.css and passes WCAG AA.</p>
+      <div class="sheet-grid sheet-grid--4">
+        {swatches.map(([name, token]) => (
+          <div class="swatch">
+            <span class="swatch__chip" style={`background: var(${token})`}></span>
+            <span><strong>{name}</strong> {token}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="type">
+      <h2 id="type">Type</h2>
+      <p>Newsreader (display, optical sizes) with Public Sans (text). Fluid 1.25 scale.</p>
+      <div class="type-specimen">
+        <p class="eyebrow">Eyebrow · small caps, tracked 0.08em</p>
+        <p class="display" style="font-size: var(--text-display)">Criminal defense</p>
+        <p class="display" style="font-size: var(--text-h2)">Questions people ask first</p>
+        <p class="display" style="font-size: var(--text-h3)">Is the first consultation free?</p>
+        <p class="lead">Lead: Will Fraley, Attorney at Law, defends people in criminal court.</p>
+        <p>Body: Call <a class="tel" href="tel:+16154107290">(615) 410-7290</a> for a free consultation. Text links are Counsel blue with a 1.5 px underline at 0.2em offset.</p>
+        <p class="fineprint">Fine print: Prior results do not guarantee a similar outcome.</p>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="buttons">
+      <h2 id="buttons">Buttons</h2>
+      <p>Primary is the solid brand fill with a two-layer shadow. Hover lifts 1 px and lightens; active presses to 98.5%; focus is a 3 px brass ring at 2 px offset.</p>
+      <div class="specimens">
+        {states.map((s) => (
+          <div class="specimen">
+            <span class="specimen__label">Primary · {s.label}</span>
+            <a class:list={['btn btn-primary', s.cls]} href="tel:+16154107290"><Icon name="phone" /><span>Call (615) 410-7290</span></a>
+          </div>
+        ))}
+        <div class="specimen">
+          <span class="specimen__label">Primary · Disabled</span>
+          <button class="btn btn-primary" type="button" disabled>Send message</button>
+        </div>
+        <div class="specimen">
+          <span class="specimen__label">Primary · Loading</span>
+          <button class="btn btn-primary is-loading" type="button" aria-busy="true" aria-disabled="true"><Icon name="loader-circle" class="spinner" /><span>Send message</span></button>
+        </div>
+      </div>
+      <div class="specimens" style="margin-top: var(--space-10)">
+        {states.map((s) => (
+          <div class="specimen">
+            <span class="specimen__label">Secondary · {s.label}</span>
+            <a class:list={['btn btn-secondary', s.cls]} href="/contact-us/#form">Send a short message</a>
+          </div>
+        ))}
+        <div class="specimen">
+          <span class="specimen__label">Secondary · Disabled</span>
+          <button class="btn btn-secondary" type="button" disabled>Send a short message</button>
+        </div>
+      </div>
+      <div class="specimens" style="margin-top: var(--space-10)">
+        {states.map((s) => (
+          <div class="specimen">
+            <span class="specimen__label">Ghost / link · {s.label}</span>
+            <a class:list={['btn btn-ghost', s.cls]} href="/legal-services/">All practice areas</a>
+          </div>
+        ))}
+        <div class="specimen">
+          <span class="specimen__label">Arrow link</span>
+          <a class="link-arrow" href="/testimonials/">Read more client testimonials <Icon name="arrow-right" /></a>
+        </div>
+      </div>
+      <div class="specimens specimens--ink on-ink" style="margin-top: var(--space-10)">
+        {states.map((s) => (
+          <div class="specimen">
+            <span class="specimen__label">On ink · {s.label}</span>
+            <a class:list={['btn btn-inverse', s.cls]} href="tel:+16154107290"><Icon name="phone" /><span>Call (615) 410-7290</span></a>
+          </div>
+        ))}
+        <div class="specimen">
+          <span class="specimen__label">Ghost on ink</span>
+          <a class="btn btn-ghost-inverse" href="/contact-us/#form">Send a short message</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="cards">
+      <h2 id="cards">Cards</h2>
+      <p>Tonal card surface with a 10% hairline. The whole card is clickable through its one real link; hover lifts 2 px; focus rings the card.</p>
+      <ul class="card-grid card-grid--3">
+        {['Default', 'Hover', 'Focus-visible'].map((label, i) => (
+          <li class:list={['card', { 'is-hover': i === 1, 'is-focus': i === 2 }]}>
+            <p class="specimen__label">{label}</p>
+            <h3 class="card__title">Criminal defense</h3>
+            <div class="card__body flow"><p>Charged with DUI, a drug offense, theft, fraud, domestic assault, a violent or sex offense, or a probation violation?</p></div>
+            <a class="card__link" href="/criminal-defense/"><span>Criminal defense</span><Icon name="arrow-right" /></a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="fields">
+      <h2 id="fields">Form fields</h2>
+      <p>Labels above, 48 px inputs, 1.5 px borders, the same brass focus ring, helper text and specific error copy. Validation runs on blur in the build.</p>
+      <div class="sheet-grid sheet-grid--4">
+        <div class="field">
+          <label for="f-default">Default</label>
+          <input class="input" id="f-default" type="text" placeholder="First name" />
+          <p class="help">Helper text sits below the field.</p>
+        </div>
+        <div class="field is-focus">
+          <label for="f-focus">Focus</label>
+          <input class="input" id="f-focus" type="text" value="Maria" />
+          <p class="help">3 px brass ring, 2 px offset.</p>
+        </div>
+        <div class="field is-error">
+          <label for="f-error">Error</label>
+          <input class="input" id="f-error" type="tel" value="615 410" aria-invalid="true" aria-describedby="f-error-msg" />
+          <p class="error-msg" id="f-error-msg"><Icon name="circle-alert" /> Enter the full phone number, area code first.</p>
+        </div>
+        <div class="field is-disabled">
+          <label for="f-disabled">Disabled</label>
+          <input class="input" id="f-disabled" type="text" value="Not editable" disabled />
+          <p class="help">50% contrast is not used on inputs; the surface sinks instead.</p>
+        </div>
+        <div class="field">
+          <label for="f-select">Select</label>
+          <div class="select-wrap">
+            <select class="select" id="f-select"><option>Morning</option><option>Afternoon</option></select>
+            <Icon name="chevron-down" />
+          </div>
+        </div>
+        <div class="field" style="grid-column: span 3">
+          <label for="f-text">Textarea</label>
+          <textarea class="textarea" id="f-text" rows="3" placeholder="A line or two about what happened is enough."></textarea>
+        </div>
+      </div>
+      <div class="sheet-grid sheet-grid--3" style="margin-top: var(--space-8)">
+        <div class="notice" role="note"><Icon name="info" /><p><strong>Please read before you send.</strong> Do not include confidential information in this form.</p></div>
+        <div class="notice notice--error" role="note"><Icon name="circle-alert" /><p><strong>Two fields need attention.</strong> Check your name and phone number, then send again.</p></div>
+        <div class="notice notice--success" role="status"><Icon name="circle-check" /><p><strong>Message sent.</strong> The success state replaces the form. If it can’t wait, call <a class="tel" href="tel:+16154107290">(615) 410-7290</a>.</p></div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="nav">
+      <h2 id="nav">Navigation</h2>
+      <p>Nav link default, hover, current page (brass underline) and an open dropdown.</p>
+      <div class="specimens">
+        <div class="specimen"><span class="specimen__label">Default</span><a class="nav-link" href="/faqs/">FAQs</a></div>
+        <div class="specimen"><span class="specimen__label">Hover</span><a class="nav-link is-hover" href="/faqs/">FAQs</a></div>
+        <div class="specimen"><span class="specimen__label">Current</span><a class="nav-link is-current" href="/contact-us/">Contact</a></div>
+        <div class="specimen"><span class="specimen__label">Focus-visible</span><a class="nav-link is-focus" href="/about/">About</a></div>
+        <div class="specimen nav-demo">
+          <span class="specimen__label">Dropdown open</span>
+          <div class="nav-item has-sub">
+            <a class="nav-link is-current" href="/criminal-defense/">Criminal Defense <Icon name="chevron-down" class="nav-chev" /></a>
+            <ul class="nav-sub is-open">
+              <li><a href="/criminal-defense/dui/">DUI</a></li>
+              <li><a href="/criminal-defense/drug-crimes/">Drug Crimes</a></li>
+              <li><a href="/criminal-defense/theft/">Theft</a></li>
+              <li><a href="/criminal-defense/fraud/">Fraud</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="header">
+      <h2 id="header">Header</h2>
+      <p>Desktop header (sticky glass over paper, hairline once scrolled), shown on the Criminal Defense page.</p>
+      <div class="frame">
+        <div class="frame__bar">Desktop · 1280 px</div>
+        <Header specimen current="/criminal-defense/" />
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="accordion">
+      <h2 id="accordion">FAQ accordion</h2>
+      <p>Native &lt;details&gt;: closed, hover (question turns navy), focus-visible (brass ring) and open (chevron flips, answer shows).</p>
+      <div class="sheet-grid sheet-grid--2">
+        {[
+          { label: 'Closed', cls: '', open: false },
+          { label: 'Hover', cls: 'is-hover', open: false },
+          { label: 'Focus-visible', cls: 'is-focus', open: false },
+          { label: 'Open', cls: '', open: true },
+        ].map((s) => (
+          <div class="specimen" style="justify-items: stretch">
+            <span class="specimen__label">{s.label}</span>
+            <div class="faq faq--specimen">
+              <details class="faq__item" open={s.open}>
+                <summary class={s.cls || undefined}><h3 class="faq__q">Is the first consultation free?</h3><Icon name="chevron-down" class="faq__chev" /></summary>
+                <div class="flow faq__a"><p>Yes. Call <a class="tel" href="tel:+16154107290">(615) 410-7290</a> for a free consultation.</p></div>
+              </details>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="lang">
+      <h2 id="lang">Language toggle</h2>
+      <p>Short form (ES) on phones and mid-width desktops, full “Español” where there is room. Hover underlines; focus is the brass ring.</p>
+      <div class="specimens">
+        <div class="specimen"><span class="specimen__label">Default</span><a class="lang-toggle" href="/es/" hreflang="es" lang="es">Español</a></div>
+        <div class="specimen"><span class="specimen__label">Short</span><a class="lang-toggle" href="/es/" hreflang="es" lang="es" aria-label="Español">ES</a></div>
+        <div class="specimen"><span class="specimen__label">Hover</span><a class="lang-toggle" href="/es/" hreflang="es" lang="es" style="color: var(--color-link-hover); text-decoration: underline; text-decoration-thickness: var(--border-link)">Español</a></div>
+        <div class="specimen"><span class="specimen__label">Focus-visible</span><a class="lang-toggle" href="/es/" hreflang="es" lang="es" style="outline: var(--focus-width) solid var(--focus-ring); outline-offset: var(--focus-offset)">Español</a></div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="mobile-chrome">
+      <h2 id="mobile-chrome">Mobile header and call bar</h2>
+      <p>At 390 px the header keeps the wordmark, the ES toggle, a 48 px call button and the menu button. The fixed call bar at the bottom shows the number next to “Free consultation”.</p>
+      <div class="frame frame--phone">
+        <div class="frame__bar">Mobile · 390 px · menu closed</div>
+        <Header specimen mobile current="/" />
+        <div class="frame__body" aria-hidden="true"></div>
+        <a class="callbar callbar--specimen" href="tel:+16154107290">
+          <Icon name="phone" />
+          <span>Call (615) 410-7290</span>
+          <span class="callbar__note">Free consultation</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="mobile-menu">
+      <h2 id="mobile-menu">Mobile menu (dialog open)</h2>
+      <p>A native &lt;dialog&gt; with focus trapping and Esc to close. The phone CTA and the Español link stay inside the menu.</p>
+      <div class="frame frame--phone">
+        <div class="frame__bar">Mobile · 390 px · menu open</div>
+        <div class="menu-dialog menu-panel">
+          <MenuContent current="/criminal-defense/" specimen />
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <CtaBand section={cta} />
+</Base>

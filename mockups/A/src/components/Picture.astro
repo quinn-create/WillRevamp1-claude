@@ -1,0 +1,49 @@
+---
+// <picture> with AVIF + WebP srcsets from src/lib/images.json. Optional art-directed source for small
+// screens (`mobile` key + `mobileMedia`). Explicit width/height always set; never upscaled (the srcset
+// only lists widths that exist).
+import manifest from '../lib/images.json';
+
+interface Props {
+  name: string;
+  alt: string;
+  sizes: string;
+  mobile?: string;
+  mobileMedia?: string;
+  mobileSizes?: string;
+  eager?: boolean;
+  near?: boolean;
+  class?: string;
+  imgClass?: string;
+}
+const { name, alt, sizes, mobile, mobileMedia = '(max-width: 37.49em)', mobileSizes = '100vw', eager = false, near = false, class: cls, imgClass } = Astro.props;
+type Item = { src: string; width: number; height: number; format: string };
+const set = (key: string, fmt: string) =>
+  ((manifest as Record<string, Item[]>)[key] || [])
+    .filter((i) => i.format === fmt)
+    .sort((a, b) => a.width - b.width);
+const srcset = (items: Item[]) => items.map((i) => `${i.src} ${i.width}w`).join(', ');
+const webp = set(name, 'webp');
+const avif = set(name, 'avif');
+// Fallback <img>: the smallest WebP at least 960 px wide (or the largest available).
+const fallback = webp.find((i) => i.width >= 960) || webp[webp.length - 1];
+const mAvif = mobile ? set(mobile, 'avif') : [];
+const mWebp = mobile ? set(mobile, 'webp') : [];
+const m0 = mWebp[0];
+---
+<picture class={cls}>
+  {mobile && mAvif.length > 0 && <source media={mobileMedia} type="image/avif" srcset={srcset(mAvif)} sizes={mobileSizes} width={m0.width} height={m0.height} />}
+  {mobile && mWebp.length > 0 && <source media={mobileMedia} type="image/webp" srcset={srcset(mWebp)} sizes={mobileSizes} width={m0.width} height={m0.height} />}
+  {avif.length > 0 && <source type="image/avif" srcset={srcset(avif)} sizes={sizes} />}
+  <source type="image/webp" srcset={srcset(webp)} sizes={sizes} />
+  <img
+    src={fallback.src}
+    width={fallback.width}
+    height={fallback.height}
+    alt={alt}
+    class={imgClass}
+    loading={eager || near ? 'eager' : 'lazy'}
+    decoding={eager ? 'sync' : undefined}
+    fetchpriority={eager ? 'high' : undefined}
+  />
+</picture>

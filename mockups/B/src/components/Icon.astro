@@ -1,0 +1,12 @@
+---
+// Inline Lucide icon (node_modules/lucide-static) at stroke 1.75, decorative by default.
+import fs from 'node:fs';
+import path from 'node:path';
+import { ROOT } from '../lib/root.mjs';
+
+interface Props { name: string; class?: string; size?: number; label?: string }
+const { name, class: cls = '', size = 20, label } = Astro.props;
+const raw = fs.readFileSync(path.join(ROOT, 'node_modules/lucide-static/icons', `${name}.svg`), 'utf8');
+const inner = raw.replace(/<!--[\s\S]*?-->/g, '').replace(/^[\s\S]*?<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '').trim();
+---
+<svg class={`icon ${cls}`} xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" set:html={inner} {...(label ? { role: 'img', 'aria-label': label } : { 'aria-hidden': 'true', focusable: 'false' })} />

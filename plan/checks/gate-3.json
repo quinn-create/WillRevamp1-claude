@@ -1,7 +1,7 @@
 {
-  "at": "2026-10-03T12:50:14.997Z",
-  "pass": false,
-  "failed": 10,
+  "at": "2026-10-03T13:13:03.553Z",
+  "pass": true,
+  "failed": 0,
   "results": [
     {
       "name": "tools/check.mjs hash matches plan/CHECK-HASH",
@@ -110,28 +110,28 @@
     },
     {
       "name": "mockups/C/dist index",
-      "pass": false,
+      "pass": true,
       "detail": ""
     },
     {
       "name": "mockups/C/dist criminal-defense",
-      "pass": false,
+      "pass": true,
       "detail": ""
     },
     {
       "name": "mockups/C/dist contact-us",
-      "pass": false,
+      "pass": true,
       "detail": ""
     },
     {
       "name": "mockups/C components.html",
-      "pass": false,
+      "pass": true,
       "detail": ""
     },
     {
       "name": "mockups/C screenshots at 390 + 1280",
-      "pass": false,
-      "detail": "index-390, index-1280, criminal-defense-390, criminal-defense-1280, contact-us-390, contact-us-1280"
+      "pass": true,
+      "detail": ""
     },
     {
       "name": "mockups/C token pairs pass AA (67 declared with @pair)",
@@ -180,27 +180,27 @@
     },
     {
       "name": "mockups/RECOMMENDATION.md",
-      "pass": false,
+      "pass": true,
       "detail": ""
     },
     {
       "name": "mockups/COMPARE.html (self-contained)",
-      "pass": false,
+      "pass": true,
       "detail": ""
     },
     {
       "name": "MOCKUPS-rev1.zip ≤ 25 MB",
-      "pass": false,
-      "detail": "missing"
+      "pass": true,
+      "detail": "22.7 MB"
     },
     {
       "name": "LOGBOOK-ENTRY.md (mockup form)",
-      "pass": false,
+      "pass": true,
       "detail": ""
     },
     {
       "name": "plan/STATE.md says WAITING: mockup decision",
-      "pass": false,
+      "pass": true,
       "detail": ""
     }
   ]

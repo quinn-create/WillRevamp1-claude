@@ -1,0 +1,13 @@
+---
+// Proof strip: friendly icon-free chips, straight from the copy list (no stats, no badges).
+interface Props { section: any; class?: string }
+const { section, class: cls = '' } = Astro.props;
+const list = section.blocks.find((b) => b.type === 'ul');
+---
+<section class={`proof ${cls}`} aria-label="At a glance">
+  <div class="container">
+    <ul role="list">
+      {list.items.map((it, i) => <li class="chip" data-reveal style={`--i:${i}`} set:html={it.html} />)}
+    </ul>
+  </div>
+</section>

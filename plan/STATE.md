@@ -1,6 +1,6 @@
 # STATE
 
-stage: 3 (Mockups) — IN PROGRESS
+stage: 3 (Mockups) — DONE · WAITING: mockup decision — auto-resolved: Build direction A (operator said "finish without bothering me")
 phase: three directions → Higgsfield scenes → three Astro mockups → recommendation
 
 ## Done

@@ -34,6 +34,11 @@ Every call made without asking, with its reason. Newest stage last.
 - Because the operator removed the Gate 3 stop, Stage 4 copy ran alongside the mockups (copy does not depend on the design direction). Gate 4 passed: 31 EN + 31 ES copy files, every factual sentence tagged, Spanish cites only English fact IDs.
 - Spanish avoids "certificado" (reads as "certified"): the TACDL certificates are "constancias de finalización".
 
+### Stage 3 — Mockups
+- Gate 3 passed. Three real Astro mockups (Home, Criminal Defense, Contact + components sheet) with 390/1280 screenshots, design-QA'd; 9 Higgsfield scenes (nano_banana_pro 2k, 18 credits); COMPARE.html (self-contained) and MOCKUPS-rev1.zip (22.7 MB).
+- **Gate 3 stop → Build A.** The Creative Director recommends A "Counsel" (borrowing B's full-number phone button and C's small photo of Will). Per the operator's instruction to finish without stopping, this is recorded as the Build decision; the run continues to Stages 3b–7.
+- `tools/compare.mjs` also rewrites `imagesrcset`; web fonts cannot load over file:// in Chromium (expected — the unzipped folders fall back to system fonts; COMPARE.html screenshots show the real fonts).
+
 ## A01
 
 # A01 decisions: old-URL inventory (inventory/old-urls.json)
@@ -424,6 +429,53 @@ Every call made without asking, with its reason. Newest stage last.
   - The lowest text pairs are muted on sand (4.75), link on sand (4.99), brick on sand (5.00) and
     `--color-eyebrow-on-deep` (5.25).
   - The lowest UI pairs are `--color-brand` on cream (3.88) and `--input-border` on cream (3.94).
+
+# A14 decisions (Direction C "Neighbor"), Stage 3 step 2: the Astro mockup
+
+- **D-A14-12: Copy is read at build time and never rewritten.** `mockups/C/src/lib/copy.mjs` reads
+  `copy/pages/<slug>.md`, strips every `{fact:…}` tag and splits sections at the component hints. An H2 that
+  follows content opens an untyped "prose" section, so no paragraph is dropped. Every section of the three
+  pages renders in its copy order. Only typography changes: curly quotes and apostrophes, and non-breaking
+  spaces inside times ("9:00 a.m.").
+- **D-A14-13: Chrome labels are design, not claims.** Eyebrows ("Practice areas", "The process", "Common
+  questions", "Today", "For family") and the hero byline ("Attorney at Law · Will Fraley · 509 W College St,
+  Murfreesboro") use only F001/F021 wording. NAP and hours in the header, footer, call bar and menu come from
+  F013, F015, F019, F021, F024, F031 and F032.
+- **D-A14-14: One full-bleed treatment per page.** That treatment is the Home hero photograph. Sand bands are
+  tonal steps. The CTA band is an inset navy panel inside the container, so it is not full-bleed.
+- **D-A14-15: The hero inset card holds the H1, the phone CTA and Will's real photo.** The photo is a 4:5
+  head-and-shoulders crop of IMG03 (350×438 source, shown at 72–96 px). The desktop scene uses
+  `object-position: 34% 45%`, so the cupola sits clear of the card. On phones the scene runs 4:3.3 above the
+  card at 64% across, which keeps the cupola and one cornice in frame.
+- **D-A14-16: The attorney photos are never shown wider than their pixels.** IMG02 is shown at 416 px or less
+  (673 px source). IMG03's desk frame is prepared at 910 and 640 px; it does not appear in these three pages.
+  The prep script (`mockups/C/scripts/prep-images.mjs`) only crops, applies a gentle warm grade and encodes
+  AVIF/WebP. It never upscales. IMG04 is not used.
+- **D-A14-17: The logo is color-corrected, not redrawn.** The IMG01 tagline and rules ship at about 55% alpha
+  (2.2:1). The script raises that alpha (×1.85, capped at 255) so "ATTORNEY AT LAW" renders solid. Below
+  760 px, a wordmark-only crop (400×40) is used, per the DESIGN-BRIEF "drop the tagline below 200 px".
+- **D-A14-18: Header breakpoints.** The full nav shows from 1240 px up. Below that, the menu is a `<dialog>`
+  opened with `showModal()`, which traps focus; Esc closes it and focus returns to the opener. The phone number
+  shows as text in the header at every width. Below 380 px, the logo shrinks to 104 px so the logo, number, ES
+  and menu fit on one row at 320–379 px. Overflow was checked at 360, 390, 760, 1239, 1240, 1280 and 1440:
+  there is no horizontal scroll.
+- **D-A14-19: The mobile call bar is `position: fixed`, 48 px, and phones only (<760 px).** The footer adds
+  48 px of bottom padding so nothing hides under the bar. Full-page screenshots draw the bar once, at the
+  first-viewport fold; that is a capture artifact. The bar is never scroll-linked.
+- **D-A14-20: Form required fields follow the approved copy, not the old Gravity Form.** Copy says "Leave your
+  name and phone number… Email and a short note are optional." So first name, last name and phone are
+  required. Email, best time, new-client and message are optional. All seven fields from
+  `inventory/forms.json` are present. The owner question is queued.
+- **D-A14-21: The form has no JS validation in the mockup.** The task allows only the menu and reveal
+  scripts. The inline error state is shown statically on the email field (`aria-invalid`, a specific message
+  and an icon). The success state and the error summary are shown on the components sheet. Submit is disabled
+  and has a phone and email fallback note.
+- **D-A14-22: Shipped JS is two inline scripts, about 0.6 KB gzipped.** One sets the `.js` class; the other
+  runs the menu dialog and an IntersectionObserver for reveals (14 px rise, 520 ms, 60 ms stagger, once).
+  Under reduced motion, everything is visible at once.
+- **D-A14-23: The portrait below the fold loads eagerly at low priority with sync decoding.** Chromium's
+  full-page capture otherwise left that offscreen image unpainted. The cost is one image of about 20–35 KB.
+  All other below-the-fold images are lazy.
 
 ## A15
 

@@ -1,0 +1,200 @@
+[
+  {
+    "slot": "practice",
+    "set": "C",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "3:2",
+    "job": "5863345b-8c23-4c5d-ba55-63a06670994f",
+    "reference": "inventory/assets/mainstage-v1-img.webp",
+    "prompt": "Natural editorial photograph of a quiet tree-lined street of two-story red-brick buildings in a small Middle Tennessee town, late afternoon, minutes after a summer shower. The street and brick sidewalk are wet, and the lower third of the frame is filled with long warm honey and amber reflections from softly glowing upper-story windows and a pale clearing sky. Street trees with soft sage-green leaves frame the edges and drip. The view runs along the street toward a soft vanishing point in the right third; the left third stays calm, wet pavement and tree shade with little detail. The street is completely empty: no vehicles, no figures, nothing reflected but buildings, trees and sky. Windows glow warm with no lettering; no signs anywhere. Diffuse, low, warm light breaks through thinning cloud from the left. Palette: rain-darkened red brick, wet slate-grey pavement with honey and amber reflections, sage-green leaves, sky clearing from muted blue-grey to warm cream at the horizon, warm-umber shadow. Shot on a 50 mm lens at standing eye level, shallow-to-medium depth of field, gentle contrast, no lens flare, no heavy vignette. Steady, hopeful, grounded, clearing after the storm. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_121514_5863345b-8c23-4c5d-ba55-63a06670994f.png",
+    "master": "images/generated/C/practice.png",
+    "width": 2528,
+    "height": 1696,
+    "variants": [
+      {
+        "file": "images/generated/C/practice-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 36894
+      },
+      {
+        "file": "images/generated/C/practice-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 60798
+      },
+      {
+        "file": "images/generated/C/practice-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 76770
+      },
+      {
+        "file": "images/generated/C/practice-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 128072
+      },
+      {
+        "file": "images/generated/C/practice-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 131119
+      },
+      {
+        "file": "images/generated/C/practice-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 221060
+      },
+      {
+        "file": "images/generated/C/practice-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 280344
+      },
+      {
+        "file": "images/generated/C/practice-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 480532
+      }
+    ],
+    "createdAt": "2026-10-03T12:19:43.936Z"
+  },
+  {
+    "slot": "contact",
+    "set": "C",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "4:5",
+    "job": "152e94aa-8eb1-4dcb-b33a-76ec602fbde0",
+    "reference": "inventory/assets/Screenshot-2025-10-21-at-2.27.41-PM.png",
+    "prompt": "Natural editorial interior photograph of a welcoming reception corner in an older Middle Tennessee brick building, mid-afternoon on a clear day, a generic room. In the lower-middle half: two upholstered armchairs in warm oatmeal fabric angled toward each other, and between them a small dark walnut side table holding a clear glass of water and a closed blank cream notepad with a pen. A warm honey-wood floor with a muted wool rug. Behind: an exposed sunlit red-brick wall and a tall old white multi-pane window; warm sunlight falls through it in soft rectangles across the brick and floor. The upper 35 percent is brick and window light, calm and empty. Nothing on the walls but light: no frames, no certificates, no art, no clocks, no plaques, no books, no screens. Warm directional sun from the window at upper left with soft bounce fill; bright, never dim. Palette: sunlit red brick, oatmeal and cream upholstery, honey wood, dark walnut, warm cream window light, soft umber shadow, one quiet note of pale blue sky in the window glass. Shot on a 35 mm lens at seated eye level, three-quarter view into the corner, medium depth of field with the window slightly soft, gentle contrast. Welcome, calm, unhurried, safe, private. No pets. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_121514_152e94aa-8eb1-4dcb-b33a-76ec602fbde0.png",
+    "master": "images/generated/C/contact.png",
+    "width": 1856,
+    "height": 2304,
+    "variants": [
+      {
+        "file": "images/generated/C/contact-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 45194
+      },
+      {
+        "file": "images/generated/C/contact-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 68278
+      },
+      {
+        "file": "images/generated/C/contact-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 89974
+      },
+      {
+        "file": "images/generated/C/contact-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 139362
+      },
+      {
+        "file": "images/generated/C/contact-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 146844
+      },
+      {
+        "file": "images/generated/C/contact-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 227748
+      }
+    ],
+    "createdAt": "2026-10-03T12:20:52.587Z"
+  },
+  {
+    "slot": "hero",
+    "set": "C",
+    "kind": "generated",
+    "model": "nano_banana_pro",
+    "credits": 2,
+    "ratio": "16:9",
+    "job": "6c056fc2-e39a-4a28-841b-f8a3ba868bbd",
+    "reference": "inventory/assets/mainstage-v1-img.webp",
+    "prompt": "A single continuous natural editorial photograph, one unbroken frame with no split, seam, panel or diptych, of a historic courthouse-square townscape in a small Middle Tennessee town at golden hour, about forty minutes before sunset, seen at eye level from across the street, looking slightly down the block. In the right 55 percent of the frame: a row of two-story aged red-brick storefronts with ornate cream-painted cornices and tall upper windows, the storefront glass plain and reflecting only warm light, and behind them in soft focus a generic white courthouse cupola with plain louvered openings only, no clock and no dial. No awnings, no banners, no window lettering, no sign boards, no placards, no posts carrying panels, no street signs, no traffic signs, and no vehicles anywhere in the frame, including far down the street, where the view closes softly into trees. Mature shade trees with deep green, just-turning leaves line a quiet, empty brick-edged sidewalk; a wrought-iron bench and a planter stand in the foreground. The left 45 percent is calm and low in detail: soft tree shade, out-of-focus foliage and open sky, leaving room for a headline card. Low sun rakes from the right so the cornices glow honey-gold while the sidewalk falls into soft warm-umber shade with long gentle shadows. Palette: aged red brick and warm terracotta, cream and ivory trim, honey-gold sunlight, deep green foliage, warm-umber shade, sky moving from warm cream at the horizon to a soft muted blue above. Shot on a 35 mm lens, verticals straight, medium depth of field, gentle contrast, no lens flare, no heavy vignette, no HDR. Rooted, warm, neighborly, unhurried. Not a recognizable landmark. No flags. no people, no faces, no text, no signage, no lettering",
+    "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3JUxBMfW31cHX5PwbACDkM2b4St/hf_20261003_122445_6c056fc2-e39a-4a28-841b-f8a3ba868bbd.png",
+    "master": "images/generated/C/hero.png",
+    "width": 2752,
+    "height": 1536,
+    "variants": [
+      {
+        "file": "images/generated/C/hero-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 25234
+      },
+      {
+        "file": "images/generated/C/hero-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 39624
+      },
+      {
+        "file": "images/generated/C/hero-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 47284
+      },
+      {
+        "file": "images/generated/C/hero-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 77714
+      },
+      {
+        "file": "images/generated/C/hero-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 74365
+      },
+      {
+        "file": "images/generated/C/hero-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 123390
+      },
+      {
+        "file": "images/generated/C/hero-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 140680
+      },
+      {
+        "file": "images/generated/C/hero-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 237742
+      },
+      {
+        "file": "images/generated/C/hero-2560.avif",
+        "width": 2560,
+        "format": "avif",
+        "bytes": 226081
+      },
+      {
+        "file": "images/generated/C/hero-2560.webp",
+        "width": 2560,
+        "format": "webp",
+        "bytes": 367808
+      }
+    ],
+    "createdAt": "2026-10-03T12:26:23.307Z"
+  }
+]

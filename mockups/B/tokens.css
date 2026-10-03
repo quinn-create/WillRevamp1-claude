@@ -1,0 +1,278 @@
+/*
+ * Direction B "Verdict": design tokens.
+ * Bold, high contrast, large type, strong color blocking, decisive CTAs.
+ *
+ * Every base color is an opaque hex so contrast can be machine-checked. Alpha
+ * values (hairlines, the glass header, shadows) are derived from those hex tokens
+ * with color-mix(), never written as free-standing colors.
+ * Semantic tokens alias the ramps with var(--other).
+ *
+ * Contrast pairs (WCAG 2.2: text >= 4.5:1, ui >= 3:1), computed with WCAG relative
+ * luminance (sRGB, 0.2126/0.7152/0.0722). Ratios in brackets.
+ *
+ * Light grounds
+ * @pair --color-text on --color-bg text                         [18.72]
+ * @pair --color-text on --color-surface-raised text             [17.45]
+ * @pair --color-text on --color-surface-tint text               [16.45]
+ * @pair --color-heading on --color-bg text                      [18.72]
+ * @pair --color-heading on --color-surface-tint text            [16.45]
+ * @pair --color-text-muted on --color-bg text                   [7.34]
+ * @pair --color-text-muted on --color-surface-raised text       [6.84]
+ * @pair --color-text-muted on --color-surface-tint text         [6.45]
+ * @pair --color-link on --color-bg text                         [9.05]
+ * @pair --color-link on --color-surface-tint text               [7.95]
+ * @pair --color-link-hover on --color-bg text                   [13.04]
+ * @pair --color-eyebrow on --color-bg text                      [9.05]
+ * @pair --color-brand on --color-bg ui                          [4.36]
+ * @pair --color-error on --color-bg text                        [6.57]
+ * @pair --color-success on --color-bg text                      [6.52]
+ * @pair --color-error on --color-error-bg text                  [5.95]
+ * @pair --color-success on --color-success-bg text              [5.97]
+ *
+ * Buttons
+ * @pair --btn-primary-text on --btn-primary-bg text             [10.23]
+ * @pair --btn-primary-text on --btn-primary-bg-hover text       [11.03]
+ * @pair --btn-primary-edge on --color-bg ui                     [3.43]
+ * @pair --btn-primary-bg on --color-night ui                    [10.23]
+ * @pair --btn-primary-bg on --color-navy ui                     [4.94]
+ * @pair --btn-secondary-text on --color-bg text                 [9.05]
+ * @pair --btn-secondary-border on --color-bg ui                 [9.05]
+ * @pair --btn-secondary-text on --btn-secondary-bg-hover text   [7.95]
+ * @pair --btn-secondary-inverse-text on --color-night text      [18.72]
+ * @pair --btn-secondary-inverse-text on --color-navy text       [9.05]
+ *
+ * Dark and brand blocks (night = hero and footer, navy = brand band)
+ * @pair --color-on-dark on --color-night text                   [18.72]
+ * @pair --color-on-dark on --color-night-raised text            [16.62]
+ * @pair --color-on-dark on --color-navy text                    [9.05]
+ * @pair --color-on-dark-muted on --color-night text             [10.04]
+ * @pair --color-on-dark-muted on --color-navy text              [4.85]
+ * @pair --color-link-on-dark on --color-night text              [8.58]
+ * @pair --color-eyebrow-on-dark on --color-night text           [8.58]
+ * @pair --color-eyebrow-on-navy on --color-navy text            [6.40]
+ *
+ * Focus and form controls (ui)
+ * @pair --focus-ring on --color-bg ui                           [9.05]
+ * @pair --focus-ring on --color-surface-raised ui               [8.43]
+ * @pair --focus-ring on --color-surface-tint ui                 [7.95]
+ * @pair --focus-ring-inverse on --color-night ui                [10.23]
+ * @pair --focus-ring-inverse on --color-navy ui                 [4.94]
+ * @pair --focus-ring-inverse on --color-night-raised ui         [9.08]
+ * @pair --input-border on --color-bg ui                         [4.96]
+ * @pair --input-border on --color-surface-raised ui             [4.62]
+ * @pair --input-text on --input-bg text                         [18.72]
+ * @pair --input-placeholder on --input-bg text                  [4.96]
+ */
+
+:root {
+  /* ---------- Neutral ramp (10 steps, cool, tuned to the navy) ---------- */
+  --neutral-50: #f5f7fa;
+  --neutral-100: #eaeef3;
+  --neutral-200: #d5dce5;
+  --neutral-300: #b4bfcc;
+  --neutral-400: #8794a5;
+  --neutral-500: #647184;
+  --neutral-600: #4b5768;
+  --neutral-700: #364152;
+  --neutral-800: #1f2937;
+  --neutral-900: #0b1220;
+  --white: #ffffff;
+
+  /* ---------- Brand hue: logo blue, 3 tints, 2 shades ---------- */
+  --brand-50: #eaf1f9;   /* tint 3: tint blocks */
+  --brand-200: #c9dbef;  /* tint 2: eyebrows on navy */
+  --brand-300: #8fb3da;  /* tint 1: links and eyebrows on night */
+  --brand-500: #447cb7;  /* logo blue (A07): large type, rules, fills only */
+  --brand-700: #1d478a;  /* shade 1: navy block, text-blue */
+  --brand-900: #12305e;  /* shade 2: link hover, deep navy */
+  --brand-700-hover: #21529f; /* navy lightened 5% for hover fills */
+
+  /* ---------- Accent: signal gold, CTA only ---------- */
+  /* Reserved for the call and submit buttons, the mobile call bar and the
+     focus ring on dark blocks. Never decoration. Fallback if gold reads cheap:
+     brick #8a3f2a with white text (7.43:1), recorded in decisions. */
+  --gold-500: #f2b544;
+  --gold-400: #f4be5c;   /* gold lightened 5% (HSL) for hover */
+  --gold-600: #e5a632;   /* pressed */
+  --gold-800: #b7801a;   /* 1.5 px edge so the gold button reads as UI on white */
+
+  /* ---------- Feedback ---------- */
+  --red-700: #b42318;
+  --red-50: #fdf1f0;
+  --green-700: #1e6b3a;
+  --green-50: #eef7f1;
+
+  /* ---------- Semantic: grounds and surfaces (tonal steps, not borders) ---------- */
+  --color-bg: var(--white);
+  --color-surface: var(--white);
+  --color-surface-raised: var(--neutral-50);
+  --color-surface-sunken: var(--neutral-100);
+  --color-surface-tint: var(--brand-50);
+  --color-night: var(--neutral-900);
+  --color-night-raised: #141e33;
+  --color-navy: var(--brand-700);
+
+  /* ---------- Semantic: text ---------- */
+  --color-text: var(--neutral-900);
+  --color-heading: var(--neutral-900);
+  --color-text-muted: var(--neutral-600);
+  --color-link: var(--brand-700);
+  --color-link-hover: var(--brand-900);
+  --color-eyebrow: var(--brand-700);
+  --color-brand: var(--brand-500);
+  --color-error: var(--red-700);
+  --color-error-bg: var(--red-50);
+  --color-success: var(--green-700);
+  --color-success-bg: var(--green-50);
+
+  --color-on-dark: var(--white);
+  --color-on-dark-muted: var(--neutral-300);
+  --color-link-on-dark: var(--brand-300);
+  --color-eyebrow-on-dark: var(--brand-300);
+  --color-eyebrow-on-navy: var(--brand-200);
+
+  /* ---------- Semantic: lines (alpha derived from opaque tokens) ---------- */
+  --hairline: color-mix(in srgb, var(--neutral-900) 10%, transparent);
+  --hairline-strong: color-mix(in srgb, var(--neutral-900) 16%, transparent);
+  --hairline-on-dark: color-mix(in srgb, var(--white) 12%, transparent);
+  --header-glass: color-mix(in srgb, var(--white) 82%, transparent);
+  --duotone-scrim: color-mix(in srgb, var(--brand-700) 72%, transparent);
+
+  /* ---------- Buttons ---------- */
+  --btn-primary-bg: var(--gold-500);
+  --btn-primary-bg-hover: var(--gold-400);
+  --btn-primary-bg-active: var(--gold-600);
+  --btn-primary-text: var(--neutral-900);
+  --btn-primary-edge: var(--gold-800);
+
+  --btn-secondary-text: var(--brand-700);
+  --btn-secondary-border: var(--brand-700);
+  --btn-secondary-bg-hover: var(--brand-50);
+  --btn-secondary-inverse-text: var(--white);
+  --btn-secondary-inverse-border: var(--white);
+  --btn-secondary-inverse-bg-hover: color-mix(in srgb, var(--white) 10%, transparent);
+
+  /* ---------- Focus and forms ---------- */
+  --focus-ring: var(--brand-700);         /* light grounds */
+  --focus-ring-inverse: var(--gold-500);  /* night and navy blocks */
+  --ring-width: 3px;
+  --ring-offset: 2px;
+
+  --input-bg: var(--white);
+  --input-text: var(--neutral-900);
+  --input-border: var(--neutral-500);
+  --input-placeholder: var(--neutral-500);
+  --input-height: 3rem;          /* 48 px */
+  --border-width: 1.5px;
+
+  /* ---------- Type families (2 max, self-hosted variable woff2) ---------- */
+  --font-display: "Archivo", "Archivo Fallback", "Arial", sans-serif;
+  --font-text: "Inter", "Inter Fallback", "Arial", sans-serif;
+  --display-wdth: 112;           /* Archivo width axis on desktop display */
+  --display-wdth-compact: 100;   /* phones and long ES headings */
+  --weight-body: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-display: 800;
+  --weight-heading: 750;
+
+  /* ---------- Type scale: 1.333 ratio, fluid 360 px to 1440 px ---------- */
+  --step--2: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);   /* 13-14: legal line */
+  --step--1: clamp(0.9063rem, 0.88rem + 0.12vw, 0.9688rem); /* 14.5-15.5: helper, eyebrow */
+  --step-0: clamp(1.0625rem, 1.05rem + 0.06vw, 1.125rem);   /* 17-18: body */
+  --step-1: clamp(1.3125rem, 1.25rem + 0.3vw, 1.5rem);      /* 21-24: lede, h4 */
+  --step-2: clamp(1.625rem, 1.5rem + 0.6vw, 2rem);          /* 26-32: h3 */
+  --step-3: clamp(2rem, 1.75rem + 1.15vw, 2.75rem);         /* 32-44: h2 */
+  --step-4: clamp(2.375rem, 1.8rem + 2.9vw, 4.5rem);        /* 38-72: h1 */
+  --step-5: clamp(3rem, 2rem + 4.5vw, 6rem);                /* 48-96: step numerals */
+
+  --leading-display: 1.06;
+  --leading-heading: 1.15;
+  --leading-body: 1.6;
+  --leading-tight: 1.3;
+  --tracking-display: -0.022em;
+  --tracking-heading: -0.012em;
+  --tracking-eyebrow: 0.08em;
+  --tracking-button: 0.005em;
+  /* Archivo's space is narrow (0.20em at wdth 100); open it so bold display
+     lines never read as run-together words on phones. */
+  --display-word-space: 0.06em;
+  --display-word-space-wide: 0.02em; /* wdth 112 already widens the space */
+  --measure: 68ch;
+  --measure-lede: 52ch;
+
+  /* ---------- Space: 4 px base ---------- */
+  --space-1: 0.25rem;   /* 4 */
+  --space-2: 0.5rem;    /* 8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.25rem;   /* 20 */
+  --space-6: 1.5rem;    /* 24 */
+  --space-8: 2rem;      /* 32 */
+  --space-10: 2.5rem;   /* 40 */
+  --space-12: 3rem;     /* 48 */
+  --space-16: 4rem;     /* 64 */
+  --space-20: 5rem;     /* 80 */
+  --space-24: 6rem;     /* 96 */
+  --space-32: 8rem;     /* 128 */
+  --section-pad: clamp(4rem, 8vw, 8rem);
+  --gutter: clamp(1rem, 4vw, 2rem);
+
+  /* ---------- Layout ---------- */
+  --container: 76rem;
+  --container-narrow: 48rem;
+  --header-height: 4.25rem;      /* 68 px */
+  --callbar-height: 3.5rem;      /* 56 px bar holding a 48 px button */
+
+  /* ---------- Shape: one radius ---------- */
+  --radius: 4px;
+
+  /* ---------- Controls ---------- */
+  --control-height: 2.75rem;     /* 44 px minimum */
+  --control-height-primary: 3rem;/* 48 px */
+  --btn-pad-y: 0.875rem;
+  --btn-pad-x: 1.5rem;
+  --icon-stroke: 1.75;
+  --icon-size: 1.25rem;
+
+  /* ---------- Shadows: two layers, ambient + key ---------- */
+  --shadow-color: var(--neutral-900);
+  --shadow-1:
+    0 1px 2px color-mix(in srgb, var(--shadow-color) 8%, transparent),
+    0 4px 12px color-mix(in srgb, var(--shadow-color) 8%, transparent);
+  --shadow-2:
+    0 2px 4px color-mix(in srgb, var(--shadow-color) 10%, transparent),
+    0 12px 28px color-mix(in srgb, var(--shadow-color) 14%, transparent);
+  --shadow-cta:
+    0 1px 2px color-mix(in srgb, var(--shadow-color) 18%, transparent),
+    0 6px 16px color-mix(in srgb, var(--gold-800) 28%, transparent);
+  --shadow-cta-hover:
+    0 2px 4px color-mix(in srgb, var(--shadow-color) 20%, transparent),
+    0 10px 24px color-mix(in srgb, var(--gold-800) 34%, transparent);
+
+  /* ---------- Motion ---------- */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 160ms;
+  --dur: 200ms;
+  --dur-slow: 200ms;             /* Premium Standard: every transition 200 ms or less */
+  --dur-reveal: 200ms;
+  --reveal-rise: 14px;
+  --stagger: 60ms;
+  --lift-btn: -1px;
+  --lift-card: -2px;
+  --press-scale: 0.985;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+    --dur-slow: 0ms;
+    --dur-reveal: 0ms;
+    --reveal-rise: 0px;
+    --stagger: 0ms;
+    --lift-btn: 0px;
+    --lift-card: 0px;
+    --press-scale: 1;
+  }
+}

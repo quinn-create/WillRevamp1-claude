@@ -1,0 +1,27 @@
+---
+import Blocks from './Blocks.astro';
+interface Props { section: any; band?: string; dark?: boolean; eyebrow?: string }
+const { section, band = 'band--night', dark = true, eyebrow = 'Step by step' } = Astro.props;
+const list = section.blocks.find((b: any) => b.type === 'ol');
+const before = section.blocks.slice(0, section.blocks.indexOf(list));
+const after = section.blocks.slice(section.blocks.indexOf(list) + 1);
+const n = list.items.length;
+---
+<section class:list={['band', band, { 'on-dark': dark }]} aria-labelledby={section.id}>
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">{eyebrow}</p>
+      <h2 id={section.id} set:html={section.heading} />
+      {before.map((b: any) => <p set:html={b.html} />)}
+    </div>
+    <ol class:list={['steps', `steps--${n}`]}>
+      {list.items.map((it: any, i: number) => (
+        <li class="step" data-reveal style={`--i:${i}`}>
+          <span class="step__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+          {it.lead ? <><span class="step__title" set:html={it.lead} /><p set:html={it.rest} /></> : <p set:html={it.html} />}
+        </li>
+      ))}
+    </ol>
+    {after.length > 0 && <Blocks blocks={after} />}
+  </div>
+</section>

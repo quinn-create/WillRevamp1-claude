@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import Pic from '../../components/Pic.astro';
+import Blocks from '../../components/Blocks.astro';
+import Cards from '../../components/Cards.astro';
+import Steps from '../../components/Steps.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { loadPage } from '../../lib/copy.mjs';
+import { FIRM } from '../../lib/site.mjs';
+
+const { fm, sections } = loadPage('contact-us');
+const by = (kind: string) => sections.find((s) => s.kind === kind);
+const hero = by('hero');
+const cards = by('cards');
+const steps = by('steps');
+const cta = by('cta-band');
+const message = sections.find((s) => s.headingText === 'Send a short message');
+const finding = sections.find((s) => s.headingText === 'Finding the office');
+const placed = new Set([hero, cards, steps, cta, message, finding]);
+const leftover = sections.filter((s) => !placed.has(s));
+
+const [lede, ...heroRest] = hero.blocks;
+// The "Please read before you send" paragraph sits inside the form, right above the submit button.
+const noticeBlock = message.blocks.find((b) => b.type === 'p' && /Please read before you send/.test(b.html));
+const messageIntro = message.blocks.filter((b) => b !== noticeBlock);
+const findingAddress = finding.blocks[0];
+const findingRest = finding.blocks.slice(1);
+---
+<Layout title={fm.title} description={fm.description} path="/contact-us/" cta={{ heading: cta.heading, html: cta.blocks.map((b) => b.html).join(' ') }}>
+
+  <!-- HERO: night block + the contact scene -->
+  <section class="band band--night on-dark page-hero" aria-labelledby="page-title">
+    <div class="container page-hero__grid">
+      <div class="page-hero__copy">
+        <p class="eyebrow">Contact</p>
+        <h1 id="page-title">{fm.h1}</h1>
+        <p class="lede" set:html={lede.html} />
+        {heroRest.map((b) => <p set:html={b.html} />)}
+        <div class="cta-row">
+          <a class="btn btn--primary" href={FIRM.tel}><Icon name="phone" /><span>Call {FIRM.phone}<span class="btn__extra"> — free consultation</span></span></a>
+          <a class="btn btn--secondary" href="#form"><Icon name="pen-line" />Send a short message</a>
+        </div>
+      </div>
+      <Pic class="page-hero__media page-hero__media--contact" name="contact" widths={[640, 960]} ratio={[4, 5]} sizes="(min-width: 76rem) 30rem, (min-width: 60rem) 40vw, 92vw" alt="" eager />
+    </div>
+  </section>
+
+  <Cards section={cards} band="band--white" cols={4} compact icons={['phone', 'mail', 'map-pin', 'clock']} eyebrow="Phone · Email · Office · Hours" />
+
+  <Steps section={steps} band="band--raised" dark={false} eyebrow="What to expect" />
+
+  <!-- FORM -->
+  <section class="band band--tint" id="form" aria-labelledby={message.id}>
+    <div class="container split split--sticky">
+      <div class="stack-lg" data-reveal>
+        <p class="eyebrow">Write to the office</p>
+        <h2 id={message.id} set:html={message.heading} />
+        <Blocks blocks={messageIntro} />
+      </div>
+      <div class="form-card" data-reveal style="--i:1">
+        <ContactForm notice={noticeBlock.html} />
+      </div>
+    </div>
+  </section>
+
+  <!-- FINDING THE OFFICE -->
+  <section class="band band--white" aria-labelledby={finding.id}>
+    <div class="container split split--center">
+      <div data-reveal>
+        <p class="eyebrow">Visit</p>
+        <h2 id={finding.id} set:html={finding.heading} />
+      </div>
+      <div class="stack-lg" data-reveal style="--i:1">
+        <p class="address" set:html={findingAddress.html} />
+        <Blocks blocks={findingRest} />
+      </div>
+    </div>
+  </section>
+
+  {leftover.map((s) => (
+    <section class="band band--white" aria-labelledby={s.id}>
+      <div class="container">{s.heading && <h2 id={s.id} set:html={s.heading} />}<Blocks blocks={s.blocks} /></div>
+    </section>
+  ))}
+</Layout>

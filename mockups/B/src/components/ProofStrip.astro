@@ -1,0 +1,17 @@
+---
+import Icon from './Icon.astro';
+interface Props { items: string[]; icons: string[]; label?: string }
+const { items, icons, label = 'At a glance' } = Astro.props;
+---
+<section class="band band--white band--tight" aria-label={label}>
+  <div class="container">
+    <ul class="proof">
+      {items.map((html, i) => (
+        <li data-reveal style={`--i:${i}`}>
+          <span class="proof__icon"><Icon name={icons[i] || 'check'} /></span>
+          <span class="proof__text" set:html={html} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

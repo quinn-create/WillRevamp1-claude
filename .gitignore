@@ -26,3 +26,5 @@ pnpm-debug.log*
 # tool caches
 /.cache/
 /tmp/
+mockups/*/node_modules/
+mockups/*/.astro/

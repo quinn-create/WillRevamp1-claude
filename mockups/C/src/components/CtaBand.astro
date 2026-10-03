@@ -1,0 +1,23 @@
+---
+// CTA band: an inset navy panel. "Free consultation" in the copy sits in the same paragraph as the tel:
+// link, and the primary button is the tel: link itself.
+import Blocks from './Blocks.astro';
+import { firm, icon } from '../lib/site.mjs';
+interface Props { section: any; eyebrow?: string; secondaryHref?: string }
+const { section, eyebrow, secondaryHref = '/contact-us/#form' } = Astro.props;
+---
+<section class="section" aria-labelledby={section.id}>
+  <div class="container">
+    <div class="cta-band on-deep" data-reveal>
+      <div class="text">
+        {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+        <h2 id={section.id} set:html={section.heading.html} />
+        <Blocks blocks={section.blocks} linkStyle="inline" />
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href={firm.tel}><Fragment set:html={icon('phone', { size: 18 })} />Call {firm.phone}</a>
+        {secondaryHref && <a class="btn btn--secondary" href={secondaryHref}>Send a short message</a>}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+---
+// <picture> with AVIF + WebP sources. width/height are the intrinsic size of the largest file (reserves the box, no CLS).
+interface Props {
+  name: string;
+  widths: number[];
+  ratio: [number, number];
+  sizes: string;
+  alt: string;
+  class?: string;
+  eager?: boolean;
+  lazy?: boolean;
+}
+const { name, widths, ratio, sizes, alt, class: cls, eager = false, lazy = !eager } = Astro.props;
+// eager = the LCP image (high priority); lazy={false} without eager = load now but never compete with the LCP.
+const priority = eager ? 'high' : (!lazy ? 'low' : undefined);
+const max = Math.max(...widths);
+const h = Math.round((max * ratio[1]) / ratio[0]);
+const set = (ext: string) => widths.map((w) => `/img/${name}-${w}.${ext} ${w}w`).join(', ');
+---
+<picture class={cls}>
+  <source type="image/avif" srcset={set('avif')} sizes={sizes} />
+  <source type="image/webp" srcset={set('webp')} sizes={sizes} />
+  {alt ? (
+    <img src={`/img/${name}-${max}.webp`} width={max} height={h} alt={alt} sizes={sizes}
+      loading={lazy ? 'lazy' : 'eager'} decoding={eager ? 'sync' : 'async'} fetchpriority={priority} />
+  ) : (
+    <img src={`/img/${name}-${max}.webp`} width={max} height={h} alt="" sizes={sizes}
+      loading={lazy ? 'lazy' : 'eager'} decoding={eager ? 'sync' : 'async'} fetchpriority={priority} />
+  )}
+</picture>

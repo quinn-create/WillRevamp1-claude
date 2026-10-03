@@ -1,0 +1,346 @@
+/*
+ * Direction A, "Counsel": design tokens.
+ * Restrained editorial authority: warm paper ground, blue-black ink, the logo blue as the only hue,
+ * one sparing brass accent (focus ring, active marker, step numerals). Hairline rules instead of boxes.
+ *
+ * Rules for this file
+ * - Every color token is an opaque #rrggbb (or a var() alias of one) so contrast is machine-checkable.
+ * - Alpha appears only in composite tokens (shadows, header glass, card hairline), built from the
+ *   channel triplets in the "rgb channels" block. Composite tokens are never used for text.
+ * - Every foreground/background pairing used by the mockups is declared below with @pair.
+ *   text = needs 4.5:1, ui = needs 3:1 (non-text UI and large display type only).
+ *   Ratios in brackets were computed with the WCAG 2.x relative-luminance formula.
+ * - No inline colors and no one-off sizes anywhere else in the mockup.
+ */
+
+/* ------------------------------------------------------------------ fonts (self-hosted, variable) */
+/* Newsreader (opsz 6-72, wght 200-800) for display; Public Sans (wght 100-900) for text.
+   Downloaded once from Google Fonts (latin + latin-ext subsets). Preload the two latin files. */
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/newsreader-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/newsreader-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/public-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/public-sans-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Metric-matched fallbacks. Newsreader values measured from the font file (UPM 2000, ascent 1470,
+   descent 530, weighted average width 818) against Times New Roman (UPM 2048, width 819).
+   Public Sans ascent/descent measured (1900 / 450); its size-adjust is estimated for wght 400
+   (the file's default instance is Thin) and should be re-measured at build time. */
+@font-face {
+  font-family: "Newsreader Fallback";
+  src: local("Times New Roman"), local("TimesNewRomanPSMT"), local("Liberation Serif");
+  size-adjust: 102.3%;
+  ascent-override: 71.9%;
+  descent-override: 25.9%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Public Sans Fallback";
+  src: local("Arial"), local("ArialMT"), local("Liberation Sans");
+  size-adjust: 106%;
+  ascent-override: 89.6%;
+  descent-override: 21.2%;
+  line-gap-override: 0%;
+}
+
+:root {
+  /* ================================================================ COLOR: primitives */
+
+  /* Neutral ramp, 10 steps: warm paper (50) to blue-black ink (900). */
+  --neutral-50: #F7F6F2;   /* paper: page ground */
+  --neutral-100: #EFEDE7;  /* alternate section surface */
+  --neutral-200: #E3E2DC;  /* pressed / sunken surface */
+  --neutral-300: #CDD0D3;  /* opaque hairline rule (decorative only) */
+  --neutral-400: #A3AAB3;  /* disabled glyphs, rules on ink */
+  --neutral-500: #737C88;  /* input and control borders */
+  --neutral-600: #5A6472;  /* muted text */
+  --neutral-700: #3F4957;  /* secondary headings on paper */
+  --neutral-800: #283341;  /* raised surface on ink */
+  --neutral-900: #16202C;  /* ink: body, headings, deep band, footer */
+  --white: #FFFFFF;
+  --card-white: #FCFBF8;   /* card surface: one tonal step above paper */
+
+  /* Brand hue: the logo blue #447CB7 (sampled from IMG01) with 3 tints and 2 shades. */
+  --brand-100: #E8EFF7;    /* tint: quiet callout band, secondary-button hover fill */
+  --brand-200: #C9DAEC;    /* tint: selected / hover wash on ink */
+  --brand-300: #9DBEE3;    /* tint: links and accents on the ink band */
+  --brand-500: #447CB7;    /* logo blue: large display type, rules, the wordmark. Never small text. */
+  --brand-600: #2E5F96;    /* shade: text-size links, primary button fill, mobile call bar */
+  --brand-700: #1D478A;    /* shade: navy, link hover, pressed */
+  --brand-600-lift: #376AA2; /* primary fill on hover: brand-600 lightened about 4% */
+
+  /* Accent: courthouse brass. Used sparingly: focus ring, active-nav marker, step numerals. */
+  --accent-300: #D8B46A;   /* brass on the ink band */
+  --accent-600: #8C6A2F;   /* brass: focus ring and marks on paper */
+  --accent-700: #735623;   /* brass as small text (step numerals) */
+
+  /* Status */
+  --red-700: #A12B1F;      /* error text and error border */
+  --green-700: #2D6A3E;    /* success text */
+
+  /* ================================================================ COLOR: semantic roles */
+  --color-bg: var(--neutral-50);
+  --color-surface: var(--neutral-100);
+  --color-surface-sunken: var(--neutral-200);
+  --color-surface-card: var(--card-white);
+  --color-surface-tint: var(--brand-100);
+  --color-inverse-bg: var(--neutral-900);
+  --color-inverse-raised: var(--neutral-800);
+
+  --color-text: var(--neutral-900);
+  --color-heading: var(--neutral-900);
+  --color-heading-quiet: var(--neutral-700);
+  --color-text-muted: var(--neutral-600);
+  --color-brand: var(--brand-500);
+  --color-rule: var(--neutral-300);
+  --color-rule-inverse: var(--neutral-700);
+
+  --color-link: var(--brand-600);
+  --color-link-hover: var(--brand-700);
+  --color-eyebrow: var(--neutral-600);
+  --color-numeral: var(--accent-700);
+
+  --color-on-inverse: var(--neutral-50);
+  --color-on-inverse-muted: var(--neutral-400);
+  --color-link-inverse: var(--brand-300);
+
+  --button-primary-bg: var(--brand-600);
+  --button-primary-bg-hover: var(--brand-600-lift);
+  --button-primary-text: var(--white);
+  --button-secondary-text: var(--brand-600);
+  --button-secondary-border: var(--brand-600);
+  --button-secondary-bg-hover: var(--brand-100);
+  --button-inverse-bg: var(--neutral-50);
+  --button-inverse-text: var(--neutral-900);
+
+  --input-bg: var(--white);
+  --input-text: var(--neutral-900);
+  --input-border: var(--neutral-500);
+  --input-placeholder: var(--neutral-600);
+  --color-error: var(--red-700);
+  --color-success: var(--green-700);
+
+  --focus-ring: var(--accent-600);
+  --focus-ring-inverse: var(--accent-300);
+
+  --callbar-bg: var(--brand-600);
+  --callbar-text: var(--white);
+
+  /* Header glass: 85% paper over blur. Worst case is 85% paper over ink = #D5D6D4 (opaque
+     equivalent, used only to prove header text contrast). Header text is ink, never muted. */
+  --header-bg-worst: #D5D6D4;
+
+  /* ================================================================ CONTRAST PAIRS (all pass AA) */
+  /* Body and headings */
+  /* @pair --color-text on --color-bg text */ /* 15.21:1 */
+  /* @pair --color-text on --color-surface text */ /* 14.05:1 */
+  /* @pair --color-text on --color-surface-card text */ /* 15.89:1 */
+  /* @pair --color-text on --color-surface-tint text */ /* 14.19:1 */
+  /* @pair --color-heading on --color-bg text */ /* 15.21:1 */
+  /* @pair --color-heading-quiet on --color-bg text */ /* 8.44:1 */
+  /* Muted text and eyebrows */
+  /* @pair --color-text-muted on --color-bg text */ /* 5.55:1 */
+  /* @pair --color-text-muted on --color-surface text */ /* 5.12:1 */
+  /* @pair --color-text-muted on --color-surface-card text */ /* 5.80:1 */
+  /* @pair --color-eyebrow on --color-bg text */ /* 5.55:1 */
+  /* @pair --color-numeral on --color-bg text */ /* 6.30:1 */
+  /* @pair --color-numeral on --color-surface text */ /* 5.82:1 */
+  /* Links */
+  /* @pair --color-link on --color-bg text */ /* 6.08:1 */
+  /* @pair --color-link on --color-surface text */ /* 5.62:1 */
+  /* @pair --color-link on --color-surface-card text */ /* 6.35:1 */
+  /* @pair --color-link on --color-surface-tint text */ /* 5.67:1 */
+  /* @pair --color-link-hover on --color-bg text */ /* 8.37:1 */
+  /* Brand blue: large display type (24px+), rules and fills only */
+  /* @pair --color-brand on --color-bg ui */ /* 4.04:1 */
+  /* Primary button (solid brand fill, white label) */
+  /* @pair --button-primary-text on --button-primary-bg text */ /* 6.58:1 */
+  /* @pair --button-primary-text on --button-primary-bg-hover text */ /* 5.61:1 */
+  /* @pair --button-primary-bg on --color-bg ui */ /* 6.08:1 */
+  /* @pair --button-primary-bg on --color-surface ui */ /* 5.62:1 */
+  /* Secondary button (1.5px border, transparent to tint on hover) */
+  /* @pair --button-secondary-text on --color-bg text */ /* 6.08:1 */
+  /* @pair --button-secondary-text on --button-secondary-bg-hover text */ /* 5.67:1 */
+  /* @pair --button-secondary-border on --color-bg ui */ /* 6.08:1 */
+  /* Dark band and footer (ink) */
+  /* @pair --color-on-inverse on --color-inverse-bg text */ /* 15.21:1 */
+  /* @pair --color-on-inverse-muted on --color-inverse-bg text */ /* 7.01:1 */
+  /* @pair --color-link-inverse on --color-inverse-bg text */ /* 8.54:1 */
+  /* @pair --button-inverse-text on --button-inverse-bg text */ /* 15.21:1 */
+  /* @pair --button-inverse-bg on --color-inverse-bg ui */ /* 15.21:1 */
+  /* Focus ring (3px, 2px offset, so it sits on the background) */
+  /* @pair --focus-ring on --color-bg ui */ /* 4.60:1 */
+  /* @pair --focus-ring on --color-surface ui */ /* 4.25:1 */
+  /* @pair --focus-ring on --color-surface-card ui */ /* 4.81:1 */
+  /* @pair --focus-ring on --color-surface-tint ui */ /* 4.30:1 */
+  /* @pair --focus-ring on --input-bg ui */ /* 4.98:1 */
+  /* @pair --focus-ring-inverse on --color-inverse-bg ui */ /* 8.34:1 */
+  /* Forms */
+  /* @pair --input-text on --input-bg text */ /* 16.44:1 */
+  /* @pair --input-border on --input-bg ui */ /* 4.23:1 */
+  /* @pair --input-border on --color-bg ui */ /* 3.91:1 */
+  /* @pair --input-placeholder on --input-bg text */ /* 6.00:1 */
+  /* @pair --color-error on --input-bg text */ /* 7.29:1 */
+  /* @pair --color-error on --color-bg text */ /* 6.74:1 */
+  /* @pair --color-success on --color-bg text */ /* 5.99:1 */
+  /* Sticky header (worst case) and mobile call bar */
+  /* @pair --color-text on --header-bg-worst text */ /* 11.27:1 */
+  /* @pair --callbar-text on --callbar-bg text */ /* 6.58:1 */
+  /* Added at build (A12, stage 3 step 2) for pairs the mockup pages use */
+  /* @pair --brand-700 on --color-surface-tint text */ /* 7.81:1  Se habla espanol panel heading */
+  /* @pair --color-heading-quiet on --color-surface text */ /* 7.79:1  proof strip / attribution on linen */
+  /* @pair --color-text-muted on --color-surface-sunken text */ /* 4.62:1  mock note, disabled input text */
+  /* @pair --color-brand on --color-surface-tint ui */ /* 3.77:1  icons and rules on the tint panel */
+  /* / */
+
+  /* ================================================================ COLOR: rgb channels (composites only) */
+  --rgb-ink: 22 32 44;
+  --rgb-paper: 247 246 242;
+  --rgb-brand-shade: 29 71 138;
+
+  --header-glass: rgb(var(--rgb-paper) / 0.85);
+  --hairline-card: rgb(var(--rgb-ink) / 0.1);         /* 1px card hairline at 10% */
+  --hairline-scroll: rgb(var(--rgb-ink) / 0.12);      /* header rule once scrolled */
+  --scrim-image: rgb(var(--rgb-ink) / 0.18);          /* subtle tonal overlay on scenes, only when needed */
+
+  /* ================================================================ TYPE */
+  --font-display: "Newsreader", "Newsreader Fallback", "Times New Roman", serif;
+  --font-text: "Public Sans", "Public Sans Fallback", Arial, sans-serif;
+
+  /* Fluid 1.25 scale, 360px to 1280px viewport. step-0 is body (17px to 18px). */
+  --step--2: clamp(0.8125rem, 0.788rem + 0.109vw, 0.875rem);
+  --step--1: clamp(0.9375rem, 0.913rem + 0.109vw, 1rem);
+  --step-0: clamp(1.0625rem, 1.038rem + 0.109vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.1889rem + 0.272vw, 1.40625rem);
+  --step-2: clamp(1.5rem, 1.4022rem + 0.435vw, 1.75rem);
+  --step-3: clamp(1.75rem, 1.5788rem + 0.761vw, 2.1875rem);
+  --step-4: clamp(2.0625rem, 1.7935rem + 1.196vw, 2.75rem);
+  --step-5: clamp(2.375rem, 1.9592rem + 1.848vw, 3.4375rem);
+  --step-6: clamp(2.75rem, 2.163rem + 2.609vw, 4.25rem);
+
+  --text-body: var(--step-0);
+  --text-small: var(--step--1);
+  --text-fine: var(--step--2);
+  --text-lead: var(--step-1);
+  --text-h4: var(--step-1);
+  --text-h3: var(--step-2);
+  --text-h2: var(--step-4);
+  --text-h1: var(--step-5);
+  --text-display: var(--step-6);
+
+  --weight-text: 400;
+  --weight-text-strong: 600;
+  --weight-display: 460;
+  --weight-display-strong: 560;
+  --opsz-display: 60;
+  --opsz-heading: 32;
+
+  --leading-body: 1.6;
+  --leading-snug: 1.35;
+  --leading-heading: 1.15;
+  --leading-display: 1.08;
+
+  --tracking-display: -0.02em;
+  --tracking-heading: -0.01em;
+  --tracking-body: 0;
+  --tracking-button: 0.005em;
+  --tracking-eyebrow: 0.08em;
+
+  --measure: 68ch;
+  --measure-narrow: 52ch;
+
+  /* ================================================================ SPACE (4px base) */
+  --space-1: 0.25rem;   /*  4 */
+  --space-2: 0.5rem;    /*  8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.25rem;   /* 20 */
+  --space-6: 1.5rem;    /* 24 */
+  --space-8: 2rem;      /* 32 */
+  --space-10: 2.5rem;   /* 40 */
+  --space-12: 3rem;     /* 48 */
+  --space-16: 4rem;     /* 64 */
+  --space-20: 5rem;     /* 80 */
+  --space-24: 6rem;     /* 96 */
+  --space-32: 8rem;     /* 128 */
+
+  --section-pad: clamp(4rem, 8vw, 8rem);
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+  --container: 76rem;
+  --container-prose: 44rem;
+  --grid-gap: clamp(1.5rem, 1rem + 2vw, 3rem);
+
+  /* ================================================================ SHAPE AND DEPTH */
+  --radius: 4px;                 /* the one radius token: buttons, inputs, cards, frames */
+  --border-hairline: 1px;
+  --border-control: 1.5px;
+  --border-link: 1.5px;
+  --border-link-hover: 2px;
+  --link-offset: 0.2em;
+
+  /* Two-layer shadows: ambient + key. */
+  --shadow-1: 0 1px 2px rgb(var(--rgb-ink) / 0.08), 0 2px 6px -1px rgb(var(--rgb-brand-shade) / 0.14);
+  --shadow-2: 0 2px 4px rgb(var(--rgb-ink) / 0.08), 0 10px 22px -6px rgb(var(--rgb-brand-shade) / 0.24);
+  --shadow-card: 0 1px 2px rgb(var(--rgb-ink) / 0.04), 0 1px 3px rgb(var(--rgb-ink) / 0.04);
+  --shadow-card-hover: 0 2px 4px rgb(var(--rgb-ink) / 0.06), 0 12px 28px -8px rgb(var(--rgb-ink) / 0.18);
+
+  /* ================================================================ CONTROLS */
+  --control-height: 44px;        /* minimum tap target */
+  --control-height-primary: 48px;
+  --input-height: 48px;
+  --button-pad-y: 0.75rem;
+  --button-pad-x: 1.5rem;
+  --button-weight: 600;
+  --focus-width: 3px;
+  --focus-offset: 2px;
+  --icon-size: 1.25rem;
+  --icon-stroke: 1.75;
+  --disabled-opacity: 0.5;
+  --press-scale: 0.985;
+  --lift-button: -1px;
+  --lift-card: -2px;
+
+  /* ================================================================ LAYOUT CHROME */
+  --header-height: 68px;
+  --header-blur: 12px;
+  --callbar-height: 48px;
+  --logo-width: 13.5rem;         /* tagline kept; below 200px wide the tagline is dropped */
+  --logo-width-compact: 10rem;
+  --z-header: 50;
+  --z-callbar: 40;
+  --z-dialog: 100;
+
+  /* ================================================================ MOTION */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 160ms;
+  --dur: 200ms;
+  --dur-reveal: 500ms;
+  --stagger: 60ms;
+  --reveal-rise: 14px;
+}

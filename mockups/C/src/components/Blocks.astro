@@ -1,0 +1,30 @@
+---
+// Renders parsed copy blocks (p, ul, ol, h3, quote, link) without dropping or rewriting any copy.
+import { icon } from '../lib/site.mjs';
+interface Props { blocks: any[]; linkStyle?: 'ghost' | 'secondary' | 'inline' }
+const { blocks = [], linkStyle = 'ghost' } = Astro.props;
+const arrow = icon('arrow-right', { size: 18 });
+const isEs = (b) => b.href === '/es/' || /español/i.test(b.text || '');
+---
+{blocks.map((b) => {
+  if (b.type === 'p') return <p set:html={b.html} />;
+  if (b.type === 'h3') return <h3 set:html={b.html} />;
+  if (b.type === 'ul') return <ul>{b.items.map((it) => <li set:html={it.html} />)}</ul>;
+  if (b.type === 'ol') return <ol>{b.items.map((it) => <li set:html={it.html} />)}</ol>;
+  if (b.type === 'quote') return <blockquote><p set:html={b.html} />{b.by && <footer set:html={b.byHtml} />}</blockquote>;
+  if (b.type === 'link') {
+    const ext = /^https?:/.test(b.href);
+    const lang = isEs(b) ? 'es' : undefined;
+    if (linkStyle === 'inline') return <p><a class={b.stretch ? 'stretch' : undefined} href={b.href} lang={lang} hreflang={lang} rel={ext ? 'noopener' : undefined} target={ext ? '_blank' : undefined} set:html={b.html + (ext ? '<span class="visually-hidden"> (opens in a new tab)</span>' : '')} /></p>;
+    return (
+      <p>
+        <a class={`btn btn--${linkStyle}`} href={b.href} lang={lang} hreflang={lang} rel={ext ? 'noopener' : undefined} target={ext ? '_blank' : undefined}>
+          <span set:html={b.html} />
+          {ext && <span class="visually-hidden"> (opens in a new tab)</span>}
+          <Fragment set:html={ext ? icon('arrow-up-right', { size: 18 }) : arrow} />
+        </a>
+      </p>
+    );
+  }
+  return null;
+})}

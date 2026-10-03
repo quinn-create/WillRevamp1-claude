@@ -1,0 +1,97 @@
+---
+import Base from '../layouts/Base.astro';
+import Blocks from '../components/Blocks.astro';
+import CallCta from '../components/CallCta.astro';
+import Cards from '../components/Cards.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Faq from '../components/Faq.astro';
+import Picture from '../components/Picture.astro';
+import ProofStrip from '../components/ProofStrip.astro';
+import SectionHead from '../components/SectionHead.astro';
+import Testimonial from '../components/Testimonial.astro';
+import { loadCopy, inline } from '../lib/copy.mjs';
+
+const { data, sections } = loadCopy('index');
+const get = (type: string, h2?: string) => sections.find((s: any) => s.type === type && (!h2 || s.h2 === h2));
+const hero = get('hero');
+const proof = get('proof-strip');
+const cards = get('cards');
+const why = sections.find((s: any) => s.type === 'prose' && /Why people call/.test(s.h2));
+const testimonial = get('testimonial');
+const spanish = sections.find((s: any) => s.type === 'prose' && /Se habla/.test(s.h2));
+const faq = get('faq');
+const cta = get('cta-band');
+const rendered = new Set([hero, proof, cards, why, testimonial, spanish, faq, cta]);
+const missing = sections.filter((s: any) => !rendered.has(s));
+if (missing.length) throw new Error('index: unrendered copy sections: ' + missing.map((s: any) => s.h2 || s.type).join(', '));
+---
+<Base title={data.title} description={data.description} current="/">
+  <section class="hero hero--home" aria-labelledby="page-title">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Attorney at Law · Murfreesboro, Tennessee</p>
+          <h1 id="page-title" set:html={inline(data.h1)} />
+          <Blocks blocks={hero.blocks} lead class="hero__deck" />
+          <CallCta secondary={{ href: '/contact-us/#form', label: 'Send a short message' }} />
+        </div>
+        <figure class="portrait">
+          <div class="portrait__frame">
+            <Picture name="will-desk" alt="Will Fraley at his desk, pen in hand, smiling toward the camera." sizes="(min-width: 60em) 30rem, (min-width: 37.5em) 26rem, 92vw" eager />
+          </div>
+          <figcaption><strong>Will Fraley</strong><span>Attorney at Law</span></figcaption>
+        </figure>
+      </div>
+      <ProofStrip section={proof} />
+    </div>
+  </section>
+
+  <div class="plate" role="presentation">
+    <Picture name="a-hero" alt="" sizes="(max-width: 37.49em) 134vw, 100vw" near />
+  </div>
+
+  <section class="section section--linen" aria-labelledby="what-will-fraley-handles">
+    <div class="container">
+      <Cards section={cards} eyebrow="Practice areas" cols={3} />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="why-people-call-will-fraley">
+    <div class="container split">
+      <div class="split__aside">
+        <SectionHead h2={why.h2} eyebrow="About Will Fraley" />
+        <figure class="portrait aside-photo">
+          <div class="portrait__frame">
+            <Picture name="will-portrait" alt="Will Fraley in a dark suit, smiling, standing at a brick doorway." sizes="(min-width: 60em) 22rem, 80vw" />
+          </div>
+        </figure>
+      </div>
+      <div class="split__main">
+        <Blocks blocks={why.blocks} class="reasons" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--linen" aria-labelledby="in-a-clients-words">
+    <div class="container">
+      <Testimonial section={testimonial} eyebrow="Testimonial" />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="se-habla-espanol">
+    <div class="container">
+      <div class="lang-panel" data-reveal>
+        <SectionHead h2={spanish.h2} eyebrow="En español" eyebrowLang="es" />
+        <Blocks blocks={spanish.blocks} />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--flush-top" aria-labelledby="questions-people-ask-first">
+    <div class="container">
+      <Faq section={faq} eyebrow="Questions" />
+    </div>
+  </section>
+
+  <CtaBand section={cta} />
+</Base>

@@ -1,0 +1,31 @@
+---
+// [testimonial]: verbatim quote set large in the display serif; no stars.
+import { parseQuote, inline, smart } from '../lib/copy.mjs';
+import Blocks from './Blocks.astro';
+import Icon from './Icon.astro';
+import SectionHead from './SectionHead.astro';
+interface Props { section: any; eyebrow?: string }
+const { section, eyebrow = 'Testimonial' } = Astro.props;
+const quote = section.blocks.find((b: any) => b.type === 'quote');
+const q = parseQuote(quote.md);
+const rest = section.blocks.filter((b: any) => b !== quote);
+// Quoted verbatim. When the source text stops mid-sentence (no closing punctuation), an ellipsis marks
+// the omission instead of letting the quote end abruptly; the words themselves are unchanged.
+const unfinished = !/[.!?…”"')]\s*$/.test(q.text.trim());
+const notes = rest.filter((b: any) => b.type === 'p');
+const links = rest.filter((b: any) => b.type === 'link');
+---
+<div class="testimonial split">
+  <div class="split__aside">
+    <SectionHead h2={section.h2} eyebrow={eyebrow} />
+  </div>
+  <div class="split__main">
+  <figure class="quote" data-reveal>
+    <Icon name="quote" class="quote__mark" />
+    <blockquote><p>{smart(q.text.trim())}{unfinished && <span class="quote__omit">&nbsp;…</span>}</p></blockquote>
+    <figcaption>— {q.by}</figcaption>
+  </figure>
+  {notes.length > 0 && <Blocks blocks={notes} class="fineprint" />}
+  {links.length > 0 && <Blocks blocks={links} />}
+  </div>
+</div>

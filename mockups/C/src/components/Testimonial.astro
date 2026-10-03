@@ -1,0 +1,23 @@
+---
+// One verbatim testimonial, set large in the display serif. No stars. The results disclaimer and any
+// links that follow in the copy are rendered beneath it.
+import SectionHead from './SectionHead.astro';
+import Blocks from './Blocks.astro';
+interface Props { section: any; eyebrow?: string; band?: string }
+const { section, eyebrow, band = '' } = Astro.props;
+const quote = section.blocks.find((b) => b.type === 'quote');
+const rest = section.blocks.filter((b) => b !== quote);
+const notes = rest.filter((b) => b.type === 'p');
+const links = rest.filter((b) => b.type === 'link');
+---
+<section class={`section ${band}`} aria-labelledby={section.id}>
+  <div class="container testimonial-wrap">
+    <SectionHead eyebrow={eyebrow} heading={section.heading} id={section.id} />
+    <figure class="testimonial" data-reveal>
+      <blockquote><p set:html={quote.html} /></blockquote>
+      {quote.by && <figcaption set:html={quote.byHtml} />}
+      {notes.length > 0 && <div class="disclaimer"><Blocks blocks={notes} /></div>}
+      <Blocks blocks={links} />
+    </figure>
+  </div>
+</section>

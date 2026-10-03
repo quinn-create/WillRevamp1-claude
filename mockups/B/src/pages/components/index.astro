@@ -1,0 +1,191 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import Header from '../../components/Header.astro';
+import MobileMenu from '../../components/MobileMenu.astro';
+import CallBar from '../../components/CallBar.astro';
+import { FIRM } from '../../lib/site.mjs';
+
+const states = [
+  { label: 'Default', cls: '' },
+  { label: 'Hover', cls: 'is-hover' },
+  { label: 'Active', cls: 'is-active' },
+  { label: 'Focus-visible', cls: 'is-focus' },
+];
+const swatches = [
+  ['Night', '--color-night', '#0B1220'], ['Navy', '--color-navy', '#1D478A'], ['Logo blue', '--color-brand', '#447CB7'],
+  ['Sky tint', '--color-surface-tint', '#EAF1F9'], ['Signal gold (CTA only)', '--btn-primary-bg', '#F2B544'], ['Slate', '--color-text-muted', '#4B5768'],
+  ['Raised', '--color-surface-raised', '#F5F7FA'], ['White', '--color-bg', '#FFFFFF'],
+];
+---
+<Layout title="Components | Direction B “Verdict”" description="Every button, card, form field, nav and alert state for Direction B “Verdict”, the bold high-contrast mockup for Will Fraley, Attorney at Law." path="/components/"
+  cta={{ heading: 'Start with one phone call', html: `Call <a class="tel" href="${FIRM.tel}">${FIRM.phone}</a> for a free consultation.` }}>
+  <div class="container">
+    <section class="band band--tight">
+      <p class="eyebrow">Direction B · Verdict</p>
+      <h1>Components</h1>
+      <p class="lede muted">Every state, rendered side by side. Hover, active and focus are forced with state classes so they can be reviewed in a still screenshot.</p>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-color">
+      <h2 id="c-color">Color</h2>
+      <div class="swatches">
+        {swatches.map(([n, t, hex]) => (
+          <div class="swatch"><div class="swatch__chip" style={`background:var(${t})`}></div><div class="swatch__meta"><strong>{n}</strong><span class="muted">{hex}</span></div></div>
+        ))}
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-type">
+      <h2 id="c-type">Type</h2>
+      <div class="stack-lg">
+        <p class="h1">Criminal defense lawyer in Murfreesboro</p>
+        <p class="h2">Charges Will Fraley handles</p>
+        <p class="h3">If someone you love was arrested</p>
+        <p class="lede">Lede, Inter 21–24 px. Charged with a crime, or someone you love was arrested?</p>
+        <p>Body, Inter 17–18 px, line height 1.6, measure 68ch. Will Fraley and his team personally handle criminal cases, no matter how big or small.</p>
+        <p class="eyebrow">Eyebrow · small caps 0.08em</p>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-btn">
+      <h2 id="c-btn">Buttons</h2>
+      <div class="sheet-row">
+        {states.map((s) => (
+          <div class="spec"><span class="spec__label">Primary · {s.label}</span><a class:list={['btn btn--primary', s.cls]} href={FIRM.tel}><Icon name="phone" />Call {FIRM.phone}</a></div>
+        ))}
+        <div class="spec"><span class="spec__label">Primary · Disabled</span><button class="btn btn--primary" type="button" disabled><Icon name="message-square" />Send message</button></div>
+        <div class="spec"><span class="spec__label">Primary · Loading</span><button class="btn btn--primary is-loading" type="button" aria-busy="true"><span class="spinner" aria-hidden="true"></span>Send message</button></div>
+      </div>
+      <div class="sheet-row">
+        {states.map((s) => (
+          <div class="spec"><span class="spec__label">Secondary · {s.label}</span><a class:list={['btn btn--secondary', s.cls]} href="/contact-us/#form"><Icon name="pen-line" />Send a short message</a></div>
+        ))}
+        <div class="spec"><span class="spec__label">Secondary · Disabled</span><button class="btn btn--secondary" type="button" disabled>Send a short message</button></div>
+      </div>
+      <div class="sheet-row">
+        {states.map((s) => (
+          <div class="spec"><span class="spec__label">Ghost · {s.label}</span><a class:list={['btn btn--ghost', s.cls]} href="/legal-services/">All practice areas <Icon name="arrow-right" /></a></div>
+        ))}
+        <div class="spec"><span class="spec__label">Navy (header phone) · Default</span><a class="btn btn--navy header__phone" href={FIRM.tel}><Icon name="phone" />{FIRM.phone}</a></div>
+        {states.slice(1).map((s) => (
+          <div class="spec"><span class="spec__label">Navy · {s.label}</span><a class:list={['btn btn--navy header__phone', s.cls]} href={FIRM.tel}><Icon name="phone" />{FIRM.phone}</a></div>
+        ))}
+        <div class="spec"><span class="spec__label">Ghost · Disabled</span><a class="btn btn--ghost" aria-disabled="true" role="link">All practice areas <Icon name="arrow-right" /></a></div>
+      </div>
+      <div class="sheet-row sheet-dark on-dark">
+        {states.map((s) => (
+          <div class="spec"><span class="spec__label">On night · {s.label}</span><a class:list={['btn btn--primary', s.cls]} href={FIRM.tel}><Icon name="phone" />Call {FIRM.phone}</a></div>
+        ))}
+        <div class="spec"><span class="spec__label">Secondary inverse</span><a class="btn btn--secondary" href="/contact-us/#form">Send a short message</a></div>
+        <div class="spec"><span class="spec__label">Secondary inverse · Hover</span><a class="btn btn--secondary is-hover" href="/contact-us/#form">Send a short message</a></div>
+        <div class="spec"><span class="spec__label">Secondary inverse · Active</span><a class="btn btn--secondary is-active" href="/contact-us/#form">Send a short message</a></div>
+        <div class="spec"><span class="spec__label">Secondary inverse · Focus</span><a class="btn btn--secondary is-focus" href="/contact-us/#form">Send a short message</a></div>
+      </div>
+      <div class="sheet-row sheet-navy on-dark">
+        <div class="spec"><span class="spec__label">On navy · Default</span><a class="btn btn--primary" href={FIRM.tel}><Icon name="phone" />Call {FIRM.phone}</a></div>
+        <div class="spec"><span class="spec__label">On navy · Hover</span><a class="btn btn--primary is-hover" href={FIRM.tel}><Icon name="phone" />Call {FIRM.phone}</a></div>
+        <div class="spec"><span class="spec__label">On navy · Focus-visible</span><a class="btn btn--primary is-focus" href={FIRM.tel}><Icon name="phone" />Call {FIRM.phone}</a></div>
+        <div class="spec"><span class="spec__label">Ghost on navy</span><a class="btn btn--ghost" href="/contact-us/#form">Send a short message <Icon name="arrow-right" /></a></div>
+        <div class="spec"><span class="spec__label">Ghost on navy · Focus-visible</span><a class="btn btn--ghost is-focus" href="/contact-us/#form">Send a short message <Icon name="arrow-right" /></a></div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-card">
+      <h2 id="c-card">Cards</h2>
+      <div class="cards cards--3">
+        {[{ l: 'Default', c: '' }, { l: 'Hover', c: 'is-hover' }, { l: 'Focus-visible', c: 'is-focus' }].map((s) => (
+          <div class="spec"><span class="spec__label">Card · {s.l}</span>
+            <article class:list={['card card--link card--compact', s.c]}>
+              <span class="card__bar" aria-hidden="true"></span>
+              <h3>DUI</h3>
+              <p>First and second offense DUI, felony DUI and underage DUI.</p>
+              <a class="card__link" href="/criminal-defense/dui/">DUI defense <Icon name="arrow-right" /></a>
+            </article>
+          </div>
+        ))}
+      </div>
+      <div class="sheet-row">
+        <div class="spec spec--narrow"><span class="spec__label">Info card (no link)</span>
+          <article class="card card--compact"><span class="card__icon"><Icon name="clock" /></span><h3>Hours</h3><ul><li>Monday–Thursday: 9:00 a.m. – 5:00 p.m.</li><li>Friday: 9:00 a.m. – 4:00 p.m.</li></ul></article>
+        </div>
+        <div class="spec spec--wide"><span class="spec__label">Proof tile</span>
+          <ul class="proof proof--2"><li><span class="proof__icon"><Icon name="calendar" /></span><span class="proof__text">Practicing law since 2004</span></li><li><span class="proof__icon"><Icon name="languages" /></span><span class="proof__text">Se habla español</span></li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-form">
+      <h2 id="c-form">Form fields</h2>
+      <div class="grid-states grid-states--5">
+        <div class="field"><span class="spec__label">Default</span><label for="cf1">First name <span class="tag">Required</span></label><input class="input" id="cf1" type="text" /><p class="help">Helper text sits under the field.</p></div>
+        <div class="field is-hover"><span class="spec__label">Hover</span><label for="cf1h">Last name <span class="tag">Required</span></label><input class="input" id="cf1h" type="text" /><p class="help">The border darkens under the pointer.</p></div>
+        <div class="field is-focus"><span class="spec__label">Focus</span><label for="cf2">Phone <span class="tag">Required</span></label><input class="input" id="cf2" type="tel" value="(615) 410-72" /><p class="help">The best number for a call back.</p></div>
+        <div class="field field--error"><span class="spec__label">Error</span><label for="cf3">Email <span class="tag">Optional</span></label><input class="input" id="cf3" type="email" value="maria@" aria-invalid="true" aria-describedby="cf3e" /><p class="error-msg" id="cf3e"><Icon name="circle-alert" />Enter a full email address, like name@example.com, or leave this blank.</p></div>
+        <div class="field field--disabled"><span class="spec__label">Disabled</span><label for="cf4">Last name</label><input class="input" id="cf4" type="text" disabled value="Not editable" /><p class="help">Disabled fields keep their label.</p></div>
+      </div>
+      <div class="grid-states grid-states--2 grid-states--gap">
+        <div class="field is-focus"><span class="spec__label">Select · Focus</span><label for="cf5">Best time to reach you</label><div class="select-wrap"><select class="select" id="cf5"><option>Choose a time</option><option>Morning</option></select><Icon name="chevron-down" /></div></div>
+        <div class="field field--error"><span class="spec__label">Textarea · Error</span><label for="cf6">How can we help?</label><textarea class="textarea" id="cf6" aria-invalid="true" aria-describedby="cf6e"></textarea><p class="error-msg" id="cf6e"><Icon name="circle-alert" />Add a line about what happened, or call the office instead.</p></div>
+      </div>
+      <div class="grid-states grid-states--2 grid-states--gap">
+        <div class="spec"><span class="spec__label">Success (replaces the form)</span>
+          <div class="success" role="status"><p class="success__title"><Icon name="circle-check" />Message sent</p><p>Thank you. The office will call you back during business hours. If it can’t wait, call <a class="tel" href={FIRM.tel}>{FIRM.phone}</a>.</p></div>
+        </div>
+        <div class="spec"><span class="spec__label">Alerts</span>
+          <div class="stack spec__fill">
+            <p class="alert alert--error"><Icon name="circle-alert" />Two fields need attention. They are marked below.</p>
+            <p class="alert alert--success"><Icon name="circle-check" />Your message was sent.</p>
+            <p class="alert alert--info"><Icon name="phone" />Online messages are not switched on in this preview.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet-section" aria-labelledby="c-nav">
+      <h2 id="c-nav">Navigation</h2>
+      <div class="sheet-row">
+        <div class="spec"><span class="spec__label">Nav link · Default</span><a class="nav-link" href="/family-law/">Family Law</a></div>
+        <div class="spec"><span class="spec__label">Nav link · Hover</span><a class="nav-link is-hover" href="/family-law/">Family Law</a></div>
+        <div class="spec"><span class="spec__label">Nav link · Active (current page)</span><a class="nav-link" href="/criminal-defense/" aria-current="page">Criminal Defense</a></div>
+        <div class="spec"><span class="spec__label">Nav link · Focus-visible</span><a class="nav-link is-focus" href="/about/">About</a></div>
+        <div class="spec"><span class="spec__label">Language toggle</span><a class="lang-toggle lang-toggle--demo" href="/es/" hreflang="es" lang="es"><Icon name="languages" />Español</a></div>
+        <div class="spec"><span class="spec__label">Language toggle · Hover</span><a class="lang-toggle lang-toggle--demo is-hover" href="/es/" hreflang="es" lang="es"><Icon name="languages" />Español</a></div>
+        <div class="spec"><span class="spec__label">Language toggle · Focus-visible</span><a class="lang-toggle lang-toggle--demo is-focus" href="/es/" hreflang="es" lang="es"><Icon name="languages" />Español</a></div>
+      </div>
+      <div class="sheet-row">
+        <div class="spec"><span class="spec__label">Menu button · Default</span><button class="menu-btn menu-btn--labelled" type="button" aria-label="Menu (example)"><Icon name="menu" /><span class="menu-btn__label">Menu</span></button></div>
+        <div class="spec"><span class="spec__label">Menu button · Hover</span><button class="menu-btn menu-btn--labelled is-hover" type="button" aria-label="Menu (example, hover)"><Icon name="menu" /><span class="menu-btn__label">Menu</span></button></div>
+        <div class="spec"><span class="spec__label">Menu button · Focus-visible</span><button class="menu-btn menu-btn--labelled is-focus" type="button" aria-label="Menu (example, focus)"><Icon name="menu" /><span class="menu-btn__label">Menu</span></button></div>
+        <div class="spec"><span class="spec__label">Menu close · Hover / Focus</span><span class="sheet-pair"><button class="menu-close is-hover" type="button" aria-label="Close menu (example, hover)"><Icon name="x" /></button><button class="menu-close is-focus" type="button" aria-label="Close menu (example, focus)"><Icon name="x" /></button></span></div>
+        <div class="spec"><span class="spec__label">Skip link · Focused</span><a class="skip-link skip-link--demo is-focus" href="#main">Skip to main content</a></div>
+      </div>
+      <div class="sheet-row sheet-dark on-dark">
+        <div class="spec"><span class="spec__label">Footer link · Default</span><ul class="footer__list"><li><a href="/about/">About</a></li></ul></div>
+        <div class="spec"><span class="spec__label">Footer link · Hover</span><ul class="footer__list"><li><a class="is-hover" href="/about/">About</a></li></ul></div>
+        <div class="spec"><span class="spec__label">Footer link · Focus-visible</span><ul class="footer__list"><li><a class="is-focus" href="/about/">About</a></li></ul></div>
+        <div class="spec"><span class="spec__label">Inline link on night</span><p>Call <a class="tel" href={FIRM.tel}>{FIRM.phone}</a> for a free consultation.</p></div>
+      </div>
+      <div class="sheet-row">
+        <div class="spec spec__fill"><span class="spec__label">Header · desktop, scrolled (hairline on)</span>
+          <div class="frame frame--bleed"><Header current="/criminal-defense/" demo scrolled /></div>
+        </div>
+      </div>
+      <div class="sheet-row">
+        <div class="spec"><span class="spec__label">Mobile menu · &lt;dialog&gt; open (390 px)</span>
+          <div class="frame frame--phone"><MobileMenu current="/criminal-defense/" demo /></div>
+        </div>
+        <div class="spec"><span class="spec__label">FAQ item · open</span>
+          <div class="faq faq--demo">
+            <details open><summary><span>Is the consultation free?</span><Icon name="chevron-down" /></summary><div class="faq__a"><p>Yes. Call <a class="tel" href={FIRM.tel}>{FIRM.phone}</a> for a free consultation.</p></div></details>
+            <details><summary class="is-hover"><span>Can I get help in Spanish? (hover)</span><Icon name="chevron-down" /></summary><div class="faq__a"><p>Yes. <span lang="es">Se habla español</span>.</p></div></details>
+            <details><summary class="is-focus"><span>Where do you represent clients? (focus)</span><Icon name="chevron-down" /></summary><div class="faq__a"><p>Murfreesboro and the surrounding counties.</p></div></details>
+          </div>
+        </div>
+        <div class="spec"><span class="spec__label">Mobile call bar (below 768 px; tucked while a gold call button is on screen)</span>
+          <CallBar demo />
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
