@@ -5,6 +5,8 @@
 //   node tools/lighthouse.mjs --dist dist --out qa/lighthouse.json [--runs 3] [--paths /,/es/]
 //   node tools/lighthouse.mjs --url https://willfraleylaw.com/ --url ... --out audit/lighthouse-before.json
 import { execFile } from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
 import { promisify } from 'node:util';
 // Async on purpose: with --dist the static server runs in THIS process, and a synchronous spawn would block its
 // event loop so Lighthouse's page requests never get an answer (A23 P800 fix).
@@ -15,12 +17,13 @@ const a = args();
 const runs = Number(a.runs || 1);
 const CHROME = process.env.CHROME_PATH || chromiumPath();
 
-async function once(url) {
+async function once(url, extra = []) {
   const r = await run(abs('node_modules/.bin/lighthouse'), [
     url, '--output=json', '--output-path=stdout', '--quiet',
     '--only-categories=performance,accessibility,best-practices,seo',
     '--chrome-flags=--headless=new --no-sandbox --disable-gpu --ignore-certificate-errors',
     '--max-wait-for-load=90000',
+    ...extra,
   ], { env: { ...process.env, CHROME_PATH: CHROME }, encoding: 'utf8', maxBuffer: 512 * 1024 * 1024, timeout: 240000 })
     .then((x) => ({ ...x, status: 0 }), (e) => ({ status: e.code ?? 1, stdout: e.stdout, stderr: e.stderr || e.message }));
   if (r.status !== 0 || !r.stdout) return { url, error: (r.stderr || 'lighthouse failed').split('\n').slice(-3).join(' ') };
@@ -67,7 +70,13 @@ async function main() {
   const out = [];
   for (const u of urls) {
     const rs = [];
-    for (let i = 0; i < runs; i++) rs.push(await once(u));
+    // Pages that are noindex by design (cookie settings, thank-you and their ES twins; DECISIONS 272/898) skip only the
+    // `is-crawlable` audit, which fails on any noindex page. Every other audit, SEO included, still runs on them.
+    const rel = server ? u.slice(server.url.length) : '';
+    const file = server ? path.join(abs(a.dist), rel.replace(/^\//, ''), rel.endsWith('/') ? 'index.html' : '') : '';
+    const noindex = !!file && fs.existsSync(file) && /<meta name="robots" content="[^"]*noindex/i.test(fs.readFileSync(file, 'utf8'));
+    const extra = noindex ? ['--skip-audits=is-crawlable'] : [];
+    for (let i = 0; i < runs; i++) rs.push({ ...(await once(u, extra)), ...(noindex ? { noindex: true, skippedAudits: ['is-crawlable'] } : {}) });
     const m = median(rs);
     if (server) m.path = u.slice(server.url.length);
     out.push(m);

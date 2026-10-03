@@ -19,6 +19,7 @@ import Quotes from './Quotes.astro';
 import Stats from '../../components/Stats.astro';
 import CTABand from '../../components/CTABand.astro';
 import SpanishPanel from '../../components/SpanishPanel.astro';
+import Heading from '../../components/Heading.astro';
 import NewsItem from '../../components/NewsItem.astro';
 import DocumentFigure from '../../components/DocumentFigure.astro';
 import Notice from '../../components/Notice.astro';
@@ -81,13 +82,20 @@ const formSection = template === 'contact' ? prose.find((x) => /message|mensaje/
 // The copy's non-confidentiality paragraph (law-firm rule 8) moves into the form, directly above Submit (A21).
 const isFormNotice = (b: Block) => b.type === 'p' && /attorney-client|abogado y cliente/i.test(b.md);
 const whySection = template === 'home' ? prose[0] : undefined;
-const spanishSection = template === 'home' ? prose[1] : undefined;
+const spanishSection = template === 'home' ? prose[1] : template === 'about' ? prose.find((x) => /^(se habla español|atención en español)$/i.test(plain(x.h2 || ''))) : undefined;
 const katieSection = template === 'about' ? prose.find((x) => /Katie Fults/.test(x.h2 || '')) : undefined;
 const practiceSection = template === 'about' ? prose[2] : undefined; // "How Will practices" / "Cómo trabaja Will"
 const trainingSection = template === 'about' ? body.find((x) => x.hint === 'cards') : undefined;
 const newsSection = template === 'news' ? body.find((x) => x.hint === 'cards') : undefined;
 const choicesSection = consentMarker ? prose[0] : undefined;
 const firstFaq = body.find((x) => x.hint === 'faq');
+// Hubs (DS 7.23): two consecutive prose sections right before the first [cards] render as paired columns.
+const pairSections: CopySection[] = (() => {
+  if (template !== 'hub') return [];
+  const ci = body.findIndex((x) => x.hint === 'cards');
+  const pair = ci >= 2 ? body.slice(ci - 2, ci) : [];
+  return pair.length === 2 && pair.every((x) => x.hint === 'prose' && x.h2 && !isJumpList(x) && !isRelated(x)) ? pair : [];
+})();
 
 // Hubs list their children (sitemap parent/child): every child must be linked from a card on the hub.
 if (template === 'hub') {
@@ -112,7 +120,7 @@ const noindex = !!(page.noindex || raw.data.noindex);
 
 // ------------------------------------------------------------------ helpers
 const id = (x: CopySection) => (x.h2 ? slugify(x.h2) : undefined);
-const tone = (x: CopySection): 'paper' | 'linen' => (x.hint === 'testimonial' || (template === 'home' && x.hint === 'cards') ? 'linen' : 'paper');
+const tone = (x: CopySection): 'paper' | 'linen' => (x.hint === 'testimonial' || ((template === 'home' || template === 'hub') && x.hint === 'cards') ? 'linen' : 'paper');
 const container = template === 'policy' ? 'prose' : 'default';
 const certFor = (it: { title: string; blocks: Block[] }) => (/2006/.test(it.blocks.map((b) => ('md' in b ? b.md : '')).join(' ')) ? { src: cert2006, alt: s.cert2006Alt } : { src: cert2019, alt: s.cert2019Alt });
 const esc = (x: string) => x.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -141,7 +149,7 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
     </PageHero>
   ) : heroScene ? (
     <PageHero lang={lang} path={path} h1={raw.data.h1} deck={hero?.blocks || []} variant={heroVariant} byline={bylineOn}>
-      <Frame slot="media" kind="scene-3x2" src={scene!} alt="" priority class="hero-scene" />
+      <Frame slot="media" kind="scene-3x2" src={scene!} alt="" priority quality={64} class="hero-scene" />
     </PageHero>
   ) : (
     <PageHero lang={lang} path={path} h1={raw.data.h1} deck={hero?.blocks || []} variant={heroVariant} byline={bylineOn} />
@@ -233,6 +241,21 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
         return <CTABand section={x} lang={lang} />;
       default: {
         // ---------------------------------------------------------- prose sections
+        if (pairSections.length === 2 && x === pairSections[0]) {
+          pairSections.forEach(mark);
+          return (
+            <Section labelledby={sid}>
+              <div class="pair">
+                {pairSections.map((p) => (
+                  <div>
+                    <Heading level={2} size="paired" id={id(p)} html={inline(p.h2!, { lang })} />
+                    <Blocks blocks={p.blocks} lang={lang} />
+                  </div>
+                ))}
+              </div>
+            </Section>
+          );
+        }
         if (x === whySection) {
           return (
             <Section labelledby={sid}>
@@ -374,8 +397,9 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
     display: block;
     margin-bottom: var(--space-2);
     font-family: var(--font-display);
-    font-size: var(--step-1);
-    font-weight: 460;
+    font-size: var(--step-2);
+    font-weight: var(--weight-display-strong);
+    font-variation-settings: "opsz" var(--opsz-heading);
     color: var(--color-heading);
     line-height: var(--leading-heading);
   }
@@ -396,6 +420,19 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
   }
   .contact-facts .sec-head h2 { font-size: var(--step-3); }
   .hero--media:has(.contact-facts) .hero__grid { align-items: start; }
+  .contact-facts .info-list { border-top-color: var(--color-rule-strong); }
+  .contact-facts .info-item { grid-template-columns: minmax(0, 1fr); }
+  .contact-facts .info-item:last-child { border-bottom: 0; padding-bottom: 0; }
+
+  /* Hubs: paired columns (DS 7.23): ink top rule + brass dash list. */
+  .pair { display: grid; gap: var(--space-12) var(--grid-gap); }
+  .pair > div { border-top: var(--border-hairline) solid var(--color-rule-strong); padding-top: var(--space-6); }
+  .pair h2 { margin-bottom: var(--space-4); }
+  .pair ul { list-style: none; padding-left: 0; }
+  .pair li { position: relative; padding-left: var(--space-6); }
+  .pair li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 0.75rem; height: var(--border-link); background: var(--color-marker); }
+  .pair li + li { margin-top: var(--space-3); }
+  @media (min-width: 60em) { .pair { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
   /* Contact: form split (form 7fr / scene 5fr). */
   .form-split { display: grid; gap: var(--space-10) var(--grid-gap); align-items: start; }
@@ -412,7 +449,7 @@ const news = newsSection ? splitH3(newsSection.blocks) : null;
   /* Related practice links. */
   .related-links { border-top: var(--border-hairline) solid var(--color-rule-strong); }
   .related-links li { padding-block: var(--space-4); border-bottom: var(--border-hairline) solid var(--color-rule); max-width: var(--measure); }
-  .related-links a { font-weight: var(--weight-text-strong); }
+  .related-links a { display: inline-flex; align-items: center; min-height: var(--control-height); margin-block: calc(-1 * var(--space-3)); font-weight: var(--weight-text-strong); }
 
   /* About: certificates. */
   .doc-grid { display: grid; gap: var(--grid-gap); margin-top: var(--space-8); }

@@ -118,7 +118,7 @@
       "path": "/criminal-defense/theft/",
       "esPath": "/es/defensa-penal/robo/",
       "title": "Theft",
-      "titleEs": "Robo y hurto",
+      "titleEs": "Robo",
       "intent": "Theft or shoplifting charge: what the charge means in general terms and next steps. No dollar thresholds (C17). Rebuilt past stub length.",
       "primaryCta": "Call (615) 410-7290 — free consultation",
       "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
@@ -195,7 +195,7 @@
       "path": "/criminal-defense/probation-violation/",
       "esPath": "/es/defensa-penal/violacion-de-libertad-condicional/",
       "title": "Probation Violation",
-      "titleEs": "Violación de libertad condicional",
+      "titleEs": "Violación de la libertad condicional",
       "intent": "Probation violation warrant or hearing: urgency, what happens at the hearing, link to family-law effects.",
       "primaryCta": "Call (615) 410-7290 — free consultation",
       "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
@@ -273,7 +273,7 @@
       "path": "/family-law/child-custody/",
       "esPath": "/es/derecho-familiar/custodia/",
       "title": "Child Custody",
-      "titleEs": "Custodia de menores",
+      "titleEs": "Custodia de los hijos",
       "intent": "Parent in a custody dispute: how decisions get made in general terms, what to document, and links to visitation and parenting plans. Drops the risky \"favors the parent who takes custody\" advice (C18).",
       "primaryCta": "Call (615) 410-7290 — free consultation",
       "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
@@ -367,7 +367,7 @@
       "path": "/dcs-case-attorney/",
       "esPath": "/es/abogado-casos-dcs/",
       "title": "DCS Cases",
-      "titleEs": "Casos del DCS",
+      "titleEs": "Casos de DCS",
       "intent": "Parent or guardian contacted by the Department of Children's Services: urgent, calm first steps; the only DCS page in the local market. Gets the missing meta description.",
       "primaryCta": "Call (615) 410-7290 — free consultation",
       "primaryCtaEs": "Llame al (615) 410-7290 — consulta gratuita",
@@ -623,7 +623,7 @@
         },
         {
           "label": "Theft",
-          "labelEs": "Robo y hurto",
+          "labelEs": "Robo",
           "path": "/criminal-defense/theft/",
           "esPath": "/es/defensa-penal/robo/"
         },
@@ -647,7 +647,7 @@
         },
         {
           "label": "Probation Violation",
-          "labelEs": "Violación de libertad condicional",
+          "labelEs": "Violación de la libertad condicional",
           "path": "/criminal-defense/probation-violation/",
           "esPath": "/es/defensa-penal/violacion-de-libertad-condicional/"
         },
@@ -673,7 +673,7 @@
         },
         {
           "label": "Child Custody",
-          "labelEs": "Custodia de menores",
+          "labelEs": "Custodia de los hijos",
           "path": "/family-law/child-custody/",
           "esPath": "/es/derecho-familiar/custodia/"
         },
@@ -703,7 +703,7 @@
         },
         {
           "label": "DCS Cases",
-          "labelEs": "Casos del DCS",
+          "labelEs": "Casos de DCS",
           "path": "/dcs-case-attorney/",
           "esPath": "/es/abogado-casos-dcs/"
         }

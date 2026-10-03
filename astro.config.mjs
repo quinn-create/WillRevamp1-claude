@@ -33,7 +33,8 @@ export default defineConfig({
   integrations: [
     sitemap({
       i18n: { defaultLocale: 'en', locales: { en: 'en-US', es: 'es-US' } },
-      filter: (page) => !/\/_|\/thank-you\/|\/gracias\/|\/404\//.test(page),
+      // noindex pages stay out of the XML sitemap (thank-you, cookie settings and their ES twins, 404s).
+      filter: (page) => !/\/_|\/thank-you\/|\/gracias\/|\/cookie-settings\/|\/configuracion-de-cookies\/|\/404\//.test(page),
       serialize(item) {
         const pair = twins.get(item.url);
         if (pair) {

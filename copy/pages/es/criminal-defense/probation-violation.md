@@ -1,5 +1,5 @@
 ---
-title: "Violación de libertad condicional en Murfreesboro, TN"
+title: "Violación de la libertad condicional en Murfreesboro, TN"
 description: "¿Lo acusan de violar su libertad condicional (probation) en Murfreesboro? Will Fraley defiende estos casos. Consulta gratuita: (615) 410-7290."
 h1: "Abogado por violación de la libertad condicional en Murfreesboro"
 primary_cta: "Llame al (615) 410-7290 — consulta gratuita"

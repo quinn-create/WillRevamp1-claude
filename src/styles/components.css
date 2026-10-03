@@ -196,7 +196,7 @@
 /* ================================================================== breadcrumbs (7.19) */
 .breadcrumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-1); font-size: var(--text-small); }
 .breadcrumbs li { display: inline-flex; align-items: center; gap: var(--space-1); min-height: var(--control-height); }
-.breadcrumbs a { display: inline-flex; align-items: center; min-height: var(--control-height); }
+.breadcrumbs a { display: inline-flex; align-items: center; min-height: var(--control-height); min-width: var(--control-height); }
 .breadcrumbs [aria-current="page"] { color: var(--color-text); }
 .breadcrumbs__sep { width: var(--icon-size-small); height: var(--icon-size-small); color: var(--color-text-muted); }
 .breadcrumbs__back { display: none; width: var(--icon-size-small); height: var(--icon-size-small); }
@@ -225,7 +225,7 @@
   line-height: var(--leading-snug);
 }
 .proof li + li { border-top: var(--border-hairline) solid var(--color-rule); }
-.proof a { letter-spacing: var(--tracking-button); margin-left: 0.35em; }
+.proof a { display: inline-flex; align-items: center; min-height: var(--control-height); margin-block: calc(-1 * var(--space-2)); letter-spacing: var(--tracking-button); margin-left: 0.35em; }
 @media (min-width: 37.5em) {
   .proof { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-6); }
   .proof li:nth-child(2) { border-top: 0; }
@@ -304,6 +304,8 @@
 @media (min-width: 40em) { .card-grid--2, .card-grid--3, .card-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 60em) { .card-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); } }
 @media (min-width: 70em) { .card-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5); } }
+/* Policy pages: cards inside the 44rem prose column stack one per row. */
+.container--prose .card-grid { grid-template-columns: minmax(0, 1fr); }
 .card {
   position: relative;
   display: flex; flex-direction: column;
@@ -531,6 +533,8 @@
 .notice--error > .icon, .notice--error .notice__title { color: var(--color-error); }
 .notice:focus { outline: var(--focus-width) solid var(--focus-ring); outline-offset: var(--focus-offset); }
 .notice ul { padding-left: 1.15em; }
+/* On a linen section the notice keeps its panel. */
+.section--linen .notice { background: var(--color-surface-card); }
 
 /* ================================================================== forms (7.9; A21 wires the form) */
 .form { display: grid; gap: var(--space-6); max-width: var(--container-form); }

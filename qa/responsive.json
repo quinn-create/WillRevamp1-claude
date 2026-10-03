@@ -1,0 +1,6783 @@
+{
+  "generatedAt": "2026-10-03T16:48:24.468Z",
+  "minTarget": 44,
+  "summary": {
+    "pages": 60,
+    "widths": [
+      360,
+      390,
+      768,
+      1280,
+      1920
+    ],
+    "overflowPages": [],
+    "smallTargetCount": 250,
+    "smallTargetsBelow24": 210,
+    "smallTargetsByElement": {
+      "a.tel \"(615) 410-7290\" (142x20)@360": 10,
+      "a \"inbox@willfraleylaw.com\" (195x20)@360": 4,
+      "a.tel \"(615) 410-7290\" (142x20)@390": 10,
+      "a \"inbox@willfraleylaw.com\" (195x20)@390": 4,
+      "a.tel \"(615) 410-7290\" (143x21)@768": 10,
+      "a \"inbox@willfraleylaw.com\" (199x21)@768": 4,
+      "a.tel \"(615) 410-7290\" (153x21)@1280": 10,
+      "a \"inbox@willfraleylaw.com\" (204x21)@1280": 4,
+      "a.tel \"(615) 410-7290\" (153x21)@1920": 10,
+      "a \"inbox@willfraleylaw.com\" (204x21)@1920": 4,
+      "a \"Child custody\" (109x20)@360": 3,
+      "a \"Visitation\" (75x20)@360": 3,
+      "a \"Parenting plan modifications\" (229x20)@360": 3,
+      "a \"Divorce\" (61x20)@360": 1,
+      "a \"Child custody\" (109x20)@390": 3,
+      "a \"Visitation\" (75x20)@390": 3,
+      "a \"Parenting plan modifications\" (229x20)@390": 3,
+      "a \"Divorce\" (61x20)@390": 1,
+      "a \"Child custody\" (109x21)@768": 3,
+      "a \"Visitation\" (77x21)@768": 3,
+      "a \"Parenting plan modifications\" (232x21)@768": 3,
+      "a \"Divorce\" (61x21)@768": 1,
+      "a \"Child custody\" (113x21)@1280": 3,
+      "a \"Visitation\" (77x21)@1280": 3,
+      "a \"Parenting plan modifications\" (237x21)@1280": 3,
+      "a \"Divorce\" (62x21)@1280": 1,
+      "a \"Child custody\" (113x21)@1920": 3,
+      "a \"Visitation\" (77x21)@1920": 3,
+      "a \"Parenting plan modifications\" (237x21)@1920": 3,
+      "a \"Divorce\" (62x21)@1920": 1,
+      "a \"DUI\" (29x44)@360": 6,
+      "a \"DUI\" (29x44)@390": 6,
+      "a \"DUI\" (29x44)@768": 6,
+      "a \"DUI\" (31x44)@1280": 6,
+      "a \"DUI\" (31x44)@1920": 6,
+      "a \"Custodia de los hijos\" (164x20)@360": 3,
+      "a \"Régimen de visitas\" (151x20)@360": 3,
+      "a \"Modificación del plan de crianza\" (252x20)@360": 3,
+      "a \"Divorcio\" (65x20)@360": 1,
+      "a \"Custodia de los hijos\" (164x20)@390": 3,
+      "a \"Régimen de visitas\" (151x20)@390": 3,
+      "a \"Modificación del plan de crianza\" (252x20)@390": 3,
+      "a \"Divorcio\" (65x20)@390": 1,
+      "a \"Custodia de los hijos\" (166x21)@768": 3,
+      "a \"Régimen de visitas\" (152x21)@768": 3,
+      "a \"Modificación del plan de crianza\" (256x21)@768": 3,
+      "a \"Divorcio\" (65x21)@768": 1,
+      "a \"Custodia de los hijos\" (168x21)@1280": 3,
+      "a \"Régimen de visitas\" (154x21)@1280": 3,
+      "a \"Modificación del plan de crianza\" (266x21)@1280": 3,
+      "a \"Divorcio\" (66x21)@1280": 1,
+      "a \"Custodia de los hijos\" (168x21)@1920": 3,
+      "a \"Régimen de visitas\" (154x21)@1920": 3,
+      "a \"Modificación del plan de crianza\" (266x21)@1920": 3,
+      "a \"Divorcio\" (66x21)@1920": 1,
+      "a \"Robo\" (42x44)@360": 2,
+      "a \"Robo\" (42x44)@390": 2,
+      "a \"Robo\" (43x44)@768": 2,
+      "a \"Robo\" (43x44)@1280": 2,
+      "a \"Robo\" (43x44)@1920": 2,
+      "a \"Defensa penal\" (115x20)@360": 1,
+      "a \"Derecho familiar\" (132x20)@360": 1,
+      "a \"Lesiones personales\" (165x20)@360": 1,
+      "a \"Sobre Will Fraley\" (136x20)@360": 1,
+      "a \"Defensa penal\" (115x20)@390": 1,
+      "a \"Derecho familiar\" (132x20)@390": 1,
+      "a \"Lesiones personales\" (165x20)@390": 1,
+      "a \"Sobre Will Fraley\" (136x20)@390": 1,
+      "a \"Defensa penal\" (117x21)@768": 1,
+      "a \"Derecho familiar\" (134x21)@768": 1,
+      "a \"Lesiones personales\" (166x21)@768": 1,
+      "a \"Sobre Will Fraley\" (139x21)@768": 1,
+      "a \"Defensa penal\" (118x21)@1280": 1,
+      "a \"Derecho familiar\" (136x21)@1280": 1,
+      "a \"Lesiones personales\" (167x21)@1280": 1,
+      "a \"Sobre Will Fraley\" (142x21)@1280": 1,
+      "a \"Defensa penal\" (118x21)@1920": 1,
+      "a \"Derecho familiar\" (136x21)@1920": 1,
+      "a \"Lesiones personales\" (167x21)@1920": 1,
+      "a \"Sobre Will Fraley\" (142x21)@1920": 1,
+      "a \"Criminal defense\" (136x20)@360": 1,
+      "a \"Family law\" (83x20)@360": 1,
+      "a \"Personal injury\" (119x20)@360": 1,
+      "a \"About Will Fraley\" (137x20)@360": 1,
+      "a \"Criminal defense\" (136x20)@390": 1,
+      "a \"Family law\" (83x20)@390": 1,
+      "a \"Personal injury\" (119x20)@390": 1,
+      "a \"About Will Fraley\" (137x20)@390": 1,
+      "a \"Criminal defense\" (137x21)@768": 1,
+      "a \"Family law\" (86x21)@768": 1,
+      "a \"Personal injury\" (121x21)@768": 1,
+      "a \"About Will Fraley\" (139x21)@768": 1,
+      "a \"Criminal defense\" (139x21)@1280": 1,
+      "a \"Family law\" (89x21)@1280": 1,
+      "a \"Personal injury\" (122x21)@1280": 1,
+      "a \"About Will Fraley\" (143x21)@1280": 1,
+      "a \"Criminal defense\" (139x21)@1920": 1,
+      "a \"Family law\" (89x21)@1920": 1,
+      "a \"Personal injury\" (122x21)@1920": 1,
+      "a \"About Will Fraley\" (143x21)@1920": 1
+    },
+    "focusObscured": {
+      "fully": 0,
+      "partly": 0,
+      "offscreen": 0
+    },
+    "focusByElement": {},
+    "errors": 0
+  },
+  "results": [
+    {
+      "path": "/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 47,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 47,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 72,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 72,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/404/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 40,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 40,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 65,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 65,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/about/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 45,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 71,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 71,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/accessibility/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 195,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 36,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 195,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 36,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 199,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 35,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 204,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 61,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 204,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 61,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/adoption/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 76,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 76,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/contact-us/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 43,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 43,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 42,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 68,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 68,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/cookie-settings/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 64,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 64,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/criminal-defense/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 78,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 78,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/criminal-defense/domestic-assault/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Child custody\"",
+              "w": 109,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 75,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 229,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Divorce\"",
+              "w": 61,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Child custody\"",
+              "w": 109,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 75,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 229,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Divorce\"",
+              "w": 61,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Child custody\"",
+              "w": 109,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 77,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 232,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Divorce\"",
+              "w": 61,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Child custody\"",
+              "w": 113,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 77,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 237,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Divorce\"",
+              "w": 62,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 79,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Child custody\"",
+              "w": 113,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 77,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 237,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Divorce\"",
+              "w": 62,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 79,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/criminal-defense/drug-crimes/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 76,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 76,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/criminal-defense/dui/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Child custody\"",
+              "w": 109,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 75,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 229,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Child custody\"",
+              "w": 109,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 75,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 229,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Child custody\"",
+              "w": 109,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 77,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 232,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 54,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Child custody\"",
+              "w": 113,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 77,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 237,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 80,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Child custody\"",
+              "w": 113,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 77,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 237,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 80,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/criminal-defense/fraud/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 47,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 73,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 73,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/criminal-defense/probation-violation/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Child custody\"",
+              "w": 109,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 75,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 229,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Child custody\"",
+              "w": 109,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 75,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 229,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Child custody\"",
+              "w": 109,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 77,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 232,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Child custody\"",
+              "w": 113,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 77,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 237,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 78,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Child custody\"",
+              "w": 113,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Visitation\"",
+              "w": 77,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Parenting plan modifications\"",
+              "w": 237,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 78,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/criminal-defense/sex-crimes/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 48,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 48,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 75,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 75,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/criminal-defense/theft/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 79,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 79,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/criminal-defense/violent-crimes/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 79,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 79,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/dcs-case-attorney/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 77,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 77,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 45,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 45,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 45,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/404/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 40,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 40,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/abogado-casos-dcs/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/accesibilidad/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 195,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 36,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 195,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 36,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 199,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 35,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 204,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 35,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 204,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 35,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/adopcion/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/configuracion-de-cookies/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/contacto/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 43,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 43,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 42,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 42,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 42,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/defensa-penal/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/defensa-penal/agresion-domestica/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 164,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 151,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 252,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Divorcio\"",
+              "w": 65,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 164,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 151,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 252,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Divorcio\"",
+              "w": 65,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 166,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 152,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 256,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Divorcio\"",
+              "w": 65,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 168,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 154,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 266,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Divorcio\"",
+              "w": 66,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 168,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 154,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 266,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Divorcio\"",
+              "w": 66,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/defensa-penal/delitos-de-drogas/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            },
+            {
+              "el": "a \"Robo\"",
+              "w": 42,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            },
+            {
+              "el": "a \"Robo\"",
+              "w": 42,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            },
+            {
+              "el": "a \"Robo\"",
+              "w": 43,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            },
+            {
+              "el": "a \"Robo\"",
+              "w": 43,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            },
+            {
+              "el": "a \"Robo\"",
+              "w": 43,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/defensa-penal/delitos-sexuales/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 48,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 48,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/defensa-penal/delitos-violentos/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/defensa-penal/dui/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 164,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 151,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 252,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 164,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 151,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 252,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 166,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 152,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 256,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 54,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 168,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 154,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 266,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 54,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 168,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 154,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 266,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 54,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/defensa-penal/fraude/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Robo\"",
+              "w": 42,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Robo\"",
+              "w": 42,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Robo\"",
+              "w": 43,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 47,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Robo\"",
+              "w": 43,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 47,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Robo\"",
+              "w": 43,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 47,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/defensa-penal/robo/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 53,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/defensa-penal/violacion-de-libertad-condicional/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 164,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 151,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 252,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 164,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 151,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 252,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 166,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 152,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 256,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"DUI\"",
+              "w": 29,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 168,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 154,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 266,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Custodia de los hijos\"",
+              "w": 168,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Régimen de visitas\"",
+              "w": 154,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Modificación del plan de crianza\"",
+              "w": 266,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"DUI\"",
+              "w": 31,
+              "h": 44,
+              "display": "inline-flex",
+              "below24": false
+            }
+          ],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/derecho-familiar/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 55,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 55,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 55,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 55,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 55,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/derecho-familiar/custodia/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/derecho-familiar/divorcio/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/derecho-familiar/modificacion-plan-de-crianza/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/derecho-familiar/paternidad/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/derecho-familiar/visitas/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/en-las-noticias/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/gracias/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 36,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 36,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 35,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 35,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 35,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/lesiones-personales/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/politica-de-privacidad/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 195,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 42,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 195,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 42,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 199,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 41,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 204,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 41,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 204,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 41,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/preguntas-frecuentes/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 76,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 76,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 75,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 75,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 75,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/servicios-legales/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 64,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 64,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 63,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 63,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 63,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/sobre-nosotros/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 45,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 45,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 44,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 44,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 44,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/es/testimonios/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Defensa penal\"",
+              "w": 115,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Derecho familiar\"",
+              "w": 132,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Lesiones personales\"",
+              "w": 165,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Sobre Will Fraley\"",
+              "w": 136,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Defensa penal\"",
+              "w": 115,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Derecho familiar\"",
+              "w": 132,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Lesiones personales\"",
+              "w": 165,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Sobre Will Fraley\"",
+              "w": 136,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Defensa penal\"",
+              "w": 117,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Derecho familiar\"",
+              "w": 134,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Lesiones personales\"",
+              "w": 166,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Sobre Will Fraley\"",
+              "w": 139,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Defensa penal\"",
+              "w": 118,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Derecho familiar\"",
+              "w": 136,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Lesiones personales\"",
+              "w": 167,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Sobre Will Fraley\"",
+              "w": 142,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Defensa penal\"",
+              "w": 118,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Derecho familiar\"",
+              "w": 136,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Lesiones personales\"",
+              "w": 167,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Sobre Will Fraley\"",
+              "w": 142,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/family-law/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 55,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 55,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 55,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 81,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 81,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/family-law/child-custody/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 78,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 78,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/family-law/divorce/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 52,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 78,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 78,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/family-law/parenting-plan-modifications/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 49,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 76,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 76,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/family-law/paternity/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 77,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 77,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/family-law/visitation/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 50,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 51,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 77,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 77,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/faqs/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 76,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 76,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 75,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 101,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 101,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/in-the-news/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 39,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 65,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 65,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/legal-services/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 64,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 64,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 63,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 89,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 89,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/personal-injury/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 46,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 72,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 72,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/privacy-policy/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 195,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 42,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 195,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 142,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 42,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 199,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 41,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 204,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 67,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"inbox@willfraleylaw.com\"",
+              "w": 204,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a.tel \"(615) 410-7290\"",
+              "w": 153,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 67,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/testimonials/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Criminal defense\"",
+              "w": 136,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Family law\"",
+              "w": 83,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Personal injury\"",
+              "w": 119,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"About Will Fraley\"",
+              "w": 137,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Criminal defense\"",
+              "w": 136,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Family law\"",
+              "w": 83,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Personal injury\"",
+              "w": 119,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"About Will Fraley\"",
+              "w": 137,
+              "h": 20,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Criminal defense\"",
+              "w": 137,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Family law\"",
+              "w": 86,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Personal injury\"",
+              "w": 121,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"About Will Fraley\"",
+              "w": 139,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 38,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Criminal defense\"",
+              "w": 139,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Family law\"",
+              "w": 89,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Personal injury\"",
+              "w": 122,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"About Will Fraley\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 64,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [
+            {
+              "el": "a \"Criminal defense\"",
+              "w": 139,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Family law\"",
+              "w": 89,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"Personal injury\"",
+              "w": 122,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            },
+            {
+              "el": "a \"About Will Fraley\"",
+              "w": 143,
+              "h": 21,
+              "display": "inline",
+              "below24": true
+            }
+          ],
+          "focus": {
+            "stops": 64,
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "path": "/thank-you/",
+      "widths": [
+        {
+          "width": 360,
+          "height": 780,
+          "overflow": {
+            "viewport": 360,
+            "scrollWidth": 360,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 36,
+            "issues": []
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": {
+            "viewport": 390,
+            "scrollWidth": 390,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 36,
+            "issues": []
+          }
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "overflow": {
+            "viewport": 768,
+            "scrollWidth": 768,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 35,
+            "issues": []
+          }
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "overflow": {
+            "viewport": 1280,
+            "scrollWidth": 1280,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 61,
+            "issues": []
+          }
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": {
+            "viewport": 1920,
+            "scrollWidth": 1920,
+            "overflowPx": 0,
+            "offenders": []
+          },
+          "smallTargets": [],
+          "focus": {
+            "stops": 61,
+            "issues": []
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -87,11 +87,25 @@ Prior results do not guarantee a similar outcome.
 
 In October 2014, the Daily News Journal (DNJ) ran a business story about Will and his private practice. {fact:F140} [See In the News](/in-the-news/)
 
+[cards]
 ## Visit the office
 
-The office is at 509 W College St, Murfreesboro, TN 37130. {fact:F021} Hours are Monday through Thursday, 9:00 a.m. to 5:00 p.m., and Friday, 9:00 a.m. to 4:00 p.m. {fact:F031,F032}
-
 See what Will handles in [criminal defense](/criminal-defense/), [family law](/family-law/) and [personal injury](/personal-injury/), or browse [all practice areas](/legal-services/).
+
+### Office
+509 W College St, Murfreesboro, TN 37130 {fact:F021}
+
+### Hours
+- Monday–Thursday: 9:00 a.m. – 5:00 p.m. {fact:F031}
+- Friday: 9:00 a.m. – 4:00 p.m. {fact:F032}
+
+## Se habla español
+
+Se habla español. {fact:F092} Spanish-speaking services are available. {fact:F094}
+
+Call the same number, [(615) 410-7290](tel:+16154107290), for a free consultation. {fact:F013,F090} Llame al [(615) 410-7290](tel:+16154107290) para una consulta gratuita. {fact:F013,F090,F092}
+
+[Leer en español](/es/sobre-nosotros/)
 
 [cta-band]
 ## Meet Will before you decide

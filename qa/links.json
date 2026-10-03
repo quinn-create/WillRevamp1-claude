@@ -1,0 +1,980 @@
+{
+  "generatedAt": "2026-10-03T15:06:02.721Z",
+  "pages": 60,
+  "brokenInternal": [],
+  "hashOnlyLinks": [],
+  "oldUrls": [
+    {
+      "path": "/",
+      "ok": true,
+      "status": 200,
+      "final": "/",
+      "hops": 0
+    },
+    {
+      "path": "/?author=1",
+      "ok": true,
+      "status": 200,
+      "final": "/?author=1",
+      "hops": 0
+    },
+    {
+      "path": "/?p=1",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=1",
+      "hops": 0
+    },
+    {
+      "path": "/?p=101",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=101",
+      "hops": 0
+    },
+    {
+      "path": "/?p=102",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=102",
+      "hops": 0
+    },
+    {
+      "path": "/?p=103",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=103",
+      "hops": 0
+    },
+    {
+      "path": "/?p=104",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=104",
+      "hops": 0
+    },
+    {
+      "path": "/?p=105",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=105",
+      "hops": 0
+    },
+    {
+      "path": "/?p=106",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=106",
+      "hops": 0
+    },
+    {
+      "path": "/?p=107",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=107",
+      "hops": 0
+    },
+    {
+      "path": "/?p=108",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=108",
+      "hops": 0
+    },
+    {
+      "path": "/?p=109",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=109",
+      "hops": 0
+    },
+    {
+      "path": "/?p=110",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=110",
+      "hops": 0
+    },
+    {
+      "path": "/?p=111",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=111",
+      "hops": 0
+    },
+    {
+      "path": "/?p=115",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=115",
+      "hops": 0
+    },
+    {
+      "path": "/?p=118",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=118",
+      "hops": 0
+    },
+    {
+      "path": "/?p=135",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=135",
+      "hops": 0
+    },
+    {
+      "path": "/?p=162",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=162",
+      "hops": 0
+    },
+    {
+      "path": "/?p=164",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=164",
+      "hops": 0
+    },
+    {
+      "path": "/?p=46",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=46",
+      "hops": 0
+    },
+    {
+      "path": "/?p=60",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=60",
+      "hops": 0
+    },
+    {
+      "path": "/?p=65",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=65",
+      "hops": 0
+    },
+    {
+      "path": "/?p=89",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=89",
+      "hops": 0
+    },
+    {
+      "path": "/?p=92",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=92",
+      "hops": 0
+    },
+    {
+      "path": "/?p=95",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=95",
+      "hops": 0
+    },
+    {
+      "path": "/?p=97",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=97",
+      "hops": 0
+    },
+    {
+      "path": "/?p=99",
+      "ok": true,
+      "status": 200,
+      "final": "/?p=99",
+      "hops": 0
+    },
+    {
+      "path": "/about/",
+      "ok": true,
+      "status": 200,
+      "final": "/about/",
+      "hops": 0
+    },
+    {
+      "path": "/adoption/",
+      "ok": true,
+      "status": 200,
+      "final": "/adoption/",
+      "hops": 0
+    },
+    {
+      "path": "/blog/",
+      "ok": true,
+      "status": 301,
+      "final": "/",
+      "hops": 1
+    },
+    {
+      "path": "/category/uncategorized/",
+      "ok": true,
+      "status": 301,
+      "final": "/",
+      "hops": 1
+    },
+    {
+      "path": "/child-custody/",
+      "ok": true,
+      "status": 301,
+      "final": "/family-law/child-custody/",
+      "hops": 1
+    },
+    {
+      "path": "/comments/feed/",
+      "ok": true,
+      "status": 301,
+      "final": "/",
+      "hops": 1
+    },
+    {
+      "path": "/contact-us/",
+      "ok": true,
+      "status": 200,
+      "final": "/contact-us/",
+      "hops": 0
+    },
+    {
+      "path": "/contact/",
+      "ok": true,
+      "status": 301,
+      "final": "/contact-us/",
+      "hops": 1
+    },
+    {
+      "path": "/contact/index.html",
+      "ok": true,
+      "status": 301,
+      "final": "/contact-us/",
+      "hops": 1
+    },
+    {
+      "path": "/criminal-defense/",
+      "ok": true,
+      "status": 200,
+      "final": "/criminal-defense/",
+      "hops": 0
+    },
+    {
+      "path": "/criminal-defense/domestic-assault/",
+      "ok": true,
+      "status": 200,
+      "final": "/criminal-defense/domestic-assault/",
+      "hops": 0
+    },
+    {
+      "path": "/criminal-defense/drug-crimes/",
+      "ok": true,
+      "status": 200,
+      "final": "/criminal-defense/drug-crimes/",
+      "hops": 0
+    },
+    {
+      "path": "/criminal-defense/dui/",
+      "ok": true,
+      "status": 200,
+      "final": "/criminal-defense/dui/",
+      "hops": 0
+    },
+    {
+      "path": "/criminal-defense/fraud/",
+      "ok": true,
+      "status": 200,
+      "final": "/criminal-defense/fraud/",
+      "hops": 0
+    },
+    {
+      "path": "/criminal-defense/probation-violation/",
+      "ok": true,
+      "status": 200,
+      "final": "/criminal-defense/probation-violation/",
+      "hops": 0
+    },
+    {
+      "path": "/criminal-defense/sex-crimes/",
+      "ok": true,
+      "status": 200,
+      "final": "/criminal-defense/sex-crimes/",
+      "hops": 0
+    },
+    {
+      "path": "/criminal-defense/theft/",
+      "ok": true,
+      "status": 200,
+      "final": "/criminal-defense/theft/",
+      "hops": 0
+    },
+    {
+      "path": "/criminal-defense/violent-crimes/",
+      "ok": true,
+      "status": 200,
+      "final": "/criminal-defense/violent-crimes/",
+      "hops": 0
+    },
+    {
+      "path": "/dcs-case-attorney/",
+      "ok": true,
+      "status": 200,
+      "final": "/dcs-case-attorney/",
+      "hops": 0
+    },
+    {
+      "path": "/divorce/",
+      "ok": true,
+      "status": 301,
+      "final": "/family-law/divorce/",
+      "hops": 1
+    },
+    {
+      "path": "/domestic-assault/",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/domestic-assault/",
+      "hops": 1
+    },
+    {
+      "path": "/drug-crimes/",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/drug-crimes/",
+      "hops": 1
+    },
+    {
+      "path": "/dui/",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/dui/",
+      "hops": 1
+    },
+    {
+      "path": "/family-law/",
+      "ok": true,
+      "status": 200,
+      "final": "/family-law/",
+      "hops": 0
+    },
+    {
+      "path": "/family-law/child-custody/",
+      "ok": true,
+      "status": 200,
+      "final": "/family-law/child-custody/",
+      "hops": 0
+    },
+    {
+      "path": "/family-law/divorce/",
+      "ok": true,
+      "status": 200,
+      "final": "/family-law/divorce/",
+      "hops": 0
+    },
+    {
+      "path": "/family-law/parenting-plan-modifications/",
+      "ok": true,
+      "status": 200,
+      "final": "/family-law/parenting-plan-modifications/",
+      "hops": 0
+    },
+    {
+      "path": "/family-law/paternity/",
+      "ok": true,
+      "status": 200,
+      "final": "/family-law/paternity/",
+      "hops": 0
+    },
+    {
+      "path": "/family-law/visitation/",
+      "ok": true,
+      "status": 200,
+      "final": "/family-law/visitation/",
+      "hops": 0
+    },
+    {
+      "path": "/faqs/",
+      "ok": true,
+      "status": 200,
+      "final": "/faqs/",
+      "hops": 0
+    },
+    {
+      "path": "/feed/",
+      "ok": true,
+      "status": 301,
+      "final": "/",
+      "hops": 1
+    },
+    {
+      "path": "/fraud/",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/fraud/",
+      "hops": 1
+    },
+    {
+      "path": "/legal-services/",
+      "ok": true,
+      "status": 200,
+      "final": "/legal-services/",
+      "hops": 0
+    },
+    {
+      "path": "/legal-services/criminal-defense/",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/",
+      "hops": 1
+    },
+    {
+      "path": "/legal-services/criminal-defense/index.html",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/",
+      "hops": 1
+    },
+    {
+      "path": "/legal-services/criminal-defense/sex-crimes/",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/sex-crimes/",
+      "hops": 1
+    },
+    {
+      "path": "/legal-services/criminal-defense/violent-crimes/",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/violent-crimes/",
+      "hops": 1
+    },
+    {
+      "path": "/legal-services/family-law/",
+      "ok": true,
+      "status": 301,
+      "final": "/family-law/",
+      "hops": 1
+    },
+    {
+      "path": "/legal-services/family-law/index.html",
+      "ok": true,
+      "status": 301,
+      "final": "/family-law/",
+      "hops": 1
+    },
+    {
+      "path": "/legal-services/personal-injury/",
+      "ok": true,
+      "status": 301,
+      "final": "/personal-injury/",
+      "hops": 1
+    },
+    {
+      "path": "/legal-services/personal-injury/index.html",
+      "ok": true,
+      "status": 301,
+      "final": "/personal-injury/",
+      "hops": 1
+    },
+    {
+      "path": "/news/",
+      "ok": true,
+      "status": 301,
+      "final": "/in-the-news/",
+      "hops": 1
+    },
+    {
+      "path": "/page-sitemap.xml",
+      "ok": true,
+      "status": 301,
+      "final": "/sitemap-index.xml",
+      "hops": 1
+    },
+    {
+      "path": "/page/2/",
+      "ok": true,
+      "status": 301,
+      "final": "/",
+      "hops": 1
+    },
+    {
+      "path": "/parenting-plan-modifications/",
+      "ok": true,
+      "status": 301,
+      "final": "/family-law/parenting-plan-modifications/",
+      "hops": 1
+    },
+    {
+      "path": "/paternity/",
+      "ok": true,
+      "status": 301,
+      "final": "/family-law/paternity/",
+      "hops": 1
+    },
+    {
+      "path": "/personal-injury/",
+      "ok": true,
+      "status": 200,
+      "final": "/personal-injury/",
+      "hops": 0
+    },
+    {
+      "path": "/post-sitemap.xml",
+      "ok": true,
+      "status": 301,
+      "final": "/sitemap-index.xml",
+      "hops": 1
+    },
+    {
+      "path": "/probation-violation/",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/probation-violation/",
+      "hops": 1
+    },
+    {
+      "path": "/sitemap.xml",
+      "ok": true,
+      "status": 301,
+      "final": "/sitemap-index.xml",
+      "hops": 1
+    },
+    {
+      "path": "/sitemap_index.xml",
+      "ok": true,
+      "status": 301,
+      "final": "/sitemap-index.xml",
+      "hops": 1
+    },
+    {
+      "path": "/testimonials/",
+      "ok": true,
+      "status": 200,
+      "final": "/testimonials/",
+      "hops": 0
+    },
+    {
+      "path": "/theft/",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/theft/",
+      "hops": 1
+    },
+    {
+      "path": "/violent-crimes/",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/violent-crimes/",
+      "hops": 1
+    },
+    {
+      "path": "/visitation/",
+      "ok": true,
+      "status": 301,
+      "final": "/family-law/visitation/",
+      "hops": 1
+    },
+    {
+      "path": "/wp-content/uploads/2025/10/Screenshot-2025-10-20-at-6.04.57-PM.png",
+      "ok": true,
+      "status": 301,
+      "final": "/criminal-defense/",
+      "hops": 1
+    },
+    {
+      "path": "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-12.58.05-PM.png",
+      "ok": true,
+      "status": 301,
+      "final": "/legal-services/",
+      "hops": 1
+    },
+    {
+      "path": "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.23.01-PM-1024x842.png",
+      "ok": true,
+      "status": 301,
+      "final": "/family-law/",
+      "hops": 1
+    },
+    {
+      "path": "/wp-content/uploads/2025/10/Screenshot-2025-10-21-at-2.27.41-PM-924x1024.png",
+      "ok": true,
+      "status": 301,
+      "final": "/contact-us/",
+      "hops": 1
+    },
+    {
+      "path": "/wp-content/uploads/2025/10/content-v10-img-attorney.webp",
+      "ok": true,
+      "status": 301,
+      "final": "/about/",
+      "hops": 1
+    },
+    {
+      "path": "/wp-content/uploads/2025/10/mainstage-v1-img.webp",
+      "ok": true,
+      "status": 301,
+      "final": "/",
+      "hops": 1
+    },
+    {
+      "path": "/wp-json/",
+      "ok": true,
+      "status": 301,
+      "final": "/",
+      "hops": 1
+    }
+  ],
+  "oldUrlFailures": [],
+  "external": [
+    {
+      "url": "https://goo.gl/maps/5UGDFjKCfam",
+      "status": 200,
+      "pages": [
+        "/404.html",
+        "/about/",
+        "/accessibility/",
+        "/adoption/",
+        "/contact-us/",
+        "/cookie-settings/",
+        "/criminal-defense/domestic-assault/",
+        "/criminal-defense/drug-crimes/",
+        "/criminal-defense/dui/",
+        "/criminal-defense/fraud/",
+        "/criminal-defense/",
+        "/criminal-defense/probation-violation/",
+        "/criminal-defense/sex-crimes/",
+        "/criminal-defense/theft/",
+        "/criminal-defense/violent-crimes/",
+        "/dcs-case-attorney/",
+        "/es/404/",
+        "/es/abogado-casos-dcs/",
+        "/es/accesibilidad/",
+        "/es/adopcion/",
+        "/es/configuracion-de-cookies/",
+        "/es/contacto/",
+        "/es/defensa-penal/agresion-domestica/",
+        "/es/defensa-penal/delitos-de-drogas/",
+        "/es/defensa-penal/delitos-sexuales/",
+        "/es/defensa-penal/delitos-violentos/",
+        "/es/defensa-penal/dui/",
+        "/es/defensa-penal/fraude/",
+        "/es/defensa-penal/",
+        "/es/defensa-penal/robo/",
+        "/es/defensa-penal/violacion-de-libertad-condicional/",
+        "/es/derecho-familiar/custodia/",
+        "/es/derecho-familiar/divorcio/",
+        "/es/derecho-familiar/",
+        "/es/derecho-familiar/modificacion-plan-de-crianza/",
+        "/es/derecho-familiar/paternidad/",
+        "/es/derecho-familiar/visitas/",
+        "/es/en-las-noticias/",
+        "/es/gracias/",
+        "/es/",
+        "/es/lesiones-personales/",
+        "/es/politica-de-privacidad/",
+        "/es/preguntas-frecuentes/",
+        "/es/servicios-legales/",
+        "/es/sobre-nosotros/",
+        "/es/testimonios/",
+        "/family-law/child-custody/",
+        "/family-law/divorce/",
+        "/family-law/",
+        "/family-law/parenting-plan-modifications/",
+        "/family-law/paternity/",
+        "/family-law/visitation/",
+        "/faqs/",
+        "/in-the-news/",
+        "/",
+        "/legal-services/",
+        "/personal-injury/",
+        "/privacy-policy/",
+        "/testimonials/",
+        "/thank-you/"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/WillFraleyLaw/",
+      "status": 400,
+      "pages": [
+        "/404.html",
+        "/about/",
+        "/accessibility/",
+        "/adoption/",
+        "/contact-us/",
+        "/cookie-settings/",
+        "/criminal-defense/domestic-assault/",
+        "/criminal-defense/drug-crimes/",
+        "/criminal-defense/dui/",
+        "/criminal-defense/fraud/",
+        "/criminal-defense/",
+        "/criminal-defense/probation-violation/",
+        "/criminal-defense/sex-crimes/",
+        "/criminal-defense/theft/",
+        "/criminal-defense/violent-crimes/",
+        "/dcs-case-attorney/",
+        "/es/404/",
+        "/es/abogado-casos-dcs/",
+        "/es/accesibilidad/",
+        "/es/adopcion/",
+        "/es/configuracion-de-cookies/",
+        "/es/contacto/",
+        "/es/defensa-penal/agresion-domestica/",
+        "/es/defensa-penal/delitos-de-drogas/",
+        "/es/defensa-penal/delitos-sexuales/",
+        "/es/defensa-penal/delitos-violentos/",
+        "/es/defensa-penal/dui/",
+        "/es/defensa-penal/fraude/",
+        "/es/defensa-penal/",
+        "/es/defensa-penal/robo/",
+        "/es/defensa-penal/violacion-de-libertad-condicional/",
+        "/es/derecho-familiar/custodia/",
+        "/es/derecho-familiar/divorcio/",
+        "/es/derecho-familiar/",
+        "/es/derecho-familiar/modificacion-plan-de-crianza/",
+        "/es/derecho-familiar/paternidad/",
+        "/es/derecho-familiar/visitas/",
+        "/es/en-las-noticias/",
+        "/es/gracias/",
+        "/es/",
+        "/es/lesiones-personales/",
+        "/es/politica-de-privacidad/",
+        "/es/preguntas-frecuentes/",
+        "/es/servicios-legales/",
+        "/es/sobre-nosotros/",
+        "/es/testimonios/",
+        "/family-law/child-custody/",
+        "/family-law/divorce/",
+        "/family-law/",
+        "/family-law/parenting-plan-modifications/",
+        "/family-law/paternity/",
+        "/family-law/visitation/",
+        "/faqs/",
+        "/in-the-news/",
+        "/",
+        "/legal-services/",
+        "/personal-injury/",
+        "/privacy-policy/",
+        "/testimonials/",
+        "/thank-you/"
+      ]
+    },
+    {
+      "url": "https://www.linkedin.com/in/will-fraley-b745416/",
+      "status": 999,
+      "pages": [
+        "/404.html",
+        "/about/",
+        "/accessibility/",
+        "/adoption/",
+        "/contact-us/",
+        "/cookie-settings/",
+        "/criminal-defense/domestic-assault/",
+        "/criminal-defense/drug-crimes/",
+        "/criminal-defense/dui/",
+        "/criminal-defense/fraud/",
+        "/criminal-defense/",
+        "/criminal-defense/probation-violation/",
+        "/criminal-defense/sex-crimes/",
+        "/criminal-defense/theft/",
+        "/criminal-defense/violent-crimes/",
+        "/dcs-case-attorney/",
+        "/es/404/",
+        "/es/abogado-casos-dcs/",
+        "/es/accesibilidad/",
+        "/es/adopcion/",
+        "/es/configuracion-de-cookies/",
+        "/es/contacto/",
+        "/es/defensa-penal/agresion-domestica/",
+        "/es/defensa-penal/delitos-de-drogas/",
+        "/es/defensa-penal/delitos-sexuales/",
+        "/es/defensa-penal/delitos-violentos/",
+        "/es/defensa-penal/dui/",
+        "/es/defensa-penal/fraude/",
+        "/es/defensa-penal/",
+        "/es/defensa-penal/robo/",
+        "/es/defensa-penal/violacion-de-libertad-condicional/",
+        "/es/derecho-familiar/custodia/",
+        "/es/derecho-familiar/divorcio/",
+        "/es/derecho-familiar/",
+        "/es/derecho-familiar/modificacion-plan-de-crianza/",
+        "/es/derecho-familiar/paternidad/",
+        "/es/derecho-familiar/visitas/",
+        "/es/en-las-noticias/",
+        "/es/gracias/",
+        "/es/",
+        "/es/lesiones-personales/",
+        "/es/politica-de-privacidad/",
+        "/es/preguntas-frecuentes/",
+        "/es/servicios-legales/",
+        "/es/sobre-nosotros/",
+        "/es/testimonios/",
+        "/family-law/child-custody/",
+        "/family-law/divorce/",
+        "/family-law/",
+        "/family-law/parenting-plan-modifications/",
+        "/family-law/paternity/",
+        "/family-law/visitation/",
+        "/faqs/",
+        "/in-the-news/",
+        "/",
+        "/legal-services/",
+        "/personal-injury/",
+        "/privacy-policy/",
+        "/testimonials/",
+        "/thank-you/"
+      ]
+    },
+    {
+      "url": "https://x.com/fraley37",
+      "status": 200,
+      "pages": [
+        "/404.html",
+        "/about/",
+        "/accessibility/",
+        "/adoption/",
+        "/contact-us/",
+        "/cookie-settings/",
+        "/criminal-defense/domestic-assault/",
+        "/criminal-defense/drug-crimes/",
+        "/criminal-defense/dui/",
+        "/criminal-defense/fraud/",
+        "/criminal-defense/",
+        "/criminal-defense/probation-violation/",
+        "/criminal-defense/sex-crimes/",
+        "/criminal-defense/theft/",
+        "/criminal-defense/violent-crimes/",
+        "/dcs-case-attorney/",
+        "/es/404/",
+        "/es/abogado-casos-dcs/",
+        "/es/accesibilidad/",
+        "/es/adopcion/",
+        "/es/configuracion-de-cookies/",
+        "/es/contacto/",
+        "/es/defensa-penal/agresion-domestica/",
+        "/es/defensa-penal/delitos-de-drogas/",
+        "/es/defensa-penal/delitos-sexuales/",
+        "/es/defensa-penal/delitos-violentos/",
+        "/es/defensa-penal/dui/",
+        "/es/defensa-penal/fraude/",
+        "/es/defensa-penal/",
+        "/es/defensa-penal/robo/",
+        "/es/defensa-penal/violacion-de-libertad-condicional/",
+        "/es/derecho-familiar/custodia/",
+        "/es/derecho-familiar/divorcio/",
+        "/es/derecho-familiar/",
+        "/es/derecho-familiar/modificacion-plan-de-crianza/",
+        "/es/derecho-familiar/paternidad/",
+        "/es/derecho-familiar/visitas/",
+        "/es/en-las-noticias/",
+        "/es/gracias/",
+        "/es/",
+        "/es/lesiones-personales/",
+        "/es/politica-de-privacidad/",
+        "/es/preguntas-frecuentes/",
+        "/es/servicios-legales/",
+        "/es/sobre-nosotros/",
+        "/es/testimonios/",
+        "/family-law/child-custody/",
+        "/family-law/divorce/",
+        "/family-law/",
+        "/family-law/parenting-plan-modifications/",
+        "/family-law/paternity/",
+        "/family-law/visitation/",
+        "/faqs/",
+        "/in-the-news/",
+        "/",
+        "/legal-services/",
+        "/personal-injury/",
+        "/privacy-policy/",
+        "/testimonials/",
+        "/thank-you/"
+      ]
+    },
+    {
+      "url": "https://www.avvo.com/attorneys/37130-tn-raymond-fraley-1707380.html",
+      "status": 403,
+      "pages": [
+        "/404.html",
+        "/about/",
+        "/accessibility/",
+        "/adoption/",
+        "/contact-us/",
+        "/cookie-settings/",
+        "/criminal-defense/domestic-assault/",
+        "/criminal-defense/drug-crimes/",
+        "/criminal-defense/dui/",
+        "/criminal-defense/fraud/",
+        "/criminal-defense/",
+        "/criminal-defense/probation-violation/",
+        "/criminal-defense/sex-crimes/",
+        "/criminal-defense/theft/",
+        "/criminal-defense/violent-crimes/",
+        "/dcs-case-attorney/",
+        "/es/404/",
+        "/es/abogado-casos-dcs/",
+        "/es/accesibilidad/",
+        "/es/adopcion/",
+        "/es/configuracion-de-cookies/",
+        "/es/contacto/",
+        "/es/defensa-penal/agresion-domestica/",
+        "/es/defensa-penal/delitos-de-drogas/",
+        "/es/defensa-penal/delitos-sexuales/",
+        "/es/defensa-penal/delitos-violentos/",
+        "/es/defensa-penal/dui/",
+        "/es/defensa-penal/fraude/",
+        "/es/defensa-penal/",
+        "/es/defensa-penal/robo/",
+        "/es/defensa-penal/violacion-de-libertad-condicional/",
+        "/es/derecho-familiar/custodia/",
+        "/es/derecho-familiar/divorcio/",
+        "/es/derecho-familiar/",
+        "/es/derecho-familiar/modificacion-plan-de-crianza/",
+        "/es/derecho-familiar/paternidad/",
+        "/es/derecho-familiar/visitas/",
+        "/es/en-las-noticias/",
+        "/es/gracias/",
+        "/es/",
+        "/es/lesiones-personales/",
+        "/es/politica-de-privacidad/",
+        "/es/preguntas-frecuentes/",
+        "/es/servicios-legales/",
+        "/es/sobre-nosotros/",
+        "/es/testimonios/",
+        "/family-law/child-custody/",
+        "/family-law/divorce/",
+        "/family-law/",
+        "/family-law/parenting-plan-modifications/",
+        "/family-law/paternity/",
+        "/family-law/visitation/",
+        "/faqs/",
+        "/in-the-news/",
+        "/",
+        "/legal-services/",
+        "/personal-injury/",
+        "/privacy-policy/",
+        "/testimonials/",
+        "/thank-you/"
+      ]
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&amp;query=509+W+College+St+Murfreesboro+TN+37130",
+      "status": 200,
+      "pages": [
+        "/contact-us/",
+        "/es/contacto/"
+      ]
+    },
+    {
+      "url": "http://www.dnj.com/story/money/business/2014/10/05/fraley-follows-familys-footsteps-private-practice/16772235/",
+      "status": 403,
+      "pages": [
+        "/es/en-las-noticias/",
+        "/in-the-news/"
+      ]
+    }
+  ]
+}

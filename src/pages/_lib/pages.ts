@@ -228,11 +228,11 @@ const ADDRESS = {
 };
 const SAME_AS = firm.socials.map((s) => s.value);
 
-/** LegalService for the firm + Person for Will Fraley (F011: founder, "Attorney at Law"). No ratings or reviews. */
+/** LegalService (also typed Attorney: REVAMP-BRIEF 5, DECISIONS A04) for the firm + Person for Will Fraley (F011: founder, "Attorney at Law"). No ratings or reviews. */
 export function firmNodes(): Record<string, unknown>[] {
   return [
     {
-      '@type': 'LegalService',
+      '@type': ['LegalService', 'Attorney'],
       '@id': FIRM_ID,
       inLanguage: undefined,
       name: firm.name.value,
@@ -286,8 +286,10 @@ export function pageJsonLd({ pg, copy, lang, path, template }: LdInput): { pageT
       areaServed: AREA_SERVED,
     });
   }
-  // FAQPage wherever the page has an FAQ section.
-  const faqs = copy.sections.filter((s) => s.hint === 'faq').flatMap((s) => splitH3(s.blocks).items);
+  // FAQPage on /faqs/ and its ES twin only (REVAMP-BRIEF 5, DECISIONS A04, DESIGN-SYSTEM FAQ). Other pages keep
+  // their visible FAQ accordions without the structured data.
+  const FAQ_PATHS = new Set(['/faqs/', '/es/preguntas-frecuentes/']);
+  const faqs = FAQ_PATHS.has(path) ? copy.sections.filter((s) => s.hint === 'faq').flatMap((s) => splitH3(s.blocks).items) : [];
   if (faqs.length) {
     nodes.push({
       '@type': 'FAQPage',

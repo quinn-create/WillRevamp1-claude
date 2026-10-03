@@ -1,0 +1,25 @@
+PASS  tools/check.mjs hash matches plan/CHECK-HASH
+PASS  dist/ exists
+PASS  no dev-only /_components page in dist
+PASS  page rules on 60 pages (lang, one h1, title, description, canonical, hreflang, img dims+alt, no href=#, tel, law rules, legal line)
+PASS  shipped JS ≤ 50 KB gzipped (tracking off) — 3.3 KB
+PASS  0 banned phrases / forbidden strings in src/
+PASS  no secrets in src/, dist/, site.config.json
+PASS  ≤ 2 font families — newsreader, public sans
+PASS  no Google Fonts / external font CDN at runtime
+PASS  plan/sitemap.json exists
+PASS  every SITEMAP page built in EN and ES
+PASS  _redirects exists
+PASS  every old URL is 200 or 301 -> 200 (89)
+PASS  _redirects normalizes www
+PASS  _headers with HSTS, nosniff, Referrer-Policy, Permissions-Policy, CSP
+PASS  robots.txt references the sitemap
+PASS  XML sitemap with hreflang alternates
+PASS  og:image on every page and the file exists
+PASS  favicon set
+PASS  404 page
+PASS  modern image formats shipped (AVIF/WebP)
+PASS  legal pages show a last-reviewed date
+PASS  consent manager present (data-consent / #…consent… markup)
+
+GATE PASSED — final

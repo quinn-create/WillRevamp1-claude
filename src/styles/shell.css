@@ -18,7 +18,7 @@
   box-shadow: 0 var(--border-hairline) 0 var(--hairline-header); /* static hairline, no scroll animation */
 }
 .header-inner { height: 100%; display: flex; align-items: center; gap: var(--header-gap-xs); }
-.brand { display: block; flex: none; border-radius: var(--radius-focus); line-height: 0; }
+.brand { display: flex; align-items: center; flex: none; min-height: var(--control-height); border-radius: var(--radius-focus); line-height: 0; }
 .brand .logo img { width: var(--logo-width-phone-xs); height: auto; }
 @media (min-width: 22.5em) { .brand .logo img { width: var(--logo-width-phone); } .header-inner { gap: var(--header-gap-phone); } }
 @media (min-width: 37.5em) { .brand .logo img { width: var(--logo-width-tablet); } .header-inner { gap: var(--space-4); } }
@@ -83,7 +83,7 @@
 /* Primary nav (≥ 76em) */
 .nav-primary { display: none; margin-left: auto; }
 @media (min-width: 76em) { .nav-primary { display: block; } .header-actions { margin-left: var(--space-1); gap: var(--space-2); } }
-.nav-primary > ul { display: flex; align-items: center; gap: var(--space-1); }
+.nav-primary > ul { display: flex; align-items: center; gap: 0; } /* .nav-link's inline padding separates the items */
 .nav-item { position: relative; display: flex; align-items: center; }
 .nav-link {
   display: inline-flex; align-items: center;
@@ -115,7 +115,7 @@
 .nav-link[aria-current]::after { transform: scaleX(1); background: var(--color-marker); }
 .nav-chev {
   display: inline-flex; align-items: center; justify-content: center;
-  width: calc(var(--control-height) - var(--space-3)); height: var(--control-height);
+  width: var(--control-height); height: var(--control-height); /* 44 × 44 target (DS 7.5, 12.4) */
   padding: 0;
   border: 0;
   border-radius: var(--radius);
@@ -249,14 +249,14 @@ body:has(.menu-dialog[open]) .callbar { display: none; }
 .callbar:hover { text-decoration: underline; }
 .callbar:focus-visible { outline: var(--focus-width) solid var(--focus-ring-on-fill); outline-offset: var(--focus-offset-inset); border-radius: 0; }
 .callbar > span { white-space: nowrap; }
-.callbar .icon { width: var(--icon-size-small); height: var(--icon-size-small); }
+.callbar .icon { flex: none; width: var(--icon-size-small); height: var(--icon-size-small); }
 .callbar__note { font-weight: var(--weight-text); }
 .callbar__note::before { content: "· "; }
 @media (max-width: 23.4em) { .callbar__note { display: none; } }
+@media (max-width: 25.49em) { .callbar:lang(es) .callbar__note { display: none; } } /* the longer ES note squeezes the icon out */
 @media (min-width: 37.5em) { .callbar:not(.callbar--specimen) { display: none; } }
 @media (max-width: 37.49em) {
   html { scroll-padding-bottom: calc(var(--callbar-height) + var(--space-4)); }
-  .site-footer { padding-bottom: calc(var(--space-10) + var(--callbar-height) + env(safe-area-inset-bottom)); }
 }
 
 /* ================================================================== footer (7.18) */
@@ -308,16 +308,18 @@ body:has(.menu-dialog[open]) .callbar { display: none; }
 .hours div:last-child { border-bottom: var(--border-hairline) solid var(--color-rule-inverse); }
 .hours dt { color: var(--color-on-inverse); font-weight: var(--weight-text-strong); }
 .hours dd { margin: 0; font-variant-numeric: tabular-nums lining-nums; }
-.footer-links a { display: inline-flex; align-items: center; min-height: var(--control-height); text-decoration: none; }
+.footer-links a { display: inline-flex; align-items: center; min-height: var(--control-height); min-width: var(--control-height); text-decoration: none; }
 .footer-links a:hover { text-decoration: underline; }
 .footer-links .lang-toggle { min-width: 0; padding-inline: 0; font-size: var(--text-small); }
 .footer-bottom { margin-top: clamp(var(--space-12), 6vw, var(--space-16)); padding-top: var(--space-6); border-top: var(--border-hairline) solid var(--color-rule-inverse); display: grid; gap: var(--space-4); }
 .footer-social { display: flex; flex-wrap: wrap; gap: 0 var(--space-5); }
-.footer-social a { display: inline-flex; align-items: center; min-height: var(--control-height); }
+.footer-social a { display: inline-flex; align-items: center; justify-content: center; min-height: var(--control-height); min-width: var(--control-height); }
 .footer-legal { display: grid; gap: var(--space-3); font-size: var(--text-fine); }
 .footer-legal__line { max-width: 62rem; color: var(--color-on-inverse); }
 .footer-legal__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-5); }
 .footer-cookie { display: inline-flex; align-items: center; min-height: var(--control-height); }
+/* Phones: reserve room for the fixed call bar. After the base .site-footer rule so it wins the cascade. */
+@media (max-width: 37.49em) { .site-footer { padding-bottom: calc(var(--space-10) + var(--callbar-height) + env(safe-area-inset-bottom)); } }
 
 /* ================================================================== 404 + thank-you */
 .hero--status .status-icon { width: var(--space-12); height: var(--space-12); color: var(--color-success); margin-bottom: var(--space-5); }

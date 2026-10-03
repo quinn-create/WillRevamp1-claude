@@ -27,7 +27,7 @@ Will se mudó a Murfreesboro en 1992 para estudiar en Middle Tennessee State Uni
 
 > "Baseball is the greatest game, and discipline is the key to life." {fact:F055}
 
-En español: «El béisbol es el mejor juego, y la disciplina es la clave de la vida». {fact:F055}
+En español: “El béisbol es el mejor juego, y la disciplina es la clave de la vida”. {fact:F055}
 
 Originario de Tennessee, Will llegó a querer a Murfreesboro. La hizo su hogar, y el lugar donde abriría su despacho privado. {fact:F051}
 
@@ -91,11 +91,25 @@ Los resultados anteriores no garantizan un resultado similar.
 
 En octubre de 2014, el Daily News Journal (DNJ) publicó un artículo de negocios sobre Will y su despacho privado. {fact:F140} [Vea En las noticias](/es/en-las-noticias/)
 
+[cards]
 ## Visite la oficina
 
-La oficina está en 509 W College St, Murfreesboro, TN 37130. {fact:F021} El horario es de lunes a jueves, de 9:00 a. m. a 5:00 p. m., y los viernes, de 9:00 a. m. a 4:00 p. m. {fact:F031,F032}
-
 Vea qué casos lleva Will en [defensa penal](/es/defensa-penal/), [derecho familiar](/es/derecho-familiar/) y [lesiones personales](/es/lesiones-personales/), o consulte [todas las áreas de práctica](/es/servicios-legales/).
+
+### Oficina
+509 W College St, Murfreesboro, TN 37130 {fact:F021}
+
+### Horario
+- Lunes a jueves: 9:00 a. m. – 5:00 p. m. {fact:F031}
+- Viernes: 9:00 a. m. – 4:00 p. m. {fact:F032}
+
+## Atención en español
+
+Se habla español. {fact:F092} Hay servicios disponibles en español. {fact:F094}
+
+Llame al [(615) 410-7290](tel:+16154107290) para una consulta gratuita. {fact:F013,F090,F092}
+
+[Read in English](/about/)
 
 [cta-band]
 ## Conozca a Will antes de decidir

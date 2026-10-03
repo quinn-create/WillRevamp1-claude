@@ -1,0 +1,104 @@
+PASS  [en] off state: form renders
+PASS  [en] off state: no action, no submit button
+PASS  [en] off state: fields disabled (fieldset disabled)
+PASS  [en] off state: note with tel: and mailto:
+PASS  [en] off state: no access key, no Web3Forms or Turnstile reference
+PASS  [en] off state: non-confidentiality notice inside the form
+PASS  [es] off state: form renders
+PASS  [es] off state: no action, no submit button
+PASS  [es] off state: fields disabled (fieldset disabled)
+PASS  [es] off state: note with tel: and mailto:
+PASS  [es] off state: no access key, no Web3Forms or Turnstile reference
+PASS  [es] off state: non-confidentiality notice inside the form
+building with a dummy Web3Forms key …
+PASS  site.config.json restored with empty keys
+PASS  form script shipped (file or inline) on the contact page  (inline)
+PASS  form script absent from pages without the form
+PASS  [en] Turnstile script absent
+PASS  [en] form has the Web3Forms action and the dummy key
+PASS  [en] non-confidentiality notice directly above Submit
+PASS  [en] empty submit: specific errors on first, last, phone  ({"first":"Enter your first name.","last":"Enter your last name.","phone":"Enter your phone number so the office can call you back.","email":"","message":""})
+PASS  [en] empty submit: optional fields not flagged
+PASS  [en] empty submit: error summary shown, focused, links to fields  ({"shown":true,"focused":true,"links":["#cf-first","#cf-last","#cf-phone"]})
+PASS  [en] empty submit: aria-invalid on the three fields
+PASS  [en] empty submit: no request sent
+PASS  [en] blur: invalid email flagged with specific copy
+PASS  [en] input: error clears when fixed
+PASS  [en] blur: short phone flagged
+PASS  [en] time-trap: submit < 3 s rejected
+PASS  [en] honeypot filled: rejected
+PASS  [en] endpoint failure: error notice with phone, message kept, button re-enabled  ({"shown":true,"reason":true,"tel":true,"kept":"Test message from tools/form-test.mjs","enabled":true})
+PASS  [en] endpoint failure: one request made
+PASS  [en] success state replaces the form  ({"formHidden":true,"focused":true})
+PASS  [en] reaches the thank-you page (/thank-you/)  (http://127.0.0.1:41251/thank-you/)
+PASS  [en] one POST to Web3Forms with Accept: application/json
+PASS  [en] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field  ({"access_key":"00000000-0000-4000-8000-00000000a21f","first_name":"Maria","last_name":"Lopez","name":"Maria Lopez","email":"maria@example.com","phone":"(615) 555-0100","best_time":"Morning","new_client":"Yes, I may be a new client","message":"Test message from tools/form-test.mjs","subject":"New message from willfraleylaw.com","language":"en","botcheck":""})
+PASS  [en] no page errors
+PASS  [es] Turnstile script absent
+PASS  [es] form has the Web3Forms action and the dummy key
+PASS  [es] non-confidentiality notice directly above Submit
+PASS  [es] empty submit: specific errors on first, last, phone  ({"first":"Escriba su nombre.","last":"Escriba su apellido.","phone":"Escriba su número de teléfono para que la oficina pueda llamarle.","email":"","message":""})
+PASS  [es] empty submit: optional fields not flagged
+PASS  [es] empty submit: error summary shown, focused, links to fields  ({"shown":true,"focused":true,"links":["#cf-first","#cf-last","#cf-phone"]})
+PASS  [es] empty submit: aria-invalid on the three fields
+PASS  [es] empty submit: no request sent
+PASS  [es] blur: invalid email flagged with specific copy
+PASS  [es] input: error clears when fixed
+PASS  [es] blur: short phone flagged
+PASS  [es] time-trap: submit < 3 s rejected
+PASS  [es] honeypot filled: rejected
+PASS  [es] endpoint failure: error notice with phone, message kept, button re-enabled  ({"shown":true,"reason":true,"tel":true,"kept":"Test message from tools/form-test.mjs","enabled":true})
+PASS  [es] endpoint failure: one request made
+PASS  [es] success state replaces the form  ({"formHidden":true,"focused":true})
+PASS  [es] reaches the thank-you page (/es/gracias/)  (http://127.0.0.1:41251/es/gracias/)
+PASS  [es] one POST to Web3Forms with Accept: application/json
+PASS  [es] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field  ({"access_key":"00000000-0000-4000-8000-00000000a21f","first_name":"Maria","last_name":"Lopez","name":"Maria Lopez","email":"maria@example.com","phone":"(615) 555-0100","best_time":"Por la mañana","new_client":"Sí, podría ser un cliente nuevo","message":"Test message from tools/form-test.mjs","subject":"Nuevo mensaje desde willfraleylaw.com (español)","language":"es","botcheck":""})
+PASS  [es] no page errors
+building with a dummy Web3Forms key + Turnstile test site key …
+PASS  site.config.json restored with empty keys
+PASS  [en turnstile] Turnstile script loaded
+PASS  [en turnstile] form has the Web3Forms action and the dummy key
+PASS  [en turnstile] non-confidentiality notice directly above Submit
+PASS  [en turnstile] empty submit: specific errors on first, last, phone  ({"first":"Enter your first name.","last":"Enter your last name.","phone":"Enter your phone number so the office can call you back.","email":"","message":""})
+PASS  [en turnstile] empty submit: optional fields not flagged
+PASS  [en turnstile] empty submit: error summary shown, focused, links to fields  ({"shown":true,"focused":true,"links":["#cf-first","#cf-last","#cf-phone"]})
+PASS  [en turnstile] empty submit: aria-invalid on the three fields
+PASS  [en turnstile] empty submit: no request sent
+PASS  [en turnstile] blur: invalid email flagged with specific copy
+PASS  [en turnstile] input: error clears when fixed
+PASS  [en turnstile] blur: short phone flagged
+PASS  [en turnstile] time-trap: submit < 3 s rejected
+PASS  [en turnstile] honeypot filled: rejected
+PASS  [en turnstile] Turnstile: submit without a token held back
+PASS  [en turnstile] endpoint failure: error notice with phone, message kept, button re-enabled  ({"shown":true,"reason":true,"tel":true,"kept":"Test message from tools/form-test.mjs","enabled":true})
+PASS  [en turnstile] endpoint failure: one request made
+PASS  [en turnstile] success state replaces the form  ({"formHidden":true,"focused":true})
+PASS  [en turnstile] reaches the thank-you page (/thank-you/)  (http://127.0.0.1:44035/thank-you/)
+PASS  [en turnstile] one POST to Web3Forms with Accept: application/json
+PASS  [en turnstile] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field  ({"access_key":"00000000-0000-4000-8000-00000000a21f","first_name":"Maria","last_name":"Lopez","name":"Maria Lopez","email":"maria@example.com","phone":"(615) 555-0100","best_time":"Morning","new_client":"Yes, I may be a new client","message":"Test message from tools/form-test.mjs","subject":"New message from willfraleylaw.com","language":"en","botcheck":""})
+PASS  [en turnstile] payload carries the Turnstile token
+PASS  [en turnstile] no page errors
+PASS  [es turnstile] Turnstile script loaded
+PASS  [es turnstile] form has the Web3Forms action and the dummy key
+PASS  [es turnstile] non-confidentiality notice directly above Submit
+PASS  [es turnstile] empty submit: specific errors on first, last, phone  ({"first":"Escriba su nombre.","last":"Escriba su apellido.","phone":"Escriba su número de teléfono para que la oficina pueda llamarle.","email":"","message":""})
+PASS  [es turnstile] empty submit: optional fields not flagged
+PASS  [es turnstile] empty submit: error summary shown, focused, links to fields  ({"shown":true,"focused":true,"links":["#cf-first","#cf-last","#cf-phone"]})
+PASS  [es turnstile] empty submit: aria-invalid on the three fields
+PASS  [es turnstile] empty submit: no request sent
+PASS  [es turnstile] blur: invalid email flagged with specific copy
+PASS  [es turnstile] input: error clears when fixed
+PASS  [es turnstile] blur: short phone flagged
+PASS  [es turnstile] time-trap: submit < 3 s rejected
+PASS  [es turnstile] honeypot filled: rejected
+PASS  [es turnstile] Turnstile: submit without a token held back
+PASS  [es turnstile] endpoint failure: error notice with phone, message kept, button re-enabled  ({"shown":true,"reason":true,"tel":true,"kept":"Test message from tools/form-test.mjs","enabled":true})
+PASS  [es turnstile] endpoint failure: one request made
+PASS  [es turnstile] success state replaces the form  ({"formHidden":true,"focused":true})
+PASS  [es turnstile] reaches the thank-you page (/es/gracias/)  (http://127.0.0.1:44035/es/gracias/)
+PASS  [es turnstile] one POST to Web3Forms with Accept: application/json
+PASS  [es turnstile] payload: dummy key, all 7 fields, combined name, language, empty honeypot, no redirect field  ({"access_key":"00000000-0000-4000-8000-00000000a21f","first_name":"Maria","last_name":"Lopez","name":"Maria Lopez","email":"maria@example.com","phone":"(615) 555-0100","best_time":"Por la mañana","new_client":"Sí, podría ser un cliente nuevo","message":"Test message from tools/form-test.mjs","subject":"Nuevo mensaje desde willfraleylaw.com (español)","language":"es","botcheck":""})
+PASS  [es turnstile] payload carries the Turnstile token
+PASS  [es turnstile] no page errors
+
+ALL PASS — 100 assertions

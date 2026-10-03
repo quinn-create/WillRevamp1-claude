@@ -1,7 +1,8 @@
 ---
 // [cards] / [cards: N] from a copy section. Each "### item" becomes a card; its first link paragraph becomes the
 // whole-card link. Items with no link become static cards; a set of contact facts (Phone / Email / Office /
-// Hours and their Spanish names) becomes an info list. Blocks after a card's link render below the grid.
+// Hours and their Spanish names) becomes an info list that keeps every block of each item (links included).
+// Blocks after a card's link render below the grid (card variant only).
 import { splitH3, type Section, type Block } from '../lib/copy';
 import type { Lang } from '../lib/site';
 import SectionHead from './SectionHead.astro';
@@ -30,11 +31,11 @@ const cols = n >= 4 ? 4 : n === 2 ? 2 : 3;
   {!headless && section.h2 && <SectionHead h2={section.h2} eyebrow={eyebrow} lang={lang} />}
   {intro.length > 0 && <Blocks blocks={intro} lang={lang} class="sec-intro" />}
   {asInfo ? (
-    <InfoList items={cards.map((c) => ({ title: c.title, blocks: c.blocks }))} lang={lang} />
+    <InfoList items={items.map((it) => ({ title: it.title, blocks: it.blocks }))} lang={lang} />
   ) : (
     <ul class:list={['card-grid', `card-grid--${cols}`]} role="list">
       {cards.map((c) => <ServiceCard title={c.title} blocks={c.blocks} link={c.link} lang={lang} size={cols === 4 ? 'compact' : 'default'} />)}
     </ul>
   )}
-  {after.length > 0 && <Blocks blocks={after} lang={lang} class="sec-after" />}
+  {!asInfo && after.length > 0 && <Blocks blocks={after} lang={lang} class="sec-after" />}
 </div>
