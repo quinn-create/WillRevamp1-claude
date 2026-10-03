@@ -1,0 +1,15 @@
+---
+// English pages (A20 P400): every plan/sitemap.json page with publish !== false, except the pages that have their
+// own route (/404/ → src/pages/404.astro, /thank-you/ → src/pages/thank-you.astro). /blog/ is built only when
+// site.config.json blog.enabled is true. Rendered from copy/pages/<slug>.md by _templates/PageView.astro.
+import PageView from './_templates/PageView.astro';
+import { routedPages, restParam } from './_lib/pages';
+import type { SitemapPage } from '../lib/site';
+
+export function getStaticPaths() {
+  return routedPages().map((page) => ({ params: { slug: restParam(page.path) }, props: { page } }));
+}
+interface Props { page: SitemapPage }
+const { page } = Astro.props;
+---
+<PageView page={page} lang="en" />

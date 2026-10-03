@@ -1,0 +1,47 @@
+---
+// [testimonial] section for the page templates. Same markup and classes as A19's Testimonial.astro, plus two things
+// the pages need: lines the copy puts before the quote stay before it ("Testimonio publicado en inglés:"), and the
+// verbatim quotes (published in English) carry lang="en" on Spanish pages, as does a quoted pull line.
+// layout "split": heading aside + quote main; `pullAside` moves the bold pull line under the heading (Testimonials).
+import { parseQuote, smart, type Section, type Block } from '../../lib/copy';
+import type { Lang } from '../../lib/site';
+import { t } from '../../lib/i18n';
+import SectionHead from '../../components/SectionHead.astro';
+import Blocks from '../../components/Blocks.astro';
+import Icon from '../../components/Icon.astro';
+interface Props { section: Section; lang: Lang; pullAside?: boolean }
+const { section, lang, pullAside = false } = Astro.props;
+const ui = t(lang);
+const qLang = lang === 'es' ? 'en' : undefined;
+const first = section.blocks.findIndex((b) => b.type === 'quote');
+const before = first > 0 ? section.blocks.slice(0, first) : [];
+const quotes = section.blocks.filter((b): b is Extract<Block, { type: 'quote' }> => b.type === 'quote').map((b) => parseQuote(b.md));
+const after = first >= 0 ? section.blocks.slice(first).filter((b) => b.type !== 'quote') : section.blocks;
+const isPull = (b: Block) => b.type === 'p' && /^\*\*["“][\s\S]*["”]\*\*$/.test(b.md.trim());
+// Open the quote inside the bold run with a typographic mark (the shared smart-quote pass reads `**"` as a closing quote).
+const pull = before.filter(isPull).map((b) => ({ ...b, md: (b as Extract<Block, { type: 'p' }>).md.replace(/^\*\*"/, '**“') }) as Block);
+const lead = before.filter((b) => !isPull(b));
+const DISC = /Prior results do not guarantee|Los resultados anteriores no garantizan/i;
+const disclaimer = after.filter((b) => b.type === 'p' && DISC.test(b.md));
+const notes = after.filter((b) => !disclaimer.includes(b));
+const unfinished = (s: string) => !/[.!?…”"')]\s*$/.test(s.trim());
+---
+<div class="testimonial split">
+  <div class="split__aside">
+    {section.h2 && <SectionHead h2={section.h2} eyebrow={ui.testimonial} lang={lang} />}
+    {pullAside && pull.length > 0 && <div lang={qLang}><Blocks blocks={pull} lang={lang} class="testimonial__pull" /></div>}
+  </div>
+  <div class="split__main">
+    {lead.length > 0 && <Blocks blocks={lead} lang={lang} class="testimonial__lead" />}
+    {!pullAside && pull.length > 0 && <div lang={qLang}><Blocks blocks={pull} lang={lang} class="testimonial__pull" /></div>}
+    {quotes.map((q) => (
+      <figure class="quote" lang={qLang}>
+        <Icon name="quote" class="quote__mark" />
+        <blockquote><p>{smart(q.text.trim())}{unfinished(q.text) && <span class="quote__omit" title={ui.quoteOmitted} lang={lang === 'es' ? 'es' : undefined}>&nbsp;…</span>}</p></blockquote>
+        {q.by && <figcaption>— {q.by}</figcaption>}
+      </figure>
+    ))}
+    {disclaimer.length > 0 ? <Blocks blocks={disclaimer} lang={lang} class="fineprint disclaimer" /> : <p class="fineprint disclaimer">{ui.resultsDisclaimer}</p>}
+    {notes.length > 0 && <Blocks blocks={notes} lang={lang} class="testimonial__after" />}
+  </div>
+</div>

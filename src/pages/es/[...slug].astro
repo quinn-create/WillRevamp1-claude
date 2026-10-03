@@ -1,0 +1,16 @@
+---
+// Spanish pages (A20 P400): the same pages as src/pages/[...slug].astro at their esPath from plan/sitemap.json,
+// rendered from copy/pages/es/<slug>.md. /es/gracias/ and /es/404/ have their own route files.
+import PageView from '../_templates/PageView.astro';
+import { routedPages, restParam } from '../_lib/pages';
+import type { SitemapPage } from '../../lib/site';
+
+export function getStaticPaths() {
+  return routedPages()
+    .filter((page) => !!page.esPath)
+    .map((page) => ({ params: { slug: restParam(page.esPath!, '/es') }, props: { page } }));
+}
+interface Props { page: SitemapPage }
+const { page } = Astro.props;
+---
+<PageView page={page} lang="es" />

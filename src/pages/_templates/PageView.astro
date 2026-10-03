@@ -1,0 +1,428 @@
+---
+// A20 P400 page renderer: one sitemap page in one language, rendered from its copy file through A19's components.
+// The template (DESIGN-SYSTEM section 10) picks the hero and a few page-specific treatments; every copy section is
+// rendered in copy order, and the build fails if any section is left unrendered. Ends with the CTA band.
+import type { ImageMetadata } from 'astro';
+import Site from '../../layouts/Site.astro';
+import PageHero from '../../components/PageHero.astro';
+import Frame from '../../components/Frame.astro';
+import Image from '../../components/Image.astro';
+import Section from '../../components/Section.astro';
+import SectionHead from '../../components/SectionHead.astro';
+import Split from '../../components/Split.astro';
+import Blocks from '../../components/Blocks.astro';
+import ProofStrip from '../../components/ProofStrip.astro';
+import CardGrid from '../../components/CardGrid.astro';
+import Steps from '../../components/Steps.astro';
+import FAQ from '../../components/FAQ.astro';
+import Quotes from './Quotes.astro';
+import Stats from '../../components/Stats.astro';
+import CTABand from '../../components/CTABand.astro';
+import SpanishPanel from '../../components/SpanishPanel.astro';
+import NewsItem from '../../components/NewsItem.astro';
+import DocumentFigure from '../../components/DocumentFigure.astro';
+import Notice from '../../components/Notice.astro';
+import Icon from '../../components/Icon.astro';
+import { loadCopy, inline, plain, slugify, splitH3, type Block, type Section as CopySection } from '../../lib/copy';
+import { firm, pathIn, type Lang, type SitemapPage } from '../../lib/site';
+import { t } from '../../lib/i18n';
+import { templateOf, sceneFor, childrenOf, derivativesOnly, filterSection, pageJsonLd, LAST_REVIEWED, formatDate, findDate } from '../_lib/pages';
+import { S } from '../_lib/strings';
+import willDeskSrc from '../../../inventory/assets/content-v1-img.webp'; // IMG03
+import willDoorSrc from '../../../inventory/assets/content-v10-img-attorney.webp'; // IMG02
+import katieSrc from '../../../inventory/assets/unnamed-56.jpg'; // IMG05
+import cert2019Src from '../../../inventory/assets/11.webp'; // IMG06
+import cert2006Src from '../../../inventory/assets/12.webp'; // IMG07
+
+const willDesk = derivativesOnly(willDeskSrc);
+const willDoor = derivativesOnly(willDoorSrc);
+const katie = derivativesOnly(katieSrc);
+const cert2019 = derivativesOnly(cert2019Src);
+const cert2006 = derivativesOnly(cert2006Src);
+
+interface Props { page: SitemapPage; lang: Lang }
+const { page, lang } = Astro.props;
+const path = pathIn(page, lang);
+const enSlug = page.path === '/' ? 'index' : page.path.replace(/^\/|\/$/g, '');
+const raw = loadCopy(enSlug, lang);
+const template = templateOf(page, raw);
+const ui = t(lang);
+const s = S(lang);
+
+// ------------------------------------------------------------------ copy → sections
+// Vendor directives follow site.config.json; {{last_reviewed}} lines become the policy hero's reviewed date;
+// the [consent-controls] directive (it precedes "## Your choices" in the copy) moves into that section.
+const REVIEWED = /\{\{\s*last_reviewed\s*\}\}/;
+let consentMarker = false;
+const sections: CopySection[] = raw.sections.map(filterSection).map((sec) => ({
+  ...sec,
+  blocks: sec.blocks.filter((b) => {
+    if (b.type === 'p' && REVIEWED.test(b.md)) return false;
+    if (b.type === 'directive' && b.name === 'consent-controls') { consentMarker = true; return false; }
+    return true;
+  }),
+}));
+const hasReviewed = raw.sections.some((x) => x.blocks.some((b) => b.type === 'p' && REVIEWED.test(b.md)));
+const reviewedLabel = raw.sections.flatMap((x) => x.blocks).find((b): b is Extract<Block, { type: 'p' }> => b.type === 'p' && REVIEWED.test(b.md))?.md.replace(REVIEWED, '').trim() || s.lastReviewed;
+
+const hero = sections.find((x) => x.hint === 'hero');
+const body = sections.filter((x) => x !== hero);
+const cta = body.filter((x) => x.hint === 'cta-band');
+if (cta.length !== 1) throw new Error(`${raw.file}: expected exactly one [cta-band] section, found ${cta.length}`);
+if (body[body.length - 1].hint !== 'cta-band') throw new Error(`${raw.file}: the [cta-band] must be the last section`);
+
+// ------------------------------------------------------------------ section roles
+const prose = body.filter((x) => x.hint === 'prose');
+const isLinkItem = (it: string) => /^\[[^\]]+\]\([^)]+\)/.test(it.trim());
+const isJumpList = (x: CopySection) => x.hint === 'prose' && x.blocks.length === 1 && x.blocks[0].type === 'ul' && x.blocks[0].items.every((it) => /^\[[^\]]+\]\(#[^)]+\)$/.test(it.trim()));
+const isRelated = (x: CopySection) => x.hint === 'prose' && !isJumpList(x) && x.blocks.length === 1 && x.blocks[0].type === 'ul' && x.blocks[0].items.every(isLinkItem);
+const contactCards = template === 'contact' ? body.find((x) => x.hint === 'cards') : undefined;
+const formSection = template === 'contact' ? prose.find((x) => /message|mensaje/i.test(x.h2 || '')) : undefined;
+const whySection = template === 'home' ? prose[0] : undefined;
+const spanishSection = template === 'home' ? prose[1] : undefined;
+const katieSection = template === 'about' ? prose.find((x) => /Katie Fults/.test(x.h2 || '')) : undefined;
+const practiceSection = template === 'about' ? prose[2] : undefined; // "How Will practices" / "Cómo trabaja Will"
+const trainingSection = template === 'about' ? body.find((x) => x.hint === 'cards') : undefined;
+const newsSection = template === 'news' ? body.find((x) => x.hint === 'cards') : undefined;
+const choicesSection = consentMarker ? prose[0] : undefined;
+const firstFaq = body.find((x) => x.hint === 'faq');
+
+// Hubs list their children (sitemap parent/child): every child must be linked from a card on the hub.
+if (template === 'hub') {
+  const linked = new Set(body.filter((x) => x.hint === 'cards').flatMap((x) => splitH3(x.blocks).items.flatMap((it) => it.blocks.filter((b) => b.type === 'link').map((b) => (b as Extract<Block, { type: 'link' }>).href))));
+  const missing = childrenOf(page).map((c) => pathIn(c, lang)).filter((p) => !linked.has(p));
+  if (missing.length) throw new Error(`${raw.file}: hub cards do not link these child pages: ${missing.join(', ')}`);
+}
+
+// ------------------------------------------------------------------ hero
+const scene: ImageMetadata | null = sceneFor(page.path);
+const bylineOn = ['hub', 'practice', 'contact', 'faqs', 'testimonials', 'news'].includes(template);
+const heroVariant = template === 'home' ? 'home' : template === 'policy' ? 'policy' : 'page';
+const heroScene = scene && (template === 'hub' || template === 'practice');
+const formMod = import.meta.glob<{ default: any }>('/src/components/forms/ContactForm.astro', { eager: true });
+const ContactForm = Object.values(formMod)[0]?.default;
+const consentMod = import.meta.glob<{ default: any }>('/src/components/consent/ConsentControls.astro', { eager: true });
+const ConsentControls = Object.values(consentMod)[0]?.default;
+
+// ------------------------------------------------------------------ JSON-LD
+const ld = pageJsonLd({ pg: page, copy: raw, lang, path, template });
+const noindex = !!(page.noindex || raw.data.noindex);
+
+// ------------------------------------------------------------------ helpers
+const id = (x: CopySection) => (x.h2 ? slugify(x.h2) : undefined);
+const tone = (x: CopySection): 'paper' | 'linen' => (x.hint === 'testimonial' || (template === 'home' && x.hint === 'cards') ? 'linen' : 'paper');
+const container = template === 'policy' ? 'prose' : 'default';
+const certFor = (it: { title: string; blocks: Block[] }) => (/2006/.test(it.blocks.map((b) => ('md' in b ? b.md : '')).join(' ')) ? { src: cert2006, alt: s.cert2006Alt } : { src: cert2019, alt: s.cert2019Alt });
+const esc = (x: string) => x.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const rendered = new Set<CopySection>();
+const mark = (x: CopySection) => { rendered.add(x); return true; };
+// The news card's meta line ("Daily News Journal (DNJ) · Business · October 5, 2014") and the rest of its body.
+const news = newsSection ? splitH3(newsSection.blocks) : null;
+---
+<Site title={raw.data.title} description={raw.data.description} path={path} lang={lang} noindex={noindex} pageType={ld.pageType} jsonLd={ld.nodes} mainClass={`page page--${template}`}>
+  {/* ================================================================ hero */}
+  {template === 'contact' ? (
+    <PageHero lang={lang} path={path} h1={raw.data.h1} deck={hero?.blocks || []} byline cta="primary-only">
+      <div slot="media" class="contact-facts">{contactCards && mark(contactCards) && <CardGrid section={contactCards} lang={lang} variant="info" />}</div>
+    </PageHero>
+  ) : template === 'home' ? (
+    <PageHero lang={lang} path={path} h1={raw.data.h1} deck={hero?.blocks || []} variant="home" byline="mobile" eyebrow={s.homeEyebrow}>
+      <Frame slot="media" kind="portrait" src={willDesk} alt={s.willDeskAlt} loading="eager" widths={[448, 596, 896]} class="crop-desk" caption={`<strong>${esc(firm.attorney.value)}</strong> · ${esc(firm.jobTitle.value)}`} />
+    </PageHero>
+  ) : template === 'about' ? (
+    <PageHero lang={lang} path={path} h1={raw.data.h1} deck={hero?.blocks || []}>
+      <Frame slot="media" kind="portrait" src={willDoor} alt={s.willDoorAlt} priority position="upper" widths={[448, 596, 673]} />
+    </PageHero>
+  ) : template === 'policy' ? (
+    <PageHero lang={lang} path={path} h1={raw.data.h1} deck={hero?.blocks || []} variant="policy">
+      {hasReviewed && <p class="hero__reviewed muted small">{reviewedLabel} <time datetime={LAST_REVIEWED}>{formatDate(LAST_REVIEWED, lang)}</time></p>}
+    </PageHero>
+  ) : heroScene ? (
+    <PageHero lang={lang} path={path} h1={raw.data.h1} deck={hero?.blocks || []} variant={heroVariant} byline={bylineOn}>
+      <Frame slot="media" kind="scene-3x2" src={scene!} alt="" priority class="hero-scene" />
+    </PageHero>
+  ) : (
+    <PageHero lang={lang} path={path} h1={raw.data.h1} deck={hero?.blocks || []} variant={heroVariant} byline={bylineOn} />
+  )}
+  {hero && mark(hero) && null}
+
+  {/* ================================================================ body, in copy order */}
+  {body.map((x, i) => {
+    if (rendered.has(x)) return null;
+    mark(x);
+    const sid = id(x);
+    switch (x.hint) {
+      case 'proof-strip':
+        return (
+          <>
+            <div class="container"><ProofStrip section={x} lang={lang} /></div>
+            {template === 'home' && scene && <Frame kind="plate" src={scene} alt="" class="home-plate" />}
+          </>
+        );
+      case 'cards':
+        if (x === trainingSection) {
+          const { intro, items } = splitH3(x.blocks);
+          return (
+            <Section labelledby={sid}>
+              <SectionHead h2={x.h2!} lang={lang} />
+              {intro.length > 0 && <Blocks blocks={intro} lang={lang} class="sec-intro" />}
+              <ul class="doc-grid" role="list">
+                {items.map((it) => {
+                  const c = certFor(it);
+                  return (
+                    <li class="doc-card">
+                      <h3 class="card__title" set:html={inline(it.title, { lang })} />
+                      <Blocks blocks={it.blocks} lang={lang} class="doc-card__text" />
+                      <DocumentFigure src={c.src} alt={c.alt} caption="" lang={lang} />
+                    </li>
+                  );
+                })}
+              </ul>
+            </Section>
+          );
+        }
+        if (x === newsSection && news) {
+          return (
+            <Section labelledby={sid}>
+              <SectionHead h2={x.h2!} lang={lang} />
+              {news.intro.length > 0 && <Blocks blocks={news.intro} lang={lang} class="sec-intro" />}
+              <ul class="news-list" role="list">
+                {news.items.map((it) => {
+                  const li = it.blocks.findIndex((b) => b.type === 'link');
+                  if (li < 0) throw new Error(`${raw.file}: news item "${it.title}" has no link`);
+                  const link = it.blocks[li] as Extract<Block, { type: 'link' }>;
+                  const meta = it.blocks[0] && it.blocks[0].type === 'p' ? plain(it.blocks[0].md) : '';
+                  const date = findDate(meta);
+                  const rest = it.blocks.filter((b, k) => k !== li && !(k === 0 && meta));
+                  return (
+                    <li>
+                      <NewsItem headline={it.title} href={link.href} linkLabel={link.text} outlet={date ? meta.replace(date.text, '').replace(/\s*·\s*$/, '').trim() : meta} date={date?.iso} dateLabel={date?.text} lang={lang}>
+                        <Blocks blocks={rest} lang={lang} flow={false} class="card__blocks" />
+                      </NewsItem>
+                    </li>
+                  );
+                })}
+              </ul>
+            </Section>
+          );
+        }
+        return (
+          <Section labelledby={sid} tone={tone(x)} container={container}>
+            <CardGrid section={x} lang={lang} eyebrow={template === 'home' ? s.practiceEyebrow : undefined} />
+          </Section>
+        );
+      case 'steps':
+        return <Section labelledby={sid} container={container}><Steps section={x} lang={lang} /></Section>;
+      case 'faq':
+        return (
+          <Section labelledby={sid} container={container} class={template === 'faqs' ? 'faq-group' : undefined}>
+            <FAQ section={x} lang={lang} layout={container === 'prose' ? 'stack' : 'split'} openFirst={template === 'faqs' && x === firstFaq} />
+          </Section>
+        );
+      case 'testimonial':
+        return (
+          <Section labelledby={sid} tone="linen" class={template === 'testimonials' ? 'testimonial-row' : undefined}>
+            <Quotes section={x} lang={lang} pullAside={template === 'testimonials'} />
+          </Section>
+        );
+      case 'stats':
+        return <Section labelledby={sid} tight container={container}>{x.h2 && <SectionHead h2={x.h2} lang={lang} />}<Stats section={x} lang={lang} /></Section>;
+      case 'cta-band':
+        return <CTABand section={x} lang={lang} />;
+      default: {
+        // ---------------------------------------------------------- prose sections
+        if (x === whySection) {
+          return (
+            <Section labelledby={sid}>
+              <Split>
+                <div slot="aside" class="why-aside">
+                  <SectionHead h2={x.h2!} eyebrow={s.aboutEyebrow} lang={lang} />
+                  <Frame kind="aside-photo" src={willDoor} alt={s.willDoorAlt} position="upper" />
+                </div>
+                <Blocks blocks={x.blocks} lang={lang} class="reasons" />
+              </Split>
+            </Section>
+          );
+        }
+        if (x === spanishSection) {
+          return (
+            <Section labelledby={sid}>
+              <SpanishPanel section={x} lang={lang} id={sid} />
+            </Section>
+          );
+        }
+        if (x === practiceSection) {
+          return (
+            <Section labelledby={sid}>
+              <Split>
+                <div slot="aside" class="why-aside">
+                  <SectionHead h2={x.h2!} lang={lang} />
+                  <Frame kind="aside-photo" src={willDesk} alt={s.willDeskAlt} class="crop-desk" widths={[352, 528, 704, 910]} sizes="(min-width: 60em) 22rem, 18rem" />
+                </div>
+                <Blocks blocks={x.blocks} lang={lang} class="reasons" />
+              </Split>
+            </Section>
+          );
+        }
+        if (x === katieSection) {
+          return (
+            <Section labelledby={sid} tone="linen">
+              <Split>
+                <SectionHead slot="aside" h2={x.h2!} lang={lang} />
+                <div class="person person--avatar">
+                  <Image src={katie} alt={s.katieAlt} widths={[84, 168]} sizes="84px" class="person__photo" />
+                  <Blocks blocks={x.blocks} lang={lang} class="person__text" />
+                </div>
+              </Split>
+            </Section>
+          );
+        }
+        if (x === formSection) {
+          return (
+            <Section id="form" labelledby={sid} tone="linen" class="form-section">
+              <div class="form-split">
+                <div class="form-split__main">
+                  <SectionHead h2={x.h2!} lang={lang} />
+                  <Blocks blocks={x.blocks} lang={lang} class="mt-6" />
+                  {ContactForm ? (
+                    <div class="mt-8"><ContactForm lang={lang} /></div>
+                  ) : (
+                    <Notice class="mt-8" title={s.formOffTitle} data-form-off>
+                      <p set:html={esc(s.formOff('§TEL§', '§MAIL§')).replace('§TEL§', `<a class="tel" href="${firm.tel.value}">${firm.phone.value}</a>`).replace('§MAIL§', `<a href="${firm.mailto.value}">${firm.email.value}</a>`)} />
+                    </Notice>
+                  )}
+                </div>
+                {scene && <Frame kind="scene-4x5" src={scene} alt="" class="form-split__media" />}
+              </div>
+            </Section>
+          );
+        }
+        if (isJumpList(x)) {
+          const items = (x.blocks[0] as Extract<Block, { type: 'ul' }>).items.map((it) => it.trim().match(/^\[([^\]]+)\]\(([^)]+)\)$/)!);
+          return (
+            <Section labelledby={sid} tight>
+              <nav aria-labelledby={sid} class="jump">
+                <SectionHead h2={x.h2!} lang={lang} />
+                <ul class="jump-list" role="list">
+                  {items.map((m) => (
+                    <li><a class="link-arrow" href={m[2]}><span set:html={inline(m[1], { lang })} /><Icon name="arrow-down" /></a></li>
+                  ))}
+                </ul>
+              </nav>
+            </Section>
+          );
+        }
+        if (isRelated(x)) {
+          return (
+            <Section labelledby={sid} container={container}>
+              <Split>
+                <SectionHead slot="aside" h2={x.h2!} lang={lang} />
+                <ul class="related-links" role="list">
+                  {(x.blocks[0] as Extract<Block, { type: 'ul' }>).items.map((it) => <li set:html={inline(it, { lang })} />)}
+                </ul>
+              </Split>
+            </Section>
+          );
+        }
+        if (container === 'prose' || !x.h2) {
+          return (
+            <Section labelledby={sid} container={container} tight>
+              <div class="flow">
+                {x.h2 && <SectionHead h2={x.h2} lang={lang} />}
+                <Blocks blocks={x.blocks} lang={lang} />
+                {x === choicesSection && (ConsentControls ? <ConsentControls lang={lang} /> : <div class="directive" data-directive="consent-controls" />)}
+              </div>
+            </Section>
+          );
+        }
+        return (
+          <Section labelledby={sid}>
+            <Split sticky>
+              <SectionHead slot="aside" h2={x.h2} lang={lang} />
+              <Blocks blocks={x.blocks} lang={lang} />
+            </Split>
+          </Section>
+        );
+      }
+    }
+  })}
+  {(() => {
+    const left = sections.filter((x) => !rendered.has(x));
+    if (left.length) throw new Error(`${raw.file}: unrendered copy sections: ${left.map((x) => x.h2 || x.hint).join(', ')}`);
+    return null;
+  })()}
+</Site>
+
+<style is:global>
+  /* ---------------------------------------------------------------- A20 page templates */
+  /* Two paper sections in a row share one gap instead of two. */
+  .page > .section:not(.section--linen):not(.section--cta) + .section:not(.section--linen):not(.section--cta) { padding-top: 0; }
+  .page > .section--linen + .section--linen { padding-top: 0; }
+
+  /* IMG03 (Will at his desk) is landscape; the 4:5 frames keep Will and leave the shelf and mug out. */
+  .crop-desk img { object-position: 12% 50%; }
+  .hero__media { display: grid; }
+  .hero-scene { width: 100%; }
+  .home-plate { margin-top: clamp(var(--space-10), 6vw, var(--space-20)); }
+
+  /* Reasons list (Home "Why people call", About "How Will practices"): lead-ins between hairlines. */
+  .reasons > p { padding-block: var(--space-5); border-top: var(--border-hairline) solid var(--color-rule); margin: 0; }
+  .reasons > p:last-child { border-bottom: var(--border-hairline) solid var(--color-rule); }
+  .reasons > p > strong:first-child {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 460;
+    color: var(--color-heading);
+    line-height: var(--leading-heading);
+  }
+  .reasons > :not(p) { margin-top: var(--space-6); }
+  @media (max-width: 59.99em) { .hero--home .hero__copy > .eyebrow { display: none; } }
+  .testimonial__lead p { margin-bottom: var(--space-4); color: var(--color-text-muted); font-size: var(--text-small); }
+  .split__main > div > .testimonial__pull p { margin-bottom: var(--space-6); }
+  .why-aside { display: grid; gap: var(--space-8); align-content: start; }
+  @media (max-width: 59.99em) { .why-aside .frame-media--aside-photo { max-width: 18rem; } }
+
+  /* Contact: facts panel in the hero. */
+  .contact-facts {
+    padding: clamp(var(--space-6), 3vw, var(--space-10));
+    background: var(--color-surface-card);
+    border: var(--border-hairline) solid var(--hairline-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+  }
+  .contact-facts .sec-head h2 { font-size: var(--step-3); }
+  .hero--media:has(.contact-facts) .hero__grid { align-items: start; }
+
+  /* Contact: form split (form 7fr / scene 5fr). */
+  .form-split { display: grid; gap: var(--space-10) var(--grid-gap); align-items: start; }
+  .form-split__main { max-width: var(--container-form); }
+  @media (min-width: 60em) { .form-split { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); } }
+
+  /* FAQs: jump list. */
+  .jump-list { display: grid; margin-top: var(--space-6); border-top: var(--border-hairline) solid var(--color-rule-strong); }
+  .jump-list li { border-bottom: var(--border-hairline) solid var(--color-rule); }
+  .jump-list a { display: flex; justify-content: space-between; width: 100%; min-height: var(--control-height); padding-block: var(--space-2); }
+  @media (min-width: 40em) { .jump-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--grid-gap); } }
+  .faq-group + .faq-group { padding-top: 0; }
+
+  /* Related practice links. */
+  .related-links { border-top: var(--border-hairline) solid var(--color-rule-strong); }
+  .related-links li { padding-block: var(--space-4); border-bottom: var(--border-hairline) solid var(--color-rule); max-width: var(--measure); }
+  .related-links a { font-weight: var(--weight-text-strong); }
+
+  /* About: certificates. */
+  .doc-grid { display: grid; gap: var(--grid-gap); margin-top: var(--space-8); }
+  @media (min-width: 60em) { .doc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .doc-card { display: grid; gap: var(--space-4); align-content: start; }
+  .doc-card__text p { color: var(--color-text-muted); }
+
+  /* Testimonials page: pull line in the aside. */
+  .testimonial__pull p { margin-top: var(--space-4); font-size: var(--text-lead); color: var(--color-heading-quiet); line-height: var(--leading-snug); }
+  .testimonial-row + .testimonial-row { padding-top: 0; }
+  .testimonial-row + .testimonial-row .testimonial { padding-top: var(--section-pad-tight); border-top: var(--border-hairline) solid var(--color-rule); }
+
+  /* In the news. */
+  .news-list { display: grid; gap: var(--grid-gap); margin-top: var(--space-8); max-width: 48rem; }
+</style>

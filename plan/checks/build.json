@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-03T13:48:30.546Z",
+  "at": "2026-10-03T14:06:05.577Z",
   "pass": true,
   "failed": 0,
   "results": [
@@ -19,7 +19,7 @@
       "detail": ""
     },
     {
-      "name": "page rules on 5 pages (lang, one h1, title, description, canonical, hreflang, img dims+alt, no href=#, tel, law rules, legal line)",
+      "name": "page rules on 60 pages (lang, one h1, title, description, canonical, hreflang, img dims+alt, no href=#, tel, law rules, legal line)",
       "pass": true,
       "detail": ""
     },
